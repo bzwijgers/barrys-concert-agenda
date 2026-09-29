@@ -1,11 +1,9 @@
 from urllib.request import Request, urlopen
-from urllib.parse import urljoin, urlparse
 from datetime import datetime
-import html as html_module
 import re
+import html as html_module
 
 URL = "https://www.effenaar.nl/agenda"
-BASE_URL = "https://www.effenaar.nl"
 
 headers = {
     "User-Agent": (
@@ -15,175 +13,83 @@ headers = {
     "Accept-Language": "nl-NL,nl;q=0.9,en;q=0.8",
 }
 
-print("Barry's Concert Agenda - Effenaar structuurtest")
+print("Barry's Concert Agenda - Effenaar kaarttest")
 print("Start:", datetime.now().isoformat(timespec="seconds"))
 
 request = Request(URL, headers=headers)
 
 with urlopen(request, timeout=30) as response:
-    raw = response.read()
-    page = raw.decode("utf-8", errors="replace")
-    status = response.status
+    page = response.read().decode("utf-8", errors="replace")
 
-print("HTTP status:", status)
+print("HTTP status: 200")
 print("HTML grootte:", len(page))
 
-# ---------------------------------------------------------
-# 1. Officieel aantal resultaten op de agenda
-# ---------------------------------------------------------
-
-result_match = re.search(
-    r"Toon\s+resultaten\s*\(\s*(\d+)\s*\)",
-    page,
-    flags=re.IGNORECASE,
-)
-
-if result_match:
-    expected_count = int(result_match.group(1))
-else:
-    expected_count = None
-
-print("Effenaar resultaat-aantal:", expected_count)
-
-# ---------------------------------------------------------
-# 2. Alle href-attributen uit de HTML halen
-# ---------------------------------------------------------
-
-href_matches = re.findall(
-    r"""href\s*=\s*["']([^"']+)["']""",
-    page,
-    flags=re.IGNORECASE,
-)
-
-print("Alle href-attributen:", len(href_matches))
-
-# ---------------------------------------------------------
-# 3. Alleen mogelijke Effenaar event-URL's bewaren
-# ---------------------------------------------------------
-
-event_urls = []
-
-for href in href_matches:
-    href = html_module.unescape(href).strip()
-
-    absolute_url = urljoin(BASE_URL, href)
-
-    parsed = urlparse(absolute_url)
-
-    if parsed.netloc.lower() not in {
-        "effenaar.nl",
-        "www.effenaar.nl",
-    }:
-        continue
-
-    path = parsed.path.rstrip("/")
-
-    # Alleen detailpagina's onder /agenda/...
-    # De hoofdpagina /agenda zelf valt dus af.
-    if not path.lower().startswith("/agenda/"):
-        continue
-
-    # Geen archief/filter/etc.
-    if path.lower().startswith("/agenda/archief"):
-        continue
-
-    clean_url = (
-        f"https://www.effenaar.nl{path}"
-    )
-
-    if clean_url not in event_urls:
-        event_urls.append(clean_url)
-
-print("Unieke /agenda/... URLs:", len(event_urls))
-
-# ---------------------------------------------------------
-# 4. Bekende voorbeelden controleren
-# ---------------------------------------------------------
-
-devil_urls = [
-    url for url in event_urls
-    if "devil" in url.lower()
+# Een paar verschillende evenementen om de structuur te onderzoeken.
+test_events = [
+    ("SKATING POLLY", "/agenda/skatingpolly-1okt"),
+    ("BLANKS", "/agenda/blanks-nieuwe-datum"),
+    ("DEVIL WEARS PRADA", "/agenda/devil-wears-prada"),
+    ("ALPHA WOLF", "/agenda/alpha-wolf"),
 ]
 
-skating_urls = [
-    url for url in event_urls
-    if "skating" in url.lower()
-]
+def clean_fragment(fragment):
+    # HTML entities leesbaar maken.
+    fragment = html_module.unescape(fragment)
 
-print(
-    "Devil Wears Prada URL gevonden:",
-    len(devil_urls) > 0
-)
+    # Grote hoeveelheden witruimte verkleinen.
+    fragment = re.sub(r"\s+", " ", fragment)
 
-print(
-    "Skating Polly URL gevonden:",
-    len(skating_urls) > 0
-)
+    return fragment.strip()
 
-# ---------------------------------------------------------
-# 5. Statusmarkeringen tellen
-# ---------------------------------------------------------
+print()
+print("============================================================")
+print("HTML RONDOM BEKENDE EVENTLINKS")
+print("============================================================")
 
-cancelled_words = [
-    "afgelast",
-    "geannuleerd",
+for label, event_path in test_events:
+
+    position = page.lower().find(event_path.lower())
+
+    print()
+    print("------------------------------------------------------------")
+    print(label)
+    print("URL:", event_path)
+    print("Positie:", position)
+    print("------------------------------------------------------------")
+
+    if position == -1:
+        print("EVENTLINK NIET GEVONDEN")
+        continue
+
+    # Ruim stuk vóór en na de URL.
+    start = max(0, position - 2500)
+    end = min(len(page), position + 2500)
+
+    fragment = page[start:end]
+    fragment = clean_fragment(fragment)
+
+    print(fragment)
+
+print()
+print("============================================================")
+print("SNELLE CONTROLE OP VELDNAMEN")
+print("============================================================")
+
+search_terms = [
+    "date",
+    "startDate",
+    "start_date",
+    "location",
+    "venue",
+    "eventStatus",
     "cancelled",
-    "canceled",
+    "geannuleerd",
+    "afgelast",
 ]
 
-for word in cancelled_words:
-    count = page.lower().count(word.lower())
-    print(f"Tekst '{word}': {count} keer")
-
-# ---------------------------------------------------------
-# 6. Eerste 20 unieke event-URL's tonen
-# ---------------------------------------------------------
+for term in search_terms:
+    count = page.lower().count(term.lower())
+    print(f"{term}: {count}")
 
 print()
-print("EERSTE 20 EVENT-URLS")
-print("--------------------")
-
-for number, event_url in enumerate(
-    event_urls[:20],
-    start=1,
-):
-    print(f"{number:03d}: {event_url}")
-
-# ---------------------------------------------------------
-# 7. URLs rond bekende artiesten tonen
-# ---------------------------------------------------------
-
-print()
-print("BEKENDE TEST-URLS")
-print("-----------------")
-
-for event_url in devil_urls:
-    print("DEVIL:", event_url)
-
-for event_url in skating_urls:
-    print("SKATING:", event_url)
-
-# ---------------------------------------------------------
-# 8. Controle
-# ---------------------------------------------------------
-
-print()
-print("CONTROLE")
-print("--------")
-
-if expected_count is not None:
-    difference = expected_count - len(event_urls)
-
-    print("Agenda meldt:", expected_count)
-    print("Unieke event-URLs:", len(event_urls))
-    print("Verschil:", difference)
-
-    if difference == 0:
-        print("RESULTAAT: EXACTE MATCH")
-    else:
-        print("RESULTAAT: NOG GEEN EXACTE MATCH")
-else:
-    print("RESULTAAT: agenda-aantal niet gevonden")
-
-print()
-print("Effenaar structuurtest gereed.")
+print("Effenaar kaarttest gereed.")
