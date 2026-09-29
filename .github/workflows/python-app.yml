@@ -16,5 +16,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run Effenaar test
+      - name: Run Effenaar scraper
         run: python scraper.py
+
+      - name: Save concerts.json
+        uses: actions/upload-artifact@v4
+        with:
+          name: effenaar-concerts
+          path: concerts.json
