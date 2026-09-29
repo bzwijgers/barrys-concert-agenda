@@ -3,6 +3,9 @@ name: Test concert scraper
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   test-scraper:
     runs-on: ubuntu-latest
@@ -10,6 +13,8 @@ jobs:
     steps:
       - name: Download repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -19,15 +24,21 @@ jobs:
       - name: Run Effenaar scraper
         run: python scraper.py
 
-      - name: Copy concerts.json to Pages
+      - name: Check concerts.json
         run: |
           test -f concerts.json
-          cp concerts.json ./concerts.json
+          echo "concerts.json successfully created"
 
-      - name: Commit concerts.json
+      - name: Upload concerts.json as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: concerts-json
+          path: concerts.json
+
+      - name: Publish concerts.json to main
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add concerts.json
-          git commit -m "Update Effenaar concerts" || echo "No changes"
-          git push
+          git diff --cached --quiet || git commit -m "Update concerts.json"
+          git push origin main
