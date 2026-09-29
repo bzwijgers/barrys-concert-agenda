@@ -19,8 +19,15 @@ jobs:
       - name: Run Effenaar scraper
         run: python scraper.py
 
-      - name: Save concerts.json
-        uses: actions/upload-artifact@v4
-        with:
-          name: effenaar-concerts
-          path: concerts.json
+      - name: Copy concerts.json to Pages
+        run: |
+          test -f concerts.json
+          cp concerts.json ./concerts.json
+
+      - name: Commit concerts.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add concerts.json
+          git commit -m "Update Effenaar concerts" || echo "No changes"
+          git push
