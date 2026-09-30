@@ -1,4 +1,5 @@
 from urllib.request import Request, urlopen
+from urllib.parse import urlsplit, urlunsplit, quote
 from datetime import datetime
 import re
 import html as html_module
@@ -35,9 +36,35 @@ MONTHS = {
 }
 
 
+def encode_url(url):
+    parts = urlsplit(url)
+
+    encoded_path = quote(
+        parts.path,
+        safe="/%:@"
+    )
+
+    encoded_query = quote(
+        parts.query,
+        safe="=&%:@/?"
+    )
+
+    return urlunsplit(
+        (
+            parts.scheme,
+            parts.netloc,
+            encoded_path,
+            encoded_query,
+            parts.fragment,
+        )
+    )
+
+
 def download_page(url):
+    safe_url = encode_url(url)
+
     request = Request(
-        url,
+        safe_url,
         headers=HEADERS
     )
 
@@ -450,7 +477,6 @@ def scrape_effenaar():
         key = normalize_url(
             concert["url"]
         )
-
         unique[key] = concert
 
     concerts = list(
@@ -461,37 +487,30 @@ def scrape_effenaar():
         "Concerten opgeslagen:",
         len(concerts)
     )
-
     print(
         "Afgelast/geannuleerd:",
         skipped_cancelled
     )
-
     print(
         "Zonder titel:",
         skipped_no_title
     )
-
     print(
         "Zonder datum:",
         skipped_no_date
     )
-
     print(
         "Ongeldige datum:",
         skipped_bad_date
     )
-
     print(
         "Tijden gevonden:",
         times_found
     )
-
     print(
         "Tijden niet gevonden:",
         times_missing
     )
-
     print(
         "Detailpagina fouten:",
         detail_errors
@@ -836,7 +855,6 @@ def scrape_rotown():
                 concert["url"]
             )
         )
-
         unique[key] = concert
 
     concerts = list(
@@ -1199,7 +1217,6 @@ def scrape_013():
         key = normalize_url(
             concert["url"]
         )
-
         unique[key] = concert
 
     concerts = list(
@@ -1250,7 +1267,6 @@ print(
 all_concerts = []
 
 
-# Effenaar
 try:
     effenaar_concerts = (
         scrape_effenaar()
@@ -1267,7 +1283,6 @@ except Exception as error:
     )
 
 
-# Rotown
 try:
     rotown_concerts = (
         scrape_rotown()
@@ -1284,7 +1299,6 @@ except Exception as error:
     )
 
 
-# 013
 try:
     source013_concerts = (
         scrape_013()
