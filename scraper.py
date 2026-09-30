@@ -81,6 +81,41 @@ def normalize_url(url):
     )
 
 
+def clean_json_text(text):
+    return (
+        text
+        .replace("\\/", "/")
+        .replace('\\"', '"')
+        .replace("\\u0026", "&")
+        .replace("\\u0027", "'")
+        .replace("\\u2018", "‘")
+        .replace("\\u2019", "’")
+        .replace("\\u2013", "–")
+        .replace("\\u2014", "—")
+        .replace("&amp;", "&")
+        .strip()
+    )
+
+
+def find_json_value(
+    text,
+    key
+):
+    regex = re.compile(
+        r'"'
+        + re.escape(key)
+        + r'"\s*:\s*"((?:\\.|[^"\\])*)"',
+        flags=re.IGNORECASE,
+    )
+
+    match = regex.search(text)
+
+    if not match:
+        return None
+
+    return match.group(1)
+
+
 # ============================================================
 # EFFENAAR
 # ============================================================
@@ -93,7 +128,6 @@ def effenaar_extract_text(
     card,
     class_name
 ):
-
     pattern = (
         r'<[^>]*class="[^"]*\b'
         + re.escape(class_name)
@@ -119,7 +153,6 @@ def effenaar_extract_text(
 
 
 def effenaar_extract_location(card):
-
     match = re.search(
         r'<div\s+class="card-info-location"[^>]*>'
         r'(.*?)'
@@ -139,7 +172,6 @@ def effenaar_extract_location(card):
 
 
 def effenaar_parse_date(value):
-
     parts = (
         value
         .lower()
@@ -151,7 +183,6 @@ def effenaar_parse_date(value):
         return None
 
     try:
-
         day = int(parts[1])
 
         month = MONTHS.get(
@@ -173,12 +204,10 @@ def effenaar_parse_date(value):
         ValueError,
         IndexError
     ):
-
         return None
 
 
 def effenaar_extract_start_time(page):
-
     start_date_matches = re.findall(
         r'"startDate"\s*:\s*"([^"]+)"',
         page,
@@ -186,14 +215,12 @@ def effenaar_extract_start_time(page):
     )
 
     for value in start_date_matches:
-
         match = re.search(
             r'T(\d{2}):(\d{2})',
             value
         )
 
         if match:
-
             return (
                 f"{match.group(1)}:"
                 f"{match.group(2)}"
@@ -210,7 +237,6 @@ def effenaar_extract_start_time(page):
     ]
 
     for pattern in patterns:
-
         match = re.search(
             pattern,
             text,
@@ -218,7 +244,6 @@ def effenaar_extract_start_time(page):
         )
 
         if match:
-
             hour = int(
                 match.group(1)
             )
@@ -232,7 +257,6 @@ def effenaar_extract_start_time(page):
                 and
                 0 <= minute <= 59
             ):
-
                 return (
                     f"{hour:02d}:"
                     f"{minute:02d}"
@@ -242,7 +266,6 @@ def effenaar_extract_start_time(page):
 
 
 def scrape_effenaar():
-
     print()
     print(
         "============================================================"
@@ -253,18 +276,15 @@ def scrape_effenaar():
     )
 
     try:
-
         page = download_page(
             EFFENAAR_URL
         )
 
     except Exception as error:
-
         print(
             "Effenaar agenda fout:",
             str(error)
         )
-
         return []
 
     card_pattern = re.compile(
@@ -290,7 +310,6 @@ def scrape_effenaar():
     skipped_no_title = 0
     skipped_no_date = 0
     skipped_bad_date = 0
-
     times_found = 0
     times_missing = 0
     detail_errors = 0
@@ -298,18 +317,14 @@ def scrape_effenaar():
     for index, match in enumerate(
         matches
     ):
-
         start = match.start()
 
         if index < len(matches) - 1:
-
             end = (
                 matches[index + 1]
                 .start()
             )
-
         else:
-
             end = len(page)
 
         card = page[start:end]
@@ -352,12 +367,10 @@ def scrape_effenaar():
         )
 
         if not title:
-
             skipped_no_title += 1
             continue
 
         if not date_text:
-
             skipped_no_date += 1
             continue
 
@@ -370,7 +383,6 @@ def scrape_effenaar():
             or
             "canceled" in status
         ):
-
             skipped_cancelled += 1
             continue
 
@@ -381,14 +393,12 @@ def scrape_effenaar():
         )
 
         if not iso_date:
-
             skipped_bad_date += 1
             continue
 
         start_time = ""
 
         try:
-
             detail_page = (
                 download_page(
                     detail_url
@@ -402,15 +412,11 @@ def scrape_effenaar():
             )
 
             if start_time:
-
                 times_found += 1
-
             else:
-
                 times_missing += 1
 
         except Exception as error:
-
             detail_errors += 1
 
             print(
@@ -441,7 +447,6 @@ def scrape_effenaar():
     unique = {}
 
     for concert in concerts:
-
         key = normalize_url(
             concert["url"]
         )
@@ -502,27 +507,9 @@ def scrape_effenaar():
 ROTOWN_URL = "https://www.rotown.nl/"
 
 
-def rotown_clean_json_text(text):
-
-    return (
-        text
-        .replace("\\/", "/")
-        .replace('\\"', '"')
-        .replace("\\u0026", "&")
-        .replace("\\u0027", "'")
-        .replace("\\u2018", "‘")
-        .replace("\\u2019", "’")
-        .replace("\\u2013", "–")
-        .replace("\\u2014", "—")
-        .replace("&amp;", "&")
-        .strip()
-    )
-
-
 def rotown_normalize_url(url):
-
     return (
-        rotown_clean_json_text(
+        clean_json_text(
             url
         )
         .strip()
@@ -531,30 +518,7 @@ def rotown_normalize_url(url):
     )
 
 
-def rotown_find_json_value(
-    text,
-    key
-):
-
-    regex = re.compile(
-        r'"'
-        + re.escape(key)
-        + r'"\s*:\s*"((?:\\.|[^"\\])*)"',
-        flags=re.IGNORECASE,
-    )
-
-    match = regex.search(
-        text
-    )
-
-    if not match:
-        return None
-
-    return match.group(1)
-
-
 def rotown_find_location(block):
-
     location_match = re.search(
         r'"location"',
         block,
@@ -580,7 +544,7 @@ def rotown_find_location(block):
     )
 
     value = (
-        rotown_find_json_value(
+        find_json_value(
             location_block,
             "name"
         )
@@ -589,13 +553,12 @@ def rotown_find_location(block):
     if not value:
         return ""
 
-    return rotown_clean_json_text(
+    return clean_json_text(
         value
     )
 
 
 def rotown_find_concert_urls(html):
-
     event_regex = re.compile(
         r'<div\s+class=["\']'
         r'([^"\']*\bwp_theatre_event\b[^"\']*)'
@@ -610,7 +573,6 @@ def rotown_find_concert_urls(html):
     for match in event_regex.finditer(
         html
     ):
-
         classes = (
             match.group(1)
         )
@@ -645,7 +607,6 @@ def rotown_find_concert_urls(html):
         )
 
         if url_match:
-
             url = (
                 url_match.group(1)
             )
@@ -659,7 +620,6 @@ def rotown_find_concert_urls(html):
 def rotown_find_structured_events(
     html
 ):
-
     event_starts = [
         match.start()
         for match
@@ -673,7 +633,6 @@ def rotown_find_structured_events(
     events = []
 
     for start in event_starts:
-
         block_start = max(
             start - 300,
             0
@@ -689,21 +648,21 @@ def rotown_find_structured_events(
         ]
 
         name = (
-            rotown_find_json_value(
+            find_json_value(
                 block,
                 "name"
             )
         )
 
         event_url = (
-            rotown_find_json_value(
+            find_json_value(
                 block,
                 "url"
             )
         )
 
         start_date = (
-            rotown_find_json_value(
+            find_json_value(
                 block,
                 "startDate"
             )
@@ -722,9 +681,8 @@ def rotown_find_structured_events(
             and
             start_date
         ):
-
             cleaned_url = (
-                rotown_clean_json_text(
+                clean_json_text(
                     event_url
                 )
             )
@@ -738,11 +696,11 @@ def rotown_find_structured_events(
             events.append(
                 {
                     "artist":
-                        rotown_clean_json_text(
+                        clean_json_text(
                             name
                         ),
                     "startDate":
-                        rotown_clean_json_text(
+                        clean_json_text(
                             start_date
                         ),
                     "location":
@@ -756,7 +714,6 @@ def rotown_find_structured_events(
 
 
 def scrape_rotown():
-
     print()
     print(
         "============================================================"
@@ -767,18 +724,15 @@ def scrape_rotown():
     )
 
     try:
-
         html = download_page(
             ROTOWN_URL
         )
 
     except Exception as error:
-
         print(
             "Rotown fout:",
             str(error)
         )
-
         return []
 
     concert_urls = (
@@ -811,7 +765,6 @@ def scrape_rotown():
     concerts = []
 
     for event in structured_events:
-
         event_url = (
             rotown_normalize_url(
                 event["url"]
@@ -836,7 +789,6 @@ def scrape_rotown():
         start_time = ""
 
         if "T" in start_date:
-
             time_part = (
                 start_date
                 .split("T", 1)[1]
@@ -848,7 +800,6 @@ def scrape_rotown():
             )
 
             if time_match:
-
                 start_time = (
                     f"{time_match.group(1)}:"
                     f"{time_match.group(2)}"
@@ -880,7 +831,6 @@ def scrape_rotown():
     unique = {}
 
     for concert in concerts:
-
         key = (
             rotown_normalize_url(
                 concert["url"]
@@ -909,6 +859,380 @@ def scrape_rotown():
 
 
 # ============================================================
+# 013
+# ============================================================
+
+SOURCE013_URL = "https://www.013.nl/programma"
+SOURCE013_BASE_URL = "https://www.013.nl"
+
+
+def source013_find_program_urls(html):
+    event_regex = re.compile(
+        r'href=["\']'
+        r'([^"\']*/programma/[^"\'?#]+)'
+        r'["\']',
+        flags=re.IGNORECASE,
+    )
+
+    urls = []
+    seen = set()
+
+    for match in event_regex.finditer(
+        html
+    ):
+        event_url = (
+            match.group(1)
+            .strip()
+            .rstrip("/")
+        )
+
+        if event_url.startswith("/"):
+            event_url = (
+                SOURCE013_BASE_URL
+                + event_url
+            )
+
+        if not event_url.lower().startswith(
+            "https://www.013.nl/programma/"
+        ):
+            continue
+
+        key = normalize_url(
+            event_url
+        )
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+        urls.append(event_url)
+
+    return urls
+
+
+def source013_find_location(block):
+    location_match = re.search(
+        r'"location"',
+        block,
+        flags=re.IGNORECASE
+    )
+
+    if not location_match:
+        return "013"
+
+    location_start = (
+        location_match.start()
+    )
+
+    end = min(
+        location_start + 2500,
+        len(block)
+    )
+
+    location_block = (
+        block[
+            location_start:end
+        ]
+    )
+
+    location_name = (
+        find_json_value(
+            location_block,
+            "name"
+        )
+    )
+
+    if not location_name:
+        return "013"
+
+    location_name = (
+        clean_json_text(
+            location_name
+        )
+    )
+
+    return (
+        location_name
+        if location_name
+        else "013"
+    )
+
+
+def source013_clean_artist_name(
+    name
+):
+    months = (
+        "januari|"
+        "februari|"
+        "maart|"
+        "april|"
+        "mei|"
+        "juni|"
+        "juli|"
+        "augustus|"
+        "september|"
+        "oktober|"
+        "november|"
+        "december"
+    )
+
+    date_at_end = re.compile(
+        r"\s*[-–—|]\s*"
+        r"\d{1,2}\s+"
+        r"(?:" + months + r")"
+        r"(?:\s+\d{4})?\s*$",
+        flags=re.IGNORECASE,
+    )
+
+    return (
+        date_at_end.sub(
+            "",
+            name
+        )
+        .strip()
+    )
+
+
+def source013_parse_event(
+    html,
+    event_url
+):
+    event_match = re.search(
+        r'"@type"\s*:\s*"Event"',
+        html,
+        flags=re.IGNORECASE,
+    )
+
+    if not event_match:
+        return None
+
+    event_position = (
+        event_match.start()
+    )
+
+    block_start = max(
+        event_position - 1000,
+        0
+    )
+
+    block_end = min(
+        event_position + 12000,
+        len(html)
+    )
+
+    block = html[
+        block_start:block_end
+    ]
+
+    raw_name = (
+        find_json_value(
+            block,
+            "name"
+        )
+    )
+
+    if not raw_name:
+        return None
+
+    raw_start_date = (
+        find_json_value(
+            block,
+            "startDate"
+        )
+    )
+
+    if not raw_start_date:
+        return None
+
+    start_date = (
+        clean_json_text(
+            raw_start_date
+        )
+    )
+
+    artist = (
+        source013_clean_artist_name(
+            clean_json_text(
+                raw_name
+            )
+        )
+    )
+
+    if not artist:
+        return None
+
+    location = (
+        source013_find_location(
+            block
+        )
+    )
+
+    date = (
+        start_date
+        .split("T")[0]
+    )
+
+    start_time = ""
+
+    if "T" in start_date:
+        time_part = (
+            start_date
+            .split("T", 1)[1]
+        )
+
+        time_match = re.match(
+            r"(\d{2}):(\d{2})",
+            time_part
+        )
+
+        if time_match:
+            start_time = (
+                f"{time_match.group(1)}:"
+                f"{time_match.group(2)}"
+            )
+
+    return {
+        "artist": artist,
+        "venue": location,
+        "city": "Tilburg",
+        "country": "NL",
+        "date": date,
+        "time": start_time,
+        "source": "013",
+        "url": event_url,
+    }
+
+
+def scrape_013():
+    print()
+    print(
+        "============================================================"
+    )
+    print("013")
+    print(
+        "============================================================"
+    )
+
+    try:
+        program_html = (
+            download_page(
+                SOURCE013_URL
+            )
+        )
+
+    except Exception as error:
+        print(
+            "013 programma fout:",
+            str(error)
+        )
+        return []
+
+    program_urls = (
+        source013_find_program_urls(
+            program_html
+        )
+    )
+
+    print(
+        "Programma-links gevonden:",
+        len(program_urls)
+    )
+
+    concerts = []
+    detail_errors = 0
+    no_event_data = 0
+
+    total = len(
+        program_urls
+    )
+
+    for index, event_url in enumerate(
+        program_urls,
+        start=1
+    ):
+        try:
+            event_html = (
+                download_page(
+                    event_url
+                )
+            )
+
+            concert = (
+                source013_parse_event(
+                    event_html,
+                    event_url
+                )
+            )
+
+            if concert is not None:
+                concerts.append(
+                    concert
+                )
+            else:
+                no_event_data += 1
+
+        except Exception as error:
+            detail_errors += 1
+
+            print(
+                "013 detailpagina fout:",
+                event_url,
+                "-",
+                str(error)
+            )
+
+        if (
+            index % 25 == 0
+            or
+            index == total
+        ):
+            print(
+                "013 verwerkt:",
+                f"{index}/{total}"
+            )
+
+        time.sleep(0.05)
+
+    unique = {}
+
+    for concert in concerts:
+        key = normalize_url(
+            concert["url"]
+        )
+
+        unique[key] = concert
+
+    concerts = list(
+        unique.values()
+    )
+
+    concerts.sort(
+        key=lambda concert: (
+            concert["date"],
+            concert["time"],
+            concert["artist"].lower()
+        )
+    )
+
+    print(
+        "013 concerten opgeslagen:",
+        len(concerts)
+    )
+
+    print(
+        "013 zonder Event-data:",
+        no_event_data
+    )
+
+    print(
+        "013 detailpagina fouten:",
+        detail_errors
+    )
+
+    return concerts
+
+
+# ============================================================
 # CENTRALE DATABASE
 # ============================================================
 
@@ -923,13 +1247,11 @@ print(
     )
 )
 
-
 all_concerts = []
 
 
 # Effenaar
 try:
-
     effenaar_concerts = (
         scrape_effenaar()
     )
@@ -939,7 +1261,6 @@ try:
     )
 
 except Exception as error:
-
     print(
         "ERNSTIGE EFFENAAR FOUT:",
         str(error)
@@ -948,7 +1269,6 @@ except Exception as error:
 
 # Rotown
 try:
-
     rotown_concerts = (
         scrape_rotown()
     )
@@ -958,9 +1278,25 @@ try:
     )
 
 except Exception as error:
-
     print(
         "ERNSTIGE ROTOWN FOUT:",
+        str(error)
+    )
+
+
+# 013
+try:
+    source013_concerts = (
+        scrape_013()
+    )
+
+    all_concerts.extend(
+        source013_concerts
+    )
+
+except Exception as error:
+    print(
+        "ERNSTIGE 013 FOUT:",
         str(error)
     )
 
@@ -972,7 +1308,6 @@ except Exception as error:
 unique_concerts = {}
 
 for concert in all_concerts:
-
     key = normalize_url(
         concert["url"]
     )
@@ -1008,7 +1343,6 @@ with open(
     "w",
     encoding="utf-8"
 ) as file:
-
     json.dump(
         all_concerts,
         file,
@@ -1021,6 +1355,34 @@ with open(
 # RESULTAAT
 # ============================================================
 
+effenaar_count = len(
+    [
+        concert
+        for concert in all_concerts
+        if concert["source"]
+        == "Effenaar"
+    ]
+)
+
+rotown_count = len(
+    [
+        concert
+        for concert in all_concerts
+        if concert["source"]
+        == "Rotown"
+    ]
+)
+
+source013_count = len(
+    [
+        concert
+        for concert in all_concerts
+        if concert["source"]
+        == "013"
+    ]
+)
+
+
 print()
 print(
     "============================================================"
@@ -1032,28 +1394,17 @@ print(
 
 print(
     "Effenaar:",
-    len(
-        [
-            concert
-            for concert
-            in all_concerts
-            if concert["source"]
-            == "Effenaar"
-        ]
-    )
+    effenaar_count
 )
 
 print(
     "Rotown:",
-    len(
-        [
-            concert
-            for concert
-            in all_concerts
-            if concert["source"]
-            == "Rotown"
-        ]
-    )
+    rotown_count
+)
+
+print(
+    "013:",
+    source013_count
 )
 
 print(
