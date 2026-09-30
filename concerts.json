@@ -480,6 +480,16 @@
     "url": "https://www.effenaar.nl/agenda/audrey-horne"
   },
   {
+    "artist": "Käärijä Eurodiskotour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128113/käärijä"
+  },
+  {
     "artist": "Young The Giant",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -578,6 +588,16 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/sophie-hutchings-1/"
+  },
+  {
+    "artist": "PIÑA Tropisch, gezellig, PIÑA!",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "23:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/154664/piña"
   },
   {
     "artist": "Let's get Hyper Lekkerfaces presents",
@@ -858,6 +878,16 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/kabeaushe/"
+  },
+  {
+    "artist": "Axel Flóvent",
+    "venue": "Paradox",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125430/axel-flóvent"
   },
   {
     "artist": "Caravan Palace",
@@ -2180,6 +2210,16 @@
     "url": "https://www.rotown.nl/agenda/bertolf-1/"
   },
   {
+    "artist": "Loïs Lane In concert: 40 jaar",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127342/loïs-lane"
+  },
+  {
     "artist": "Zwangere Guy",
     "venue": "Maassilo",
     "city": "Rotterdam",
@@ -2348,6 +2388,16 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/softcult/"
+  },
+  {
+    "artist": "Queensrÿche",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/145171/queensrÿche"
   },
   {
     "artist": "thrown + Counterparts",
@@ -3778,6 +3828,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/140544/adrian-vandenberg-50-years-of-rock"
+  },
+  {
+    "artist": "Zoë Livay",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-30",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/153896/zoë-livay"
   },
   {
     "artist": "Kraak & Smaak Live",
