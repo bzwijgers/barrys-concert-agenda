@@ -3,6 +3,7 @@ from datetime import datetime
 import re
 import html as html_module
 import json
+import time
 
 URL = "https://www.effenaar.nl/agenda"
 BASE_URL = "https://www.effenaar.nl"
@@ -73,9 +74,6 @@ def extract_location(card):
 
 
 def parse_date(value):
-    # Voorbeeld:
-    # za 10 okt 2026
-
     parts = value.lower().strip().split()
 
     if len(parts) < 4:
@@ -95,16 +93,62 @@ def parse_date(value):
         return None
 
 
+def download_page(url):
+    request = Request(url, headers=headers)
+
+    with urlopen(request, timeout=30) as response:
+        return response.read().decode(
+            "utf-8",
+            errors="replace",
+        )
+
+
+def extract_start_time(page):
+    # Eerst zoeken naar JSON/structured data met startDate.
+    start_date_matches = re.findall(
+        r'"startDate"\s*:\s*"([^"]+)"',
+        page,
+        flags=re.IGNORECASE,
+    )
+
+    for value in start_date_matches:
+        match = re.search(
+            r'T(\d{2}):(\d{2})',
+            value,
+        )
+
+        if match:
+            return f"{match.group(1)}:{match.group(2)}"
+
+    # Daarna zoeken naar zichtbare tijdsaanduidingen.
+    text = clean_text(page)
+
+    patterns = [
+        r'(?:aanvang|start)\s*:?\s*(\d{1,2})[.:](\d{2})',
+        r'(\d{1,2})[.:](\d{2})\s*(?:uur)',
+    ]
+
+    for pattern in patterns:
+        match = re.search(
+            pattern,
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        if match:
+            hour = int(match.group(1))
+            minute = int(match.group(2))
+
+            if 0 <= hour <= 23 and 0 <= minute <= 59:
+                return f"{hour:02d}:{minute:02d}"
+
+    return ""
+
+
 print("Barry's Concert Agenda - Effenaar scraper")
 print("Start:", datetime.now().isoformat(timespec="seconds"))
 
-request = Request(URL, headers=headers)
-
-with urlopen(request, timeout=30) as response:
-    page = response.read().decode(
-        "utf-8",
-        errors="replace",
-    )
+page = download_page(URL)
 
 print("HTTP status: 200")
 print("HTML grootte:", len(page))
@@ -125,6 +169,10 @@ skipped_no_title = 0
 skipped_no_date = 0
 skipped_bad_date = 0
 
+times_found = 0
+times_missing = 0
+detail_errors = 0
+
 for index, match in enumerate(matches):
 
     start = match.start()
@@ -137,23 +185,12 @@ for index, match in enumerate(matches):
     card = page[start:end]
 
     relative_url = match.group(1)
+    detail_url = BASE_URL + relative_url
 
-    title = extract_text(
-        card,
-        "card-title",
-    )
-
-    date_text = extract_text(
-        card,
-        "card-info-date",
-    )
-
+    title = extract_text(card, "card-title")
+    date_text = extract_text(card, "card-info-date")
     location = extract_location(card)
-
-    status = extract_text(
-        card,
-        "card-status",
-    ).lower()
+    status = extract_text(card, "card-status").lower()
 
     if not title:
         skipped_no_title += 1
@@ -178,6 +215,26 @@ for index, match in enumerate(matches):
         skipped_bad_date += 1
         continue
 
+    start_time = ""
+
+    try:
+        detail_page = download_page(detail_url)
+        start_time = extract_start_time(detail_page)
+
+        if start_time:
+            times_found += 1
+        else:
+            times_missing += 1
+
+    except Exception as error:
+        detail_errors += 1
+        print(
+            "Detailpagina fout:",
+            title,
+            "-",
+            str(error),
+        )
+
     concerts.append(
         {
             "artist": title,
@@ -185,14 +242,16 @@ for index, match in enumerate(matches):
             "city": "Eindhoven",
             "country": "NL",
             "date": iso_date,
-            "time": "",
+            "time": start_time,
             "source": "Effenaar",
-            "url": BASE_URL + relative_url,
+            "url": detail_url,
         }
     )
 
+    # Kleine pauze zodat we Effenaar niet onnodig hard belasten.
+    time.sleep(0.10)
 
-# Dubbele URL's verwijderen
+
 unique_concerts = {}
 
 for concert in concerts:
@@ -207,7 +266,6 @@ concerts.sort(
         concert["artist"].lower(),
     )
 )
-
 
 with open(
     "concerts.json",
@@ -227,12 +285,19 @@ print()
 print("============================================================")
 print("RESULTAAT")
 print("============================================================")
+
 print("Agenda-kaarten:", len(matches))
 print("Concerten opgeslagen:", len(concerts))
 print("Afgelast/geannuleerd overgeslagen:", skipped_cancelled)
 print("Zonder titel:", skipped_no_title)
 print("Zonder datum:", skipped_no_date)
 print("Ongeldige datum:", skipped_bad_date)
+
+print()
+print("Tijden gevonden:", times_found)
+print("Tijden niet gevonden:", times_missing)
+print("Detailpagina fouten:", detail_errors)
+
 print()
 print("Bestand gemaakt: concerts.json")
 print()
