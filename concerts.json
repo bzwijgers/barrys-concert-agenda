@@ -1,5 +1,15 @@
 [
   {
+    "artist": "Mamas Gun",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-09-30",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/mamas-gun-1/"
+  },
+  {
     "artist": "Blanks (nieuwe datum)",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -10,6 +20,16 @@
     "url": "https://www.effenaar.nl/agenda/blanks-nieuwe-datum"
   },
   {
+    "artist": "Michael Prins",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-01",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/michael-prins-1/"
+  },
+  {
     "artist": "Katherine Priddy",
     "venue": "'t Rozenknopje",
     "city": "Eindhoven",
@@ -18,6 +38,16 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/katherine-priddy"
+  },
+  {
+    "artist": "Shaemless",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-01",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/shaemless-1/"
   },
   {
     "artist": "Skating Polly",
@@ -40,14 +70,14 @@
     "url": "https://www.effenaar.nl/agenda/scouting-girls"
   },
   {
-    "artist": "An Evening With Knives",
-    "venue": "Café The Jack",
-    "city": "Eindhoven",
+    "artist": "Republica",
+    "venue": "Rotown",
+    "city": "Rotterdam",
     "country": "NL",
-    "date": "2026-10-03",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/an-evening-with-knives-3okt"
+    "date": "2026-10-02",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/republica/"
   },
   {
     "artist": "Come As You Are 2026: The Afghan Whigs, shame, Republica & meer",
@@ -60,6 +90,36 @@
     "url": "https://www.effenaar.nl/agenda/caya2026"
   },
   {
+    "artist": "An Evening With Knives",
+    "venue": "Café The Jack",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/an-evening-with-knives-3okt"
+  },
+  {
+    "artist": "TENDER",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "21:15",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/tender/"
+  },
+  {
+    "artist": "Bass Drum of Death",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/bass-drum-of-death-1/"
+  },
+  {
     "artist": "Morgenshtern",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -70,14 +130,14 @@
     "url": "https://www.effenaar.nl/agenda/morgenshtern"
   },
   {
-    "artist": "Father Of Peace",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
+    "artist": "mary in the junkyard",
+    "venue": "Rotown",
+    "city": "Rotterdam",
     "country": "NL",
-    "date": "2026-10-08",
+    "date": "2026-10-07",
     "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/father-of-peace"
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/mary-in-the-junkyard/"
   },
   {
     "artist": "Monolord + Dopelord",
@@ -90,14 +150,34 @@
     "url": "https://www.effenaar.nl/agenda/monolord-dopelord"
   },
   {
-    "artist": "80's Anders",
-    "venue": "Kleine Zaal",
+    "artist": "Father Of Peace",
+    "venue": "Altstadt",
     "city": "Eindhoven",
     "country": "NL",
-    "date": "2026-10-09",
-    "time": "22:30",
+    "date": "2026-10-08",
+    "time": "20:30",
     "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/80s-anders-9okt"
+    "url": "https://www.effenaar.nl/agenda/father-of-peace"
+  },
+  {
+    "artist": "Night Swimming",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/night-swimming/"
+  },
+  {
+    "artist": "The Apers",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "19:15",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/the-apers-1/"
   },
   {
     "artist": "Father Of Peace (extra show)",
@@ -120,14 +200,14 @@
     "url": "https://www.effenaar.nl/agenda/petchmode-9okt"
   },
   {
-    "artist": "Metatron",
+    "artist": "80's Anders",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
     "country": "NL",
-    "date": "2026-10-10",
-    "time": "23:00",
+    "date": "2026-10-09",
+    "time": "22:30",
     "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/metatron"
+    "url": "https://www.effenaar.nl/agenda/80s-anders-9okt"
   },
   {
     "artist": "The Devil Wears Prada",
@@ -138,6 +218,56 @@
     "time": "18:45",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/devil-wears-prada"
+  },
+  {
+    "artist": "Nobu",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "21:15",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/nobu-1/"
+  },
+  {
+    "artist": "Metatron",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "23:00",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/metatron"
+  },
+  {
+    "artist": "Pete Murray",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-12",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/pete-murray-1/"
+  },
+  {
+    "artist": "Ruel",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-12",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/ruel/"
+  },
+  {
+    "artist": "Thijs Veldhuis",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-13",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/thijs-veldhuis/"
   },
   {
     "artist": "Audrey Horne",
@@ -160,14 +290,14 @@
     "url": "https://www.effenaar.nl/agenda/youngthegiant"
   },
   {
-    "artist": "hubris.",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
+    "artist": "Turin Brakes",
+    "venue": "Rotown",
+    "city": "Rotterdam",
     "country": "NL",
-    "date": "2026-10-15",
+    "date": "2026-10-14",
     "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/hubris"
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/turin-brakes-1/"
   },
   {
     "artist": "Tamikrest",
@@ -180,6 +310,26 @@
     "url": "https://www.effenaar.nl/agenda/tamikrest"
   },
   {
+    "artist": "hubris.",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/hubris"
+  },
+  {
+    "artist": "The Homesick",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/the-homesick-1/"
+  },
+  {
     "artist": "Pink Project: Echoes",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -188,6 +338,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/pink-project-echoes"
+  },
+  {
+    "artist": "Sophie Hutchings",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/sophie-hutchings-1/"
   },
   {
     "artist": "Faction Mirage",
@@ -208,6 +368,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/snelle-17okt"
+  },
+  {
+    "artist": "n\\u00e9om\\u00ed",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/neomi-1/"
   },
   {
     "artist": "King King",
@@ -290,6 +460,26 @@
     "url": "https://www.effenaar.nl/agenda/40-years-fuckin-up-nofx"
   },
   {
+    "artist": "Frazey Ford",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "19:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/frazey-ford/"
+  },
+  {
+    "artist": "Kabeaush\\u00e9",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/kabeaushe/"
+  },
+  {
     "artist": "BLØF | Extra show",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -298,6 +488,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/blof-29okt"
+  },
+  {
+    "artist": "Cola",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/cola-1/"
   },
   {
     "artist": "Noah Guthrie",
@@ -310,14 +510,14 @@
     "url": "https://www.effenaar.nl/agenda/noah-guthrie-29okt"
   },
   {
-    "artist": "BLØF",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
+    "artist": "Really Good Time",
+    "venue": "V11",
+    "city": "Rotterdam",
     "country": "NL",
-    "date": "2026-10-30",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/blof-30okt"
+    "date": "2026-10-29",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/really-good-time/"
   },
   {
     "artist": "K-POP Night - Halloween edition",
@@ -330,6 +530,36 @@
     "url": "https://www.effenaar.nl/agenda/k-pop-night-halloween"
   },
   {
+    "artist": "BLØF",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/blof-30okt"
+  },
+  {
+    "artist": "Velocity Made Good",
+    "venue": "Roodkapje West",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/velocity-made-good/"
+  },
+  {
+    "artist": "Uche Yara",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/uche-yara/"
+  },
+  {
     "artist": "Danny Vera",
     "venue": "Klokgebouw",
     "city": "Eindhoven",
@@ -338,16 +568,6 @@
     "time": "16:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/danny-vera-31okt"
-  },
-  {
-    "artist": "FLEMMING",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-31",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/flemming"
   },
   {
     "artist": "Timo Tolkki plays Stratovarius",
@@ -360,6 +580,26 @@
     "url": "https://www.effenaar.nl/agenda/timo-tolkki-plays-stratovarius"
   },
   {
+    "artist": "FLEMMING",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/flemming"
+  },
+  {
+    "artist": "Jon Allen & The Luna Kings",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/jon-allen-the-luna-kings-1/"
+  },
+  {
     "artist": "Raymon Hermans",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -368,6 +608,16 @@
     "time": "15:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/raymon-hermans"
+  },
+  {
+    "artist": "Cardinals",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/cardinals-1/"
   },
   {
     "artist": "Temples",
@@ -380,6 +630,16 @@
     "url": "https://www.effenaar.nl/agenda/temples"
   },
   {
+    "artist": "Noah Guthrie",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/noah-guthrie-1/"
+  },
+  {
     "artist": "Valley of the Sun",
     "venue": "Café The Jack",
     "city": "Eindhoven",
@@ -388,6 +648,16 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/valleyofthesun-1nov"
+  },
+  {
+    "artist": "Victoryland",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/victoryland/"
   },
   {
     "artist": "SPYAIR",
@@ -400,14 +670,24 @@
     "url": "https://www.effenaar.nl/agenda/spyair"
   },
   {
-    "artist": "Moreish Idols",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
+    "artist": "World News",
+    "venue": "Rotown",
+    "city": "Rotterdam",
     "country": "NL",
-    "date": "2026-11-05",
+    "date": "2026-11-04",
     "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/moreish-idols"
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/world-news/"
+  },
+  {
+    "artist": "Tanzana",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/tanzana/"
   },
   {
     "artist": "The Fatal Flowers",
@@ -420,14 +700,14 @@
     "url": "https://www.effenaar.nl/agenda/fatal-flowers"
   },
   {
-    "artist": "Disco Inferno met Discophonic Orchestra",
-    "venue": "Grote zaal",
+    "artist": "Moreish Idols",
+    "venue": "Altstadt",
     "city": "Eindhoven",
     "country": "NL",
-    "date": "2026-11-06",
-    "time": "21:00",
+    "date": "2026-11-05",
+    "time": "20:30",
     "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/disco-inferno-met-discophonic-orchestra-2"
+    "url": "https://www.effenaar.nl/agenda/moreish-idols"
   },
   {
     "artist": "Durum Night",
@@ -450,6 +730,16 @@
     "url": "https://www.effenaar.nl/agenda/electric-eel-shock"
   },
   {
+    "artist": "RAUWfest",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/rauwfest-1/"
+  },
+  {
     "artist": "VALS ALARM",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -458,6 +748,26 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/vals-alarm"
+  },
+  {
+    "artist": "Disco Inferno met Discophonic Orchestra",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "21:00",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/disco-inferno-met-discophonic-orchestra-2"
+  },
+  {
+    "artist": "MEROL",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/merol-1/"
   },
   {
     "artist": "wilt",
@@ -500,14 +810,24 @@
     "url": "https://www.effenaar.nl/agenda/queens-pleasure"
   },
   {
-    "artist": "Early James",
-    "venue": "Café Wilhelmina",
-    "city": "Eindhoven",
+    "artist": "thistle.",
+    "venue": "V11",
+    "city": "Rotterdam",
     "country": "NL",
-    "date": "2026-11-12",
+    "date": "2026-11-08",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/thistle/"
+  },
+  {
+    "artist": "Kiwi Jr.",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-11",
     "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/early-james"
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/kiwi-jr/"
   },
   {
     "artist": "Prins S. en de Geit",
@@ -518,6 +838,56 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/prins-s-geit-12nov"
+  },
+  {
+    "artist": "Early James",
+    "venue": "Café Wilhelmina",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/early-james"
+  },
+  {
+    "artist": "Martin Luke Brown",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/martin-luke-brown/"
+  },
+  {
+    "artist": "Grote Geelstaart",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:45",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/grote-geelstaart/"
+  },
+  {
+    "artist": "Flemming",
+    "venue": "Maassilo",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/flemming/"
+  },
+  {
+    "artist": "VroegZat",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/vroegzat-13nov"
   },
   {
     "artist": "Gallowstreet",
@@ -540,14 +910,14 @@
     "url": "https://www.effenaar.nl/agenda/tusky-13nov"
   },
   {
-    "artist": "VroegZat",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
+    "artist": "Pert Near Sandstone",
+    "venue": "Rotown",
+    "city": "Rotterdam",
     "country": "NL",
     "date": "2026-11-13",
-    "time": "19:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/vroegzat-13nov"
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/pert-near-sandstone/"
   },
   {
     "artist": "PIÑA",
@@ -560,6 +930,16 @@
     "url": "https://www.effenaar.nl/agenda/pina-14nov"
   },
   {
+    "artist": "Grommet",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/grommet/"
+  },
+  {
     "artist": "Ash",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -568,6 +948,56 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/ash"
+  },
+  {
+    "artist": "Adriaan Persons",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/adriaan-persons/"
+  },
+  {
+    "artist": "mustbejohn",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/mustbejohn/"
+  },
+  {
+    "artist": "Anda Morts",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/anda-morts/"
+  },
+  {
+    "artist": "Revolution Calling: Pre-show",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "19:00",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/revolution-calling-pre-show"
+  },
+  {
+    "artist": "Gotu Jim",
+    "venue": "Maassilo",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/gotu-jim-1/"
   },
   {
     "artist": "Anneke van Giersbergen",
@@ -580,14 +1010,24 @@
     "url": "https://www.effenaar.nl/agenda/anneke-van-giersbergen"
   },
   {
-    "artist": "Revolution Calling: Pre-show",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
+    "artist": "Joshua Idehen",
+    "venue": "Rotown",
+    "city": "Rotterdam",
     "country": "NL",
     "date": "2026-11-19",
-    "time": "19:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/revolution-calling-pre-show"
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/joshua-idehen/"
+  },
+  {
+    "artist": "L\\u00e9zard",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/lezard/"
   },
   {
     "artist": "Hiigo",
@@ -610,6 +1050,26 @@
     "url": "https://www.effenaar.nl/agenda/merol"
   },
   {
+    "artist": "CHARLOT",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/charlot-1/"
+  },
+  {
+    "artist": "Psychedelic Porn Crumpets",
+    "venue": "Maassilo",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "19:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/psychedelic-prn-crumpets/"
+  },
+  {
     "artist": "We All Love 90's 00's 10's",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -618,6 +1078,56 @@
     "time": "21:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/wal-21nov"
+  },
+  {
+    "artist": "Desire",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/desire-johnny-jewel/"
+  },
+  {
+    "artist": "Blair Davie",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/blair-davie/"
+  },
+  {
+    "artist": "yuraa",
+    "venue": "Roodkapje West",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/yuraa/"
+  },
+  {
+    "artist": "Genesis Owusu",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/genesis-owusu/"
+  },
+  {
+    "artist": "Test Plan",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/test-plan/"
   },
   {
     "artist": "Gone Country",
@@ -640,6 +1150,36 @@
     "url": "https://www.effenaar.nl/agenda/kaat-van-stralen"
   },
   {
+    "artist": "Mister and Mississippi",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/mister-and-mississippi-1/"
+  },
+  {
+    "artist": "Vals Alarm + Kaboutertje Putlucht",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/vals-alarm-1/"
+  },
+  {
+    "artist": "Centrepiece Colourised",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/centrepiece-colourised/"
+  },
+  {
     "artist": "Jack and the Weatherman",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -648,16 +1188,6 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/jack-weatherman"
-  },
-  {
-    "artist": "Kingfishr",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-28",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/kingfishr"
   },
   {
     "artist": "Ão",
@@ -670,6 +1200,26 @@
     "url": "https://www.effenaar.nl/agenda/ao"
   },
   {
+    "artist": "Kingfishr",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/kingfishr"
+  },
+  {
+    "artist": "MICH",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/mich-3/"
+  },
+  {
     "artist": "Bezerkus Bingo",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -680,14 +1230,14 @@
     "url": "https://www.effenaar.nl/agenda/bezerkus-bingo-2"
   },
   {
-    "artist": "Davina Michelle | extra show",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
+    "artist": "Kids With Buns",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
     "country": "NL",
     "date": "2026-12-02",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/kids-with-buns-1/"
   },
   {
     "artist": "Portland (nieuwe datum)",
@@ -700,6 +1250,46 @@
     "url": "https://www.effenaar.nl/agenda/portland-2dec"
   },
   {
+    "artist": "Davina Michelle | extra show",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
+  },
+  {
+    "artist": "KyoYoko",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/kyoyoko/"
+  },
+  {
+    "artist": "Bertolf",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/bertolf-1/"
+  },
+  {
+    "artist": "Zwangere Guy",
+    "venue": "Maassilo",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/zwangere-guy/"
+  },
+  {
     "artist": "Davina Michelle",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -710,14 +1300,24 @@
     "url": "https://www.effenaar.nl/agenda/davina-michelle"
   },
   {
-    "artist": "NAFT",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
+    "artist": "C.O.F.F.I.N",
+    "venue": "Rotown",
+    "city": "Rotterdam",
     "country": "NL",
-    "date": "2026-12-04",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/naft-0"
+    "date": "2026-12-03",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/c-o-f-f-i-n-1/"
+  },
+  {
+    "artist": "C’est Qui?",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/cest-qui/"
   },
   {
     "artist": "NO BARRIER",
@@ -730,6 +1330,46 @@
     "url": "https://www.effenaar.nl/agenda/no-barrier-4dec"
   },
   {
+    "artist": "NAFT",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/naft-0"
+  },
+  {
+    "artist": "Sarah Julia",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/sarah-julia/"
+  },
+  {
+    "artist": "Belle & Sebastian",
+    "venue": "Theater Rotterdam",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/belle-sebastian/"
+  },
+  {
+    "artist": "Alice Olsthoorn",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/alice-olsthoorn/"
+  },
+  {
     "artist": "Maite Hontelé & LA NOVIA",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -738,6 +1378,36 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/maite-hontele-la-novia"
+  },
+  {
+    "artist": "Softcult",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/softcult/"
+  },
+  {
+    "artist": "Opus Kink",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-08",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/opus-kink/"
+  },
+  {
+    "artist": "The Tubs",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/the-tubs/"
   },
   {
     "artist": "Eindhoven Metal Meeting Warm Up Evening 2026",
@@ -750,6 +1420,36 @@
     "url": "https://www.effenaar.nl/agenda/emm-warm-up-2026"
   },
   {
+    "artist": "Clean Pete's Kerstshow",
+    "venue": "Theater Rotterdam",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-10",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/clean-petes-kerstshow-1/"
+  },
+  {
+    "artist": "Isab\\u00e8l Usher",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-10",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/isabel-usher/"
+  },
+  {
+    "artist": "Stippenlift",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-10",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/stippenlift-1/"
+  },
+  {
     "artist": "Eindhoven Metal Meeting 2026 - Day 1",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -758,6 +1458,26 @@
     "time": "15:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2026-day-1"
+  },
+  {
+    "artist": "Tramhaus",
+    "venue": "Maassilo",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/tramhaus-1/"
+  },
+  {
+    "artist": "Ciao Lucifer",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/ciao-lucifer-1/"
   },
   {
     "artist": "Eindhoven Metal Meeting 2026 - Day 2",
@@ -780,14 +1500,34 @@
     "url": "https://www.effenaar.nl/agenda/stuurbaard-bakkebaard"
   },
   {
-    "artist": "Bar Hollandia: Mart Hoogkamer, Django Wagner & meer",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
+    "artist": "Library Card",
+    "venue": "Rotown",
+    "city": "Rotterdam",
     "country": "NL",
-    "date": "2026-12-18",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/bar-hollandia"
+    "date": "2026-12-12",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/library-card-1/"
+  },
+  {
+    "artist": "Gallowstreet",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/gallowstreet-1/"
+  },
+  {
+    "artist": "After Elmer",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/after-elmer/"
   },
   {
     "artist": "Isabèl Usher",
@@ -800,14 +1540,24 @@
     "url": "https://www.effenaar.nl/agenda/isabel-usher-18dec"
   },
   {
-    "artist": "Christmas Sing-a-Long",
+    "artist": "Bar Hollandia: Mart Hoogkamer, Django Wagner & meer",
     "venue": "Grote zaal",
     "city": "Eindhoven",
     "country": "NL",
-    "date": "2026-12-19",
-    "time": "21:00",
+    "date": "2026-12-18",
+    "time": "20:15",
     "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/christmas-sing-a-long19dec"
+    "url": "https://www.effenaar.nl/agenda/bar-hollandia"
+  },
+  {
+    "artist": "John Coffey",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "21:15",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/john-coffey-1/"
   },
   {
     "artist": "Jett Rebel",
@@ -820,6 +1570,26 @@
     "url": "https://www.effenaar.nl/agenda/jett-rebel-19dec"
   },
   {
+    "artist": "Christmas Sing-a-Long",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "21:00",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/christmas-sing-a-long19dec"
+  },
+  {
+    "artist": "Lucky Fonz III",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "21:15",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/lucky-fonz-iii-1/"
+  },
+  {
     "artist": "ABBA Gold: The Christmas Special Show",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -828,6 +1598,26 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/abba-gold-christmas-special-show-2026"
+  },
+  {
+    "artist": "Lucky Fonz III",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/lucky-fonz-iii-1-2/"
+  },
+  {
+    "artist": "The Hobknobs",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/the-hobknobs/"
   },
   {
     "artist": "Legends of Rock Tribute Festival XL",
@@ -850,6 +1640,16 @@
     "url": "https://www.effenaar.nl/agenda/funky-times"
   },
   {
+    "artist": "Real Farmer + The Klittens",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-27",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/real-farmer-the-klittens/"
+  },
+  {
     "artist": "Effenaar Oud & Nieuw 2026",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -858,6 +1658,16 @@
     "time": "22:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/effenaar-oud-nieuw-2026"
+  },
+  {
+    "artist": "Raymond van het Groenewoud",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-01-02",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/raymond-van-het-groenewoud/"
   },
   {
     "artist": "The Dirty Daddies",
@@ -890,6 +1700,16 @@
     "url": "https://www.effenaar.nl/agenda/fleddy-melculy"
   },
   {
+    "artist": "VanWyck",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-01-15",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/vanwyck-1/"
+  },
+  {
     "artist": "Mike Massé",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -898,6 +1718,26 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/mike-masse"
+  },
+  {
+    "artist": "Iskander Moon",
+    "venue": "Kantine Walhalla",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-01-19",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/iskander-moon/"
+  },
+  {
+    "artist": "Body Horror",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-01-21",
+    "time": "21:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/body-horror/"
   },
   {
     "artist": "Black Box Revelation",
@@ -920,16 +1760,6 @@
     "url": "https://www.effenaar.nl/agenda/erwin-nyhoff-prodigal-sons"
   },
   {
-    "artist": "Mother's Cake",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-01-30",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/mothers-cake"
-  },
-  {
     "artist": "The Smiths Presumably",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -940,6 +1770,26 @@
     "url": "https://www.effenaar.nl/agenda/thesmithspresumably"
   },
   {
+    "artist": "Mother's Cake",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/mothers-cake"
+  },
+  {
+    "artist": "Andrea Vanzo",
+    "venue": "De Doelen",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-03",
+    "time": "20:15",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/andrea-vanzo/"
+  },
+  {
     "artist": "Tramhaus",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -948,6 +1798,46 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/tramhaus-12feb"
+  },
+  {
+    "artist": "Charlie Cunningham",
+    "venue": "Arminius",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-14",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/charlie-cunningham/"
+  },
+  {
+    "artist": "An Evening with Josh Ritter (solo)",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-14",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/josh-ritter-1/"
+  },
+  {
+    "artist": "KYTES",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-14",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/kytes/"
+  },
+  {
+    "artist": "The Reytons",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/the-reytons-1/"
   },
   {
     "artist": "Heideroosjes",
@@ -990,6 +1880,16 @@
     "url": "https://www.effenaar.nl/agenda/midge-ure"
   },
   {
+    "artist": "Wende",
+    "venue": "Maassilo",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/wende-1/"
+  },
+  {
     "artist": "Bazart",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1020,6 +1920,16 @@
     "url": "https://www.effenaar.nl/agenda/vrij-gezellig"
   },
   {
+    "artist": "Roosbeef",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-03-04",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/roosbeef-1/"
+  },
+  {
     "artist": "The Dead Daisies",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1040,6 +1950,16 @@
     "url": "https://www.effenaar.nl/agenda/dutch-queen-50-jaar-somebody-love"
   },
   {
+    "artist": "Hallo Venray",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-03-06",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/hallo-venray-1/"
+  },
+  {
     "artist": "The Haunted Youth",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1048,6 +1968,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/thehauntedyouth"
+  },
+  {
+    "artist": "Chef'Special",
+    "venue": "Maassilo",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-03-11",
+    "time": "19:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/chefspecial-1/"
   },
   {
     "artist": "Politie Warnsveld",
@@ -1110,6 +2040,56 @@
     "url": "https://www.effenaar.nl/agenda/pop-koor-xl-21mrt"
   },
   {
+    "artist": "Black Box Revelation",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-03-21",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/black-box-revelation-1/"
+  },
+  {
+    "artist": "BLUAI",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-03-25",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/bluai-1/"
+  },
+  {
+    "artist": "Flaire",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/flaire-1/"
+  },
+  {
+    "artist": "Sietep\\u00e8",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/sietepe/"
+  },
+  {
+    "artist": "Politie Warnsveld",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/politie-warnsveld/"
+  },
+  {
     "artist": "The Cureheads + Siouxsie & The Budgies",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -1138,6 +2118,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/elvis-concert2027"
+  },
+  {
+    "artist": "Nienke Leone",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-04-11",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/nienke-leone-1/"
   },
   {
     "artist": "High Fade",
@@ -1170,6 +2160,16 @@
     "url": "https://www.effenaar.nl/agenda/off-the-wall"
   },
   {
+    "artist": "Moss",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-04-25",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/moss-1/"
+  },
+  {
     "artist": "MOSS",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -1178,6 +2178,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/moss"
+  },
+  {
+    "artist": "Josua Peter",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-05-08",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/josua-peter/"
   },
   {
     "artist": "Nevermore",
@@ -1220,6 +2230,16 @@
     "url": "https://www.effenaar.nl/agenda/bettie-serveert"
   },
   {
+    "artist": "Gavran + Thistle Sifter",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-05-16",
+    "time": "20:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/gavran-thistle-sifter/"
+  },
+  {
     "artist": "Fuzz Club 2027 - Friday",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -1240,6 +2260,26 @@
     "url": "https://www.effenaar.nl/agenda/fuzzclub-2027-saturday"
   },
   {
+    "artist": "Mood Bored",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-05-22",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/mood-bored-1/"
+  },
+  {
+    "artist": "Alexis Ffrench",
+    "venue": "De Doelen",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-06-05",
+    "time": "20:15",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/alexis-ffrench-1/"
+  },
+  {
     "artist": "New Purple Celebration: The Music of Prince",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1248,6 +2288,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/new-purple-celebration-3okt"
+  },
+  {
+    "artist": "Bettie Serveert",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-10-16",
+    "time": "20:00",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/bettie-serveert-1/"
   },
   {
     "artist": "Kovacs (Nieuwe datum)",
