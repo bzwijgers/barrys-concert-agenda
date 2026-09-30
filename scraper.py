@@ -5,10 +5,12 @@ import html as html_module
 import json
 import time
 
-URL = "https://www.effenaar.nl/agenda"
-BASE_URL = "https://www.effenaar.nl"
 
-headers = {
+# ============================================================
+# ALGEMEEN
+# ============================================================
+
+HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 Chrome/154.0 Safari/537.36"
@@ -33,78 +35,150 @@ MONTHS = {
 }
 
 
+def download_page(url):
+    request = Request(
+        url,
+        headers=HEADERS
+    )
+
+    with urlopen(
+        request,
+        timeout=30
+    ) as response:
+
+        return response.read().decode(
+            "utf-8",
+            errors="replace"
+        )
+
+
 def clean_text(value):
-    value = re.sub(r"<[^>]+>", " ", value)
-    value = html_module.unescape(value)
-    value = re.sub(r"\s+", " ", value)
+    value = re.sub(
+        r"<[^>]+>",
+        " ",
+        value
+    )
+
+    value = html_module.unescape(
+        value
+    )
+
+    value = re.sub(
+        r"\s+",
+        " ",
+        value
+    )
+
     return value.strip()
 
 
-def extract_text(card, class_name):
+def normalize_url(url):
+    return (
+        url
+        .strip()
+        .rstrip("/")
+        .lower()
+    )
+
+
+# ============================================================
+# EFFENAAR
+# ============================================================
+
+EFFENAAR_URL = "https://www.effenaar.nl/agenda"
+EFFENAAR_BASE_URL = "https://www.effenaar.nl"
+
+
+def effenaar_extract_text(
+    card,
+    class_name
+):
+
     pattern = (
         r'<[^>]*class="[^"]*\b'
         + re.escape(class_name)
-        + r'\b[^"]*"[^>]*>(.*?)</[^>]+>'
+        + r'\b[^"]*"[^>]*>'
+        + r'(.*?)'
+        + r'</[^>]+>'
     )
 
     match = re.search(
         pattern,
         card,
-        flags=re.IGNORECASE | re.DOTALL,
+        flags=
+            re.IGNORECASE |
+            re.DOTALL
     )
 
     if not match:
         return ""
 
-    return clean_text(match.group(1))
+    return clean_text(
+        match.group(1)
+    )
 
 
-def extract_location(card):
+def effenaar_extract_location(card):
+
     match = re.search(
-        r'<div\s+class="card-info-location"[^>]*>(.*?)'
+        r'<div\s+class="card-info-location"[^>]*>'
+        r'(.*?)'
         r'</div>\s*</div>\s*</div>',
         card,
-        flags=re.IGNORECASE | re.DOTALL,
+        flags=
+            re.IGNORECASE |
+            re.DOTALL,
     )
 
     if not match:
         return ""
 
-    return clean_text(match.group(1))
+    return clean_text(
+        match.group(1)
+    )
 
 
-def parse_date(value):
-    parts = value.lower().strip().split()
+def effenaar_parse_date(value):
+
+    parts = (
+        value
+        .lower()
+        .strip()
+        .split()
+    )
 
     if len(parts) < 4:
         return None
 
     try:
+
         day = int(parts[1])
-        month = MONTHS.get(parts[2])
+
+        month = MONTHS.get(
+            parts[2]
+        )
+
         year = int(parts[3])
 
         if month is None:
             return None
 
-        return f"{year:04d}-{month:02d}-{day:02d}"
+        return (
+            f"{year:04d}-"
+            f"{month:02d}-"
+            f"{day:02d}"
+        )
 
-    except (ValueError, IndexError):
+    except (
+        ValueError,
+        IndexError
+    ):
+
         return None
 
 
-def download_page(url):
-    request = Request(url, headers=headers)
+def effenaar_extract_start_time(page):
 
-    with urlopen(request, timeout=30) as response:
-        return response.read().decode(
-            "utf-8",
-            errors="replace",
-        )
-
-
-def extract_start_time(page):
-    # Eerst zoeken naar JSON/structured data met startDate.
     start_date_matches = re.findall(
         r'"startDate"\s*:\s*"([^"]+)"',
         page,
@@ -112,193 +186,886 @@ def extract_start_time(page):
     )
 
     for value in start_date_matches:
+
         match = re.search(
             r'T(\d{2}):(\d{2})',
-            value,
+            value
         )
 
         if match:
-            return f"{match.group(1)}:{match.group(2)}"
 
-    # Daarna zoeken naar zichtbare tijdsaanduidingen.
+            return (
+                f"{match.group(1)}:"
+                f"{match.group(2)}"
+            )
+
     text = clean_text(page)
 
     patterns = [
-        r'(?:aanvang|start)\s*:?\s*(\d{1,2})[.:](\d{2})',
-        r'(\d{1,2})[.:](\d{2})\s*(?:uur)',
+        r'(?:aanvang|start)\s*:?\s*'
+        r'(\d{1,2})[.:](\d{2})',
+
+        r'(\d{1,2})[.:](\d{2})'
+        r'\s*(?:uur)',
     ]
 
     for pattern in patterns:
+
         match = re.search(
             pattern,
             text,
-            flags=re.IGNORECASE,
+            flags=re.IGNORECASE
         )
 
         if match:
-            hour = int(match.group(1))
-            minute = int(match.group(2))
 
-            if 0 <= hour <= 23 and 0 <= minute <= 59:
-                return f"{hour:02d}:{minute:02d}"
+            hour = int(
+                match.group(1)
+            )
+
+            minute = int(
+                match.group(2)
+            )
+
+            if (
+                0 <= hour <= 23
+                and
+                0 <= minute <= 59
+            ):
+
+                return (
+                    f"{hour:02d}:"
+                    f"{minute:02d}"
+                )
 
     return ""
 
 
-print("Barry's Concert Agenda - Effenaar scraper")
-print("Start:", datetime.now().isoformat(timespec="seconds"))
+def scrape_effenaar():
 
-page = download_page(URL)
-
-print("HTTP status: 200")
-print("HTML grootte:", len(page))
-
-card_pattern = re.compile(
-    r'<a\s+class="agenda-card"\s+href="(/agenda/[^"]+)"',
-    flags=re.IGNORECASE,
-)
-
-matches = list(card_pattern.finditer(page))
-
-print("Agenda-kaarten gevonden:", len(matches))
-
-concerts = []
-
-skipped_cancelled = 0
-skipped_no_title = 0
-skipped_no_date = 0
-skipped_bad_date = 0
-
-times_found = 0
-times_missing = 0
-detail_errors = 0
-
-for index, match in enumerate(matches):
-
-    start = match.start()
-
-    if index < len(matches) - 1:
-        end = matches[index + 1].start()
-    else:
-        end = len(page)
-
-    card = page[start:end]
-
-    relative_url = match.group(1)
-    detail_url = BASE_URL + relative_url
-
-    title = extract_text(card, "card-title")
-    date_text = extract_text(card, "card-info-date")
-    location = extract_location(card)
-    status = extract_text(card, "card-status").lower()
-
-    if not title:
-        skipped_no_title += 1
-        continue
-
-    if not date_text:
-        skipped_no_date += 1
-        continue
-
-    if (
-        "afgelast" in status
-        or "geannuleerd" in status
-        or "cancelled" in status
-        or "canceled" in status
-    ):
-        skipped_cancelled += 1
-        continue
-
-    iso_date = parse_date(date_text)
-
-    if not iso_date:
-        skipped_bad_date += 1
-        continue
-
-    start_time = ""
-
-    try:
-        detail_page = download_page(detail_url)
-        start_time = extract_start_time(detail_page)
-
-        if start_time:
-            times_found += 1
-        else:
-            times_missing += 1
-
-    except Exception as error:
-        detail_errors += 1
-        print(
-            "Detailpagina fout:",
-            title,
-            "-",
-            str(error),
-        )
-
-    concerts.append(
-        {
-            "artist": title,
-            "venue": location if location else "Effenaar",
-            "city": "Eindhoven",
-            "country": "NL",
-            "date": iso_date,
-            "time": start_time,
-            "source": "Effenaar",
-            "url": detail_url,
-        }
+    print()
+    print(
+        "============================================================"
+    )
+    print("EFFENAAR")
+    print(
+        "============================================================"
     )
 
-    # Kleine pauze zodat we Effenaar niet onnodig hard belasten.
-    time.sleep(0.10)
+    try:
 
+        page = download_page(
+            EFFENAAR_URL
+        )
+
+    except Exception as error:
+
+        print(
+            "Effenaar agenda fout:",
+            str(error)
+        )
+
+        return []
+
+    card_pattern = re.compile(
+        r'<a\s+class="agenda-card"\s+'
+        r'href="(/agenda/[^"]+)"',
+        flags=re.IGNORECASE,
+    )
+
+    matches = list(
+        card_pattern.finditer(
+            page
+        )
+    )
+
+    print(
+        "Agenda-kaarten gevonden:",
+        len(matches)
+    )
+
+    concerts = []
+
+    skipped_cancelled = 0
+    skipped_no_title = 0
+    skipped_no_date = 0
+    skipped_bad_date = 0
+
+    times_found = 0
+    times_missing = 0
+    detail_errors = 0
+
+    for index, match in enumerate(
+        matches
+    ):
+
+        start = match.start()
+
+        if index < len(matches) - 1:
+
+            end = (
+                matches[index + 1]
+                .start()
+            )
+
+        else:
+
+            end = len(page)
+
+        card = page[start:end]
+
+        relative_url = (
+            match.group(1)
+        )
+
+        detail_url = (
+            EFFENAAR_BASE_URL
+            + relative_url
+        )
+
+        title = (
+            effenaar_extract_text(
+                card,
+                "card-title"
+            )
+        )
+
+        date_text = (
+            effenaar_extract_text(
+                card,
+                "card-info-date"
+            )
+        )
+
+        location = (
+            effenaar_extract_location(
+                card
+            )
+        )
+
+        status = (
+            effenaar_extract_text(
+                card,
+                "card-status"
+            )
+            .lower()
+        )
+
+        if not title:
+
+            skipped_no_title += 1
+            continue
+
+        if not date_text:
+
+            skipped_no_date += 1
+            continue
+
+        if (
+            "afgelast" in status
+            or
+            "geannuleerd" in status
+            or
+            "cancelled" in status
+            or
+            "canceled" in status
+        ):
+
+            skipped_cancelled += 1
+            continue
+
+        iso_date = (
+            effenaar_parse_date(
+                date_text
+            )
+        )
+
+        if not iso_date:
+
+            skipped_bad_date += 1
+            continue
+
+        start_time = ""
+
+        try:
+
+            detail_page = (
+                download_page(
+                    detail_url
+                )
+            )
+
+            start_time = (
+                effenaar_extract_start_time(
+                    detail_page
+                )
+            )
+
+            if start_time:
+
+                times_found += 1
+
+            else:
+
+                times_missing += 1
+
+        except Exception as error:
+
+            detail_errors += 1
+
+            print(
+                "Detailpagina fout:",
+                title,
+                "-",
+                str(error)
+            )
+
+        concerts.append(
+            {
+                "artist": title,
+                "venue":
+                    location
+                    if location
+                    else "Effenaar",
+                "city": "Eindhoven",
+                "country": "NL",
+                "date": iso_date,
+                "time": start_time,
+                "source": "Effenaar",
+                "url": detail_url,
+            }
+        )
+
+        time.sleep(0.10)
+
+    unique = {}
+
+    for concert in concerts:
+
+        key = normalize_url(
+            concert["url"]
+        )
+
+        unique[key] = concert
+
+    concerts = list(
+        unique.values()
+    )
+
+    print(
+        "Concerten opgeslagen:",
+        len(concerts)
+    )
+
+    print(
+        "Afgelast/geannuleerd:",
+        skipped_cancelled
+    )
+
+    print(
+        "Zonder titel:",
+        skipped_no_title
+    )
+
+    print(
+        "Zonder datum:",
+        skipped_no_date
+    )
+
+    print(
+        "Ongeldige datum:",
+        skipped_bad_date
+    )
+
+    print(
+        "Tijden gevonden:",
+        times_found
+    )
+
+    print(
+        "Tijden niet gevonden:",
+        times_missing
+    )
+
+    print(
+        "Detailpagina fouten:",
+        detail_errors
+    )
+
+    return concerts
+
+
+# ============================================================
+# ROTOWN
+# ============================================================
+
+ROTOWN_URL = "https://www.rotown.nl/"
+
+
+def rotown_clean_json_text(text):
+
+    return (
+        text
+        .replace("\\/", "/")
+        .replace('\\"', '"')
+        .replace("\\u0026", "&")
+        .replace("\\u0027", "'")
+        .replace("\\u2018", "‘")
+        .replace("\\u2019", "’")
+        .replace("\\u2013", "–")
+        .replace("\\u2014", "—")
+        .replace("&amp;", "&")
+        .strip()
+    )
+
+
+def rotown_normalize_url(url):
+
+    return (
+        rotown_clean_json_text(
+            url
+        )
+        .strip()
+        .rstrip("/")
+        .lower()
+    )
+
+
+def rotown_find_json_value(
+    text,
+    key
+):
+
+    regex = re.compile(
+        r'"'
+        + re.escape(key)
+        + r'"\s*:\s*"((?:\\.|[^"\\])*)"',
+        flags=re.IGNORECASE,
+    )
+
+    match = regex.search(
+        text
+    )
+
+    if not match:
+        return None
+
+    return match.group(1)
+
+
+def rotown_find_location(block):
+
+    location_match = re.search(
+        r'"location"',
+        block,
+        flags=re.IGNORECASE
+    )
+
+    if not location_match:
+        return ""
+
+    location_start = (
+        location_match.start()
+    )
+
+    end = min(
+        location_start + 1500,
+        len(block)
+    )
+
+    location_block = (
+        block[
+            location_start:end
+        ]
+    )
+
+    value = (
+        rotown_find_json_value(
+            location_block,
+            "name"
+        )
+    )
+
+    if not value:
+        return ""
+
+    return rotown_clean_json_text(
+        value
+    )
+
+
+def rotown_find_concert_urls(html):
+
+    event_regex = re.compile(
+        r'<div\s+class=["\']'
+        r'([^"\']*\bwp_theatre_event\b[^"\']*)'
+        r'["\'][^>]*>',
+        flags=
+            re.IGNORECASE |
+            re.DOTALL,
+    )
+
+    urls = []
+
+    for match in event_regex.finditer(
+        html
+    ):
+
+        classes = (
+            match.group(1)
+        )
+
+        is_concert = re.search(
+            r'(?:^|\s)concert(?:\s|$)',
+            classes,
+            flags=re.IGNORECASE,
+        )
+
+        if not is_concert:
+            continue
+
+        start = match.start()
+
+        end = min(
+            start + 10000,
+            len(html)
+        )
+
+        section = html[
+            start:end
+        ]
+
+        url_match = re.search(
+            r'href=["\']'
+            r'(https://www\.rotown\.nl/'
+            r'agenda/[^"\'?#]+/?)'
+            r'["\']',
+            section,
+            flags=re.IGNORECASE,
+        )
+
+        if url_match:
+
+            url = (
+                url_match.group(1)
+            )
+
+            if url not in urls:
+                urls.append(url)
+
+    return urls
+
+
+def rotown_find_structured_events(
+    html
+):
+
+    event_starts = [
+        match.start()
+        for match
+        in re.finditer(
+            r'"@type"\s*:\s*"Event"',
+            html,
+            flags=re.IGNORECASE,
+        )
+    ]
+
+    events = []
+
+    for start in event_starts:
+
+        block_start = max(
+            start - 300,
+            0
+        )
+
+        block_end = min(
+            start + 8000,
+            len(html)
+        )
+
+        block = html[
+            block_start:block_end
+        ]
+
+        name = (
+            rotown_find_json_value(
+                block,
+                "name"
+            )
+        )
+
+        event_url = (
+            rotown_find_json_value(
+                block,
+                "url"
+            )
+        )
+
+        start_date = (
+            rotown_find_json_value(
+                block,
+                "startDate"
+            )
+        )
+
+        location = (
+            rotown_find_location(
+                block
+            )
+        )
+
+        if (
+            name
+            and
+            event_url
+            and
+            start_date
+        ):
+
+            cleaned_url = (
+                rotown_clean_json_text(
+                    event_url
+                )
+            )
+
+            if (
+                "rotown.nl/agenda/"
+                not in cleaned_url.lower()
+            ):
+                continue
+
+            events.append(
+                {
+                    "artist":
+                        rotown_clean_json_text(
+                            name
+                        ),
+                    "startDate":
+                        rotown_clean_json_text(
+                            start_date
+                        ),
+                    "location":
+                        location,
+                    "url":
+                        cleaned_url,
+                }
+            )
+
+    return events
+
+
+def scrape_rotown():
+
+    print()
+    print(
+        "============================================================"
+    )
+    print("ROTOWN")
+    print(
+        "============================================================"
+    )
+
+    try:
+
+        html = download_page(
+            ROTOWN_URL
+        )
+
+    except Exception as error:
+
+        print(
+            "Rotown fout:",
+            str(error)
+        )
+
+        return []
+
+    concert_urls = (
+        rotown_find_concert_urls(
+            html
+        )
+    )
+
+    structured_events = (
+        rotown_find_structured_events(
+            html
+        )
+    )
+
+    print(
+        "Concert-links gevonden:",
+        len(concert_urls)
+    )
+
+    print(
+        "Structured events gevonden:",
+        len(structured_events)
+    )
+
+    concert_url_set = {
+        rotown_normalize_url(url)
+        for url in concert_urls
+    }
+
+    concerts = []
+
+    for event in structured_events:
+
+        event_url = (
+            rotown_normalize_url(
+                event["url"]
+            )
+        )
+
+        if (
+            event_url
+            not in concert_url_set
+        ):
+            continue
+
+        start_date = (
+            event["startDate"]
+        )
+
+        date = (
+            start_date
+            .split("T")[0]
+        )
+
+        start_time = ""
+
+        if "T" in start_date:
+
+            time_part = (
+                start_date
+                .split("T", 1)[1]
+            )
+
+            time_match = re.match(
+                r"(\d{2}):(\d{2})",
+                time_part
+            )
+
+            if time_match:
+
+                start_time = (
+                    f"{time_match.group(1)}:"
+                    f"{time_match.group(2)}"
+                )
+
+        concerts.append(
+            {
+                "artist":
+                    event["artist"],
+                "venue":
+                    event["location"]
+                    if event["location"]
+                    else "Rotown",
+                "city":
+                    "Rotterdam",
+                "country":
+                    "NL",
+                "date":
+                    date,
+                "time":
+                    start_time,
+                "source":
+                    "Rotown",
+                "url":
+                    event["url"],
+            }
+        )
+
+    unique = {}
+
+    for concert in concerts:
+
+        key = (
+            rotown_normalize_url(
+                concert["url"]
+            )
+        )
+
+        unique[key] = concert
+
+    concerts = list(
+        unique.values()
+    )
+
+    concerts.sort(
+        key=lambda concert: (
+            concert["date"],
+            concert["artist"].lower()
+        )
+    )
+
+    print(
+        "Rotown concerten opgeslagen:",
+        len(concerts)
+    )
+
+    return concerts
+
+
+# ============================================================
+# CENTRALE DATABASE
+# ============================================================
+
+print(
+    "Barry's Concert Agenda - centrale scraper"
+)
+
+print(
+    "Start:",
+    datetime.now().isoformat(
+        timespec="seconds"
+    )
+)
+
+
+all_concerts = []
+
+
+# Effenaar
+try:
+
+    effenaar_concerts = (
+        scrape_effenaar()
+    )
+
+    all_concerts.extend(
+        effenaar_concerts
+    )
+
+except Exception as error:
+
+    print(
+        "ERNSTIGE EFFENAAR FOUT:",
+        str(error)
+    )
+
+
+# Rotown
+try:
+
+    rotown_concerts = (
+        scrape_rotown()
+    )
+
+    all_concerts.extend(
+        rotown_concerts
+    )
+
+except Exception as error:
+
+    print(
+        "ERNSTIGE ROTOWN FOUT:",
+        str(error)
+    )
+
+
+# ============================================================
+# DUBBELEN VERWIJDEREN
+# ============================================================
 
 unique_concerts = {}
 
-for concert in concerts:
-    key = concert["url"].rstrip("/").lower()
-    unique_concerts[key] = concert
+for concert in all_concerts:
 
-concerts = list(unique_concerts.values())
+    key = normalize_url(
+        concert["url"]
+    )
 
-concerts.sort(
+    if key:
+        unique_concerts[key] = concert
+
+
+all_concerts = list(
+    unique_concerts.values()
+)
+
+
+# ============================================================
+# SORTEREN
+# ============================================================
+
+all_concerts.sort(
     key=lambda concert: (
         concert["date"],
-        concert["artist"].lower(),
+        concert["time"],
+        concert["artist"].lower()
     )
 )
+
+
+# ============================================================
+# JSON OPSLAAN
+# ============================================================
 
 with open(
     "concerts.json",
     "w",
-    encoding="utf-8",
+    encoding="utf-8"
 ) as file:
 
     json.dump(
-        concerts,
+        all_concerts,
         file,
         ensure_ascii=False,
-        indent=2,
+        indent=2
     )
 
 
-print()
-print("============================================================")
-print("RESULTAAT")
-print("============================================================")
-
-print("Agenda-kaarten:", len(matches))
-print("Concerten opgeslagen:", len(concerts))
-print("Afgelast/geannuleerd overgeslagen:", skipped_cancelled)
-print("Zonder titel:", skipped_no_title)
-print("Zonder datum:", skipped_no_date)
-print("Ongeldige datum:", skipped_bad_date)
+# ============================================================
+# RESULTAAT
+# ============================================================
 
 print()
-print("Tijden gevonden:", times_found)
-print("Tijden niet gevonden:", times_missing)
-print("Detailpagina fouten:", detail_errors)
+print(
+    "============================================================"
+)
+print("CENTRAAL RESULTAAT")
+print(
+    "============================================================"
+)
+
+print(
+    "Effenaar:",
+    len(
+        [
+            concert
+            for concert
+            in all_concerts
+            if concert["source"]
+            == "Effenaar"
+        ]
+    )
+)
+
+print(
+    "Rotown:",
+    len(
+        [
+            concert
+            for concert
+            in all_concerts
+            if concert["source"]
+            == "Rotown"
+        ]
+    )
+)
+
+print(
+    "Totaal:",
+    len(all_concerts)
+)
 
 print()
-print("Bestand gemaakt: concerts.json")
-print()
-print("Effenaar scraper gereed.")
+print(
+    "Bestand gemaakt: concerts.json"
+)
+
+print(
+    "Centrale scraper gereed."
+)
