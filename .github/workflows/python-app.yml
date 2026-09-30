@@ -1,13 +1,18 @@
-name: Test concert scraper
+name: Update concert agenda
 
 on:
   workflow_dispatch:
+
+  schedule:
+    # GitHub Actions gebruikt UTC.
+    # 05:00 UTC = 07:00 in Nederland tijdens zomertijd.
+    - cron: "0 5 * * *"
 
 permissions:
   contents: write
 
 jobs:
-  test-scraper:
+  update-concerts:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +26,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run Effenaar scraper
+      - name: Run concert scraper
         run: python scraper.py
 
       - name: Check concerts.json
