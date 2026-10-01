@@ -821,7 +821,7 @@ def scrape_rotown():
             }
         )
 
-    unique = {}
+     unique = {}
 
     for concert in concerts:
         key = rotown_normalize_url(
@@ -841,7 +841,7 @@ def scrape_rotown():
         )
     )
 
-   print(
+    print(
         "Rotown concerten/festivals opgeslagen:",
         len(concerts)
     )
