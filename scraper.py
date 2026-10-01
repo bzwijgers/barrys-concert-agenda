@@ -597,13 +597,13 @@ def rotown_find_concert_urls(html):
     for match in event_regex.finditer(html):
         classes = match.group(1)
 
-        is_concert = re.search(
-            r'(?:^|\s)concert(?:\s|$)',
+        is_concert_or_festival = re.search(
+            r'(?:^|\s)(?:concert|festival)(?:\s|$)',
             classes,
             flags=re.IGNORECASE,
         )
 
-        if not is_concert:
+        if not is_concert_or_festival:
             continue
 
         start = match.start()
@@ -748,7 +748,7 @@ def scrape_rotown():
     )
 
     print(
-        "Concert-links gevonden:",
+        "Concert/festival-links gevonden:",
         len(concert_urls)
     )
 
@@ -842,14 +842,11 @@ def scrape_rotown():
     )
 
     print(
-        "Rotown concerten opgeslagen:",
+        "Rotown concerten/festivals opgeslagen:",
         len(concerts)
     )
 
-    return concerts
-
-
-# ============================================================
+    # ============================================================
 # 013
 # ============================================================
 
@@ -1512,7 +1509,6 @@ def paradiso_iso_to_local(
     except Exception:
         return None
 
-
 def paradiso_extract_visible_date(html):
     text = paradiso_html_to_text(
         html
@@ -1554,7 +1550,6 @@ def paradiso_extract_visible_date(html):
         return None
 
     today = date.today()
-
     year = today.year
 
     try:
