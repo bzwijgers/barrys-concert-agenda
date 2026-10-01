@@ -1,15 +1,5 @@
 [
   {
-    "artist": "Panchiko",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-01",
-    "time": "19:15",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/panchiko/2741543"
-  },
-  {
     "artist": "Jalen Ngonda",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -50,6 +40,16 @@
     "url": "https://www.rotown.nl/agenda/michael-prins-1/"
   },
   {
+    "artist": "Stu Larsen + Tim Hart",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-01",
+    "time": "20:15",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/stu-larsen/2843715"
+  },
+  {
     "artist": "Shaemless",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -68,6 +68,16 @@
     "time": "22:00",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/soulidified/2907021"
+  },
+  {
+    "artist": "Panchiko",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-02",
+    "time": "19:15",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/panchiko/2741543"
   },
   {
     "artist": "Ben Ellis in Tolhuistuin Amsterdam",
@@ -168,16 +178,6 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/scouting-girls"
-  },
-  {
-    "artist": "Stu Larsen + Tim Hart",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-02",
-    "time": "20:15",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/stu-larsen/2843715"
   },
   {
     "artist": "Janne Schra",
@@ -1390,16 +1390,6 @@
     "url": "https://www.rotown.nl/agenda/left-of-the-dial-2026/"
   },
   {
-    "artist": "Amsterdamse Popprijs Halve Finales in Paradiso",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "20:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/amsterdamse-popprijs-halve-finales/2935127"
-  },
-  {
     "artist": "IOS Clubtour 8",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -1408,16 +1398,6 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/127222/ios"
-  },
-  {
-    "artist": "Zonneprijs #1 met Dear Valencia, The Places You'll Go, Nose Shop en Tales",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "20:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/zonneprijs-1/2917938"
   },
   {
     "artist": "Flowers for the Dead + The Sewing Club",
@@ -1438,6 +1418,16 @@
     "time": "12:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/the-official-unofficial-1/"
+  },
+  {
+    "artist": "Lawrence Hart & Mera Bhai pres: Dreamtraxx - ADE",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/lawrence-hart-mera-bhai-pres-dreamtraxx-ade/2895459"
   },
   {
     "artist": "MICHA",
@@ -3090,6 +3080,16 @@
     "url": "https://www.013.nl/programma/138201/coilguns"
   },
   {
+    "artist": "Davina Michelle | extra show",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
+  },
+  {
     "artist": "Etana",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3128,16 +3128,6 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/126271/portugal-the-man"
-  },
-  {
-    "artist": "Davina Michelle | extra show",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-02",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
   },
   {
     "artist": "KyoYoko",
@@ -4000,6 +3990,16 @@
     "url": "https://www.013.nl/programma/159259/carnaval-countdown"
   },
   {
+    "artist": "Amsterdamse Popprijs Halve Finales in Paradiso",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/amsterdamse-popprijs-halve-finales/2935127"
+  },
+  {
     "artist": "Erwin Nyhoff & The Prodigal Sons",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -4050,6 +4050,16 @@
     "url": "https://www.013.nl/programma/128068/two-door-cinema-club"
   },
   {
+    "artist": "Zonneprijs #1 met Dear Valencia, The Places You'll Go, Nose Shop en Tales",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-31",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/zonneprijs-1/2917938"
+  },
+  {
     "artist": "Spite + Emmure NEW WORLD KILLER EU/UK 2027",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -4098,16 +4108,6 @@
     "time": "20:30",
     "source": "013",
     "url": "https://www.013.nl/programma/127140/feuerengel"
-  },
-  {
-    "artist": "Lawrence Hart & Mera Bhai pres: Dreamtraxx - ADE",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-11",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/lawrence-hart-mera-bhai-pres-dreamtraxx-ade/2895459"
   },
   {
     "artist": "Delain Album Release Show",
