@@ -1132,13 +1132,9 @@ def source013_parse_event(
 
 def scrape_013():
     print()
-    print(
-        "============================================================"
-    )
+    print("============================================================")
     print("013")
-    print(
-        "============================================================"
-    )
+    print("============================================================")
 
     try:
         program_html = download_page(
@@ -1166,50 +1162,69 @@ def scrape_013():
     concerts = []
     detail_errors = 0
     no_event_data = 0
-
     total = len(program_urls)
+    processed = 0
 
-    for index, event_url in enumerate(
-        program_urls,
-        start=1
-    ):
-        try:
-            event_html = download_page(
+    def fetch_013(event_url):
+        event_html = download_page(
+            event_url
+        )
+
+        return source013_parse_event(
+            event_html,
+            event_url
+        )
+
+    with ThreadPoolExecutor(
+        max_workers=8
+    ) as executor:
+
+        future_to_url = {
+            executor.submit(
+                fetch_013,
                 event_url
-            )
+            ): event_url
 
-            concert = source013_parse_event(
-                event_html,
-                event_url
-            )
+            for event_url in program_urls
+        }
 
-            if concert is not None:
-                concerts.append(
-                    concert
-                )
-            else:
-                no_event_data += 1
-
-        except Exception as error:
-            detail_errors += 1
-
-            print(
-                "013 detailpagina fout:",
-                event_url,
-                "-",
-                str(error)
-            )
-
-        if (
-            index % 25 == 0
-            or index == total
+        for future in as_completed(
+            future_to_url
         ):
-            print(
-                "013 verwerkt:",
-                f"{index}/{total}"
-            )
+            event_url = future_to_url[
+                future
+            ]
 
-        time.sleep(0.05)
+            processed += 1
+
+            try:
+                concert = future.result()
+
+                if concert is not None:
+                    concerts.append(
+                        concert
+                    )
+                else:
+                    no_event_data += 1
+
+            except Exception as error:
+                detail_errors += 1
+
+                print(
+                    "013 detailpagina fout:",
+                    event_url,
+                    "-",
+                    str(error)
+                )
+
+            if (
+                processed % 25 == 0
+                or processed == total
+            ):
+                print(
+                    "013 verwerkt:",
+                    f"{processed}/{total}"
+                )
 
     unique = {}
 
@@ -1332,6 +1347,7 @@ def paradiso_find_program_urls(html):
             continue
 
         seen.add(key)
+
         unique_urls.append(
             event_url
         )
@@ -1576,6 +1592,7 @@ def paradiso_iso_to_local(
     except Exception:
         return None
 
+
 def paradiso_extract_visible_date(html):
     text = paradiso_html_to_text(
         html
@@ -1760,13 +1777,9 @@ def paradiso_parse_event(
 
 def scrape_paradiso():
     print()
-    print(
-        "============================================================"
-    )
+    print("============================================================")
     print("PARADISO")
-    print(
-        "============================================================"
-    )
+    print("============================================================")
 
     try:
         agenda_html = (
@@ -1798,6 +1811,7 @@ def scrape_paradiso():
     success_count = 0
     failed_count = 0
     past_count = 0
+    processed = 0
 
     total = len(
         program_urls
@@ -1805,70 +1819,88 @@ def scrape_paradiso():
 
     today = date.today()
 
-    for index, event_url in enumerate(
-        program_urls,
-        start=1
-    ):
-        try:
-            event_html = (
-                download_page_retry(
-                    event_url
-                )
+    def fetch_paradiso(event_url):
+        event_html = (
+            download_page_retry(
+                event_url
             )
+        )
 
-            concert = (
-                paradiso_parse_event(
-                    event_html,
-                    event_url
-                )
-            )
+        return paradiso_parse_event(
+            event_html,
+            event_url
+        )
 
-            if concert is None:
-                failed_count += 1
+    with ThreadPoolExecutor(
+        max_workers=8
+    ) as executor:
 
-            else:
-                try:
-                    parsed_date = (
-                        date.fromisoformat(
-                            concert["date"]
-                        )
-                    )
+        future_to_url = {
+            executor.submit(
+                fetch_paradiso,
+                event_url
+            ): event_url
 
-                except Exception:
-                    parsed_date = None
+            for event_url in program_urls
+        }
 
-                if (
-                    parsed_date is None
-                    or parsed_date >= today
-                ):
-                    concerts.append(
-                        concert
-                    )
-                    success_count += 1
+        for future in as_completed(
+            future_to_url
+        ):
+            event_url = future_to_url[
+                future
+            ]
+
+            processed += 1
+
+            try:
+                concert = future.result()
+
+                if concert is None:
+                    failed_count += 1
 
                 else:
-                    past_count += 1
+                    try:
+                        parsed_date = (
+                            date.fromisoformat(
+                                concert["date"]
+                            )
+                        )
 
-        except Exception as error:
-            failed_count += 1
+                    except Exception:
+                        parsed_date = None
 
-            print(
-                "Paradiso detailpagina fout:",
-                event_url,
-                "-",
-                str(error)
-            )
+                    if (
+                        parsed_date is None
+                        or parsed_date >= today
+                    ):
+                        concerts.append(
+                            concert
+                        )
 
-        if (
-            index % 10 == 0
-            or index == total
-        ):
-            print(
-                "Paradiso verwerkt:",
-                f"{index}/{total}"
-            )
+                        success_count += 1
 
-        time.sleep(0.05)
+                    else:
+                        past_count += 1
+
+            except Exception as error:
+                failed_count += 1
+
+                print(
+                    "Paradiso detailpagina fout:",
+                    event_url,
+                    "-",
+                    str(error)
+                )
+
+            if (
+                processed % 10 == 0
+                or processed == total
+            ):
+                print(
+                    "Paradiso verwerkt:",
+                    f"{processed}/{total}"
+                )
 
     unique = {}
 
