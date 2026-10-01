@@ -3,6 +3,7 @@ from urllib.parse import urlsplit, urlunsplit, quote
 from urllib.error import HTTPError, URLError
 from datetime import datetime, date, timedelta
 from zoneinfo import ZoneInfo
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import re
 import html as html_module
 import json
@@ -94,7 +95,6 @@ def download_page(url):
         request,
         timeout=30
     ) as response:
-
         return response.read().decode(
             "utf-8",
             errors="replace"
@@ -366,27 +366,31 @@ def scrape_effenaar():
         len(matches)
     )
 
-    concerts = []
+    base_concerts = []
 
     skipped_cancelled = 0
     skipped_no_title = 0
     skipped_no_date = 0
     skipped_bad_date = 0
-    times_found = 0
-    times_missing = 0
-    detail_errors = 0
 
-    for index, match in enumerate(matches):
+    for index, match in enumerate(
+        matches
+    ):
         start = match.start()
 
         if index < len(matches) - 1:
-            end = matches[index + 1].start()
+            end = (
+                matches[index + 1]
+                .start()
+            )
         else:
             end = len(page)
 
         card = page[start:end]
 
-        relative_url = match.group(1)
+        relative_url = (
+            match.group(1)
+        )
 
         detail_url = (
             EFFENAAR_BASE_URL
@@ -403,8 +407,10 @@ def scrape_effenaar():
             "card-info-date"
         )
 
-        location = effenaar_extract_location(
-            card
+        location = (
+            effenaar_extract_location(
+                card
+            )
         )
 
         status = (
@@ -440,35 +446,7 @@ def scrape_effenaar():
             skipped_bad_date += 1
             continue
 
-        start_time = ""
-
-        try:
-            detail_page = download_page(
-                detail_url
-            )
-
-            start_time = (
-                effenaar_extract_start_time(
-                    detail_page
-                )
-            )
-
-            if start_time:
-                times_found += 1
-            else:
-                times_missing += 1
-
-        except Exception as error:
-            detail_errors += 1
-
-            print(
-                "Detailpagina fout:",
-                title,
-                "-",
-                str(error)
-            )
-
-        concerts.append(
+        base_concerts.append(
             {
                 "artist": title,
                 "venue":
@@ -478,54 +456,132 @@ def scrape_effenaar():
                 "city": "Eindhoven",
                 "country": "NL",
                 "date": iso_date,
-                "time": start_time,
+                "time": "",
                 "source": "Effenaar",
                 "url": detail_url,
             }
         )
 
-        time.sleep(0.10)
+    times_found = 0
+    times_missing = 0
+    detail_errors = 0
+
+    def fetch_time(concert):
+        detail_page = download_page(
+            concert["url"]
+        )
+
+        return (
+            effenaar_extract_start_time(
+                detail_page
+            )
+        )
+
+    with ThreadPoolExecutor(
+        max_workers=8
+    ) as executor:
+
+        future_to_index = {
+            executor.submit(
+                fetch_time,
+                concert
+            ): index
+
+            for index, concert
+            in enumerate(base_concerts)
+        }
+
+        for future in as_completed(
+            future_to_index
+        ):
+            index = future_to_index[
+                future
+            ]
+
+            concert = base_concerts[
+                index
+            ]
+
+            try:
+                start_time = (
+                    future.result()
+                )
+
+                concert["time"] = (
+                    start_time
+                )
+
+                if start_time:
+                    times_found += 1
+                else:
+                    times_missing += 1
+
+            except Exception as error:
+                detail_errors += 1
+
+                print(
+                    "Detailpagina fout:",
+                    concert["artist"],
+                    "-",
+                    str(error)
+                )
 
     unique = {}
 
-    for concert in concerts:
+    for concert in base_concerts:
         key = normalize_url(
             concert["url"]
         )
+
         unique[key] = concert
 
     concerts = list(
         unique.values()
     )
 
+    concerts.sort(
+        key=lambda concert: (
+            concert["date"],
+            concert["time"],
+            concert["artist"].lower()
+        )
+    )
+
     print(
         "Concerten opgeslagen:",
         len(concerts)
     )
+
     print(
         "Afgelast/geannuleerd:",
         skipped_cancelled
     )
+
     print(
         "Zonder titel:",
         skipped_no_title
     )
+
     print(
         "Zonder datum:",
         skipped_no_date
     )
+
     print(
         "Ongeldige datum:",
         skipped_bad_date
     )
+
     print(
         "Tijden gevonden:",
         times_found
     )
+
     print(
         "Tijden niet gevonden:",
         times_missing
     )
+
     print(
         "Detailpagina fouten:",
         detail_errors
@@ -1161,6 +1217,7 @@ def scrape_013():
         key = normalize_url(
             concert["url"]
         )
+
         unique[key] = concert
 
     concerts = list(
@@ -1443,10 +1500,14 @@ def paradiso_find_best_date_candidate(
 
         start_index = 0
 
-        while start_index < len(search_html):
-            position = search_html.find(
-                search_artist,
-                start_index
+        while start_index < len(
+            search_html
+        ):
+            position = (
+                search_html.find(
+                    search_artist,
+                    start_index
+                )
             )
 
             if position < 0:
@@ -1458,7 +1519,10 @@ def paradiso_find_best_date_candidate(
 
             start_index = (
                 position
-                + max(len(search_artist), 1)
+                + max(
+                    len(search_artist),
+                    1
+                )
             )
 
     if artist_positions:
@@ -1953,7 +2017,6 @@ for concert in all_concerts:
 
     if key:
         unique_concerts[key] = concert
-
 
 all_concerts = list(
     unique_concerts.values()
