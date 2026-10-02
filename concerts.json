@@ -1,65 +1,5 @@
 [
   {
-    "artist": "Jalen Ngonda",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-01",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/jalen-ngonda/2841438"
-  },
-  {
-    "artist": "Soulidified",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-01",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/soulidified/2900229"
-  },
-  {
-    "artist": "The Bones of J.R. Jones",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-01",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/the-bones-of-j-r-jones/2847396"
-  },
-  {
-    "artist": "Michael Prins",
-    "venue": "LantarenVenster",
-    "city": "Rotterdam",
-    "country": "NL",
-    "date": "2026-10-01",
-    "time": "20:00",
-    "source": "Rotown",
-    "url": "https://www.rotown.nl/agenda/michael-prins-1/"
-  },
-  {
-    "artist": "Shaemless",
-    "venue": "Rotown",
-    "city": "Rotterdam",
-    "country": "NL",
-    "date": "2026-10-01",
-    "time": "20:30",
-    "source": "Rotown",
-    "url": "https://www.rotown.nl/agenda/shaemless-1/"
-  },
-  {
-    "artist": "Soulidified",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-01",
-    "time": "22:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/soulidified/2907021"
-  },
-  {
     "artist": "Panchiko",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1390,6 +1330,16 @@
     "url": "https://www.013.nl/programma/127222/ios"
   },
   {
+    "artist": "Lawrence Hart & Mera Bhai pres: Dreamtraxx - ADE",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/lawrence-hart-mera-bhai-pres-dreamtraxx-ade/2895459"
+  },
+  {
     "artist": "Flowers for the Dead + The Sewing Club",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -2100,6 +2050,26 @@
     "url": "https://www.013.nl/programma/128504/puscifer"
   },
   {
+    "artist": "Kalben  'Land of Lost Poets' Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/kalben-land-of-lost-poets-tour/2870556"
+  },
+  {
+    "artist": "The Meltdown",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/the-meltdown/2786539"
+  },
+  {
     "artist": "Victoryland",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -2108,6 +2078,16 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/victoryland/"
+  },
+  {
+    "artist": "Fink",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/fink/2862246"
   },
   {
     "artist": "Shinedown Dance Kid Dance Act II",
@@ -2158,6 +2138,26 @@
     "time": "21:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/tanzana/"
+  },
+  {
+    "artist": "Julia Adriana",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/julia-adriana/2895784"
+  },
+  {
+    "artist": "The Clockworks",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/the-clockworks/2836738"
   },
   {
     "artist": "Rolf Sanchez Club Tour",
@@ -2358,16 +2358,6 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/126189/messa"
-  },
-  {
-    "artist": "Amsterdamse Popprijs Halve Finales in Paradiso",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-10",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/amsterdamse-popprijs-halve-finales/2935127"
   },
   {
     "artist": "The Fray Autumn Light Tour",
@@ -3940,6 +3930,16 @@
     "url": "https://www.013.nl/programma/159540/job-dutchtuber-billy-the-kit"
   },
   {
+    "artist": "Alien Chicks - 19 oktober 2026",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-24",
+    "time": "16:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/alien-chicks/2885760"
+  },
+  {
     "artist": "Eddie Jobson U.K. REVISITED",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3958,16 +3958,6 @@
     "time": "14:30",
     "source": "013",
     "url": "https://www.013.nl/programma/152175/de-jukebox"
-  },
-  {
-    "artist": "Lawrence Hart & Mera Bhai pres: Dreamtraxx - ADE",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-27",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/lawrence-hart-mera-bhai-pres-dreamtraxx-ade/2895459"
   },
   {
     "artist": "Frozen Soul No place of warmth Europe & UK 2027",
@@ -4470,16 +4460,6 @@
     "url": "https://www.paradiso.nl/nl/programma/amsterdamse-popprijs-halve-finales/2935123"
   },
   {
-    "artist": "Zonneprijs #1 met Dear Valencia, The Places You'll Go, Nose Shop en Tales",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-19",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/zonneprijs-1/2917938"
-  },
-  {
     "artist": "Eternal Eclipse: Sabathan + Flail + Triumphal Vengeance + Clavicula",
     "venue": "POPEI",
     "city": "Eindhoven",
@@ -4548,6 +4528,16 @@
     "time": "15:30",
     "source": "013",
     "url": "https://www.013.nl/programma/159292/sama-sama-maluku"
+  },
+  {
+    "artist": "Amsterdamse Popprijs Halve Finales in Paradiso",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-30",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/amsterdamse-popprijs-halve-finales/2935127"
   },
   {
     "artist": "Westside Cowboy",
