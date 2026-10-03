@@ -1,21 +1,11 @@
 [
   {
-    "artist": "An Evening With Knives",
-    "venue": "Café The Jack",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/an-evening-with-knives-3okt"
-  },
-  {
     "artist": "Come As You Are 2026: The Afghan Whigs, shame, Republica & meer",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
     "country": "NL",
     "date": "2026-10-03",
-    "time": "",
+    "time": "15:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/caya2026"
   },
@@ -38,16 +28,6 @@
     "time": "19:15",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/panchiko/2741543"
-  },
-  {
-    "artist": "Ben Ellis in Tolhuistuin Amsterdam",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/ben-ellis/2886534"
   },
   {
     "artist": "Kelela - new avatar live",
@@ -140,14 +120,14 @@
     "url": "https://www.013.nl/programma/123148/joy-division-undercover"
   },
   {
-    "artist": "Stu Larsen + Tim Hart",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
+    "artist": "An Evening With Knives",
+    "venue": "Café The Jack",
+    "city": "Eindhoven",
     "country": "NL",
     "date": "2026-10-03",
-    "time": "20:15",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/stu-larsen/2843715"
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/an-evening-with-knives-3okt"
   },
   {
     "artist": "Cloudbusting",
@@ -178,6 +158,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/emma-harner/2884218"
+  },
+  {
+    "artist": "Warhaus - Ha Ha Heartbeats - ADE in Cinetol",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/warhaus-ha-ha-heartbeats-ade/2930261"
   },
   {
     "artist": "Paardcafé: Mr Heleen",
@@ -219,16 +209,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paardcafe-peach-club/"
-  },
-  {
-    "artist": "Morgenshtern",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-04",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/morgenshtern"
   },
   {
     "artist": "Finale Dutch Blues Challenge 2026",
@@ -332,6 +312,16 @@
     "clubCard": false
   },
   {
+    "artist": "Jude York - Once Upon a Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/jude-york-once-upon-a-tour/2906985"
+  },
+  {
     "artist": "Mica Millar",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -340,6 +330,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/mica-millar/2768916"
+  },
+  {
+    "artist": "Morgenshtern",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/morgenshtern"
   },
   {
     "artist": "Myrath",
@@ -623,16 +623,6 @@
     "clubCard": false
   },
   {
-    "artist": "Father Of Peace",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/father-of-peace"
-  },
-  {
     "artist": "The Amity Affliction HOUSE OF CARDS EU 2026",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -753,6 +743,16 @@
     "url": "https://www.paard.nl/event/savine-4/"
   },
   {
+    "artist": "Father Of Peace",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/father-of-peace"
+  },
+  {
     "artist": "Night Swimming",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -782,26 +782,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paardcafe-club-pony-100/"
-  },
-  {
-    "artist": "Father Of Peace (extra show)",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/father-peace-extra-show"
-  },
-  {
-    "artist": "Petch Mode",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/petchmode-9okt"
   },
   {
     "artist": "Shadow of Intent",
@@ -935,6 +915,16 @@
     "url": "https://www.paard.nl/event/paarcafe-mic-drop/"
   },
   {
+    "artist": "Father Of Peace (extra show)",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/father-peace-extra-show"
+  },
+  {
     "artist": "RONDÉ",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -953,6 +943,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/sarischorr/"
+  },
+  {
+    "artist": "Petch Mode",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:45",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/petchmode-9okt"
   },
   {
     "artist": "South Summit",
@@ -3397,16 +3397,6 @@
     "time": "14:30",
     "source": "013",
     "url": "https://www.013.nl/programma/152161/de-jukebox"
-  },
-  {
-    "artist": "Paul van Loon en Andere Snuiters",
-    "venue": "Boerderij",
-    "city": "Zoetermeer",
-    "country": "NL",
-    "date": "2026-10-28",
-    "time": "15:00",
-    "source": "Boerderij",
-    "url": "https://poppodiumboerderij.nl/programma/paulvanloon/"
   },
   {
     "artist": "Noah Guthrie",
@@ -9690,16 +9680,6 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/physical-graffiti-2027"
-  },
-  {
-    "artist": "Lee Rocker of the Stray Cats",
-    "venue": "Boerderij",
-    "city": "Zoetermeer",
-    "country": "NL",
-    "date": "2027-02-20",
-    "time": "20:30",
-    "source": "Boerderij",
-    "url": "https://poppodiumboerderij.nl/programma/leerocker/"
   },
   {
     "artist": "Paardcafé: Magazines",
