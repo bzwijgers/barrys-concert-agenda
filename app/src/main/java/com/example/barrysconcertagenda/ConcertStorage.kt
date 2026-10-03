@@ -43,6 +43,7 @@ object ConcertStorage {
                         url = item.optString("url", ""),
                         firstFound = item.optLong("firstFound", 0L),
                         isFavorite = item.optBoolean("isFavorite", false),
+                        isAttending = item.optBoolean("isAttending", false),
                         clubCard = item.optBoolean("clubCard", false)
                     )
                 )
@@ -77,6 +78,7 @@ object ConcertStorage {
             item.put("url", concert.url)
             item.put("firstFound", concert.firstFound)
             item.put("isFavorite", concert.isFavorite)
+            item.put("isAttending", concert.isAttending)
             item.put("clubCard", concert.clubCard)
 
             array.put(item)
@@ -126,6 +128,22 @@ object ConcertStorage {
             context,
             updated
         )
+    }
+
+    fun setAttending(
+        context: Context,
+        url: String,
+        attending: Boolean
+    ) {
+        val normalizedTarget = normalizeUrl(url)
+        val updated = loadConcerts(context).map { concert ->
+            if (normalizeUrl(concert.url) == normalizedTarget) {
+                concert.copy(isAttending = attending)
+            } else {
+                concert
+            }
+        }
+        saveConcerts(context, updated)
     }
 
     fun getLastCheck(context: Context): Long {
