@@ -329,6 +329,9 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
             # MEZZ toont bovenaan bijvoorbeeld "Zondag 14 maart" en
             # "20:00 (Doors: 19:30)", meestal zonder jaartal.
             page_text = clean_text(page)
+            page_text_lower = page_text.lower()
+            if "dit evenement is afgelast" in page_text_lower or "dit evenement is geannuleerd" in page_text_lower:
+                return None
             month_names = "|".join(MONTHS_LONG.keys())
             visible_date = re.search(
                 r"\b(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag)\s+"
