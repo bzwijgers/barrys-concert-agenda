@@ -217,6 +217,36 @@ def find_site_event_urls(page, base_url, path_prefix):
     return result
 
 
+
+def find_labeled_event_urls(page, base_url, path_prefix, wanted_label, labels):
+    page = page.replace("\\/", "/").replace("\\u002F", "/").replace("\\u002f", "/")
+    pattern = re.compile(r"""href\s*=\s*["']([^"']+)["']""", flags=re.IGNORECASE)
+    result = []
+    seen = set()
+    labels_lower = [label.lower() for label in labels]
+
+    for match in pattern.finditer(page):
+        href = html_module.unescape(match.group(1)).split("#", 1)[0]
+        if href.startswith("/"):
+            url = base_url.rstrip("/") + href
+        elif href.startswith(base_url):
+            url = href
+        else:
+            continue
+        clean_url = url.split("?", 1)[0].rstrip("/") + "/"
+        if path_prefix not in clean_url:
+            continue
+        context = clean_text(page[max(0, match.start() - 1800):match.start()]).lower()
+        positions = {label: context.rfind(label) for label in labels_lower}
+        nearest = max(positions, key=positions.get)
+        if positions[nearest] < 0 or nearest != wanted_label.lower():
+            continue
+        key = normalize_url(clean_url)
+        if key not in seen:
+            seen.add(key)
+            result.append(clean_url)
+    return result
+
 def _detail_title(page):
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, flags=re.IGNORECASE | re.DOTALL)
     if h1:
@@ -271,6 +301,7 @@ def scrape_detail_events(urls, venue, city, source):
     def fetch(url):
         page = download_page_retry(url)
         artist = _detail_title(page)
+        artist = re.sub(r"\s+-\s+(?:Poppodium\s+)?(?:Boerderij|PAARD|Melkweg|TivoliVredenburg).*$", "", artist, flags=re.IGNORECASE).strip()
         artist_lower = artist.lower()
         if "afgelast" in artist_lower or "geannuleerd" in artist_lower or "cancelled" in artist_lower or "canceled" in artist_lower:
             return None
@@ -319,6 +350,7 @@ def scrape_paard():
     base = "https://www." + "paard" + ".nl"
     page = download_page_retry(base + "/event/")
     urls = find_site_event_urls(page, base, "/event/")
+    urls = [url for url in urls if normalize_url(url) not in {normalize_url(base + "/event/"), normalize_url(base + "/en/event/")}]
     print("PAARD links gevonden:", len(urls))
     return scrape_detail_events(urls, "PAARD", "Den Haag", "PAARD")
 
@@ -326,6 +358,15 @@ def scrape_paard():
 def scrape_melkweg():
     base = "https://www." + "melkweg" + ".nl"
     page = download_page_retry(base + "/nl/agenda/?profile=Concert")
-    urls = find_site_event_urls(page, base, "/nl/agenda/")
-    print("Melkweg links gevonden:", len(urls))
+    urls = find_labeled_event_urls(page, base, "/nl/agenda/", "Concert", ("Concert", "Club", "Film", "Expositie", "Festival"))
+    print("Melkweg concertlinks gevonden:", len(urls))
     return scrape_detail_events(urls, "Melkweg", "Amsterdam", "Melkweg")
+
+
+def scrape_tivolivredenburg():
+    base = "https://www." + "tivolivredenburg" + ".nl"
+    genres = "pop,rock,indie,singer-songwriter,roots-blues-americana,metal-punk-heavy,hiphop-rb-1,classic-pop-60s-90s,nederlands,global-1-pop-rock,soul-funk-jazz,reggae-ska,electronic-1"
+    page = download_page_retry(base + "/agenda?sf_genre=" + genres)
+    urls = find_site_event_urls(page, base, "/agenda/")
+    print("TivoliVredenburg niet-klassieke links gevonden:", len(urls))
+    return scrape_detail_events(urls, "TivoliVredenburg", "Utrecht", "TivoliVredenburg")
