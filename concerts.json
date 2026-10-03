@@ -1080,6 +1080,16 @@
     "url": "https://baroeg.nl/productie/benediction-nightbearer/"
   },
   {
+    "artist": "There’s No Recipe",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/theres-no-recipe/2917623"
+  },
+  {
     "artist": "King King",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -1128,6 +1138,16 @@
     "time": "21:00",
     "source": "013",
     "url": "https://www.013.nl/programma/125559/beach-boys-best"
+  },
+  {
+    "artist": "Alien Chicks - 19 oktober 2026",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-19",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/alien-chicks/2885760"
   },
   {
     "artist": "Dave East",
@@ -1690,14 +1710,14 @@
     "url": "https://www.rotown.nl/agenda/uche-yara/"
   },
   {
-    "artist": "London Calling - High Tea",
+    "artist": "LC LATE - FRIDAY NIGHT",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
-    "date": "2026-10-31",
-    "time": "13:00",
+    "date": "2026-10-30",
+    "time": "23:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/london-calling-high-tea/2921602"
+    "url": "https://www.paradiso.nl/nl/programma/lc-late-friday-night/2921551"
   },
   {
     "artist": "Danny Vera",
@@ -2400,16 +2420,6 @@
     "url": "https://www.rotown.nl/agenda/grote-geelstaart/"
   },
   {
-    "artist": "VroegZat",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-13",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/vroegzat-13nov"
-  },
-  {
     "artist": "Flemming",
     "venue": "Maassilo",
     "city": "Rotterdam",
@@ -2418,6 +2428,16 @@
     "time": "19:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/flemming/"
+  },
+  {
+    "artist": "VroegZat",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/vroegzat-13nov"
   },
   {
     "artist": "Gallowstreet",
