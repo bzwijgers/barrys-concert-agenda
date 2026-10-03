@@ -150,16 +150,6 @@
     "url": "https://www.mezz.nl/programma/fanfare-ciocarlia/"
   },
   {
-    "artist": "Warhaus - Ha Ha Heartbeats - ADE in Cinetol",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/warhaus-ha-ha-heartbeats-ade/2930261"
-  },
-  {
     "artist": "TENDER",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -179,16 +169,6 @@
     "time": "21:30",
     "source": "013",
     "url": "https://www.013.nl/programma/128438/80s-alternative"
-  },
-  {
-    "artist": "Zer00's Heroes",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "23:00",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/zer00s-heroes-8/"
   },
   {
     "artist": "Paardcafé: Peach club",
@@ -4215,6 +4195,16 @@
     "url": "https://www.paard.nl/event/paardcafe-getting-80s-90s-wit-it/"
   },
   {
+    "artist": "London Calling - High Tea",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "13:00",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/london-calling-high-tea/2921602"
+  },
+  {
     "artist": "Danny Vera",
     "venue": "Klokgebouw",
     "city": "Eindhoven",
@@ -7837,6 +7827,16 @@
     "url": "https://www.paard.nl/event/apollo-brown-skyzoo/"
   },
   {
+    "artist": "Davina Michelle | extra show",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
+  },
+  {
     "artist": "Q Marsden",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -7908,16 +7908,6 @@
     "url": "https://www.013.nl/programma/126271/portugal-the-man"
   },
   {
-    "artist": "Davina Michelle | extra show",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-02",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
-  },
-  {
     "artist": "HIGHGUEST",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -7937,6 +7927,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/kyoyoko/",
     "clubCard": false
+  },
+  {
+    "artist": "Davina Michelle",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/davina-michelle"
   },
   {
     "artist": "Miss Bashful",
@@ -8029,16 +8029,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/zwangere-guy/",
     "clubCard": false
-  },
-  {
-    "artist": "Davina Michelle",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/davina-michelle"
   },
   {
     "artist": "C.O.F.F.I.N",
