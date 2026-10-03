@@ -460,7 +460,7 @@ def scrape_tivolivredenburg():
 
 def scrape_mezz():
     base = "https://www.mezz.nl"
-    page = download_page_retry(base + "/programma/")
+    page = download_page_retry(base + "/voorbeeld-show-lijst/")
     urls = find_site_event_urls(page, base, "/programma/")
     # Alleen echte programmadetailpagina's; overzicht/hulppagina's uitsluiten.
     excluded = {
