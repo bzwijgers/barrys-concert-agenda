@@ -1,0 +1,43 @@
+name: Test modular scrapers
+
+on:
+  push:
+    branches:
+      - modular-scrapers
+
+permissions:
+  contents: read
+
+jobs:
+  test-scraper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: modular-scrapers
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile Python files
+        run: python -m compileall -q scraper.py scrapers
+
+      - name: Run modular concert scraper
+        run: python scraper.py
+
+      - name: Validate result
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          with open("concerts.json", encoding="utf-8") as f:
+              concerts = json.load(f)
+          counts = Counter(c["source"] for c in concerts)
+          print("Counts:", dict(counts))
+          print("Total:", len(concerts))
+          assert counts["013"] >= 25
+          assert len(concerts) >= 400
+          PY
