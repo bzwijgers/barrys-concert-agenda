@@ -107,7 +107,7 @@ fun WelcomeScreen(
             Image(
                 painter =
                     painterResource(
-                        id = R.drawable.ic_launcher_foreground
+                        id = R.drawable.barrys_concert_agenda_logo
                     ),
                 contentDescription =
                     "Open Barry's concert agenda",
@@ -129,7 +129,7 @@ fun WelcomeScreen(
                 style =
                     MaterialTheme
                         .typography
-                        .headlineMedium,
+                        .headlineSmall,
                 fontWeight =
                     FontWeight.Bold
             )
@@ -143,7 +143,11 @@ fun WelcomeScreen(
 
             Text(
                 text =
-                    "Tik op het icoon om de agenda te openen"
+                    "Tik op het icoon om de agenda te openen",
+                style =
+                    MaterialTheme
+                        .typography
+                        .bodyMedium
             )
         }
     }
