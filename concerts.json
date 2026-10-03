@@ -1,13 +1,13 @@
 [
   {
-    "artist": "Everyone Rocks",
-    "venue": "Baroeg",
-    "city": "Rotterdam",
+    "artist": "Cloudbusting - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
     "country": "NL",
     "date": "2026-10-03",
-    "time": "15:00",
-    "source": "Baroeg",
-    "url": "https://baroeg.nl/productie/everyone-rocks-3/"
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/cloudbusting/"
   },
   {
     "artist": "Come As You Are 2026: The Afghan Whigs, shame, Republica & meer",
@@ -18,6 +18,26 @@
     "time": "15:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/caya2026"
+  },
+  {
+    "artist": "Evenementen - PAARD",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "17:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/en/event/"
+  },
+  {
+    "artist": "KENNEN JULLIE DEZE NOG?",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/kennen-jullie-deze-nog-3-10/"
   },
   {
     "artist": "My Ugly Clementine",
@@ -38,6 +58,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/123569/good-kid"
+  },
+  {
+    "artist": "IJSLAND",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ijsland/"
   },
   {
     "artist": "Joy Division Undercover + 80's Alternative Afterparty",
@@ -80,6 +110,16 @@
     "url": "https://www.paradiso.nl/nl/programma/emma-harner/2884218"
   },
   {
+    "artist": "Paardcafé: Mr Heleen",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "20:45",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paarcafe-mr-heleen/"
+  },
+  {
     "artist": "TENDER",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -99,6 +139,36 @@
     "time": "21:30",
     "source": "013",
     "url": "https://www.013.nl/programma/128438/80s-alternative"
+  },
+  {
+    "artist": "Paardcafé: Peach club",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-peach-club/"
+  },
+  {
+    "artist": "Myrath - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/myrath/"
+  },
+  {
+    "artist": "THE HAGUE BLUES",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "13:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-hague-blues-3/"
   },
   {
     "artist": "Holy Wave",
@@ -192,6 +262,26 @@
     "url": "https://www.effenaar.nl/agenda/morgenshtern"
   },
   {
+    "artist": "STEF KAMIL CARLENS & THE POEM",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/stef-kamil-carlens-the-poem/"
+  },
+  {
+    "artist": "Banned From Utopia - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-05",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/banned-from-utopia-1/"
+  },
+  {
     "artist": "Tommy Lyon",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -220,6 +310,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/winston-surfshirt/2904231"
+  },
+  {
+    "artist": "HÄLLAS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/hallas/"
   },
   {
     "artist": "Slope",
@@ -262,6 +362,16 @@
     "url": "https://www.013.nl/programma/153031/actie-aletta"
   },
   {
+    "artist": "CONOR MCLAIN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/conor-mclain-3/"
+  },
+  {
     "artist": "FRIDAY",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -282,6 +392,16 @@
     "url": "https://www.013.nl/programma/143786/bears-in-trees"
   },
   {
+    "artist": "TEUS NOBEL 4 | CHILD’S PLAY",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/teus-nobel-4-childs-play-2/"
+  },
+  {
     "artist": "mary in the junkyard",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -293,6 +413,16 @@
     "clubCard": false
   },
   {
+    "artist": "Pubquiz! - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/pubquiz-15/"
+  },
+  {
     "artist": "The Amity Affliction HOUSE OF CARDS EU 2026",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -301,6 +431,16 @@
     "time": "18:30",
     "source": "013",
     "url": "https://www.013.nl/programma/125791/the-amity-affliction"
+  },
+  {
+    "artist": "MULATU LISTENING BAR X SUPAFLY",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "19:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/mulatu-listening-bar-x-supafly-2/"
   },
   {
     "artist": "LOE.",
@@ -343,6 +483,16 @@
     "url": "https://www.effenaar.nl/agenda/monolord-dopelord"
   },
   {
+    "artist": "SAVINE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/savine-4/"
+  },
+  {
     "artist": "Father Of Peace",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -374,6 +524,26 @@
     "url": "https://www.paradiso.nl/nl/programma/pip-millett/2925102"
   },
   {
+    "artist": "Paardcafé: Club Pony",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-club-pony-100/"
+  },
+  {
+    "artist": "Sari Schorr - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/sarischorr/"
+  },
+  {
     "artist": "The Apers",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -395,6 +565,16 @@
     "url": "https://www.paradiso.nl/nl/programma/declan-welsh-and-the-decadent-west/2881661"
   },
   {
+    "artist": "PAUW",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/pauw/"
+  },
+  {
     "artist": "Sixpence None the Richer",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -413,6 +593,26 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/132811/bokkeryers"
+  },
+  {
+    "artist": "GREENTEA PENG",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/greentea-peng/"
+  },
+  {
+    "artist": "Paarcafé: Mic Drop",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paarcafe-mic-drop/"
   },
   {
     "artist": "Father Of Peace (extra show)",
@@ -465,6 +665,36 @@
     "url": "https://www.effenaar.nl/agenda/80s-anders-9okt"
   },
   {
+    "artist": "Q – COMING OUT WEEK 2026",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "23:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/q-coming-out-week-2026/"
+  },
+  {
+    "artist": "Paardcafé: Me Buurmeisje",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-me-buurmeisje-22/"
+  },
+  {
+    "artist": "Axel Rudi Pell - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/axelrudipell/"
+  },
+  {
     "artist": "Here's The Thing",
     "venue": "Poppodium 013 - Next + Basement + Cul de Sac",
     "city": "Tilburg",
@@ -503,6 +733,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/kourosh/2908975"
+  },
+  {
+    "artist": "SUPAFLY 2026",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "19:45",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/supafly-2026/"
   },
   {
     "artist": "Jack Savoretti",
@@ -566,6 +806,26 @@
     "url": "https://www.effenaar.nl/agenda/metatron"
   },
   {
+    "artist": "Paardcafé: Sonny Burnett",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-sonny-burnett-20/"
+  },
+  {
+    "artist": "THE GRAPEVYNE RNB & HipHop Classics",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-grapevyne-4/"
+  },
+  {
     "artist": "Adje",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -596,6 +856,26 @@
     "url": "https://www.paradiso.nl/nl/programma/wu-lyf/2885451"
   },
   {
+    "artist": "JANNE SCHRA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/janne-schra-5/"
+  },
+  {
+    "artist": "MAROU & MASSIN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/marou-massin/"
+  },
+  {
     "artist": "NateWantsToBattle Phantom Burial Tour",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -616,6 +896,16 @@
     "url": "https://www.paradiso.nl/nl/programma/telenova/2887556"
   },
   {
+    "artist": "Froukje - albumrelease show",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-12",
+    "time": "17:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/froukje-11-10-2026/"
+  },
+  {
     "artist": "Fat Freddy's Drop",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -634,6 +924,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/127709/gavin-degraw"
+  },
+  {
+    "artist": "JASMINE MYRA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-12",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jasmine-myra-3/"
   },
   {
     "artist": "Pete Murray",
@@ -676,6 +976,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/finojet/2863276"
+  },
+  {
+    "artist": "LOS CUMBIA STARS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-13",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/los-cumbia-stars/"
   },
   {
     "artist": "Polyphonic Orchestra",
@@ -800,6 +1110,16 @@
     "url": "https://www.paradiso.nl/nl/programma/sego/2896246"
   },
   {
+    "artist": "Tyketto & CoreLeoni - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/tyketto-coreleoni/"
+  },
+  {
     "artist": "Bayou",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -808,6 +1128,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/bayou/2884627"
+  },
+  {
+    "artist": "BLANKS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/blanks-5/"
   },
   {
     "artist": "Young The Giant",
@@ -840,6 +1170,16 @@
     "url": "https://www.paradiso.nl/nl/programma/benjamin-herman-trio-tomoaki-baba/2931969"
   },
   {
+    "artist": "DUNE SESSIONS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/dune-sessions-15-10/"
+  },
+  {
     "artist": "Lawrence Hart & Mera Bhai pres: Dreamtraxx - ADE",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -848,6 +1188,16 @@
     "time": "20:00",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/lawrence-hart-mera-bhai-pres-dreamtraxx-ade/2895459"
+  },
+  {
+    "artist": "Paardcafé: Noraly + False Perspective UNTOLD/UNFOLD tour",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-noraly-false-perspective-untold-unfold-tour/"
   },
   {
     "artist": "Super-Sonic Jam invites VOLTA Brussel: led by Diana Sidibé",
@@ -890,16 +1240,6 @@
     "url": "https://www.paradiso.nl/nl/programma/corto-alto/2889015"
   },
   {
-    "artist": "Darren Kiely",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-15",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/darren-kiely/2884478"
-  },
-  {
     "artist": "hubris.",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -921,6 +1261,16 @@
     "clubCard": false
   },
   {
+    "artist": "Paardcafe: Club Pony",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-club-pony-102/"
+  },
+  {
     "artist": "Humanity's Last Breath",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -929,6 +1279,16 @@
     "time": "18:15",
     "source": "013",
     "url": "https://www.013.nl/programma/127049/humanitys-last-breath"
+  },
+  {
+    "artist": "DOTAN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/dotan-12/"
   },
   {
     "artist": "Douwe Bob",
@@ -951,6 +1311,16 @@
     "url": "https://www.effenaar.nl/agenda/pink-project-echoes"
   },
   {
+    "artist": "Paardcafé: Fosvor + Provisional + Angel Morts",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-fosvor-provisional-angel-morts-2/"
+  },
+  {
     "artist": "Sophie Hutchings",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -970,6 +1340,26 @@
     "time": "23:00",
     "source": "013",
     "url": "https://www.013.nl/programma/154664/piña"
+  },
+  {
+    "artist": "Paardcafé: Mies Luid",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-mies-luid-26/"
+  },
+  {
+    "artist": "Limehouse Lizzy - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/limehouselizzy/"
   },
   {
     "artist": "Let's get Hyper Lekkerfaces presents",
@@ -1012,6 +1402,16 @@
     "url": "https://www.paradiso.nl/nl/programma/de-nachtwacht/2905911"
   },
   {
+    "artist": "KRUIDKOEK & JOOST OOMEN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/kruidkoek-joost-oomen/"
+  },
+  {
     "artist": "Tay Oskee",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1030,6 +1430,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/134470/ida"
+  },
+  {
+    "artist": "Paardcafé: Herman Brood Academie on Tour",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-hba-on-tour-11/"
   },
   {
     "artist": "THE NARRATOR",
@@ -1062,6 +1472,16 @@
     "url": "https://www.paradiso.nl/nl/programma/katherine-priddy/2815916"
   },
   {
+    "artist": "NO BARRIER XL",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "21:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/no-barrier-xl-3/"
+  },
+  {
     "artist": "n\\u00e9om\\u00ed",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1083,6 +1503,16 @@
     "url": "https://baroeg.nl/productie/berzerk-events-presents-berzerk-iv/"
   },
   {
+    "artist": "Paardcafé: TEACH",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-teach-13/"
+  },
+  {
     "artist": "Benediction + Pentacle + Nightbearer",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -1091,6 +1521,16 @@
     "time": "15:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/benediction-nightbearer/"
+  },
+  {
+    "artist": "THE LEMONHEADS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-lemonheads/"
   },
   {
     "artist": "There’s No Recipe",
@@ -1113,6 +1553,16 @@
     "url": "https://www.effenaar.nl/agenda/king-king"
   },
   {
+    "artist": "STUURBAARD BAKKEBAARD",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/stuurbaard-bakkebaard/"
+  },
+  {
     "artist": "RONDÉ",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1121,6 +1571,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/ronde-18okt"
+  },
+  {
+    "artist": "NOAH YSP",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/noah-ysp/"
   },
   {
     "artist": "Sananda Maitreya",
@@ -1151,16 +1611,6 @@
     "time": "21:00",
     "source": "013",
     "url": "https://www.013.nl/programma/125559/beach-boys-best"
-  },
-  {
-    "artist": "Alien Chicks - 19 oktober 2026",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-19",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/alien-chicks/2885760"
   },
   {
     "artist": "Dave East",
@@ -1224,6 +1674,16 @@
     "clubCard": false
   },
   {
+    "artist": "THIJS VELDHUIS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-21",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/thijs-veldhuis-2/"
+  },
+  {
     "artist": "The Bausa",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1254,6 +1714,16 @@
     "url": "https://www.013.nl/programma/152582/culs-cult"
   },
   {
+    "artist": "DE BETOVERING: GERSON MAIN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "11:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/de-betovering-gerson-main/"
+  },
+  {
     "artist": "Left of the Dial",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1263,6 +1733,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/left-of-the-dial-2026/",
     "clubCard": false
+  },
+  {
+    "artist": "L.A. SAGNE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/l-a-sagne/"
   },
   {
     "artist": "IOS Clubtour 8",
@@ -1275,6 +1755,16 @@
     "url": "https://www.013.nl/programma/127222/ios"
   },
   {
+    "artist": "RONDÉ",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ronde-7/"
+  },
+  {
     "artist": "Flowers for the Dead + The Sewing Club",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -1283,6 +1773,26 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/flowers-dead-sewing-club"
+  },
+  {
+    "artist": "Paardcafé: CLUB PONY",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-club-pony-104/"
+  },
+  {
+    "artist": "Diggeth - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/diggeth/"
   },
   {
     "artist": "The Official Unofficial",
@@ -1294,6 +1804,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/the-official-unofficial-1/",
     "clubCard": false
+  },
+  {
+    "artist": "80S VERANTWOORD",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/80s-verantwoord-23-10/"
   },
   {
     "artist": "Sathanas In Gloriam presents: Sabathan + Cirith Gorgor + Reinkaos",
@@ -1327,6 +1847,26 @@
     "clubCard": false
   },
   {
+    "artist": "ORGEL VRETEN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/orgel-vreten-5/"
+  },
+  {
+    "artist": "Paardcafé: Rebel as a Poet",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-rebel-as-a-poet/"
+  },
+  {
     "artist": "Rolf Sanchez",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1335,6 +1875,46 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/rolf-sanchez"
+  },
+  {
+    "artist": "Club Kid (2026)",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "21:59",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/club-kid-2026-23-10-2026/"
+  },
+  {
+    "artist": "KitKatClub: Kinks of Berlin (2026)",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "21:59",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/kitkatclub-kinks-of-berlin-2026-24-10-2026/"
+  },
+  {
+    "artist": "Paardcafé: Eddy Ate Dynamite",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-eddy-ate-dynamite/"
+  },
+  {
+    "artist": "Threshold - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/threshold/"
   },
   {
     "artist": "The Official Unofficial",
@@ -1367,6 +1947,26 @@
     "time": "16:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/rotterdam-rocks-vengeance-picture-7-miles-to-pittsburgh-saint-helens/"
+  },
+  {
+    "artist": "MEYENDEL",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/meyendel/"
+  },
+  {
+    "artist": "COUNTRY CLUB",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/country-club-24-10/"
   },
   {
     "artist": "NO BARRIER Punk, Emo, Rock & Metalcore Party",
@@ -1409,6 +2009,36 @@
     "url": "https://www.effenaar.nl/agenda/turkish-pop-night-24okt"
   },
   {
+    "artist": "Paardcafé: Djani",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "21:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-djani/"
+  },
+  {
+    "artist": "Paardcafé: Osoulsconcept & Friends",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-osoulsconcept-friends/"
+  },
+  {
+    "artist": "Solstice - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-25",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/solstice/"
+  },
+  {
     "artist": "Tiny Housesessions",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -1417,6 +2047,26 @@
     "time": "15:00",
     "source": "013",
     "url": "https://www.013.nl/programma/147483/tiny-housesessions"
+  },
+  {
+    "artist": "Aftershock: The Seismic Impact of Dubstep",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-25",
+    "time": "17:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/aftershock-the-seismic-impact-of-dubstep-25-10-2026/"
+  },
+  {
+    "artist": "THEATRE OF HATE + SKIDS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-25",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/theatre-of-hate-skids/"
   },
   {
     "artist": "Dotan",
@@ -1447,6 +2097,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/natanya-the-attitude-tour/2902260"
+  },
+  {
+    "artist": "Geoff Tate - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/geofftate/"
   },
   {
     "artist": "Goldie Boutilier",
@@ -1487,6 +2147,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/127803/rob-lamberti-presents-a-celebration-of-george-michael"
+  },
+  {
+    "artist": "Paul van Loon en Andere Snuiters - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/paulvanloon/"
   },
   {
     "artist": "De Jukebox",
@@ -1540,6 +2210,36 @@
     "url": "https://www.013.nl/programma/124342/geoff-tates-operation-mindcrime"
   },
   {
+    "artist": "Kiiōtō FEAT. LOU RHODES of lamb",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/kiioto-feat-lou-rhodes-of-lamb-2/"
+  },
+  {
+    "artist": "MUSIC THAT CHANGED THE WORLD #2",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/28-10-music-that-changed-the-world/"
+  },
+  {
+    "artist": "ELIADES OCHOA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/eliades-ochoa-5/"
+  },
+  {
     "artist": "Kabeaush\\u00e9",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1589,6 +2289,26 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/128268/elmer"
+  },
+  {
+    "artist": "JON ALLEN & THE LUNA KINGS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jon-allen-the-luna-kings-3/"
+  },
+  {
+    "artist": "ROLF SANCHEZ",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/rolf-sanchez-3/"
   },
   {
     "artist": "BLØF | Extra show",
@@ -1642,6 +2362,16 @@
     "url": "https://www.effenaar.nl/agenda/noah-guthrie-29okt"
   },
   {
+    "artist": "Paardcafé: Singer-Songwriters United",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "21:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-singer-songwriters-united/"
+  },
+  {
     "artist": "Really Good Time",
     "venue": "V11",
     "city": "Rotterdam",
@@ -1663,6 +2393,46 @@
     "url": "https://www.paradiso.nl/nl/programma/kabeaushe/2892200"
   },
   {
+    "artist": "Paardcafé: CLUB PONY!",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-club-pony-106/"
+  },
+  {
+    "artist": "PICASSO HALLOWEEN FEEST",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/picasso-halloween-feest/"
+  },
+  {
+    "artist": "The Clarks ft. Rinus Gerritsen & Cesar Zuiderwijk - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/theclarks/"
+  },
+  {
+    "artist": "NOFX: 40 Years of Fuckin' Up (2026) + Q&A: El Hefe",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "18:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/nofx-40-years-of-fuckin-up-2026-30-10-2026/"
+  },
+  {
     "artist": "KamFest Day 1",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -1671,6 +2441,16 @@
     "time": "18:30",
     "source": "013",
     "url": "https://www.013.nl/programma/126463/kamfest"
+  },
+  {
+    "artist": "YELLOFOX",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/yellofox-5/"
   },
   {
     "artist": "Dan Whitlam",
@@ -1703,6 +2483,16 @@
     "url": "https://www.effenaar.nl/agenda/k-pop-night-halloween"
   },
   {
+    "artist": "Paardcafé: Popquiz",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-popquiz-211/"
+  },
+  {
     "artist": "BLØF",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1724,6 +2514,16 @@
     "clubCard": false
   },
   {
+    "artist": "NOFX: 40 Years of Fuckin' Up (2026) + Q&A: El Hefe",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:45",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/nofx-40-years-of-fuckin-up-2026-30-10-2026-1/"
+  },
+  {
     "artist": "Uche Yara",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1735,14 +2535,34 @@
     "clubCard": false
   },
   {
-    "artist": "LC LATE - FRIDAY NIGHT",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
+    "artist": "LITT HALLOWEEN",
+    "venue": "PAARD",
+    "city": "Den Haag",
     "country": "NL",
     "date": "2026-10-30",
     "time": "23:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/lc-late-friday-night/2921551"
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/litt-halloween-4/"
+  },
+  {
+    "artist": "Paardcafé: Getting 80s 90s wit it!",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-getting-80s-90s-wit-it/"
+  },
+  {
+    "artist": "The Watch Plays Genesis - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/thewatchplaysgenesis/"
   },
   {
     "artist": "London Calling - High Tea",
@@ -1785,6 +2605,16 @@
     "url": "https://baroeg.nl/productie/halloween-madness-ritual-the-dutch-ghost-experience-astro-zombies-a-d-misfits-tribute/"
   },
   {
+    "artist": "ELMER",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/elmer-3/"
+  },
+  {
     "artist": "Danko Jones Rising Tour",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -1793,6 +2623,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/126200/danko-jones"
+  },
+  {
+    "artist": "GÉONNE HARTMAN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/geonne-hartman/"
   },
   {
     "artist": "Timo Tolkki plays Stratovarius",
@@ -1815,6 +2655,16 @@
     "url": "https://www.effenaar.nl/agenda/flemming"
   },
   {
+    "artist": "ZZZAHARA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "21:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/zzzahara/"
+  },
+  {
     "artist": "Jon Allen & The Luna Kings",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1824,6 +2674,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/jon-allen-the-luna-kings-1/",
     "clubCard": false
+  },
+  {
+    "artist": "90S NULLIES 10S HALLOWEEN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/90s-nullies-10s-halloween-3/"
   },
   {
     "artist": "Indiesleaze Halloween Night",
@@ -1846,6 +2706,16 @@
     "url": "https://www.paradiso.nl/nl/programma/lc-late-saturday-night-w-sex-mask-cutouts-tanzana-mouth-ulcers/2921572"
   },
   {
+    "artist": "Paardcafé: Club Boogaloo",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-club-boogaloo-16/"
+  },
+  {
     "artist": "Spanish Heat Halloween",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -1854,6 +2724,16 @@
     "time": "23:30",
     "source": "013",
     "url": "https://www.013.nl/programma/155706/spanish-heat"
+  },
+  {
+    "artist": "Pendragon - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/pendragon/"
   },
   {
     "artist": "Raymon Hermans",
@@ -1874,6 +2754,16 @@
     "time": "18:00",
     "source": "013",
     "url": "https://www.013.nl/programma/146654/eye-ball-iii"
+  },
+  {
+    "artist": "AGO GNAWA – GNAWA FESTIVAL 2026",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ago-gnawa-gnawa-festival-2026/"
   },
   {
     "artist": "Alela Diane",
@@ -1917,6 +2807,16 @@
     "clubCard": false
   },
   {
+    "artist": "PUUR GELUL 37",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/puur-gelul-37/"
+  },
+  {
     "artist": "Walter Trout",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -1945,6 +2845,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/floor-jansen/2729670"
+  },
+  {
+    "artist": "LOUIS PEDRO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/louis-pedro/"
   },
   {
     "artist": "Noah Guthrie",
@@ -2089,6 +2999,16 @@
     "url": "https://www.013.nl/programma/128736/wies"
   },
   {
+    "artist": "ÃO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ao/"
+  },
+  {
     "artist": "SPYAIR",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -2141,6 +3061,16 @@
     "url": "https://www.paradiso.nl/nl/programma/the-clockworks/2836738"
   },
   {
+    "artist": "FINK",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/fink-5/"
+  },
+  {
     "artist": "Rolf Sanchez Club Tour",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2181,6 +3111,16 @@
     "url": "https://www.effenaar.nl/agenda/moreish-idols"
   },
   {
+    "artist": "THE HOWLERS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-howlers-3/"
+  },
+  {
     "artist": "Ão",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -2199,6 +3139,26 @@
     "time": "18:30",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/distant-album-release-no-face-no-case-gutrectomy-changing-tides-torn-from-oblivion/"
+  },
+  {
+    "artist": "Paardcafé: POPRONDE DEN HAAG",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "19:15",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-popronde-den-haag-4/"
+  },
+  {
+    "artist": "POPRONDE IN GR8",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/popronde-in-gr8/"
   },
   {
     "artist": "Durum Night",
@@ -2272,6 +3232,16 @@
     "url": "https://www.013.nl/programma/131304/zer00s-heroes"
   },
   {
+    "artist": "Frank Boeijen - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/frankboeijen/"
+  },
+  {
     "artist": "Unfold by Patroon",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2290,6 +3260,26 @@
     "time": "15:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/ddd-xxiv-day-1-pagan-altar/"
+  },
+  {
+    "artist": "STONEWALL",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "18:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/stone-wall/"
+  },
+  {
+    "artist": "FISCHER-Z",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/fischer-z/"
   },
   {
     "artist": "MEROL",
@@ -2311,6 +3301,26 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/wilt"
+  },
+  {
+    "artist": "FIESTA MACUMBA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/fiesta-macumba-45/"
+  },
+  {
+    "artist": "O.R.k. - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/ork/"
   },
   {
     "artist": "DDD XXIV Day 2: Celestial Season + Officium Triste + The Answer Lies In The Black Void + The Drowning + Mortajas + Brave Murder Night (aftershow)",
@@ -2351,6 +3361,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/oi-va-voi"
+  },
+  {
+    "artist": "NAMESBLISS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/namesbliss/"
   },
   {
     "artist": "Queen's Pleasure",
@@ -2394,6 +3414,16 @@
     "url": "https://www.013.nl/programma/127397/the-fray"
   },
   {
+    "artist": "TAKUYA KURODA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-10",
+    "time": "20:20",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/takuya-kuroda/"
+  },
+  {
     "artist": "Enter Shikari",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2402,6 +3432,16 @@
     "time": "19:30",
     "source": "013",
     "url": "https://www.013.nl/programma/125158/enter-shikari"
+  },
+  {
+    "artist": "OH VOYAGE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/oh-voyage-3/"
   },
   {
     "artist": "Kiwi Jr.",
@@ -2415,6 +3455,16 @@
     "clubCard": true
   },
   {
+    "artist": "MACY GRAY",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/macy-gray-5/"
+  },
+  {
     "artist": "Nordic Giants European Tour 2026",
     "venue": "Little Devil",
     "city": "Tilburg",
@@ -2423,6 +3473,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/141473/nordic-giants"
+  },
+  {
+    "artist": "QUEEN’S PLEASURE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/queens-pleasure-6/"
   },
   {
     "artist": "Prins S. en de Geit",
@@ -2467,6 +3527,16 @@
     "clubCard": false
   },
   {
+    "artist": "The Next Movement - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/thenextmovement/"
+  },
+  {
     "artist": "Flemming",
     "venue": "Maassilo",
     "city": "Rotterdam",
@@ -2476,6 +3546,26 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/flemming/",
     "clubCard": false
+  },
+  {
+    "artist": "PITOU",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/pitou-3/"
+  },
+  {
+    "artist": "SNELLE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/snelle-7/"
   },
   {
     "artist": "VroegZat",
@@ -2529,6 +3619,26 @@
     "clubCard": true
   },
   {
+    "artist": "Focus - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/focus/"
+  },
+  {
+    "artist": "3x3 Eyes (1991)",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "18:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/3x3-eyes-1991-12-12-2026/"
+  },
+  {
     "artist": "Suicide Commando + BHPL + UNTERWASSER DJ’s: Fritz, Nachtraaf en Vidma",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -2539,6 +3649,16 @@
     "url": "https://baroeg.nl/productie/suicide-commando-bhpl/"
   },
   {
+    "artist": "FLEMMING",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/flemming-5/"
+  },
+  {
     "artist": "Rijck",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -2547,6 +3667,16 @@
     "time": "19:30",
     "source": "013",
     "url": "https://www.013.nl/programma/128741/rijck"
+  },
+  {
+    "artist": "SUBTERRANEAN STREET SOCIETY",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/subterranean-street-society-3/"
   },
   {
     "artist": "Peacock In Concert The Orchestrated Universe",
@@ -2590,6 +3720,36 @@
     "url": "https://www.013.nl/programma/155379/nems"
   },
   {
+    "artist": "TERUG IN DE TIJD",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/terug-in-de-tijd-6/"
+  },
+  {
+    "artist": "Plackband - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/plackband/"
+  },
+  {
+    "artist": "AMISTAT",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/amistat/"
+  },
+  {
     "artist": "Employed To Serve + CABAL",
     "venue": "Hall of Fame",
     "city": "Tilburg",
@@ -2608,6 +3768,16 @@
     "time": "19:30",
     "source": "013",
     "url": "https://www.013.nl/programma/145006/president"
+  },
+  {
+    "artist": "BARTOFSO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/bartofso/"
   },
   {
     "artist": "Ash",
@@ -2631,6 +3801,16 @@
     "clubCard": false
   },
   {
+    "artist": "Michael Schenker Group - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-16",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/michaelschenker/"
+  },
+  {
     "artist": "Carsick",
     "venue": "Hall of Fame",
     "city": "Tilburg",
@@ -2641,6 +3821,16 @@
     "url": "https://www.013.nl/programma/157536/carsick"
   },
   {
+    "artist": "IMMERSION",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/immersion/"
+  },
+  {
     "artist": "Rotterdam Rocks presents: Mother’s Finest",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -2649,6 +3839,16 @@
     "time": "19:30",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/rotterdam-rocks-presents-mothers-finest/"
+  },
+  {
+    "artist": "ELECTRIC SIX",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/electric-six-3/"
   },
   {
     "artist": "Kneecap Fenian tour",
@@ -2671,6 +3871,16 @@
     "url": "https://www.013.nl/programma/152166/de-jukebox"
   },
   {
+    "artist": "FROUKJE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/froukje-7/"
+  },
+  {
     "artist": "Kokoroko",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2679,6 +3889,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/143169/kokoroko"
+  },
+  {
+    "artist": "DAOUD",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/daoud/"
   },
   {
     "artist": "mustbejohn",
@@ -2703,6 +3923,16 @@
     "clubCard": false
   },
   {
+    "artist": "Ellen ten Damme - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/ellentendamme/"
+  },
+  {
     "artist": "Revolution Calling: Pre-show",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -2711,6 +3941,26 @@
     "time": "19:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/revolution-calling-pre-show"
+  },
+  {
+    "artist": "DUNE SESSIONS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/dune-sessions-19-11/"
+  },
+  {
+    "artist": "FROUKJE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/froukje-9/"
   },
   {
     "artist": "Gotu Jim",
@@ -2722,6 +3972,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/gotu-jim-1/",
     "clubCard": false
+  },
+  {
+    "artist": "KRAV BOCA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/krav-boca/"
   },
   {
     "artist": "Anneke van Giersbergen",
@@ -2756,6 +4016,26 @@
     "clubCard": false
   },
   {
+    "artist": "Parker Barrow - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/parkerbarrow/"
+  },
+  {
+    "artist": "TRIGGERFINGER",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/triggerfinger-5/"
+  },
+  {
     "artist": "Hiigo",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -2774,6 +4054,26 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/121319/hilight-tribe"
+  },
+  {
+    "artist": "RNBORREL",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/rnborrel-3/"
+  },
+  {
+    "artist": "THE ZAC SCHULZE GANG",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-zac-schulze-gang-3/"
   },
   {
     "artist": "MEROL",
@@ -2797,6 +4097,16 @@
     "clubCard": false
   },
   {
+    "artist": "ACinDC - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/acindc/"
+  },
+  {
     "artist": "Fun 'N Folk Met o.a. Bohemian Betyars, Ferocious Dog, Politie Warnsveld en Lo Poloko",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -2805,6 +4115,16 @@
     "time": "17:00",
     "source": "013",
     "url": "https://www.013.nl/programma/122573/fun-n-folk"
+  },
+  {
+    "artist": "IRON JINN + TEMPLE FANG",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/iron-jinn-temple-fang/"
   },
   {
     "artist": "Psychedelic Porn Crumpets",
@@ -2826,6 +4146,16 @@
     "time": "20:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/emo-night-mainland-6/"
+  },
+  {
+    "artist": "GRUPPO SPORTIVO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/gruppo-sportivo-5/"
   },
   {
     "artist": "Triggerfinger",
@@ -2859,6 +4189,16 @@
     "clubCard": false
   },
   {
+    "artist": "RanestRane - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/ranestrane/"
+  },
+  {
     "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2867,6 +4207,16 @@
     "time": "11:00",
     "source": "013",
     "url": "https://www.013.nl/programma/159480/ernst-bobbie-de-rest"
+  },
+  {
+    "artist": "JEMBAA GROOVE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jembaa-groove-3/"
   },
   {
     "artist": "Blair Davie",
@@ -2931,6 +4281,26 @@
     "url": "https://www.013.nl/programma/159487/ernst-bobbie-de-rest"
   },
   {
+    "artist": "THE BUG CLUB",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-bug-club/"
+  },
+  {
+    "artist": "MUSIC THAT CHANGED THE WORLD #3",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/25-11-music-that-changed-the-world/"
+  },
+  {
     "artist": "Genesis Owusu",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -2963,6 +4333,16 @@
     "clubCard": false
   },
   {
+    "artist": "Dave Hill's Slade - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/slade/"
+  },
+  {
     "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2991,6 +4371,26 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/kaat-van-stralen"
+  },
+  {
+    "artist": "MOBILHOME",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/mobilhome/"
+  },
+  {
+    "artist": "SONS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/sons-3/"
   },
   {
     "artist": "Mister and Mississippi",
@@ -3026,6 +4426,16 @@
     "clubCard": false
   },
   {
+    "artist": "John Hackett Band - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/johnhackettband/"
+  },
+  {
     "artist": "Mental Cruelty + Ov Sulfur + Extermination Dismemberment + Sun Eater",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -3034,6 +4444,16 @@
     "time": "18:30",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/mental-cruelty-ov-sulfur-extermination-dismemberment-sun-eater/"
+  },
+  {
+    "artist": "HIIGO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "19:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/hiigo/"
   },
   {
     "artist": "Sugar Spine Soul Before Spirit Tour",
@@ -3076,6 +4496,16 @@
     "url": "https://www.effenaar.nl/agenda/jack-weatherman"
   },
   {
+    "artist": "SHREK RAVE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "21:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/shrek-rave/"
+  },
+  {
     "artist": "Brandalarm 16+",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3084,6 +4514,16 @@
     "time": "23:00",
     "source": "013",
     "url": "https://www.013.nl/programma/156684/brandalarm"
+  },
+  {
+    "artist": "Arena - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/arena/"
   },
   {
     "artist": "Subquake (0)13 Year Anniversary",
@@ -3104,6 +4544,26 @@
     "time": "19:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/fleddy-melculy/"
+  },
+  {
+    "artist": "CALL IT OFF",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/call-it-off/"
+  },
+  {
+    "artist": "PRINS S. EN DE GEIT X RESIDENTIE ORKEST",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/prins-s-en-de-geit-x-residentie-orkest/"
   },
   {
     "artist": "Ão",
@@ -3137,6 +4597,16 @@
     "clubCard": false
   },
   {
+    "artist": "Anneke van Giersbergen & Band - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/annekevangiersbergen2026/"
+  },
+  {
     "artist": "Bezerkus Bingo",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -3155,6 +4625,16 @@
     "time": "17:30",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/wednesday-13-the-birthday-massacre-killus/"
+  },
+  {
+    "artist": "GALLOWSTREET",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/gallowstreet-5/"
   },
   {
     "artist": "Sevendust",
@@ -3177,6 +4657,26 @@
     "url": "https://www.013.nl/programma/138201/coilguns"
   },
   {
+    "artist": "DAKHABRAKHA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/dakhabrakha-5/"
+  },
+  {
+    "artist": "APOLLO BROWN & SKYZOO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-01",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/apollo-brown-skyzoo/"
+  },
+  {
     "artist": "Etana",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3196,6 +4696,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/kids-with-buns-1/",
     "clubCard": false
+  },
+  {
+    "artist": "PEARL & THE OYSTERS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/pearl-the-oysters/"
   },
   {
     "artist": "Portland (nieuwe datum)",
@@ -3228,6 +4738,16 @@
     "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
   },
   {
+    "artist": "HIGHGUEST",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/highguest/"
+  },
+  {
     "artist": "KyoYoko",
     "venue": "V11",
     "city": "Rotterdam",
@@ -3239,6 +4759,16 @@
     "clubCard": false
   },
   {
+    "artist": "The Mike Keneally Report & Dave Cureton - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/themikekeneallyreport-davecureton/"
+  },
+  {
     "artist": "Bertolf",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -3248,6 +4778,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/bertolf-1/",
     "clubCard": false
+  },
+  {
+    "artist": "JACK AND THE WEATHERMAN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jack-and-the-weatherman-4/"
   },
   {
     "artist": "Loïs Lane In concert: 40 jaar",
@@ -3303,6 +4843,16 @@
     "clubCard": false
   },
   {
+    "artist": "Ray Wilson - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/raywilson/"
+  },
+  {
     "artist": "Baroeg Tribute Night: Sex Pistols Exposé",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -3313,6 +4863,16 @@
     "url": "https://baroeg.nl/productie/baroeg-tribute-night-sex-pistols-expose/"
   },
   {
+    "artist": "EMO NIGHT MAINLAND",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "19:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/emo-night-mainland-9/"
+  },
+  {
     "artist": "Jimmy Carr LAUGHS FUNNY",
     "venue": "Poppodium 013 - Main (seated)",
     "city": "Tilburg",
@@ -3321,6 +4881,16 @@
     "time": "19:00",
     "source": "013",
     "url": "https://www.013.nl/programma/108488/jimmy-carr"
+  },
+  {
+    "artist": "VROEGZAT",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "19:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/vroegzat-11/"
   },
   {
     "artist": "Dark Oath",
@@ -3384,6 +4954,36 @@
     "url": "https://www.013.nl/programma/125609/jimmy-carr"
   },
   {
+    "artist": "NOISIA",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "22:59",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/noisia-04-12-2026/"
+  },
+  {
+    "artist": "Mostly Autumn - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/mostlyautumn/"
+  },
+  {
+    "artist": "Haagse Popweek",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "00:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/haagse-popweek/"
+  },
+  {
     "artist": "Wavefest presents: Syntherklaas: Revenge Of The Synth",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -3392,6 +4992,16 @@
     "time": "18:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/syntherklaas-revenge-of-the-synth/"
+  },
+  {
+    "artist": "MAITE HONTELÉ & LA NOVIA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/maite-hontele-la-novia/"
   },
   {
     "artist": "Belle & Sebastian",
@@ -3424,6 +5034,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/alice-olsthoorn/",
     "clubCard": false
+  },
+  {
+    "artist": "China Crisis - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/chinacrisis/"
   },
   {
     "artist": "Baroeg On Tour @ SoundVille: ITGOW presents: Torturerama + Mancuerda + Daemorthan",
@@ -3467,6 +5087,16 @@
     "clubCard": true
   },
   {
+    "artist": "JAKE XERXES FUSSELL",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jake-xerxes-fussell/"
+  },
+  {
     "artist": "Queensrÿche",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -3508,6 +5138,26 @@
     "url": "https://www.013.nl/programma/126692/sons"
   },
   {
+    "artist": "TESSA ROSE JACKSON",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/tessa-rose-jackson-3/"
+  },
+  {
+    "artist": "TIM AKKERMAN & THE IVY LEAGUE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/tim-akkerman-the-ivy-league-5/"
+  },
+  {
     "artist": "The Tubs",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -3519,6 +5169,16 @@
     "clubCard": false
   },
   {
+    "artist": "Moving Pictures - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-10",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/movingpictures/"
+  },
+  {
     "artist": "Eindhoven Metal Meeting Warm Up Evening 2026",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -3527,6 +5187,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/emm-warm-up-2026"
+  },
+  {
+    "artist": "POLITIEKE JONGEREN – VERZET! PROTEST!",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/politieke-jongeren-verzet-protest/"
   },
   {
     "artist": "Clean Pete's Kerstshow",
@@ -3562,6 +5232,16 @@
     "clubCard": false
   },
   {
+    "artist": "Alex Henry Foster - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/alexhenryfoster/"
+  },
+  {
     "artist": "Eindhoven Metal Meeting 2026 - Day 1",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -3592,6 +5272,16 @@
     "url": "https://www.013.nl/programma/132489/gotu-jim"
   },
   {
+    "artist": "JASPER HØIBY’S 3ELEMENTS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jasper-hoibys-3elements/"
+  },
+  {
     "artist": "Tramhaus",
     "venue": "Maassilo",
     "city": "Rotterdam",
@@ -3603,6 +5293,16 @@
     "clubCard": false
   },
   {
+    "artist": "DAVINA MICHELLE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "21:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/davina-michelle-3/"
+  },
+  {
     "artist": "Ciao Lucifer",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -3612,6 +5312,36 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/ciao-lucifer-1/",
     "clubCard": true
+  },
+  {
+    "artist": "Kiss All Hipsters",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "22:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/kiss-all-hipsters-17-10-2026/"
+  },
+  {
+    "artist": "Kiss All Hipsters",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "22:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/kiss-all-hipsters-11-12-2026/"
+  },
+  {
+    "artist": "IQ X-Mas Bash - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/iq/"
   },
   {
     "artist": "Gezellige Clubtempo XXL 2026 SH!T, HERE WE GO AGAIN!",
@@ -3632,6 +5362,36 @@
     "time": "15:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2026-day-2"
+  },
+  {
+    "artist": "All You Need Is Kill (2025)",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "18:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/all-you-need-is-kill-2025-14-11-2026/"
+  },
+  {
+    "artist": "Children Who Chase Lost Voices (2011)",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "18:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/children-who-chase-lost-voices-2011-17-10-2026/"
+  },
+  {
+    "artist": "HAAGS POPGALA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/haags-popgala-3/"
   },
   {
     "artist": "Stuurbaard Bakkebaard",
@@ -3655,6 +5415,16 @@
     "clubCard": false
   },
   {
+    "artist": "Blues op Zondag - Twelve Bar Blues Band - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/blues-op-zondag-met-twelve-bar-blues-band/"
+  },
+  {
     "artist": "Nile + Redsphere + Intrepid + Orecus",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -3673,6 +5443,16 @@
     "time": "19:00",
     "source": "013",
     "url": "https://www.013.nl/programma/132513/green-lung"
+  },
+  {
+    "artist": "DAVINA MICHELLE [EXTRA SHOW]",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/davina-michelle-extra-show/"
   },
   {
     "artist": "Gallowstreet",
@@ -3736,6 +5516,16 @@
     "url": "https://www.013.nl/programma/126408/accept"
   },
   {
+    "artist": "MUSIC THAT CHANGED THE WORLD #4",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/16-12-music-that-changed-the-world/"
+  },
+  {
     "artist": "Thijs Boontjes",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3744,6 +5534,26 @@
     "time": "19:00",
     "source": "013",
     "url": "https://www.013.nl/programma/141010/thijs-boontjes"
+  },
+  {
+    "artist": "CITY OF THE SUN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/city-of-the-sun/"
+  },
+  {
+    "artist": "LA PEGATINA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/la-pegatina-11/"
   },
   {
     "artist": "My Baby",
@@ -3778,6 +5588,16 @@
     "clubCard": false
   },
   {
+    "artist": "The Doors Alive - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/thedoorsalive2026/"
+  },
+  {
     "artist": "Cancelled: Backfire! (farewell show) + Traumatizer",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -3788,6 +5608,16 @@
     "url": "https://baroeg.nl/productie/backfire-farewell-show-traumatizer/"
   },
   {
+    "artist": "MY BABY",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/my-baby-6/"
+  },
+  {
     "artist": "Isabèl Usher",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -3796,6 +5626,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/isabel-usher-18dec"
+  },
+  {
+    "artist": "JUNGLE BY NIGHT",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jungle-by-night-19/"
   },
   {
     "artist": "Bar Hollandia: Mart Hoogkamer, Django Wagner & meer",
@@ -3819,6 +5659,16 @@
     "clubCard": false
   },
   {
+    "artist": "Top 2000 Dansfeest - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/top2000/"
+  },
+  {
     "artist": "De Unie 2026",
     "venue": "Poppodium 013 - Main + Next",
     "city": "Tilburg",
@@ -3827,6 +5677,16 @@
     "time": "14:00",
     "source": "013",
     "url": "https://www.013.nl/programma/125264/de-unie"
+  },
+  {
+    "artist": "STATE POWER",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/state-power/"
   },
   {
     "artist": "Jett Rebel",
@@ -3858,6 +5718,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/lucky-fonz-iii-1/",
     "clubCard": false
+  },
+  {
+    "artist": "ProgProms V - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/progproms/"
   },
   {
     "artist": "ABBA Gold: The Christmas Special Show",
@@ -3943,6 +5813,16 @@
     "clubCard": true
   },
   {
+    "artist": "THE JAMES BROWN EXPERIENCE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-27",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/james-brown-experience/"
+  },
+  {
     "artist": "Morrissey",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -3994,6 +5874,16 @@
     "clubCard": false
   },
   {
+    "artist": "The Fortunate Sons - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-08",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/thefortunatesons2/"
+  },
+  {
     "artist": "Rhapsody of Fire + Serious Black Motocultor Across Europe Tour 2027",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -4012,6 +5902,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/dirty-daddies-8jan27"
+  },
+  {
+    "artist": "THE BIRD EXPERIENCE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-09",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-bird-experience/"
   },
   {
     "artist": "The Dirty Daddies",
@@ -4044,6 +5944,26 @@
     "url": "https://www.013.nl/programma/125097/the-james-brown-experience"
   },
   {
+    "artist": "Humor in de Boerderij - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-14",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/humorindeboerderij/"
+  },
+  {
+    "artist": "Made In Purple - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-15",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/madeinpurple/"
+  },
+  {
     "artist": "Fleddy Melculy",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -4065,6 +5985,16 @@
     "clubCard": false
   },
   {
+    "artist": "Ten Years After - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-16",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/tenyearsafter/"
+  },
+  {
     "artist": "Breakdown",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -4075,6 +6005,16 @@
     "url": "https://baroeg.nl/productie/breakdownbaroeg/"
   },
   {
+    "artist": "Isaiah Rashad",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-17",
+    "time": "18:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/isaiah-rashad-18-01-2027/"
+  },
+  {
     "artist": "Mike Massé",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -4083,6 +6023,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/mike-masse"
+  },
+  {
+    "artist": "Isaiah Rashad",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-18",
+    "time": "18:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/isaiah-rashad-17-01-2027/"
   },
   {
     "artist": "Black Veil Brides",
@@ -4117,6 +6067,26 @@
     "clubCard": false
   },
   {
+    "artist": "Regressive Hypnosis - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/regressivehypnosis/"
+  },
+  {
+    "artist": "BYWATER CALL",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/bywater-call-3/"
+  },
+  {
     "artist": "Enemy Inside",
     "venue": "Little Devil",
     "city": "Tilburg",
@@ -4127,6 +6097,26 @@
     "url": "https://www.013.nl/programma/152957/enemy-inside"
   },
   {
+    "artist": "THE DIRTY DADDIES",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-dirty-daddies-22-01/"
+  },
+  {
+    "artist": "Bjørn Riis - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/bjornriis/"
+  },
+  {
     "artist": "Black Box Revelation",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -4135,6 +6125,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/black-box-revelation"
+  },
+  {
+    "artist": "THE DIRTY DADDIES",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-dirty-daddies-8/"
   },
   {
     "artist": "JOB Dutchtuber & Billy The Kit ECHTE VRIENDEN de tour",
@@ -4157,6 +6157,16 @@
     "url": "https://www.013.nl/programma/160118/eddie-jobson"
   },
   {
+    "artist": "Eddie Jobson's U.K. Revisited - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-26",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/eddiejobsons-uk-revisited/"
+  },
+  {
     "artist": "De Jukebox",
     "venue": "Poppodium 013 - Foyer van Main Stage",
     "city": "Tilburg",
@@ -4177,6 +6187,16 @@
     "url": "https://www.013.nl/programma/155569/frozen-soul"
   },
   {
+    "artist": "Rock Party Of The Year 2027 - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/rpoty2027/"
+  },
+  {
     "artist": "Carnaval Countdown",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -4187,6 +6207,16 @@
     "url": "https://www.013.nl/programma/159259/carnaval-countdown"
   },
   {
+    "artist": "HET GOEDE DOEL®",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/het-goede-doel/"
+  },
+  {
     "artist": "Erwin Nyhoff & The Prodigal Sons",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -4195,6 +6225,26 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/erwin-nyhoff-prodigal-sons"
+  },
+  {
+    "artist": "ANOTHER TASTE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/another-taste/"
+  },
+  {
+    "artist": "Julian Sas - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/juliansas/"
   },
   {
     "artist": "REACTiVATE 2027 The Label Edition",
@@ -4225,6 +6275,16 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/mothers-cake"
+  },
+  {
+    "artist": "JOB DUTCHTUBER & BILLY THE KIT",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-31",
+    "time": "14:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/job-dutchtuber-billy-the-kit-2/"
   },
   {
     "artist": "Wavefest: Clan Of Xymox + Ultra Sunn + Selofan + Dear Omen + IDLEYES",
@@ -4278,6 +6338,16 @@
     "clubCard": false
   },
   {
+    "artist": "HENGE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/henge-3/"
+  },
+  {
     "artist": "ITGOW presents: Dead Congregation + Deathless Void + Deadspeak",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -4308,6 +6378,36 @@
     "url": "https://www.013.nl/programma/127140/feuerengel"
   },
   {
+    "artist": "U2two - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-06",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/u2two/"
+  },
+  {
+    "artist": "ROBIN SCHERPEN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-06",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/robin-scherpen/"
+  },
+  {
+    "artist": "My Breath My Music - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-07",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/mybreathmymusic/"
+  },
+  {
     "artist": "Tales From The Punx: Wolfbrigade",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -4316,6 +6416,36 @@
     "time": "14:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/tales-from-the-punx-wolfbrigade/"
+  },
+  {
+    "artist": "NEW COOL COLLECTIVE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-10",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/new-cool-collective-13/"
+  },
+  {
+    "artist": "THE VERNON SPRING",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-10",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-vernon-spring/"
+  },
+  {
+    "artist": "These Wicked Rivers - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-11",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/thesewickedrivers2026/"
   },
   {
     "artist": "Delain Album Release Show",
@@ -4328,6 +6458,26 @@
     "url": "https://www.013.nl/programma/129205/delain"
   },
   {
+    "artist": "Comedy of Errors - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-12",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/comedyoferrors/"
+  },
+  {
+    "artist": "Grauzone Festival 2027",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-12",
+    "time": "17:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/grauzone-festival-2027/"
+  },
+  {
     "artist": "Tramhaus",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -4336,6 +6486,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/tramhaus-12feb"
+  },
+  {
+    "artist": "A-Fever - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-13",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/afever/"
   },
   {
     "artist": "Floor Jansen Hytress Tour",
@@ -4401,6 +6561,46 @@
     "clubCard": false
   },
   {
+    "artist": "GRIMNER, WAYLANDER & VANSIND",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-17",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/grimner-waylander-vansind/"
+  },
+  {
+    "artist": "Pure Reason Revolution - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-18",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/purereasonrevolution/"
+  },
+  {
+    "artist": "British Invasion - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-19",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/britishinvasion/"
+  },
+  {
+    "artist": "ERWIN NYHOFF & THE PRODIGAL SONS",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-19",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/erwin-nyhoff-the-prodigal-sons/"
+  },
+  {
     "artist": "The Reytons",
     "venue": "Annabel",
     "city": "Rotterdam",
@@ -4432,6 +6632,16 @@
     "url": "https://www.effenaar.nl/agenda/jesper-lindell-brunnsvick-sounds"
   },
   {
+    "artist": "Lee Rocker of the Stray Cats - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/leerocker/"
+  },
+  {
     "artist": "Physical Graffiti",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -4440,6 +6650,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/physical-graffiti-2027"
+  },
+  {
+    "artist": "Paardcafé: Magazines",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "21:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-magazines/"
   },
   {
     "artist": "Riffsniffer presents: Colour Haze + Smokemaster",
@@ -4462,6 +6682,16 @@
     "url": "https://www.013.nl/programma/128444/the-halo-effect"
   },
   {
+    "artist": "CLOUSEAU IN AMARE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-21",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/clouseau-in-amare/"
+  },
+  {
     "artist": "The Australian Pink Floyd Show 2027 Greatest Hits World Tour",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -4470,6 +6700,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/137219/the-australian-pink-floyd-show"
+  },
+  {
+    "artist": "MIDGE URE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-23",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/midge-ure/"
   },
   {
     "artist": "De Jukebox",
@@ -4513,6 +6753,16 @@
     "url": "https://www.effenaar.nl/agenda/bazart"
   },
   {
+    "artist": "FATOUMATA DIAWARA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/fatoumata-diawara-7/"
+  },
+  {
     "artist": "Wende Er is nog tijd",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -4533,6 +6783,26 @@
     "url": "https://www.effenaar.nl/agenda/ruben-hillen"
   },
   {
+    "artist": "Ozric Tentacles - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/ozrictentacles/"
+  },
+  {
+    "artist": "NUBIYAN TWIST",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/nubiyan-twist/"
+  },
+  {
     "artist": "Vrij-gezellig",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -4541,6 +6811,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/vrij-gezellig"
+  },
+  {
+    "artist": "Blues op Zondag - The Grinders - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-02-28",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/blues-op-zondag-kid-lazy-band/"
   },
   {
     "artist": "Sleeping With Sirens An Ending In Itself Tour",
@@ -4553,6 +6833,16 @@
     "url": "https://www.013.nl/programma/135855/sleeping-with-sirens"
   },
   {
+    "artist": "PAULA COLE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-04",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paula-cole/"
+  },
+  {
     "artist": "Roosbeef",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -4562,6 +6852,26 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/roosbeef-1/",
     "clubCard": false
+  },
+  {
+    "artist": "WENDE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-04",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/wende-04302027/"
+  },
+  {
+    "artist": "SLOMOSA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-05",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/slomosa/"
   },
   {
     "artist": "Clouseau",
@@ -4582,6 +6892,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/dead-daisies"
+  },
+  {
+    "artist": "CHEF’SPECIAL",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-06",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/chefspecial-7/"
   },
   {
     "artist": "One Vision of Queen ft Marc Martel",
@@ -4646,6 +6966,16 @@
     "url": "https://www.013.nl/programma/142310/turnover"
   },
   {
+    "artist": "HALLO VENRAY",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-11",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/hallo-venray-7/"
+  },
+  {
     "artist": "The Dirty Daddies Let The Good Times Roll",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -4664,6 +6994,36 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/politie-warnsveld"
+  },
+  {
+    "artist": "SHREK RAVE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "21:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/shrek-rave-3/"
+  },
+  {
+    "artist": "Dirty Sound Magnet - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/dirtysoundmagnet/"
+  },
+  {
+    "artist": "THE HAUNTED YOUTH",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/the-haunted-youth/"
   },
   {
     "artist": "Personal Trainer",
@@ -4706,6 +7066,16 @@
     "url": "https://www.effenaar.nl/agenda/kmfdm-nieuwe-datum"
   },
   {
+    "artist": "JET VAN DER STEEN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jet-van-der-steen-5/"
+  },
+  {
     "artist": "The Dutch Queen: 50 jaar Somebody To Love (nieuwe datum)",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -4716,6 +7086,16 @@
     "url": "https://www.effenaar.nl/agenda/dutch-queen-18mrt"
   },
   {
+    "artist": "Physical Graffiti - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/physicalgraffiti/"
+  },
+  {
     "artist": "Uuhai + Manticora + Blossom Cult + Only Human",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -4724,6 +7104,36 @@
     "time": "19:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/uuhai-blossom-cult-muhurta/"
+  },
+  {
+    "artist": "RUBEN HILLEN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ruben-hillen/"
+  },
+  {
+    "artist": "Fimiguerrero",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-20",
+    "time": "",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/fimiguerrero-15-10-2026/"
+  },
+  {
+    "artist": "Vessbroz presents: NOWRUZ – A New Beginning",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-20",
+    "time": "",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/vessbroz-presents-nowruz-a-new-beginning-20-03-2027/"
   },
   {
     "artist": "Eternal Eclipse: Sabathan + Flail + Triumphal Vengeance + Clavicula",
@@ -4767,6 +7177,26 @@
     "clubCard": false
   },
   {
+    "artist": "PERSONAL TRAINER",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-24",
+    "time": "00:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/personal-trainer-3/"
+  },
+  {
+    "artist": "AMIMEA",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-24",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/amimea/"
+  },
+  {
     "artist": "The Warning",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -4786,6 +7216,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/bluai-1/",
     "clubCard": false
+  },
+  {
+    "artist": "The Dutch Queen - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/thedutchqueen/"
   },
   {
     "artist": "Sama Sama Maluku Live In Concert",
@@ -4818,6 +7258,26 @@
     "url": "https://www.013.nl/programma/152185/de-jukebox"
   },
   {
+    "artist": "Damian Wilson Legacy - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-04-01",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/damianwilsonlegacy/"
+  },
+  {
+    "artist": "Temple Of Wave - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-04-02",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/templeofwave/"
+  },
+  {
     "artist": "Chef'Special",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -4826,6 +7286,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/158979/chefspecial"
+  },
+  {
+    "artist": "The Crazy World Of Arthur Brown - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/arthurbrown/"
   },
   {
     "artist": "Flaire",
@@ -4921,6 +7391,16 @@
     "url": "https://www.013.nl/programma/160890/palaye-royale"
   },
   {
+    "artist": "RPWL - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-04-10",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/rpwl/"
+  },
+  {
     "artist": "DRAGONFORCE + Visions of Atlantis + Wings of Steel",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -4952,6 +7432,16 @@
     "clubCard": false
   },
   {
+    "artist": "Living Theory - Linkin Park Tribute - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-04-15",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/livingtheory/"
+  },
+  {
     "artist": "Roadburn 2027 Redefining Heaviness",
     "venue": "Poppodium 013 - Alle Zalen",
     "city": "Tilburg",
@@ -4972,6 +7462,16 @@
     "url": "https://www.013.nl/programma/136080/roadburn-2027"
   },
   {
+    "artist": "Magenta - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-04-17",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/magenta/"
+  },
+  {
     "artist": "Roadburn 2027 Redefining Heaviness",
     "venue": "Poppodium 013 - Alle Zalen",
     "city": "Tilburg",
@@ -4980,6 +7480,26 @@
     "time": "14:00",
     "source": "013",
     "url": "https://www.013.nl/programma/136084/roadburn-2027"
+  },
+  {
+    "artist": "JIM GARDNER",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-04-17",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/jim-gardner/"
+  },
+  {
+    "artist": "Sonata Arctica & Rage - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-04-18",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/sonataarctica-rage/"
   },
   {
     "artist": "Roadburn 2027 Redefining Heaviness",
@@ -5000,6 +7520,26 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/high-fade"
+  },
+  {
+    "artist": "HIGH FADE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-04-20",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/high-fade-3/"
+  },
+  {
+    "artist": "KIM WILDE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-04-21",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/kim-wilde-3/"
   },
   {
     "artist": "Jim Gardner",
@@ -5093,6 +7633,16 @@
     "url": "https://www.013.nl/programma/153896/zoë-livay"
   },
   {
+    "artist": "ENorm - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-05-01",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/enorm/"
+  },
+  {
     "artist": "Kraak & Smaak Live",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -5101,6 +7651,16 @@
     "time": "19:00",
     "source": "013",
     "url": "https://www.013.nl/programma/158770/kraak-smaak"
+  },
+  {
+    "artist": "BETTIE SERVEERT",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-05-01",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/bettie-serveert-3/"
   },
   {
     "artist": "MOSS",
@@ -5154,6 +7714,16 @@
     "url": "https://www.effenaar.nl/agenda/bob-marley-tribute-door-rootsriders-ft-mo-ali-exodus"
   },
   {
+    "artist": "SAGA - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-05-15",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/saga/"
+  },
+  {
     "artist": "Bettie Serveert + Hallo Venray",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -5185,6 +7755,56 @@
     "url": "https://www.effenaar.nl/agenda/fuzzclub-2027-friday"
   },
   {
+    "artist": "Sniester 2027",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-05-21",
+    "time": "17:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/sniester-2027-2/"
+  },
+  {
+    "artist": "Elmiene",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-22",
+    "time": "",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/elmiene-29-11-2026/"
+  },
+  {
+    "artist": "Emeli Sandé",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-22",
+    "time": "",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/emeli-sande-26-02-2027/"
+  },
+  {
+    "artist": "Jeangu Macrooy",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-22",
+    "time": "",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/jeangu-macrooy-22-05-2027/"
+  },
+  {
+    "artist": "StillMarillion - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-05-22",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/stillmarillion/"
+  },
+  {
     "artist": "Fuzz Club 2027 - Saturday",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -5206,6 +7826,16 @@
     "clubCard": true
   },
   {
+    "artist": "Greg Howe - Poppodium Boerderij",
+    "venue": "Boerderij",
+    "city": "Zoetermeer",
+    "country": "NL",
+    "date": "2027-05-23",
+    "time": "",
+    "source": "Boerderij",
+    "url": "https://poppodiumboerderij.nl/programma/greghowe/"
+  },
+  {
     "artist": "Alexis Ffrench",
     "venue": "De Doelen",
     "city": "Rotterdam",
@@ -5215,6 +7845,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/alexis-ffrench-1/",
     "clubCard": false
+  },
+  {
+    "artist": "STEVE VAI & RESIDENTIE ORKEST",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-06-06",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/steve-vai-met-residentie-orkest/"
   },
   {
     "artist": "The Musical Box ...And Then There Was Phil",
@@ -5227,6 +7867,16 @@
     "url": "https://www.013.nl/programma/158877/the-musical-box"
   },
   {
+    "artist": "PAARD VAN STAL",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-09-04",
+    "time": "16:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paard-van-stal-10/"
+  },
+  {
     "artist": "Archive",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -5235,6 +7885,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/159539/archive"
+  },
+  {
+    "artist": "WODAN BOYS IN AMARE",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-09-18",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/wodan-boys-in-amare/"
   },
   {
     "artist": "Come As You Are 2027: o.a. de reünie van Tröckener Kecks",
@@ -5268,6 +7928,16 @@
     "clubCard": false
   },
   {
+    "artist": "ANA POPOVIC",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-10-17",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ana-popovic-7/"
+  },
+  {
     "artist": "Bettie Serveert",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -5276,6 +7946,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/127758/bettie-serveert"
+  },
+  {
+    "artist": "KOVACS [nieuwe datum]",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-11-25",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/kovacs-8/"
   },
   {
     "artist": "Kovacs (Nieuwe datum)",
