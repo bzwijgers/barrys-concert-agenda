@@ -350,6 +350,24 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
                     )
                     if visible_time:
                         event_time = f"{int(visible_time.group(1)):02d}:{int(visible_time.group(2)):02d}"
+        if source == "Boerderij":
+            page_text = clean_text(page)
+            non_concert_markers = (
+                "pubquiz",
+                "leezing",
+                "comedyshow",
+                "comedy show",
+            )
+            if any(marker in page_text.lower() for marker in non_concert_markers):
+                return None
+            if not event_time:
+                start_match = re.search(
+                    r"(?:Aanvang|Start)\s*:?\s*(\d{1,2})[:.]([0-5]\d)",
+                    page_text,
+                    flags=re.IGNORECASE,
+                )
+                if start_match:
+                    event_time = f"{int(start_match.group(1)):02d}:{int(start_match.group(2)):02d}"
         if not artist or not event_date:
             return None
         if date.fromisoformat(event_date) < today:
