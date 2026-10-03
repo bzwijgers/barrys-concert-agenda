@@ -100,16 +100,6 @@
     "url": "https://www.013.nl/programma/123148/joy-division-undercover"
   },
   {
-    "artist": "Stu Larsen + Tim Hart",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "20:15",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/stu-larsen/2843715"
-  },
-  {
     "artist": "Cloudbusting",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -148,6 +138,16 @@
     "time": "20:30",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/fanfare-ciocarlia/"
+  },
+  {
+    "artist": "Warhaus - Ha Ha Heartbeats - ADE in Cinetol",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/warhaus-ha-ha-heartbeats-ade/2930261"
   },
   {
     "artist": "TENDER",
@@ -279,6 +279,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/123395/the-dublin-legends"
+  },
+  {
+    "artist": "Stu Larsen + Tim Hart",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:15",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/stu-larsen/2843715"
   },
   {
     "artist": "Band of Horses",
@@ -1274,6 +1284,16 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/the-grapevyne-4/"
+  },
+  {
+    "artist": "The Narrator + Accvsed + IMPVLSE",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-narrator-11-10-26/"
   },
   {
     "artist": "Sound of Europe",
@@ -3549,6 +3569,16 @@
     "url": "https://www.paradiso.nl/nl/programma/natanya-the-attitude-tour/2902260"
   },
   {
+    "artist": "NOFX: 40 Years of Fuckin' Up",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/40-years-fuckin-up-nofx"
+  },
+  {
     "artist": "Clawfinger",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -3617,16 +3647,6 @@
     "time": "20:00",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/geofftate/"
-  },
-  {
-    "artist": "NOFX: 40 Years of Fuckin' Up",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-27",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/40-years-fuckin-up-nofx"
   },
   {
     "artist": "Rob Lamberti presents A Celebration of George Michael",
@@ -4165,16 +4185,6 @@
     "clubCard": false
   },
   {
-    "artist": "LC LATE - FRIDAY NIGHT",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "23:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/lc-late-friday-night/2921551"
-  },
-  {
     "artist": "LITT HALLOWEEN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -4384,16 +4394,6 @@
     "time": "23:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/indiesleaze-halloween-night/2921614"
-  },
-  {
-    "artist": "LC LATE - SATURDAY NIGHT w/ Sex Mask, Cutouts, Tanzana, Mouth Ulcers",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-31",
-    "time": "23:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/lc-late-saturday-night-w-sex-mask-cutouts-tanzana-mouth-ulcers/2921572"
   },
   {
     "artist": "Paardcafé: Club Boogaloo",
@@ -4839,6 +4839,16 @@
     "clubCard": true
   },
   {
+    "artist": "Citizen + Modern Color",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/citizen-04-11-26/"
+  },
+  {
     "artist": "Eve",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -5081,6 +5091,46 @@
     "url": "https://www.paradiso.nl/nl/programma/ao/2832033"
   },
   {
+    "artist": "Disco Inferno met Discophonic Orchestra",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/disco-inferno-met-discophonic-orchestra-2"
+  },
+  {
+    "artist": "Durum Night",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/durum-night"
+  },
+  {
+    "artist": "Electric Eel Shock",
+    "venue": "Café The Jack",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/electric-eel-shock"
+  },
+  {
+    "artist": "VALS ALARM",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/vals-alarm"
+  },
+  {
     "artist": "Le Guess Who? – Friday",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -5161,16 +5211,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/skeler-06-11-2026/"
   },
   {
-    "artist": "Durum Night",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/durum-night"
-  },
-  {
     "artist": "Flemming",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -5189,16 +5229,6 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/flying-horseman-2/"
-  },
-  {
-    "artist": "Electric Eel Shock",
-    "venue": "Café The Jack",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/electric-eel-shock"
   },
   {
     "artist": "Pieter Savenberg",
@@ -5220,26 +5250,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/rauwfest-1/",
     "clubCard": false
-  },
-  {
-    "artist": "VALS ALARM",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/vals-alarm"
-  },
-  {
-    "artist": "Disco Inferno met Discophonic Orchestra",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "21:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/disco-inferno-met-discophonic-orchestra-2"
   },
   {
     "artist": "Zer00's Heroes",
@@ -5393,6 +5403,16 @@
     "url": "https://www.paard.nl/event/fiesta-macumba-45/"
   },
   {
+    "artist": "Jeremy Pinnell",
+    "venue": "Café Wilhelmina",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/jeremy-pinnell"
+  },
+  {
     "artist": "DDD XXIV Day 2: Celestial Season + Officium Triste + The Answer Lies In The Black Void + The Drowning + Mortajas + Brave Murder Night (aftershow)",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -5411,16 +5431,6 @@
     "time": "14:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/16610539/le-guess-who-sunday-08-11-2026/"
-  },
-  {
-    "artist": "Jeremy Pinnell",
-    "venue": "Café Wilhelmina",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-08",
-    "time": "17:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/jeremy-pinnell"
   },
   {
     "artist": "The Temperance Movement",
@@ -7827,16 +7837,6 @@
     "url": "https://www.paard.nl/event/apollo-brown-skyzoo/"
   },
   {
-    "artist": "Davina Michelle | extra show",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-02",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
-  },
-  {
     "artist": "Q Marsden",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -7908,6 +7908,16 @@
     "url": "https://www.013.nl/programma/126271/portugal-the-man"
   },
   {
+    "artist": "Davina Michelle | extra show",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/davina-michelle-extra-show"
+  },
+  {
     "artist": "HIGHGUEST",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -7927,16 +7937,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/kyoyoko/",
     "clubCard": false
-  },
-  {
-    "artist": "Davina Michelle",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/davina-michelle"
   },
   {
     "artist": "Miss Bashful",
@@ -8029,6 +8029,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/zwangere-guy/",
     "clubCard": false
+  },
+  {
+    "artist": "Davina Michelle",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/davina-michelle"
   },
   {
     "artist": "C.O.F.F.I.N",
@@ -9370,6 +9380,16 @@
     "clubCard": false
   },
   {
+    "artist": "ABBA Gold: The Christmas Special Show",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/abba-gold-christmas-special-show-2026"
+  },
+  {
     "artist": "New Model Army",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -9398,16 +9418,6 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/niels-geusebroek-sings-coldplay/"
-  },
-  {
-    "artist": "ABBA Gold: The Christmas Special Show",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-20",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/abba-gold-christmas-special-show-2026"
   },
   {
     "artist": "Lucky Fonz III",
@@ -10127,6 +10137,16 @@
     "url": "https://www.mezz.nl/programma/back-in-da-day-2/"
   },
   {
+    "artist": "Mother's Cake",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/mothers-cake"
+  },
+  {
     "artist": "D.U.R.F.",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -10185,16 +10205,6 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/juliansas/"
-  },
-  {
-    "artist": "Mother's Cake",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-01-30",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/mothers-cake"
   },
   {
     "artist": "JOB DUTCHTUBER & BILLY THE KIT",
@@ -10912,6 +10922,16 @@
     "url": "https://www.effenaar.nl/agenda/midge-ure"
   },
   {
+    "artist": "Bazart",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-02-25",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/bazart"
+  },
+  {
     "artist": "Jersey",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -10931,16 +10951,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/wende-1/",
     "clubCard": false
-  },
-  {
-    "artist": "Bazart",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-02-25",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/bazart"
   },
   {
     "artist": "Emeli Sandé",
@@ -11941,6 +11951,16 @@
     "url": "https://poppodiumboerderij.nl/programma/rpwl/"
   },
   {
+    "artist": "The Elvis Concert - Special 50th Anniversary 1977 - 2027",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-04-11",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/elvis-concert2027"
+  },
+  {
     "artist": "Kunstbende Voorronde Noord-Brabant 2027",
     "venue": "MEZZ",
     "city": "Breda",
@@ -11959,16 +11979,6 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/157445/dragonforce"
-  },
-  {
-    "artist": "The Elvis Concert - Special 50th Anniversary 1977 - 2027",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-04-11",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/elvis-concert2027"
   },
   {
     "artist": "Nienke Leone",
@@ -12493,6 +12503,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/gavran-thistle-sifter/",
     "clubCard": false
+  },
+  {
+    "artist": "The Pelumas – 023jazz",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-05-20",
+    "time": "10:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-pelumas-023jazz-08-10-26/"
   },
   {
     "artist": "Fuzz Club 2027 - Friday",
