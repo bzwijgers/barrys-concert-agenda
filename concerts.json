@@ -30,6 +30,26 @@
     "url": "https://www.paradiso.nl/nl/programma/my-ugly-clementine/2884458"
   },
   {
+    "artist": "Good Kid Can We Hang Out? Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/123569/good-kid"
+  },
+  {
+    "artist": "Joy Division Undercover + 80's Alternative Afterparty",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/123148/joy-division-undercover"
+  },
+  {
     "artist": "An Evening With Knives",
     "venue": "Café The Jack",
     "city": "Eindhoven",
@@ -70,6 +90,16 @@
     "url": "https://www.rotown.nl/agenda/tender/"
   },
   {
+    "artist": "80's Alternative Joy Division Undercover afterparty",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "21:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128438/80s-alternative"
+  },
+  {
     "artist": "Holy Wave",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -78,6 +108,36 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/holy-wave/2900906"
+  },
+  {
+    "artist": "Samurai Pizza Cats PRESS START EUROPEAN TOUR 26",
+    "venue": "Hall of Fame",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126787/samurai-pizza-cats"
+  },
+  {
+    "artist": "Unprocessed",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126940/unprocessed"
+  },
+  {
+    "artist": "The Dublin Legends Further Along the Road Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/123395/the-dublin-legends"
   },
   {
     "artist": "Band of Horses",
@@ -160,6 +220,16 @@
     "url": "https://www.paradiso.nl/nl/programma/winston-surfshirt/2904231"
   },
   {
+    "artist": "Slope",
+    "venue": "Hall of Fame",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125224/slope"
+  },
+  {
     "artist": "Tiana Major9",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -180,6 +250,16 @@
     "url": "https://www.paradiso.nl/nl/programma/soiuz-soyuz/2882457"
   },
   {
+    "artist": "Actie Aletta",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/153031/actie-aletta"
+  },
+  {
     "artist": "FRIDAY",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -190,6 +270,16 @@
     "url": "https://www.paradiso.nl/nl/programma/friday/2891203"
   },
   {
+    "artist": "Bears In Trees",
+    "venue": "Hall of Fame",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/143786/bears-in-trees"
+  },
+  {
     "artist": "mary in the junkyard",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -198,6 +288,16 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/mary-in-the-junkyard/"
+  },
+  {
+    "artist": "The Amity Affliction HOUSE OF CARDS EU 2026",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "18:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125791/the-amity-affliction"
   },
   {
     "artist": "LOE.",
@@ -218,6 +318,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/v-i-c/2900215"
+  },
+  {
+    "artist": "IJSLAND 2026 Tour",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126662/ijsland"
   },
   {
     "artist": "Monolord + Dopelord",
@@ -290,6 +400,16 @@
     "url": "https://www.paradiso.nl/nl/programma/sixpence-none-the-richer/2779816"
   },
   {
+    "artist": "Bokkeryers",
+    "venue": "Little Devil",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/132811/bokkeryers"
+  },
+  {
     "artist": "Father Of Peace (extra show)",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -338,6 +458,16 @@
     "time": "22:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/80s-anders-9okt"
+  },
+  {
+    "artist": "Here's The Thing",
+    "venue": "Poppodium 013 - Next + Basement + Cul de Sac",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "15:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/130852/heres-the-thing"
   },
   {
     "artist": "The Devil Wears Prada",
@@ -460,6 +590,16 @@
     "url": "https://www.paradiso.nl/nl/programma/wu-lyf/2885451"
   },
   {
+    "artist": "NateWantsToBattle Phantom Burial Tour",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "20:05",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128842/natewantstobattle"
+  },
+  {
     "artist": "Telenova",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -478,6 +618,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/fat-freddys-drop/2654360"
+  },
+  {
+    "artist": "Gavin DeGraw",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-12",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127709/gavin-degraw"
   },
   {
     "artist": "Pete Murray",
@@ -518,6 +668,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/finojet/2863276"
+  },
+  {
+    "artist": "Polyphonic Orchestra",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-13",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125728/polyphonic"
   },
   {
     "artist": "Cochemea",
@@ -580,6 +740,16 @@
     "url": "https://www.effenaar.nl/agenda/audrey-horne"
   },
   {
+    "artist": "Käärijä Eurodiskotour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128113/käärijä"
+  },
+  {
     "artist": "Young The Giant",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -638,6 +808,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/young-the-giant/2888802"
+  },
+  {
+    "artist": "Allie X Serial Diva Tour",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128942/allie-x"
   },
   {
     "artist": "Bejamin Herman trio & Tomoaki Baba in Paradiso Amsterdam",
@@ -730,6 +910,26 @@
     "url": "https://www.rotown.nl/agenda/the-homesick-1/"
   },
   {
+    "artist": "Humanity's Last Breath",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "18:15",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127049/humanitys-last-breath"
+  },
+  {
+    "artist": "Douwe Bob",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125820/douwe-bob"
+  },
+  {
     "artist": "Pink Project: Echoes",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -748,6 +948,26 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/sophie-hutchings-1/"
+  },
+  {
+    "artist": "PIÑA Tropisch, gezellig, PIÑA!",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "23:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/154664/piña"
+  },
+  {
+    "artist": "Let's get Hyper Lekkerfaces presents",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "15:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128601/lekkerfaces"
   },
   {
     "artist": "Faction Mirage",
@@ -788,6 +1008,26 @@
     "time": "19:45",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/tay-oskee/2884064"
+  },
+  {
+    "artist": "IDA",
+    "venue": "Cul de Sac",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/134470/ida"
+  },
+  {
+    "artist": "THE NARRATOR",
+    "venue": "Little Devil",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/120305/the-narrator"
   },
   {
     "artist": "Snelle",
@@ -890,14 +1130,14 @@
     "url": "https://www.paradiso.nl/nl/programma/stage-girl-starring-eli-eu-uk-tour/2923560"
   },
   {
-    "artist": "Alien Chicks - 19 oktober 2026",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
+    "artist": "Beach Boys' Best",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
     "country": "NL",
-    "date": "2026-10-19",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/alien-chicks/2885760"
+    "date": "2026-10-18",
+    "time": "21:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125559/beach-boys-best"
   },
   {
     "artist": "Dave East",
@@ -970,6 +1210,26 @@
     "url": "https://www.paradiso.nl/nl/programma/the-bausa/2907711"
   },
   {
+    "artist": "LOBODA",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-21",
+    "time": "20:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/145764/loboda"
+  },
+  {
+    "artist": "Cul's Cult De Mis + Omstander",
+    "venue": "Cul de Sac",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-21",
+    "time": "21:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152582/culs-cult"
+  },
+  {
     "artist": "Left of the Dial",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -978,6 +1238,16 @@
     "time": "19:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/left-of-the-dial-2026/"
+  },
+  {
+    "artist": "IOS Clubtour 8",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127222/ios"
   },
   {
     "artist": "Flowers for the Dead + The Sewing Club",
@@ -1008,6 +1278,16 @@
     "time": "19:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/sathanas-in-gloriam-presents-unholy-craft-cirith-gorgor-reinkaos/"
+  },
+  {
+    "artist": "MICHA",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128124/micha"
   },
   {
     "artist": "Left of the Dial",
@@ -1060,6 +1340,26 @@
     "url": "https://baroeg.nl/productie/rotterdam-rocks-vengeance-picture-7-miles-to-pittsburgh-saint-helens/"
   },
   {
+    "artist": "NO BARRIER Punk, Emo, Rock & Metalcore Party",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/135414/no-barrier"
+  },
+  {
+    "artist": "The HU Warrior Chant Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126748/the-hu"
+  },
+  {
     "artist": "Arkayla",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1078,6 +1378,16 @@
     "time": "21:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/turkish-pop-night-24okt"
+  },
+  {
+    "artist": "Tiny Housesessions",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-25",
+    "time": "15:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/147483/tiny-housesessions"
   },
   {
     "artist": "Dotan",
@@ -1140,6 +1450,26 @@
     "url": "https://www.effenaar.nl/agenda/40-years-fuckin-up-nofx"
   },
   {
+    "artist": "Rob Lamberti presents A Celebration of George Michael",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127803/rob-lamberti-presents-a-celebration-of-george-michael"
+  },
+  {
+    "artist": "De Jukebox",
+    "venue": "Poppodium 013 - Foyer van Main Stage",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "14:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152161/de-jukebox"
+  },
+  {
     "artist": "Bel Cobain",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1160,6 +1490,26 @@
     "url": "https://www.rotown.nl/agenda/frazey-ford/"
   },
   {
+    "artist": "Beast In Black Resurrection Tour 2026",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/120461/beast-in-black"
+  },
+  {
+    "artist": "Geoff Tate's Operation: Mindcrime The Final Chapter",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/124342/geoff-tates-operation-mindcrime"
+  },
+  {
     "artist": "Kabeaush\\u00e9",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1178,6 +1528,36 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/marcoca/2850213"
+  },
+  {
+    "artist": "Axel Flóvent",
+    "venue": "Paradox",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125430/axel-flóvent"
+  },
+  {
+    "artist": "Caravan Palace",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/129922/caravan-palace"
+  },
+  {
+    "artist": "Elmer",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128268/elmer"
   },
   {
     "artist": "BLØF | Extra show",
@@ -1250,6 +1630,16 @@
     "url": "https://www.paradiso.nl/nl/programma/kabeaushe/2892200"
   },
   {
+    "artist": "KamFest Day 1",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "18:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126463/kamfest"
+  },
+  {
     "artist": "Dan Whitlam",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1258,6 +1648,16 @@
     "time": "19:45",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/dan-whitlam/2885391"
+  },
+  {
+    "artist": "40UP Tijdmachine Tour",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/124715/40up"
   },
   {
     "artist": "K-POP Night - Halloween edition",
@@ -1300,6 +1700,26 @@
     "url": "https://www.rotown.nl/agenda/uche-yara/"
   },
   {
+    "artist": "LC LATE - FRIDAY NIGHT",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "23:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/lc-late-friday-night/2921551"
+  },
+  {
+    "artist": "London Calling - High Tea",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "13:00",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/london-calling-high-tea/2921602"
+  },
+  {
     "artist": "Danny Vera",
     "venue": "Klokgebouw",
     "city": "Eindhoven",
@@ -1310,6 +1730,16 @@
     "url": "https://www.effenaar.nl/agenda/danny-vera-31okt"
   },
   {
+    "artist": "KamFest Day 2",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "18:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126475/kamfest"
+  },
+  {
     "artist": "Halloween Madness: Ritual (The Dutch Ghost Experience) + Astro Zombies A.D. (Misfits tribute)",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -1318,6 +1748,16 @@
     "time": "19:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/halloween-madness-ritual-the-dutch-ghost-experience-astro-zombies-a-d-misfits-tribute/"
+  },
+  {
+    "artist": "Danko Jones Rising Tour",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126200/danko-jones"
   },
   {
     "artist": "Timo Tolkki plays Stratovarius",
@@ -1370,6 +1810,16 @@
     "url": "https://www.paradiso.nl/nl/programma/lc-late-saturday-night-w-sex-mask-cutouts-tanzana-mouth-ulcers/2921572"
   },
   {
+    "artist": "Spanish Heat Halloween",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "23:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/155706/spanish-heat"
+  },
+  {
     "artist": "Raymon Hermans",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1378,6 +1828,16 @@
     "time": "15:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/raymon-hermans"
+  },
+  {
+    "artist": "Eyeball III The IIIrd Eye",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "18:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/146654/eye-ball-iii"
   },
   {
     "artist": "Alela Diane",
@@ -1418,6 +1878,16 @@
     "time": "20:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/cardinals-1/"
+  },
+  {
+    "artist": "Walter Trout",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125586/walter-trout"
   },
   {
     "artist": "Temples",
@@ -1480,6 +1950,16 @@
     "url": "https://www.paradiso.nl/nl/programma/underscores/2884342"
   },
   {
+    "artist": "The Dire Straits Experience",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-02",
+    "time": "20:15",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128707/the-dire-straits-experience"
+  },
+  {
     "artist": "The Meltdown",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1488,6 +1968,26 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/the-meltdown/2786535"
+  },
+  {
+    "artist": "An Evening With Nicko McBrain",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/139512/an-evening-with-nicko-mcbrain"
+  },
+  {
+    "artist": "Puscifer The Normal Isn't Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128504/puscifer"
   },
   {
     "artist": "Kalben  'Land of Lost Poets' Tour",
@@ -1528,6 +2028,26 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/fink/2862246"
+  },
+  {
+    "artist": "Shinedown Dance Kid Dance Act II",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126104/shinedown"
+  },
+  {
+    "artist": "WIES",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128736/wies"
   },
   {
     "artist": "SPYAIR",
@@ -1580,6 +2100,26 @@
     "url": "https://www.paradiso.nl/nl/programma/the-clockworks/2836738"
   },
   {
+    "artist": "Rolf Sanchez Club Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128090/rolf-sanchez"
+  },
+  {
+    "artist": "Wende Het Experiment #2",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/130623/wende"
+  },
+  {
     "artist": "The Fatal Flowers",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -1630,6 +2170,16 @@
     "url": "https://www.effenaar.nl/agenda/durum-night"
   },
   {
+    "artist": "Flemming",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/131408/flemming"
+  },
+  {
     "artist": "Electric Eel Shock",
     "venue": "Café The Jack",
     "city": "Eindhoven",
@@ -1668,6 +2218,26 @@
     "time": "21:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/disco-inferno-met-discophonic-orchestra-2"
+  },
+  {
+    "artist": "Zer00's Heroes",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "21:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/131304/zer00s-heroes"
+  },
+  {
+    "artist": "Unfold by Patroon",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "14:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/146851/unfold-by-patroon"
   },
   {
     "artist": "DDD XXIV Day 1: Pagan Altar + Godthrymm + Wolves in Winter + Façade + Sordid Empire + Afgrond",
@@ -1720,6 +2290,16 @@
     "url": "https://www.effenaar.nl/agenda/jeremy-pinnell"
   },
   {
+    "artist": "M-Kids",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/123995/m-kids"
+  },
+  {
     "artist": "Oi Va Voi",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -1750,6 +2330,36 @@
     "url": "https://www.rotown.nl/agenda/thistle/"
   },
   {
+    "artist": "Messa EU / UK Tour Fall 2026",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-09",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126189/messa"
+  },
+  {
+    "artist": "The Fray Autumn Light Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-10",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127397/the-fray"
+  },
+  {
+    "artist": "Enter Shikari",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-11",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125158/enter-shikari"
+  },
+  {
     "artist": "Kiwi Jr.",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1758,6 +2368,16 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/kiwi-jr/"
+  },
+  {
+    "artist": "Nordic Giants European Tour 2026",
+    "venue": "Little Devil",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/141473/nordic-giants"
   },
   {
     "artist": "Prins S. en de Geit",
@@ -1830,6 +2450,16 @@
     "url": "https://www.effenaar.nl/agenda/gallowstreet-13nov"
   },
   {
+    "artist": "The Soulful Sessions XL Edition",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128999/the-soulful-sessions"
+  },
+  {
     "artist": "Tusky",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -1860,6 +2490,26 @@
     "url": "https://baroeg.nl/productie/suicide-commando-bhpl/"
   },
   {
+    "artist": "Rijck",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128741/rijck"
+  },
+  {
+    "artist": "Peacock In Concert The Orchestrated Universe",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/139683/peacock-in-concert"
+  },
+  {
     "artist": "PIÑA",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -1878,6 +2528,36 @@
     "time": "21:15",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/grommet/"
+  },
+  {
+    "artist": "NEMS Unleashed",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "23:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/155379/nems"
+  },
+  {
+    "artist": "Employed To Serve + CABAL",
+    "venue": "Hall of Fame",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/146729/employed-to-serve-cabal"
+  },
+  {
+    "artist": "President The Blood of Your Empire",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/145006/president"
   },
   {
     "artist": "Ash",
@@ -1900,6 +2580,16 @@
     "url": "https://www.rotown.nl/agenda/adriaan-persons/"
   },
   {
+    "artist": "Carsick",
+    "venue": "Hall of Fame",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-16",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/157536/carsick"
+  },
+  {
     "artist": "Rotterdam Rocks presents: Mother’s Finest",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -1908,6 +2598,36 @@
     "time": "19:30",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/rotterdam-rocks-presents-mothers-finest/"
+  },
+  {
+    "artist": "Kneecap Fenian tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-17",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152830/kneecap"
+  },
+  {
+    "artist": "De Jukebox",
+    "venue": "Poppodium 013 - Foyer van Main Stage",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "14:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152166/de-jukebox"
+  },
+  {
+    "artist": "Kokoroko",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/143169/kokoroko"
   },
   {
     "artist": "mustbejohn",
@@ -1990,6 +2710,16 @@
     "url": "https://www.effenaar.nl/agenda/hiigo"
   },
   {
+    "artist": "Hilight Tribe",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/121319/hilight-tribe"
+  },
+  {
     "artist": "MEROL",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -2008,6 +2738,16 @@
     "time": "21:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/charlot-1/"
+  },
+  {
+    "artist": "Fun 'N Folk Met o.a. Bohemian Betyars, Ferocious Dog, Politie Warnsveld en Lo Poloko",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "17:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/122573/fun-n-folk"
   },
   {
     "artist": "Psychedelic Porn Crumpets",
@@ -2030,6 +2770,16 @@
     "url": "https://baroeg.nl/productie/emo-night-mainland-6/"
   },
   {
+    "artist": "Triggerfinger",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/129939/triggerfinger"
+  },
+  {
     "artist": "We All Love 90's 00's 10's",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -2048,6 +2798,16 @@
     "time": "21:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/desire-johnny-jewel/"
+  },
+  {
+    "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "11:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159480/ernst-bobbie-de-rest"
   },
   {
     "artist": "Blair Davie",
@@ -2070,6 +2830,26 @@
     "url": "https://www.rotown.nl/agenda/yuraa/"
   },
   {
+    "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-23",
+    "time": "15:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159485/ernst-bobbie-de-rest"
+  },
+  {
+    "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-24",
+    "time": "15:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159486/ernst-bobbie-de-rest"
+  },
+  {
     "artist": "Riffsniffer presents: Les Big Byrd",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -2078,6 +2858,16 @@
     "time": "19:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/riffsniffer-presents-les-big-byrd/"
+  },
+  {
+    "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "13:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159487/ernst-bobbie-de-rest"
   },
   {
     "artist": "Genesis Owusu",
@@ -2090,6 +2880,16 @@
     "url": "https://www.rotown.nl/agenda/genesis-owusu/"
   },
   {
+    "artist": "Cul's Cult Hondenfokker + Merk'dr'dr",
+    "venue": "Cul de Sac",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "21:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152587/culs-cult"
+  },
+  {
     "artist": "Test Plan",
     "venue": "V11",
     "city": "Rotterdam",
@@ -2098,6 +2898,16 @@
     "time": "21:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/test-plan/"
+  },
+  {
+    "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "15:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159494/ernst-bobbie-de-rest"
   },
   {
     "artist": "Gone Country",
@@ -2160,6 +2970,36 @@
     "url": "https://baroeg.nl/productie/mental-cruelty-ov-sulfur-extermination-dismemberment-sun-eater/"
   },
   {
+    "artist": "Sugar Spine Soul Before Spirit Tour",
+    "venue": "Little Devil",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/145139/sugar-spine"
+  },
+  {
+    "artist": "Allt Ataraxia European Tour 2026",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/143470/allt"
+  },
+  {
+    "artist": "Crush XL",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128467/crush-xl-presents"
+  },
+  {
     "artist": "Jack and the Weatherman",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -2168,6 +3008,26 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/jack-weatherman"
+  },
+  {
+    "artist": "Brandalarm 16+",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "23:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/156684/brandalarm"
+  },
+  {
+    "artist": "Subquake (0)13 Year Anniversary",
+    "venue": "Poppodium 013 - Main + Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "15:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/150057/013-years-subquake"
   },
   {
     "artist": "Fleddy Melculy + Inherited",
@@ -2230,6 +3090,36 @@
     "url": "https://baroeg.nl/productie/wednesday-13-the-birthday-massacre-killus/"
   },
   {
+    "artist": "Sevendust",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128241/sevendust"
+  },
+  {
+    "artist": "Coilguns",
+    "venue": "Little Devil",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "20:45",
+    "source": "013",
+    "url": "https://www.013.nl/programma/138201/coilguns"
+  },
+  {
+    "artist": "Etana",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/153640/etana"
+  },
+  {
     "artist": "Kids With Buns",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -2248,6 +3138,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/portland-2dec"
+  },
+  {
+    "artist": "Portugal. The Man The Denali Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126271/portugal-the-man"
   },
   {
     "artist": "Davina Michelle | extra show",
@@ -2278,6 +3178,16 @@
     "time": "20:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/bertolf-1/"
+  },
+  {
+    "artist": "Loïs Lane In concert: 40 jaar",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127342/loïs-lane"
   },
   {
     "artist": "Zwangere Guy",
@@ -2330,6 +3240,26 @@
     "url": "https://baroeg.nl/productie/baroeg-tribute-night-sex-pistols-expose/"
   },
   {
+    "artist": "Jimmy Carr LAUGHS FUNNY",
+    "venue": "Poppodium 013 - Main (seated)",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/108488/jimmy-carr"
+  },
+  {
+    "artist": "Dark Oath",
+    "venue": "Little Devil",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159067/dark-oath"
+  },
+  {
     "artist": "NO BARRIER",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -2338,6 +3268,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/no-barrier-4dec"
+  },
+  {
+    "artist": "Zwangere Guy",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/137896/zwangere-guy"
   },
   {
     "artist": "NAFT",
@@ -2360,6 +3300,16 @@
     "url": "https://www.rotown.nl/agenda/sarah-julia/"
   },
   {
+    "artist": "Jimmy Carr LAUGHS FUNNY - Extra show",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "22:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125609/jimmy-carr"
+  },
+  {
     "artist": "Wavefest presents: Syntherklaas: Revenge Of The Synth",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -2378,6 +3328,16 @@
     "time": "20:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/belle-sebastian/"
+  },
+  {
+    "artist": "Froukje Kijk Je Naar Mij? Albumtour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/134133/froukje"
   },
   {
     "artist": "Alice Olsthoorn",
@@ -2400,6 +3360,16 @@
     "url": "https://baroeg.nl/productie/baroeg-on-tour-soundville-itgow-presents-torturerama-mancuerda-daemorthan/"
   },
   {
+    "artist": "Froukje - Extra show Kijk Je Naar Mij? Albumtour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/140186/froukje-extra-show"
+  },
+  {
     "artist": "Maite Hontelé & LA NOVIA",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -2420,6 +3390,26 @@
     "url": "https://www.rotown.nl/agenda/softcult/"
   },
   {
+    "artist": "Queensrÿche",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-07",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/145171/queensrÿche"
+  },
+  {
+    "artist": "thrown + Counterparts",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-08",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/138782/thrown-counterparts"
+  },
+  {
     "artist": "Opus Kink",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -2428,6 +3418,16 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/opus-kink/"
+  },
+  {
+    "artist": "SONS",
+    "venue": "Hall of Fame",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126692/sons"
   },
   {
     "artist": "The Tubs",
@@ -2500,6 +3500,16 @@
     "url": "https://baroeg.nl/productie/evergrey/"
   },
   {
+    "artist": "Gotu Jim",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/132489/gotu-jim"
+  },
+  {
     "artist": "Tramhaus",
     "venue": "Maassilo",
     "city": "Rotterdam",
@@ -2518,6 +3528,16 @@
     "time": "21:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/ciao-lucifer-1/"
+  },
+  {
+    "artist": "Gezellige Clubtempo XXL 2026 SH!T, HERE WE GO AGAIN!",
+    "venue": "Poppodium 013 - Main + Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "14:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/160082/gezellige-clubtempo-xxl-2026"
   },
   {
     "artist": "Eindhoven Metal Meeting 2026 - Day 2",
@@ -2560,6 +3580,16 @@
     "url": "https://baroeg.nl/productie/nile-redsphere-intrepid-orecus/"
   },
   {
+    "artist": "Green Lung Special Guest: High On Fire",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/132513/green-lung"
+  },
+  {
     "artist": "Gallowstreet",
     "venue": "Annabel",
     "city": "Rotterdam",
@@ -2568,6 +3598,76 @@
     "time": "20:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/gallowstreet-1/"
+  },
+  {
+    "artist": "Moving Pictures Celebrating 50th anniversary of 2112",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125403/moving-pictures"
+  },
+  {
+    "artist": "Widowspeak",
+    "venue": "Hall of Fame",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128421/widowspeak"
+  },
+  {
+    "artist": "Quiz'm - Top 2000 Editie",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-15",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/156627/quizm-top-2000-editie"
+  },
+  {
+    "artist": "Clean Pete's Kerstshow",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-16",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/124497/clean-petes-kerstshow"
+  },
+  {
+    "artist": "Accept 50th Anniversary Tour 2026",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/126408/accept"
+  },
+  {
+    "artist": "Thijs Boontjes",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/141010/thijs-boontjes"
+  },
+  {
+    "artist": "My Baby",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/130610/my-baby"
   },
   {
     "artist": "After Elmer",
@@ -2630,6 +3730,16 @@
     "url": "https://www.rotown.nl/agenda/john-coffey-1/"
   },
   {
+    "artist": "De Unie 2026",
+    "venue": "Poppodium 013 - Main + Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "14:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125264/de-unie"
+  },
+  {
     "artist": "Jett Rebel",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -2690,6 +3800,16 @@
     "url": "https://www.rotown.nl/agenda/the-hobknobs/"
   },
   {
+    "artist": "Cul's Cult Mixed Waste + My Purse",
+    "venue": "Cul de Sac",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-23",
+    "time": "21:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152590/culs-cult"
+  },
+  {
     "artist": "Legends of Rock Tribute Festival XL",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -2698,6 +3818,16 @@
     "time": "16:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/legends-rock-tribute-festival-xl-0"
+  },
+  {
+    "artist": "Up Close with D-Block & S-te-Fan A New Day To Remember",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-27",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/160973/up-close-with-d-block-s-te-fan"
   },
   {
     "artist": "Funky Times",
@@ -2720,6 +3850,36 @@
     "url": "https://www.rotown.nl/agenda/real-farmer-the-klittens/"
   },
   {
+    "artist": "Morrissey",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-28",
+    "time": "20:20",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128536/morrissey"
+  },
+  {
+    "artist": "De Jukebox",
+    "venue": "Poppodium 013 - Foyer van Main Stage",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-30",
+    "time": "14:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152168/de-jukebox"
+  },
+  {
+    "artist": "Extince 30 JAAR SPRAAKWATER",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2026-12-30",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/155786/extince"
+  },
+  {
     "artist": "Effenaar Oud & Nieuw 2026",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -2740,6 +3900,16 @@
     "url": "https://www.rotown.nl/agenda/raymond-van-het-groenewoud/"
   },
   {
+    "artist": "Rhapsody of Fire + Serious Black Motocultor Across Europe Tour 2027",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-08",
+    "time": "18:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/131570/rhapsody-of-fire-serious-black"
+  },
+  {
     "artist": "The Dirty Daddies",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -2758,6 +3928,26 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/dirty-daddies-9jan27"
+  },
+  {
+    "artist": "Imminence",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-10",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/143444/imminence"
+  },
+  {
+    "artist": "The James Brown Experience",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-10",
+    "time": "21:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125097/the-james-brown-experience"
   },
   {
     "artist": "Fleddy Melculy",
@@ -2800,6 +3990,16 @@
     "url": "https://www.effenaar.nl/agenda/mike-masse"
   },
   {
+    "artist": "Black Veil Brides",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-19",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/140392/black-veil-brides"
+  },
+  {
     "artist": "Iskander Moon",
     "venue": "Kantine Walhalla",
     "city": "Rotterdam",
@@ -2820,6 +4020,16 @@
     "url": "https://www.rotown.nl/agenda/body-horror/"
   },
   {
+    "artist": "Enemy Inside",
+    "venue": "Little Devil",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152957/enemy-inside"
+  },
+  {
     "artist": "Black Box Revelation",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -2830,6 +4040,56 @@
     "url": "https://www.effenaar.nl/agenda/black-box-revelation"
   },
   {
+    "artist": "JOB Dutchtuber & Billy The Kit ECHTE VRIENDEN de tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-24",
+    "time": "15:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159540/job-dutchtuber-billy-the-kit"
+  },
+  {
+    "artist": "Eddie Jobson U.K. REVISITED",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-25",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/160118/eddie-jobson"
+  },
+  {
+    "artist": "De Jukebox",
+    "venue": "Poppodium 013 - Foyer van Main Stage",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-27",
+    "time": "14:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152175/de-jukebox"
+  },
+  {
+    "artist": "Frozen Soul No place of warmth Europe & UK 2027",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-28",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/155569/frozen-soul"
+  },
+  {
+    "artist": "Carnaval Countdown",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159259/carnaval-countdown"
+  },
+  {
     "artist": "Erwin Nyhoff & The Prodigal Sons",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -2838,6 +4098,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/erwin-nyhoff-prodigal-sons"
+  },
+  {
+    "artist": "REACTiVATE 2027 The Label Edition",
+    "venue": "Poppodium 013 - Main + Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "14:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/156988/reactivate-2027"
   },
   {
     "artist": "The Smiths Presumably",
@@ -2870,6 +4140,36 @@
     "url": "https://baroeg.nl/productie/wavefest-clan-of-xymox-ultra-sunn-selofan-dear-omen-idleyes/"
   },
   {
+    "artist": "Two Door Cinema Club Tourist History 15th Anniversary",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-01-31",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128068/two-door-cinema-club"
+  },
+  {
+    "artist": "Spite + Emmure NEW WORLD KILLER EU/UK 2027",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-01",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/135188/spite-emmure"
+  },
+  {
+    "artist": "Giles Corey",
+    "venue": "Paradox",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-03",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/153236/giles-corey"
+  },
+  {
     "artist": "Andrea Vanzo",
     "venue": "De Doelen",
     "city": "Rotterdam",
@@ -2890,6 +4190,26 @@
     "url": "https://baroeg.nl/productie/dead-congregation/"
   },
   {
+    "artist": "The Black Dahlia Murder Two decades of Nocturnal",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-05",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/144498/the-black-dahlia-murder"
+  },
+  {
+    "artist": "FEUERENGEL YESS WE BRENN- Die 30-Jahre Tour 2027",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-05",
+    "time": "20:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127140/feuerengel"
+  },
+  {
     "artist": "Tales From The Punx: Wolfbrigade",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -2900,6 +4220,16 @@
     "url": "https://baroeg.nl/productie/tales-from-the-punx-wolfbrigade/"
   },
   {
+    "artist": "Delain Album Release Show",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-11",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/129205/delain"
+  },
+  {
     "artist": "Tramhaus",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -2908,6 +4238,36 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/tramhaus-12feb"
+  },
+  {
+    "artist": "Floor Jansen Hytress Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/143462/floor-jansen"
+  },
+  {
+    "artist": "Uncle Acid And the Deadbeats",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/153886/uncle-acid-and-the-deadbeats"
+  },
+  {
+    "artist": "Amorphis Borderland tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-14",
+    "time": "19:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/131462/amorphis"
   },
   {
     "artist": "Charlie Cunningham",
@@ -2990,6 +4350,36 @@
     "url": "https://baroeg.nl/productie/riffsniffer-presents-colour-haze-smokemaster/"
   },
   {
+    "artist": "The Halo Effect Special Guest: Lacuna Coil",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-21",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/128444/the-halo-effect"
+  },
+  {
+    "artist": "The Australian Pink Floyd Show 2027 Greatest Hits World Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-22",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/137219/the-australian-pink-floyd-show"
+  },
+  {
+    "artist": "De Jukebox",
+    "venue": "Poppodium 013 - Foyer van Main Stage",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-24",
+    "time": "14:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152183/de-jukebox"
+  },
+  {
     "artist": "Midge Ure",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -3020,6 +4410,16 @@
     "url": "https://www.effenaar.nl/agenda/bazart"
   },
   {
+    "artist": "Wende Er is nog tijd",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/155823/wende"
+  },
+  {
     "artist": "Ruben Hillen",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -3040,6 +4440,16 @@
     "url": "https://www.effenaar.nl/agenda/vrij-gezellig"
   },
   {
+    "artist": "Sleeping With Sirens An Ending In Itself Tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-02-28",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/135855/sleeping-with-sirens"
+  },
+  {
     "artist": "Roosbeef",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -3050,6 +4460,16 @@
     "url": "https://www.rotown.nl/agenda/roosbeef-1/"
   },
   {
+    "artist": "Clouseau",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-05",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/158995/clouseau"
+  },
+  {
     "artist": "The Dead Daisies",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -3058,6 +4478,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/dead-daisies"
+  },
+  {
+    "artist": "One Vision of Queen ft Marc Martel",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/123322/one-vision-of-queen-ft-marc-martel"
   },
   {
     "artist": "The Dutch Queen: 50 jaar Somebody To Love",
@@ -3100,6 +4530,26 @@
     "url": "https://www.rotown.nl/agenda/chefspecial-1/"
   },
   {
+    "artist": "Turnover",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-11",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/142310/turnover"
+  },
+  {
+    "artist": "The Dirty Daddies Let The Good Times Roll",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "20:15",
+    "source": "013",
+    "url": "https://www.013.nl/programma/125058/the-dirtt"
+  },
+  {
     "artist": "Politie Warnsveld",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -3118,6 +4568,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/personal-trainer-13mrt"
+  },
+  {
+    "artist": "Van Dik Hout",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/135844/van-dik-hout"
   },
   {
     "artist": "Oh Hiroshima + TÖRZS",
@@ -3180,6 +4640,16 @@
     "url": "https://www.effenaar.nl/agenda/pop-koor-xl-21mrt"
   },
   {
+    "artist": "Alcest + Agriculture",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-21",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/153847/alcest"
+  },
+  {
     "artist": "Black Box Revelation",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -3188,6 +4658,16 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/black-box-revelation-1/"
+  },
+  {
+    "artist": "The Warning",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-25",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/156333/the-warning"
   },
   {
     "artist": "BLUAI",
@@ -3200,6 +4680,16 @@
     "url": "https://www.rotown.nl/agenda/bluai-1/"
   },
   {
+    "artist": "Sama Sama Maluku Live In Concert",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-27",
+    "time": "15:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159292/sama-sama-maluku"
+  },
+  {
     "artist": "Westside Cowboy",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -3210,6 +4700,26 @@
     "url": "https://www.paradiso.nl/nl/programma/westside-cowboy/2872946"
   },
   {
+    "artist": "De Jukebox",
+    "venue": "Poppodium 013 - Foyer van Main Stage",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-31",
+    "time": "14:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152185/de-jukebox"
+  },
+  {
+    "artist": "Chef'Special",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/158979/chefspecial"
+  },
+  {
     "artist": "Flaire",
     "venue": "Annabel",
     "city": "Rotterdam",
@@ -3218,6 +4728,16 @@
     "time": "20:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/flaire-1/"
+  },
+  {
+    "artist": "Ilse DeLange",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/132836/ilse-delange"
   },
   {
     "artist": "Sietep\\u00e8",
@@ -3260,6 +4780,46 @@
     "url": "https://www.effenaar.nl/agenda/hscc-7apr"
   },
   {
+    "artist": "Ruben Hillen",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-08",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/134481/ruben-hillen"
+  },
+  {
+    "artist": "The Elvis Concert 2027 Special 50th Anniversary Concert",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-08",
+    "time": "20:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/132848/the-elvis-concert-2027"
+  },
+  {
+    "artist": "Palaye Royale The Amsterdamage world tour",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-09",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/160890/palaye-royale"
+  },
+  {
+    "artist": "DRAGONFORCE + Visions of Atlantis + Wings of Steel",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-11",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/157445/dragonforce"
+  },
+  {
     "artist": "The Elvis Concert - Special 50th Anniversary 1977 - 2027",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -3278,6 +4838,46 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/nienke-leone-1/"
+  },
+  {
+    "artist": "Roadburn 2027 Redefining Heaviness",
+    "venue": "Poppodium 013 - Alle Zalen",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-15",
+    "time": "14:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/136076/roadburn-2027"
+  },
+  {
+    "artist": "Roadburn 2027 Redefining Heaviness",
+    "venue": "Poppodium 013 - Alle Zalen",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-16",
+    "time": "14:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/136080/roadburn-2027"
+  },
+  {
+    "artist": "Roadburn 2027 Redefining Heaviness",
+    "venue": "Poppodium 013 - Alle Zalen",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-17",
+    "time": "14:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/136084/roadburn-2027"
+  },
+  {
+    "artist": "Roadburn 2027 Redefining Heaviness",
+    "venue": "Poppodium 013 - Alle Zalen",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-18",
+    "time": "14:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/136089/roadburn-2027"
   },
   {
     "artist": "High Fade",
@@ -3310,6 +4910,26 @@
     "url": "https://www.effenaar.nl/agenda/off-the-wall"
   },
   {
+    "artist": "Kim Wilde The Singles Tour 2027",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-23",
+    "time": "20:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/141146/kim-wilde"
+  },
+  {
+    "artist": "An Evening With The Pineapple Thief Far and wide - European tour 2027",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-24",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/154895/the-pineapple-thief"
+  },
+  {
     "artist": "Moss",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -3318,6 +4938,56 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/moss-1/"
+  },
+  {
+    "artist": "De Jukebox",
+    "venue": "Poppodium 013 - Foyer van Main Stage",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-28",
+    "time": "14:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/152188/de-jukebox"
+  },
+  {
+    "artist": "This Is Lenny Jay's Michael",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-29",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/154328/this-is-lenny-jays-michael"
+  },
+  {
+    "artist": "Adrian Vandenberg, 50 years of Rock!  Unique career spanning show",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-30",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/140544/adrian-vandenberg-50-years-of-rock"
+  },
+  {
+    "artist": "Zoë Livay",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-04-30",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/153896/zoë-livay"
+  },
+  {
+    "artist": "Kraak & Smaak Live",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-05-01",
+    "time": "19:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/158770/kraak-smaak"
   },
   {
     "artist": "MOSS",
@@ -3430,6 +5100,26 @@
     "url": "https://www.rotown.nl/agenda/alexis-ffrench-1/"
   },
   {
+    "artist": "The Musical Box ...And Then There Was Phil",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-06-08",
+    "time": "20:30",
+    "source": "013",
+    "url": "https://www.013.nl/programma/158877/the-musical-box"
+  },
+  {
+    "artist": "Archive",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-09-09",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/159539/archive"
+  },
+  {
     "artist": "Come As You Are 2027: o.a. de reünie van Tröckener Kecks",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -3458,6 +5148,16 @@
     "time": "20:00",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/bettie-serveert-1/"
+  },
+  {
+    "artist": "Bettie Serveert",
+    "venue": "Poppodium 013 - Next",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-10-23",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/127758/bettie-serveert"
   },
   {
     "artist": "Kovacs (Nieuwe datum)",
