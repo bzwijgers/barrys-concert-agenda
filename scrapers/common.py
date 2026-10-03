@@ -303,3 +303,17 @@ def scrape_boerderij():
     page = download_page_retry(base + "/programma/")
     urls = find_site_event_urls(page, base, "/programma/")
     return scrape_detail_events(urls, "Boerderij", "Zoetermeer", "Boerderij")
+
+
+def scrape_paard():
+    base = "https://www." + "paard" + ".nl"
+    page = download_page_retry(base + "/event/")
+    urls = find_site_event_urls(page, base, "/event/")
+    return scrape_detail_events(urls, "PAARD", "Den Haag", "PAARD")
+
+
+def scrape_melkweg():
+    base = "https://www." + "melkweg" + ".nl"
+    page = download_page_retry(base + "/nl/agenda/?profile=Concert")
+    urls = find_site_event_urls(page, base, "/nl/agenda/")
+    return scrape_detail_events(urls, "Melkweg", "Amsterdam", "Melkweg")
