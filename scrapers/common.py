@@ -320,6 +320,22 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False):
                 matching_start = re.search(r'"startDate"\s*:\s*"' + re.escape(event_date) + r'T(\d{2}):(\d{2})', page, flags=re.IGNORECASE)
                 if matching_start:
                     event_time = matching_start.group(1) + ":" + matching_start.group(2)
+                elif not event_time:
+                    # Melkweg toont de primaire eventtijd als bijvoorbeeld
+                    # "vr 09 okt 19:00 MAX" op de detailpagina.
+                    detail_text = clean_text(page)
+                    month_names = "|".join(MONTHS_SHORT.keys())
+                    visible_time = re.search(
+                        r"\b(?:ma|di|wo|do|vr|za|zo)\s+"
+                        + re.escape(str(int(day_value)))
+                        + r"\s+(?:"
+                        + month_names
+                        + r")\s+(\d{1,2})[:.]([0-5]\d)\b",
+                        detail_text,
+                        flags=re.IGNORECASE,
+                    )
+                    if visible_time:
+                        event_time = f"{int(visible_time.group(1)):02d}:{int(visible_time.group(2)):02d}"
         if not artist or not event_date:
             return None
         if date.fromisoformat(event_date) < today:
@@ -372,7 +388,10 @@ def scrape_paard():
 def scrape_melkweg():
     base = "https://www." + "melkweg" + ".nl"
     page = download_page_retry(base + "/nl/agenda/?profile=Concert")
-    urls = find_labeled_event_urls(page, base, "/nl/agenda/", "Concert", ("Concert", "Club", "Film", "Expositie", "Festival"))
+    # De URL is al server-side op Concert gefilterd. Gebruik daarom alle
+    # eventlinks uit die response; de oude nabijheidsheuristiek kon bij
+    # meerdere events op dezelfde datum geldige concerten overslaan.
+    urls = find_site_event_urls(page, base, "/nl/agenda/")
     print("Melkweg concertlinks gevonden:", len(urls))
     return scrape_detail_events(urls, "Melkweg", "Amsterdam", "Melkweg", date_from_url=True)
 
