@@ -879,33 +879,40 @@ fun ConcertCard(
                         )
                 )
 
+                val context = LocalContext.current
+
                 Text(
-                    "Bron: ${concert.source}",
+                    text = "Bron: ${concert.source}",
                     style =
                         MaterialTheme
                             .typography
-                            .bodySmall
+                            .bodySmall,
+                    color =
+                        if (concert.url.isNotBlank()) {
+                            MaterialTheme.colorScheme.primary
+                        } else {
+                            MaterialTheme.colorScheme.onSurfaceVariant
+                        },
+                    textDecoration =
+                        if (concert.url.isNotBlank()) {
+                            androidx.compose.ui.text.style.TextDecoration.Underline
+                        } else {
+                            null
+                        },
+                    modifier =
+                        if (concert.url.isNotBlank()) {
+                            Modifier.clickable {
+                                context.startActivity(
+                                    Intent(
+                                        Intent.ACTION_VIEW,
+                                        Uri.parse(concert.url)
+                                    )
+                                )
+                            }
+                        } else {
+                            Modifier
+                        }
                 )
-            }
-
-            if (
-                concert.clubCard &&
-                concert.url.isNotBlank()
-            ) {
-                val context = LocalContext.current
-
-                TextButton(
-                    onClick = {
-                        context.startActivity(
-                            Intent(
-                                Intent.ACTION_VIEW,
-                                Uri.parse(concert.url)
-                            )
-                        )
-                    }
-                ) {
-                    Text(concert.url)
-                }
             }
         }
     }
