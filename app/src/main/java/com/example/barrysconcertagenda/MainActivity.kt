@@ -107,7 +107,7 @@ fun WelcomeScreen(
             Image(
                 painter =
                     painterResource(
-                        id = R.mipmap.ic_launcher
+                        id = R.drawable.ic_launcher_foreground
                     ),
                 contentDescription =
                     "Open Barry's concert agenda",
