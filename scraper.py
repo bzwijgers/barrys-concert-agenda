@@ -1165,7 +1165,7 @@ def scrape_013():
     total = len(program_urls)
     processed = 0
 
-    def fetch_013(event_url):
+        def fetch_013(event_url):
     last_error = None
 
     for attempt in range(3):
@@ -1833,31 +1833,27 @@ def scrape_paradiso():
 
     today = date.today()
 
-def fetch_paradiso(event_url):
-    last_error = None
+    def fetch_paradiso(event_url):
+        last_error = None
 
-    for attempt in range(3):
-        try:
-            event_html = (
-                download_page_retry(
+        for attempt in range(3):
+            try:
+                event_html = (
+                    download_page_retry(
+                        event_url
+                    )
+                )
+
+                return paradiso_parse_event(
+                    event_html,
                     event_url
                 )
-            )
 
-            return paradiso_parse_event(
-                event_html,
-                event_url
-            )
+            except Exception as error:
+                last_error = error
 
-        except Exception as error:
-            last_error = error
-
-            if attempt < 2:
-                time.sleep(
-                    2.0 * (attempt + 1)
-                )
-
-    raise last_error
+                if attempt < 2:
+                    time.sleep(
 
     with ThreadPoolExecutor(
         max_workers=3
