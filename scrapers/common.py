@@ -379,8 +379,19 @@ def scrape_melkweg():
 
 def scrape_tivolivredenburg():
     base = "https://www." + "tivolivredenburg" + ".nl"
-    genres = "pop,rock,indie,singer-songwriter,roots-blues-americana,metal-punk-heavy,hiphop-rb-1,classic-pop-60s-90s,nederlands,global-1-pop-rock,soul-funk-jazz,reggae-ska,electronic-1"
-    page = download_page_retry(base + "/agenda?sf_genre=" + genres)
-    urls = find_site_event_urls(page, base, "/agenda/")
+    genres = (
+        "pop", "rock", "indie", "singer-songwriter", "roots-blues-americana",
+        "metal-punk-heavy", "hiphop-rb-1", "classic-pop-60s-90s", "nederlands",
+        "global-1-pop-rock", "soul-funk-jazz", "reggae-ska", "electronic-1"
+    )
+    urls = []
+    seen = set()
+    for genre in genres:
+        page = download_page_retry(base + "/agenda?sf_genre=" + genre)
+        for url in find_site_event_urls(page, base, "/agenda/"):
+            key = normalize_url(url)
+            if key not in seen:
+                seen.add(key)
+                urls.append(url)
     print("TivoliVredenburg niet-klassieke links gevonden:", len(urls))
     return scrape_detail_events(urls, "TivoliVredenburg", "Utrecht", "TivoliVredenburg")
