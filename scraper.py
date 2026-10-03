@@ -1,7 +1,7 @@
 from datetime import datetime
 import json
 
-from scrapers.common import normalize_url, scrape_boerderij, scrape_paard, scrape_melkweg
+from scrapers.common import normalize_url, scrape_boerderij, scrape_paard, scrape_melkweg, scrape_tivolivredenburg
 from scrapers.effenaar import scrape_effenaar
 from scrapers.rotown import scrape_rotown
 from scrapers.source013 import scrape_013
@@ -139,6 +139,7 @@ for source_name, scraper_function in (
     ("Boerderij", scrape_boerderij),
     ("PAARD", scrape_paard),
     ("Melkweg", scrape_melkweg),
+    ("TivoliVredenburg", scrape_tivolivredenburg),
 ):
     try:
         source_concerts = scraper_function()
@@ -298,7 +299,7 @@ print(
     baroeg_count
 )
 
-for source_name in ("Boerderij", "PAARD", "Melkweg"):
+for source_name in ("Boerderij", "PAARD", "Melkweg", "TivoliVredenburg"):
     print(source_name + ":", len([concert for concert in all_concerts if concert["source"] == source_name]))
 
 print(
