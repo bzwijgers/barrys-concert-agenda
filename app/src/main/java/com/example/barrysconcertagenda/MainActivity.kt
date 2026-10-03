@@ -22,6 +22,11 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.DatePicker
+import androidx.compose.material3.DatePickerDialog
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -121,9 +126,10 @@ fun ConcertApp() {
         mutableStateOf(1)
     }
 
-    var searchQuery by remember {
-        mutableStateOf("")
-    }
+    var searchQuery by remember { mutableStateOf("") }
+    var searchExpanded by remember { mutableStateOf(false) }
+    var selectedSearchDate by remember { mutableStateOf<LocalDate?>(null) }
+    var showDatePicker by remember { mutableStateOf(false) }
 
     var concerts by remember {
         mutableStateOf<List<Concert>>(
@@ -457,23 +463,14 @@ fun ConcertApp() {
         searchQuery.trim().lowercase(Locale.getDefault())
 
     val searchedConcerts =
-        if (normalizedSearch.isBlank()) {
-            tabConcerts
-        } else {
-            tabConcerts.filter { concert ->
-                listOf(
-                    concert.artist,
-                    concert.date,
-                    concert.time,
-                    concert.venue,
-                    concert.city,
-                    concert.country,
-                    concert.source
-                ).any { value ->
-                    value.lowercase(Locale.getDefault())
-                        .contains(normalizedSearch)
-                }
-            }
+        tabConcerts.filter { concert ->
+            val textMatches =
+                normalizedSearch.isBlank() ||
+                    concert.artist.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
+                    concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch)
+            val dateMatches =
+                selectedSearchDate == null || parseConcertDate(concert.date) == selectedSearchDate
+            textMatches && dateMatches
         }
 
     val visibleConcerts =
