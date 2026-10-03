@@ -509,22 +509,36 @@ def scrape_mezz():
 
 def scrape_patronaat():
     base = "https://patronaat.nl"
-    page = download_page_retry(base + "/")
-    urls = find_site_event_urls(page, base, "/event/")
-    print("Patronaat eventlinks gevonden:", len(urls))
+    genres = (
+        "pop", "rock", "indie", "loud", "hiphop",
+        "funk-soul-jazz", "singer-songwriter", "roots-blues",
+        "reggae-ska-dancehall", "elektronisch", "zoca-flavor",
+        "klassiekers-tributes",
+    )
+    urls = []
+    seen = set()
+    for genre in genres:
+        try:
+            page = download_page_retry(base + "/genre/" + genre + "/")
+        except Exception:
+            continue
+        for url in find_site_event_urls(page, base, "/event/"):
+            key = normalize_url(url)
+            if key not in seen:
+                seen.add(key)
+                urls.append(url)
 
+    print("Patronaat concertlinks gevonden:", len(urls))
     concerts = scrape_detail_events(urls, "Patronaat", "Haarlem", "Patronaat")
 
-    # Patronaat programmeert naast concerten ook expliciete club-/nachtleven-events.
-    # Die horen niet in Barry's concertagenda.
-    result = []
-    for item in concerts:
-        artist_lower = item["artist"].lower()
-        if any(marker in artist_lower for marker in (
-            "club3", "40up", "spätkauf", "only10s", "t-motion",
-            "vroegzat", "disco del mundo",
-        )):
-            continue
-        result.append(item)
-
-    return result
+    # Nachtleven/clubnachten worden niet opgenomen in Barry's concertagenda.
+    nightlife_titles = (
+        "club3", "40up", "spätkauf", "only10s", "t-motion", "vroegzat",
+        "disco del mundo", "90’s now", "90's now", "qmusic the party",
+        "no barrier", "state of bass", "housequake", "frank & nick",
+        "nooduitgang day rave", "spoorbijster",
+    )
+    return [
+        item for item in concerts
+        if not any(marker in item["artist"].lower() for marker in nightlife_titles)
+    ]
