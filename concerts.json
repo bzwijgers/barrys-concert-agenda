@@ -1,6 +1,6 @@
 [
   {
-    "artist": "Cloudbusting - Poppodium Boerderij",
+    "artist": "Cloudbusting",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -20,16 +20,6 @@
     "url": "https://www.effenaar.nl/agenda/caya2026"
   },
   {
-    "artist": "Evenementen - PAARD",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "17:00",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/en/event/"
-  },
-  {
     "artist": "KENNEN JULLIE DEZE NOG?",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -38,6 +28,16 @@
     "time": "19:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/kennen-jullie-deze-nog-3-10/"
+  },
+  {
+    "artist": "Yard Act – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/31585143/yard-act-03-10-2026/"
   },
   {
     "artist": "My Ugly Clementine",
@@ -78,6 +78,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/123148/joy-division-undercover"
+  },
+  {
+    "artist": "Lera Lynn – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/80372476/lera-lynn-03-10-2026/"
   },
   {
     "artist": "An Evening With Knives",
@@ -151,7 +161,7 @@
     "url": "https://www.paard.nl/event/paardcafe-peach-club/"
   },
   {
-    "artist": "Myrath - Poppodium Boerderij",
+    "artist": "Myrath",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -159,6 +169,16 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/myrath/"
+  },
+  {
+    "artist": "Finale Dutch Blues Challenge 2026 – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "12:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/63112285/finale-dutch-blues-challenge-2026-04-10-2026/"
   },
   {
     "artist": "THE HAGUE BLUES",
@@ -272,7 +292,7 @@
     "url": "https://www.paard.nl/event/stef-kamil-carlens-the-poem/"
   },
   {
-    "artist": "Banned From Utopia - Poppodium Boerderij",
+    "artist": "Banned From Utopia",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -280,6 +300,16 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/banned-from-utopia-1/"
+  },
+  {
+    "artist": "James Blake – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-05",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/66090954/james-blake-05-10-2026/"
   },
   {
     "artist": "Tommy Lyon",
@@ -290,6 +320,26 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/tommy-lyon/2914291"
+  },
+  {
+    "artist": "James Blake – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/39921212/james-blake-06-10-2026/"
+  },
+  {
+    "artist": "Starsailor with Strings – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/82333184/starsailor-with-strings-06-10-2026/"
   },
   {
     "artist": "Monokate",
@@ -352,6 +402,46 @@
     "url": "https://www.paradiso.nl/nl/programma/soiuz-soyuz/2882457"
   },
   {
+    "artist": "Rabo Open Stage: Susann – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "22:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/40907874/rabo-open-stage-susann-06-10-2026/"
+  },
+  {
+    "artist": "Gone Country – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "18:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/77980083/gone-country-07-10-2026/"
+  },
+  {
+    "artist": "Beach Boys’ Best – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/32304907/beach-boys-best-07-10-2026/"
+  },
+  {
+    "artist": "Courtney Barnett – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/76384936/courtney-barnett-07-10-2026/"
+  },
+  {
     "artist": "Actie Aletta",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -382,6 +472,26 @@
     "url": "https://www.paradiso.nl/nl/programma/friday/2891203"
   },
   {
+    "artist": "Stef Kamil Carlens & The Poem – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/92381952/stef-kamil-carlens-the-poem-07-10-2026/"
+  },
+  {
+    "artist": "Yellofox – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/39726588/yellofox-07-10-2026/"
+  },
+  {
     "artist": "Bears In Trees",
     "venue": "Hall of Fame",
     "city": "Tilburg",
@@ -390,6 +500,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/143786/bears-in-trees"
+  },
+  {
+    "artist": "Michael McGovern – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/70941045/michael-mcgovern-07-10-2026/"
   },
   {
     "artist": "TEUS NOBEL 4 | CHILD’S PLAY",
@@ -413,7 +533,7 @@
     "clubCard": false
   },
   {
-    "artist": "Pubquiz! - Poppodium Boerderij",
+    "artist": "Pubquiz!",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -431,6 +551,16 @@
     "time": "18:30",
     "source": "013",
     "url": "https://www.013.nl/programma/125791/the-amity-affliction"
+  },
+  {
+    "artist": "Marc Floor – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/86514102/marc-floor-08-10-2026/"
   },
   {
     "artist": "MULATU LISTENING BAR X SUPAFLY",
@@ -451,6 +581,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/loe/2855768"
+  },
+  {
+    "artist": "Sonico – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/27128183/sonico-08-10-2026/"
   },
   {
     "artist": "V.I.C",
@@ -534,7 +674,7 @@
     "url": "https://www.paard.nl/event/paardcafe-club-pony-100/"
   },
   {
-    "artist": "Sari Schorr - Poppodium Boerderij",
+    "artist": "Sari Schorr",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -542,6 +682,26 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/sarischorr/"
+  },
+  {
+    "artist": "Shadow of Intent – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "18:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/56112914/shadow-of-intent-09-10-2026/"
+  },
+  {
+    "artist": "OGENE – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/52519712/ogene-09-10-2026/"
   },
   {
     "artist": "The Apers",
@@ -553,6 +713,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/the-apers-1/",
     "clubCard": false
+  },
+  {
+    "artist": "Chica Chica – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/20843234/chica-chica-09-10-2026/"
   },
   {
     "artist": "Declan Welsh and The Decadent West",
@@ -675,6 +845,16 @@
     "url": "https://www.paard.nl/event/q-coming-out-week-2026/"
   },
   {
+    "artist": "ANTHEMS – TivoliVredenburg",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "23:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/40243494/anthems-09-10-2026/"
+  },
+  {
     "artist": "Paardcafé: Me Buurmeisje",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -685,7 +865,7 @@
     "url": "https://www.paard.nl/event/paardcafe-me-buurmeisje-22/"
   },
   {
-    "artist": "Axel Rudi Pell - Poppodium Boerderij",
+    "artist": "Axel Rudi Pell",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -703,6 +883,16 @@
     "time": "15:00",
     "source": "013",
     "url": "https://www.013.nl/programma/130852/heres-the-thing"
+  },
+  {
+    "artist": "Imidiwan Festival",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "17:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/78892285/imidiwan-festival-saturday-10-10-2026/"
   },
   {
     "artist": "The Devil Wears Prada",
@@ -894,16 +1084,6 @@
     "time": "21:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/telenova/2887556"
-  },
-  {
-    "artist": "Froukje - albumrelease show",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-12",
-    "time": "17:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/froukje-11-10-2026/"
   },
   {
     "artist": "Fat Freddy's Drop",
@@ -1110,7 +1290,7 @@
     "url": "https://www.paradiso.nl/nl/programma/sego/2896246"
   },
   {
-    "artist": "Tyketto & CoreLeoni - Poppodium Boerderij",
+    "artist": "Tyketto & CoreLeoni",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -1240,6 +1420,16 @@
     "url": "https://www.paradiso.nl/nl/programma/corto-alto/2889015"
   },
   {
+    "artist": "Darren Kiely",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/darren-kiely/2884478"
+  },
+  {
     "artist": "hubris.",
     "venue": "Altstadt",
     "city": "Eindhoven",
@@ -1352,7 +1542,7 @@
     "url": "https://www.paard.nl/event/paardcafe-mies-luid-26/"
   },
   {
-    "artist": "Limehouse Lizzy - Poppodium Boerderij",
+    "artist": "Limehouse Lizzy",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -1533,16 +1723,6 @@
     "url": "https://www.paard.nl/event/the-lemonheads/"
   },
   {
-    "artist": "There’s No Recipe",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-18",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/theres-no-recipe/2917623"
-  },
-  {
     "artist": "King King",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -1611,6 +1791,16 @@
     "time": "21:00",
     "source": "013",
     "url": "https://www.013.nl/programma/125559/beach-boys-best"
+  },
+  {
+    "artist": "Alien Chicks - 19 oktober 2026",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-19",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/alien-chicks/2885760"
   },
   {
     "artist": "Dave East",
@@ -1785,7 +1975,7 @@
     "url": "https://www.paard.nl/event/paardcafe-club-pony-104/"
   },
   {
-    "artist": "Diggeth - Poppodium Boerderij",
+    "artist": "Diggeth",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -1877,16 +2067,6 @@
     "url": "https://www.effenaar.nl/agenda/rolf-sanchez"
   },
   {
-    "artist": "Club Kid (2026)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "21:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/club-kid-2026-23-10-2026/"
-  },
-  {
     "artist": "KitKatClub: Kinks of Berlin (2026)",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -1907,7 +2087,7 @@
     "url": "https://www.paard.nl/event/paardcafe-eddy-ate-dynamite/"
   },
   {
-    "artist": "Threshold - Poppodium Boerderij",
+    "artist": "Threshold",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -2029,7 +2209,7 @@
     "url": "https://www.paard.nl/event/paardcafe-osoulsconcept-friends/"
   },
   {
-    "artist": "Solstice - Poppodium Boerderij",
+    "artist": "Solstice",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -2047,16 +2227,6 @@
     "time": "15:00",
     "source": "013",
     "url": "https://www.013.nl/programma/147483/tiny-housesessions"
-  },
-  {
-    "artist": "Aftershock: The Seismic Impact of Dubstep",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-25",
-    "time": "17:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/aftershock-the-seismic-impact-of-dubstep-25-10-2026/"
   },
   {
     "artist": "THEATRE OF HATE + SKIDS",
@@ -2099,7 +2269,7 @@
     "url": "https://www.paradiso.nl/nl/programma/natanya-the-attitude-tour/2902260"
   },
   {
-    "artist": "Geoff Tate - Poppodium Boerderij",
+    "artist": "Geoff Tate",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -2149,7 +2319,7 @@
     "url": "https://www.013.nl/programma/127803/rob-lamberti-presents-a-celebration-of-george-michael"
   },
   {
-    "artist": "Paul van Loon en Andere Snuiters - Poppodium Boerderij",
+    "artist": "Paul van Loon en Andere Snuiters",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -2413,7 +2583,7 @@
     "url": "https://www.paard.nl/event/picasso-halloween-feest/"
   },
   {
-    "artist": "The Clarks ft. Rinus Gerritsen & Cesar Zuiderwijk - Poppodium Boerderij",
+    "artist": "The Clarks ft. Rinus Gerritsen & Cesar Zuiderwijk",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -2535,6 +2705,16 @@
     "clubCard": false
   },
   {
+    "artist": "LC LATE - FRIDAY NIGHT",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "23:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/lc-late-friday-night/2921551"
+  },
+  {
     "artist": "LITT HALLOWEEN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2555,7 +2735,7 @@
     "url": "https://www.paard.nl/event/paardcafe-getting-80s-90s-wit-it/"
   },
   {
-    "artist": "The Watch Plays Genesis - Poppodium Boerderij",
+    "artist": "The Watch Plays Genesis",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -2726,7 +2906,7 @@
     "url": "https://www.013.nl/programma/155706/spanish-heat"
   },
   {
-    "artist": "Pendragon - Poppodium Boerderij",
+    "artist": "Pendragon",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -3232,7 +3412,7 @@
     "url": "https://www.013.nl/programma/131304/zer00s-heroes"
   },
   {
-    "artist": "Frank Boeijen - Poppodium Boerderij",
+    "artist": "Frank Boeijen",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -3313,7 +3493,7 @@
     "url": "https://www.paard.nl/event/fiesta-macumba-45/"
   },
   {
-    "artist": "O.R.k. - Poppodium Boerderij",
+    "artist": "O.R.k.",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -3527,7 +3707,7 @@
     "clubCard": false
   },
   {
-    "artist": "The Next Movement - Poppodium Boerderij",
+    "artist": "The Next Movement",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -3619,7 +3799,7 @@
     "clubCard": true
   },
   {
-    "artist": "Focus - Poppodium Boerderij",
+    "artist": "Focus",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -3730,7 +3910,7 @@
     "url": "https://www.paard.nl/event/terug-in-de-tijd-6/"
   },
   {
-    "artist": "Plackband - Poppodium Boerderij",
+    "artist": "Plackband",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -3801,7 +3981,7 @@
     "clubCard": false
   },
   {
-    "artist": "Michael Schenker Group - Poppodium Boerderij",
+    "artist": "Michael Schenker Group",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -3923,7 +4103,7 @@
     "clubCard": false
   },
   {
-    "artist": "Ellen ten Damme - Poppodium Boerderij",
+    "artist": "Ellen ten Damme",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4016,7 +4196,7 @@
     "clubCard": false
   },
   {
-    "artist": "Parker Barrow - Poppodium Boerderij",
+    "artist": "Parker Barrow",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4097,7 +4277,7 @@
     "clubCard": false
   },
   {
-    "artist": "ACinDC - Poppodium Boerderij",
+    "artist": "ACinDC",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4189,7 +4369,7 @@
     "clubCard": false
   },
   {
-    "artist": "RanestRane - Poppodium Boerderij",
+    "artist": "RanestRane",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4333,7 +4513,7 @@
     "clubCard": false
   },
   {
-    "artist": "Dave Hill's Slade - Poppodium Boerderij",
+    "artist": "Dave Hill's Slade",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4341,6 +4521,16 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/slade/"
+  },
+  {
+    "artist": "Filter",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/page/2/"
   },
   {
     "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
@@ -4426,7 +4616,7 @@
     "clubCard": false
   },
   {
-    "artist": "John Hackett Band - Poppodium Boerderij",
+    "artist": "John Hackett Band",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4516,7 +4706,7 @@
     "url": "https://www.013.nl/programma/156684/brandalarm"
   },
   {
-    "artist": "Arena - Poppodium Boerderij",
+    "artist": "Arena",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4597,7 +4787,7 @@
     "clubCard": false
   },
   {
-    "artist": "Anneke van Giersbergen & Band - Poppodium Boerderij",
+    "artist": "Anneke van Giersbergen & Band",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4759,7 +4949,7 @@
     "clubCard": false
   },
   {
-    "artist": "The Mike Keneally Report & Dave Cureton - Poppodium Boerderij",
+    "artist": "The Mike Keneally Report & Dave Cureton",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4843,7 +5033,7 @@
     "clubCard": false
   },
   {
-    "artist": "Ray Wilson - Poppodium Boerderij",
+    "artist": "Ray Wilson",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -4964,7 +5154,7 @@
     "url": "https://www.melkweg.nl/nl/agenda/noisia-04-12-2026/"
   },
   {
-    "artist": "Mostly Autumn - Poppodium Boerderij",
+    "artist": "Mostly Autumn",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5036,7 +5226,7 @@
     "clubCard": false
   },
   {
-    "artist": "China Crisis - Poppodium Boerderij",
+    "artist": "China Crisis",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5169,7 +5359,7 @@
     "clubCard": false
   },
   {
-    "artist": "Moving Pictures - Poppodium Boerderij",
+    "artist": "Moving Pictures",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5232,7 +5422,7 @@
     "clubCard": false
   },
   {
-    "artist": "Alex Henry Foster - Poppodium Boerderij",
+    "artist": "Alex Henry Foster",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5334,7 +5524,7 @@
     "url": "https://www.melkweg.nl/nl/agenda/kiss-all-hipsters-11-12-2026/"
   },
   {
-    "artist": "IQ X-Mas Bash - Poppodium Boerderij",
+    "artist": "IQ X-Mas Bash",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5362,16 +5552,6 @@
     "time": "15:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2026-day-2"
-  },
-  {
-    "artist": "All You Need Is Kill (2025)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-12",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/all-you-need-is-kill-2025-14-11-2026/"
   },
   {
     "artist": "Children Who Chase Lost Voices (2011)",
@@ -5415,7 +5595,7 @@
     "clubCard": false
   },
   {
-    "artist": "Blues op Zondag - Twelve Bar Blues Band - Poppodium Boerderij",
+    "artist": "Blues op Zondag - Twelve Bar Blues Band",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5588,7 +5768,7 @@
     "clubCard": false
   },
   {
-    "artist": "The Doors Alive - Poppodium Boerderij",
+    "artist": "The Doors Alive",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5659,7 +5839,7 @@
     "clubCard": false
   },
   {
-    "artist": "Top 2000 Dansfeest - Poppodium Boerderij",
+    "artist": "Top 2000 Dansfeest",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5720,7 +5900,7 @@
     "clubCard": false
   },
   {
-    "artist": "ProgProms V - Poppodium Boerderij",
+    "artist": "ProgProms V",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5874,7 +6054,7 @@
     "clubCard": false
   },
   {
-    "artist": "The Fortunate Sons - Poppodium Boerderij",
+    "artist": "The Fortunate Sons",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5944,7 +6124,7 @@
     "url": "https://www.013.nl/programma/125097/the-james-brown-experience"
   },
   {
-    "artist": "Humor in de Boerderij - Poppodium Boerderij",
+    "artist": "Humor in de Boerderij",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5954,7 +6134,7 @@
     "url": "https://poppodiumboerderij.nl/programma/humorindeboerderij/"
   },
   {
-    "artist": "Made In Purple - Poppodium Boerderij",
+    "artist": "Made In Purple",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -5985,7 +6165,7 @@
     "clubCard": false
   },
   {
-    "artist": "Ten Years After - Poppodium Boerderij",
+    "artist": "Ten Years After",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6025,16 +6205,6 @@
     "url": "https://www.effenaar.nl/agenda/mike-masse"
   },
   {
-    "artist": "Isaiah Rashad",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-18",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/isaiah-rashad-17-01-2027/"
-  },
-  {
     "artist": "Black Veil Brides",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -6067,7 +6237,7 @@
     "clubCard": false
   },
   {
-    "artist": "Regressive Hypnosis - Poppodium Boerderij",
+    "artist": "Regressive Hypnosis",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6107,7 +6277,7 @@
     "url": "https://www.paard.nl/event/the-dirty-daddies-22-01/"
   },
   {
-    "artist": "Bjørn Riis - Poppodium Boerderij",
+    "artist": "Bjørn Riis",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6157,7 +6327,7 @@
     "url": "https://www.013.nl/programma/160118/eddie-jobson"
   },
   {
-    "artist": "Eddie Jobson's U.K. Revisited - Poppodium Boerderij",
+    "artist": "Eddie Jobson's U.K. Revisited",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6187,7 +6357,7 @@
     "url": "https://www.013.nl/programma/155569/frozen-soul"
   },
   {
-    "artist": "Rock Party Of The Year 2027 - Poppodium Boerderij",
+    "artist": "Rock Party Of The Year 2027",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6237,7 +6407,7 @@
     "url": "https://www.paard.nl/event/another-taste/"
   },
   {
-    "artist": "Julian Sas - Poppodium Boerderij",
+    "artist": "Julian Sas",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6378,7 +6548,7 @@
     "url": "https://www.013.nl/programma/127140/feuerengel"
   },
   {
-    "artist": "U2two - Poppodium Boerderij",
+    "artist": "U2two",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6398,7 +6568,7 @@
     "url": "https://www.paard.nl/event/robin-scherpen/"
   },
   {
-    "artist": "My Breath My Music - Poppodium Boerderij",
+    "artist": "My Breath My Music",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6438,7 +6608,7 @@
     "url": "https://www.paard.nl/event/the-vernon-spring/"
   },
   {
-    "artist": "These Wicked Rivers - Poppodium Boerderij",
+    "artist": "These Wicked Rivers",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6458,7 +6628,7 @@
     "url": "https://www.013.nl/programma/129205/delain"
   },
   {
-    "artist": "Comedy of Errors - Poppodium Boerderij",
+    "artist": "Comedy of Errors",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6488,7 +6658,7 @@
     "url": "https://www.effenaar.nl/agenda/tramhaus-12feb"
   },
   {
-    "artist": "A-Fever - Poppodium Boerderij",
+    "artist": "A-Fever",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6571,7 +6741,7 @@
     "url": "https://www.paard.nl/event/grimner-waylander-vansind/"
   },
   {
-    "artist": "Pure Reason Revolution - Poppodium Boerderij",
+    "artist": "Pure Reason Revolution",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6581,7 +6751,7 @@
     "url": "https://poppodiumboerderij.nl/programma/purereasonrevolution/"
   },
   {
-    "artist": "British Invasion - Poppodium Boerderij",
+    "artist": "British Invasion",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6632,7 +6802,7 @@
     "url": "https://www.effenaar.nl/agenda/jesper-lindell-brunnsvick-sounds"
   },
   {
-    "artist": "Lee Rocker of the Stray Cats - Poppodium Boerderij",
+    "artist": "Lee Rocker of the Stray Cats",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6783,7 +6953,7 @@
     "url": "https://www.effenaar.nl/agenda/ruben-hillen"
   },
   {
-    "artist": "Ozric Tentacles - Poppodium Boerderij",
+    "artist": "Ozric Tentacles",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -6813,7 +6983,7 @@
     "url": "https://www.effenaar.nl/agenda/vrij-gezellig"
   },
   {
-    "artist": "Blues op Zondag - The Grinders - Poppodium Boerderij",
+    "artist": "Blues op Zondag - The Grinders",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7006,7 +7176,7 @@
     "url": "https://www.paard.nl/event/shrek-rave-3/"
   },
   {
-    "artist": "Dirty Sound Magnet - Poppodium Boerderij",
+    "artist": "Dirty Sound Magnet",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7086,7 +7256,7 @@
     "url": "https://www.effenaar.nl/agenda/dutch-queen-18mrt"
   },
   {
-    "artist": "Physical Graffiti - Poppodium Boerderij",
+    "artist": "Physical Graffiti",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7218,7 +7388,7 @@
     "clubCard": false
   },
   {
-    "artist": "The Dutch Queen - Poppodium Boerderij",
+    "artist": "The Dutch Queen",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7258,7 +7428,7 @@
     "url": "https://www.013.nl/programma/152185/de-jukebox"
   },
   {
-    "artist": "Damian Wilson Legacy - Poppodium Boerderij",
+    "artist": "Damian Wilson Legacy",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7268,7 +7438,7 @@
     "url": "https://poppodiumboerderij.nl/programma/damianwilsonlegacy/"
   },
   {
-    "artist": "Temple Of Wave - Poppodium Boerderij",
+    "artist": "Temple Of Wave",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7288,7 +7458,7 @@
     "url": "https://www.013.nl/programma/158979/chefspecial"
   },
   {
-    "artist": "The Crazy World Of Arthur Brown - Poppodium Boerderij",
+    "artist": "The Crazy World Of Arthur Brown",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7391,7 +7561,7 @@
     "url": "https://www.013.nl/programma/160890/palaye-royale"
   },
   {
-    "artist": "RPWL - Poppodium Boerderij",
+    "artist": "RPWL",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7432,7 +7602,7 @@
     "clubCard": false
   },
   {
-    "artist": "Living Theory - Linkin Park Tribute - Poppodium Boerderij",
+    "artist": "Living Theory - Linkin Park Tribute",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7462,7 +7632,7 @@
     "url": "https://www.013.nl/programma/136080/roadburn-2027"
   },
   {
-    "artist": "Magenta - Poppodium Boerderij",
+    "artist": "Magenta",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7492,7 +7662,7 @@
     "url": "https://www.paard.nl/event/jim-gardner/"
   },
   {
-    "artist": "Sonata Arctica & Rage - Poppodium Boerderij",
+    "artist": "Sonata Arctica & Rage",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7633,7 +7803,7 @@
     "url": "https://www.013.nl/programma/153896/zoë-livay"
   },
   {
-    "artist": "ENorm - Poppodium Boerderij",
+    "artist": "ENorm",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7714,7 +7884,7 @@
     "url": "https://www.effenaar.nl/agenda/bob-marley-tribute-door-rootsriders-ft-mo-ali-exodus"
   },
   {
-    "artist": "SAGA - Poppodium Boerderij",
+    "artist": "SAGA",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7765,37 +7935,7 @@
     "url": "https://www.paard.nl/event/sniester-2027-2/"
   },
   {
-    "artist": "Elmiene",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-22",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/elmiene-29-11-2026/"
-  },
-  {
-    "artist": "Emeli Sandé",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-22",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/emeli-sande-26-02-2027/"
-  },
-  {
-    "artist": "Jeangu Macrooy",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-22",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/jeangu-macrooy-22-05-2027/"
-  },
-  {
-    "artist": "StillMarillion - Poppodium Boerderij",
+    "artist": "StillMarillion",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
@@ -7826,7 +7966,7 @@
     "clubCard": true
   },
   {
-    "artist": "Greg Howe - Poppodium Boerderij",
+    "artist": "Greg Howe",
     "venue": "Boerderij",
     "city": "Zoetermeer",
     "country": "NL",
