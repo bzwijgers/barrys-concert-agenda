@@ -236,10 +236,16 @@ def find_labeled_event_urls(page, base_url, path_prefix, wanted_label, labels):
         clean_url = url.split("?", 1)[0].rstrip("/") + "/"
         if path_prefix not in clean_url:
             continue
-        context = clean_text(page[max(0, match.start() - 1800):match.start()]).lower()
-        positions = {label: context.rfind(label) for label in labels_lower}
-        nearest = max(positions, key=positions.get)
-        if positions[nearest] < 0 or nearest != wanted_label.lower():
+        raw_context = page[max(0, match.start() - 700):min(len(page), match.end() + 700)]
+        context = clean_text(raw_context).lower()
+        anchor_text = clean_text(page[match.start():match.end()]).lower()
+        center = max(0, context.find(anchor_text))
+        distances = {}
+        for label in labels_lower:
+            positions = [m.start() for m in re.finditer(re.escape(label), context)]
+            distances[label] = min((abs(pos - center) for pos in positions), default=999999)
+        nearest = min(distances, key=distances.get)
+        if nearest != wanted_label.lower() or distances[nearest] > 450:
             continue
         key = normalize_url(clean_url)
         if key not in seen:
@@ -294,18 +300,26 @@ def _detail_date_time(page):
     return event_date, event_time
 
 
-def scrape_detail_events(urls, venue, city, source):
+def scrape_detail_events(urls, venue, city, source, date_from_url=False):
     today = date.today()
     concerts = []
 
     def fetch(url):
         page = download_page_retry(url)
         artist = _detail_title(page)
-        artist = re.sub(r"\s+-\s+(?:Poppodium\s+)?(?:Boerderij|PAARD|Melkweg|TivoliVredenburg).*$", "", artist, flags=re.IGNORECASE).strip()
+        artist = re.sub(r"\s+[\-–—]\s+(?:Poppodium\s+)?(?:Boerderij|PAARD|Melkweg|TivoliVredenburg).*$", "", artist, flags=re.IGNORECASE).strip()
         artist_lower = artist.lower()
         if "afgelast" in artist_lower or "geannuleerd" in artist_lower or "cancelled" in artist_lower or "canceled" in artist_lower:
             return None
         event_date, event_time = _detail_date_time(page)
+        if date_from_url:
+            url_dates = re.findall(r"(\d{2})-(\d{2})-(20\d{2})", url)
+            if url_dates:
+                day_value, month_value, year_value = url_dates[-1]
+                event_date = f"{year_value}-{month_value}-{day_value}"
+                matching_start = re.search(r'"startDate"\s*:\s*"' + re.escape(event_date) + r'T(\d{2}):(\d{2})', page, flags=re.IGNORECASE)
+                if matching_start:
+                    event_time = matching_start.group(1) + ":" + matching_start.group(2)
         if not artist or not event_date:
             return None
         if date.fromisoformat(event_date) < today:
@@ -360,7 +374,7 @@ def scrape_melkweg():
     page = download_page_retry(base + "/nl/agenda/?profile=Concert")
     urls = find_labeled_event_urls(page, base, "/nl/agenda/", "Concert", ("Concert", "Club", "Film", "Expositie", "Festival"))
     print("Melkweg concertlinks gevonden:", len(urls))
-    return scrape_detail_events(urls, "Melkweg", "Amsterdam", "Melkweg")
+    return scrape_detail_events(urls, "Melkweg", "Amsterdam", "Melkweg", date_from_url=True)
 
 
 def scrape_tivolivredenburg():
