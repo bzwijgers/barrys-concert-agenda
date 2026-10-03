@@ -563,6 +563,16 @@
     "clubCard": false
   },
   {
+    "artist": "Father Of Peace",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/father-of-peace"
+  },
+  {
     "artist": "Pubquiz!",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -671,16 +681,6 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/savine-4/"
-  },
-  {
-    "artist": "Father Of Peace",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/father-of-peace"
   },
   {
     "artist": "Night Swimming",
@@ -965,6 +965,36 @@
     "url": "https://baroeg.nl/productie/joy-division-undercover/"
   },
   {
+    "artist": "Dotan",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/24312558/dotan-10-10-2026/"
+  },
+  {
+    "artist": "Jamie Grey",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/55092540/jamie-grey-10-10-2026/"
+  },
+  {
+    "artist": "Diggy Dex",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/58449443/diggy-dex-10-10-2026/"
+  },
+  {
     "artist": "Kourosh",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -975,6 +1005,16 @@
     "url": "https://www.paradiso.nl/nl/programma/kourosh/2908975"
   },
   {
+    "artist": "Robert Jon & The Wreck",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/92863105/robert-jon-the-wreck-10-10-2026/"
+  },
+  {
     "artist": "SUPAFLY 2026",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -983,6 +1023,16 @@
     "time": "19:45",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/supafly-2026/"
+  },
+  {
+    "artist": "Dar Williams",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/13273522/dar-williams-10-10-2026/"
   },
   {
     "artist": "Jack Savoretti",
@@ -1036,6 +1086,16 @@
     "clubCard": false
   },
   {
+    "artist": "Rabo Open Stage: Yasmina",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "22:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/52933706/rabo-open-stage-yasmina-10-10-2026/"
+  },
+  {
     "artist": "Metatron",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -1076,6 +1136,26 @@
     "url": "https://www.melkweg.nl/nl/agenda/froukje-11-10-2026/"
   },
   {
+    "artist": "Imidiwan Festival",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "18:45",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/85161757/imidiwan-festival-sunday-11-10-2026/"
+  },
+  {
+    "artist": "ASCO – Symphony of CAOS",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/75827519/asco-symphony-of-caos-11-10-2026/"
+  },
+  {
     "artist": "Adje",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1084,6 +1164,26 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/adje/2859840"
+  },
+  {
+    "artist": "Cuca Roseta",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/94808942/cuca-roseta-11-10-2026/"
+  },
+  {
+    "artist": "Jack Savoretti",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/73530450/jack-savoretti-11-10-2026/"
   },
   {
     "artist": "Pete Murray",
@@ -1116,6 +1216,16 @@
     "url": "https://www.paard.nl/event/janne-schra-5/"
   },
   {
+    "artist": "Margaret Glaspy",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/13986006/margaret-glaspy-11-10-2026/"
+  },
+  {
     "artist": "MAROU & MASSIN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -1146,6 +1256,16 @@
     "url": "https://www.paradiso.nl/nl/programma/telenova/2887556"
   },
   {
+    "artist": "Rabo Open Stage: Rosa Westerbaan",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "22:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/73714796/rabo-open-stage-rosa-westerbaan-11-10-2026/"
+  },
+  {
     "artist": "Froukje - albumrelease show",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -1154,6 +1274,26 @@
     "time": "",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/froukje-12-10-2026/"
+  },
+  {
+    "artist": "HONNE",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-12",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/66059458/honne-12-10-2026/"
+  },
+  {
+    "artist": "Matt Hansen",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-12",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/15260174/matt-hansen-12-10-2026/"
   },
   {
     "artist": "Fat Freddy's Drop",
@@ -1218,6 +1358,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/ruel-13-10-2026/"
   },
   {
+    "artist": "Gavin DeGraw",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-13",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/43421006/gavin-degraw-13-10-2026/"
+  },
+  {
     "artist": "Fat Freddy's Drop",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1236,6 +1386,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/finojet/2863276"
+  },
+  {
+    "artist": "Iris Jean",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-13",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/65577388/iris-jean-13-10-2026/"
   },
   {
     "artist": "LOS CUMBIA STARS",
@@ -1299,6 +1459,16 @@
     "url": "https://www.paradiso.nl/nl/programma/lowdown-brass-band/2907014"
   },
   {
+    "artist": "Rabo Open Stage: Jesse Hydro",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-13",
+    "time": "22:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/49905294/rabo-open-stage-jesse-hydro-13-10-2026/"
+  },
+  {
     "artist": "Goldford",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -1309,6 +1479,36 @@
     "url": "https://www.melkweg.nl/nl/agenda/goldford-14-10-2026/"
   },
   {
+    "artist": "Jhariah",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/44050840/jhariah-14-10-2026/"
+  },
+  {
+    "artist": "RUEL",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/13452508/ruel-14-10-2026/"
+  },
+  {
+    "artist": "The Mountain Goats",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "19:15",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/88340293/the-mountain-goats-14-10-2026/"
+  },
+  {
     "artist": "Fat Freddy's Drop",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1317,6 +1517,26 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/fat-freddys-drop/2654380"
+  },
+  {
+    "artist": "Gruppo Sportivo",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/36172076/gruppo-sportivo-14-10-2026/"
+  },
+  {
+    "artist": "Myles Sanko",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/31755659/myles-sanko-14-10-2026/"
   },
   {
     "artist": "Audrey Horne",
@@ -1400,6 +1620,16 @@
     "url": "https://poppodiumboerderij.nl/programma/tyketto-coreleoni/"
   },
   {
+    "artist": "The Lemonheads",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/20805981/the-lemonheads-15-10-2026/"
+  },
+  {
     "artist": "Bayou",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1418,6 +1648,46 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/blanks-5/"
+  },
+  {
+    "artist": "Krallice",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/56399340/krallice-15-10-2026/"
+  },
+  {
+    "artist": "Lambert",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/27726237/lambert-15-10-2026/"
+  },
+  {
+    "artist": "Mondo Drag + Early Moods",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/18624655/mondo-drag-early-moods-15-10-2026/"
+  },
+  {
+    "artist": "Pete Murray",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/78856899/pete-murray-15-10-2026/"
   },
   {
     "artist": "Young The Giant",
@@ -1581,6 +1851,36 @@
     "url": "https://www.013.nl/programma/127049/humanitys-last-breath"
   },
   {
+    "artist": "Blood Red Shoes",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/77819349/blood-red-shoes-16-10-2026/"
+  },
+  {
+    "artist": "Flaire",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/10348531/flaire-16-10-2026/"
+  },
+  {
+    "artist": "Donovan Woods",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/64504632/donovan-woods-16-10-2026/"
+  },
+  {
     "artist": "DOTAN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -1589,6 +1889,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/dotan-12/"
+  },
+  {
+    "artist": "Orgel Vreten",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/17873001/orgel-vreten-16-10-2026/"
   },
   {
     "artist": "Douwe Bob",
@@ -1632,6 +1942,26 @@
     "clubCard": false
   },
   {
+    "artist": "Gitaardisco",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "22:15",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/91446767/gitaardisco-16-10-2026/"
+  },
+  {
+    "artist": "Rabo Open Stage: Sabine",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "22:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/41411823/rabo-open-stage-sabine-16-10-2026/"
+  },
+  {
     "artist": "PIÑA Tropisch, gezellig, PIÑA!",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -1672,6 +2002,16 @@
     "url": "https://poppodiumboerderij.nl/programma/limehouselizzy/"
   },
   {
+    "artist": "Ramblin Roots",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "14:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/50725254/ramblin-roots-17-10-2026/"
+  },
+  {
     "artist": "Let's get Hyper Lekkerfaces presents",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -1690,6 +2030,16 @@
     "time": "19:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/faction-mirage"
+  },
+  {
+    "artist": "Rolf Sanchez",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/31500934/rolf-sanchez-17-10-2026/"
   },
   {
     "artist": "Blood Red Shoes",
@@ -1843,6 +2193,36 @@
     "url": "https://baroeg.nl/productie/benediction-nightbearer/"
   },
   {
+    "artist": "Lake Street Dive",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/46780698/lake-street-dive-18-10-2026/"
+  },
+  {
+    "artist": "Thijs Veldhuis",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/49852223/thijs-veldhuis-18-10-2026/"
+  },
+  {
+    "artist": "Souad Massi",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "19:15",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/16764992/souad-massi-18-10-2026/"
+  },
+  {
     "artist": "THE LEMONHEADS",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -1861,6 +2241,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/theres-no-recipe/2917623"
+  },
+  {
+    "artist": "I Promised The World",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/75854229/i-promised-the-world-18-10-2026/"
   },
   {
     "artist": "King King",
@@ -1933,6 +2323,36 @@
     "url": "https://www.013.nl/programma/125559/beach-boys-best"
   },
   {
+    "artist": "Rabo Open Stage: Lizet Aviva",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "22:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/14152063/rabo-open-stage-lizet-aviva-18-10-2026/"
+  },
+  {
+    "artist": "Eloi Youssef",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-19",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/26718917/eloi-youssef-19-10-2026/"
+  },
+  {
+    "artist": "FKJ",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-19",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/23104250/fkj-19-10-2026/"
+  },
+  {
     "artist": "Alien Chicks - 19 oktober 2026",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1953,6 +2373,16 @@
     "url": "https://www.paradiso.nl/nl/programma/dave-east/2854309"
   },
   {
+    "artist": "Mercury Rev",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-19",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/15856919/mercury-rev-19-10-2026/"
+  },
+  {
     "artist": "John Craigie",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1961,6 +2391,46 @@
     "time": "18:45",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/john-craigie/2889434"
+  },
+  {
+    "artist": "Kaya + Maartje",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-20",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/70567472/kaya-maartje-20-10-2026/"
+  },
+  {
+    "artist": "Buffalo Tom",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-20",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/25692930/buffalo-tom-20-10-2026/"
+  },
+  {
+    "artist": "Everything Yes",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-20",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/64053996/everything-yes-20-10-2026/"
+  },
+  {
+    "artist": "Wolvennest + Bedsore",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-20",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/53579129/wolvennest-bedsore-20-10-2026/"
   },
   {
     "artist": "Blood Red Shoes",
@@ -2003,6 +2473,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/mind-enterprises-21-10-2026/"
   },
   {
+    "artist": "Guilt Trip",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-21",
+    "time": "18:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/30179895/guilt-trip-21-10-2026/"
+  },
+  {
     "artist": "The Left of the Dial Wednesday",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -2012,6 +2492,26 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/the-left-of-the-dial-wednesday/",
     "clubCard": false
+  },
+  {
+    "artist": "Warren Zeiders",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-21",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/92614864/warren-zeiders-21-10-2026/"
+  },
+  {
+    "artist": "Freya Ridings",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-21",
+    "time": "19:15",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/98918178/freya-ridings-21-10-2026/"
   },
   {
     "artist": "THIJS VELDHUIS",
@@ -2075,6 +2575,16 @@
     "clubCard": false
   },
   {
+    "artist": "Celine Cairo",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/17159560/celine-cairo-22-10-2026/"
+  },
+  {
     "artist": "L.A. SAGNE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2083,6 +2593,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/l-a-sagne/"
+  },
+  {
+    "artist": "Niels Geusebroek sings Coldplay",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/38902906/niels-geusebroek-sings-coldplay-22-10-2026/"
   },
   {
     "artist": "IOS Clubtour 8",
@@ -2113,6 +2633,16 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/flowers-dead-sewing-club"
+  },
+  {
+    "artist": "Popronde Utrecht",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "20:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/35302200/popronde-utrecht-22-10-2026/"
   },
   {
     "artist": "Paardcafé: CLUB PONY",
@@ -2166,6 +2696,16 @@
     "url": "https://www.paard.nl/event/80s-verantwoord-23-10/"
   },
   {
+    "artist": "IOS",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/17348860/ios-23-10-2026/"
+  },
+  {
     "artist": "Sathanas In Gloriam presents: Sabathan + Cirith Gorgor + Reinkaos",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -2174,6 +2714,26 @@
     "time": "19:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/sathanas-in-gloriam-presents-unholy-craft-cirith-gorgor-reinkaos/"
+  },
+  {
+    "artist": "The Hu",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/95181615/the-hu-23-10-2026/"
+  },
+  {
+    "artist": "Black Sea Dahu",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/68627469/black-sea-dahu-23-10-2026/"
   },
   {
     "artist": "MICHA",
@@ -2289,6 +2849,16 @@
     "url": "https://www.paard.nl/event/meyendel/"
   },
   {
+    "artist": "Wegz",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/50378263/wegz-24-10-2026/"
+  },
+  {
     "artist": "COUNTRY CLUB",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2379,6 +2949,16 @@
     "url": "https://www.013.nl/programma/147483/tiny-housesessions"
   },
   {
+    "artist": "Gloryhammer",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-25",
+    "time": "18:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/53448188/gloryhammer-25-10-2026/"
+  },
+  {
     "artist": "THEATRE OF HATE + SKIDS",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2397,6 +2977,36 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/dotan"
+  },
+  {
+    "artist": "Paul Carrack",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-26",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/29212732/paul-carrack-26-10-2026/"
+  },
+  {
+    "artist": "Son Lux",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-26",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/48173061/son-lux-26-10-2026/"
+  },
+  {
+    "artist": "CeeLo Green",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-26",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/69214441/ceelo-green-26-10-2026/"
   },
   {
     "artist": "Chanel Beads",
@@ -2429,6 +3039,36 @@
     "url": "https://poppodiumboerderij.nl/programma/geofftate/"
   },
   {
+    "artist": "Clawfinger",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/43739677/clawfinger-27-10-2026/"
+  },
+  {
+    "artist": "Eliades Ochoa",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "19:15",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/64227135/eliades-ochoa-27-10-2026/"
+  },
+  {
+    "artist": "BCUC",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/70144240/bcuc-27-10-2026/"
+  },
+  {
     "artist": "Goldie Boutilier",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -2447,6 +3087,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/okvsho-experience/2867806"
+  },
+  {
+    "artist": "Linedance workshop",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "19:45",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/52894527/linedance-workshop-27-10-2026/"
   },
   {
     "artist": "NOFX: 40 Years of Fuckin' Up",
@@ -2499,6 +3149,16 @@
     "url": "https://www.013.nl/programma/152161/de-jukebox"
   },
   {
+    "artist": "Noah Guthrie",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/53712184/noah-guthrie-28-10-2026/"
+  },
+  {
     "artist": "Bel Cobain",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -2518,6 +3178,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/frazey-ford/",
     "clubCard": false
+  },
+  {
+    "artist": "Kristin Hersh",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/86255092/kristin-hersh-28-10-2026/"
   },
   {
     "artist": "Beast In Black Resurrection Tour 2026",
@@ -2560,6 +3230,26 @@
     "url": "https://www.paard.nl/event/28-10-music-that-changed-the-world/"
   },
   {
+    "artist": "Prize Collect + Coparck",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/97950637/prize-collect-coparck-28-10-2026/"
+  },
+  {
+    "artist": "The Meltdown",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/83747984/the-meltdown-28-10-2026/"
+  },
+  {
     "artist": "ELIADES OCHOA",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2589,6 +3279,16 @@
     "time": "",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/marina-sena-29-10-2026/"
+  },
+  {
+    "artist": "RONDÉ",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/41806470/ronde-29-10-2026/"
   },
   {
     "artist": "Marcoca",
@@ -2773,6 +3473,26 @@
     "url": "https://www.013.nl/programma/126463/kamfest"
   },
   {
+    "artist": "Fat Dog",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/65385879/fat-dog-30-10-2026/"
+  },
+  {
+    "artist": "Marko Hietala",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/98201006/marko-hietala-30-10-2026/"
+  },
+  {
     "artist": "YELLOFOX",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2955,6 +3675,16 @@
     "url": "https://www.paard.nl/event/elmer-3/"
   },
   {
+    "artist": "St. Paul & The Broken Bones",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/77387662/st-paul-the-broken-bones-31-10-2026/"
+  },
+  {
     "artist": "Danko Jones Rising Tour",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3066,6 +3796,16 @@
     "url": "https://www.013.nl/programma/155706/spanish-heat"
   },
   {
+    "artist": "Emo Night Mainland: Halloween edition",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "23:55",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/42960560/emo-night-mainland-halloween-edition-31-10-2026/"
+  },
+  {
     "artist": "Frank Boeijen",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -3104,6 +3844,36 @@
     "time": "18:00",
     "source": "013",
     "url": "https://www.013.nl/programma/146654/eye-ball-iii"
+  },
+  {
+    "artist": "MaYaN",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "18:45",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/44286163/mayan-01-11-2026/"
+  },
+  {
+    "artist": "Fresku & Metropole Orkest",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/63481989/fresku-metropole-orkest-01-11-2026/"
+  },
+  {
+    "artist": "Stephen Wilson Jr.",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/14398259/stephen-wilson-jr-01-11-2026/"
   },
   {
     "artist": "AGO GNAWA – GNAWA FESTIVAL 2026",
@@ -3238,6 +4008,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/picture-this-02-11-2026/"
   },
   {
+    "artist": "Erra + Currents",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-02",
+    "time": "17:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/67027875/erra-currents-02-11-2026/"
+  },
+  {
     "artist": "Elephant Stone",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -3288,6 +4068,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/ole-60-03-11-2026/"
   },
   {
+    "artist": "Carpenter Brut + HEALTH",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "18:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/16345823/carpenter-brut-health-03-11-2026/"
+  },
+  {
     "artist": "An Evening With Nicko McBrain",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3296,6 +4086,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/139512/an-evening-with-nicko-mcbrain"
+  },
+  {
+    "artist": "Culture ft. Kenyatta Hill & Cedric Myton (The Congos)",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/62830890/culture-ft-kenyatta-hill-cedric-myton-the-congos-03-11-2026/"
   },
   {
     "artist": "Puscifer The Normal Isn't Tour",
@@ -3431,6 +4231,26 @@
     "url": "https://www.melkweg.nl/nl/agenda/alceu-valenca-05-11-2026/"
   },
   {
+    "artist": "Le Guess Who? 2026",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "17:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/70779815/le-guess-who-2026-passe-partout-05-11-2026/"
+  },
+  {
+    "artist": "Le Guess Who? – Thursday",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "18:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/22764589/le-guess-who-thursday-05-11-2026/"
+  },
+  {
     "artist": "Julia Adriana",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -3529,6 +4349,16 @@
     "time": "",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/naomi-sharon-06-11-2026/"
+  },
+  {
+    "artist": "Le Guess Who? – Friday",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "16:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/89096007/le-guess-who-friday-06-11-2026/"
   },
   {
     "artist": "Distant (album release) + No Face No Case + Gutrectomy + Changing Tides + Torn From Oblivion",
@@ -3672,6 +4502,16 @@
     "url": "https://baroeg.nl/productie/ddd-xxiv-day-1-pagan-altar/"
   },
   {
+    "artist": "Le Guess Who? – Saturday",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "16:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/29075463/le-guess-who-saturday-07-11-2026/"
+  },
+  {
     "artist": "STONEWALL",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -3753,6 +4593,16 @@
     "url": "https://baroeg.nl/productie/ddd-xxiv-day-2-celestial-season-officium-triste-the-answer-lies-in-the-black-void-mortajas/"
   },
   {
+    "artist": "Le Guess Who? – Sunday",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "14:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/16610539/le-guess-who-sunday-08-11-2026/"
+  },
+  {
     "artist": "Jeremy Pinnell",
     "venue": "Café Wilhelmina",
     "city": "Eindhoven",
@@ -3824,6 +4674,26 @@
     "url": "https://www.melkweg.nl/nl/agenda/sons-of-legion-09-11-2026/"
   },
   {
+    "artist": "Candy Dulfer presents The Funk Legacy Allstar Show",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-09",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/15507716/candy-dulfer-presents-the-funk-legacy-allstar-show-09-11-2026/"
+  },
+  {
+    "artist": "Mark Lettieri",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-09",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/64915139/mark-lettieri-09-11-2026/"
+  },
+  {
     "artist": "Messa EU / UK Tour Fall 2026",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3844,6 +4714,46 @@
     "url": "https://www.melkweg.nl/nl/agenda/the-hardkiss-10-11-2026/"
   },
   {
+    "artist": "Mogwai",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-10",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/13548851/mogwai-10-11-2026/"
+  },
+  {
+    "artist": "The Sisters of Mercy",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-10",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/74332996/the-sisters-of-mercy-10-11-2026/"
+  },
+  {
+    "artist": "Otis Gibbs",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-10",
+    "time": "19:15",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/24176870/otis-gibbs-10-11-2026/"
+  },
+  {
+    "artist": "Ash",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-10",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/41645336/ash-10-11-2026/"
+  },
+  {
     "artist": "The Fray Autumn Light Tour",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -3852,6 +4762,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/127397/the-fray"
+  },
+  {
+    "artist": "Abigail Lapell",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-10",
+    "time": "20:15",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/37855526/abigail-lapell-10-11-2026/"
   },
   {
     "artist": "TAKUYA KURODA",
@@ -3884,6 +4804,26 @@
     "url": "https://www.013.nl/programma/125158/enter-shikari"
   },
   {
+    "artist": "Robert Lester Folsom",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-11",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/92947009/robert-lester-folsom-11-11-2026/"
+  },
+  {
+    "artist": "Roufaida",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-11",
+    "time": "19:45",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/77873642/roufaida-11-11-2026/"
+  },
+  {
     "artist": "OH VOYAGE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -3913,6 +4853,16 @@
     "time": "",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/elgrandetoto-12-11-2026/"
+  },
+  {
+    "artist": "VALS ALARM",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/90000164/vals-alarm-12-11-2026/"
   },
   {
     "artist": "MACY GRAY",
@@ -4005,6 +4955,26 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/thenextmovement/"
+  },
+  {
+    "artist": "Saint Levant",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/90243273/saint-levant-13-11-2026/"
+  },
+  {
+    "artist": "Elmer",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/21799375/elmer-13-11-2026/"
   },
   {
     "artist": "Flemming",
@@ -4117,6 +5087,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/flemming-5/"
+  },
+  {
+    "artist": "Guido Belcanto",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/11885533/guido-belcanto-14-11-2026/"
   },
   {
     "artist": "Rijck",
@@ -4250,6 +5230,16 @@
     "url": "https://www.paard.nl/event/bartofso/"
   },
   {
+    "artist": "Early James",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/10558486/early-james-15-11-2026/"
+  },
+  {
     "artist": "Ash",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -4291,6 +5281,26 @@
     "url": "https://www.melkweg.nl/nl/agenda/waylon-wyatt-16-11-2026/"
   },
   {
+    "artist": "The Wallflowers",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-16",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/93555509/the-wallflowers-16-11-2026/"
+  },
+  {
+    "artist": "Martin Kohlstedt",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-16",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/68506073/martin-kohlstedt-16-11-2026/"
+  },
+  {
     "artist": "Carsick",
     "venue": "Hall of Fame",
     "city": "Tilburg",
@@ -4319,6 +5329,16 @@
     "time": "",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/conway-the-machine-17-11-2026/"
+  },
+  {
+    "artist": "daoud",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-17",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/99380842/daoud-17-11-2026/"
   },
   {
     "artist": "Rotterdam Rocks presents: Mother’s Finest",
@@ -4546,6 +5566,16 @@
     "url": "https://poppodiumboerderij.nl/programma/parkerbarrow/"
   },
   {
+    "artist": "Jim Keller",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/20960247/jim-keller-20-11-2026/"
+  },
+  {
     "artist": "TRIGGERFINGER",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -4749,6 +5779,16 @@
     "url": "https://www.013.nl/programma/159480/ernst-bobbie-de-rest"
   },
   {
+    "artist": "Max Cooper",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/44214723/max-cooper-22-11-2026/"
+  },
+  {
     "artist": "JEMBAA GROOVE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -4757,6 +5797,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/jembaa-groove-3/"
+  },
+  {
+    "artist": "Delany",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/58319183/delany-22-11-2026/"
   },
   {
     "artist": "Blair Davie",
@@ -4801,6 +5851,16 @@
     "url": "https://www.013.nl/programma/159485/ernst-bobbie-de-rest"
   },
   {
+    "artist": "Long Distance Calling",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/29449734/long-distance-calling-23-11-2026/"
+  },
+  {
     "artist": "Swae Lee",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -4819,6 +5879,16 @@
     "time": "15:30",
     "source": "013",
     "url": "https://www.013.nl/programma/159486/ernst-bobbie-de-rest"
+  },
+  {
+    "artist": "Edis",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-24",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/96759255/edis-24-11-2026/"
   },
   {
     "artist": "Riffsniffer presents: Les Big Byrd",
@@ -4849,6 +5919,26 @@
     "time": "13:30",
     "source": "013",
     "url": "https://www.013.nl/programma/159487/ernst-bobbie-de-rest"
+  },
+  {
+    "artist": "The Pogues",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/90628760/the-pogues-25-11-2026/"
+  },
+  {
+    "artist": "Shantel",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/79761871/shantel-25-11-2026/"
   },
   {
     "artist": "THE BUG CLUB",
@@ -4941,6 +6031,16 @@
     "time": "19:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/gone-country"
+  },
+  {
+    "artist": "Van Dik Hout",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/78808983/van-dik-hout-26-11-2026/"
   },
   {
     "artist": "Kaat van Stralen",
@@ -5046,6 +6146,16 @@
     "url": "https://www.paard.nl/event/hiigo/"
   },
   {
+    "artist": "Lil Peep 30th Birthday Celebration",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/47518906/lil-peep-30th-birthday-celebration-27-11-2026/"
+  },
+  {
     "artist": "Sugar Spine Soul Before Spirit Tour",
     "venue": "Little Devil",
     "city": "Tilburg",
@@ -5054,6 +6164,16 @@
     "time": "19:30",
     "source": "013",
     "url": "https://www.013.nl/programma/145139/sugar-spine"
+  },
+  {
+    "artist": "Van Dik Hout",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/18951311/van-dik-hout-27-11-2026/"
   },
   {
     "artist": "Allt Ataraxia European Tour 2026",
@@ -5146,6 +6266,26 @@
     "url": "https://www.paard.nl/event/call-it-off/"
   },
   {
+    "artist": "Rijck",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/94301285/rijck-28-11-2026/"
+  },
+  {
+    "artist": "The Last Waltz door Dawn Brothers",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/52304790/the-last-waltz-door-dawn-brothers-28-11-2026/"
+  },
+  {
     "artist": "PRINS S. EN DE GEIT X RESIDENTIE ORKEST",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -5154,6 +6294,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/prins-s-en-de-geit-x-residentie-orkest/"
+  },
+  {
+    "artist": "stay away from dante!",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/43377762/stay-away-from-dante-28-11-2026/"
   },
   {
     "artist": "Ão",
@@ -5225,6 +6375,16 @@
     "time": "17:30",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/wednesday-13-the-birthday-massacre-killus/"
+  },
+  {
+    "artist": "Zimmer90",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/75260124/zimmer90-29-11-2026/"
   },
   {
     "artist": "GALLOWSTREET",
@@ -5407,6 +6567,16 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/themikekeneallyreport-davecureton/"
+  },
+  {
+    "artist": "Tiwayo",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/96135745/tiwayo-03-12-2026/"
   },
   {
     "artist": "Bertolf",
@@ -5654,6 +6824,16 @@
     "url": "https://www.paard.nl/event/maite-hontele-la-novia/"
   },
   {
+    "artist": "Luar Na Lubre",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/29723887/luar-na-lubre-05-12-2026/"
+  },
+  {
     "artist": "Belle & Sebastian",
     "venue": "Theater Rotterdam",
     "city": "Rotterdam",
@@ -5816,6 +6996,26 @@
     "time": "",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/kadavar-09-12-2026/"
+  },
+  {
+    "artist": "VOILÀ",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/67542809/voila-09-12-2026/"
+  },
+  {
+    "artist": "NAFT",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/12384989/naft-09-12-2026/"
   },
   {
     "artist": "SONS",
@@ -6064,6 +7264,16 @@
     "url": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2026-day-2"
   },
   {
+    "artist": "Timebox",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/89050720/timebox-12-12-2026/"
+  },
+  {
     "artist": "HAAGS POPGALA",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -6206,6 +7416,16 @@
     "url": "https://www.013.nl/programma/124497/clean-petes-kerstshow"
   },
   {
+    "artist": "Jan van Duikeren & Marcel Veenendaal",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-16",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/48443390/jan-van-duikeren-marcel-veenendaal-16-12-2026/"
+  },
+  {
     "artist": "Accept 50th Anniversary Tour 2026",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -6224,6 +7444,26 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/16-12-music-that-changed-the-world/"
+  },
+  {
+    "artist": "Maarten Heijmans & Xander Vrienten",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/54573329/maarten-heijmans-xander-vrienten-17-12-2026/"
+  },
+  {
+    "artist": "The Selecter",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/85845699/the-selecter-17-12-2026/"
   },
   {
     "artist": "Thijs Boontjes",
@@ -6318,6 +7558,16 @@
     "url": "https://baroeg.nl/productie/backfire-farewell-show-traumatizer/"
   },
   {
+    "artist": "Kraak & Smaak (LIVE)",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/81450526/kraak-smaak-live-18-12-2026/"
+  },
+  {
     "artist": "MY BABY",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -6387,6 +7637,16 @@
     "time": "14:00",
     "source": "013",
     "url": "https://www.013.nl/programma/125264/de-unie"
+  },
+  {
+    "artist": "La Pegatina",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/46107630/la-pegatina-19-12-2026/"
   },
   {
     "artist": "STATE POWER",
@@ -6816,6 +8076,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/john-illsley-of-dire-straits-20-01-2027/"
   },
   {
+    "artist": "Bee Gees by MainCourse",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-01-20",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/58874703/bee-gees-by-maincourse-20-01-2027/"
+  },
+  {
     "artist": "Body Horror",
     "venue": "V11",
     "city": "Rotterdam",
@@ -7045,6 +8315,16 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/juliansas/"
+  },
+  {
+    "artist": "D.U.R.F.",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "14:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/22065781/d-u-r-f-30-01-2027/"
   },
   {
     "artist": "REACTiVATE 2027 The Label Edition",
@@ -7386,6 +8666,16 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/afever/"
+  },
+  {
+    "artist": "Footprints Festival 2027",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-02-13",
+    "time": "18:15",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/17800810/footprints-festival-2027-13-02-2027/"
   },
   {
     "artist": "Floor Jansen Hytress Tour",
@@ -7741,6 +9031,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/fatoumata-diawara-7/"
+  },
+  {
+    "artist": "Kans",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/56975431/kans-26-02-2027/"
   },
   {
     "artist": "Wende Er is nog tijd",
@@ -8730,6 +10030,16 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/off-the-wall"
+  },
+  {
+    "artist": "Hooverphonic",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-04-23",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/34050680/hooverphonic-23-04-2027/"
   },
   {
     "artist": "Kim Wilde The Singles Tour 2027",
