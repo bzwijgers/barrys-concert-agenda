@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -33,7 +34,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -94,60 +95,42 @@ fun WelcomeScreen(
         modifier =
             Modifier
                 .fillMaxSize()
-                .clickable(
-                    onClick = onOpenApp
-                ),
+                .background(Color(0xFF111111))
+                .clickable(onClick = onOpenApp),
         contentAlignment =
             Alignment.Center
     ) {
         Column(
+            modifier = Modifier.padding(32.dp),
             horizontalAlignment =
                 Alignment.CenterHorizontally
         ) {
-            Image(
-                painter =
-                    painterResource(
-                        id = R.drawable.barrys_concert_agenda_logo
-                    ),
-                contentDescription =
-                    "Open Barry's concert agenda",
-                modifier =
-                    Modifier
-                        .size(220.dp)
+            Text(
+                text = "BA",
+                style = MaterialTheme.typography.displayLarge,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
             )
 
             Spacer(
-                modifier =
-                    Modifier.height(
-                        24.dp
-                    )
+                modifier = Modifier.height(24.dp)
             )
 
             Text(
-                text =
-                    "Barry's concert agenda",
-                style =
-                    MaterialTheme
-                        .typography
-                        .headlineSmall,
-                fontWeight =
-                    FontWeight.Bold
+                text = "Barry's concert agenda",
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
             )
 
             Spacer(
-                modifier =
-                    Modifier.height(
-                        8.dp
-                    )
+                modifier = Modifier.height(12.dp)
             )
 
             Text(
-                text =
-                    "Tik op het icoon om de agenda te openen",
-                style =
-                    MaterialTheme
-                        .typography
-                        .bodyMedium
+                text = "Tik om de agenda te openen",
+                style = MaterialTheme.typography.bodyMedium,
+                color = Color.LightGray
             )
         }
     }
