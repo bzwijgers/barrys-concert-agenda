@@ -51,7 +51,7 @@ jobs:
               concerts = json.load(handle)
 
           counts = Counter(item.get("source", "") for item in concerts)
-          required = ("Effenaar", "Rotown", "013", "Paradiso", "Baroeg", "Boerderij", "PAARD", "Melkweg", "TivoliVredenburg")
+          required = ("Effenaar", "Rotown", "013", "Paradiso", "Baroeg", "Boerderij", "PAARD", "Melkweg", "TivoliVredenburg", "MEZZ")
           missing = [source for source in required if counts[source] == 0]
 
           print("Concert count:", len(concerts))
