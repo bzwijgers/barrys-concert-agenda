@@ -1,15 +1,5 @@
 [
   {
-    "artist": "BIXARIA",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/bixaria-03-10-2026/"
-  },
-  {
     "artist": "Cloudbusting",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -18,46 +8,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/cloudbusting/"
-  },
-  {
-    "artist": "Iran in verzet",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/iran-in-verzet-03-10-2026/"
-  },
-  {
-    "artist": "Lucy Bedroque",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/lucy-bedroque-03-10-2026/"
-  },
-  {
-    "artist": "NOTION",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/notion-03-10-2026/"
-  },
-  {
-    "artist": "VroegZat",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/avond-vroegzat-03-10-2026/"
   },
   {
     "artist": "Come As You Are 2026: The Afghan Whigs, shame, Republica & meer",
@@ -78,6 +28,16 @@
     "time": "19:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/kennen-jullie-deze-nog-3-10/"
+  },
+  {
+    "artist": "Lucy Bedroque",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/lucy-bedroque-03-10-2026/"
   },
   {
     "artist": "My Ugly Clementine",
@@ -191,26 +151,6 @@
     "url": "https://www.paard.nl/event/paardcafe-peach-club/"
   },
   {
-    "artist": "Christian Gates",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-04",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/christian-gates-04-10-2026/"
-  },
-  {
-    "artist": "Matt Maeson",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-04",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/matt-maeson-04-10-2026/"
-  },
-  {
     "artist": "Myrath",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -239,6 +179,26 @@
     "time": "13:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/the-hague-blues-3/"
+  },
+  {
+    "artist": "Matt Maeson",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/matt-maeson-04-10-2026/"
+  },
+  {
+    "artist": "Christian Gates",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/christian-gates-04-10-2026/"
   },
   {
     "artist": "Holy Wave",
@@ -302,6 +262,16 @@
     "clubCard": false
   },
   {
+    "artist": "Jude York - Once Upon a Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/jude-york-once-upon-a-tour/2906985"
+  },
+  {
     "artist": "Mica Millar",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -332,16 +302,6 @@
     "url": "https://www.paard.nl/event/stef-kamil-carlens-the-poem/"
   },
   {
-    "artist": "Azymuth",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/azymuth-05-10-2026/"
-  },
-  {
     "artist": "Banned From Utopia",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -350,16 +310,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/banned-from-utopia-1/"
-  },
-  {
-    "artist": "Cheeky Monday: GREMLINZ",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/cheeky-monday-05-10-2026/"
   },
   {
     "artist": "James Blake",
@@ -372,6 +322,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/66090954/james-blake-05-10-2026/"
   },
   {
+    "artist": "Azymuth",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-05",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/azymuth-05-10-2026/"
+  },
+  {
     "artist": "Tommy Lyon",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -380,16 +340,6 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/tommy-lyon/2914291"
-  },
-  {
-    "artist": "Techno Tuesday: Dexon",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/techno-tuesday-dexon-06-10-2026/"
   },
   {
     "artist": "James Blake",
@@ -482,16 +432,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/40907874/rabo-open-stage-susann-06-10-2026/"
   },
   {
-    "artist": "Nicotine Dolls",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-07",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/nicotine-dolls-07-10-2026/"
-  },
-  {
     "artist": "Gone Country",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -550,6 +490,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/friday/2891203"
+  },
+  {
+    "artist": "Nicotine Dolls",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/nicotine-dolls-07-10-2026/"
   },
   {
     "artist": "Stef Kamil Carlens & The Poem",
@@ -613,26 +563,6 @@
     "clubCard": false
   },
   {
-    "artist": "Chrissy Chlapecka",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/chrissy-chlapecka-08-10-2026/"
-  },
-  {
-    "artist": "Naked (1993)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/naked-1993-08-10-2026/"
-  },
-  {
     "artist": "Pubquiz!",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -641,26 +571,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/pubquiz-15/"
-  },
-  {
-    "artist": "Two Lanes",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/two-lanes-08-10-2026/"
-  },
-  {
-    "artist": "Yaelokre",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/yaelokre-08-10-2026/"
   },
   {
     "artist": "The Amity Affliction HOUSE OF CARDS EU 2026",
@@ -693,6 +603,26 @@
     "url": "https://www.paard.nl/event/mulatu-listening-bar-x-supafly-2/"
   },
   {
+    "artist": "Yaelokre",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/yaelokre-08-10-2026/"
+  },
+  {
+    "artist": "Chrissy Chlapecka",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/chrissy-chlapecka-08-10-2026/"
+  },
+  {
     "artist": "LOE.",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -711,6 +641,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/27128183/sonico-08-10-2026/"
+  },
+  {
+    "artist": "Two Lanes",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/two-lanes-08-10-2026/"
   },
   {
     "artist": "V.I.C",
@@ -794,36 +734,6 @@
     "url": "https://www.paard.nl/event/paardcafe-club-pony-100/"
   },
   {
-    "artist": "Chrissy Chlapecka",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/chrissy-chlapecka-09-10-2026/"
-  },
-  {
-    "artist": "Fiesta Macumba",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/fiesta-macumba-09-10-2026/"
-  },
-  {
-    "artist": "Future Palace",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/future-palace-09-10-2026/"
-  },
-  {
     "artist": "Sari Schorr",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -832,16 +742,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/sarischorr/"
-  },
-  {
-    "artist": "Snelle",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/snelle-09-10-2026/"
   },
   {
     "artist": "Shadow of Intent",
@@ -854,6 +754,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/56112914/shadow-of-intent-09-10-2026/"
   },
   {
+    "artist": "Future Palace",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/future-palace-09-10-2026/"
+  },
+  {
     "artist": "OGENE",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -862,6 +772,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/52519712/ogene-09-10-2026/"
+  },
+  {
+    "artist": "Snelle",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/snelle-09-10-2026/"
   },
   {
     "artist": "The Apers",
@@ -883,6 +803,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/20843234/chica-chica-09-10-2026/"
+  },
+  {
+    "artist": "Chrissy Chlapecka",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/chrissy-chlapecka-09-10-2026/"
   },
   {
     "artist": "Declan Welsh and The Decadent West",
@@ -1035,16 +965,6 @@
     "url": "https://poppodiumboerderij.nl/programma/axelrudipell/"
   },
   {
-    "artist": "Play Mental: Echte Mannen Huilen Niet",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "13:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/no-need-to-pretend-echte-mannen-huilen-niet-10-10-2026/"
-  },
-  {
     "artist": "Here's The Thing",
     "venue": "Poppodium 013 - Next + Basement + Cul de Sac",
     "city": "Tilburg",
@@ -1053,16 +973,6 @@
     "time": "15:00",
     "source": "013",
     "url": "https://www.013.nl/programma/130852/heres-the-thing"
-  },
-  {
-    "artist": "Opening: No Need To Pretend",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "16:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/opening-no-need-to-pretend-10-10-2026/"
   },
   {
     "artist": "Imidiwan Festival",
@@ -1225,16 +1135,6 @@
     "url": "https://www.paradiso.nl/nl/programma/songhoy-blues/2884193"
   },
   {
-    "artist": "Liever Lesbies",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "21:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/liever-lesbies-10-10-2026/"
-  },
-  {
     "artist": "Nobu",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1266,16 +1166,6 @@
     "url": "https://www.effenaar.nl/agenda/metatron"
   },
   {
-    "artist": "90's NOW",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/90s-now-10-10-2026/"
-  },
-  {
     "artist": "Paardcafé: Sonny Burnett",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -1294,26 +1184,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/the-grapevyne-4/"
-  },
-  {
-    "artist": "Hard Attack",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/hard-attack-10-10-2026/"
-  },
-  {
-    "artist": "No Need To Pretend",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-11",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/no-need-to-pretend-11-10-2026/"
   },
   {
     "artist": "Froukje - albumrelease show",
@@ -1568,16 +1438,6 @@
     "clubCard": false
   },
   {
-    "artist": "Cheeky Monday: YAMATAI x STUPID x TRANSPARENT",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-12",
-    "time": "23:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/cheeky-monday-12-10-2026/"
-  },
-  {
     "artist": "Gavin DeGraw",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -1709,16 +1569,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/49905294/rabo-open-stage-jesse-hydro-13-10-2026/"
   },
   {
-    "artist": "Techno Tuesday: Ramsey Neville",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-13",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/techno-tuesday-ramsey-neville-13-10-2026/"
-  },
-  {
     "artist": "Goldford",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -1747,16 +1597,6 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/13452508/ruel-14-10-2026/"
-  },
-  {
-    "artist": "The Black Fire Documentary (2023)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-14",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/the-black-fire-documentary-2023-14-10-2026/"
   },
   {
     "artist": "The Mountain Goats",
@@ -2272,16 +2112,6 @@
     "url": "https://www.013.nl/programma/154664/piña"
   },
   {
-    "artist": "Niet Oktoberfest",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-16",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/oktober-fest-16-10-2026/"
-  },
-  {
     "artist": "Paardcafé: Mies Luid",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2320,16 +2150,6 @@
     "time": "15:00",
     "source": "013",
     "url": "https://www.013.nl/programma/128601/lekkerfaces"
-  },
-  {
-    "artist": "Children Who Chase Lost Voices (2011)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-17",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/children-who-chase-lost-voices-2011-17-10-2026/"
   },
   {
     "artist": "Allie X",
@@ -2493,16 +2313,6 @@
     "url": "https://baroeg.nl/productie/berzerk-events-presents-berzerk-iv/"
   },
   {
-    "artist": "Kiss All Hipsters",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-17",
-    "time": "22:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/kiss-all-hipsters-17-10-2026/"
-  },
-  {
     "artist": "Paardcafé: TEACH",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2653,16 +2463,6 @@
     "url": "https://www.paradiso.nl/nl/programma/sananda-maitreya/2909919"
   },
   {
-    "artist": "Stage Girl (Starring Eli) - EU/UK Tour",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-18",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/stage-girl-starring-eli-eu-uk-tour/2923560"
-  },
-  {
     "artist": "Beach Boys' Best",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2703,16 +2503,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/23104250/fkj-19-10-2026/"
   },
   {
-    "artist": "Alien Chicks - 19 oktober 2026",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-19",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/alien-chicks/2885760"
-  },
-  {
     "artist": "Dave East",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -2731,16 +2521,6 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/15856919/mercury-rev-19-10-2026/"
-  },
-  {
-    "artist": "Cheeky Monday: TAMZA",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-19",
-    "time": "23:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/cheeky-monday-19-10-2026/"
   },
   {
     "artist": "John Craigie",
@@ -2823,16 +2603,6 @@
     "url": "https://www.paradiso.nl/nl/programma/any-young-mechanic/2918766"
   },
   {
-    "artist": "Techno Tuesday: Icey Planet",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-20",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/techno-tuesday-icey-planet-20-10-2026/"
-  },
-  {
     "artist": "Guilt Trip",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -2861,16 +2631,6 @@
     "time": "18:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/ade-opening-concert-kybba-metropole-orkest-special-guests-21-10-2026/"
-  },
-  {
-    "artist": "Striptopia",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-21",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/striptopia-21-10-2026/"
   },
   {
     "artist": "Takuya Nakamura",
@@ -2954,36 +2714,6 @@
     "url": "https://www.013.nl/programma/152582/culs-cult"
   },
   {
-    "artist": "Oliver Heldens",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-21",
-    "time": "23:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/oliver-heldens-21-10-2026/"
-  },
-  {
-    "artist": "bitbird presents: San Holo & DROELOE",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-21",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/san-holo-21-10-2026/"
-  },
-  {
-    "artist": "Hyper Dreams x Annie",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-21",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/hyper-dreams-x-annie-21-10-2026/"
-  },
-  {
     "artist": "DE BETOVERING: GERSON MAIN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2992,16 +2722,6 @@
     "time": "11:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/de-betovering-gerson-main/"
-  },
-  {
-    "artist": "MEDUZA",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/medvza-22-10-2026/"
   },
   {
     "artist": "Kraak & Smaak (Live)",
@@ -3105,26 +2825,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/35302200/popronde-utrecht-22-10-2026/"
   },
   {
-    "artist": "Monstercat x Ophelia",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "23:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/monstercat-x-ophelia-22-10-2026/"
-  },
-  {
-    "artist": "FACE 2 FACE",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/face-2-face-22-10-2026/"
-  },
-  {
     "artist": "Paardcafé: CLUB PONY",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -3133,16 +2833,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paardcafe-club-pony-104/"
-  },
-  {
-    "artist": "PAARDENRAVE",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/paardenrave-22-10-2026/"
   },
   {
     "artist": "Diggeth",
@@ -3176,26 +2866,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/davyboi-23-10-2026/"
   },
   {
-    "artist": "IMANU PRESENTS DE_VERTE",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "17:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/imanu-presents-de-verte-23-10-2026/"
-  },
-  {
-    "artist": "Get Physical!",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/get-physical-23-10-2026/"
-  },
-  {
     "artist": "80S VERANTWOORD",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -3224,16 +2894,6 @@
     "time": "19:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/sathanas-in-gloriam-presents-unholy-craft-cirith-gorgor-reinkaos/"
-  },
-  {
-    "artist": "Starjunk 95",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/starjunk-95-23-10-2026/"
   },
   {
     "artist": "The Hu",
@@ -3307,16 +2967,6 @@
     "url": "https://www.effenaar.nl/agenda/rolf-sanchez"
   },
   {
-    "artist": "Club Kid (2026)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "21:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/club-kid-2026-23-10-2026/"
-  },
-  {
     "artist": "Paardcafé: Eddy Ate Dynamite",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -3335,26 +2985,6 @@
     "time": "23:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/69095320/pop-o-matic-23-10-2026/"
-  },
-  {
-    "artist": "Rampage",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/rampage-23-10-2026/"
-  },
-  {
-    "artist": "annie's ADE weekender",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/opening-club-weekender-23-10-2026/"
   },
   {
     "artist": "Threshold",
@@ -3397,26 +3027,6 @@
     "time": "16:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/rotterdam-rocks-vengeance-picture-7-miles-to-pittsburgh-saint-helens/"
-  },
-  {
-    "artist": "PAUL VAN DYK",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-24",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/paul-van-dyk-24-10-2026/"
-  },
-  {
-    "artist": "GoldFish",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-24",
-    "time": "18:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/goldfish-24-10-2026/"
   },
   {
     "artist": "4AM KRU",
@@ -3509,26 +3119,6 @@
     "url": "https://www.paard.nl/event/paardcafe-djani/"
   },
   {
-    "artist": "KitKatClub: Kinks of Berlin (2026)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-24",
-    "time": "21:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/kitkatclub-kinks-of-berlin-2026-24-10-2026/"
-  },
-  {
-    "artist": "Boys Noize presents",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-24",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/boys-noize-presents-ones-and-zeros-24-10-2026/"
-  },
-  {
     "artist": "Paardcafé: Osoulsconcept & Friends",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -3549,16 +3139,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/blendsworld-24-10-2026/"
   },
   {
-    "artist": "Encore ADE Special",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-24",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/encore-ade-special-24-10-2026/"
-  },
-  {
     "artist": "Solstice",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -3577,16 +3157,6 @@
     "time": "15:00",
     "source": "013",
     "url": "https://www.013.nl/programma/147483/tiny-housesessions"
-  },
-  {
-    "artist": "Aftershock: The Seismic Impact of Dubstep",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-25",
-    "time": "17:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/aftershock-the-seismic-impact-of-dubstep-25-10-2026/"
   },
   {
     "artist": "Amsterdam Dub Event: Moritz von Oswald / Radikal Guru e.a.",
@@ -3677,16 +3247,6 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/natanya-the-attitude-tour/2902260"
-  },
-  {
-    "artist": "Cheeky Monday: Cheeky @ Onder Hans",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "23:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/cheeky-monday-cheeky-at-onder-hans-26-10-2026/"
   },
   {
     "artist": "Geoff Tate",
@@ -4153,26 +3713,6 @@
     "url": "https://poppodiumboerderij.nl/programma/theclarks/"
   },
   {
-    "artist": "No Barrier",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/no-barrier-30-10-2026/"
-  },
-  {
-    "artist": "NOFX: 40 Years of Fuckin' Up (2026) + Q&A: El Hefe",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/nofx-40-years-of-fuckin-up-2026-30-10-2026/"
-  },
-  {
     "artist": "KamFest Day 1",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -4294,16 +3834,6 @@
     "clubCard": false
   },
   {
-    "artist": "NOFX: 40 Years of Fuckin' Up (2026) + Q&A: El Hefe",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "20:45",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/nofx-40-years-of-fuckin-up-2026-30-10-2026-1/"
-  },
-  {
     "artist": "Uche Yara",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -4343,16 +3873,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paardcafe-getting-80s-90s-wit-it/"
-  },
-  {
-    "artist": "Pon Di Pride",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/pon-di-pride-30-10-2026/"
   },
   {
     "artist": "The Watch Plays Genesis",
@@ -4536,16 +4056,6 @@
     "url": "https://www.paradiso.nl/nl/programma/lc-late-saturday-night-w-sex-mask-cutouts-tanzana-mouth-ulcers/2921572"
   },
   {
-    "artist": "Olá Brazil! Halloween",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-31",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/ola-brazil-31-10-2026/"
-  },
-  {
     "artist": "Paardcafé: Club Boogaloo",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -4576,16 +4086,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/42960560/emo-night-mainland-halloween-edition-31-10-2026/"
   },
   {
-    "artist": "Frank Boeijen",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-01",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/frank-boeijen-01-11-2026/"
-  },
-  {
     "artist": "Pendragon",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -4594,26 +4094,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/pendragon/"
-  },
-  {
-    "artist": "pluko",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-01",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/pluko-01-11-2026/"
-  },
-  {
-    "artist": "The Home Team",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-01",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/the-home-team-01-11-2026/"
   },
   {
     "artist": "Raymon Hermans",
@@ -4644,6 +4124,16 @@
     "time": "18:45",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/44286163/mayan-01-11-2026/"
+  },
+  {
+    "artist": "Frank Boeijen",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/frank-boeijen-01-11-2026/"
   },
   {
     "artist": "Fresku & Metropole Orkest",
@@ -4704,6 +4194,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/teenage-fanclub/2867949"
+  },
+  {
+    "artist": "The Home Team",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/the-home-team-01-11-2026/"
   },
   {
     "artist": "Cardinals",
@@ -4788,16 +4288,6 @@
     "url": "https://www.effenaar.nl/agenda/valleyofthesun-1nov"
   },
   {
-    "artist": "Picture This",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-02",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/picture-this-02-11-2026/"
-  },
-  {
     "artist": "Erra + Currents",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -4806,6 +4296,16 @@
     "time": "17:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/67027875/erra-currents-02-11-2026/"
+  },
+  {
+    "artist": "Picture This",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-02",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/picture-this-02-11-2026/"
   },
   {
     "artist": "Elephant Stone",
@@ -4848,12 +4348,22 @@
     "url": "https://www.paradiso.nl/nl/programma/the-meltdown/2786535"
   },
   {
+    "artist": "Carpenter Brut + HEALTH",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "18:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/16345823/carpenter-brut-health-03-11-2026/"
+  },
+  {
     "artist": "Ole 60",
     "venue": "Melkweg",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-03",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/ole-60-03-11-2026/"
   },
@@ -4863,7 +4373,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-03",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/stormy-03-11-2026/"
   },
@@ -4873,19 +4383,9 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-03",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/temples-03-11-2026/"
-  },
-  {
-    "artist": "Carpenter Brut + HEALTH",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-11-03",
-    "time": "18:00",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/16345823/carpenter-brut-health-03-11-2026/"
   },
   {
     "artist": "An Evening With Nicko McBrain",
@@ -4918,6 +4418,16 @@
     "url": "https://www.013.nl/programma/128504/puscifer"
   },
   {
+    "artist": "Kalben  'Land of Lost Poets' Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/kalben-land-of-lost-poets-tour/2870556"
+  },
+  {
     "artist": "The Meltdown",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -4944,7 +4454,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-04",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/eve-04-11-2026/"
   },
@@ -5021,46 +4531,6 @@
     "clubCard": false
   },
   {
-    "artist": "Alceu Valença",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/alceu-valenca-05-11-2026/"
-  },
-  {
-    "artist": "Digitalism",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/digitalism-05-11-2026/"
-  },
-  {
-    "artist": "Moss (luistersessie)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/moss-luistersessie-05-11-2026/"
-  },
-  {
-    "artist": "Willow Avalon",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/willow-avalon-05-11-2026/"
-  },
-  {
     "artist": "Le Guess Who? 2026",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -5081,6 +4551,36 @@
     "url": "https://www.tivolivredenburg.nl/agenda/22764589/le-guess-who-thursday-05-11-2026/"
   },
   {
+    "artist": "Alceu Valença",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/alceu-valenca-05-11-2026/"
+  },
+  {
+    "artist": "Moss (luistersessie)",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/moss-luistersessie-05-11-2026/"
+  },
+  {
+    "artist": "Digitalism",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/digitalism-05-11-2026/"
+  },
+  {
     "artist": "Julia Adriana",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -5099,6 +4599,16 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/the-clockworks/2836738"
+  },
+  {
+    "artist": "Willow Avalon",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/willow-avalon-05-11-2026/"
   },
   {
     "artist": "FINK",
@@ -5171,66 +4681,6 @@
     "url": "https://www.paradiso.nl/nl/programma/ao/2832033"
   },
   {
-    "artist": "Ascension",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/ascension-06-11-2026/"
-  },
-  {
-    "artist": "Garage Nation",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/garage-nation-06-11-2026/"
-  },
-  {
-    "artist": "Ghostly Kisses",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/ghostly-kisses-06-11-2026/"
-  },
-  {
-    "artist": "Naomi Sharon",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/naomi-sharon-06-11-2026/"
-  },
-  {
-    "artist": "Skeler",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/skeler-06-11-2026/"
-  },
-  {
-    "artist": "Swae Lee",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/swae-lee-06-11-2026/"
-  },
-  {
     "artist": "Le Guess Who? – Friday",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -5251,6 +4701,26 @@
     "url": "https://baroeg.nl/productie/distant-album-release-no-face-no-case-gutrectomy-changing-tides-torn-from-oblivion/"
   },
   {
+    "artist": "Naomi Sharon",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/naomi-sharon-06-11-2026/"
+  },
+  {
+    "artist": "Swae Lee",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/swae-lee-06-11-2026/"
+  },
+  {
     "artist": "Paardcafé: POPRONDE DEN HAAG",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -5261,6 +4731,16 @@
     "url": "https://www.paard.nl/event/paardcafe-popronde-den-haag-4/"
   },
   {
+    "artist": "Ghostly Kisses",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/ghostly-kisses-06-11-2026/"
+  },
+  {
     "artist": "POPRONDE IN GR8",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -5269,6 +4749,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/popronde-in-gr8/"
+  },
+  {
+    "artist": "Skeler",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/skeler-06-11-2026/"
   },
   {
     "artist": "Durum Night",
@@ -5352,36 +4842,6 @@
     "url": "https://poppodiumboerderij.nl/programma/frankboeijen/"
   },
   {
-    "artist": "Marsh",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-07",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/marsh-07-11-2026/"
-  },
-  {
-    "artist": "Oi Va Voi",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-07",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/oi-va-voi-07-11-2026/"
-  },
-  {
-    "artist": "Only 10s",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-07",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/only-10s-07-11-2026/"
-  },
-  {
     "artist": "Unfold by Patroon",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -5422,6 +4882,16 @@
     "url": "https://www.paard.nl/event/stone-wall/"
   },
   {
+    "artist": "Marsh",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/marsh-07-11-2026/"
+  },
+  {
     "artist": "FISCHER-Z",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -5430,6 +4900,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/fischer-z/"
+  },
+  {
+    "artist": "Oi Va Voi",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/oi-va-voi-07-11-2026/"
   },
   {
     "artist": "MEROL",
@@ -5473,16 +4953,6 @@
     "url": "https://poppodiumboerderij.nl/programma/ork/"
   },
   {
-    "artist": "The Temperance Movement",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-08",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/the-temperance-movement-08-11-2026/"
-  },
-  {
     "artist": "DDD XXIV Day 2: Celestial Season + Officium Triste + The Answer Lies In The Black Void + The Drowning + Mortajas + Brave Murder Night (aftershow)",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -5511,6 +4981,16 @@
     "time": "17:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/jeremy-pinnell"
+  },
+  {
+    "artist": "The Temperance Movement",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/the-temperance-movement-08-11-2026/"
   },
   {
     "artist": "M-Kids",
@@ -5564,26 +5044,6 @@
     "clubCard": false
   },
   {
-    "artist": "Controle Alt Delete #10",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/controle-alt-delete-10-fataal-politiegeweld-09-11-2026/"
-  },
-  {
-    "artist": "Sons Of Legion",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/sons-of-legion-09-11-2026/"
-  },
-  {
     "artist": "Candy Dulfer presents The Funk Legacy Allstar Show",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -5592,6 +5052,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/15507716/candy-dulfer-presents-the-funk-legacy-allstar-show-09-11-2026/"
+  },
+  {
+    "artist": "Sons Of Legion",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-09",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/sons-of-legion-09-11-2026/"
   },
   {
     "artist": "Mark Lettieri",
@@ -6049,16 +5519,6 @@
     "clubCard": true
   },
   {
-    "artist": "Cassius Club",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-13",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/cassius-club-13-11-2026/"
-  },
-  {
     "artist": "Focus",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -6067,16 +5527,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/focus/"
-  },
-  {
-    "artist": "All You Need Is Kill (2025)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-14",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/all-you-need-is-kill-2025-14-11-2026/"
   },
   {
     "artist": "Saint Levant",
@@ -6190,16 +5640,6 @@
     "url": "https://www.013.nl/programma/155379/nems"
   },
   {
-    "artist": "Luminosity pres. Factor B - Theatre of The Mind",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-14",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/luminosity-pres-factor-b-theatre-of-the-mind-14-11-2026/"
-  },
-  {
     "artist": "TERUG IN DE TIJD",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -6208,16 +5648,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/terug-in-de-tijd-6/"
-  },
-  {
-    "artist": "High Tea presents Kanine",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-14",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/kanine-14-11-2026/"
   },
   {
     "artist": "Plackband",
@@ -6258,16 +5688,6 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/mollie-elizabeth-15-11-2026/"
-  },
-  {
-    "artist": "NAPA",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-15",
-    "time": "19:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/napa-15-11-2026/"
   },
   {
     "artist": "President The Blood of Your Empire",
@@ -6491,16 +5911,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/master-boot-record-18-11-2026/"
   },
   {
-    "artist": "NOKIA ANGEL",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-18",
-    "time": "19:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/nokia-angel-18-11-2026/"
-  },
-  {
     "artist": "FROUKJE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -6561,16 +5971,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/ellentendamme/"
-  },
-  {
-    "artist": "Baby Lasagna",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-19",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/baby-lasagna-19-11-2026/"
   },
   {
     "artist": "Jafunk",
@@ -6909,16 +6309,6 @@
     "clubCard": false
   },
   {
-    "artist": "JACK SHORE - ALL NIGHT - IN THE MIDDLE",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-21",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/jack-shore-21-11-2026/"
-  },
-  {
     "artist": "RanestRane",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -7109,16 +6499,6 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/kid-kapichi-25-11-2026/"
-  },
-  {
-    "artist": "The Magic City: Birmingham according to Sun Ra (2025)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-25",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/the-magic-city-birmingham-according-to-sun-ra-2025-25-11-2026/"
   },
   {
     "artist": "The Pogues",
@@ -7466,26 +6846,6 @@
     "url": "https://www.013.nl/programma/156684/brandalarm"
   },
   {
-    "artist": "Exproz All Night Long",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-27",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/exproz-all-night-long-27-11-2026/"
-  },
-  {
-    "artist": "KrackFree Soundsystem - 10 year anniversary",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-27",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/krackfree-soundsystem-10-year-anniversary-27-11-2026/"
-  },
-  {
     "artist": "Arena",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -7504,16 +6864,6 @@
     "time": "15:00",
     "source": "013",
     "url": "https://www.013.nl/programma/150057/013-years-subquake"
-  },
-  {
-    "artist": "Popronde Eindfeest 2026",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-28",
-    "time": "16:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/popronde-eindfeest-2026-28-11-2026/"
   },
   {
     "artist": "Fleddy Melculy + Inherited",
@@ -7717,22 +7067,12 @@
     "url": "https://www.paard.nl/event/dakhabrakha-5/"
   },
   {
-    "artist": "horsegiirL",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-01",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/horsegiirl-01-12-2026/"
-  },
-  {
     "artist": "The Chameleons",
     "venue": "Melkweg",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-12-01",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/the-chameleons-01-12-2026/"
   },
@@ -7752,7 +7092,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-12-02",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/q-marsden-02-12-2026/"
   },
@@ -7762,7 +7102,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-12-02",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/raquel-rodriguez-02-12-2026/"
   },
@@ -7849,36 +7189,6 @@
     "clubCard": false
   },
   {
-    "artist": "Gotts Street Park",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/gotts-street-park-03-12-2026/"
-  },
-  {
-    "artist": "Miss Bashful",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/miss-bashful-03-12-2026/"
-  },
-  {
-    "artist": "Romare (live)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/romare-live-03-12-2026/"
-  },
-  {
     "artist": "The Mike Keneally Report & Dave Cureton",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -7887,6 +7197,36 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/themikekeneallyreport-davecureton/"
+  },
+  {
+    "artist": "Miss Bashful",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/miss-bashful-03-12-2026/"
+  },
+  {
+    "artist": "Gotts Street Park",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/gotts-street-park-03-12-2026/"
+  },
+  {
+    "artist": "Romare (live)",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/romare-live-03-12-2026/"
   },
   {
     "artist": "Tiwayo",
@@ -7973,16 +7313,6 @@
     "clubCard": false
   },
   {
-    "artist": "Maite Hontelé & La Novia",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-04",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/maite-hontele-la-novia-04-12-2026/"
-  },
-  {
     "artist": "Ray Wilson",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -7991,16 +7321,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/raywilson/"
-  },
-  {
-    "artist": "Tiffany Day",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-04",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/tiffany-day-04-12-2026/"
   },
   {
     "artist": "Baroeg Tribute Night: Sex Pistols Exposé",
@@ -8031,6 +7351,26 @@
     "time": "19:00",
     "source": "013",
     "url": "https://www.013.nl/programma/108488/jimmy-carr"
+  },
+  {
+    "artist": "Maite Hontelé & La Novia",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/maite-hontele-la-novia-04-12-2026/"
+  },
+  {
+    "artist": "Tiffany Day",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/tiffany-day-04-12-2026/"
   },
   {
     "artist": "VROEGZAT",
@@ -8104,36 +7444,6 @@
     "url": "https://www.013.nl/programma/125609/jimmy-carr"
   },
   {
-    "artist": "NOISIA",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-04",
-    "time": "22:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/noisia-04-12-2026/"
-  },
-  {
-    "artist": "Artemas",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/artemas-05-12-2026/"
-  },
-  {
-    "artist": "Hey Desi",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/hey-desi-05-12-2026/"
-  },
-  {
     "artist": "Mostly Autumn",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -8142,16 +7452,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/mostlyautumn/"
-  },
-  {
-    "artist": "NOISIA",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/noisia-05-12-2026/"
   },
   {
     "artist": "Haagse Popweek",
@@ -8172,6 +7472,16 @@
     "time": "18:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/syntherklaas-revenge-of-the-synth/"
+  },
+  {
+    "artist": "Artemas",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/artemas-05-12-2026/"
   },
   {
     "artist": "MAITE HONTELÉ & LA NOVIA",
@@ -8226,16 +7536,6 @@
     "clubCard": false
   },
   {
-    "artist": "Blondshell",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/blondshell-06-12-2026/"
-  },
-  {
     "artist": "China Crisis",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -8246,16 +7546,6 @@
     "url": "https://poppodiumboerderij.nl/programma/chinacrisis/"
   },
   {
-    "artist": "The Skints",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-06",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/the-skints-06-12-2026/"
-  },
-  {
     "artist": "Baroeg On Tour @ SoundVille: ITGOW presents: Torturerama + Mancuerda + Daemorthan",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -8264,6 +7554,26 @@
     "time": "15:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/baroeg-on-tour-soundville-itgow-presents-torturerama-mancuerda-daemorthan/"
+  },
+  {
+    "artist": "Blondshell",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/blondshell-06-12-2026/"
+  },
+  {
+    "artist": "The Skints",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/the-skints-06-12-2026/"
   },
   {
     "artist": "Froukje - Extra show Kijk Je Naar Mij? Albumtour",
@@ -8302,7 +7612,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-12-07",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/artemas-07-12-2026/"
   },
@@ -8332,7 +7642,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-12-08",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/bilal-08-12-2026/"
   },
@@ -8363,29 +7673,9 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-12-09",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/kadavar-09-12-2026/"
-  },
-  {
-    "artist": "Seb Lowe",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/seb-lowe-09-12-2026/"
-  },
-  {
-    "artist": "Sekou",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/sekou-09-12-2026/"
   },
   {
     "artist": "VOILÀ",
@@ -8406,6 +7696,26 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/12384989/naft-09-12-2026/"
+  },
+  {
+    "artist": "Seb Lowe",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/seb-lowe-09-12-2026/"
+  },
+  {
+    "artist": "Sekou",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/sekou-09-12-2026/"
   },
   {
     "artist": "SONS",
@@ -8624,16 +7934,6 @@
     "clubCard": true
   },
   {
-    "artist": "Kiss All Hipsters",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-11",
-    "time": "22:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/kiss-all-hipsters-11-12-2026/"
-  },
-  {
     "artist": "IQ X-Mas Bash",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -8662,16 +7962,6 @@
     "time": "15:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2026-day-2"
-  },
-  {
-    "artist": "3x3 Eyes (1991)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-12",
-    "time": "18:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/3x3-eyes-1991-12-12-2026/"
   },
   {
     "artist": "Mammoth",
@@ -8743,16 +8033,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/library-card-1/",
     "clubCard": false
-  },
-  {
-    "artist": "EAST",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-12",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/east-12-12-2026/"
   },
   {
     "artist": "Blues op Zondag - Twelve Bar Blues Band",
@@ -8874,16 +8154,6 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/48443390/jan-van-duikeren-marcel-veenendaal-16-12-2026/"
-  },
-  {
-    "artist": "Miles (2026)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-16",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/miles-2026-16-12-2026/"
   },
   {
     "artist": "Accept 50th Anniversary Tour 2026",
@@ -9099,16 +8369,6 @@
     "url": "https://www.013.nl/programma/125264/de-unie"
   },
   {
-    "artist": "Emo Night Mainland",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-19",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/emo-night-mainland-19-12-2026/"
-  },
-  {
     "artist": "La Pegatina",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -9117,16 +8377,6 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/46107630/la-pegatina-19-12-2026/"
-  },
-  {
-    "artist": "Muziek Bingo XXL",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-19",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/muziek-bingo-xxl-19-12-2026/"
   },
   {
     "artist": "STATE POWER",
@@ -9168,16 +8418,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/lucky-fonz-iii-1/",
     "clubCard": false
-  },
-  {
-    "artist": "Luminosity 19 Year Anniversary",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-19",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/luminosity-19-year-anniversary-19-12-2026/"
   },
   {
     "artist": "ProgProms V",
@@ -9389,7 +8629,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-01-09",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/lois-lane-09-01-2027/"
   },
@@ -9495,16 +8735,6 @@
     "url": "https://poppodiumboerderij.nl/programma/tenyearsafter/"
   },
   {
-    "artist": "SameZitting",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-16",
-    "time": "10:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/samezitting-16-01-2027/"
-  },
-  {
     "artist": "Smells Like Nirvana",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -9523,16 +8753,6 @@
     "time": "20:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/breakdownbaroeg/"
-  },
-  {
-    "artist": "Disco Snolly",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-16",
-    "time": "21:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/disco-snolly-16-01-2027/"
   },
   {
     "artist": "Isaiah Rashad",
@@ -9627,16 +8847,6 @@
     "url": "https://poppodiumboerderij.nl/programma/regressivehypnosis/"
   },
   {
-    "artist": "Kyle Alessandro",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-22",
-    "time": "19:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/kyle-alessandro-22-01-2027/"
-  },
-  {
     "artist": "BYWATER CALL",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -9675,16 +8885,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/bjornriis/"
-  },
-  {
-    "artist": "Qmusic the Party - 4 Uur Fout",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-23",
-    "time": "18:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/qmusic-the-party-4-uur-fout-23-01-2027/"
   },
   {
     "artist": "Biga*Ranx",
@@ -9972,7 +9172,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-02-02",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/basement-02-02-2027/"
   },
@@ -9982,7 +9182,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-02-03",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/henge-03-02-2027/"
   },
@@ -10008,24 +9208,24 @@
     "clubCard": false
   },
   {
-    "artist": "DIKKE",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-04",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/dikke-04-02-2027/"
-  },
-  {
     "artist": "Rumours Live: The Music of Fleetwood Mac performed by The Cosmic Carnaval",
     "venue": "Melkweg",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-02-04",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/50-years-of-rumours-04-02-2027/"
+  },
+  {
+    "artist": "DIKKE",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-04",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/dikke-04-02-2027/"
   },
   {
     "artist": "HENGE",
@@ -10038,22 +9238,12 @@
     "url": "https://www.paard.nl/event/henge-3/"
   },
   {
-    "artist": "Dirty Honey",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-05",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/dirty-honey-05-02-2027/"
-  },
-  {
     "artist": "Elder",
     "venue": "Melkweg",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-02-05",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/elder-05-02-2027/"
   },
@@ -10066,6 +9256,16 @@
     "time": "19:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/dead-congregation/"
+  },
+  {
+    "artist": "Dirty Honey",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-05",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/dirty-honey-05-02-2027/"
   },
   {
     "artist": "The Black Dahlia Murder Two decades of Nocturnal",
@@ -10108,26 +9308,6 @@
     "url": "https://www.paard.nl/event/robin-scherpen/"
   },
   {
-    "artist": "Keywest",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-07",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/keywest-07-02-2027/"
-  },
-  {
-    "artist": "Lauren Sanderson",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-07",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/lauren-sanderson-07-02-2027/"
-  },
-  {
     "artist": "My Breath My Music",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -10148,12 +9328,32 @@
     "url": "https://baroeg.nl/productie/tales-from-the-punx-wolfbrigade/"
   },
   {
+    "artist": "Keywest",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-07",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/keywest-07-02-2027/"
+  },
+  {
+    "artist": "Lauren Sanderson",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-07",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/lauren-sanderson-07-02-2027/"
+  },
+  {
     "artist": "TX2",
     "venue": "Melkweg",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-02-09",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/tx2-09-02-2027/"
   },
@@ -10286,16 +9486,6 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/153886/uncle-acid-and-the-deadbeats"
-  },
-  {
-    "artist": "EAST",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-13",
-    "time": "23:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/east-13-02-2027/"
   },
   {
     "artist": "Frankie Stew & Harvey Gunn",
@@ -10778,7 +9968,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-03-01",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/amble-01-03-2027/"
   },
@@ -10788,7 +9978,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-03-02",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/south-arcade-02-03-2027/"
   },
@@ -10859,7 +10049,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-03-06",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/blind-channel-06-03-2027/"
   },
@@ -10905,22 +10095,12 @@
     "clubCard": false
   },
   {
-    "artist": "Delta Goodrem",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-07",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/delta-goodrem-07-03-2027/"
-  },
-  {
     "artist": "La Roux",
     "venue": "Melkweg",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-03-08",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/la-roux-08-03-2027/"
   },
@@ -11176,16 +10356,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/fimiguerrero-20-03-2027/"
   },
   {
-    "artist": "Vessbroz presents: NOWRUZ – A New Beginning",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-20",
-    "time": "23:59",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/vessbroz-presents-nowruz-a-new-beginning-20-03-2027/"
-  },
-  {
     "artist": "Pop-Up Koor XL",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -11348,16 +10518,6 @@
     "url": "https://www.013.nl/programma/158979/chefspecial"
   },
   {
-    "artist": "EAST",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-03",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/east-03-04-2027/"
-  },
-  {
     "artist": "The Crazy World Of Arthur Brown",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -11416,7 +10576,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-04-04",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/alexandra-kay-04-04-2027/"
   },
@@ -11466,7 +10626,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-04-09",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/the-toy-dolls-09-04-2027/"
   },
@@ -11489,16 +10649,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/rpwl/"
-  },
-  {
-    "artist": "High Tea Indoor Festeaval 2027",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-10",
-    "time": "15:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/high-tea-indoor-festeaval-2027-10-04-2027/"
   },
   {
     "artist": "DRAGONFORCE + Visions of Atlantis + Wings of Steel",
@@ -11858,7 +11008,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-05-06",
-    "time": "",
+    "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/lambrini-girls-06-05-2027/"
   },
@@ -11868,7 +11018,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-05-08",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/ax-and-the-hatchetmen-08-05-2027/"
   },
@@ -11878,7 +11028,7 @@
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-05-08",
-    "time": "",
+    "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/valley-08-05-2027/"
   },
@@ -11894,16 +11044,6 @@
     "clubCard": true
   },
   {
-    "artist": "Skerryvore",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-09",
-    "time": "",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/skerryvore-09-05-2027/"
-  },
-  {
     "artist": "Nevermore",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -11912,6 +11052,16 @@
     "time": "19:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/nevermore"
+  },
+  {
+    "artist": "Skerryvore",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-09",
+    "time": "19:30",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/skerryvore-09-05-2027/"
   },
   {
     "artist": "The Coronas",
