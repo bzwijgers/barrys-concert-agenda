@@ -30,6 +30,46 @@
     "url": "https://www.paard.nl/event/kennen-jullie-deze-nog-3-10/"
   },
   {
+    "artist": "Panchiko",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:15",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/panchiko/2741543"
+  },
+  {
+    "artist": "Ben Ellis in Tolhuistuin Amsterdam",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/ben-ellis/2886534"
+  },
+  {
+    "artist": "Kelela - new avatar live",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/kelela-new-avatar-live/2897328"
+  },
+  {
+    "artist": "Loreen - THE WILDFIRE TOUR",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/loreen-the-wildfire-tour/2816756"
+  },
+  {
     "artist": "Lucy Bedroque",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -48,6 +88,26 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/my-ugly-clementine/2884458"
+  },
+  {
+    "artist": "Ryan Beatty - Arms Over Armor Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/ryan-beatty-arms-over-armor-tour/2892924"
+  },
+  {
+    "artist": "Slayyyter WOR$T GIRL IN THE WORLD TOUR",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/slayyyter-wor-t-girl-in-the-world-tour/2859039"
   },
   {
     "artist": "Good Kid Can We Hang Out? Tour",
@@ -1206,16 +1266,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/85161757/imidiwan-festival-sunday-11-10-2026/"
   },
   {
-    "artist": "ASCO – Symphony of CAOS",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-11",
-    "time": "19:00",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/75827519/asco-symphony-of-caos-11-10-2026/"
-  },
-  {
     "artist": "Adje",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1778,16 +1828,6 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/56399340/krallice-15-10-2026/"
-  },
-  {
-    "artist": "Lambert",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-15",
-    "time": "19:30",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/27726237/lambert-15-10-2026/"
   },
   {
     "artist": "Mondo Drag + Early Moods",
@@ -2463,6 +2503,16 @@
     "url": "https://www.paradiso.nl/nl/programma/sananda-maitreya/2909919"
   },
   {
+    "artist": "Stage Girl (Starring Eli) - EU/UK Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/stage-girl-starring-eli-eu-uk-tour/2923560"
+  },
+  {
     "artist": "Beach Boys' Best",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2501,6 +2551,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/23104250/fkj-19-10-2026/"
+  },
+  {
+    "artist": "Alien Chicks - 19 oktober 2026",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-19",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/alien-chicks/2885760"
   },
   {
     "artist": "Dave East",
@@ -2743,16 +2803,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/left-of-the-dial-2026/",
     "clubCard": false
-  },
-  {
-    "artist": "Celine Cairo",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "19:30",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/17159560/celine-cairo-22-10-2026/"
   },
   {
     "artist": "L.A. SAGNE",
@@ -3733,16 +3783,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/65385879/fat-dog-30-10-2026/"
   },
   {
-    "artist": "Marko Hietala",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "19:00",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/98201006/marko-hietala-30-10-2026/"
-  },
-  {
     "artist": "Mike D 5D",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -4116,16 +4156,6 @@
     "url": "https://www.013.nl/programma/146654/eye-ball-iii"
   },
   {
-    "artist": "MaYaN",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-11-01",
-    "time": "18:45",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/44286163/mayan-01-11-2026/"
-  },
-  {
     "artist": "Frank Boeijen",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -4416,16 +4446,6 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/128504/puscifer"
-  },
-  {
-    "artist": "Kalben  'Land of Lost Poets' Tour",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-03",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/kalben-land-of-lost-poets-tour/2870556"
   },
   {
     "artist": "The Meltdown",
@@ -6601,16 +6621,6 @@
     "time": "",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/slade/"
-  },
-  {
-    "artist": "Filter",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-11-26",
-    "time": "",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/page/2/"
   },
   {
     "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
