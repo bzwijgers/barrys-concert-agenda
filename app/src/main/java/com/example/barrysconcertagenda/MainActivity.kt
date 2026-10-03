@@ -24,6 +24,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -114,6 +115,10 @@ fun ConcertApp() {
 
     var selectedTab by remember {
         mutableStateOf(1)
+    }
+
+    var searchQuery by remember {
+        mutableStateOf("")
     }
 
     var concerts by remember {
@@ -379,7 +384,7 @@ fun ConcertApp() {
         loading = false
     }
 
-    val visibleConcerts =
+    val tabConcerts =
         when (
             selectedTab
         ) {
@@ -414,6 +419,29 @@ fun ConcertApp() {
 
             else ->
                 emptyList()
+        }
+
+    val normalizedSearch =
+        searchQuery.trim().lowercase(Locale.getDefault())
+
+    val visibleConcerts =
+        if (normalizedSearch.isBlank()) {
+            tabConcerts
+        } else {
+            tabConcerts.filter { concert ->
+                listOf(
+                    concert.artist,
+                    concert.date,
+                    concert.time,
+                    concert.venue,
+                    concert.city,
+                    concert.country,
+                    concert.source
+                ).any { value ->
+                    value.lowercase(Locale.getDefault())
+                        .contains(normalizedSearch)
+                }
+            }
         }
 
     Scaffold(
@@ -534,6 +562,25 @@ fun ConcertApp() {
                             .titleLarge
                 )
             }
+
+            OutlinedTextField(
+                value = searchQuery,
+                onValueChange = { searchQuery = it },
+                label = {
+                    Text("Zoeken")
+                },
+                placeholder = {
+                    Text("Artiest, datum, venue, plaats, bron...")
+                },
+                singleLine = true,
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(
+                            horizontal = 20.dp,
+                            vertical = 4.dp
+                        )
+            )
 
             if (
                 loading
