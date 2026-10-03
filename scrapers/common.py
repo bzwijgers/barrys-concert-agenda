@@ -296,3 +296,10 @@ def scrape_detail_events(urls, venue, city, source):
     result = list(unique.values())
     result.sort(key=lambda item: (item["date"], item["time"], item["artist"].lower()))
     return result
+
+
+def scrape_boerderij():
+    base = "https://" + "poppodiumboerderij" + ".nl"
+    page = download_page_retry(base + "/programma/")
+    urls = find_site_event_urls(page, base, "/programma/")
+    return scrape_detail_events(urls, "Boerderij", "Zoetermeer", "Boerderij")
