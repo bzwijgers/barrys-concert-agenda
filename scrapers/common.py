@@ -226,15 +226,15 @@ def _detail_title(page):
 
 
 def _detail_date_time(page):
-    matches = re.findall(r'"startDate"\\s*:\\s*"([^"]+)"', page, flags=re.IGNORECASE)
+    matches = re.findall(r'"startDate"\s*:\s*"([^"]+)"', page, flags=re.IGNORECASE)
     for value in matches:
-        match = re.search(r"(20\\d{2}-\\d{2}-\\d{2})T(\\d{2}):(\\d{2})", value)
+        match = re.search(r"(20\d{2}-\d{2}-\d{2})T(\d{2}):(\d{2})", value)
         if match:
             return match.group(1), match.group(2) + ":" + match.group(3)
 
     text = clean_text(page)
     months = "|".join(MONTHS_LONG.keys())
-    match = re.search(r"(\\d{1,2})\\s+(" + months + r")\\s+(20\\d{2})", text, flags=re.IGNORECASE)
+    match = re.search(r"(\d{1,2})\s+(" + months + r")\s+(20\d{2})", text, flags=re.IGNORECASE)
     if not match:
         return None, ""
 
@@ -243,9 +243,9 @@ def _detail_date_time(page):
     event_date = date(int(match.group(3)), month, day).isoformat()
 
     after = text[match.end():match.end() + 500]
-    time_match = re.search(r"(?:Start|Aanvang|Deur(?:en)? open)\\s*:?\\s*(\\d{1,2})[:.]([0-5]\\d)", after, flags=re.IGNORECASE)
+    time_match = re.search(r"(?:Start|Aanvang|Deur(?:en)? open)\s*:?\s*(\d{1,2})[:.]([0-5]\d)", after, flags=re.IGNORECASE)
     if not time_match:
-        time_match = re.search(r"\\b(\\d{1,2})[:.]([0-5]\\d)\\b", after)
+        time_match = re.search(r"\b(\d{1,2})[:.]([0-5]\d)\b", after)
 
     event_time = ""
     if time_match:
