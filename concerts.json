@@ -10,6 +10,16 @@
     "url": "https://www.paradiso.nl/nl/programma/panchiko/2741543"
   },
   {
+    "artist": "Ben Ellis in Tolhuistuin Amsterdam",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/ben-ellis/2886534"
+  },
+  {
     "artist": "Kelela - new avatar live",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -241,6 +251,26 @@
     "url": "https://www.013.nl/programma/126940/unprocessed"
   },
   {
+    "artist": "Bente • PHIL • Haarlem Vinyl Festival",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/bente-phil-haarlem-vinyl-festival-04-10-26/"
+  },
+  {
+    "artist": "Blanks + Suus • Haarlem Vinyl Festival",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/blanks-support-05-04-26/"
+  },
+  {
     "artist": "Conor McLain",
     "venue": "MEZZ",
     "city": "Breda",
@@ -249,6 +279,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/conor-mclain-2/"
+  },
+  {
+    "artist": "JOHAN + Bas van Holt • Haarlem Vinyl Festival",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/johan-support-haarlem-vinyl-festival-04-10-26/"
   },
   {
     "artist": "LOE.",
@@ -592,6 +632,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/70941045/michael-mcgovern-07-10-2026/"
   },
   {
+    "artist": "Monolord + special guest: Dopelord",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/monolord-dopelord-07-10-26/"
+  },
+  {
     "artist": "TEUS NOBEL 4 | CHILD’S PLAY",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -600,6 +650,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/teus-nobel-4-childs-play-2/"
+  },
+  {
+    "artist": "Eloi Youssef • Sint Bavokerk",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-07",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/eloi-youssef-sint-bavokerk-07-10-26/"
   },
   {
     "artist": "mary in the junkyard",
@@ -723,6 +783,16 @@
     "url": "https://www.013.nl/programma/126662/ijsland"
   },
   {
+    "artist": "IOS – ISOOKSCHITTEREND – CLUBTOUR 8",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/ios-isookschitterend-clubtour-8-08-10-26/"
+  },
+  {
     "artist": "Monolord + Dopelord",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -733,6 +803,16 @@
     "url": "https://www.effenaar.nl/agenda/monolord-dopelord"
   },
   {
+    "artist": "néomí + Romy Liz Roze",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/neomi-support-08-10-26/"
+  },
+  {
     "artist": "SAVINE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -741,6 +821,26 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/savine-4/"
+  },
+  {
+    "artist": "The Pelumas – 023jazz",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-pelumas-023jazz-08-10-26/"
+  },
+  {
+    "artist": "Eloi Youssef • Sint Bavokerk",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/eloi-youssef-08-10-26/"
   },
   {
     "artist": "Father Of Peace",
@@ -933,6 +1033,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paarcafe-mic-drop/"
+  },
+  {
+    "artist": "Rapalje – Celtic Folk Night",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rapalje-celtic-folk-night-09-10-26/"
   },
   {
     "artist": "Father Of Peace (extra show)",
@@ -1276,16 +1386,6 @@
     "url": "https://www.paard.nl/event/the-grapevyne-4/"
   },
   {
-    "artist": "The Narrator + Accvsed + IMPVLSE",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2026-10-11",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/the-narrator-11-10-26/"
-  },
-  {
     "artist": "Sound of Europe",
     "venue": "MEZZ",
     "city": "Breda",
@@ -1366,6 +1466,16 @@
     "url": "https://www.paradiso.nl/nl/programma/pete-murray/2874017"
   },
   {
+    "artist": "The Narrator + Accvsed + IMPVLSE",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-narrator-11-10-26/"
+  },
+  {
     "artist": "WU LYF",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -1384,6 +1494,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/janne-schra-5/"
+  },
+  {
+    "artist": "Kitty, Daisy & Lewis + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/kitty-daisy-lewis-support-11-10-26/"
   },
   {
     "artist": "Margaret Glaspy",
@@ -1779,6 +1899,16 @@
     "url": "https://www.013.nl/programma/128113/käärijä"
   },
   {
+    "artist": "Tamikrest + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/tamikrest-support-14-10-26/"
+  },
+  {
     "artist": "Thijs Veldhuis",
     "venue": "MEZZ",
     "city": "Breda",
@@ -1807,6 +1937,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/est-gee/2915653"
+  },
+  {
+    "artist": "FLUX: Bokoesam",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/flux-14-10-26/"
   },
   {
     "artist": "Turin Brakes",
@@ -1980,6 +2120,16 @@
     "url": "https://www.paard.nl/event/paardcafe-noraly-false-perspective-untold-unfold-tour/"
   },
   {
+    "artist": "Spain – The Blue Moods Of Spain + NÆL",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/spain-15-10-26/"
+  },
+  {
     "artist": "Super-Sonic Jam invites VOLTA Brussel: led by Diana Sidibé",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -2008,6 +2158,16 @@
     "time": "20:00",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/the-soulful-sessions---david-michael-wyatt-us-josh-barry-uk/2930688"
+  },
+  {
+    "artist": "Beach Boys’ Best",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/beach-boys-best-15-10-26/"
   },
   {
     "artist": "corto.alto",
@@ -2171,6 +2331,26 @@
     "url": "https://www.tivolivredenburg.nl/agenda/17873001/orgel-vreten-16-10-2026/"
   },
   {
+    "artist": "Verplaatst: Masters of Reality",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/masters-of-reality-16-10-26/"
+  },
+  {
+    "artist": "Celine Cairo + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/celine-cairo-support-16-10-26/"
+  },
+  {
     "artist": "Douwe Bob",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2332,16 +2512,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/31500934/rolf-sanchez-17-10-2026/"
   },
   {
-    "artist": "Amsterdamse Popprijs Halve Finales in Paradiso",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-17",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/amsterdamse-popprijs-halve-finales/2935127"
-  },
-  {
     "artist": "Blood Red Shoes",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -2442,6 +2612,16 @@
     "url": "https://www.013.nl/programma/120305/the-narrator"
   },
   {
+    "artist": "Veya",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/veya-17-10-26-2/"
+  },
+  {
     "artist": "Voorronde Grote Prijs Breda @ Sound Dog",
     "venue": "MEZZ",
     "city": "Breda",
@@ -2533,16 +2713,6 @@
     "url": "https://www.paard.nl/event/paardcafe-teach-13/"
   },
   {
-    "artist": "The Slackers + Leah Farmer & The Badasonics",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2026-10-18",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/the-slackers-support-18-10-26/"
-  },
-  {
     "artist": "Benediction + Pentacle + Nightbearer",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -2591,6 +2761,16 @@
     "time": "19:15",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/16764992/souad-massi-18-10-2026/"
+  },
+  {
+    "artist": "Changing Tides – EP release + Scorn + Man As Plague",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/changing-tides-ep-release-18-10-26/"
   },
   {
     "artist": "Sam Tompkins",
@@ -2653,6 +2833,16 @@
     "url": "https://www.effenaar.nl/agenda/king-king"
   },
   {
+    "artist": "Rolf Sanchez + Tommy Tequila",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rolf-sanchez-support-18-10-26/"
+  },
+  {
     "artist": "STUURBAARD BAKKEBAARD",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2661,6 +2851,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/stuurbaard-bakkebaard/"
+  },
+  {
+    "artist": "The Slackers + Leah Farmer & The Badasonics",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-slackers-support-18-10-26/"
   },
   {
     "artist": "RONDÉ",
@@ -3025,6 +3225,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/nimino-22-10-2026/"
   },
   {
+    "artist": "Baba Zula",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/baba-zula-22-10-26/"
+  },
+  {
     "artist": "IOS Clubtour 8",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -3369,6 +3579,16 @@
     "url": "https://www.013.nl/programma/135414/no-barrier"
   },
   {
+    "artist": "Oh Hiroshima + Barrens",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/oh-hirshima-barrens-24-10-26/"
+  },
+  {
     "artist": "The HU Warrior Chant Tour",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -3377,6 +3597,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/126748/the-hu"
+  },
+  {
+    "artist": "Uriah Heep + Heavy Pettin • PHIL",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/uriah-heep-24-10-26/"
   },
   {
     "artist": "Wodan Boys",
@@ -3941,6 +4171,16 @@
     "url": "https://www.013.nl/programma/128268/elmer"
   },
   {
+    "artist": "Frazey Ford + The Sawtooth Stars",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/frazey-ford-support-29-10-26/"
+  },
+  {
     "artist": "JON ALLEN & THE LUNA KINGS",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -4030,6 +4270,16 @@
     "time": "20:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/noah-guthrie-29okt"
+  },
+  {
+    "artist": "Ruben Hein",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/ruben-hein-29-10-26/"
   },
   {
     "artist": "Paardcafé: Singer-Songwriters United",
@@ -4153,6 +4403,16 @@
     "url": "https://www.013.nl/programma/124715/40up"
   },
   {
+    "artist": "Danko Jones + Split Dogs",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/danko-jones-30-10-26/"
+  },
+  {
     "artist": "K-POP Night - Halloween edition",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -4173,6 +4433,16 @@
     "url": "https://www.paard.nl/event/paardcafe-popquiz-211/"
   },
   {
+    "artist": "TIMEZONE + Next Trip",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/timezone-next-trip-30-10-26/"
+  },
+  {
     "artist": "BLØF",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -4181,6 +4451,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/blof-30okt"
+  },
+  {
+    "artist": "Queen’s Pleasure",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/queens-pleasure-30-10-26/"
   },
   {
     "artist": "The Clarks ft. Rinus Gerritsen & Cesar Zuiderwijk",
@@ -4245,16 +4525,6 @@
     "url": "https://www.paard.nl/event/paardcafe-getting-80s-90s-wit-it/"
   },
   {
-    "artist": "London Calling - High Tea",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-31",
-    "time": "13:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/london-calling-high-tea/2921602"
-  },
-  {
     "artist": "Danny Vera",
     "venue": "Klokgebouw",
     "city": "Eindhoven",
@@ -4283,6 +4553,16 @@
     "time": "18:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/only-the-poets-31-10-2026/"
+  },
+  {
+    "artist": "Despised Icon + Carnifex + Suffocation + Gates To Hell",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "18:45",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/despised-icon-carnifex-31-10-26/"
   },
   {
     "artist": "Halloween Madness: Ritual (The Dutch Ghost Experience) + Astro Zombies A.D. (Misfits tribute)",
@@ -4333,6 +4613,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/126200/danko-jones"
+  },
+  {
+    "artist": "Dungeon Synth Halloween Night",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/crypts-castles-a-dungeon-synth-halloween-31-10-26/"
   },
   {
     "artist": "Fotosynthese",
@@ -4536,6 +4826,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/14398259/stephen-wilson-jr-01-11-2026/"
   },
   {
+    "artist": "Verplaatst: Any Given Day + Get The Shot + Sable Hills",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "19:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/any-given-day-01-11-26/"
+  },
+  {
     "artist": "AGO GNAWA – GNAWA FESTIVAL 2026",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -4665,6 +4965,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/floor-jansen/2729670"
+  },
+  {
+    "artist": "Gruppo Sportivo – Stop Motion: 50th Anniversary Tour",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/gruppo-sportivo-stop-motion-the-50th-anniversary-tour-01-11-26/"
   },
   {
     "artist": "LOUIS PEDRO",
@@ -4868,6 +5178,16 @@
     "url": "https://www.paradiso.nl/nl/programma/kalben-land-of-lost-poets-tour/2870556"
   },
   {
+    "artist": "Sam Bettens • Doopsgezind Haarlem",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/sam-bettens-doopsgezind-haarlem-03-11-26/"
+  },
+  {
     "artist": "The Meltdown",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -4887,16 +5207,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/victoryland/",
     "clubCard": true
-  },
-  {
-    "artist": "Citizen + Modern Color",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2026-11-04",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/citizen-04-11-26/"
   },
   {
     "artist": "Eve",
@@ -4927,6 +5237,26 @@
     "time": "19:30",
     "source": "013",
     "url": "https://www.013.nl/programma/126104/shinedown"
+  },
+  {
+    "artist": "Citizen + Modern Color",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/citizen-04-11-26/"
+  },
+  {
+    "artist": "Rita Dakota",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rita-dakota-04-11-26/"
   },
   {
     "artist": "WIES",
@@ -4979,26 +5309,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/tanzana/",
     "clubCard": false
-  },
-  {
-    "artist": "Frank Boeijen",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/frank-boeijen-05-11-26/"
-  },
-  {
-    "artist": "O.R.k. + Hackberry",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/o-r-k-05-11-26/"
   },
   {
     "artist": "Le Guess Who? 2026",
@@ -5091,6 +5401,16 @@
     "url": "https://www.paard.nl/event/fink-5/"
   },
   {
+    "artist": "O.R.k. + Hackberry",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/o-r-k-05-11-26/"
+  },
+  {
     "artist": "Rolf Sanchez Club Tour",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -5129,6 +5449,26 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/fatal-flowers"
+  },
+  {
+    "artist": "The Violet Parade – EP release",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-violet-parade-ep-release-05-11-26/"
+  },
+  {
+    "artist": "Frank Boeijen",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/frank-boeijen-05-11-26/"
   },
   {
     "artist": "Moreish Idols",
@@ -5241,6 +5581,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/skeler-06-11-2026/"
   },
   {
+    "artist": "Chasing Abbey + Miranda Faul",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/chasing-abbey-06-11-26/"
+  },
+  {
     "artist": "Durum Night",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -5269,6 +5619,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/flying-horseman-2/"
+  },
+  {
+    "artist": "Nieuwe Oogst: Kaya + Maartje",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/nieuwe-oogst-kaya-maartje-06-11-26/"
   },
   {
     "artist": "Electric Eel Shock",
@@ -5433,6 +5793,26 @@
     "url": "https://www.mezz.nl/programma/tusky-2/"
   },
   {
+    "artist": "The Dire Straits Experience • Phil",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-dire-straits-experience-07-11-26/"
+  },
+  {
+    "artist": "Etran de L’Aïr",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/etran-de-lair-07-11-26/"
+  },
+  {
     "artist": "Frank Boeijen",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -5513,6 +5893,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/the-temperance-movement-08-11-2026/"
   },
   {
+    "artist": "Chali 2na & band + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/chali-2na-band-support-08-11-26/"
+  },
+  {
     "artist": "Eli \"Paperboy\" Reed",
     "venue": "MEZZ",
     "city": "Breda",
@@ -5531,6 +5921,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/kaya-x-maartje/"
+  },
+  {
+    "artist": "Little Big",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/little-big-08-11-26/"
   },
   {
     "artist": "M-Kids",
@@ -5804,6 +6204,16 @@
     "url": "https://www.paard.nl/event/oh-voyage-3/"
   },
   {
+    "artist": "Candy Dulfer Presents FUNK LEGACY ALLSTARS featuring Nigel Hall x Eric “Benny” Bloom",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-11",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/funk-legacy-allstars-featuring-candy-dulfer-x-nigel-hall-x-eric-benny-bloom-11-11-26/"
+  },
+  {
     "artist": "Kiwi Jr.",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -5935,6 +6345,16 @@
     "url": "https://www.effenaar.nl/agenda/early-james"
   },
   {
+    "artist": "Eek-a-Mouse + Jahvolution – Rude Boy Jamaican",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/eek-a-mouse-jahvolution-rude-boy-jamaican-12-11-26/"
+  },
+  {
     "artist": "Martin Luke Brown",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -5944,6 +6364,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/martin-luke-brown/",
     "clubCard": false
+  },
+  {
+    "artist": "The Next Movement – Love It or Leave It Alone Tour",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-next-movement-love-it-or-leave-it-alone-tour-12-11-26/"
   },
   {
     "artist": "Grote Geelstaart",
@@ -6046,6 +6476,16 @@
     "time": "19:30",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/vroegzat-13nov"
+  },
+  {
+    "artist": "Diggy Dex • Phil",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/diggy-dex-phil-13-11-26/"
   },
   {
     "artist": "Gallowstreet",
@@ -6189,6 +6629,16 @@
     "url": "https://www.mezz.nl/programma/emo-night-mainland-5/"
   },
   {
+    "artist": "Froukje + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/froukje-support-14-11-26/"
+  },
+  {
     "artist": "Focus",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -6199,6 +6649,16 @@
     "url": "https://poppodiumboerderij.nl/programma/focus/"
   },
   {
+    "artist": "IMMERSION | Colin Newman (Wire) + Malka Spigel (Minimal Compact)",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/immersion-colin-newman-wire-malka-spigel-minimal-compact-14-11-26/"
+  },
+  {
     "artist": "Peacock In Concert The Orchestrated Universe",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -6207,6 +6667,16 @@
     "time": "20:30",
     "source": "013",
     "url": "https://www.013.nl/programma/139683/peacock-in-concert"
+  },
+  {
+    "artist": "Popronde 2026",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/popronde-2027-14-11-26/"
   },
   {
     "artist": "PIÑA",
@@ -6330,6 +6800,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/10558486/early-james-15-11-2026/"
   },
   {
+    "artist": "Froukje + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/froukje-support-15-11-26/"
+  },
+  {
     "artist": "Kula Shaker",
     "venue": "MEZZ",
     "city": "Breda",
@@ -6359,6 +6839,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/adriaan-persons/",
     "clubCard": false
+  },
+  {
+    "artist": "Fred Wesley Generations",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/fred-wesley-generations-15-11-26/"
   },
   {
     "artist": "The Wallflowers",
@@ -6531,6 +7021,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/master-boot-record-18-11-2026/"
   },
   {
+    "artist": "Electric Six + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/electric-six-support-18-11-26/"
+  },
+  {
     "artist": "FROUKJE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -6549,6 +7049,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/143169/kokoroko"
+  },
+  {
+    "artist": "Blair Davie",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/blair-davie-18-11-26/"
   },
   {
     "artist": "DAOUD",
@@ -6623,6 +7133,26 @@
     "url": "https://www.melkweg.nl/nl/agenda/salmo-19-11-2026/"
   },
   {
+    "artist": "Bettie Serveert + Vera & The Sleepover Club",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/bettie-serveert-19-11-26/"
+  },
+  {
+    "artist": "Dave McCredie + This New Light",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/dave-mccredie-support-19-11-26/"
+  },
+  {
     "artist": "DUNE SESSIONS",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -6672,6 +7202,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/krav-boca/"
+  },
+  {
+    "artist": "Pitou + Lifeloan",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/pitou-support-19-11-26/"
   },
   {
     "artist": "Anneke van Giersbergen",
@@ -6784,6 +7324,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/bso-x-reboot/"
+  },
+  {
+    "artist": "Emmy d’Arc",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/emmy-darc-20-11-26/"
   },
   {
     "artist": "Hiigo",
@@ -6918,6 +7468,16 @@
     "clubCard": false
   },
   {
+    "artist": "WIES + JEN",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/wies-21-11-26/"
+  },
+  {
     "artist": "Biddy Early",
     "venue": "MEZZ",
     "city": "Breda",
@@ -7009,6 +7569,16 @@
     "clubCard": false
   },
   {
+    "artist": "Zer00s Heroes",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "23:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/zer00s-heroes-21-11-26/"
+  },
+  {
     "artist": "Ernst, Bobbie & de rest Pimp de Sint show",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -7077,6 +7647,16 @@
     "time": "20:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/58319183/delany-22-11-2026/"
+  },
+  {
+    "artist": "Platina",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/platina-22-11-26/"
   },
   {
     "artist": "Temple of Wave",
@@ -7281,6 +7861,16 @@
     "url": "https://www.mezz.nl/programma/conway-the-machine-daringer/"
   },
   {
+    "artist": "Diana Arbenina",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/diana-arbenina-25-11-26/"
+  },
+  {
     "artist": "MUSIC THAT CHANGED THE WORLD #3",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -7289,6 +7879,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/25-11-music-that-changed-the-world/"
+  },
+  {
+    "artist": "WesGhost",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/wesghost-25-11-26/"
   },
   {
     "artist": "Genesis Owusu",
@@ -7363,6 +7963,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/78808983/van-dik-hout-26-11-2026/"
   },
   {
+    "artist": "Davina Michelle + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/davina-michelle-support-26-11-26/"
+  },
+  {
     "artist": "Glass Museum",
     "venue": "MEZZ",
     "city": "Breda",
@@ -7381,6 +7991,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/kaat-van-stralen"
+  },
+  {
+    "artist": "Laura Cox + Subterranean Street Society",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/laura-cox-support-26-11-26/"
   },
   {
     "artist": "MOBILHOME",
@@ -7506,6 +8126,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/modestep-27-11-2026/"
   },
   {
+    "artist": "Nathan Ball + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/nathan-ball-support-27-11-26/"
+  },
+  {
     "artist": "Sugar Spine Soul Before Spirit Tour",
     "venue": "Little Devil",
     "city": "Tilburg",
@@ -7554,6 +8184,26 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/jack-weatherman"
+  },
+  {
+    "artist": "ooes",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/ooes-27-11-26/"
+  },
+  {
+    "artist": "The Scene + Jan Douwe Kroeske",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-scene-support-27-11-26/"
   },
   {
     "artist": "WEVAL",
@@ -7747,16 +8397,6 @@
     "clubCard": false
   },
   {
-    "artist": "She Past Away + Haunt Me",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2026-11-29",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/she-past-away-29-11-26/"
-  },
-  {
     "artist": "Bezerkus Bingo",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -7817,6 +8457,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/gang-of-youths-29-11-2026/"
   },
   {
+    "artist": "SBP4",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/sbp4-29-11-26/"
+  },
+  {
     "artist": "Sevendust",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -7825,6 +8475,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/128241/sevendust"
+  },
+  {
+    "artist": "She Past Away + Haunt Me",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/she-past-away-29-11-26/"
   },
   {
     "artist": "The Bug Club",
@@ -7845,6 +8505,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/wrest/"
+  },
+  {
+    "artist": "Sugar Spine + Braces",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/sugar-spine-29-11-26/"
   },
   {
     "artist": "Anneke van Giersbergen & Band",
@@ -7915,6 +8585,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/apollo-brown-skyzoo/"
+  },
+  {
+    "artist": "Terror + Bane + Start Today + Peace of Mind",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "19:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/terror-02-12-26/"
   },
   {
     "artist": "Q Marsden",
@@ -8080,6 +8760,16 @@
     "url": "https://www.mezz.nl/programma/friday/"
   },
   {
+    "artist": "Ghostface Killah + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/ghostface-killah-support-03-12-26/"
+  },
+  {
     "artist": "JACK AND THE WEATHERMAN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -8098,6 +8788,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/127342/loïs-lane"
+  },
+  {
+    "artist": "Waterfront + Bonno Getz",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/waterfront-bonno-getz-03-12-26/"
   },
   {
     "artist": "Zwangere Guy",
@@ -8231,6 +8931,36 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/159067/dark-oath"
+  },
+  {
+    "artist": "De Baron + Spoet",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/de-baron-support-04-12-26/"
+  },
+  {
+    "artist": "Jack and the Weatherman + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/jack-and-the-weatherman-support-04-12-26/"
+  },
+  {
+    "artist": "Nieuwe Oogst: ILA + RubinCarter",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/nieuwe-oogst-ila-rubincarter-04-12-26/"
   },
   {
     "artist": "NO BARRIER",
@@ -8395,6 +9125,16 @@
     "url": "https://www.013.nl/programma/134133/froukje"
   },
   {
+    "artist": "Novulent + Softcult",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/novulent-05-12-26/"
+  },
+  {
     "artist": "Mostly Autumn",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -8403,6 +9143,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/mostlyautumn/"
+  },
+  {
+    "artist": "Ryan Leslie",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/ryan-leslie-05-12-26/"
   },
   {
     "artist": "Alice Olsthoorn",
@@ -8474,6 +9224,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/kids-with-buns/"
+  },
+  {
+    "artist": "Nervy",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/nervy-06-12-26/"
   },
   {
     "artist": "Maite Hontelé & LA NOVIA",
@@ -8802,6 +9562,16 @@
     "url": "https://baroeg.nl/productie/evergrey/"
   },
   {
+    "artist": "Prins S. en de Geit",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/prins-s-en-de-geit-11-12-26/"
+  },
+  {
     "artist": "Sons of the Culture Clash",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -9076,6 +9846,16 @@
     "url": "https://www.013.nl/programma/125403/moving-pictures"
   },
   {
+    "artist": "Niels Geusebroek sings Coldplay",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/niels-geusebroek-sings-coldplay-13-12-26/"
+  },
+  {
     "artist": "pet.",
     "venue": "MEZZ",
     "city": "Breda",
@@ -9206,6 +9986,16 @@
     "url": "https://www.013.nl/programma/141010/thijs-boontjes"
   },
   {
+    "artist": "Rianne + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-indien-support-26-09-26/"
+  },
+  {
     "artist": "CITY OF THE SUN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -9244,6 +10034,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/130610/my-baby"
+  },
+  {
+    "artist": "Jaimi Faulkner",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/jaimi-faulkner-17-12-26/"
   },
   {
     "artist": "After Elmer",
@@ -9326,6 +10126,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/jungle-by-night-19/"
+  },
+  {
+    "artist": "Will Knox",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/will-knox-18-12-26/"
   },
   {
     "artist": "Bar Hollandia: Mart Hoogkamer, Django Wagner & meer",
@@ -9439,6 +10249,16 @@
     "url": "https://poppodiumboerderij.nl/programma/top2000/"
   },
   {
+    "artist": "The Hillbilly Moonshiners",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-hillbilly-moonshiners-19-12-26/"
+  },
+  {
     "artist": "Christmas Sing-a-Long",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -9458,6 +10278,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/lucky-fonz-iii-1/",
     "clubCard": false
+  },
+  {
+    "artist": "ABBA Gold: The Christmas Special Show",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/abba-gold-christmas-special-show-2026"
   },
   {
     "artist": "New Model Army",
@@ -9480,6 +10310,16 @@
     "url": "https://www.mezz.nl/programma/doodswens/"
   },
   {
+    "artist": "Friday + Jacob Drescher",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/friday-20-12-26/"
+  },
+  {
     "artist": "Niels Geusebroek sings Coldplay",
     "venue": "MEZZ",
     "city": "Breda",
@@ -9490,14 +10330,14 @@
     "url": "https://www.mezz.nl/programma/niels-geusebroek-sings-coldplay/"
   },
   {
-    "artist": "ABBA Gold: The Christmas Special Show",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
+    "artist": "Focus",
+    "venue": "Patronaat",
+    "city": "Haarlem",
     "country": "NL",
     "date": "2026-12-20",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/abba-gold-christmas-special-show-2026"
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/focus-20-12-26/"
   },
   {
     "artist": "Lucky Fonz III",
@@ -9794,6 +10634,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/afterhours-12-01-2027/"
   },
   {
+    "artist": "Rob Lamberti presents A Celebration of George Michael • PHIL",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-13",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rob-lamberti-presents-a-celebration-of-george-michael-13-01-27/"
+  },
+  {
     "artist": "Novastar",
     "venue": "MEZZ",
     "city": "Breda",
@@ -9895,6 +10745,16 @@
     "url": "https://www.effenaar.nl/agenda/mike-masse"
   },
   {
+    "artist": "The James Brown Experience",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-17",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-james-brown-experience-17-01-27/"
+  },
+  {
     "artist": "Isaiah Rashad",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -9967,6 +10827,16 @@
     "clubCard": false
   },
   {
+    "artist": "State Power + Ker Ker",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/state-power-21-01-27/"
+  },
+  {
     "artist": "BYWATER CALL",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -10005,6 +10875,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/regressivehypnosis/"
+  },
+  {
+    "artist": "Tribute to the Cats Band",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/tribute-to-the-cats-band-22-01-27/"
   },
   {
     "artist": "Biga*Ranx",
@@ -10055,6 +10935,26 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/bjornriis/"
+  },
+  {
+    "artist": "Genesis Project – Philled with Collins",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/genesis-project-23-01-27/"
+  },
+  {
+    "artist": "Pro Wrestling Holland® x Patronaat",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-24",
+    "time": "14:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/pro-wrestling-holland-24-01-27/"
   },
   {
     "artist": "JOB Dutchtuber & Billy The Kit ECHTE VRIENDEN de tour",
@@ -10127,6 +11027,16 @@
     "url": "https://www.013.nl/programma/152175/de-jukebox"
   },
   {
+    "artist": "Drukwerk + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-28",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/drukwerk-support-28-01-27-2/"
+  },
+  {
     "artist": "Frozen Soul No place of warmth Europe & UK 2027",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -10137,16 +11047,6 @@
     "url": "https://www.013.nl/programma/155569/frozen-soul"
   },
   {
-    "artist": "Orden Ogan + Ensiferum + Angus McSix",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/orden-ogan-29-01-27/"
-  },
-  {
     "artist": "Carnaval Countdown",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -10155,6 +11055,16 @@
     "time": "19:00",
     "source": "013",
     "url": "https://www.013.nl/programma/159259/carnaval-countdown"
+  },
+  {
+    "artist": "Orden Ogan + Ensiferum + Angus McSix",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "19:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/orden-ogan-29-01-27/"
   },
   {
     "artist": "Dagny",
@@ -10195,6 +11105,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/erwin-nyhoff-prodigal-sons"
+  },
+  {
+    "artist": "‘LET LOVE RULE’ – songs by Lenny Kravitz, performed by Ro Krom",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/"
   },
   {
     "artist": "ANOTHER TASTE",
@@ -10257,6 +11177,16 @@
     "url": "https://www.mezz.nl/programma/david-ramirez/"
   },
   {
+    "artist": "Extince – 30 Jaar Spraakwater",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/extince-30-jaar-spraakwater-30-01-27/"
+  },
+  {
     "artist": "The Smiths Presumably",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -10317,6 +11247,16 @@
     "url": "https://baroeg.nl/productie/wavefest-clan-of-xymox-ultra-sunn-selofan-dear-omen-idleyes/"
   },
   {
+    "artist": "Station to Station – David Bowie Tribute",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-31",
+    "time": "15:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/station-to-station-31-01-27/"
+  },
+  {
     "artist": "almost monday",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -10335,6 +11275,16 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/infloyd-31-01-2027/"
+  },
+  {
+    "artist": "SiM",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-31",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/sim-31-01-27/"
   },
   {
     "artist": "Two Door Cinema Club Tourist History 15th Anniversary",
@@ -10488,16 +11438,6 @@
     "url": "https://www.013.nl/programma/127140/feuerengel"
   },
   {
-    "artist": "Nieuwe datum: Kovacs + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-02-06",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/kovacs-support-03-12-27/"
-  },
-  {
     "artist": "ROBIN SCHERPEN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -10618,6 +11558,16 @@
     "url": "https://www.013.nl/programma/129205/delain"
   },
   {
+    "artist": "The Intersphere",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-11",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-intersphere-11-02-27/"
+  },
+  {
     "artist": "These Wicked Rivers",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -10718,6 +11668,16 @@
     "url": "https://poppodiumboerderij.nl/programma/afever/"
   },
   {
+    "artist": "Mooi Wark – 35 Joar Op Pad",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-13",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/mooi-wark-13-02-27/"
+  },
+  {
     "artist": "Frankie Stew & Harvey Gunn",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -10726,6 +11686,16 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/frankie-stew-harvey-gunn-14-02-2027/"
+  },
+  {
+    "artist": "Tarja – Frisson Live",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-14",
+    "time": "19:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/tarja-frisson-live-14-02-27/"
   },
   {
     "artist": "Amorphis Borderland tour",
@@ -10801,6 +11771,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/theory-of-a-deadman-16-02-2027/"
   },
   {
+    "artist": "An Evening with Josh Ritter (Solo) • Doopsgezind Haarlem",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-16",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/an-evening-with-josh-ritter-solo-16-02-27/"
+  },
+  {
     "artist": "GRIMNER, WAYLANDER & VANSIND",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -10809,16 +11789,6 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/grimner-waylander-vansind/"
-  },
-  {
-    "artist": "Turmion Kätilöt",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-02-18",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/turmion-katilot-18-02-27/"
   },
   {
     "artist": "The Reytons",
@@ -10839,6 +11809,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/hayden-thorpe/"
+  },
+  {
+    "artist": "Turmion Kätilöt",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-18",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/turmion-katilot-18-02-27/"
   },
   {
     "artist": "Pure Reason Revolution",
@@ -10879,6 +11859,16 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/gimme-gimme-gimme-19-02-2027/"
+  },
+  {
+    "artist": "M.O.B. presents De Hardheid + Eskalatie",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/m-o-b-presents-de-hardheid-eskalatie-19-02-27/"
   },
   {
     "artist": "The Reytons",
@@ -10932,6 +11922,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/tyler-braden-20-02-2027/"
   },
   {
+    "artist": "YIN YIN + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/yin-yin-20-02-27/"
+  },
+  {
     "artist": "Physical Graffiti",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -10982,6 +11982,16 @@
     "url": "https://www.paard.nl/event/clouseau-in-amare/"
   },
   {
+    "artist": "The Tool Experience (previously The Perfect Tool)",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-21",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-tool-experience-previous-the-perfect-tool-21-02-27/"
+  },
+  {
     "artist": "The Australian Pink Floyd Show 2027 Greatest Hits World Tour",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -11020,6 +12030,16 @@
     "time": "14:30",
     "source": "013",
     "url": "https://www.013.nl/programma/152183/de-jukebox"
+  },
+  {
+    "artist": "Movements + Gouge Away",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-24",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/movements-24-02-27/"
   },
   {
     "artist": "Midge Ure",
@@ -11133,6 +12153,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/kakkmaddafakka-27-02-2027/"
   },
   {
+    "artist": "Chef’Special",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/chefspecial-rider-27-02-27/"
+  },
+  {
     "artist": "NUBIYAN TWIST",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -11171,6 +12201,16 @@
     "time": "14:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/blues-op-zondag-kid-lazy-band/"
+  },
+  {
+    "artist": "Chef’Special",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-28",
+    "time": "14:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/chefspecial-rider-28-02-27/"
   },
   {
     "artist": "Amble",
@@ -11243,6 +12283,16 @@
     "url": "https://www.mezz.nl/programma/jimmy-carr-2/"
   },
   {
+    "artist": "Mike Lindup Trio",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-03",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/mike-lindup-trio-03-03-27/"
+  },
+  {
     "artist": "Jimmy Carr: Laughs Funny",
     "venue": "MEZZ",
     "city": "Breda",
@@ -11253,6 +12303,16 @@
     "url": "https://www.mezz.nl/programma/jimmy-carr/"
   },
   {
+    "artist": "King Buffalo + Spirit Mother",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/king-buffalo-04-03-27/"
+  },
+  {
     "artist": "PAULA COLE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -11261,6 +12321,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paula-cole/"
+  },
+  {
+    "artist": "REZN + Coltaine",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rezn-04-03-27/"
   },
   {
     "artist": "Roosbeef",
@@ -11282,16 +12352,6 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/wende-04302027/"
-  },
-  {
-    "artist": "The Dirty Daddies – Let The Good Times Roll",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-05",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/the-dirty-daddies-05-03-27/"
   },
   {
     "artist": "SLOMOSA",
@@ -11322,6 +12382,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/dead-daisies"
+  },
+  {
+    "artist": "The Dirty Daddies – Let The Good Times Roll",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-05",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-dirty-daddies-05-03-27/"
   },
   {
     "artist": "Blind Channel",
@@ -11373,6 +12443,26 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/hallo-venray-1/",
     "clubCard": false
+  },
+  {
+    "artist": "Wende + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-07",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/wende-support-07-03-27/"
+  },
+  {
+    "artist": "Shantel",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-07",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/shantel-07-03-27/"
   },
   {
     "artist": "La Roux",
@@ -11516,6 +12606,16 @@
     "url": "https://www.paard.nl/event/the-haunted-youth/"
   },
   {
+    "artist": "De Kift",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/de-kift-13-03-27/"
+  },
+  {
     "artist": "Longo Longo",
     "venue": "MEZZ",
     "city": "Breda",
@@ -11586,6 +12686,16 @@
     "url": "https://www.effenaar.nl/agenda/kmfdm-nieuwe-datum"
   },
   {
+    "artist": "Clouseau • PHIL",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-17",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/clouseau-17-03-27/"
+  },
+  {
     "artist": "Dea Matrona",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -11594,6 +12704,16 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/dea-matrona-18-03-2027/"
+  },
+  {
+    "artist": "Hugo Barriol + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/hugo-barriol-support-18-03-27/"
   },
   {
     "artist": "JET VAN DER STEEN",
@@ -11606,6 +12726,16 @@
     "url": "https://www.paard.nl/event/jet-van-der-steen-5/"
   },
   {
+    "artist": "Personal Trainer + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-18",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/personal-trainer-support-18-03-27/"
+  },
+  {
     "artist": "The Dutch Queen: 50 jaar Somebody To Love (nieuwe datum)",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -11614,16 +12744,6 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/dutch-queen-18mrt"
-  },
-  {
-    "artist": "jet van der steen",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-19",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/jet-van-der-steen-19-03-27/"
   },
   {
     "artist": "Uuhai + Manticora + Blossom Cult + Only Human",
@@ -11656,6 +12776,16 @@
     "url": "https://www.paard.nl/event/ruben-hillen/"
   },
   {
+    "artist": "jet van der steen",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/jet-van-der-steen-19-03-27/"
+  },
+  {
     "artist": "Lorrèn",
     "venue": "MEZZ",
     "city": "Breda",
@@ -11664,6 +12794,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/lorren-2/"
+  },
+  {
+    "artist": "Luicidal + Grindpad",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/luicidal-19-03-27/"
   },
   {
     "artist": "Physical Graffiti",
@@ -11777,6 +12917,16 @@
     "url": "https://www.mezz.nl/programma/pokey-lafarge-2/"
   },
   {
+    "artist": "Roosbeef + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-25",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/roosbeef-support-25-03-27/"
+  },
+  {
     "artist": "The Warning",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -11828,6 +12978,16 @@
     "url": "https://www.013.nl/programma/159292/sama-sama-maluku"
   },
   {
+    "artist": "Tributeconcert RipLive Remembering 2026",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-27",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/tributeconcert-riplive-remembering-2026-27-03-27/"
+  },
+  {
     "artist": "Theodor",
     "venue": "MEZZ",
     "city": "Breda",
@@ -11866,6 +13026,16 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/pomme-31-03-2027/"
+  },
+  {
+    "artist": "Nordjevel + Svarttjern + Malphas + Unviar",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-31",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/nordjevel-svarttjern-malphas-unviar-31-03-27/"
   },
   {
     "artist": "Damian Wilson Legacy",
@@ -11918,16 +13088,6 @@
     "url": "https://poppodiumboerderij.nl/programma/templeofwave/"
   },
   {
-    "artist": "Buster Shuffle + Antillectual",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-04-03",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/buster-shuffle-03-04-27/"
-  },
-  {
     "artist": "Blackbird",
     "venue": "MEZZ",
     "city": "Breda",
@@ -11936,6 +13096,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/blackbird-4/"
+  },
+  {
+    "artist": "Buster Shuffle + Antillectual",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/buster-shuffle-03-04-27/"
   },
   {
     "artist": "Flaire",
@@ -12372,16 +13542,6 @@
     "url": "https://www.013.nl/programma/141146/kim-wilde"
   },
   {
-    "artist": "Michael Jackson Project feat Jared Grant",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-04-24",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/jared-grant-off-the-wall-03-12-26/"
-  },
-  {
     "artist": "An Evening With The Pineapple Thief Far and wide - European tour 2027",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -12390,6 +13550,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/154895/the-pineapple-thief"
+  },
+  {
+    "artist": "Michael Jackson Project feat Jared Grant",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-04-24",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/jared-grant-off-the-wall-03-12-26/"
   },
   {
     "artist": "Moss",
@@ -12665,26 +13835,6 @@
     "clubCard": false
   },
   {
-    "artist": "Laura Cox + Subterranean Street Society",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-05-20",
-    "time": "10:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/laura-cox-support-26-11-26/"
-  },
-  {
-    "artist": "The Pelumas – 023jazz",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-05-20",
-    "time": "10:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/the-pelumas-023jazz-08-10-26/"
-  },
-  {
     "artist": "Nine Below Zero – 50 Year Anniversary",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -12713,26 +13863,6 @@
     "time": "17:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/sniester-2027-2/"
-  },
-  {
-    "artist": "Focus",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-05-22",
-    "time": "10:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/focus-20-12-26/"
-  },
-  {
-    "artist": "‘LET LOVE RULE’ – songs by Lenny Kravitz, performed by Ro Krom",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-05-22",
-    "time": "10:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/"
   },
   {
     "artist": "Fuzz Club 2027 - Saturday",
@@ -12832,7 +13962,7 @@
     "city": "Haarlem",
     "country": "NL",
     "date": "2027-06-08",
-    "time": "",
+    "time": "20:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/gipsy-kings-ft-nicolas-reyes-08-06-27/"
   },
@@ -12847,16 +13977,6 @@
     "url": "https://www.013.nl/programma/158877/the-musical-box"
   },
   {
-    "artist": "Satsang + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-09-04",
-    "time": "",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/satsang-support-04-09-27/"
-  },
-  {
     "artist": "PAARD VAN STAL",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -12865,6 +13985,26 @@
     "time": "16:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paard-van-stal-10/"
+  },
+  {
+    "artist": "Satsang + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-09-04",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/satsang-support-04-09-27/"
+  },
+  {
+    "artist": "Archive • PHIL",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-09-08",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/archive-08-09-27/"
   },
   {
     "artist": "Archive",
@@ -12907,6 +14047,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/jain-29-09-2027/"
   },
   {
+    "artist": "New Purple Celebration: The Music of Prince",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-09-30",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/new-purple-celebration-the-music-of-prince-30-09-27/"
+  },
+  {
     "artist": "Come As You Are 2027: o.a. de reünie van Tröckener Kecks",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -12927,14 +14077,14 @@
     "url": "https://www.effenaar.nl/agenda/new-purple-celebration-3okt"
   },
   {
-    "artist": "Verplaatst: Masters of Reality",
+    "artist": "Masters of Reality",
     "venue": "Patronaat",
     "city": "Haarlem",
     "country": "NL",
     "date": "2027-10-13",
-    "time": "",
+    "time": "19:30",
     "source": "Patronaat",
-    "url": "https://patronaat.nl/event/masters-of-reality-16-10-26/"
+    "url": "https://patronaat.nl/event/masters-of-reality-13-10-27/"
   },
   {
     "artist": "Bettie Serveert",
@@ -12986,5 +14136,15 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/kovacs-nieuwe-datum"
+  },
+  {
+    "artist": "Nieuwe datum: Kovacs + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-12-03",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/kovacs-support-03-12-27/"
   }
 ]
