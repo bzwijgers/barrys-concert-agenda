@@ -190,7 +190,7 @@ def find_json_value(
 
 def find_site_event_urls(page, base_url, path_prefix):
     page = page.replace("\\/", "/").replace("\\u002F", "/").replace("\\u002f", "/")
-    pattern = re.compile(r"""href=["']([^"']+)["']""", flags=re.IGNORECASE)
+    pattern = re.compile(r"""href\s*=\s*["']([^"']+)["']""", flags=re.IGNORECASE)
     result = []
     seen = set()
 
@@ -300,8 +300,9 @@ def scrape_detail_events(urls, venue, city, source):
 
 def scrape_boerderij():
     base = "https://" + "poppodiumboerderij" + ".nl"
-    page = download_page_retry(base + "/programma/")
+    page = download_page_retry(base + "/")
     urls = find_site_event_urls(page, base, "/programma/")
+    print("Boerderij links gevonden:", len(urls))
     return scrape_detail_events(urls, "Boerderij", "Zoetermeer", "Boerderij")
 
 
@@ -309,6 +310,7 @@ def scrape_paard():
     base = "https://www." + "paard" + ".nl"
     page = download_page_retry(base + "/event/")
     urls = find_site_event_urls(page, base, "/event/")
+    print("PAARD links gevonden:", len(urls))
     return scrape_detail_events(urls, "PAARD", "Den Haag", "PAARD")
 
 
@@ -316,4 +318,5 @@ def scrape_melkweg():
     base = "https://www." + "melkweg" + ".nl"
     page = download_page_retry(base + "/nl/agenda/?profile=Concert")
     urls = find_site_event_urls(page, base, "/nl/agenda/")
+    print("Melkweg links gevonden:", len(urls))
     return scrape_detail_events(urls, "Melkweg", "Amsterdam", "Melkweg")
