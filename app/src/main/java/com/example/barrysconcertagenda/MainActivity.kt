@@ -783,6 +783,7 @@ fun ConcertApp() {
                                     favorite = newFavorite
                                 )
                             },
+                            showClubCardLabel = selectedTab != 4,
                             onAttendingClick = {
                                 val newAttending = !concert.isAttending
                                 concerts = concerts.map {
@@ -816,249 +817,33 @@ fun ConcertApp() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ConcertCard(
-    concert: Concert,
-    onFavoriteClick: () -> Unit,
-    onAttendingClick: () -> Unit
-) {
+fun BarryDatePicker(onDismiss: () -> Unit, onDateSelected: (LocalDate) -> Unit) {
+    val state = rememberDatePickerState()
+    DatePickerDialog(onDismissRequest = onDismiss, confirmButton = {
+        TextButton(onClick = { state.selectedDateMillis?.let { millis -> onDateSelected(java.time.Instant.ofEpochMilli(millis).atZone(java.time.ZoneOffset.UTC).toLocalDate()) } }) { Text("Kiezen") }
+    }, dismissButton = { TextButton(onClick = onDismiss) { Text("Annuleren") } }) { DatePicker(state = state) }
+}
+
+@Composable
+fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, onAttendingClick: () -> Unit) {
     var confirmFavoriteRemoval by remember { mutableStateOf(false) }
     var confirmAttendingRemoval by remember { mutableStateOf(false) }
-
-    if (confirmFavoriteRemoval) {
-        AlertDialog(
-            onDismissRequest = { confirmFavoriteRemoval = false },
-            title = { Text("Favoriet verwijderen?") },
-            text = { Text("Wil je dit concert uit je favorieten verwijderen?") },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirmFavoriteRemoval = false
-                    onFavoriteClick()
-                }) { Text("Verwijderen") }
-            },
-            dismissButton = {
-                TextButton(onClick = { confirmFavoriteRemoval = false }) { Text("Annuleren") }
-            }
-        )
-    }
-
-    if (confirmAttendingRemoval) {
-        AlertDialog(
-            onDismissRequest = { confirmAttendingRemoval = false },
-            title = { Text("Concert verwijderen uit Tickets?") },
-            text = { Text("Wil je aangeven dat je niet meer naar dit concert gaat?") },
-            confirmButton = {
-                TextButton(onClick = {
-                    confirmAttendingRemoval = false
-                    onAttendingClick()
-                }) { Text("Verwijderen") }
-            },
-            dismissButton = {
-                TextButton(onClick = { confirmAttendingRemoval = false }) { Text("Annuleren") }
-            }
-        )
-    }
-
-    Card(
-        modifier =
-            Modifier.fillMaxWidth()
-    ) {
-
-        Column(
-            modifier =
-                Modifier.padding(
-                    16.dp
-                )
-        ) {
-
-            Row(
-                modifier =
-                    Modifier.fillMaxWidth(),
-                horizontalArrangement =
-                    Arrangement.SpaceBetween
-            ) {
-
-                Text(
-                    text =
-                        concert.artist,
-                    modifier =
-                        Modifier.weight(
-                            1f
-                        ),
-                    fontWeight =
-                        FontWeight.Bold,
-                    style =
-                        MaterialTheme
-                            .typography
-                            .titleLarge
-                )
-
-                Row {
-                    TextButton(
-                        onClick = {
-                            if (concert.isFavorite) {
-                                confirmFavoriteRemoval = true
-                            } else {
-                                onFavoriteClick()
-                            }
-                        }
-                    ) {
-                        Text(if (concert.isFavorite) "♥" else "♡")
-                    }
-
-                    TextButton(
-                        onClick = {
-                            if (concert.isAttending) {
-                                confirmAttendingRemoval = true
-                            } else {
-                                onAttendingClick()
-                            }
-                        }
-                    ) {
-                        Text(if (concert.isAttending) "✓" else "＋")
-                    }
-                }
-            }
-
-            if (
-                concert.isNew
-            ) {
-
-                Text(
-                    "NIEUW",
-                    fontWeight =
-                        FontWeight.Bold
-                )
-
-                Spacer(
-                    modifier =
-                        Modifier.height(
-                            4.dp
-                        )
-                )
-            }
-
-            val displayDate =
-                parseConcertDate(
-                    concert.date
-                )?.format(
-                    DateTimeFormatter.ofPattern(
-                        "d MMMM yyyy",
-                        Locale.forLanguageTag(
-                            "nl-NL"
-                        )
-                    )
-                )
-                    ?: concert.date
-
-            val dateAndTime =
-                if (
-                    concert.time.isBlank()
-                ) {
-
-                    displayDate
-
-                } else {
-
-                    "$displayDate · ${concert.time}"
-                }
-
-            Text(
-                dateAndTime
-            )
-
-            Spacer(
-                modifier =
-                    Modifier.height(
-                        4.dp
-                    )
-            )
-
-            Text(
-                buildString {
-
-                    append(
-                        concert.venue
-                    )
-
-                    if (
-                        concert.city.isNotBlank()
-                    ) {
-
-                        append(
-                            " · ${concert.city}"
-                        )
-                    }
-
-                    if (
-                        concert.country.isNotBlank()
-                    ) {
-
-                        append(
-                            " ${countryFlag(concert.country)}"
-                        )
-                    }
-                }
-            )
-
-            if (
-                concert.clubCard
-            ) {
-                Spacer(
-                    modifier = Modifier.height(6.dp)
-                )
-
-                Text(
-                    "ROTOWN CLUBKAART",
-                    fontWeight = FontWeight.Bold
-                )
-            }
-
-            if (
-                concert.source.isNotBlank()
-            ) {
-
-                Spacer(
-                    modifier =
-                        Modifier.height(
-                            6.dp
-                        )
-                )
-
+    if (confirmFavoriteRemoval) AlertDialog(onDismissRequest = { confirmFavoriteRemoval = false }, title = { Text("Favoriet verwijderen?") }, text = { Text("Wil je dit concert uit je favorieten verwijderen?") }, confirmButton = { TextButton(onClick = { confirmFavoriteRemoval = false; onFavoriteClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmFavoriteRemoval = false }) { Text("Annuleren") } })
+    if (confirmAttendingRemoval) AlertDialog(onDismissRequest = { confirmAttendingRemoval = false }, title = { Text("Concert verwijderen uit Tickets?") }, text = { Text("Wil je aangeven dat je niet meer naar dit concert gaat?") }, confirmButton = { TextButton(onClick = { confirmAttendingRemoval = false; onAttendingClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmAttendingRemoval = false }) { Text("Annuleren") } })
+    Card(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+            Text(concert.artist, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium, maxLines = 1)
+            Text(buildString { append(concert.venue); if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country)) }, style = MaterialTheme.typography.bodyMedium)
+            val displayDate = parseConcertDate(concert.date)?.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("nl-NL"))) ?: concert.date
+            Text(if (concert.time.isBlank()) displayDate else "$displayDate · ${concert.time}", style = MaterialTheme.typography.bodyMedium)
+            if (concert.clubCard && showClubCardLabel) Text("ROTOWN CLUBKAART", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
+            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 val context = LocalContext.current
-
-                Text(
-                    text = "Bron: ${concert.source}",
-                    style =
-                        MaterialTheme
-                            .typography
-                            .bodySmall,
-                    color =
-                        if (concert.url.isNotBlank()) {
-                            MaterialTheme.colorScheme.primary
-                        } else {
-                            MaterialTheme.colorScheme.onSurfaceVariant
-                        },
-                    textDecoration =
-                        if (concert.url.isNotBlank()) {
-                            androidx.compose.ui.text.style.TextDecoration.Underline
-                        } else {
-                            null
-                        },
-                    modifier =
-                        if (concert.url.isNotBlank()) {
-                            Modifier.clickable {
-                                context.startActivity(
-                                    Intent(
-                                        Intent.ACTION_VIEW,
-                                        Uri.parse(concert.url)
-                                    )
-                                )
-                            }
-                        } else {
-                            Modifier
-                        }
-                )
+                Text(text = if (concert.source.isBlank()) "" else "Bron: ${concert.source}", style = MaterialTheme.typography.bodySmall, color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = if (concert.url.isNotBlank()) androidx.compose.ui.text.style.TextDecoration.Underline else null, modifier = Modifier.weight(1f).then(if (concert.url.isNotBlank()) Modifier.clickable { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url))) } else Modifier))
+                TextButton(onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }) { Text(if (concert.isAttending) "✓" else "＋") }
+                TextButton(onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡") }
             }
         }
     }
