@@ -1,25 +1,5 @@
 [
   {
-    "artist": "Come As You Are 2026: The Afghan Whigs, shame, Republica & meer",
-    "venue": "Meerdere locaties",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "15:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/caya2026"
-  },
-  {
-    "artist": "KENNEN JULLIE DEZE NOG?",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "19:00",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/kennen-jullie-deze-nog-3-10/"
-  },
-  {
     "artist": "Panchiko",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -28,6 +8,16 @@
     "time": "19:15",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/panchiko/2741543"
+  },
+  {
+    "artist": "Ben Ellis in Tolhuistuin Amsterdam",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/ben-ellis/2886534"
   },
   {
     "artist": "Kelela - new avatar live",
@@ -110,14 +100,14 @@
     "url": "https://www.013.nl/programma/123148/joy-division-undercover"
   },
   {
-    "artist": "An Evening With Knives",
-    "venue": "Café The Jack",
-    "city": "Eindhoven",
+    "artist": "Stu Larsen + Tim Hart",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
     "country": "NL",
     "date": "2026-10-03",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/an-evening-with-knives-3okt"
+    "time": "20:15",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/stu-larsen/2843715"
   },
   {
     "artist": "Cloudbusting",
@@ -158,16 +148,6 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/warhaus-ha-ha-heartbeats-ade/2930261"
-  },
-  {
-    "artist": "Paardcafé: Mr Heleen",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-10-03",
-    "time": "20:45",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/paarcafe-mr-heleen/"
   },
   {
     "artist": "TENDER",
@@ -300,6 +280,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/bass-drum-of-death-1/",
     "clubCard": false
+  },
+  {
+    "artist": "Jude York - Once Upon a Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-04",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/jude-york-once-upon-a-tour/2906985"
   },
   {
     "artist": "Mica Millar",
@@ -2523,6 +2513,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/23104250/fkj-19-10-2026/"
   },
   {
+    "artist": "Alien Chicks - 19 oktober 2026",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-19",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/alien-chicks/2885760"
+  },
+  {
     "artist": "Dave East",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -4024,16 +4024,6 @@
     "time": "23:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/indiesleaze-halloween-night/2921614"
-  },
-  {
-    "artist": "LC LATE - SATURDAY NIGHT w/ Sex Mask, Cutouts, Tanzana, Mouth Ulcers",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-31",
-    "time": "23:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/lc-late-saturday-night-w-sex-mask-cutouts-tanzana-mouth-ulcers/2921572"
   },
   {
     "artist": "Paardcafé: Club Boogaloo",
@@ -8380,16 +8370,6 @@
     "clubCard": false
   },
   {
-    "artist": "ABBA Gold: The Christmas Special Show",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-20",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/abba-gold-christmas-special-show-2026"
-  },
-  {
     "artist": "New Model Army",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -8398,6 +8378,16 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/new-model-army-20-12-2026/"
+  },
+  {
+    "artist": "ABBA Gold: The Christmas Special Show",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/abba-gold-christmas-special-show-2026"
   },
   {
     "artist": "Lucky Fonz III",
@@ -8947,16 +8937,6 @@
     "url": "https://www.013.nl/programma/155569/frozen-soul"
   },
   {
-    "artist": "Erwin Nyhoff & The Prodigal Sons",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/erwin-nyhoff-prodigal-sons"
-  },
-  {
     "artist": "Carnaval Countdown",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -8985,6 +8965,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/het-goede-doel/"
+  },
+  {
+    "artist": "Erwin Nyhoff & The Prodigal Sons",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/erwin-nyhoff-prodigal-sons"
   },
   {
     "artist": "ANOTHER TASTE",
@@ -10096,6 +10086,16 @@
     "url": "https://www.paard.nl/event/hallo-venray-7/"
   },
   {
+    "artist": "Black Box Revelation - Mezz",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/black-box-revelation/"
+  },
+  {
     "artist": "The Dirty Daddies Let The Good Times Roll",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -10591,16 +10591,6 @@
     "url": "https://poppodiumboerderij.nl/programma/rpwl/"
   },
   {
-    "artist": "The Elvis Concert - Special 50th Anniversary 1977 - 2027",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-04-11",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/elvis-concert2027"
-  },
-  {
     "artist": "DRAGONFORCE + Visions of Atlantis + Wings of Steel",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -10609,6 +10599,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/157445/dragonforce"
+  },
+  {
+    "artist": "The Elvis Concert - Special 50th Anniversary 1977 - 2027",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-04-11",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/elvis-concert2027"
   },
   {
     "artist": "Nienke Leone",
@@ -11313,8 +11313,18 @@
     "city": "Eindhoven",
     "country": "NL",
     "date": "2027-11-26",
-    "time": "",
+    "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/kovacs-nieuwe-datum"
+  },
+  {
+    "artist": "NYE - Mezz",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2080-11-14",
+    "time": "",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/nye-6/"
   }
 ]
