@@ -105,10 +105,10 @@ fun WelcomeScreen(
 ) {
     Image(
         painter = painterResource(
-            id = R.drawable.barrys_concert_agenda_logo
+            id = R.drawable.barrys_concerten_splash
         ),
         contentDescription = "Barry's concert agenda",
-        contentScale = androidx.compose.ui.layout.ContentScale.Fit,
+        contentScale = androidx.compose.ui.layout.ContentScale.Crop,
         modifier =
             Modifier
                 .fillMaxSize()
