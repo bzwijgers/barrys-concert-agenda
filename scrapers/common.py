@@ -325,6 +325,29 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
         if "afgelast" in artist_lower or "geannuleerd" in artist_lower or "cancelled" in artist_lower or "canceled" in artist_lower:
             return None
         event_date, event_time = _detail_date_time(page)
+        if source == "Patronaat":
+            page_text = clean_text(page)
+            month_names_short = "|".join(MONTHS_SHORT.keys())
+            visible_date = re.search(
+                r"\b(?:ma|di|wo|do|vr|za|zo)\s+(\d{1,2})\s+(" + month_names_short + r")\s+(20\d{2})\b",
+                page_text,
+                flags=re.IGNORECASE,
+            )
+            if visible_date:
+                event_date = date(
+                    int(visible_date.group(3)),
+                    MONTHS_SHORT[visible_date.group(2).lower()],
+                    int(visible_date.group(1)),
+                ).isoformat()
+
+            start_match = re.search(
+                r"\bStart:\s*(\d{1,2})[:.]([0-5]\d)\b",
+                page_text,
+                flags=re.IGNORECASE,
+            )
+            if start_match:
+                event_time = f"{int(start_match.group(1)):02d}:{int(start_match.group(2)):02d}"
+
         if source == "MEZZ":
             # MEZZ toont bovenaan bijvoorbeeld "Zondag 14 maart" en
             # "20:00 (Doors: 19:30)", meestal zonder jaartal.
