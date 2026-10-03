@@ -567,51 +567,54 @@ fun ConcertApp() {
                     )
         ) {
 
-            Column(
-                modifier =
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(
-                            horizontal = 20.dp,
-                            vertical = 10.dp
-                        )
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-
                 Text(
-                    text =
-                        "Barry's concert agenda",
-                    style =
-                        MaterialTheme
-                            .typography
-                            .headlineMedium,
-                    fontWeight =
-                        FontWeight.Bold,
-                    maxLines = 1
+                    text = "Barry's concert agenda  🇳🇱 🇧🇪",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    modifier = Modifier.weight(1f)
                 )
-
-                Text(
-                    text =
-                        "🇳🇱  🇧🇪",
-                    style =
-                        MaterialTheme
-                            .typography
-                            .bodySmall
-                )
+                IconButton(onClick = { searchExpanded = !searchExpanded }) {
+                    Text(if (searchExpanded) "✕" else "🔍", fontSize = 20.sp)
+                }
             }
 
-            OutlinedTextField(
-                value = searchQuery,
-                onValueChange = { searchQuery = it },
-                placeholder = {
-                    Text("Zoeken: artiest, datum, venue...", fontSize = 12.sp)
-                },
-                singleLine = true,
-                modifier =
-                    Modifier
-                        .widthIn(max = 300.dp)
-                        .height(44.dp)
-                        .padding(start = 20.dp)
-            )
+            if (searchExpanded) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    OutlinedTextField(
+                        value = searchQuery,
+                        onValueChange = { searchQuery = it },
+                        placeholder = { Text("Artiest of zaal…", fontSize = 12.sp) },
+                        singleLine = true,
+                        modifier = Modifier.weight(1f)
+                    )
+                    TextButton(onClick = { showDatePicker = true }) {
+                        Text(selectedSearchDate?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "📅 Datum")
+                    }
+                }
+                if (selectedSearchDate != null) {
+                    TextButton(onClick = { selectedSearchDate = null }, modifier = Modifier.padding(start = 20.dp)) {
+                        Text("Datumfilter wissen")
+                    }
+                }
+            }
+
+            if (showDatePicker) {
+                BarryDatePicker(
+                    onDismiss = { showDatePicker = false },
+                    onDateSelected = {
+                        selectedSearchDate = it
+                        showDatePicker = false
+                    }
+                )
+            }
 
             if (
                 loading
