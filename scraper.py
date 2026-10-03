@@ -589,7 +589,6 @@ def scrape_effenaar():
 
     return concerts
 
-
 # ============================================================
 # ROTOWN
 # ============================================================
@@ -616,9 +615,7 @@ def rotown_find_location(block):
     if not location_match:
         return ""
 
-    location_start = (
-        location_match.start()
-    )
+    location_start = location_match.start()
 
     end = min(
         location_start + 1500,
@@ -692,8 +689,7 @@ def rotown_find_concert_urls(html):
 def rotown_find_structured_events(html):
     event_starts = [
         match.start()
-        for match
-        in re.finditer(
+        for match in re.finditer(
             r'"@type"\s*:\s*"Event"',
             html,
             flags=re.IGNORECASE,
@@ -862,18 +858,12 @@ def scrape_rotown():
                     event["location"]
                     if event["location"]
                     else "Rotown",
-                "city":
-                    "Rotterdam",
-                "country":
-                    "NL",
-                "date":
-                    concert_date,
-                "time":
-                    start_time,
-                "source":
-                    "Rotown",
-                "url":
-                    event["url"],
+                "city": "Rotterdam",
+                "country": "NL",
+                "date": concert_date,
+                "time": start_time,
+                "source": "Rotown",
+                "url": event["url"],
             }
         )
 
@@ -914,29 +904,66 @@ SOURCE013_BASE_URL = "https://www.013.nl"
 
 
 def source013_find_program_urls(html):
-    cleaned_html = (
+    cleaned_html = html_module.unescape(
         html
         .replace("\\/", "/")
         .replace("\\u002F", "/")
         .replace("\\u002f", "/")
     )
 
-    event_regex = re.compile(
-        r'(?:https?://(?:www\.)?013\.nl)?'
-        r'/programma/\d+/[^"\'<>?#\s]+',
-        flags=re.IGNORECASE,
-    )
-
     urls = []
     seen = set()
 
-    for match in event_regex.finditer(cleaned_html):
-        event_url = (
-            match.group(0)
-            .split("?", 1)[0]
-            .split("#", 1)[0]
-            .rstrip("/")
+    # Normale href-links.
+    href_regex = re.compile(
+        r'''href\s*=\s*["']([^"']+)["']''',
+        flags=re.IGNORECASE,
+    )
+
+    for match in href_regex.finditer(
+        cleaned_html
+    ):
+        href = match.group(1).strip()
+
+        url_match = re.search(
+            r'/programma/\d+/[^/?#"\'\s<>]+',
+            href,
+            flags=re.IGNORECASE,
         )
+
+        if not url_match:
+            continue
+
+        path = url_match.group(0)
+
+        event_url = (
+            SOURCE013_BASE_URL
+            + path
+        )
+
+        key = normalize_url(
+            event_url
+        )
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+        urls.append(event_url)
+
+    # Fallback:
+    # sommige pagina's stoppen URL's in JSON/script-data
+    # in plaats van in een gewone href.
+    fallback_regex = re.compile(
+        r'(?:https?://(?:www\.)?013\.nl)?'
+        r'/programma/\d+/[^"\'<>?#\s\\]+',
+        flags=re.IGNORECASE,
+    )
+
+    for match in fallback_regex.finditer(
+        cleaned_html
+    ):
+        event_url = match.group(0)
 
         if event_url.startswith("/"):
             event_url = (
@@ -944,7 +971,16 @@ def source013_find_program_urls(html):
                 + event_url
             )
 
-        key = normalize_url(event_url)
+        event_url = (
+            event_url
+            .split("?", 1)[0]
+            .split("#", 1)[0]
+            .rstrip("/")
+        )
+
+        key = normalize_url(
+            event_url
+        )
 
         if key in seen:
             continue
@@ -1043,7 +1079,9 @@ def source013_parse_event(
     if not event_match:
         return None
 
-    event_position = event_match.start()
+    event_position = (
+        event_match.start()
+    )
 
     block_start = max(
         event_position - 1000,
@@ -1132,21 +1170,24 @@ def source013_parse_event(
 
 def scrape_013():
     print()
-    print("============================================================")
+    print(
+        "============================================================"
+    )
     print("013")
-    print("============================================================")
+    print(
+        "============================================================"
+    )
 
     try:
-        program_html = download_page(
+        program_html = download_page_retry(
             SOURCE013_URL
         )
 
     except Exception as error:
-        print(
-            "013 programma fout:",
-            str(error)
+        raise RuntimeError(
+            "013 programma kon niet worden gedownload: "
+            + str(error)
         )
-        return []
 
     program_urls = (
         source013_find_program_urls(
@@ -1159,10 +1200,22 @@ def scrape_013():
         len(program_urls)
     )
 
+    # Beveiliging tegen een ogenschijnlijk succesvolle,
+    # maar inhoudelijk mislukte 013-scrape.
+    if len(program_urls) < 25:
+        raise RuntimeError(
+            "013 scraper gestopt: slechts "
+            f"{len(program_urls)} programma-links gevonden."
+        )
+
     concerts = []
     detail_errors = 0
     no_event_data = 0
-    total = len(program_urls)
+
+    total = len(
+        program_urls
+    )
+
     processed = 0
 
     def fetch_013(event_url):
@@ -1170,8 +1223,10 @@ def scrape_013():
 
         for attempt in range(3):
             try:
-                event_html = download_page(
-                    event_url
+                event_html = (
+                    download_page(
+                        event_url
+                    )
                 )
 
                 return source013_parse_event(
@@ -1184,7 +1239,8 @@ def scrape_013():
 
                 if attempt < 2:
                     time.sleep(
-                        2.0 * (attempt + 1)
+                        2.0
+                        * (attempt + 1)
                     )
 
         raise last_error
@@ -1205,14 +1261,18 @@ def scrape_013():
         for future in as_completed(
             future_to_url
         ):
-            event_url = future_to_url[
-                future
-            ]
+            event_url = (
+                future_to_url[
+                    future
+                ]
+            )
 
             processed += 1
 
             try:
-                concert = future.result()
+                concert = (
+                    future.result()
+                )
 
                 if concert is not None:
                     concerts.append(
@@ -1275,6 +1335,15 @@ def scrape_013():
         "013 detailpagina fouten:",
         detail_errors
     )
+
+    # Tweede beveiliging:
+    # ook na het verwerken moet er een realistische
+    # hoeveelheid 013-concerten overblijven.
+    if len(concerts) < 25:
+        raise RuntimeError(
+            "013 scraper gestopt: slechts "
+            f"{len(concerts)} concerten verwerkt."
+        )
 
     return concerts
 
@@ -1790,9 +1859,13 @@ def paradiso_parse_event(
 
 def scrape_paradiso():
     print()
-    print("============================================================")
+    print(
+        "============================================================"
+    )
     print("PARADISO")
-    print("============================================================")
+    print(
+        "============================================================"
+    )
 
     try:
         agenda_html = (
@@ -1837,8 +1910,10 @@ def scrape_paradiso():
 
         for attempt in range(3):
             try:
-                event_html = download_page_retry(
-                    event_url
+                event_html = (
+                    download_page_retry(
+                        event_url
+                    )
                 )
 
                 return paradiso_parse_event(
@@ -1970,7 +2045,6 @@ def scrape_paradiso():
 
     return concerts
 
-
 # ============================================================
 # BAROEG
 # ============================================================
@@ -2005,6 +2079,10 @@ def baroeg_find_event_urls(html):
             + "/"
         )
 
+        # WordPress feed-URL is geen concert.
+        if "/feed/" in event_url.lower():
+            continue
+
         urls.append(event_url)
 
     relative_regex = re.compile(
@@ -2021,6 +2099,9 @@ def baroeg_find_event_urls(html):
             .split("#", 1)[0]
             .rstrip("/")
         )
+
+        if "/feed/" in path.lower():
+            continue
 
         urls.append(
             BAROEG_BASE_URL
@@ -2040,6 +2121,7 @@ def baroeg_find_event_urls(html):
             continue
 
         seen.add(key)
+
         unique_urls.append(
             event_url
         )
@@ -2488,7 +2570,9 @@ print(
 all_concerts = []
 
 
+# ============================================================
 # EFFENAAR
+# ============================================================
 
 try:
     effenaar_concerts = (
@@ -2506,7 +2590,9 @@ except Exception as error:
     )
 
 
+# ============================================================
 # ROTOWN
+# ============================================================
 
 try:
     rotown_concerts = (
@@ -2524,25 +2610,33 @@ except Exception as error:
     )
 
 
+# ============================================================
 # 013
+# ============================================================
+#
+# LET OP:
+# 013 is bewust NIET omgeven door try/except.
+#
+# scrape_013() bevat een beveiliging:
+# - minder dan 25 programma-links -> STOP
+# - minder dan 25 verwerkte concerten -> STOP
+#
+# Daardoor wordt concerts.json NIET overschreven
+# wanneer de 013-scraper opnieuw stukloopt.
+# ============================================================
 
-try:
-    source013_concerts = (
-        scrape_013()
-    )
+source013_concerts = (
+    scrape_013()
+)
 
-    all_concerts.extend(
-        source013_concerts
-    )
-
-except Exception as error:
-    print(
-        "ERNSTIGE 013 FOUT:",
-        str(error)
-    )
+all_concerts.extend(
+    source013_concerts
+)
 
 
+# ============================================================
 # PARADISO
+# ============================================================
 
 try:
     paradiso_concerts = (
@@ -2560,7 +2654,9 @@ except Exception as error:
     )
 
 
+# ============================================================
 # BAROEG
+# ============================================================
 
 try:
     baroeg_concerts = (
@@ -2608,6 +2704,27 @@ all_concerts.sort(
         concert["artist"].lower()
     )
 )
+
+
+# ============================================================
+# EXTRA CONTROLE VOOR OPSLAAN
+# ============================================================
+
+source013_count_before_save = len(
+    [
+        concert
+        for concert in all_concerts
+        if concert["source"] == "013"
+    ]
+)
+
+if source013_count_before_save < 25:
+    raise RuntimeError(
+        "VEILIGHEIDSSTOP: slechts "
+        f"{source013_count_before_save} "
+        "013-concerten aanwezig. "
+        "concerts.json wordt NIET overschreven."
+    )
 
 
 # ============================================================
@@ -2671,6 +2788,7 @@ baroeg_count = len(
         if concert["source"] == "Baroeg"
     ]
 )
+
 
 print()
 print(
