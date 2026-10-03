@@ -11,5 +11,6 @@ data class StoredConcert(
     val url: String,
     val firstFound: Long,
     val isFavorite: Boolean = false,
+    val isAttending: Boolean = false,
     val clubCard: Boolean = false
 )
