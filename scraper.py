@@ -1165,29 +1165,29 @@ def scrape_013():
     total = len(program_urls)
     processed = 0
 
-        def fetch_013(event_url):
-    last_error = None
+    def fetch_013(event_url):
+        last_error = None
 
-    for attempt in range(3):
-        try:
-            event_html = download_page(
-                event_url
-            )
-
-            return source013_parse_event(
-                event_html,
-                event_url
-            )
-
-        except Exception as error:
-            last_error = error
-
-            if attempt < 2:
-                time.sleep(
-                    2.0 * (attempt + 1)
+        for attempt in range(3):
+            try:
+                event_html = download_page(
+                    event_url
                 )
 
-    raise last_error
+                return source013_parse_event(
+                    event_html,
+                    event_url
+                )
+
+            except Exception as error:
+                last_error = error
+
+                if attempt < 2:
+                    time.sleep(
+                        2.0 * (attempt + 1)
+                    )
+
+        raise last_error
 
     with ThreadPoolExecutor(
         max_workers=3
@@ -1277,7 +1277,6 @@ def scrape_013():
     )
 
     return concerts
-
 
 # ============================================================
 # PARADISO
@@ -1838,10 +1837,8 @@ def scrape_paradiso():
 
         for attempt in range(3):
             try:
-                event_html = (
-                    download_page_retry(
-                        event_url
-                    )
+                event_html = download_page_retry(
+                    event_url
                 )
 
                 return paradiso_parse_event(
@@ -1854,6 +1851,10 @@ def scrape_paradiso():
 
                 if attempt < 2:
                     time.sleep(
+                        2.0 * (attempt + 1)
+                    )
+
+        raise last_error
 
     with ThreadPoolExecutor(
         max_workers=3
@@ -1968,6 +1969,7 @@ def scrape_paradiso():
     )
 
     return concerts
+
 
 # ============================================================
 # BAROEG
@@ -2557,6 +2559,7 @@ except Exception as error:
         str(error)
     )
 
+
 # BAROEG
 
 try:
@@ -2573,6 +2576,7 @@ except Exception as error:
         "ERNSTIGE BAROEG FOUT:",
         str(error)
     )
+
 
 # ============================================================
 # DUBBELEN VERWIJDEREN
@@ -2701,6 +2705,7 @@ print(
     "Baroeg:",
     baroeg_count
 )
+
 print(
     "Totaal:",
     len(all_concerts)
