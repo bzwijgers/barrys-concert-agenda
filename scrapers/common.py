@@ -190,7 +190,7 @@ def find_json_value(
 
 def find_site_event_urls(page, base_url, path_prefix):
     page = page.replace("\\/", "/").replace("\\u002F", "/").replace("\\u002f", "/")
-    pattern = re.compile(r'href=["\\']([^"\\']+)["\\']', flags=re.IGNORECASE)
+    pattern = re.compile(r"""href=["']([^"']+)["']""", flags=re.IGNORECASE)
     result = []
     seen = set()
 
