@@ -90,48 +90,17 @@ class MainActivity : ComponentActivity() {
 fun WelcomeScreen(
     onOpenApp: () -> Unit
 ) {
-    Box(
+    Image(
+        painter = painterResource(
+            id = R.drawable.barrys_concert_agenda_logo
+        ),
+        contentDescription = "Barry's concert agenda",
+        contentScale = androidx.compose.ui.layout.ContentScale.Crop,
         modifier =
             Modifier
                 .fillMaxSize()
-                .clickable(onClick = onOpenApp),
-        contentAlignment =
-            Alignment.Center
-    ) {
-        Column(
-            modifier = Modifier.padding(32.dp),
-            horizontalAlignment =
-                Alignment.CenterHorizontally
-        ) {
-            Image(
-                painter = painterResource(
-                    id = R.drawable.barrys_concert_agenda_logo
-                ),
-                contentDescription =
-                    "Barry's concert agenda",
-                modifier = Modifier.size(220.dp)
-            )
-
-            Spacer(
-                modifier = Modifier.height(24.dp)
-            )
-
-            Text(
-                text = "Barry's concert agenda",
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.Bold
-            )
-
-            Spacer(
-                modifier = Modifier.height(12.dp)
-            )
-
-            Text(
-                text = "Tik om de agenda te openen",
-                style = MaterialTheme.typography.bodyMedium
-            )
-        }
-    }
+                .clickable(onClick = onOpenApp)
+    )
 }
 
 @Composable
