@@ -311,7 +311,7 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
     def fetch(url):
         page = download_page_retry(url)
         artist = _detail_title(page)
-        artist = re.sub(r"\s+[\-–—]\s+(?:Poppodium\s+)?(?:Boerderij|PAARD|Melkweg|TivoliVredenburg).*$", "", artist, flags=re.IGNORECASE).strip()
+        artist = re.sub(r"\s+[\-–—]\s+(?:Poppodium\s+)?(?:Boerderij|PAARD|Melkweg|TivoliVredenburg|Mezz).*$", "", artist, flags=re.IGNORECASE).strip()
         artist_lower = artist.lower()
         if reject_classical:
             page_text = clean_text(page).lower()
@@ -325,6 +325,33 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
         if "afgelast" in artist_lower or "geannuleerd" in artist_lower or "cancelled" in artist_lower or "canceled" in artist_lower:
             return None
         event_date, event_time = _detail_date_time(page)
+        if source == "MEZZ":
+            # MEZZ toont bovenaan bijvoorbeeld "Zondag 14 maart" en
+            # "20:00 (Doors: 19:30)", meestal zonder jaartal.
+            page_text = clean_text(page)
+            month_names = "|".join(MONTHS_LONG.keys())
+            visible_date = re.search(
+                r"\b(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag)\s+"
+                r"(\d{1,2})\s+(" + month_names + r")\b",
+                page_text,
+                flags=re.IGNORECASE,
+            )
+            if visible_date:
+                day_value = int(visible_date.group(1))
+                month_value = MONTHS_LONG[visible_date.group(2).lower()]
+                year_value = today.year
+                candidate = date(year_value, month_value, day_value)
+                if candidate < today:
+                    candidate = date(year_value + 1, month_value, day_value)
+                event_date = candidate.isoformat()
+
+            visible_time = re.search(
+                r"\b(\d{1,2})[:.]([0-5]\d)\s*\(Doors:",
+                page_text,
+                flags=re.IGNORECASE,
+            )
+            if visible_time:
+                event_time = f"{int(visible_time.group(1)):02d}:{int(visible_time.group(2)):02d}"
         if date_from_url:
             url_dates = re.findall(r"(\d{2})-(\d{2})-(20\d{2})", url)
             if url_dates:
