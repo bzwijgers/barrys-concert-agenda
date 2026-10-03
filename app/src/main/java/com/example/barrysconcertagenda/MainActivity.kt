@@ -679,7 +679,7 @@ fun ConcertApp() {
                                 )
 
                                 Text(
-                                    "Zalen: Rotown · 013 · Paradiso · Baroeg · Effenaar",
+                                    "Zalen: Rotown · 013 · Paradiso · Baroeg · Effenaar · Boerderij · PAARD · Melkweg · TivoliVredenburg",
                                     style =
                                         MaterialTheme
                                             .typography
