@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -41,6 +42,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
@@ -59,6 +61,7 @@ data class Concert(
     val firstFound: Long = 0L,
     val isNew: Boolean = false,
     val isFavorite: Boolean = false,
+    val isAttending: Boolean = false,
     val archived: Boolean = false,
     val clubCard: Boolean = false
 )
@@ -247,6 +250,9 @@ fun ConcertApp() {
                     isFavorite =
                         old?.isFavorite
                             ?: false,
+                    isAttending =
+                        old?.isAttending
+                            ?: false,
                     clubCard = source.clubCard
                 )
             }
@@ -292,13 +298,25 @@ fun ConcertApp() {
                         isFavorite =
                             old?.isFavorite
                                 ?: concert.isFavorite,
+                        isAttending =
+                            old?.isAttending
+                                ?: concert.isAttending,
                         clubCard = concert.clubCard
                     )
             }
         }
 
         val storedAfter =
-            merged.values.toList()
+            merged.values.map { concert ->
+                if (
+                    normalizeUrl(concert.url) ==
+                    "https://www.rotown.nl/agenda/republica"
+                ) {
+                    concert.copy(isAttending = true)
+                } else {
+                    concert
+                }
+            }
 
         ConcertStorage.saveConcerts(
             context,
@@ -343,11 +361,13 @@ fun ConcertApp() {
                         firstFound =
                             stored.firstFound,
                         isNew =
-                            normalizeUrl(
-                                stored.url
-                            ) in newUrls,
+                            stored.firstFound > 0L &&
+                            now - stored.firstFound <=
+                                7L * 24L * 60L * 60L * 1000L,
                         isFavorite =
                             stored.isFavorite,
+                        isAttending =
+                            stored.isAttending,
                         clubCard = stored.clubCard,
                         archived =
                             isPastConcert(
@@ -409,13 +429,20 @@ fun ConcertApp() {
 
             3 ->
                 concerts.filter {
-                    it.archived
+                    it.isAttending &&
+                            !it.archived
                 }
 
             4 ->
                 concerts.filter {
                     it.clubCard &&
                             !it.archived
+                }
+
+            5 ->
+                concerts.filter {
+                    it.isAttending &&
+                            it.archived
                 }
 
             else ->
@@ -425,7 +452,7 @@ fun ConcertApp() {
     val normalizedSearch =
         searchQuery.trim().lowercase(Locale.getDefault())
 
-    val visibleConcerts =
+    val searchedConcerts =
         if (normalizedSearch.isBlank()) {
             tabConcerts
         } else {
@@ -445,6 +472,13 @@ fun ConcertApp() {
             }
         }
 
+    val visibleConcerts =
+        if (selectedTab == 0) {
+            searchedConcerts.sortedByDescending { it.firstFound }
+        } else {
+            searchedConcerts
+        }
+
     Scaffold(
         bottomBar = {
 
@@ -460,7 +494,7 @@ fun ConcertApp() {
                         Text("●")
                     },
                     label = {
-                        Text("Nieuw")
+                        Text("Nieuw", fontSize = 9.sp, maxLines = 1)
                     }
                 )
 
@@ -474,7 +508,7 @@ fun ConcertApp() {
                         Text("≡")
                     },
                     label = {
-                        Text("Concerten")
+                        Text("Agenda", fontSize = 9.sp, maxLines = 1)
                     }
                 )
 
@@ -488,7 +522,7 @@ fun ConcertApp() {
                         Text("♥")
                     },
                     label = {
-                        Text("Favorieten")
+                        Text("Favoriet", fontSize = 9.sp, maxLines = 1)
                     }
                 )
 
@@ -502,22 +536,22 @@ fun ConcertApp() {
                         Text("♣")
                     },
                     label = {
-                        Text("Clubkaart")
+                        Text("Clubkaart", fontSize = 9.sp, maxLines = 1)
                     }
                 )
 
                 NavigationBarItem(
-                    selected =
-                        selectedTab == 3,
-                    onClick = {
-                        selectedTab = 3
-                    },
-                    icon = {
-                        Text("▣")
-                    },
-                    label = {
-                        Text("Archief")
-                    }
+                    selected = selectedTab == 3,
+                    onClick = { selectedTab = 3 },
+                    icon = { Text("✓") },
+                    label = { Text("Tickets", fontSize = 9.sp, maxLines = 1) }
+                )
+
+                NavigationBarItem(
+                    selected = selectedTab == 5,
+                    onClick = { selectedTab = 5 },
+                    icon = { Text("▣") },
+                    label = { Text("Archief", fontSize = 9.sp, maxLines = 1) }
                 )
             }
         }
@@ -567,21 +601,15 @@ fun ConcertApp() {
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
-                label = {
-                    Text("Zoeken")
-                },
                 placeholder = {
-                    Text("Artiest, datum, venue...")
+                    Text("Zoeken: artiest, datum, venue...", fontSize = 12.sp)
                 },
                 singleLine = true,
                 modifier =
                     Modifier
-                        .fillMaxWidth()
-                        .widthIn(max = 420.dp)
-                        .padding(
-                            horizontal = 20.dp,
-                            vertical = 0.dp
-                        )
+                        .widthIn(max = 300.dp)
+                        .height(44.dp)
+                        .padding(start = 20.dp)
             )
 
             if (
@@ -633,7 +661,7 @@ fun ConcertApp() {
                                 )
 
                                 Text(
-                                    "Nieuw sinds deze controle"
+                                    "Nieuw in de afgelopen 7 dagen · nieuwste bovenaan"
                                 )
                             }
 
@@ -663,6 +691,13 @@ fun ConcertApp() {
                                 )
                             }
 
+                            3 -> {
+                                Text(
+                                    "${visibleConcerts.size} concerten waar ik naartoe ga",
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+
                             4 -> {
 
                                 Text(
@@ -676,16 +711,15 @@ fun ConcertApp() {
                                 )
                             }
 
-                            3 -> {
+                            5 -> {
 
                                 Text(
-                                    "${visibleConcerts.size} concerten in archief",
-                                    fontWeight =
-                                        FontWeight.Bold
+                                    "${visibleConcerts.size} bezochte concerten",
+                                    fontWeight = FontWeight.Bold
                                 )
 
                                 Text(
-                                    "Concerten waarvan de datum is verstreken"
+                                    "Afgelopen concerten die ik heb bezocht"
                                 )
                             }
                         }
@@ -744,12 +778,24 @@ fun ConcertApp() {
                                     }
 
                                 ConcertStorage.setFavorite(
-                                    context =
-                                        context,
-                                    url =
-                                        concert.url,
-                                    favorite =
-                                        newFavorite
+                                    context = context,
+                                    url = concert.url,
+                                    favorite = newFavorite
+                                )
+                            },
+                            onAttendingClick = {
+                                val newAttending = !concert.isAttending
+                                concerts = concerts.map {
+                                    if (normalizeUrl(it.url) == normalizeUrl(concert.url)) {
+                                        it.copy(isAttending = newAttending)
+                                    } else {
+                                        it
+                                    }
+                                }
+                                ConcertStorage.setAttending(
+                                    context = context,
+                                    url = concert.url,
+                                    attending = newAttending
                                 )
                             }
                         )
@@ -773,8 +819,45 @@ fun ConcertApp() {
 @Composable
 fun ConcertCard(
     concert: Concert,
-    onFavoriteClick: () -> Unit
+    onFavoriteClick: () -> Unit,
+    onAttendingClick: () -> Unit
 ) {
+    var confirmFavoriteRemoval by remember { mutableStateOf(false) }
+    var confirmAttendingRemoval by remember { mutableStateOf(false) }
+
+    if (confirmFavoriteRemoval) {
+        AlertDialog(
+            onDismissRequest = { confirmFavoriteRemoval = false },
+            title = { Text("Favoriet verwijderen?") },
+            text = { Text("Wil je dit concert uit je favorieten verwijderen?") },
+            confirmButton = {
+                TextButton(onClick = {
+                    confirmFavoriteRemoval = false
+                    onFavoriteClick()
+                }) { Text("Verwijderen") }
+            },
+            dismissButton = {
+                TextButton(onClick = { confirmFavoriteRemoval = false }) { Text("Annuleren") }
+            }
+        )
+    }
+
+    if (confirmAttendingRemoval) {
+        AlertDialog(
+            onDismissRequest = { confirmAttendingRemoval = false },
+            title = { Text("Concert verwijderen uit Tickets?") },
+            text = { Text("Wil je aangeven dat je niet meer naar dit concert gaat?") },
+            confirmButton = {
+                TextButton(onClick = {
+                    confirmAttendingRemoval = false
+                    onAttendingClick()
+                }) { Text("Verwijderen") }
+            },
+            dismissButton = {
+                TextButton(onClick = { confirmAttendingRemoval = false }) { Text("Annuleren") }
+            }
+        )
+    }
 
     Card(
         modifier =
@@ -810,20 +893,30 @@ fun ConcertCard(
                             .titleLarge
                 )
 
-                TextButton(
-                    onClick =
-                        onFavoriteClick
-                ) {
-
-                    Text(
-                        if (
-                            concert.isFavorite
-                        ) {
-                            "♥"
-                        } else {
-                            "♡"
+                Row {
+                    TextButton(
+                        onClick = {
+                            if (concert.isFavorite) {
+                                confirmFavoriteRemoval = true
+                            } else {
+                                onFavoriteClick()
+                            }
                         }
-                    )
+                    ) {
+                        Text(if (concert.isFavorite) "♥" else "♡")
+                    }
+
+                    TextButton(
+                        onClick = {
+                            if (concert.isAttending) {
+                                confirmAttendingRemoval = true
+                            } else {
+                                onAttendingClick()
+                            }
+                        }
+                    ) {
+                        Text(if (concert.isAttending) "✓" else "＋")
+                    }
                 }
             }
 
