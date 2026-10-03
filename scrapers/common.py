@@ -355,6 +355,7 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
             non_concert_markers = (
                 "pubquiz",
                 "leezing",
+                "leeszing",
                 "comedyshow",
                 "comedy show",
             )
