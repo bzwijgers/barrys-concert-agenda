@@ -1,7 +1,7 @@
 from datetime import datetime
 import json
 
-from scrapers.common import normalize_url, scrape_boerderij, scrape_paard, scrape_melkweg, scrape_tivolivredenburg
+from scrapers.common import normalize_url, scrape_boerderij, scrape_paard, scrape_melkweg, scrape_tivolivredenburg, scrape_mezz
 from scrapers.effenaar import scrape_effenaar
 from scrapers.rotown import scrape_rotown
 from scrapers.source013 import scrape_013
@@ -140,6 +140,7 @@ for source_name, scraper_function in (
     ("PAARD", scrape_paard),
     ("Melkweg", scrape_melkweg),
     ("TivoliVredenburg", scrape_tivolivredenburg),
+    ("MEZZ", scrape_mezz),
 ):
     try:
         source_concerts = scraper_function()
