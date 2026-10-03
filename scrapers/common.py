@@ -236,10 +236,14 @@ def find_labeled_event_urls(page, base_url, path_prefix, wanted_label, labels):
         clean_url = url.split("?", 1)[0].rstrip("/") + "/"
         if path_prefix not in clean_url:
             continue
-        raw_context = page[max(0, match.start() - 700):min(len(page), match.end() + 700)]
+        context_start = max(0, match.start() - 700)
+        raw_context = page[context_start:min(len(page), match.end() + 700)]
+        context_before_link = clean_text(page[context_start:match.start()]).lower()
         context = clean_text(raw_context).lower()
-        anchor_text = clean_text(page[match.start():match.end()]).lower()
-        center = max(0, context.find(anchor_text))
+        # De oude code zocht de tekst van alleen de opening <a ...>-tag.
+        # Die bevat geen zichtbare anchor-tekst, waardoor center vaak 0 werd
+        # en het label van een naburig event gekozen kon worden.
+        center = len(context_before_link)
         distances = {}
         for label in labels_lower:
             positions = [m.start() for m in re.finditer(re.escape(label), context)]
@@ -327,6 +331,7 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False):
                     month_names = "|".join(MONTHS_SHORT.keys())
                     visible_time = re.search(
                         r"\b(?:ma|di|wo|do|vr|za|zo)\s+"
+                        + r"0?"
                         + re.escape(str(int(day_value)))
                         + r"\s+(?:"
                         + month_names
@@ -388,10 +393,13 @@ def scrape_paard():
 def scrape_melkweg():
     base = "https://www." + "melkweg" + ".nl"
     page = download_page_retry(base + "/nl/agenda/?profile=Concert")
-    # De URL is al server-side op Concert gefilterd. Gebruik daarom alle
-    # eventlinks uit die response; de oude nabijheidsheuristiek kon bij
-    # meerdere events op dezelfde datum geldige concerten overslaan.
-    urls = find_site_event_urls(page, base, "/nl/agenda/")
+    urls = find_labeled_event_urls(
+        page,
+        base,
+        "/nl/agenda/",
+        "Concert",
+        ("Concert", "Club", "Film", "Expositie", "Festival"),
+    )
     print("Melkweg concertlinks gevonden:", len(urls))
     return scrape_detail_events(urls, "Melkweg", "Amsterdam", "Melkweg", date_from_url=True)
 
