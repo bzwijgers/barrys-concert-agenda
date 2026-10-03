@@ -1166,17 +1166,31 @@ def scrape_013():
     processed = 0
 
     def fetch_013(event_url):
-        event_html = download_page(
-            event_url
-        )
+    last_error = None
 
-        return source013_parse_event(
-            event_html,
-            event_url
-        )
+    for attempt in range(3):
+        try:
+            event_html = download_page(
+                event_url
+            )
+
+            return source013_parse_event(
+                event_html,
+                event_url
+            )
+
+        except Exception as error:
+            last_error = error
+
+            if attempt < 2:
+                time.sleep(
+                    2.0 * (attempt + 1)
+                )
+
+    raise last_error
 
     with ThreadPoolExecutor(
-        max_workers=8
+        max_workers=3
     ) as executor:
 
         future_to_url = {
@@ -1819,20 +1833,34 @@ def scrape_paradiso():
 
     today = date.today()
 
-    def fetch_paradiso(event_url):
-        event_html = (
-            download_page_retry(
+def fetch_paradiso(event_url):
+    last_error = None
+
+    for attempt in range(3):
+        try:
+            event_html = (
+                download_page_retry(
+                    event_url
+                )
+            )
+
+            return paradiso_parse_event(
+                event_html,
                 event_url
             )
-        )
 
-        return paradiso_parse_event(
-            event_html,
-            event_url
-        )
+        except Exception as error:
+            last_error = error
+
+            if attempt < 2:
+                time.sleep(
+                    2.0 * (attempt + 1)
+                )
+
+    raise last_error
 
     with ThreadPoolExecutor(
-        max_workers=8
+        max_workers=3
     ) as executor:
 
         future_to_url = {
