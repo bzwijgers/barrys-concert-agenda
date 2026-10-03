@@ -365,7 +365,11 @@ fun ConcertApp() {
                             now - stored.firstFound <=
                                 7L * 24L * 60L * 60L * 1000L,
                         isFavorite =
-                            stored.isFavorite,
+                            if (isPastConcert(stored.date) && stored.isAttending) {
+                                false
+                            } else {
+                                stored.isFavorite
+                            },
                         isAttending =
                             stored.isAttending,
                         clubCard = stored.clubCard,
@@ -661,7 +665,7 @@ fun ConcertApp() {
                                 )
 
                                 Text(
-                                    "Nieuw in de afgelopen 7 dagen · nieuwste bovenaan"
+                                    "Nieuw in de afgelopen 7 dagen"
                                 )
                             }
 
