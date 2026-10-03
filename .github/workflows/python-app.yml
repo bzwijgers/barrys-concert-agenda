@@ -3,6 +3,14 @@ name: Update concert agenda
 on:
   workflow_dispatch:
 
+  push:
+    branches:
+      - main
+    paths:
+      - "scraper.py"
+      - "scrapers/**"
+      - ".github/workflows/python-app.yml"
+
   schedule:
     # GitHub Actions gebruikt UTC.
     # 05:00 UTC = 07:00 in Nederland tijdens zomertijd.
