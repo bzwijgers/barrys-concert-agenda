@@ -244,6 +244,40 @@ def scrape_rotown():
             )
         )
 
+    clubcard_by_url = {}
+
+    with ThreadPoolExecutor(max_workers=12) as executor:
+        future_to_url = {
+            executor.submit(
+                has_clubcard,
+                event["url"]
+            ): event["url"]
+            for event in structured_events
+        }
+
+        for future in as_completed(future_to_url):
+            url = future_to_url[future]
+
+            try:
+                clubcard_by_url[
+                    rotown_normalize_url(url)
+                ] = future.result()
+            except Exception as error:
+                print(
+                    "Rotown Clubkaart controle fout:",
+                    url,
+                    str(error)
+                )
+
+                clubcard_by_url[
+                    rotown_normalize_url(url)
+                ] = False
+
+    print(
+        "Rotown Clubkaart concerten gevonden:",
+        sum(clubcard_by_url.values())
+    )
+
     for event in structured_events:
         event_url = rotown_normalize_url(
             event["url"]
@@ -292,7 +326,10 @@ def scrape_rotown():
                 "time": start_time,
                 "source": "Rotown",
                 "url": event["url"],
-                "clubCard": has_clubcard(event["url"]),
+                "clubCard": clubcard_by_url.get(
+                    event_url,
+                    False
+                ),
             }
         )
 
