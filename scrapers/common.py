@@ -456,3 +456,22 @@ def scrape_tivolivredenburg():
         "TivoliVredenburg",
         reject_classical=True,
     )
+
+
+def scrape_mezz():
+    base = "https://www.mezz.nl"
+    page = download_page_retry(base + "/programma/")
+    urls = find_site_event_urls(page, base, "/programma/")
+    # Alleen echte programmadetailpagina's; overzicht/hulppagina's uitsluiten.
+    excluded = {
+        normalize_url(base + "/programma/"),
+    }
+    urls = [url for url in urls if normalize_url(url) not in excluded]
+    print("MEZZ programmalinks gevonden:", len(urls))
+    concerts = scrape_detail_events(urls, "MEZZ", "Breda", "MEZZ")
+    # MEZZ publiceert ook quizzen en geannuleerde events in het programma.
+    return [
+        item for item in concerts
+        if "quiz" not in item["artist"].lower()
+        and "geannuleerd" not in item["artist"].lower()
+    ]
