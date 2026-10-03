@@ -13,7 +13,8 @@ data class SourceConcert(
     val date: String,
     val time: String = "",
     val source: String,
-    val url: String
+    val url: String,
+    val clubCard: Boolean = false
 )
 
 object ConcertRepository {
@@ -120,6 +121,11 @@ object ConcertRepository {
                         item.optString(
                             "url",
                             ""
+                        ),
+                    clubCard =
+                        item.optBoolean(
+                            "clubCard",
+                            false
                         )
                 )
 

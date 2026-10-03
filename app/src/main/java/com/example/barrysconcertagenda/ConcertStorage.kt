@@ -42,7 +42,8 @@ object ConcertStorage {
                         source = item.optString("source", ""),
                         url = item.optString("url", ""),
                         firstFound = item.optLong("firstFound", 0L),
-                        isFavorite = item.optBoolean("isFavorite", false)
+                        isFavorite = item.optBoolean("isFavorite", false),
+                        clubCard = item.optBoolean("clubCard", false)
                     )
                 )
             }
@@ -76,6 +77,7 @@ object ConcertStorage {
             item.put("url", concert.url)
             item.put("firstFound", concert.firstFound)
             item.put("isFavorite", concert.isFavorite)
+            item.put("clubCard", concert.clubCard)
 
             array.put(item)
         }

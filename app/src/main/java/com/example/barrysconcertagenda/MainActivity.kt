@@ -1,6 +1,8 @@
 package com.example.barrysconcertagenda
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -55,7 +57,8 @@ data class Concert(
     val firstFound: Long = 0L,
     val isNew: Boolean = false,
     val isFavorite: Boolean = false,
-    val archived: Boolean = false
+    val archived: Boolean = false,
+    val clubCard: Boolean = false
 )
 
 class MainActivity : ComponentActivity() {
@@ -237,7 +240,8 @@ fun ConcertApp() {
                             ?: now,
                     isFavorite =
                         old?.isFavorite
-                            ?: false
+                            ?: false,
+                    clubCard = source.clubCard
                 )
             }
 
@@ -281,7 +285,8 @@ fun ConcertApp() {
                                 ?: concert.firstFound,
                         isFavorite =
                             old?.isFavorite
-                                ?: concert.isFavorite
+                                ?: concert.isFavorite,
+                        clubCard = concert.clubCard
                     )
             }
         }
@@ -337,6 +342,7 @@ fun ConcertApp() {
                             ) in newUrls,
                         isFavorite =
                             stored.isFavorite,
+                        clubCard = stored.clubCard,
                         archived =
                             isPastConcert(
                                 stored.date
@@ -400,6 +406,12 @@ fun ConcertApp() {
                     it.archived
                 }
 
+            4 ->
+                concerts.filter {
+                    it.clubCard &&
+                            !it.archived
+                }
+
             else ->
                 emptyList()
         }
@@ -448,6 +460,20 @@ fun ConcertApp() {
                     },
                     label = {
                         Text("Favorieten")
+                    }
+                )
+
+                NavigationBarItem(
+                    selected =
+                        selectedTab == 4,
+                    onClick = {
+                        selectedTab = 4
+                    },
+                    icon = {
+                        Text("♣")
+                    },
+                    label = {
+                        Text("Clubkaart")
                     }
                 )
 
@@ -581,6 +607,19 @@ fun ConcertApp() {
                                     "${visibleConcerts.size} favorieten",
                                     fontWeight =
                                         FontWeight.Bold
+                                )
+                            }
+
+                            4 -> {
+
+                                Text(
+                                    "${visibleConcerts.size} Rotown Clubkaart concerten",
+                                    fontWeight =
+                                        FontWeight.Bold
+                                )
+
+                                Text(
+                                    "Gratis toegankelijk met de Rotown Clubkaart"
                                 )
                             }
 
@@ -817,6 +856,19 @@ fun ConcertCard(
             )
 
             if (
+                concert.clubCard
+            ) {
+                Spacer(
+                    modifier = Modifier.height(6.dp)
+                )
+
+                Text(
+                    "ROTOWN CLUBKAART",
+                    fontWeight = FontWeight.Bold
+                )
+            }
+
+            if (
                 concert.source.isNotBlank()
             ) {
 
@@ -834,6 +886,26 @@ fun ConcertCard(
                             .typography
                             .bodySmall
                 )
+            }
+
+            if (
+                concert.clubCard &&
+                concert.url.isNotBlank()
+            ) {
+                val context = LocalContext.current
+
+                TextButton(
+                    onClick = {
+                        context.startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse(concert.url)
+                            )
+                        )
+                    }
+                ) {
+                    Text(concert.url)
+                }
             }
         }
     }

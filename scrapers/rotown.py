@@ -227,6 +227,23 @@ def scrape_rotown():
 
     concerts = []
 
+    def has_clubcard(event_url):
+        try:
+            detail_html = download_page_retry(event_url)
+        except Exception as error:
+            print("Rotown Clubkaart controle fout:", event_url, str(error))
+            return False
+
+        detail_text = clean_text(detail_html).lower()
+
+        return bool(
+            re.search(
+                r"rotown\\s+clubkaart|clubkaart",
+                detail_text,
+                flags=re.IGNORECASE,
+            )
+        )
+
     for event in structured_events:
         event_url = rotown_normalize_url(
             event["url"]
@@ -275,6 +292,7 @@ def scrape_rotown():
                 "time": start_time,
                 "source": "Rotown",
                 "url": event["url"],
+                "clubCard": has_clubcard(event["url"]),
             }
         )
 
