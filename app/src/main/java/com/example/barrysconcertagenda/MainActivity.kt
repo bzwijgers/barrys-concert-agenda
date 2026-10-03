@@ -95,7 +95,7 @@ fun WelcomeScreen(
             id = R.drawable.barrys_concert_agenda_logo
         ),
         contentDescription = "Barry's concert agenda",
-        contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+        contentScale = androidx.compose.ui.layout.ContentScale.Fit,
         modifier =
             Modifier
                 .fillMaxSize()
