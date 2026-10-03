@@ -594,7 +594,7 @@ fun ConcertApp() {
 
                 Text(
                     text =
-                        "Nederland & België",
+                        "🇳🇱  🇧🇪",
                     style =
                         MaterialTheme
                             .typography
@@ -665,7 +665,8 @@ fun ConcertApp() {
                                 )
 
                                 Text(
-                                    "Nieuw in de afgelopen 7 dagen"
+                                    "Nieuw in de afgelopen 7 dagen",
+                                    style = MaterialTheme.typography.labelSmall
                                 )
                             }
 
@@ -698,7 +699,9 @@ fun ConcertApp() {
                             3 -> {
                                 Text(
                                     "${visibleConcerts.size} concerten waar ik naartoe ga",
-                                    fontWeight = FontWeight.Bold
+                                    fontWeight = FontWeight.Bold,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    maxLines = 1
                                 )
                             }
 
@@ -710,9 +713,6 @@ fun ConcertApp() {
                                         FontWeight.Bold
                                 )
 
-                                Text(
-                                    "Gratis toegankelijk met de Rotown Clubkaart"
-                                )
                             }
 
                             5 -> {
@@ -720,10 +720,6 @@ fun ConcertApp() {
                                 Text(
                                     "${visibleConcerts.size} bezochte concerten",
                                     fontWeight = FontWeight.Bold
-                                )
-
-                                Text(
-                                    "Afgelopen concerten die ik heb bezocht"
                                 )
                             }
                         }
