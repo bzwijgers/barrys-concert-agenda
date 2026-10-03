@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
@@ -537,7 +538,7 @@ fun ConcertApp() {
                         .fillMaxWidth()
                         .padding(
                             horizontal = 20.dp,
-                            vertical = 18.dp
+                            vertical = 10.dp
                         )
             ) {
 
@@ -559,7 +560,7 @@ fun ConcertApp() {
                     style =
                         MaterialTheme
                             .typography
-                            .titleLarge
+                            .bodySmall
                 )
             }
 
@@ -570,15 +571,16 @@ fun ConcertApp() {
                     Text("Zoeken")
                 },
                 placeholder = {
-                    Text("Artiest, datum, venue, plaats, bron...")
+                    Text("Artiest, datum, venue...")
                 },
                 singleLine = true,
                 modifier =
                     Modifier
                         .fillMaxWidth()
+                        .widthIn(max = 420.dp)
                         .padding(
                             horizontal = 20.dp,
-                            vertical = 4.dp
+                            vertical = 0.dp
                         )
             )
 
@@ -644,7 +646,11 @@ fun ConcertApp() {
                                 )
 
                                 Text(
-                                    "Rotown + 013 + Paradiso + Baroeg + Effenaar"
+                                    "Zalen: Rotown · 013 · Paradiso · Baroeg · Effenaar",
+                                    style =
+                                        MaterialTheme
+                                            .typography
+                                            .labelSmall
                                 )
                             }
 
