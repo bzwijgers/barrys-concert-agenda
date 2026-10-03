@@ -1,7 +1,7 @@
 from datetime import datetime
 import json
 
-from scrapers.common import normalize_url
+from scrapers.common import normalize_url, scrape_boerderij, scrape_paard, scrape_melkweg
 from scrapers.effenaar import scrape_effenaar
 from scrapers.rotown import scrape_rotown
 from scrapers.source013 import scrape_013
@@ -129,6 +129,23 @@ except Exception as error:
         "ERNSTIGE BAROEG FOUT:",
         str(error)
     )
+
+
+# ============================================================
+# NIEUWE PODIA
+# ============================================================
+
+for source_name, scraper_function in (
+    ("Boerderij", scrape_boerderij),
+    ("PAARD", scrape_paard),
+    ("Melkweg", scrape_melkweg),
+):
+    try:
+        source_concerts = scraper_function()
+        print(source_name + " opgehaald:", len(source_concerts))
+        all_concerts.extend(source_concerts)
+    except Exception as error:
+        print("ERNSTIGE " + source_name.upper() + " FOUT:", str(error))
 
 
 # ============================================================
@@ -280,6 +297,9 @@ print(
     "Baroeg:",
     baroeg_count
 )
+
+for source_name in ("Boerderij", "PAARD", "Melkweg"):
+    print(source_name + ":", len([concert for concert in all_concerts if concert["source"] == source_name]))
 
 print(
     "Totaal:",
