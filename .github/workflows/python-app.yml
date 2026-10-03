@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Compile Python files
+        run: python -m compileall -q scraper.py scrapers
+
       - name: Run concert scraper
         run: python scraper.py
 
