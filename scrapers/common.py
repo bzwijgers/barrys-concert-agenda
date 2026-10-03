@@ -236,7 +236,17 @@ def _detail_date_time(page):
     months = "|".join(MONTHS_LONG.keys())
     match = re.search(r"(\d{1,2})\s+(" + months + r")\s+(20\d{2})", text, flags=re.IGNORECASE)
     if not match:
-        return None, ""
+        short_months = "|".join(MONTHS_SHORT.keys())
+        short_match = re.search(r"(\d{1,2})\s+(" + short_months + r")\s+[\'’]?(\d{2})", text, flags=re.IGNORECASE)
+        if not short_match:
+            return None, ""
+        day = int(short_match.group(1))
+        month = MONTHS_SHORT[short_match.group(2).lower()]
+        event_date = date(2000 + int(short_match.group(3)), month, day).isoformat()
+        after = text[short_match.end():short_match.end() + 500]
+        time_match = re.search(r"(?:Start|Aanvang|Deur(?:en)? open)\s*:?\s*(\d{1,2})[:.]([0-5]\d)", after, flags=re.IGNORECASE)
+        event_time = f"{int(time_match.group(1)):02d}:{int(time_match.group(2)):02d}" if time_match else ""
+        return event_date, event_time
 
     day = int(match.group(1))
     month = MONTHS_LONG[match.group(2).lower()]
@@ -260,11 +270,10 @@ def scrape_detail_events(urls, venue, city, source):
 
     def fetch(url):
         page = download_page_retry(url)
-        text = clean_text(page).lower()
-        if "afgelast" in text or "geannuleerd" in text or "cancelled" in text or "canceled" in text:
-            return None
-
         artist = _detail_title(page)
+        artist_lower = artist.lower()
+        if "afgelast" in artist_lower or "geannuleerd" in artist_lower or "cancelled" in artist_lower or "canceled" in artist_lower:
+            return None
         event_date, event_time = _detail_date_time(page)
         if not artist or not event_date:
             return None
@@ -300,7 +309,7 @@ def scrape_detail_events(urls, venue, city, source):
 
 def scrape_boerderij():
     base = "https://" + "poppodiumboerderij" + ".nl"
-    page = download_page_retry(base + "/")
+    page = download_page_retry(base + "/search/events/still/")
     urls = find_site_event_urls(page, base, "/programma/")
     print("Boerderij links gevonden:", len(urls))
     return scrape_detail_events(urls, "Boerderij", "Zoetermeer", "Boerderij")
