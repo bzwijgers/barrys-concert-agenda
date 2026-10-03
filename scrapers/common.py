@@ -304,7 +304,7 @@ def _detail_date_time(page):
     return event_date, event_time
 
 
-def scrape_detail_events(urls, venue, city, source, date_from_url=False):
+def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_classical=False):
     today = date.today()
     concerts = []
 
@@ -313,6 +313,15 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False):
         artist = _detail_title(page)
         artist = re.sub(r"\s+[\-–—]\s+(?:Poppodium\s+)?(?:Boerderij|PAARD|Melkweg|TivoliVredenburg).*$", "", artist, flags=re.IGNORECASE).strip()
         artist_lower = artist.lower()
+        if reject_classical:
+            page_text = clean_text(page).lower()
+            classical_markers = (
+                "genre klassiek", "klassiek /", "klassiek concert",
+                "symfonisch", "kamermuziek", "oude muziek",
+                "strijkkwartet", "klassiek vocaal", "klassieke muziek",
+            )
+            if any(marker in page_text for marker in classical_markers):
+                return None
         if "afgelast" in artist_lower or "geannuleerd" in artist_lower or "cancelled" in artist_lower or "canceled" in artist_lower:
             return None
         event_date, event_time = _detail_date_time(page)
@@ -421,4 +430,10 @@ def scrape_tivolivredenburg():
                 seen.add(key)
                 urls.append(url)
     print("TivoliVredenburg niet-klassieke links gevonden:", len(urls))
-    return scrape_detail_events(urls, "TivoliVredenburg", "Utrecht", "TivoliVredenburg")
+    return scrape_detail_events(
+        urls,
+        "TivoliVredenburg",
+        "Utrecht",
+        "TivoliVredenburg",
+        reject_classical=True,
+    )
