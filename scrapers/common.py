@@ -505,3 +505,26 @@ def scrape_mezz():
         if "quiz" not in item["artist"].lower()
         and "geannuleerd" not in item["artist"].lower()
     ]
+
+
+def scrape_patronaat():
+    base = "https://patronaat.nl"
+    page = download_page_retry(base + "/")
+    urls = find_site_event_urls(page, base, "/event/")
+    print("Patronaat eventlinks gevonden:", len(urls))
+
+    concerts = scrape_detail_events(urls, "Patronaat", "Haarlem", "Patronaat")
+
+    # Patronaat programmeert naast concerten ook expliciete club-/nachtleven-events.
+    # Die horen niet in Barry's concertagenda.
+    result = []
+    for item in concerts:
+        artist_lower = item["artist"].lower()
+        if any(marker in artist_lower for marker in (
+            "club3", "40up", "spätkauf", "only10s", "t-motion",
+            "vroegzat", "disco del mundo",
+        )):
+            continue
+        result.append(item)
+
+    return result
