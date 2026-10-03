@@ -236,24 +236,13 @@ def scrape_rotown():
 
         detail_text = clean_text(detail_html).lower()
 
-        if "mood-bored" in event_url.lower():
-            for term in ("club", "kaart", "gratis", "free"):
-                position = detail_html.lower().find(term)
-                if position >= 0:
-                    start = max(0, position - 250)
-                    end = min(len(detail_html), position + 500)
-                    print(
-                        "ROTOWN CLUBKAART DEBUG",
-                        term,
-                        clean_text(detail_html[start:end])
-                    )
-
-        return bool(
-            re.search(
-                r"rotown\\s+clubkaart|clubkaart",
+        return (
+            "rotown clubcard" in detail_text
+            and re.search(
+                r"houders van een rotown clubcard.{0,160}gratis bezoeken",
                 detail_text,
                 flags=re.IGNORECASE,
-            )
+            ) is not None
         )
 
     clubcard_by_url = {}
