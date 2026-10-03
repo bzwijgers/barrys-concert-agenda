@@ -914,20 +914,27 @@ SOURCE013_BASE_URL = "https://www.013.nl"
 
 
 def source013_find_program_urls(html):
+    cleaned_html = (
+        html
+        .replace("\\/", "/")
+        .replace("\\u002F", "/")
+        .replace("\\u002f", "/")
+    )
+
     event_regex = re.compile(
-        r'href=["\']'
-        r'([^"\']*/programma/[^"\'?#]+)'
-        r'["\']',
+        r'(?:https?://(?:www\.)?013\.nl)?'
+        r'/programma/\d+/[^"\'<>?#\s]+',
         flags=re.IGNORECASE,
     )
 
     urls = []
     seen = set()
 
-    for match in event_regex.finditer(html):
+    for match in event_regex.finditer(cleaned_html):
         event_url = (
-            match.group(1)
-            .strip()
+            match.group(0)
+            .split("?", 1)[0]
+            .split("#", 1)[0]
             .rstrip("/")
         )
 
@@ -937,14 +944,7 @@ def source013_find_program_urls(html):
                 + event_url
             )
 
-        if not event_url.lower().startswith(
-            "https://www.013.nl/programma/"
-        ):
-            continue
-
-        key = normalize_url(
-            event_url
-        )
+        key = normalize_url(event_url)
 
         if key in seen:
             continue
