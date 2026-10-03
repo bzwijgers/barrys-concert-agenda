@@ -182,3 +182,117 @@ def find_json_value(
         return None
 
     return match.group(1)
+
+
+# ============================================================
+# GENERIEKE PODIUM-HELPERS
+# ============================================================
+
+def find_site_event_urls(page, base_url, path_prefix):
+    page = page.replace("\\/", "/").replace("\\u002F", "/").replace("\\u002f", "/")
+    pattern = re.compile(r'href=["\\']([^"\\']+)["\\']', flags=re.IGNORECASE)
+    result = []
+    seen = set()
+
+    for match in pattern.finditer(page):
+        href = html_module.unescape(match.group(1)).split("#", 1)[0]
+        if href.startswith("/"):
+            url = base_url.rstrip("/") + href
+        elif href.startswith(base_url):
+            url = href
+        else:
+            continue
+
+        clean_url = url.split("?", 1)[0].rstrip("/") + "/"
+        if path_prefix not in clean_url:
+            continue
+        if normalize_url(clean_url) == normalize_url(base_url.rstrip("/") + path_prefix):
+            continue
+
+        key = normalize_url(clean_url)
+        if key not in seen:
+            seen.add(key)
+            result.append(clean_url)
+
+    return result
+
+
+def _detail_title(page):
+    h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, flags=re.IGNORECASE | re.DOTALL)
+    if h1:
+        return clean_text(h1.group(1))
+    title = re.search(r"<title[^>]*>(.*?)</title>", page, flags=re.IGNORECASE | re.DOTALL)
+    return clean_text(title.group(1)).split("|", 1)[0].strip() if title else ""
+
+
+def _detail_date_time(page):
+    matches = re.findall(r'"startDate"\\s*:\\s*"([^"]+)"', page, flags=re.IGNORECASE)
+    for value in matches:
+        match = re.search(r"(20\\d{2}-\\d{2}-\\d{2})T(\\d{2}):(\\d{2})", value)
+        if match:
+            return match.group(1), match.group(2) + ":" + match.group(3)
+
+    text = clean_text(page)
+    months = "|".join(MONTHS_LONG.keys())
+    match = re.search(r"(\\d{1,2})\\s+(" + months + r")\\s+(20\\d{2})", text, flags=re.IGNORECASE)
+    if not match:
+        return None, ""
+
+    day = int(match.group(1))
+    month = MONTHS_LONG[match.group(2).lower()]
+    event_date = date(int(match.group(3)), month, day).isoformat()
+
+    after = text[match.end():match.end() + 500]
+    time_match = re.search(r"(?:Start|Aanvang|Deur(?:en)? open)\\s*:?\\s*(\\d{1,2})[:.]([0-5]\\d)", after, flags=re.IGNORECASE)
+    if not time_match:
+        time_match = re.search(r"\\b(\\d{1,2})[:.]([0-5]\\d)\\b", after)
+
+    event_time = ""
+    if time_match:
+        event_time = f"{int(time_match.group(1)):02d}:{int(time_match.group(2)):02d}"
+
+    return event_date, event_time
+
+
+def scrape_detail_events(urls, venue, city, source):
+    today = date.today()
+    concerts = []
+
+    def fetch(url):
+        page = download_page_retry(url)
+        text = clean_text(page).lower()
+        if "afgelast" in text or "geannuleerd" in text or "cancelled" in text or "canceled" in text:
+            return None
+
+        artist = _detail_title(page)
+        event_date, event_time = _detail_date_time(page)
+        if not artist or not event_date:
+            return None
+        if date.fromisoformat(event_date) < today:
+            return None
+
+        return {
+            "artist": artist,
+            "venue": venue,
+            "city": city,
+            "country": "NL",
+            "date": event_date,
+            "time": event_time,
+            "source": source,
+            "url": url,
+        }
+
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        futures = {executor.submit(fetch, url): url for url in urls}
+        for future in as_completed(futures):
+            try:
+                concert = future.result()
+                if concert:
+                    concerts.append(concert)
+            except Exception as error:
+                print(source, "detailpagina fout:", futures[future], "-", str(error))
+
+    unique = {normalize_url(item["url"]): item for item in concerts}
+    result = list(unique.values())
+    result.sort(key=lambda item: (item["date"], item["time"], item["artist"].lower()))
+    return result
