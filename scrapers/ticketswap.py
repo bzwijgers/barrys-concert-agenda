@@ -1,0 +1,126 @@
+from .common import *
+from urllib.parse import urljoin
+import unicodedata
+
+
+TICKETSWAP_BASE = "https://www.ticketswap.nl"
+
+
+def _ts_slug(value):
+    value = unicodedata.normalize("NFKD", value)
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    value = value.lower().replace("&", " and ")
+    value = re.sub(r"[^a-z0-9]+", "-", value)
+    return value.strip("-")
+
+
+def _ts_words(value):
+    value = unicodedata.normalize("NFKD", value)
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    return set(re.findall(r"[a-z0-9]+", value.lower()))
+
+
+def _ts_event_links(page):
+    cleaned = page.replace("\\/", "/").replace("\\u002F", "/")
+    pattern = re.compile(r'''href\s*=\s*["']([^"']+)["']''', re.I)
+    links = []
+    seen = set()
+    for match in pattern.finditer(cleaned):
+        href = html_module.unescape(match.group(1))
+        if not (
+            href.startswith("/concert-tickets/")
+            or href.startswith("/event/")
+            or href.startswith("https://www.ticketswap.nl/concert-tickets/")
+            or href.startswith("https://www.ticketswap.nl/event/")
+        ):
+            continue
+        url = urljoin(TICKETSWAP_BASE, href).split("?", 1)[0].rstrip("/")
+        if url not in seen:
+            seen.add(url)
+            links.append(url)
+    return links
+
+
+def _ts_link_date(url):
+    match = re.search(r"-(20\d{2}-\d{2}-\d{2})-[A-Za-z0-9]+$", url)
+    return match.group(1) if match else ""
+
+
+def _ts_candidate_score(concert, url):
+    if _ts_link_date(url) != concert.get("date", ""):
+        return -1
+
+    slug = url.rsplit("/", 1)[-1].lower()
+    candidate_words = _ts_words(slug)
+    artist_words = _ts_words(concert.get("artist", ""))
+    venue_words = _ts_words(concert.get("venue", ""))
+    city_words = _ts_words(concert.get("city", ""))
+
+    useful_artist = {w for w in artist_words if len(w) >= 2}
+    if not useful_artist:
+        return -1
+
+    artist_hits = len(useful_artist & candidate_words)
+    # Minimaal de helft van de betekenisvolle artiestwoorden moet kloppen.
+    if artist_hits < max(1, (len(useful_artist) + 1) // 2):
+        return -1
+
+    score = artist_hits * 10
+    score += len(venue_words & candidate_words) * 3
+    score += len(city_words & candidate_words) * 3
+    return score
+
+
+def enrich_ticketswap_urls(concerts):
+    print()
+    print("=" * 60)
+    print("TICKETSWAP EXACTE EVENTLINKS")
+    print("=" * 60)
+
+    by_city = {}
+    for concert in concerts:
+        city = concert.get("city", "").strip()
+        if city and concert.get("date"):
+            by_city.setdefault(city, []).append(concert)
+
+    matched = 0
+    for city, city_concerts in sorted(by_city.items()):
+        city_slug = _ts_slug(city)
+        if not city_slug:
+            continue
+
+        urls = []
+        for page_url in (
+            f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}",
+            f"{TICKETSWAP_BASE}/city/{city_slug}",
+        ):
+            try:
+                page = download_page_retry(page_url, attempts=2)
+                urls.extend(_ts_event_links(page))
+            except Exception:
+                pass
+
+        urls = list(dict.fromkeys(urls))
+        if not urls:
+            continue
+
+        for concert in city_concerts:
+            scored = [
+                (_ts_candidate_score(concert, url), url)
+                for url in urls
+            ]
+            scored = [(score, url) for score, url in scored if score >= 0]
+            if not scored:
+                continue
+
+            scored.sort(reverse=True)
+            best_score, best_url = scored[0]
+            # Geen koppeling bij een gelijke beste score: dan is de match ambigu.
+            if len(scored) > 1 and scored[1][0] == best_score:
+                continue
+
+            concert["ticketSwapUrl"] = best_url
+            matched += 1
+
+    print("Exact gekoppelde TicketSwap-events:", matched)
+    return concerts
