@@ -167,8 +167,6 @@ fun ConcertApp() {
         statusText =
             "Concerten controleren..."
 
-        val previousCheck = ConcertStorage.getLastCheck(context)
-
         val storedBefore =
             ConcertStorage.loadConcerts(
                 context
@@ -376,8 +374,9 @@ fun ConcertApp() {
                         firstFound =
                             stored.firstFound,
                         isNew =
-                            previousCheck > 0L &&
-                            stored.firstFound > previousCheck,
+                            stored.firstFound > 0L &&
+                            now - stored.firstFound <=
+                                7L * 24L * 60L * 60L * 1000L,
                         isFavorite =
                             if (isPastConcert(stored.date) && stored.isAttending) {
                                 false
@@ -726,7 +725,7 @@ fun ConcertApp() {
                                 )
 
                                 Text(
-                                    "Nieuw sinds je vorige bezoek",
+                                    "Nieuw in de afgelopen 7 dagen",
                                     style = MaterialTheme.typography.labelSmall
                                 )
                             }
@@ -799,7 +798,7 @@ fun ConcertApp() {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
-                                    Text(if (availableVenues.isEmpty()) "Nog geen zalen geladen." else availableVenues.joinToString(" · "))
+                                    Text("013 · Baroeg · Boerderij · Effenaar · Melkweg · MEZZ · Paard · Paradiso · Patronaat · Rotown · TivoliVredenburg")
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
