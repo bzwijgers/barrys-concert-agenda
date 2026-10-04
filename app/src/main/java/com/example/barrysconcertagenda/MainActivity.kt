@@ -802,7 +802,7 @@ fun ConcertApp() {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
-                                    val mainVenues = listOf("013", "Baroeg", "Boerderij", "Effenaar", "Gebouw-T", "Melkweg", "MEZZ", "Paard", "Paradiso", "Patronaat", "Rotown", "TivoliVredenburg", "Tolhuistuin")
+                                    val mainVenues = listOf("013", "Baroeg", "Boerderij", "dB's", "Effenaar", "Gebouw-T", "Melkweg", "MEZZ", "Paard", "Paradiso", "Patronaat", "Rotown", "TivoliVredenburg", "Tolhuistuin")
                                     mainVenues.forEach { mainVenue ->
                                         val subVenues = if (mainVenue == "013") emptyList() else concerts
                                             .filter { it.source.equals(mainVenue, ignoreCase = true) }
