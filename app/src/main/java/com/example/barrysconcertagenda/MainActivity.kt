@@ -890,7 +890,11 @@ fun ConcertApp() {
                             },
                             showClubCardLabel = selectedTab != 4,
                             showFavorite = selectedTab != 3 && selectedTab != 5,
-                            visited = selectedTab == 5,
+                            ticketDisplay = when (selectedTab) {
+                                3 -> TicketDisplay.OWNED
+                                5 -> TicketDisplay.VISITED
+                                else -> TicketDisplay.DEFAULT
+                            },
                             onAttendingClick = {
                                 val newAttending = !concert.isAttending
                                 concerts = concerts.map {
@@ -924,54 +928,62 @@ fun ConcertApp() {
     }
 }
 
+enum class TicketDisplay { DEFAULT, OWNED, VISITED }
+
 @Composable
-fun TicketStatusIcon(checked: Boolean, visited: Boolean) {
-    val outlineColor = MaterialTheme.colorScheme.onSurfaceVariant
-    val checkColor = Color(0xFF2E7D32)
+fun TicketStatusIcon(display: TicketDisplay) {
+    val ticketColor = when (display) {
+        TicketDisplay.DEFAULT -> Color(0xFFD32F2F)
+        TicketDisplay.OWNED -> Color(0xFF2E7D32)
+        TicketDisplay.VISITED -> Color.White
+    }
+    val borderColor = when (display) {
+        TicketDisplay.VISITED -> MaterialTheme.colorScheme.onSurfaceVariant
+        else -> ticketColor
+    }
 
     Box(
-        modifier = Modifier.size(30.dp),
+        modifier = Modifier.size(32.dp),
         contentAlignment = Alignment.Center
     ) {
-        Canvas(modifier = Modifier.size(width = 27.dp, height = 20.dp)) {
-            val stroke = 2.dp.toPx()
-            val notch = 3.dp.toPx()
-            val left = stroke / 2
-            val top = stroke / 2
-            val right = size.width - stroke / 2
-            val bottom = size.height - stroke / 2
-
+        Canvas(modifier = Modifier.size(width = 29.dp, height = 21.dp)) {
+            val stroke = 1.7.dp.toPx()
+            val notch = 3.5.dp.toPx()
             val path = androidx.compose.ui.graphics.Path().apply {
-                moveTo(left + notch, top)
-                lineTo(right - notch, top)
-                quadraticBezierTo(right, top, right, top + notch)
-                lineTo(right, bottom - notch)
-                quadraticBezierTo(right, bottom, right - notch, bottom)
-                lineTo(left + notch, bottom)
-                quadraticBezierTo(left, bottom, left, bottom - notch)
-                lineTo(left, top + notch)
-                quadraticBezierTo(left, top, left + notch, top)
+                moveTo(notch, 0f)
+                lineTo(size.width - notch, 0f)
+                lineTo(size.width - notch, 2.dp.toPx())
+                quadraticBezierTo(size.width, 2.dp.toPx(), size.width, 5.dp.toPx())
+                lineTo(size.width, size.height - 5.dp.toPx())
+                quadraticBezierTo(size.width, size.height - 2.dp.toPx(), size.width - notch, size.height - 2.dp.toPx())
+                lineTo(size.width - notch, size.height)
+                lineTo(notch, size.height)
+                lineTo(notch, size.height - 2.dp.toPx())
+                quadraticBezierTo(0f, size.height - 2.dp.toPx(), 0f, size.height - 5.dp.toPx())
+                lineTo(0f, 5.dp.toPx())
+                quadraticBezierTo(0f, 2.dp.toPx(), notch, 2.dp.toPx())
                 close()
             }
+            drawPath(path = path, color = ticketColor)
             drawPath(
                 path = path,
-                color = outlineColor,
+                color = borderColor,
                 style = androidx.compose.ui.graphics.drawscope.Stroke(width = stroke)
             )
-            val perforationX = size.width * 0.27f
+            val perforationX = size.width * 0.28f
             drawLine(
-                color = outlineColor,
-                start = androidx.compose.ui.geometry.Offset(perforationX, top + 3.dp.toPx()),
-                end = androidx.compose.ui.geometry.Offset(perforationX, bottom - 3.dp.toPx()),
-                strokeWidth = 1.dp.toPx()
+                color = if (display == TicketDisplay.VISITED) borderColor else Color.White,
+                start = androidx.compose.ui.geometry.Offset(perforationX, 3.dp.toPx()),
+                end = androidx.compose.ui.geometry.Offset(perforationX, size.height - 3.dp.toPx()),
+                strokeWidth = 1.2.dp.toPx()
             )
         }
 
-        if (checked || visited) {
+        if (display == TicketDisplay.VISITED) {
             Text(
                 "✓",
-                color = checkColor,
-                fontSize = if (visited) 25.sp else 23.sp,
+                color = Color(0xFF2E7D32),
+                fontSize = 24.sp,
                 fontWeight = FontWeight.Black
             )
         }
@@ -1007,7 +1019,7 @@ fun BarryDatePicker(initialDate: LocalDate? = null, onDismiss: () -> Unit, onDat
 }
 
 @Composable
-fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, showFavorite: Boolean, visited: Boolean, onAttendingClick: () -> Unit) {
+fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, showFavorite: Boolean, ticketDisplay: TicketDisplay, onAttendingClick: () -> Unit) {
     var confirmFavoriteRemoval by remember { mutableStateOf(false) }
     var confirmAttendingRemoval by remember { mutableStateOf(false) }
     if (confirmFavoriteRemoval) AlertDialog(onDismissRequest = { confirmFavoriteRemoval = false }, title = { Text("Favoriet verwijderen?") }, text = { Text("Wil je dit concert uit je favorieten verwijderen?") }, confirmButton = { TextButton(onClick = { confirmFavoriteRemoval = false; onFavoriteClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmFavoriteRemoval = false }) { Text("Annuleren") } })
@@ -1027,10 +1039,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
                     onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }
                 ) {
-                    TicketStatusIcon(
-                        checked = concert.isAttending,
-                        visited = visited
-                    )
+                    TicketStatusIcon(display = ticketDisplay)
                 }
                 if (showFavorite) {
                     TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
