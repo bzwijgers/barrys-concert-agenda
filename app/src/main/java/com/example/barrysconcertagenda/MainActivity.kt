@@ -27,6 +27,8 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.material3.Card
@@ -133,6 +135,8 @@ fun ConcertApp() {
     var searchDateFrom by remember { mutableStateOf<LocalDate?>(null) }
     var searchDateTo by remember { mutableStateOf<LocalDate?>(null) }
     var datePickerTarget by remember { mutableStateOf<String?>(null) }
+    var searchVenue by remember { mutableStateOf<String?>(null) }
+    var venueMenuExpanded by remember { mutableStateOf(false) }
 
     var concerts by remember {
         mutableStateOf<List<Concert>>(
@@ -470,11 +474,13 @@ fun ConcertApp() {
                 emptyList()
         }
 
+    val availableVenues = concerts.map { it.venue.trim() }.filter { it.isNotBlank() }.distinct().sortedBy { it.lowercase(Locale.getDefault()) }
+
     val normalizedSearch =
         searchQuery.trim().lowercase(Locale.getDefault())
 
     val hasSearchCriteria =
-        normalizedSearch.isNotBlank() || searchDateFrom != null || searchDateTo != null
+        normalizedSearch.isNotBlank() || searchDateFrom != null || searchDateTo != null || searchVenue != null
 
     val searchedConcerts =
         if (selectedTab != 6) {
@@ -487,12 +493,13 @@ fun ConcertApp() {
                     normalizedSearch.isBlank() ||
                         concert.artist.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
                         concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch)
+                val venueMatches = searchVenue == null || concert.venue.equals(searchVenue, ignoreCase = true)
                 val concertDate = parseConcertDate(concert.date)
                 val dateMatches =
                     concertDate != null &&
                         (searchDateFrom == null || !concertDate.isBefore(searchDateFrom)) &&
                         (searchDateTo == null || !concertDate.isAfter(searchDateTo))
-                textMatches && dateMatches
+                textMatches && venueMatches && dateMatches
             }
         }
 
@@ -612,6 +619,26 @@ fun ConcertApp() {
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 4.dp)
                 )
+                Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)) {
+                    TextButton(onClick = { venueMenuExpanded = true }) {
+                        Text("Zaal: " + (searchVenue ?: "Alle zalen"))
+                    }
+                    DropdownMenu(
+                        expanded = venueMenuExpanded,
+                        onDismissRequest = { venueMenuExpanded = false }
+                    ) {
+                        DropdownMenuItem(
+                            text = { Text("Alle zalen") },
+                            onClick = { searchVenue = null; venueMenuExpanded = false }
+                        )
+                        availableVenues.forEach { venue ->
+                            DropdownMenuItem(
+                                text = { Text(venue) },
+                                onClick = { searchVenue = venue; venueMenuExpanded = false }
+                            )
+                        }
+                    }
+                }
                 Row(
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp),
                     verticalAlignment = Alignment.CenterVertically
@@ -624,9 +651,9 @@ fun ConcertApp() {
                         Text("Tot: " + (searchDateTo?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "datum"))
                     }
                 }
-                if (searchQuery.isNotBlank() || searchDateFrom != null || searchDateTo != null) {
+                if (searchQuery.isNotBlank() || searchDateFrom != null || searchDateTo != null || searchVenue != null) {
                     TextButton(
-                        onClick = { searchQuery = ""; searchDateFrom = null; searchDateTo = null },
+                        onClick = { searchQuery = ""; searchDateFrom = null; searchDateTo = null; searchVenue = null },
                         modifier = Modifier.padding(start = 20.dp)
                     ) { Text("Zoekfilters wissen") }
                 }
@@ -771,7 +798,7 @@ fun ConcertApp() {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
-                                    Text("013 · Baroeg · Boerderij · Effenaar · Melkweg · MEZZ · Paard · Paradiso · Patronaat · Rotown · TivoliVredenburg")
+                                    Text(if (availableVenues.isEmpty()) "Nog geen zalen geladen." else availableVenues.joinToString(" · "))
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
