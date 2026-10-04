@@ -572,7 +572,7 @@ fun ConcertApp() {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Barry's concert agenda  🇳🇱 🇧🇪",
+                    text = "Barry's concert agenda 🇳🇱 🇧🇪",
                     style = MaterialTheme.typography.headlineMedium,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
@@ -673,13 +673,13 @@ fun ConcertApp() {
                             1 -> {
 
                                 Text(
-                                    "${visibleConcerts.size} komende concerten",
+                                    "${visibleConcerts.size} aankomende concerten",
                                     fontWeight =
                                         FontWeight.Bold
                                 )
 
                                 Text(
-                                    "Zalen: Rotown · 013 · Paradiso · Baroeg · Effenaar · Boerderij · PAARD · Melkweg · TivoliVredenburg",
+                                    "Zalen: 013 · Baroeg · Boerderij · Effenaar · Melkweg · Mezz · Paard · Paradiso · Patronaat · Rotown · TivoliVredenburg",
                                     style =
                                         MaterialTheme
                                             .typography
@@ -841,9 +841,9 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
             if (concert.clubCard && showClubCardLabel) Text("ROTOWN CLUBKAART", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 val context = LocalContext.current
-                Text(text = if (concert.source.isBlank()) "" else "Bron: ${concert.source}", style = MaterialTheme.typography.bodySmall, color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = if (concert.url.isNotBlank()) androidx.compose.ui.text.style.TextDecoration.Underline else null, modifier = Modifier.weight(1f).then(if (concert.url.isNotBlank()) Modifier.clickable { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url))) } else Modifier))
-                TextButton(onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }) { Text(if (concert.isAttending) "✓" else "＋") }
-                TextButton(onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡") }
+                Text(text = if (concert.source.isBlank()) "" else "Bron: ${concert.source.replace("PAARD", "Paard")}", fontSize = 10.sp, maxLines = 1, color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = if (concert.url.isNotBlank()) androidx.compose.ui.text.style.TextDecoration.Underline else null, modifier = Modifier.weight(1f).then(if (concert.url.isNotBlank()) Modifier.clickable { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url))) } else Modifier))
+                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }) { Text(if (concert.isAttending) "✓" else "＋") }
+                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡") }
             }
         }
     }
