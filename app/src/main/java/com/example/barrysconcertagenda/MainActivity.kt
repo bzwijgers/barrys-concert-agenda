@@ -888,6 +888,8 @@ fun ConcertApp() {
                                 )
                             },
                             showClubCardLabel = selectedTab != 4,
+                            showFavorite = selectedTab != 3 && selectedTab != 5,
+                            visited = selectedTab == 5,
                             onAttendingClick = {
                                 val newAttending = !concert.isAttending
                                 concerts = concerts.map {
@@ -950,7 +952,7 @@ fun BarryDatePicker(initialDate: LocalDate? = null, onDismiss: () -> Unit, onDat
 }
 
 @Composable
-fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, onAttendingClick: () -> Unit) {
+fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, showFavorite: Boolean, visited: Boolean, onAttendingClick: () -> Unit) {
     var confirmFavoriteRemoval by remember { mutableStateOf(false) }
     var confirmAttendingRemoval by remember { mutableStateOf(false) }
     if (confirmFavoriteRemoval) AlertDialog(onDismissRequest = { confirmFavoriteRemoval = false }, title = { Text("Favoriet verwijderen?") }, text = { Text("Wil je dit concert uit je favorieten verwijderen?") }, confirmButton = { TextButton(onClick = { confirmFavoriteRemoval = false; onFavoriteClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmFavoriteRemoval = false }) { Text("Annuleren") } })
@@ -971,13 +973,15 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }
                 ) {
                     Text(
-                        "▱",
-                        fontSize = 26.sp,
+                        if (visited) "✓" else "▱",
+                        fontSize = if (visited) 24.sp else 26.sp,
                         fontWeight = FontWeight.Bold,
                         color = if (concert.isAttending) Color(0xFF2E7D32) else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
-                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
+                if (showFavorite) {
+                    TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
+                }
             }
             if (concert.isFavorite && !concert.isAttending && concert.ticketSwapUrl.isNotBlank()) {
                 val context = LocalContext.current
