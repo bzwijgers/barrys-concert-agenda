@@ -801,9 +801,9 @@ fun ConcertApp() {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
-                                    val mainVenues = listOf("013", "Baroeg", "Boerderij", "Effenaar", "Melkweg", "MEZZ", "Paard", "Paradiso", "Patronaat", "Rotown", "TivoliVredenburg")
+                                    val mainVenues = listOf("013", "Baroeg", "Boerderij", "Effenaar", "Melkweg", "MEZZ", "Paard", "Paradiso", "Patronaat", "Rotown", "TivoliVredenburg", "Tolhuistuin")
                                     mainVenues.forEach { mainVenue ->
-                                        val subVenues = concerts
+                                        val subVenues = if (mainVenue == "013") emptyList() else concerts
                                             .filter { it.source.equals(mainVenue, ignoreCase = true) }
                                             .map { it.venue.trim() }
                                             .filter { it.isNotBlank() && !it.equals(mainVenue, ignoreCase = true) }
@@ -971,8 +971,8 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }
                 ) {
                     Text(
-                        "▰",
-                        fontSize = 22.sp,
+                        "▱",
+                        fontSize = 26.sp,
                         fontWeight = FontWeight.Bold,
                         color = if (concert.isAttending) Color(0xFF2E7D32) else MaterialTheme.colorScheme.onSurfaceVariant
                     )
