@@ -41,6 +41,7 @@ object ConcertStorage {
                         time = item.optString("time", ""),
                         source = item.optString("source", ""),
                         url = item.optString("url", ""),
+                        ticketSwapUrl = item.optString("ticketSwapUrl", ""),
                         firstFound = item.optLong("firstFound", 0L),
                         isFavorite = item.optBoolean("isFavorite", false),
                         isAttending = item.optBoolean("isAttending", false),
@@ -76,6 +77,7 @@ object ConcertStorage {
             item.put("time", concert.time)
             item.put("source", concert.source)
             item.put("url", concert.url)
+            item.put("ticketSwapUrl", concert.ticketSwapUrl)
             item.put("firstFound", concert.firstFound)
             item.put("isFavorite", concert.isFavorite)
             item.put("isAttending", concert.isAttending)
