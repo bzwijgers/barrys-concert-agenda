@@ -167,6 +167,8 @@ fun ConcertApp() {
         statusText =
             "Concerten controleren..."
 
+        val previousCheck = ConcertStorage.getLastCheck(context)
+
         val storedBefore =
             ConcertStorage.loadConcerts(
                 context
@@ -374,9 +376,8 @@ fun ConcertApp() {
                         firstFound =
                             stored.firstFound,
                         isNew =
-                            stored.firstFound > 0L &&
-                            now - stored.firstFound <=
-                                7L * 24L * 60L * 60L * 1000L,
+                            previousCheck > 0L &&
+                            stored.firstFound > previousCheck,
                         isFavorite =
                             if (isPastConcert(stored.date) && stored.isAttending) {
                                 false
@@ -725,7 +726,7 @@ fun ConcertApp() {
                                 )
 
                                 Text(
-                                    "Nieuw in de afgelopen 7 dagen",
+                                    "Nieuw sinds je vorige bezoek",
                                     style = MaterialTheme.typography.labelSmall
                                 )
                             }
