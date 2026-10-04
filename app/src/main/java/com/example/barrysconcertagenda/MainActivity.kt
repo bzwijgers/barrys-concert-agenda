@@ -130,7 +130,6 @@ fun ConcertApp() {
     }
 
     var searchQuery by remember { mutableStateOf("") }
-    var searchExpanded by remember { mutableStateOf(false) }
     var searchDateFrom by remember { mutableStateOf<LocalDate?>(null) }
     var searchDateTo by remember { mutableStateOf<LocalDate?>(null) }
     var datePickerTarget by remember { mutableStateOf<String?>(null) }
@@ -459,6 +458,11 @@ fun ConcertApp() {
                             it.archived
                 }
 
+            6 ->
+                concerts.filter {
+                    !it.archived
+                }
+
             else ->
                 emptyList()
         }
@@ -561,6 +565,13 @@ fun ConcertApp() {
                     icon = { Text("▣") },
                     label = { Text("Archief", fontSize = 9.sp, maxLines = 1) }
                 )
+
+                NavigationBarItem(
+                    selected = selectedTab == 6,
+                    onClick = { selectedTab = 6 },
+                    icon = { Text("⌕") },
+                    label = { Text("Zoeken", fontSize = 9.sp, maxLines = 1) }
+                )
             }
         }
     ) { innerPadding ->
@@ -578,29 +589,19 @@ fun ConcertApp() {
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Row(
-                    modifier = Modifier.weight(1f),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "Barry's concert agenda",
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Bold,
-                        maxLines = 1,
-                        modifier = Modifier.weight(1f)
-                    )
-                    Spacer(Modifier.width(6.dp))
-                    NetherlandsFlag()
-                    Spacer(Modifier.width(4.dp))
-                    BelgiumFlag()
-                    Spacer(Modifier.width(4.dp))
-                }
-                IconButton(onClick = { searchExpanded = !searchExpanded }) {
-                    Text(if (searchExpanded) "✕" else "🔍", fontSize = 20.sp)
-                }
+                Text(
+                    text = "Barry's concert agenda",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1
+                )
+                Spacer(Modifier.width(6.dp))
+                NetherlandsFlag()
+                Spacer(Modifier.width(4.dp))
+                BelgiumFlag()
             }
 
-            if (searchExpanded) {
+            if (selectedTab == 6) {
                 OutlinedTextField(
                     value = searchQuery,
                     onValueChange = { searchQuery = it },
@@ -620,11 +621,11 @@ fun ConcertApp() {
                         Text("Tot: " + (searchDateTo?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "datum"))
                     }
                 }
-                if (searchDateFrom != null || searchDateTo != null) {
+                if (searchQuery.isNotBlank() || searchDateFrom != null || searchDateTo != null) {
                     TextButton(
-                        onClick = { searchDateFrom = null; searchDateTo = null },
+                        onClick = { searchQuery = ""; searchDateFrom = null; searchDateTo = null },
                         modifier = Modifier.padding(start = 20.dp)
-                    ) { Text("Periode wissen") }
+                    ) { Text("Zoekfilters wissen") }
                 }
             }
 
@@ -703,8 +704,8 @@ fun ConcertApp() {
 
                                 Text(
                                     "${visibleConcerts.size} aankomende concerten",
-                                    fontWeight =
-                                        FontWeight.Bold
+                                    fontWeight = FontWeight.Bold,
+                                    maxLines = 1
                                 )
 
                                 Text(
@@ -749,6 +750,14 @@ fun ConcertApp() {
                                 Text(
                                     "${visibleConcerts.size} bezochte concerten",
                                     fontWeight = FontWeight.Bold
+                                )
+                            }
+
+                            6 -> {
+                                Text(
+                                    "${visibleConcerts.size} gevonden concerten",
+                                    fontWeight = FontWeight.Bold,
+                                    maxLines = 1
                                 )
                             }
                         }
