@@ -584,14 +584,16 @@ fun ConcertApp() {
                 ) {
                     Text(
                         text = "Barry's concert agenda",
-                        style = MaterialTheme.typography.headlineMedium,
+                        fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
-                        maxLines = 1
+                        maxLines = 1,
+                        modifier = Modifier.weight(1f)
                     )
                     Spacer(Modifier.width(6.dp))
                     NetherlandsFlag()
                     Spacer(Modifier.width(4.dp))
                     BelgiumFlag()
+                    Spacer(Modifier.width(4.dp))
                 }
                 IconButton(onClick = { searchExpanded = !searchExpanded }) {
                     Text(if (searchExpanded) "✕" else "🔍", fontSize = 20.sp)
