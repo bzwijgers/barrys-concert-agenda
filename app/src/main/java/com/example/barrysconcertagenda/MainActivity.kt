@@ -968,7 +968,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                         .then(
                             if (concert.isAttending) {
                                 Modifier.background(
-                                    MaterialTheme.colorScheme.primaryContainer,
+                                    Color(0xFF2E7D32),
                                     shape = androidx.compose.foundation.shape.CircleShape
                                 )
                             } else {
@@ -981,7 +981,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     Text(
                         "🎟",
                         fontSize = 20.sp,
-                        color = if (concert.isAttending) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurfaceVariant
+                        color = if (concert.isAttending) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
                 TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
@@ -996,12 +996,9 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     modifier = Modifier
                         .padding(top = 2.dp)
                         .clickable {
-                            val exactQuery = listOf(concert.artist, concert.venue, concert.date)
-                                .filter { it.isNotBlank() }
-                                .joinToString(" ")
-                            val directUrl = "https://www.google.com/search?btnI=1&q=" +
-                                Uri.encode("site:ticketswap.nl/concert-tickets/ " + exactQuery)
-                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(directUrl)))
+                            context.startActivity(
+                                Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ticketswap.nl/"))
+                            )
                         }
                 )
             }
