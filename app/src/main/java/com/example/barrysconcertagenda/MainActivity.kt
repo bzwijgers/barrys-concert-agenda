@@ -463,6 +463,9 @@ fun ConcertApp() {
                     !it.archived
                 }
 
+            7 ->
+                emptyList()
+
             else ->
                 emptyList()
         }
@@ -552,7 +555,7 @@ fun ConcertApp() {
                 NavigationBarItem(
                     selected = selectedTab == 3,
                     onClick = { selectedTab = 3 },
-                    icon = { Text("✓") }
+                    icon = { Text("🎟", fontSize = 20.sp) }
                 )
 
                 NavigationBarItem(
@@ -565,6 +568,12 @@ fun ConcertApp() {
                     selected = selectedTab == 6,
                     onClick = { selectedTab = 6 },
                     icon = { Text("⌕") }
+                )
+
+                NavigationBarItem(
+                    selected = selectedTab == 7,
+                    onClick = { selectedTab = 7 },
+                    icon = { Text("ⓘ", fontSize = 20.sp) }
                 )
             }
         }
@@ -585,13 +594,13 @@ fun ConcertApp() {
             ) {
                 Text(
                     text = "Barry's concert agenda",
-                    fontSize = 20.sp,
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1
                 )
-                Spacer(Modifier.width(6.dp))
+                Spacer(Modifier.width(5.dp))
                 NetherlandsFlag()
-                Spacer(Modifier.width(4.dp))
+                Spacer(Modifier.width(3.dp))
                 BelgiumFlag()
             }
 
@@ -702,13 +711,7 @@ fun ConcertApp() {
                                     maxLines = 1
                                 )
 
-                                Text(
-                                    "Zalen: 013 · Baroeg · Boerderij · Effenaar · Melkweg · Mezz · Paard · Paradiso · Patronaat · Rotown · TivoliVredenburg",
-                                    style =
-                                        MaterialTheme
-                                            .typography
-                                            .labelSmall
-                                )
+
                             }
 
                             2 -> {
@@ -760,6 +763,20 @@ fun ConcertApp() {
                                         fontWeight = FontWeight.Bold,
                                         maxLines = 1
                                     )
+                                }
+                            }
+
+                            7 -> {
+                                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                    Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                                    Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
+                                    Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
+                                    Text("013 · Baroeg · Boerderij · Effenaar · Melkweg · MEZZ · Paard · Paradiso · Patronaat · Rotown · TivoliVredenburg")
+                                    Text("Betekenis iconen", fontWeight = FontWeight.Bold)
+                                    Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
+                                    Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
+                                    Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via Bron open je altijd de oorspronkelijke concertpagina.")
+                                    Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall)
                                 }
                             }
                         }
