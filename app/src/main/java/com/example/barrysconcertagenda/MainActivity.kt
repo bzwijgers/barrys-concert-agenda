@@ -971,8 +971,9 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }
                 ) {
                     Text(
-                        "🎟",
-                        fontSize = 20.sp,
+                        "▰",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold,
                         color = if (concert.isAttending) Color(0xFF2E7D32) else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
