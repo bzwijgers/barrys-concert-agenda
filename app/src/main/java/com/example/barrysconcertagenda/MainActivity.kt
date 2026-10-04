@@ -971,9 +971,6 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
             }
             if (concert.isFavorite && !concert.isAttending) {
                 val context = LocalContext.current
-                val ticketSwapQuery = listOf(concert.artist, concert.venue, concert.date)
-                    .filter { it.isNotBlank() }
-                    .joinToString(" ")
                 Text(
                     text = "↗ TicketSwap",
                     fontSize = 11.sp,
