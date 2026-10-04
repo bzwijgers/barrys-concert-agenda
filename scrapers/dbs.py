@@ -1,7 +1,7 @@
 from .common import *
 
-DBS_CONCERT_URL = "https://dbstudio.nl/events/categorie/alles/concert/lijst/"
-DBS_BASE_URL = "https://dbstudio.nl"
+DBS_CONCERT_URL = "https://www.dbstudio.nl/events/categorie/alles/concert/lijst/"
+DBS_BASE_URL = "https://www.dbstudio.nl"
 
 
 def scrape_dbs():
