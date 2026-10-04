@@ -186,16 +186,36 @@ try:
     print("Tolhuistuin toegevoegd:", len(tolhuistuin_concerts))
     all_concerts.extend(tolhuistuin_concerts)
 
-try:
-    all_concerts.extend(scrape_gebouw_t())
-    dbs_concerts = scrape_dbs()
-    existing_keys = {(c["artist"].strip().lower(), c["date"]) for c in all_concerts}
-    all_concerts.extend(c for c in dbs_concerts if (c["artist"].strip().lower(), c["date"]) not in existing_keys)
-except Exception as error:
-    print("GEBOUW-T FOUT:", str(error))
-
 except Exception as error:
     print("ERNSTIGE TOLHUISTUIN FOUT:", str(error))
+
+
+# ============================================================
+# GEBOUW-T
+# ============================================================
+
+try:
+    all_concerts.extend(scrape_gebouw_t())
+except Exception as error:
+    print("ERNSTIGE GEBOUW-T FOUT:", str(error))
+
+
+# ============================================================
+# dB's UTRECHT
+# ============================================================
+
+try:
+    dbs_concerts = scrape_dbs()
+    existing_keys = {
+        (concert["artist"].strip().lower(), concert["date"])
+        for concert in all_concerts
+    }
+    all_concerts.extend(
+        concert for concert in dbs_concerts
+        if (concert["artist"].strip().lower(), concert["date"]) not in existing_keys
+    )
+except Exception as error:
+    print("ERNSTIGE dB's FOUT:", str(error))
 
 
 # ============================================================
