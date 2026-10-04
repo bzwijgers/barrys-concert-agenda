@@ -9,6 +9,7 @@ data class StoredConcert(
     val time: String,
     val source: String,
     val url: String,
+    val ticketSwapUrl: String = "",
     val firstFound: Long,
     val isFavorite: Boolean = false,
     val isAttending: Boolean = false,
