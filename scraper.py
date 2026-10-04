@@ -8,6 +8,7 @@ from scrapers.source013 import scrape_013
 from scrapers.paradiso import scrape_paradiso
 from scrapers.baroeg import scrape_baroeg
 from scrapers.tolhuistuin import scrape_tolhuistuin
+from scrapers.gebouw_t import scrape_gebouw_t
 from scrapers.ticketswap import enrich_ticketswap_urls
 
 
@@ -183,6 +184,11 @@ try:
 
     print("Tolhuistuin toegevoegd:", len(tolhuistuin_concerts))
     all_concerts.extend(tolhuistuin_concerts)
+
+try:
+    all_concerts.extend(scrape_gebouw_t())
+except Exception as error:
+    print("GEBOUW-T FOUT:", str(error))
 
 except Exception as error:
     print("ERNSTIGE TOLHUISTUIN FOUT:", str(error))
