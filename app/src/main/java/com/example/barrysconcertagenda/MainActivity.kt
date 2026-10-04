@@ -515,7 +515,7 @@ fun ConcertApp() {
                         selectedTab = 0
                     },
                     icon = {
-                        Text("●")
+                        Text("✦", fontSize = 20.sp)
                     },
                 )
 
@@ -526,7 +526,7 @@ fun ConcertApp() {
                         selectedTab = 1
                     },
                     icon = {
-                        Text("≡")
+                        Text("☷", fontSize = 20.sp)
                     },
                 )
 
@@ -537,7 +537,7 @@ fun ConcertApp() {
                         selectedTab = 2
                     },
                     icon = {
-                        Text("♥")
+                        Text("♥", fontSize = 20.sp)
                     },
                 )
 
@@ -548,7 +548,7 @@ fun ConcertApp() {
                         selectedTab = 4
                     },
                     icon = {
-                        Text("♣")
+                        Text("♣", fontSize = 20.sp)
                     },
                 )
 
@@ -561,13 +561,13 @@ fun ConcertApp() {
                 NavigationBarItem(
                     selected = selectedTab == 5,
                     onClick = { selectedTab = 5 },
-                    icon = { Text("▣") }
+                    icon = { Text("▤", fontSize = 20.sp) }
                 )
 
                 NavigationBarItem(
                     selected = selectedTab == 6,
                     onClick = { selectedTab = 6 },
-                    icon = { Text("⌕") }
+                    icon = { Text("⌕", fontSize = 20.sp) }
                 )
 
                 NavigationBarItem(
@@ -918,8 +918,12 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 val context = LocalContext.current
                 Text(text = if (concert.source.isBlank()) "" else "Bron: ${concert.source.replace("PAARD", "Paard")}", fontSize = 10.sp, maxLines = 1, color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = if (concert.url.isNotBlank()) androidx.compose.ui.text.style.TextDecoration.Underline else null, modifier = Modifier.weight(1f).then(if (concert.url.isNotBlank()) Modifier.clickable { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url))) } else Modifier))
-                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }) { Text(if (concert.isAttending) "✓" else "🎟", fontSize = 20.sp) }
-                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡") }
+                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }) { Text(
+                    "🎟",
+                    fontSize = 20.sp,
+                    color = if (concert.isAttending) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
+                ) }
+                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
             }
         }
     }
