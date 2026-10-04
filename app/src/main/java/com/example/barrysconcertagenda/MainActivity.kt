@@ -474,7 +474,9 @@ fun ConcertApp() {
         normalizedSearch.isNotBlank() || searchDateFrom != null || searchDateTo != null
 
     val searchedConcerts =
-        if (selectedTab == 6 && !hasSearchCriteria) {
+        if (selectedTab != 6) {
+            tabConcerts
+        } else if (!hasSearchCriteria) {
             emptyList()
         } else {
             tabConcerts.filter { concert ->
@@ -512,9 +514,6 @@ fun ConcertApp() {
                     icon = {
                         Text("●")
                     },
-                    label = {
-                        Text("Nieuw", fontSize = 9.sp, maxLines = 1)
-                    }
                 )
 
                 NavigationBarItem(
@@ -526,9 +525,6 @@ fun ConcertApp() {
                     icon = {
                         Text("≡")
                     },
-                    label = {
-                        Text("Agenda", fontSize = 9.sp, maxLines = 1)
-                    }
                 )
 
                 NavigationBarItem(
@@ -540,9 +536,6 @@ fun ConcertApp() {
                     icon = {
                         Text("♥")
                     },
-                    label = {
-                        Text("Favoriet", fontSize = 9.sp, maxLines = 1)
-                    }
                 )
 
                 NavigationBarItem(
@@ -554,30 +547,24 @@ fun ConcertApp() {
                     icon = {
                         Text("♣")
                     },
-                    label = {
-                        Text("Clubkaart", fontSize = 9.sp, maxLines = 1)
-                    }
                 )
 
                 NavigationBarItem(
                     selected = selectedTab == 3,
                     onClick = { selectedTab = 3 },
-                    icon = { Text("✓") },
-                    label = { Text("Tickets", fontSize = 9.sp, maxLines = 1) }
+                    icon = { Text("✓") }
                 )
 
                 NavigationBarItem(
                     selected = selectedTab == 5,
                     onClick = { selectedTab = 5 },
-                    icon = { Text("▣") },
-                    label = { Text("Archief", fontSize = 9.sp, maxLines = 1) }
+                    icon = { Text("▣") }
                 )
 
                 NavigationBarItem(
                     selected = selectedTab == 6,
                     onClick = { selectedTab = 6 },
-                    icon = { Text("⌕") },
-                    label = { Text("Zoeken", fontSize = 9.sp, maxLines = 1) }
+                    icon = { Text("⌕") }
                 )
             }
         }
@@ -914,7 +901,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 val context = LocalContext.current
                 Text(text = if (concert.source.isBlank()) "" else "Bron: ${concert.source.replace("PAARD", "Paard")}", fontSize = 10.sp, maxLines = 1, color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = if (concert.url.isNotBlank()) androidx.compose.ui.text.style.TextDecoration.Underline else null, modifier = Modifier.weight(1f).then(if (concert.url.isNotBlank()) Modifier.clickable { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url))) } else Modifier))
-                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }) { Text(if (concert.isAttending) "✓" else "＋") }
+                TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }) { Text(if (concert.isAttending) "✓" else "🎟", fontSize = 20.sp) }
                 TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡") }
             }
         }
