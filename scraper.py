@@ -9,6 +9,7 @@ from scrapers.paradiso import scrape_paradiso
 from scrapers.baroeg import scrape_baroeg
 from scrapers.tolhuistuin import scrape_tolhuistuin
 from scrapers.gebouw_t import scrape_gebouw_t
+from scrapers.dbs import scrape_dbs
 from scrapers.ticketswap import enrich_ticketswap_urls
 
 
@@ -187,6 +188,9 @@ try:
 
 try:
     all_concerts.extend(scrape_gebouw_t())
+    dbs_concerts = scrape_dbs()
+    existing_keys = {(c["artist"].strip().lower(), c["date"]) for c in all_concerts}
+    all_concerts.extend(c for c in dbs_concerts if (c["artist"].strip().lower(), c["date"]) not in existing_keys)
 except Exception as error:
     print("GEBOUW-T FOUT:", str(error))
 
