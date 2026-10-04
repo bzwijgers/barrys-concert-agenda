@@ -470,18 +470,25 @@ fun ConcertApp() {
     val normalizedSearch =
         searchQuery.trim().lowercase(Locale.getDefault())
 
+    val hasSearchCriteria =
+        normalizedSearch.isNotBlank() || searchDateFrom != null || searchDateTo != null
+
     val searchedConcerts =
-        tabConcerts.filter { concert ->
-            val textMatches =
-                normalizedSearch.isBlank() ||
-                    concert.artist.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
-                    concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch)
-            val concertDate = parseConcertDate(concert.date)
-            val dateMatches =
-                concertDate != null &&
-                    (searchDateFrom == null || !concertDate.isBefore(searchDateFrom)) &&
-                    (searchDateTo == null || !concertDate.isAfter(searchDateTo))
-            textMatches && dateMatches
+        if (selectedTab == 6 && !hasSearchCriteria) {
+            emptyList()
+        } else {
+            tabConcerts.filter { concert ->
+                val textMatches =
+                    normalizedSearch.isBlank() ||
+                        concert.artist.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
+                        concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch)
+                val concertDate = parseConcertDate(concert.date)
+                val dateMatches =
+                    concertDate != null &&
+                        (searchDateFrom == null || !concertDate.isBefore(searchDateFrom)) &&
+                        (searchDateTo == null || !concertDate.isAfter(searchDateTo))
+                textMatches && dateMatches
+            }
         }
 
     val visibleConcerts =
@@ -754,11 +761,19 @@ fun ConcertApp() {
                             }
 
                             6 -> {
-                                Text(
-                                    "${visibleConcerts.size} gevonden concerten",
-                                    fontWeight = FontWeight.Bold,
-                                    maxLines = 1
-                                )
+                                if (hasSearchCriteria) {
+                                    Text(
+                                        "${visibleConcerts.size} gevonden concerten",
+                                        fontWeight = FontWeight.Bold,
+                                        maxLines = 1
+                                    )
+                                } else {
+                                    Text(
+                                        "Zoek op artiest, zaal of datum",
+                                        fontWeight = FontWeight.Bold,
+                                        maxLines = 1
+                                    )
+                                }
                             }
                         }
 
