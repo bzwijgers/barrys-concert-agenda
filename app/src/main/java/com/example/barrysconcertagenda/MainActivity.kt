@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -924,6 +925,60 @@ fun ConcertApp() {
 }
 
 @Composable
+fun TicketStatusIcon(checked: Boolean, visited: Boolean) {
+    val outlineColor = MaterialTheme.colorScheme.onSurfaceVariant
+    val checkColor = Color(0xFF2E7D32)
+
+    Box(
+        modifier = Modifier.size(30.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Canvas(modifier = Modifier.size(width = 27.dp, height = 20.dp)) {
+            val stroke = 2.dp.toPx()
+            val notch = 3.dp.toPx()
+            val left = stroke / 2
+            val top = stroke / 2
+            val right = size.width - stroke / 2
+            val bottom = size.height - stroke / 2
+
+            val path = androidx.compose.ui.graphics.Path().apply {
+                moveTo(left + notch, top)
+                lineTo(right - notch, top)
+                quadraticBezierTo(right, top, right, top + notch)
+                lineTo(right, bottom - notch)
+                quadraticBezierTo(right, bottom, right - notch, bottom)
+                lineTo(left + notch, bottom)
+                quadraticBezierTo(left, bottom, left, bottom - notch)
+                lineTo(left, top + notch)
+                quadraticBezierTo(left, top, left + notch, top)
+                close()
+            }
+            drawPath(
+                path = path,
+                color = outlineColor,
+                style = androidx.compose.ui.graphics.drawscope.Stroke(width = stroke)
+            )
+            val perforationX = size.width * 0.27f
+            drawLine(
+                color = outlineColor,
+                start = androidx.compose.ui.geometry.Offset(perforationX, top + 3.dp.toPx()),
+                end = androidx.compose.ui.geometry.Offset(perforationX, bottom - 3.dp.toPx()),
+                strokeWidth = 1.dp.toPx()
+            )
+        }
+
+        if (checked || visited) {
+            Text(
+                "✓",
+                color = checkColor,
+                fontSize = if (visited) 25.sp else 23.sp,
+                fontWeight = FontWeight.Black
+            )
+        }
+    }
+}
+
+@Composable
 fun NetherlandsFlag() {
     Column(modifier = Modifier.width(22.dp).height(15.dp)) {
         Box(Modifier.weight(1f).fillMaxWidth().background(Color(0xFFAE1C28)))
@@ -972,11 +1027,9 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
                     onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }
                 ) {
-                    Text(
-                        if (visited) "✓" else "▱",
-                        fontSize = if (visited) 24.sp else 26.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = if (concert.isAttending) Color(0xFF2E7D32) else MaterialTheme.colorScheme.onSurfaceVariant
+                    TicketStatusIcon(
+                        checked = concert.isAttending,
+                        visited = visited
                     )
                 }
                 if (showFavorite) {
