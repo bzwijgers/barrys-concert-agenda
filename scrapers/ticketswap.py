@@ -90,10 +90,26 @@ def enrich_ticketswap_urls(concerts):
             continue
 
         urls = []
-        for page_url in (
-            f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}",
-            f"{TICKETSWAP_BASE}/city/{city_slug}",
-        ):
+        month_names = {
+            1: "january", 2: "february", 3: "march", 4: "april",
+            5: "may", 6: "june", 7: "july", 8: "august",
+            9: "september", 10: "october", 11: "november", 12: "december",
+        }
+        months = sorted({
+            month_names[int(concert["date"][5:7])]
+            for concert in city_concerts
+            if re.match(r"^20\\d{2}-\\d{2}-\\d{2}$", concert.get("date", ""))
+        })
+        page_urls = [
+            f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}"
+        ]
+        page_urls.extend(
+            f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}/{month}"
+            for month in months
+        )
+        page_urls.append(f"{TICKETSWAP_BASE}/city/{city_slug}")
+
+        for page_url in page_urls:
             try:
                 page = download_page_retry(page_url, attempts=2)
                 urls.extend(_ts_event_links(page))
