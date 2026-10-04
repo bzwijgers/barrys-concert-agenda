@@ -969,6 +969,25 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                 ) }
                 TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
             }
+            if (concert.isFavorite && !concert.isAttending) {
+                val context = LocalContext.current
+                val ticketSwapQuery = listOf(concert.artist, concert.venue, concert.date)
+                    .filter { it.isNotBlank() }
+                    .joinToString(" ")
+                Text(
+                    text = "↗ TicketSwap",
+                    fontSize = 11.sp,
+                    color = MaterialTheme.colorScheme.primary,
+                    textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline,
+                    modifier = Modifier
+                        .padding(top = 2.dp)
+                        .clickable {
+                            val searchUrl = "https://www.google.com/search?q=" +
+                                Uri.encode("site:ticketswap.com/event/ " + ticketSwapQuery)
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(searchUrl)))
+                        }
+                )
+            }
         }
     }
 }
