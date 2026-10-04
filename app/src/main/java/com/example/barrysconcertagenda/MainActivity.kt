@@ -972,16 +972,19 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
             if (concert.isFavorite && !concert.isAttending) {
                 val context = LocalContext.current
                 Text(
-                    text = "↗ TicketSwap",
+                    text = "TicketSwap",
                     fontSize = 11.sp,
                     color = MaterialTheme.colorScheme.primary,
                     textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline,
                     modifier = Modifier
                         .padding(top = 2.dp)
                         .clickable {
-                            val searchUrl = "https://www.google.com/search?q=" +
-                                Uri.encode("site:ticketswap.com " + concert.artist + " TicketSwap")
-                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(searchUrl)))
+                            val exactQuery = listOf(concert.artist, concert.venue, concert.date)
+                                .filter { it.isNotBlank() }
+                                .joinToString(" ")
+                            val directUrl = "https://www.google.com/search?btnI=1&q=" +
+                                Uri.encode("site:ticketswap.nl/concert-tickets/ " + exactQuery)
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(directUrl)))
                         }
                 )
             }
