@@ -8,6 +8,7 @@ from scrapers.source013 import scrape_013
 from scrapers.paradiso import scrape_paradiso
 from scrapers.baroeg import scrape_baroeg
 from scrapers.tolhuistuin import scrape_tolhuistuin
+from scrapers.ticketswap import enrich_ticketswap_urls
 
 
 # ============================================================
@@ -204,6 +205,16 @@ for concert in all_concerts:
 all_concerts = list(
     unique_concerts.values()
 )
+
+
+# ============================================================
+# TICKETSWAP - ALLEEN EXACTE EVENTLINKS
+# ============================================================
+
+try:
+    all_concerts = enrich_ticketswap_urls(all_concerts)
+except Exception as error:
+    print("TICKETSWAP VERRIJKING OVERGESLAGEN:", str(error))
 
 
 # ============================================================
