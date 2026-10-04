@@ -983,7 +983,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                         .padding(top = 2.dp)
                         .clickable {
                             val searchUrl = "https://www.google.com/search?q=" +
-                                Uri.encode("site:ticketswap.com/event/ " + ticketSwapQuery)
+                                Uri.encode("site:ticketswap.com " + concert.artist + " TicketSwap")
                             context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(searchUrl)))
                         }
                 )
