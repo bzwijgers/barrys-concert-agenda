@@ -68,6 +68,7 @@ data class Concert(
     val time: String = "",
     val source: String = "",
     val url: String = "",
+    val ticketSwapUrl: String = "",
     val firstFound: Long = 0L,
     val isNew: Boolean = false,
     val isFavorite: Boolean = false,
@@ -257,6 +258,7 @@ fun ConcertApp() {
                     time = source.time,
                     source = source.source,
                     url = source.url,
+                    ticketSwapUrl = source.ticketSwapUrl,
                     firstFound =
                         old?.firstFound
                             ?: now,
@@ -371,6 +373,7 @@ fun ConcertApp() {
                         time = stored.time,
                         source = stored.source,
                         url = stored.url,
+                        ticketSwapUrl = stored.ticketSwapUrl,
                         firstFound =
                             stored.firstFound,
                         isNew =
@@ -975,7 +978,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                 }
                 TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
             }
-            if (concert.isFavorite && !concert.isAttending) {
+            if (concert.isFavorite && !concert.isAttending && concert.ticketSwapUrl.isNotBlank()) {
                 val context = LocalContext.current
                 Text(
                     text = "TicketSwap",
@@ -986,7 +989,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                         .padding(top = 2.dp)
                         .clickable {
                             context.startActivity(
-                                Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ticketswap.nl/"))
+                                Intent(Intent.ACTION_VIEW, Uri.parse(concert.ticketSwapUrl))
                             )
                         }
                 )
