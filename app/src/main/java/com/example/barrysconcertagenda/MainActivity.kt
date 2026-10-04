@@ -963,25 +963,14 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                 val context = LocalContext.current
                 Text(text = if (concert.source.isBlank()) "" else "Bron: ${concert.source.replace("PAARD", "Paard")}", fontSize = 10.sp, maxLines = 1, color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = if (concert.url.isNotBlank()) androidx.compose.ui.text.style.TextDecoration.Underline else null, modifier = Modifier.weight(1f).then(if (concert.url.isNotBlank()) Modifier.clickable { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url))) } else Modifier))
                 TextButton(
-                    modifier = Modifier
-                        .size(38.dp)
-                        .then(
-                            if (concert.isAttending) {
-                                Modifier.background(
-                                    Color(0xFF2E7D32),
-                                    shape = androidx.compose.foundation.shape.CircleShape
-                                )
-                            } else {
-                                Modifier
-                            }
-                        ),
+                    modifier = Modifier.size(38.dp),
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
                     onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }
                 ) {
                     Text(
                         "🎟",
                         fontSize = 20.sp,
-                        color = if (concert.isAttending) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
+                        color = if (concert.isAttending) Color(0xFF2E7D32) else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
                 TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
