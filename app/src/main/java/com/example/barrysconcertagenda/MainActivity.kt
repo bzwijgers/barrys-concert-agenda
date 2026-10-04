@@ -128,8 +128,9 @@ fun ConcertApp() {
 
     var searchQuery by remember { mutableStateOf("") }
     var searchExpanded by remember { mutableStateOf(false) }
-    var selectedSearchDate by remember { mutableStateOf<LocalDate?>(null) }
-    var showDatePicker by remember { mutableStateOf(false) }
+    var searchDateFrom by remember { mutableStateOf<LocalDate?>(null) }
+    var searchDateTo by remember { mutableStateOf<LocalDate?>(null) }
+    var datePickerTarget by remember { mutableStateOf<String?>(null) }
 
     var concerts by remember {
         mutableStateOf<List<Concert>>(
@@ -468,8 +469,11 @@ fun ConcertApp() {
                 normalizedSearch.isBlank() ||
                     concert.artist.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
                     concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch)
+            val concertDate = parseConcertDate(concert.date)
             val dateMatches =
-                selectedSearchDate == null || parseConcertDate(concert.date) == selectedSearchDate
+                concertDate != null &&
+                    (searchDateFrom == null || !concertDate.isBefore(searchDateFrom)) &&
+                    (searchDateTo == null || !concertDate.isAfter(searchDateTo))
             textMatches && dateMatches
         }
 
@@ -584,34 +588,46 @@ fun ConcertApp() {
             }
 
             if (searchExpanded) {
+                OutlinedTextField(
+                    value = searchQuery,
+                    onValueChange = { searchQuery = it },
+                    placeholder = { Text("Artiest of zaal…", fontSize = 12.sp) },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 4.dp)
+                )
                 Row(
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 4.dp),
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    OutlinedTextField(
-                        value = searchQuery,
-                        onValueChange = { searchQuery = it },
-                        placeholder = { Text("Artiest of zaal…", fontSize = 12.sp) },
-                        singleLine = true,
-                        modifier = Modifier.weight(1f)
-                    )
-                    TextButton(onClick = { showDatePicker = true }) {
-                        Text(selectedSearchDate?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "📅 Datum")
+                    TextButton(onClick = { datePickerTarget = "from" }, modifier = Modifier.weight(1f)) {
+                        Text("Van: " + (searchDateFrom?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "datum"))
+                    }
+                    Text(" t/m ", style = MaterialTheme.typography.bodySmall)
+                    TextButton(onClick = { datePickerTarget = "to" }, modifier = Modifier.weight(1f)) {
+                        Text("Tot: " + (searchDateTo?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "datum"))
                     }
                 }
-                if (selectedSearchDate != null) {
-                    TextButton(onClick = { selectedSearchDate = null }, modifier = Modifier.padding(start = 20.dp)) {
-                        Text("Datumfilter wissen")
-                    }
+                if (searchDateFrom != null || searchDateTo != null) {
+                    TextButton(
+                        onClick = { searchDateFrom = null; searchDateTo = null },
+                        modifier = Modifier.padding(start = 20.dp)
+                    ) { Text("Periode wissen") }
                 }
             }
 
-            if (showDatePicker) {
+            if (datePickerTarget != null) {
                 BarryDatePicker(
-                    onDismiss = { showDatePicker = false },
-                    onDateSelected = {
-                        selectedSearchDate = it
-                        showDatePicker = false
+                    initialDate = if (datePickerTarget == "from") searchDateFrom else searchDateTo,
+                    onDismiss = { datePickerTarget = null },
+                    onDateSelected = { picked ->
+                        if (datePickerTarget == "from") {
+                            searchDateFrom = picked
+                            if (searchDateTo != null && picked.isAfter(searchDateTo)) searchDateTo = picked
+                        } else {
+                            searchDateTo = picked
+                            if (searchDateFrom != null && picked.isBefore(searchDateFrom)) searchDateFrom = picked
+                        }
+                        datePickerTarget = null
                     }
                 )
             }
@@ -819,8 +835,9 @@ fun ConcertApp() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun BarryDatePicker(onDismiss: () -> Unit, onDateSelected: (LocalDate) -> Unit) {
-    val state = rememberDatePickerState()
+fun BarryDatePicker(initialDate: LocalDate? = null, onDismiss: () -> Unit, onDateSelected: (LocalDate) -> Unit) {
+    val initialMillis = initialDate?.atStartOfDay(java.time.ZoneOffset.UTC)?.toInstant()?.toEpochMilli()
+    val state = rememberDatePickerState(initialSelectedDateMillis = initialMillis)
     DatePickerDialog(onDismissRequest = onDismiss, confirmButton = {
         TextButton(onClick = { state.selectedDateMillis?.let { millis -> onDateSelected(java.time.Instant.ofEpochMilli(millis).atZone(java.time.ZoneOffset.UTC).toLocalDate()) } }) { Text("Kiezen") }
     }, dismissButton = { TextButton(onClick = onDismiss) { Text("Annuleren") } }) { DatePicker(state = state) }
