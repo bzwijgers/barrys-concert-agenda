@@ -798,7 +798,24 @@ fun ConcertApp() {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
-                                    Text("013 · Baroeg · Boerderij · Effenaar · Melkweg · MEZZ · Paard · Paradiso · Patronaat · Rotown · TivoliVredenburg")
+                                    val mainVenues = listOf("013", "Baroeg", "Boerderij", "Effenaar", "Melkweg", "MEZZ", "Paard", "Paradiso", "Patronaat", "Rotown", "TivoliVredenburg")
+                                    mainVenues.forEach { mainVenue ->
+                                        val subVenues = concerts
+                                            .filter { it.source.equals(mainVenue, ignoreCase = true) }
+                                            .map { it.venue.trim() }
+                                            .filter { it.isNotBlank() && !it.equals(mainVenue, ignoreCase = true) }
+                                            .distinct()
+                                            .sortedBy { it.lowercase(Locale.getDefault()) }
+                                        Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                                            Text(mainVenue, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                                            if (subVenues.isNotEmpty()) {
+                                                Text(
+                                                    "(" + subVenues.joinToString(" · ") + ")",
+                                                    style = MaterialTheme.typography.bodySmall
+                                                )
+                                            }
+                                        }
+                                    }
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
