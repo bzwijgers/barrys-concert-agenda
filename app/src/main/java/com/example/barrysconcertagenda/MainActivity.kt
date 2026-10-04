@@ -19,6 +19,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.AlertDialog
@@ -48,6 +50,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.graphics.Color
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
@@ -575,13 +578,21 @@ fun ConcertApp() {
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(
-                    text = "Barry's concert agenda 🇳🇱 🇧🇪",
-                    style = MaterialTheme.typography.headlineMedium,
-                    fontWeight = FontWeight.Bold,
-                    maxLines = 1,
-                    modifier = Modifier.weight(1f)
-                )
+                Row(
+                    modifier = Modifier.weight(1f),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "Barry's concert agenda",
+                        style = MaterialTheme.typography.headlineMedium,
+                        fontWeight = FontWeight.Bold,
+                        maxLines = 1
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    NetherlandsFlag()
+                    Spacer(Modifier.width(4.dp))
+                    BelgiumFlag()
+                }
                 IconButton(onClick = { searchExpanded = !searchExpanded }) {
                     Text(if (searchExpanded) "✕" else "🔍", fontSize = 20.sp)
                 }
@@ -830,6 +841,24 @@ fun ConcertApp() {
                 }
             }
         }
+    }
+}
+
+@Composable
+fun NetherlandsFlag() {
+    Column(modifier = Modifier.width(22.dp).height(15.dp)) {
+        Box(Modifier.weight(1f).fillMaxWidth().background(Color(0xFFAE1C28)))
+        Box(Modifier.weight(1f).fillMaxWidth().background(Color.White))
+        Box(Modifier.weight(1f).fillMaxWidth().background(Color(0xFF21468B)))
+    }
+}
+
+@Composable
+fun BelgiumFlag() {
+    Row(modifier = Modifier.width(22.dp).height(15.dp)) {
+        Box(Modifier.weight(1f).fillMaxSize().background(Color.Black))
+        Box(Modifier.weight(1f).fillMaxSize().background(Color(0xFFFDE100)))
+        Box(Modifier.weight(1f).fillMaxSize().background(Color(0xFFEF3340)))
     }
 }
 
