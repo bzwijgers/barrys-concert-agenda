@@ -158,16 +158,25 @@ private fun TicketSwapLookupWebView(
             .split("-").filter { it.length >= 2 }
         val city = ticketSwapSlugPartWeb(target.city)
         val venue = ticketSwapSlugPartWeb(target.venue)
-        val query = listOf(target.artist, target.city, target.venue)
-            .filter { it.isNotBlank() }.joinToString(" ")
-        val jsQuery = org.json.JSONObject.quote(query)
-        var searchSubmitted = false
+        val query = listOf(
+            "site:ticketswap.com/concert-tickets",
+            target.artist,
+            target.city,
+            target.venue,
+            date
+        ).filter { it.isNotBlank() }.joinToString(" ")
+        val searchUrl = "https://www.google.com/search?q=" +
+            java.net.URLEncoder.encode(query, "UTF-8")
 
-        fun inspectResults(view: WebView, attempt: Int) {
+        fun inspect(view: WebView, attempt: Int) {
             view.evaluateJavascript(
                 """(function(){
-                  const links=[...document.querySelectorAll('a')].map(a=>a.href).filter(Boolean);
-                  return JSON.stringify(links);
+                  const values=[];
+                  for(const a of document.querySelectorAll('a')){
+                    if(a.href) values.push(a.href);
+                    const h=a.getAttribute('href'); if(h) values.push(h);
+                  }
+                  return JSON.stringify(values);
                 })();"""
             ) { raw ->
                 val decoded = raw
@@ -175,8 +184,13 @@ private fun TicketSwapLookupWebView(
                     .replace("\\\\", "\\")
                     .replace("\\\"", "\"")
                     .replace("\\\\/", "/")
-                val candidates = Regex("""https://www\\.ticketswap\\.(?:nl|com)/concert-tickets/[^"\\\\]+""")
-                    .findAll(decoded).map { it.value }.distinct().toList()
+                val direct = Regex("""https?://(?:www\\.)?ticketswap\\.(?:com|nl)/concert-tickets/[^"&?\\\\]+""")
+                    .findAll(decoded).map { it.value }.toList()
+                val encoded = Regex("""https?%3A%2F%2F(?:www\\.)?ticketswap\\.(?:com|nl)%2Fconcert-tickets%2F[^"&]+""", RegexOption.IGNORE_CASE)
+                    .findAll(decoded)
+                    .map { java.net.URLDecoder.decode(it.value, "UTF-8") }
+                    .toList()
+                val candidates = (direct + encoded).distinct()
                 val exact = candidates.firstOrNull { candidate ->
                     val lower = candidate.lowercase(Locale.ROOT)
                     date.isNotBlank() && date in lower &&
@@ -185,61 +199,20 @@ private fun TicketSwapLookupWebView(
                 }
                 if (exact != null) {
                     onResult(exact)
-                } else if (attempt < 6) {
-                    view.postDelayed({ inspectResults(view, attempt + 1) }, 1200)
+                } else if (attempt < 5) {
+                    view.postDelayed({ inspect(view, attempt + 1) }, 1200)
                 } else {
-                    onResult("ERROR:GEEN EXACTE MATCH · links ${candidates.size}")
+                    onResult("ERROR:GEEN EXACTE MATCH")
                 }
             }
         }
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
-                if (url.contains("403") || view.title?.contains("403") == true) {
-                    onResult("ERROR:HTTP 403")
-                    return
-                }
-
-                if (!searchSubmitted) {
-                    view.postDelayed({
-                        view.evaluateJavascript(
-                            """(function(){
-                              const inputs=[...document.querySelectorAll('input')];
-                              const input=inputs.find(i =>
-                                (i.type||'').toLowerCase()==='search' ||
-                                (i.placeholder||'').toLowerCase().includes('zoek') ||
-                                (i.placeholder||'').toLowerCase().includes('search') ||
-                                (i.getAttribute('aria-label')||'').toLowerCase().includes('zoek') ||
-                                (i.getAttribute('aria-label')||'').toLowerCase().includes('search')
-                              );
-                              if(!input) return 'NO_SEARCH_INPUT';
-                              input.focus();
-                              const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;
-                              setter.call(input,$jsQuery);
-                              input.dispatchEvent(new Event('input',{bubbles:true}));
-                              input.dispatchEvent(new Event('change',{bubbles:true}));
-                              const form=input.closest('form');
-                              if(form){ if(form.requestSubmit) form.requestSubmit(); else form.submit(); return 'FORM_SUBMITTED'; }
-                              input.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',code:'Enter',keyCode:13,which:13,bubbles:true}));
-                              input.dispatchEvent(new KeyboardEvent('keyup',{key:'Enter',code:'Enter',keyCode:13,which:13,bubbles:true}));
-                              return 'ENTER_SENT';
-                            })();"""
-                        ) { result ->
-                            if (result.contains("NO_SEARCH_INPUT")) {
-                                onResult("ERROR:GEEN ZOEKVELD OP TICKETSWAP")
-                            } else {
-                                searchSubmitted = true
-                                view.postDelayed({ inspectResults(view, 1) }, 1500)
-                            }
-                        }
-                    }, 1500)
-                } else {
-                    view.postDelayed({ inspectResults(view, 1) }, 1200)
-                }
+                view.postDelayed({ inspect(view, 1) }, 1200)
             }
         }
-
-        webView.loadUrl("https://www.ticketswap.nl/")
+        webView.loadUrl(searchUrl)
     }
 
     AndroidView(
