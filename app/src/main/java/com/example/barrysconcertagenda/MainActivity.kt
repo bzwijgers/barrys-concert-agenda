@@ -566,7 +566,7 @@ fun ConcertApp() {
                 NavigationBarItem(
                     selected = selectedTab == 3,
                     onClick = { selectedTab = 3 },
-                    icon = { Text("🎟", fontSize = 20.sp) }
+                    icon = { Text("🎟", fontSize = 20.sp, color = Color(0xFF2E7D32)) }
                 )
 
                 NavigationBarItem(
