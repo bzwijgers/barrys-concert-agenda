@@ -38,8 +38,6 @@ jobs:
         run: python -m compileall -q scraper.py scrapers
 
       - name: Run concert scraper
-        env:
-          PARSE_API_KEY: ${{ secrets.PARSE_API_KEY }}
         run: python scraper.py
 
       - name: Check concerts.json
