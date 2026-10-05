@@ -49,12 +49,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -133,53 +135,70 @@ fun WelcomeScreen(
 
 @Composable
 private fun TicketSwapLookupWebView(
-    concert: Concert,
+    concert: Concert?,
     onResult: (String) -> Unit
 ) {
-    val date = parseConcertDate(concert.date)?.toString().orEmpty()
-    val artistParts = ticketSwapSlugPartWeb(concert.artist)
-        .split("-").filter { it.length >= 2 }
-    val city = ticketSwapSlugPartWeb(concert.city)
-    val venue = ticketSwapSlugPartWeb(concert.venue)
-    val query = listOf(concert.artist, concert.city, concert.venue)
-        .filter { it.isNotBlank() }.joinToString(" ")
-    val searchUrl = "https://www.ticketswap.nl/search?query=" +
-        java.net.URLEncoder.encode(query, "UTF-8")
+    val context = LocalContext.current
+    val webView = remember {
+        WebView(context).apply {
+            settings.javaScriptEnabled = true
+            settings.domStorageEnabled = true
+            CookieManager.getInstance().setAcceptCookie(true)
+        }
+    }
+
+    DisposableEffect(Unit) {
+        onDispose { webView.destroy() }
+    }
+
+    LaunchedEffect(concert?.url) {
+        val target = concert ?: return@LaunchedEffect
+        val date = parseConcertDate(target.date)?.toString().orEmpty()
+        val artistParts = ticketSwapSlugPartWeb(target.artist)
+            .split("-").filter { it.length >= 2 }
+        val city = ticketSwapSlugPartWeb(target.city)
+        val venue = ticketSwapSlugPartWeb(target.venue)
+        val query = listOf(target.artist, target.city, target.venue)
+            .filter { it.isNotBlank() }.joinToString(" ")
+        val searchUrl = "https://www.ticketswap.nl/search?query=" +
+            java.net.URLEncoder.encode(query, "UTF-8")
+
+        webView.webViewClient = object : WebViewClient() {
+            override fun onPageFinished(view: WebView, url: String) {
+                if (url.contains("403") || view.title?.contains("403") == true) {
+                    onResult("ERROR:HTTP 403")
+                    return
+                }
+                view.postDelayed({
+                    view.evaluateJavascript(
+                        """(function(){
+                          const links=[...document.querySelectorAll('a[href*="/concert-tickets/"]')].map(a=>a.href);
+                          return JSON.stringify(links);
+                        })();"""
+                    ) { raw ->
+                        val decoded = raw
+                            .removeSurrounding("\"")
+                            .replace("\\\\", "\\")
+                            .replace("\\\"", "\"")
+                            .replace("\\\/", "/")
+                        val candidates = Regex("""https://www\\.ticketswap\\.nl/concert-tickets/[^"\\\\]+""")
+                            .findAll(decoded).map { it.value }.distinct().toList()
+                        val exact = candidates.firstOrNull { candidate ->
+                            val lower = candidate.lowercase(Locale.ROOT)
+                            date.isNotBlank() && date in lower &&
+                                artistParts.count { it in lower } >= maxOf(1, artistParts.size / 2) &&
+                                (city.isBlank() || city in lower || venue in lower)
+                        }
+                        onResult(exact ?: "ERROR:GEEN EXACTE MATCH")
+                    }
+                }, 1200)
+            }
+        }
+        webView.loadUrl(searchUrl)
+    }
 
     AndroidView(
-        factory = { context ->
-            WebView(context).apply {
-                settings.javaScriptEnabled = true
-                settings.domStorageEnabled = true
-                CookieManager.getInstance().setAcceptCookie(true)
-                webViewClient = object : WebViewClient() {
-                    override fun onPageFinished(view: WebView, url: String) {
-                        view.evaluateJavascript(
-                            """(function(){
-                              const links=[...document.querySelectorAll('a[href*="/concert-tickets/"]')].map(a=>a.href);
-                              return JSON.stringify(links);
-                            })();"""
-                        ) { raw ->
-                            val decoded = raw
-                                .removeSurrounding("\"")
-                                .replace("\\\\", "\\")
-                                .replace("\\\"", "\"")
-                                .replace("\\\/", "/")
-                            val candidates = Regex("""https://www\\.ticketswap\\.nl/concert-tickets/[^"\\\\]+""")
-                                .findAll(decoded).map { it.value }.distinct().toList()
-                            val exact = candidates.firstOrNull { candidate ->
-                                val lower = candidate.lowercase(Locale.ROOT)
-                                date.isNotBlank() && date in lower &&
-                                    artistParts.count { it in lower } >= maxOf(1, artistParts.size / 2) &&
-                                    (city.isBlank() || city in lower || venue in lower)
-                            }
-                            onResult(exact ?: "ERROR:GEEN EXACTE MATCH")
-                        }
-                    }
-                }
-                loadUrl(searchUrl)
-            }
-        },
+        factory = { webView },
         modifier = Modifier.size(1.dp)
     )
 }
@@ -587,25 +606,24 @@ fun ConcertApp() {
             searchedConcerts
         }
 
-    ticketSwapLookupConcert?.let { lookupConcert ->
-        TicketSwapLookupWebView(
-            concert = lookupConcert,
-            onResult = { result ->
-                if (!result.startsWith("ERROR:")) {
-                    concerts = concerts.map {
-                        if (normalizeUrl(it.url) == normalizeUrl(lookupConcert.url)) {
-                            it.copy(ticketSwapUrl = result)
-                        } else it
-                    }
-                    ConcertStorage.setTicketSwapUrl(context, lookupConcert.url, result)
-                    ticketSwapStatus = "TicketSwap gevonden"
-                } else {
-                    ticketSwapStatus = "TicketSwap: ${result.removePrefix("ERROR:")}"
+    TicketSwapLookupWebView(
+        concert = ticketSwapLookupConcert,
+        onResult = { result ->
+            val lookupConcert = ticketSwapLookupConcert ?: return@TicketSwapLookupWebView
+            if (!result.startsWith("ERROR:")) {
+                concerts = concerts.map {
+                    if (normalizeUrl(it.url) == normalizeUrl(lookupConcert.url)) {
+                        it.copy(ticketSwapUrl = result)
+                    } else it
                 }
-                ticketSwapLookupConcert = null
+                ConcertStorage.setTicketSwapUrl(context, lookupConcert.url, result)
+                ticketSwapStatus = "TicketSwap gevonden"
+            } else {
+                ticketSwapStatus = "TicketSwap: ${result.removePrefix("ERROR:")}"
             }
-        )
-    }
+            ticketSwapLookupConcert = null
+        }
+    )
 
     Scaffold(
         bottomBar = {
