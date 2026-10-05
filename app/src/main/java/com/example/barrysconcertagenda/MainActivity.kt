@@ -186,9 +186,9 @@ private fun TicketSwapLookupWebView(
                     .replace("\\\\", "\\")
                     .replace("\\\"", "\"")
                     .replace("\\\\/", "/")
-                val direct = Regex("""https?://(?:www\\.)?ticketswap\\.(?:com|nl)/concert-tickets/[^"&?\\\\<> ]+""", RegexOption.IGNORE_CASE)
+                val direct = Regex("""https?://(?:www\.)?ticketswap\.(?:com|nl)/concert-tickets/[^"&?\\<> ]+""", RegexOption.IGNORE_CASE)
                     .findAll(decoded).map { it.value }.toList()
-                val encoded = Regex("""https?%3A%2F%2F(?:www\\.)?ticketswap\\.(?:com|nl)%2Fconcert-tickets%2F[^"&]+""", RegexOption.IGNORE_CASE)
+                val encoded = Regex("""https?%3A%2F%2F(?:www\.)?ticketswap\.(?:com|nl)%2Fconcert-tickets%2F[^"&]+""", RegexOption.IGNORE_CASE)
                     .findAll(decoded)
                     .map { java.net.URLDecoder.decode(it.value, "UTF-8") }
                     .toList()
