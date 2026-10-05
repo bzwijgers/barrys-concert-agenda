@@ -956,6 +956,16 @@ fun ConcertApp() {
                                     }
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
+                                    TextButton(
+                                        onClick = {
+                                            ticketSwapStatus = "TicketSwap test wordt uitgevoerd..."
+                                            coroutineScope.launch {
+                                                ticketSwapStatus = probeTicketSwapFromPhone()
+                                            }
+                                        }
+                                    ) {
+                                        Text("Test TicketSwap")
+                                    }
                                     if (ticketSwapStatus.isNotBlank()) {
                                         Text(ticketSwapStatus, style = MaterialTheme.typography.bodySmall)
                                     }
