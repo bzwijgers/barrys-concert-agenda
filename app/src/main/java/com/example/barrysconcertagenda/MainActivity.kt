@@ -1230,6 +1230,46 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
 
 
 
+
+private suspend fun probeTicketSwapFromPhone(): String =
+    withContext(Dispatchers.IO) {
+        try {
+            val connection = (URL("https://www.ticketswap.nl/netherlands").openConnection() as HttpURLConnection).apply {
+                requestMethod = "GET"
+                connectTimeout = 15000
+                readTimeout = 15000
+                instanceFollowRedirects = true
+                setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124 Mobile Safari/537.36")
+                setRequestProperty("Accept-Language", "nl-NL,nl;q=0.9,en;q=0.8")
+            }
+            val code = connection.responseCode
+            val stream = if (code in 200..399) connection.inputStream else connection.errorStream
+            val body = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
+            connection.disconnect()
+            val normalizedBody = body.replace("\\\\/", "/")
+            val jamesBlakeUrl = Regex(
+                """https://www\\.ticketswap\\.nl/concert-tickets/james-blake-utrecht-tivolivredenburg-2026-10-06-[A-Za-z0-9]+""",
+                RegexOption.IGNORE_CASE
+            ).find(normalizedBody)?.value
+            val scriptSources = Regex(
+                """<script[^>]+src=["']([^"']+)["']""",
+                RegexOption.IGNORE_CASE
+            ).findAll(normalizedBody).map { it.groupValues[1] }.toList()
+            val apiHints = Regex(
+                """https?://[^"'\\s<>]+(?:graphql|api|search)[^"'\\s<>]*""",
+                RegexOption.IGNORE_CASE
+            ).findAll(normalizedBody).map { it.value }.distinct().take(3).toList()
+            if (jamesBlakeUrl != null) {
+                "TicketSwap test: GEVONDEN · $jamesBlakeUrl"
+            } else {
+                "TicketSwap test: HTTP $code · ${body.length} bytes · scripts ${scriptSources.size} · API hints ${apiHints.size}" +
+                    if (apiHints.isNotEmpty()) " · " + apiHints.joinToString(" | ") else ""
+            }
+        } catch (error: Exception) {
+            "TicketSwap test mislukt: ${error.javaClass.simpleName}"
+        }
+    }
+
 private fun normalizeUrl(
     url: String
 ): String {
