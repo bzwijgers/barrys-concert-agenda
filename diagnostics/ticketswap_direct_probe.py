@@ -6,6 +6,8 @@ import urllib.error
 URLS = [
     "https://www.ticketswap.nl/concert-tickets/james-blake-utrecht-tivolivredenburg-2026-10-06-CZA4ntDvc8empFpLDfnso",
     "https://www.ticketswap.nl/concert-tickets/l/netherlands/utrecht/next-month",
+    "https://www.ticketswap.nl/netherlands",
+    "https://www.ticketswap.nl/concert-tickets",
 ]
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/154.0 Safari/537.36",
