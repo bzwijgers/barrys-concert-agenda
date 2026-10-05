@@ -59,6 +59,8 @@ import kotlinx.coroutines.withContext
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
+import java.net.HttpURLConnection
+import java.net.URL
 
 data class Concert(
     val artist: String,
@@ -1064,6 +1066,29 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
         }
     }
 }
+
+
+private suspend fun probeTicketSwapFromPhone(): String =
+    withContext(Dispatchers.IO) {
+        try {
+            val connection = (URL("https://www.ticketswap.nl/netherlands").openConnection() as HttpURLConnection).apply {
+                requestMethod = "GET"
+                connectTimeout = 10000
+                readTimeout = 10000
+                instanceFollowRedirects = true
+                setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/154.0 Mobile Safari/537.36")
+                setRequestProperty("Accept-Language", "nl-NL,nl;q=0.9,en;q=0.8")
+            }
+            val code = connection.responseCode
+            val stream = if (code in 200..399) connection.inputStream else connection.errorStream
+            val body = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
+            connection.disconnect()
+            "TicketSwap test: HTTP $code · ${body.length} bytes"
+        } catch (error: Exception) {
+            "TicketSwap test mislukt: ${error.javaClass.simpleName}"
+        }
+    }
+
 
 private fun normalizeUrl(
     url: String
