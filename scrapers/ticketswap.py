@@ -64,8 +64,11 @@ def _ts_search_event_links(concert):
     if not artist or not date:
         return []
 
-    query = f'site:ticketswap.com/concert-tickets "{artist}" "{venue}" "{city}" "{date}"'
-    search_url = "https://www.bing.com/search?q=" + quote_plus(query)
+    # Gebruik de Nederlandse TicketSwap-index; die wordt aantoonbaar
+    # geindexeerd met exacte eventpagina's. Zoek zonder ISO-datum tussen
+    # quotes, omdat de zichtbare zoekresultaten de datum lokaal formatteren.
+    query = f'site:ticketswap.nl/concert-tickets "{artist}" "{venue}" "{city}"'
+    search_url = "https://www.google.com/search?q=" + quote_plus(query)
     try:
         page = download_page_retry(search_url, attempts=2)
     except Exception:
@@ -73,7 +76,7 @@ def _ts_search_event_links(concert):
 
     cleaned = html_module.unescape(page).replace("\\/", "/")
     pattern = re.compile(
-        r'https?://www\.ticketswap\.com/concert-tickets/[a-z0-9][^"&<>\\\s?]*',
+        r'https?://www\.ticketswap\.(?:nl|com)/concert-tickets/[a-z0-9][^"&<>\\\s?]*',
         re.I,
     )
     return list(dict.fromkeys(match.group(0).rstrip("/") for match in pattern.finditer(cleaned)))
