@@ -1,0 +1,37 @@
+name: TicketSwap lookup test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scrapers/ticketswap.py"
+      - ".github/workflows/ticketswap-lookup-test.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test exact Gavin DeGraw lookup
+        run: |
+          python - <<'PY'
+          from scrapers.ticketswap import _search_candidates, _ts_candidate_score
+          concert = {
+              "artist": "Gavin DeGraw",
+              "venue": "TivoliVredenburg",
+              "city": "Utrecht",
+              "date": "2026-10-13",
+          }
+          candidates = _search_candidates(concert)
+          print("Candidates:", candidates)
+          scored = [( _ts_candidate_score(concert, url), url) for url in candidates]
+          print("Scored:", scored)
+          exact = [url for score, url in scored if score >= 0]
+          if not exact:
+              raise SystemExit("No exact Gavin TicketSwap match found")
+          print("EXACT:", exact[0])
+          PY
