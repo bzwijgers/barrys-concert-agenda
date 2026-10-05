@@ -45,6 +45,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -56,6 +57,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.graphics.Color
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -141,6 +143,9 @@ fun ConcertApp() {
     var datePickerTarget by remember { mutableStateOf<String?>(null) }
     var searchVenue by remember { mutableStateOf<String?>(null) }
     var venueMenuExpanded by remember { mutableStateOf(false) }
+    var ticketSwapProbeResult by remember { mutableStateOf("Nog niet getest") }
+    var ticketSwapProbeRunning by remember { mutableStateOf(false) }
+    val coroutineScope = rememberCoroutineScope()
 
     var concerts by remember {
         mutableStateOf<List<Concert>>(
@@ -824,6 +829,21 @@ fun ConcertApp() {
                                     }
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
+                                    Text("TicketSwap verbinding", fontWeight = FontWeight.Bold)
+                                    Text(ticketSwapProbeResult, style = MaterialTheme.typography.bodySmall)
+                                    TextButton(
+                                        enabled = !ticketSwapProbeRunning,
+                                        onClick = {
+                                            ticketSwapProbeRunning = true
+                                            ticketSwapProbeResult = "TicketSwap wordt getest..."
+                                            coroutineScope.launch {
+                                                ticketSwapProbeResult = probeTicketSwapFromPhone()
+                                                ticketSwapProbeRunning = false
+                                            }
+                                        }
+                                    ) {
+                                        Text(if (ticketSwapProbeRunning) "Bezig..." else "Test TicketSwap")
+                                    }
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
                                     Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via Bron open je altijd de oorspronkelijke concertpagina.")
                                     Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall)
