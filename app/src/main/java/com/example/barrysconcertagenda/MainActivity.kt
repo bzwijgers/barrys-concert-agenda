@@ -162,10 +162,21 @@ private fun TicketSwapLookupWebView(
         val dutchMonths = listOf("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec")
         val dateText = parsedDate?.let { it.dayOfMonth.toString() + " " + dutchMonths[it.monthValue - 1] }.orEmpty()
 
-        val searchUrl = if (target.city.equals("Utrecht", ignoreCase = true)) {
-            "https://www.ticketswap.nl/concert-tickets/l/netherlands/utrecht/next-month"
+        val englishMonths = listOf(
+            "january", "february", "march", "april", "may", "june",
+            "july", "august", "september", "october", "november", "december"
+        )
+        val countrySlug = when (target.country.uppercase(Locale.ROOT)) {
+            "BE" -> "belgium"
+            else -> "netherlands"
+        }
+        val citySlug = ticketSwapSlugPartWeb(target.city)
+        val monthSlug = parsedDate?.let { englishMonths[it.monthValue - 1] }.orEmpty()
+        val searchUrl = if (citySlug.isNotBlank() && monthSlug.isNotBlank()) {
+            "https://www.ticketswap.nl/concert-tickets/g/country/" +
+                countrySlug + "/" + citySlug + "/" + monthSlug
         } else {
-            "https://www.ticketswap.nl/concert-tickets/l/netherlands"
+            "https://www.ticketswap.nl/concert-tickets/l/" + countrySlug
         }
 
         var clicked = false
