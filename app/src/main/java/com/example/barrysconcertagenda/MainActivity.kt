@@ -160,9 +160,38 @@ private fun TicketSwapLookupWebView(
         val venue = ticketSwapSlugPartWeb(target.venue)
         val query = listOf(target.artist, target.city, target.venue)
             .filter { it.isNotBlank() }.joinToString(" ")
-        val searchUrl = "https://www.ticketswap.nl/search?query=" +
-            java.net.URLEncoder.encode(query, "UTF-8")
-        var searchStarted = false
+        val jsQuery = org.json.JSONObject.quote(query)
+        var searchSubmitted = false
+
+        fun inspectResults(view: WebView, attempt: Int) {
+            view.evaluateJavascript(
+                """(function(){
+                  const links=[...document.querySelectorAll('a')].map(a=>a.href).filter(Boolean);
+                  return JSON.stringify(links);
+                })();"""
+            ) { raw ->
+                val decoded = raw
+                    .removeSurrounding("\"")
+                    .replace("\\\\", "\\")
+                    .replace("\\\"", "\"")
+                    .replace("\\\\/", "/")
+                val candidates = Regex("""https://www\\.ticketswap\\.nl/concert-tickets/[^"\\\\]+""")
+                    .findAll(decoded).map { it.value }.distinct().toList()
+                val exact = candidates.firstOrNull { candidate ->
+                    val lower = candidate.lowercase(Locale.ROOT)
+                    date.isNotBlank() && date in lower &&
+                        artistParts.count { it in lower } >= maxOf(1, artistParts.size / 2) &&
+                        (city.isBlank() || city in lower || venue in lower)
+                }
+                if (exact != null) {
+                    onResult(exact)
+                } else if (attempt < 6) {
+                    view.postDelayed({ inspectResults(view, attempt + 1) }, 1200)
+                } else {
+                    onResult("ERROR:GEEN EXACTE MATCH · links ${candidates.size}")
+                }
+            }
+        }
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
@@ -171,46 +200,42 @@ private fun TicketSwapLookupWebView(
                     return
                 }
 
-                if (!searchStarted && !url.contains("/search?")) {
-                    searchStarted = true
-                    view.postDelayed({ view.loadUrl(searchUrl) }, 1200)
-                    return
-                }
-
-                if (!url.contains("/search?")) return
-
-                fun inspect(attempt: Int) {
-                    view.evaluateJavascript(
-                        """(function(){
-                          const links=[...document.querySelectorAll('a')].map(a=>a.href).filter(Boolean);
-                          return JSON.stringify(links);
-                        })();"""
-                    ) { raw ->
-                        val decoded = raw
-                            .removeSurrounding("\"")
-                            .replace("\\\\", "\\")
-                            .replace("\\\"", "\"")
-                            .replace("\\\\/", "/")
-                        val candidates = Regex("""https://www\\.ticketswap\\.nl/concert-tickets/[^"\\\\]+""")
-                            .findAll(decoded).map { it.value }.distinct().toList()
-                        val exact = candidates.firstOrNull { candidate ->
-                            val lower = candidate.lowercase(Locale.ROOT)
-                            date.isNotBlank() && date in lower &&
-                                artistParts.count { it in lower } >= maxOf(1, artistParts.size / 2) &&
-                                (city.isBlank() || city in lower || venue in lower)
+                if (!searchSubmitted) {
+                    view.postDelayed({
+                        view.evaluateJavascript(
+                            """(function(){
+                              const inputs=[...document.querySelectorAll('input')];
+                              const input=inputs.find(i =>
+                                (i.type||'').toLowerCase()==='search' ||
+                                (i.placeholder||'').toLowerCase().includes('zoek') ||
+                                (i.placeholder||'').toLowerCase().includes('search') ||
+                                (i.getAttribute('aria-label')||'').toLowerCase().includes('zoek') ||
+                                (i.getAttribute('aria-label')||'').toLowerCase().includes('search')
+                              );
+                              if(!input) return 'NO_SEARCH_INPUT';
+                              input.focus();
+                              const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set;
+                              setter.call(input,$jsQuery);
+                              input.dispatchEvent(new Event('input',{bubbles:true}));
+                              input.dispatchEvent(new Event('change',{bubbles:true}));
+                              const form=input.closest('form');
+                              if(form){ if(form.requestSubmit) form.requestSubmit(); else form.submit(); return 'FORM_SUBMITTED'; }
+                              input.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',code:'Enter',keyCode:13,which:13,bubbles:true}));
+                              input.dispatchEvent(new KeyboardEvent('keyup',{key:'Enter',code:'Enter',keyCode:13,which:13,bubbles:true}));
+                              return 'ENTER_SENT';
+                            })();"""
+                        ) { result ->
+                            if (result.contains("NO_SEARCH_INPUT")) {
+                                onResult("ERROR:GEEN ZOEKVELD OP TICKETSWAP")
+                            } else {
+                                searchSubmitted = true
+                                view.postDelayed({ inspectResults(view, 1) }, 1500)
+                            }
                         }
-
-                        if (exact != null) {
-                            onResult(exact)
-                        } else if (candidates.isEmpty() && attempt < 5) {
-                            view.postDelayed({ inspect(attempt + 1) }, 1200)
-                        } else {
-                            onResult("ERROR:GEEN EXACTE MATCH · links ${candidates.size} · poging $attempt")
-                        }
-                    }
+                    }, 1500)
+                } else {
+                    view.postDelayed({ inspectResults(view, 1) }, 1200)
                 }
-
-                view.postDelayed({ inspect(1) }, 1200)
             }
         }
 
