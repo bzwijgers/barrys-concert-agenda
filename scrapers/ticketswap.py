@@ -1,6 +1,7 @@
 from .common import *
 from datetime import datetime
 import html
+import requests
 import time
 import unicodedata
 from urllib.parse import parse_qs, quote_plus, unquote, urlparse
