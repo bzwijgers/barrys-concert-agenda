@@ -934,6 +934,19 @@ fun ConcertApp() {
                             7 -> {
                                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                                    TextButton(
+                                        onClick = {
+                                            ticketSwapStatus = "TicketSwap test wordt uitgevoerd..."
+                                            coroutineScope.launch {
+                                                ticketSwapStatus = probeTicketSwapFromPhone()
+                                            }
+                                        }
+                                    ) {
+                                        Text("Test TicketSwap")
+                                    }
+                                    if (ticketSwapStatus.isNotBlank()) {
+                                        Text(ticketSwapStatus, style = MaterialTheme.typography.bodySmall)
+                                    }
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
                                     val mainVenues = listOf("013", "Baroeg", "Boerderij", "dB's", "Effenaar", "Gebouw-T", "Melkweg", "MEZZ", "Paard", "Paradiso", "Patronaat", "Rotown", "TivoliVredenburg", "Tolhuistuin")
@@ -956,19 +969,6 @@ fun ConcertApp() {
                                     }
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
-                                    TextButton(
-                                        onClick = {
-                                            ticketSwapStatus = "TicketSwap test wordt uitgevoerd..."
-                                            coroutineScope.launch {
-                                                ticketSwapStatus = probeTicketSwapFromPhone()
-                                            }
-                                        }
-                                    ) {
-                                        Text("Test TicketSwap")
-                                    }
-                                    if (ticketSwapStatus.isNotBlank()) {
-                                        Text(ticketSwapStatus, style = MaterialTheme.typography.bodySmall)
-                                    }
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
                                     Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via Bron open je altijd de oorspronkelijke concertpagina.")
                                     Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall)
