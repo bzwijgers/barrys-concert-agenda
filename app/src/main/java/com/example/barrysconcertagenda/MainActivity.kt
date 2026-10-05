@@ -157,7 +157,14 @@ private fun TicketSwapLookupWebView(
         val date = parsedDate?.toString().orEmpty()
         val artistParts = ticketSwapSlugPartWeb(target.artist)
             .split("-").filter { it.length >= 2 }
-        val citySlug = ticketSwapSlugPartWeb(target.city)
+        val rawCitySlug = ticketSwapSlugPartWeb(target.city)
+        val citySlug = when (rawCitySlug) {
+            "den-haag", "s-gravenhage" -> "the-hague"
+            "antwerpen" -> "antwerp"
+            "brussel", "bruxelles" -> "brussels"
+            "gent" -> "ghent"
+            else -> rawCitySlug
+        }
         val venueSlug = ticketSwapSlugPartWeb(target.venue)
         val englishMonths = listOf(
             "january", "february", "march", "april", "may", "june",
@@ -269,7 +276,6 @@ fun ConcertApp() {
     var ticketSwapStatus by remember { mutableStateOf("") }
     var ticketSwapStatusUrl by remember { mutableStateOf("") }
     var ticketSwapLookupConcert by remember { mutableStateOf<Concert?>(null) }
-    var ticketSwapTestMode by remember { mutableStateOf(false) }
     val coroutineScope = rememberCoroutineScope()
 
     var concerts by remember {
@@ -655,14 +661,7 @@ fun ConcertApp() {
         concert = ticketSwapLookupConcert,
         onResult = { result ->
             val lookupConcert = ticketSwapLookupConcert ?: return@TicketSwapLookupWebView
-            if (ticketSwapTestMode) {
-                ticketSwapStatus = if (!result.startsWith("ERROR:")) {
-                    "TicketSwap WebView test: GEVONDEN · " + result
-                } else {
-                    "TicketSwap WebView test: " + result.removePrefix("ERROR:")
-                }
-                ticketSwapTestMode = false
-            } else if (!result.startsWith("ERROR:")) {
+            if (!result.startsWith("ERROR:")) {
                 concerts = concerts.map {
                     if (normalizeUrl(it.url) == normalizeUrl(lookupConcert.url)) {
                         it.copy(ticketSwapUrl = result)
@@ -963,25 +962,6 @@ fun ConcertApp() {
                             7 -> {
                                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-                                    TextButton(
-                                        onClick = {
-                                            ticketSwapStatus = "TicketSwap WebView test wordt uitgevoerd..."
-                                            ticketSwapTestMode = true
-                                            ticketSwapLookupConcert = Concert(
-                                                artist = "James Blake",
-                                                venue = "TivoliVredenburg",
-                                                city = "Utrecht",
-                                                country = "NL",
-                                                date = "2026-10-06",
-                                                url = "__ticketswap_test__"
-                                            )
-                                        }
-                                    ) {
-                                        Text("Test TicketSwap")
-                                    }
-                                    if (ticketSwapStatus.isNotBlank()) {
-                                        Text(ticketSwapStatus, style = MaterialTheme.typography.bodySmall)
-                                    }
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
                                     val mainVenues = listOf("013", "Baroeg", "Boerderij", "dB's", "Effenaar", "Gebouw-T", "Melkweg", "MEZZ", "Paard", "Paradiso", "Patronaat", "Rotown", "TivoliVredenburg", "Tolhuistuin")
