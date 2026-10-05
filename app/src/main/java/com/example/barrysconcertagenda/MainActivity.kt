@@ -351,7 +351,9 @@ fun ConcertApp() {
                     time = source.time,
                     source = source.source,
                     url = source.url,
-                    ticketSwapUrl = source.ticketSwapUrl,
+                    ticketSwapUrl =
+                        old?.ticketSwapUrl?.takeIf { it.isNotBlank() }
+                            ?: source.ticketSwapUrl,
                     firstFound =
                         old?.firstFound
                             ?: now,
@@ -409,6 +411,9 @@ fun ConcertApp() {
                         isAttending =
                             old?.isAttending
                                 ?: concert.isAttending,
+                        ticketSwapUrl =
+                            old?.ticketSwapUrl?.takeIf { it.isNotBlank() }
+                                ?: concert.ticketSwapUrl,
                         clubCard = concert.clubCard
                     )
             }
