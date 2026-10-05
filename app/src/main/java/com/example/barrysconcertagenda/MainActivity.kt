@@ -331,6 +331,8 @@ fun ConcertApp() {
                 false
             )
 
+        var sourceLoadError = ""
+
         val sourceConcerts =
             try {
 
@@ -344,7 +346,12 @@ fun ConcertApp() {
                         )
                 }
 
-            } catch (_: Exception) {
+            } catch (e: Exception) {
+
+                sourceLoadError =
+                    e.message
+                        ?.takeIf { it.isNotBlank() }
+                        ?: e.javaClass.simpleName
 
                 emptyList()
             }
@@ -565,6 +572,13 @@ fun ConcertApp() {
 
                 "Concerten gecontroleerd"
             }
+
+        if (sourceLoadError.isNotBlank()) {
+            statusText =
+                "⚠ Concertagenda kon niet worden bijgewerkt. " +
+                    "De laatst opgeslagen concerten blijven zichtbaar. " +
+                    "Fout: " + sourceLoadError
+        }
 
         loading = false
     }
