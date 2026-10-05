@@ -890,9 +890,9 @@ fun ConcertApp() {
                             },
                             showClubCardLabel = selectedTab != 4,
                             showFavorite = selectedTab != 3 && selectedTab != 5,
-                            ticketDisplay = when (selectedTab) {
-                                3 -> TicketDisplay.OWNED
-                                5 -> TicketDisplay.VISITED
+                            ticketDisplay = when {
+                                selectedTab == 5 -> TicketDisplay.VISITED
+                                concert.isAttending -> TicketDisplay.OWNED
                                 else -> TicketDisplay.DEFAULT
                             },
                             onAttendingClick = {
