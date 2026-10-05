@@ -1234,39 +1234,59 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
 private suspend fun probeTicketSwapFromPhone(): String =
     withContext(Dispatchers.IO) {
         try {
-            val connection = (URL("https://www.ticketswap.nl/netherlands").openConnection() as HttpURLConnection).apply {
-                requestMethod = "GET"
-                connectTimeout = 15000
-                readTimeout = 15000
-                instanceFollowRedirects = true
-                setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124 Mobile Safari/537.36")
-                setRequestProperty("Accept-Language", "nl-NL,nl;q=0.9,en;q=0.8")
+            fun absoluteTicketSwapUrl(src: String): String = when {
+                src.startsWith("https://") || src.startsWith("http://") -> src
+                src.startsWith("//") -> "https:" + src
+                src.startsWith("/") -> "https://www.ticketswap.nl" + src
+                else -> "https://www.ticketswap.nl/" + src
             }
-            val code = connection.responseCode
-            val stream = if (code in 200..399) connection.inputStream else connection.errorStream
-            val body = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
-            connection.disconnect()
-            val normalizedBody = body.replace("\\\\/", "/")
+            fun getText(url: String): Pair<Int, String> {
+                val connection = (URL(url).openConnection() as HttpURLConnection).apply {
+                    requestMethod = "GET"; connectTimeout = 15000; readTimeout = 15000; instanceFollowRedirects = true
+                    setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/124 Mobile Safari/537.36")
+                    setRequestProperty("Accept-Language", "nl-NL,nl;q=0.9,en;q=0.8")
+                }
+                val code = connection.responseCode
+                val stream = if (code in 200..399) connection.inputStream else connection.errorStream
+                val body = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
+                connection.disconnect()
+                return code to body
+            }
+            val page = getText("https://www.ticketswap.nl/netherlands")
+            val code = page.first
+            val normalizedBody = page.second.replace("\\\\/", "/")
             val jamesBlakeUrl = Regex(
                 """https://www\\.ticketswap\\.nl/concert-tickets/james-blake-utrecht-tivolivredenburg-2026-10-06-[A-Za-z0-9]+""",
                 RegexOption.IGNORE_CASE
             ).find(normalizedBody)?.value
-            val scriptSources = Regex(
-                """<script[^>]+src=["']([^"']+)["']""",
-                RegexOption.IGNORE_CASE
-            ).findAll(normalizedBody).map { it.groupValues[1] }.toList()
-            val apiHints = Regex(
-                """https?://[^"'\\s<>]+(?:graphql|api|search)[^"'\\s<>]*""",
-                RegexOption.IGNORE_CASE
-            ).findAll(normalizedBody).map { it.value }.distinct().take(3).toList()
-            if (jamesBlakeUrl != null) {
-                "TicketSwap test: GEVONDEN · $jamesBlakeUrl"
+            if (jamesBlakeUrl != null) return@withContext "TicketSwap test: GEVONDEN · " + jamesBlakeUrl
+
+            val scriptSources = Regex("""<script[^>]+src=["']([^"']+)["']""", RegexOption.IGNORE_CASE)
+                .findAll(normalizedBody).map { absoluteTicketSwapUrl(it.groupValues[1]) }.distinct().toList()
+            val interesting = mutableListOf<String>()
+            var checked = 0
+            for (scriptUrl in scriptSources.take(36)) {
+                try {
+                    val script = getText(scriptUrl)
+                    if (script.first !in 200..399 || script.second.isBlank()) continue
+                    checked++
+                    val normalizedScript = script.second.replace("\\\\/", "/")
+                    val pattern = Regex("""["']([^"']*(?:graphql|search|algolia|elastic)[^"']*)["']""", RegexOption.IGNORE_CASE)
+                    pattern.findAll(normalizedScript).forEach { match ->
+                        val value = match.groupValues[1].take(220)
+                        if (value.contains("graphql", true) || value.contains("search", true) || value.contains("algolia", true)) interesting.add(value)
+                    }
+                    if (interesting.distinct().size >= 5) break
+                } catch (_: Exception) {}
+            }
+            val hints = interesting.distinct().take(5)
+            if (hints.isEmpty()) {
+                "TicketSwap JS test: HTTP " + code + " · scripts " + scriptSources.size + " · " + checked + " gelezen · geen search/API hint"
             } else {
-                "TicketSwap test: HTTP $code · ${body.length} bytes · scripts ${scriptSources.size} · API hints ${apiHints.size}" +
-                    if (apiHints.isNotEmpty()) " · " + apiHints.joinToString(" | ") else ""
+                "TicketSwap JS test: " + checked + " scripts gelezen · " + hints.joinToString(" | ")
             }
         } catch (error: Exception) {
-            "TicketSwap test mislukt: ${error.javaClass.simpleName}"
+            "TicketSwap test mislukt: " + error.javaClass.simpleName + ": " + error.message.orEmpty().take(80)
         }
     }
 
