@@ -172,7 +172,13 @@ private fun TicketSwapLookupWebView(
                     if(a.href) values.push(a.href);
                     const h=a.getAttribute('href'); if(h) values.push(h);
                   }
-                  return JSON.stringify(values);
+                  const html=document.documentElement ? document.documentElement.innerHTML : "";
+                  const re=/\\/concert-tickets\\/[^"'<>\\s?]+/gi;
+                  let m;
+                  while((m=re.exec(html))!==null){
+                    values.push(new URL(m[0], location.origin).href);
+                  }
+                  return JSON.stringify([...new Set(values)]);
                 })();"""
             ) { raw ->
                 val decoded = raw
@@ -180,7 +186,7 @@ private fun TicketSwapLookupWebView(
                     .replace("\\\\", "\\")
                     .replace("\\\"", "\"")
                     .replace("\\\\/", "/")
-                val direct = Regex("""https?://(?:www\\.)?ticketswap\\.(?:com|nl)/concert-tickets/[^"&?\\\\]+""")
+                val direct = Regex("""https?://(?:www\\.)?ticketswap\\.(?:com|nl)/concert-tickets/[^"&?\\\\<> ]+""", RegexOption.IGNORE_CASE)
                     .findAll(decoded).map { it.value }.toList()
                 val encoded = Regex("""https?%3A%2F%2F(?:www\\.)?ticketswap\\.(?:com|nl)%2Fconcert-tickets%2F[^"&]+""", RegexOption.IGNORE_CASE)
                     .findAll(decoded)
