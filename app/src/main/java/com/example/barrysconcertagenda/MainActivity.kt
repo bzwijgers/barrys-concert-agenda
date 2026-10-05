@@ -669,7 +669,7 @@ fun ConcertApp() {
                 ConcertStorage.setTicketSwapUrl(context, lookupConcert.url, result)
                 ticketSwapStatus = "TicketSwap gevonden"
             } else {
-                ticketSwapStatus = "TicketSwap: ${result.removePrefix("ERROR:")}"
+                ticketSwapStatus = "Nog niet gevonden op TicketSwap"
             }
             ticketSwapLookupConcert = null
         }
