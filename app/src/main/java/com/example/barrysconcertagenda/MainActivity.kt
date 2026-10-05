@@ -1103,7 +1103,15 @@ private suspend fun probeTicketSwapFromPhone(): String =
             val stream = if (code in 200..399) connection.inputStream else connection.errorStream
             val body = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
             connection.disconnect()
-            "TicketSwap test: HTTP $code · ${body.length} bytes"
+            val jamesBlakeUrl = Regex(
+                """https://www\\.ticketswap\\.nl/concert-tickets/james-blake-utrecht-tivolivredenburg-2026-10-06-[A-Za-z0-9]+""",
+                RegexOption.IGNORE_CASE
+            ).find(body.replace("\\\\/", "/"))?.value
+            if (jamesBlakeUrl != null) {
+                "TicketSwap test: GEVONDEN · " + jamesBlakeUrl
+            } else {
+                "TicketSwap test: HTTP $code · ${body.length} bytes · James Blake-link niet in deze pagina"
+            }
         } catch (error: Exception) {
             "TicketSwap test mislukt: ${error.javaClass.simpleName}"
         }
