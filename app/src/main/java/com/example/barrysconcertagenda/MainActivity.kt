@@ -143,8 +143,6 @@ private fun TicketSwapLookupWebView(
         WebView(context).apply {
             settings.javaScriptEnabled = true
             settings.domStorageEnabled = true
-            settings.userAgentString =
-                "Mozilla/5.0 (Linux; Android 14; SM-S938B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36"
             CookieManager.getInstance().setAcceptCookie(true)
         }
     }
@@ -155,21 +153,27 @@ private fun TicketSwapLookupWebView(
 
     LaunchedEffect(concert?.url) {
         val target = concert ?: return@LaunchedEffect
-        val date = parseConcertDate(target.date)?.toString().orEmpty()
+        val parsedDate = parseConcertDate(target.date)
+        val date = parsedDate?.toString().orEmpty()
         val artistParts = ticketSwapSlugPartWeb(target.artist)
             .split("-").filter { it.length >= 2 }
         val citySlug = ticketSwapSlugPartWeb(target.city)
         val venueSlug = ticketSwapSlugPartWeb(target.venue)
-
-        val query = listOf(
-            "site:ticketswap.nl/concert-tickets",
-            "\"" + target.artist + "\"",
-            "\"" + date + "\"",
-            target.venue,
-            target.city
-        ).filter { it.isNotBlank() }.joinToString(" ")
-        val searchUrl = "https://www.bing.com/search?q=" +
-            java.net.URLEncoder.encode(query, "UTF-8")
+        val englishMonths = listOf(
+            "january", "february", "march", "april", "may", "june",
+            "july", "august", "september", "october", "november", "december"
+        )
+        val countrySlug = when (target.country.uppercase(Locale.ROOT)) {
+            "BE" -> "belgium"
+            else -> "netherlands"
+        }
+        val monthSlug = parsedDate?.let { englishMonths[it.monthValue - 1] }.orEmpty()
+        val searchUrl = if (citySlug.isNotBlank() && monthSlug.isNotBlank()) {
+            "https://www.ticketswap.com/concert-tickets/l/" +
+                countrySlug + "/" + citySlug + "/" + monthSlug
+        } else {
+            "https://www.ticketswap.com/concert-tickets/l/" + countrySlug
+        }
 
         var finished = false
 
@@ -180,10 +184,9 @@ private fun TicketSwapLookupWebView(
             }
         }
 
-        fun isExactTicketSwapUrl(candidate: String): Boolean {
+        fun exact(candidate: String): Boolean {
             val lower = candidate.lowercase(Locale.ROOT)
-            if (!lower.startsWith("https://www.ticketswap.nl/concert-tickets/") &&
-                !lower.startsWith("https://ticketswap.nl/concert-tickets/")) return false
+            if (!lower.startsWith("https://www.ticketswap.com/concert-tickets/")) return false
             if (date.isBlank() || date !in lower) return false
             if (artistParts.isNotEmpty() &&
                 artistParts.count { it in lower } < maxOf(1, artistParts.size / 2)) return false
@@ -195,10 +198,10 @@ private fun TicketSwapLookupWebView(
             view.evaluateJavascript(
                 """(function(){
                     const values=[];
-                    for(const a of document.querySelectorAll('a')){
+                    document.querySelectorAll('a').forEach(a=>{
                         if(a.href) values.push(a.href);
                         const h=a.getAttribute('href'); if(h) values.push(h);
-                    }
+                    });
                     return JSON.stringify(values);
                 })();"""
             ) { raw ->
@@ -207,31 +210,27 @@ private fun TicketSwapLookupWebView(
                     .replace("\\\\", "\\")
                     .replace("\\\"", "\"")
                     .replace("\\/", "/")
-
-                val urls = mutableListOf<String>()
-                Regex("""https?://(?:www\.)?ticketswap\.nl/concert-tickets/[^"&?\\<> ]+""", RegexOption.IGNORE_CASE)
-                    .findAll(decoded).forEach { urls.add(it.value) }
-
-                Regex("""https?%3A%2F%2F(?:www\.)?ticketswap\.nl%2Fconcert-tickets%2F[^"&]+""", RegexOption.IGNORE_CASE)
-                    .findAll(decoded).forEach {
-                        try { urls.add(java.net.URLDecoder.decode(it.value, "UTF-8")) } catch (_: Exception) {}
-                    }
-
-                val exact = urls.distinct().firstOrNull { isExactTicketSwapUrl(it) }
-                if (exact != null) {
-                    finish(exact.substringBefore("?").substringBefore("&"))
+                val candidates = Regex(
+                    """https?://(?:www\.)?ticketswap\.com/concert-tickets/[^"&?\\<> ]+""",
+                    RegexOption.IGNORE_CASE
+                ).findAll(decoded).map { it.value }.distinct().toList()
+                val match = candidates.firstOrNull { exact(it) }
+                if (match != null) {
+                    finish(match.substringBefore("?").replace("https://www.ticketswap.com/", "https://www.ticketswap.nl/"))
                 } else if (attempt < 10) {
                     view.postDelayed({ inspect(view, attempt + 1) }, 1000)
                 } else {
-                    val pageTitle = view.title.orEmpty()
-                    finish("ERROR:GEEN EXACTE MATCH · Bing: " + pageTitle + " · kandidaten " + urls.distinct().size)
+                    finish(
+                        "ERROR:GEEN EXACTE MATCH · TicketSwap.com " +
+                            view.title.orEmpty() + " · kandidaten " + candidates.size
+                    )
                 }
             }
         }
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
-                if (!finished) view.postDelayed({ inspect(view, 1) }, 800)
+                if (!finished) view.postDelayed({ inspect(view, 1) }, 700)
             }
         }
         webView.loadUrl(searchUrl)
