@@ -1,10 +1,10 @@
 from .common import *
 from datetime import datetime
 import html
-import requests
 import time
 import unicodedata
 from urllib.parse import parse_qs, quote_plus, unquote, urlparse
+from urllib.request import Request, urlopen
 
 
 SEARCH_URL = "https://html.duckduckgo.com/html/?q={query}"
@@ -84,13 +84,13 @@ def _search_candidates(concert):
         ),
         "Accept-Language": "nl-NL,nl;q=0.9,en;q=0.8",
     }
-    response = requests.get(
+    request = Request(
         SEARCH_URL.format(query=quote_plus(query)),
         headers=headers,
-        timeout=15,
     )
-    response.raise_for_status()
-    return _extract_candidates(response.text)
+    with urlopen(request, timeout=15) as response:
+        page = response.read().decode("utf-8", errors="replace")
+    return _extract_candidates(page)
 
 
 def enrich_ticketswap_urls(concerts):
