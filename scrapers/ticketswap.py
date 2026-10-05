@@ -1,5 +1,5 @@
 from .common import *
-from urllib.parse import urljoin, quote_plus
+from urllib.parse import urljoin, quote_plus, quote
 import unicodedata
 
 
@@ -82,6 +82,27 @@ def _ts_search_event_links(concert):
     return list(dict.fromkeys(match.group(0).rstrip("/") for match in pattern.finditer(cleaned)))
 
 
+
+def _ts_google_cache_query(concert):
+    """Vind exacte TicketSwap-eventpagina's via de publieke zoekindex."""
+    artist = concert.get("artist", "").strip()
+    venue = concert.get("venue", "").strip()
+    city = concert.get("city", "").strip()
+    if not artist:
+        return []
+    # Minder strikt dan voorheen: zoekindexen matchen venue/city soms niet in
+    # de snippet, terwijl die wel in de uiteindelijke TicketSwap-URL staan.
+    query = f'site:ticketswap.nl/concert-tickets "{artist}"'
+    try:
+        page = download_page_retry("https://www.google.com/search?q=" + quote_plus(query), attempts=1)
+    except Exception:
+        return []
+    cleaned = html_module.unescape(page).replace("\\/", "/")
+    return list(dict.fromkeys(re.findall(
+        r'https?://www\\.ticketswap\\.(?:nl|com)/concert-tickets/[a-z0-9][^"&<>\\\\\\s?]*',
+        cleaned, re.I
+    )))
+
 def _ts_candidate_score(concert, url):
     if _ts_link_date(url) != concert.get("date", ""):
         return -1
@@ -113,50 +134,27 @@ def enrich_ticketswap_urls(concerts):
     print("TICKETSWAP EXACTE EVENTLINKS")
     print("=" * 60)
 
-    # Verzamel TicketSwap-events per stad/maand. Dit is tientallen requests
-    # in plaats van een zoekmachine-request voor ieder concert.
-    pages = {}
-    event_urls = set()
+    # Eerst een kleine, snelle zoekindex-test op nabije toekomstige concerten.
+    # Hiermee valideren we de discovery-route zonder 1.300 requests.
+    from datetime import date, timedelta
+    today = date.today()
+    horizon = today + timedelta(days=14)
+    targets = []
     for concert in concerts:
-        city = concert.get("city", "").strip()
-        date = concert.get("date", "").strip()
-        if not city or not re.match(r"^20\d{2}-\d{2}-\d{2}$", date):
+        try:
+            d = date.fromisoformat(concert.get("date", ""))
+        except Exception:
             continue
-        key = (_ts_slug(city), date[:7])
-        pages[key] = (city, date)
+        if today <= d <= horizon:
+            targets.append(concert)
 
-    for (city_slug, year_month), (city, date) in sorted(pages.items()):
-        month = _ts_month_name(date)
-        # TicketSwap gebruikt momenteel /next-month voor de eerstvolgende
-        # kalendermaand en genre/maandpagina's als extra bron.
-        candidates = [
-            f"https://www.ticketswap.nl/concert-tickets/l/netherlands/{city_slug}/next-month",
-            f"https://www.ticketswap.nl/concert-tickets/l/netherlands/{city_slug}",
-        ]
-        if month:
-            candidates.extend([
-                f"https://www.ticketswap.nl/concert-tickets/g/rock/{month}",
-                f"https://www.ticketswap.nl/concert-tickets/g/pop/{month}",
-                f"https://www.ticketswap.nl/concert-tickets/g/indie/{month}",
-                f"https://www.ticketswap.nl/concert-tickets/g/metal/{month}",
-                f"https://www.ticketswap.nl/concert-tickets/g/folk/{month}",
-            ])
-
-        for page_url in candidates:
-            if page_url in event_urls:
-                continue
-            try:
-                page = download_page_retry(page_url, attempts=2)
-            except Exception:
-                continue
-            for url in _ts_event_links(page):
-                event_urls.add(url)
+    event_urls = set()
+    for concert in targets:
+        for url in _ts_google_cache_query(concert):
+            event_urls.add(url)
 
     matched = 0
     for concert in concerts:
-        if concert.get("ticketSwapUrl"):
-            matched += 1
-            continue
         scored = [(_ts_candidate_score(concert, url), url) for url in event_urls]
         scored = [(score, url) for score, url in scored if score >= 0]
         if not scored:
@@ -169,6 +167,6 @@ def enrich_ticketswap_urls(concerts):
         matched += 1
         print("TicketSwap match:", concert.get("artist"), concert.get("date"), "->", concert["ticketSwapUrl"])
 
-    print("TicketSwap eventlinks verzameld:", len(event_urls))
+    print("TicketSwap zoekindex-events verzameld:", len(event_urls))
     print("Exact gekoppelde TicketSwap-events:", matched)
     return concerts
