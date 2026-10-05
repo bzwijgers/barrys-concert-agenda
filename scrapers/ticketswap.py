@@ -3,7 +3,7 @@ from urllib.parse import urljoin
 import unicodedata
 
 
-TICKETSWAP_BASE = "https://www.ticketswap.nl"
+TICKETSWAP_BASE = "https://www.ticketswap.com"
 
 
 def _ts_slug(value):
@@ -22,18 +22,16 @@ def _ts_words(value):
 
 def _ts_event_links(page):
     cleaned = page.replace("\\/", "/").replace("\\u002F", "/")
-    pattern = re.compile(r'''href\s*=\s*["']([^"']+)["']''', re.I)
+    # TicketSwap rendert eventlinks deels in HTML en deels in ingebedde JSON.
+    # Zoek daarom niet alleen href-attributen, maar alle herkenbare eventpaden.
+    pattern = re.compile(
+        r'''(?:https://www\.ticketswap\.(?:com|nl))?(/(?:concert-tickets|event)/[a-z0-9][^"'<>\\\s?]*)''',
+        re.I,
+    )
     links = []
     seen = set()
     for match in pattern.finditer(cleaned):
         href = html_module.unescape(match.group(1))
-        if not (
-            href.startswith("/concert-tickets/")
-            or href.startswith("/event/")
-            or href.startswith("https://www.ticketswap.nl/concert-tickets/")
-            or href.startswith("https://www.ticketswap.nl/event/")
-        ):
-            continue
         url = urljoin(TICKETSWAP_BASE, href).split("?", 1)[0].rstrip("/")
         if url not in seen:
             seen.add(url)
@@ -98,7 +96,7 @@ def enrich_ticketswap_urls(concerts):
         months = sorted({
             month_names[int(concert["date"][5:7])]
             for concert in city_concerts
-            if re.match(r"^20\\d{2}-\\d{2}-\\d{2}$", concert.get("date", ""))
+            if re.match(r"^20\d{2}-\d{2}-\d{2}$", concert.get("date", ""))
         })
         page_urls = [
             f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}"
