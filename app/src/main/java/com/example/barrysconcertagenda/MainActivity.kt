@@ -189,7 +189,18 @@ private fun TicketSwapLookupWebView(
                                 artistParts.count { it in lower } >= maxOf(1, artistParts.size / 2) &&
                                 (city.isBlank() || city in lower || venue in lower)
                         }
-                        onResult(exact ?: "ERROR:GEEN EXACTE MATCH")
+                        if (exact != null) {
+                            onResult(exact)
+                        } else {
+                            val artistHits = candidates.filter { candidate ->
+                                val lower = candidate.lowercase(Locale.ROOT)
+                                artistParts.any { it in lower }
+                            }.take(3)
+                            onResult(
+                                "ERROR:GEEN EXACTE MATCH · links ${candidates.size}" +
+                                    if (artistHits.isNotEmpty()) " · " + artistHits.joinToString(" | ") else ""
+                            )
+                        }
                     }
                 }, 1200)
             }
