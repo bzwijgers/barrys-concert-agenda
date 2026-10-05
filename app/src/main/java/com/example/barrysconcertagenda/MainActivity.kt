@@ -180,7 +180,7 @@ private fun TicketSwapLookupWebView(
                             .removeSurrounding("\"")
                             .replace("\\\\", "\\")
                             .replace("\\\"", "\"")
-                            .replace("\\\/", "/")
+                            .replace("\\\\/", "/")
                         val candidates = Regex("""https://www\\.ticketswap\\.nl/concert-tickets/[^"\\\\]+""")
                             .findAll(decoded).map { it.value }.distinct().toList()
                         val exact = candidates.firstOrNull { candidate ->
