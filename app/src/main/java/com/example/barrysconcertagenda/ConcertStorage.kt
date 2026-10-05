@@ -148,6 +148,23 @@ object ConcertStorage {
         saveConcerts(context, updated)
     }
 
+
+    fun setTicketSwapUrl(
+        context: Context,
+        url: String,
+        ticketSwapUrl: String
+    ) {
+        val normalizedTarget = normalizeUrl(url)
+        val updated = loadConcerts(context).map { concert ->
+            if (normalizeUrl(concert.url) == normalizedTarget) {
+                concert.copy(ticketSwapUrl = ticketSwapUrl)
+            } else {
+                concert
+            }
+        }
+        saveConcerts(context, updated)
+    }
+
     fun getLastCheck(context: Context): Long {
 
         val prefs = context.getSharedPreferences(
