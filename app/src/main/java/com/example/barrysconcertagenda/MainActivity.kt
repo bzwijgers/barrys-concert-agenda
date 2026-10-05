@@ -143,8 +143,7 @@ fun ConcertApp() {
     var datePickerTarget by remember { mutableStateOf<String?>(null) }
     var searchVenue by remember { mutableStateOf<String?>(null) }
     var venueMenuExpanded by remember { mutableStateOf(false) }
-    var ticketSwapProbeResult by remember { mutableStateOf("Nog niet getest") }
-    var ticketSwapProbeRunning by remember { mutableStateOf(false) }
+    var ticketSwapStatus by remember { mutableStateOf("") }
     val coroutineScope = rememberCoroutineScope()
 
     var concerts by remember {
@@ -829,20 +828,8 @@ fun ConcertApp() {
                                     }
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
-                                    Text("TicketSwap verbinding", fontWeight = FontWeight.Bold)
-                                    Text(ticketSwapProbeResult, style = MaterialTheme.typography.bodySmall)
-                                    TextButton(
-                                        enabled = !ticketSwapProbeRunning,
-                                        onClick = {
-                                            ticketSwapProbeRunning = true
-                                            ticketSwapProbeResult = "TicketSwap wordt getest..."
-                                            coroutineScope.launch {
-                                                ticketSwapProbeResult = probeTicketSwapFromPhone()
-                                                ticketSwapProbeRunning = false
-                                            }
-                                        }
-                                    ) {
-                                        Text(if (ticketSwapProbeRunning) "Bezig..." else "Test TicketSwap")
+                                    if (ticketSwapStatus.isNotBlank()) {
+                                        Text(ticketSwapStatus, style = MaterialTheme.typography.bodySmall)
                                     }
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
                                     Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via Bron open je altijd de oorspronkelijke concertpagina.")
@@ -909,6 +896,24 @@ fun ConcertApp() {
                                     url = concert.url,
                                     favorite = newFavorite
                                 )
+
+                                if (newFavorite && concert.ticketSwapUrl.isBlank()) {
+                                    ticketSwapStatus = "TicketSwap zoekt: ${concert.artist}..."
+                                    coroutineScope.launch {
+                                        val result = findTicketSwapForConcert(concert)
+                                        if (!result.startsWith("ERROR:")) {
+                                            concerts = concerts.map {
+                                                if (normalizeUrl(it.url) == normalizeUrl(concert.url)) {
+                                                    it.copy(ticketSwapUrl = result)
+                                                } else it
+                                            }
+                                            ConcertStorage.setTicketSwapUrl(context, concert.url, result)
+                                            ticketSwapStatus = "TicketSwap gevonden voor ${concert.artist}"
+                                        } else {
+                                            ticketSwapStatus = "TicketSwap: ${result.removePrefix("ERROR:")} (${concert.artist})"
+                                        }
+                                    }
+                                }
                             },
                             showClubCardLabel = selectedTab != 4,
                             showFavorite = selectedTab != 3 && selectedTab != 5,
@@ -1088,70 +1093,63 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
 }
 
 
-private suspend fun probeTicketSwapFromPhone(): String =
+private fun ticketSwapSlugPart(value: String): String =
+    java.text.Normalizer.normalize(value, java.text.Normalizer.Form.NFD)
+        .replace(Regex("\\p{Mn}+"), "")
+        .lowercase(Locale.ROOT)
+        .replace("&", " ")
+        .replace(Regex("[^a-z0-9]+"), "-")
+        .trim('-')
+
+private suspend fun findTicketSwapForConcert(concert: Concert): String =
     withContext(Dispatchers.IO) {
         try {
-            fun getText(target: String): Pair<Int, String> {
-                val connection = (URL(target).openConnection() as HttpURLConnection).apply {
-                    requestMethod = "GET"
-                    connectTimeout = 10000
-                    readTimeout = 10000
-                    instanceFollowRedirects = true
-                    setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/154.0 Mobile Safari/537.36")
-                    setRequestProperty("Accept-Language", "nl-NL,nl;q=0.9,en;q=0.8")
-                }
-                val code = connection.responseCode
-                val stream = if (code in 200..399) connection.inputStream else connection.errorStream
-                val text = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
-                connection.disconnect()
-                return code to text
+            val query = listOf(concert.artist, concert.city, concert.venue)
+                .filter { it.isNotBlank() }
+                .joinToString(" ")
+            val searchUrl = "https://www.ticketswap.nl/search?query=" +
+                java.net.URLEncoder.encode(query, "UTF-8")
+            val connection = (URL(searchUrl).openConnection() as HttpURLConnection).apply {
+                requestMethod = "GET"
+                connectTimeout = 10000
+                readTimeout = 10000
+                instanceFollowRedirects = true
+                setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/154.0 Mobile Safari/537.36")
+                setRequestProperty("Accept-Language", "nl-NL,nl;q=0.9,en;q=0.8")
             }
+            val code = connection.responseCode
+            val stream = if (code in 200..399) connection.inputStream else connection.errorStream
+            val body = stream?.bufferedReader()?.use { it.readText() }.orEmpty()
+                .replace("\\\\/", "/")
+                .replace("\\u002F", "/")
+            connection.disconnect()
+            if (code !in 200..299) return@withContext "ERROR:HTTP $code"
 
-            val (code, body) = getText("https://www.ticketswap.nl/netherlands")
-            val normalizedBody = body.replace("\\\\/", "/")
-            val scriptSources = Regex(
-                """<script[^>]+src=["']([^"']+)["']""",
+            val date = parseConcertDate(concert.date)?.toString().orEmpty()
+            val artistSlug = ticketSwapSlugPart(concert.artist)
+            val citySlug = ticketSwapSlugPart(concert.city)
+            val venueSlug = ticketSwapSlugPart(concert.venue)
+            val candidates = Regex(
+                """(?:https://www\\.ticketswap\\.nl)?/concert-tickets/[A-Za-z0-9_%?=&+./-]+""",
                 RegexOption.IGNORE_CASE
-            ).findAll(normalizedBody).map { it.groupValues[1] }.distinct().toList()
-
-            val interesting = mutableListOf<String>()
-            for (src in scriptSources.take(36)) {
-                val scriptUrl = when {
-                    src.startsWith("https://") -> src
-                    src.startsWith("//") -> "https:$src"
-                    src.startsWith("/") -> "https://www.ticketswap.nl$src"
-                    else -> continue
+            ).findAll(body)
+                .map { match ->
+                    val value = match.value.substringBefore('"').substringBefore("'")
+                    if (value.startsWith("http")) value else "https://www.ticketswap.nl$value"
                 }
-                try {
-                    val (_, js) = getText(scriptUrl)
-                    val lower = js.lowercase()
-                    if ("graphql" in lower || "operationname" in lower || "search" in lower) {
-                        val endpoints = Regex(
-                            """https?://[^"'\\\\s<>]+""",
-                            RegexOption.IGNORE_CASE
-                        ).findAll(js)
-                            .map { it.value.trimEnd(')', ',', ';') }
-                            .filter { "ticket" in it.lowercase() || "api" in it.lowercase() || "graphql" in it.lowercase() }
-                            .distinct()
-                            .take(3)
-                            .toList()
-                        val tags = buildList {
-                            if ("graphql" in lower) add("graphql")
-                            if ("operationname" in lower) add("operationName")
-                            if ("search" in lower) add("search")
-                        }
-                        interesting += tags.joinToString("+") +
-                            if (endpoints.isNotEmpty()) ":" + endpoints.joinToString(",") else ""
-                    }
-                } catch (_: Exception) {
+                .distinct()
+                .filter { url ->
+                    val lower = url.lowercase(Locale.ROOT)
+                    date.isNotBlank() && date in lower &&
+                        artistSlug.split("-").filter { it.length >= 2 }.count { it in lower } >=
+                            maxOf(1, artistSlug.split("-").filter { it.length >= 2 }.size / 2) &&
+                        (citySlug.isBlank() || citySlug in lower || venueSlug in lower)
                 }
-                if (interesting.size >= 3) break
-            }
+                .toList()
 
-            "TicketSwap test: HTTP $code · ${body.length} bytes · scripts ${scriptSources.size} · script hints ${interesting.size}" +
-                if (interesting.isNotEmpty()) " · " + interesting.joinToString(" | ") else ""
+            candidates.firstOrNull().orEmpty().ifBlank { "ERROR:GEEN EXACTE MATCH" }
         } catch (error: Exception) {
-            "TicketSwap test mislukt: ${error.javaClass.simpleName}"
+            "ERROR:" + error.javaClass.simpleName
         }
     }
 
