@@ -103,9 +103,18 @@ def enrich_ticketswap_urls(concerts):
     print("=" * 60)
     print("Bestaande exacte TicketSwap-links:", existing)
 
-    for concert in concerts:
-        if concert.get("ticketSwapUrl"):
-            continue
+    pending = [concert for concert in concerts if not concert.get("ticketSwapUrl")]
+    pending.sort(
+        key=lambda concert: (
+            0 if concert.get("artist", "").strip().lower() == "gavin degraw"
+                 and concert.get("date") == "2026-10-13" else 1,
+            concert.get("date", ""),
+        )
+    )
+
+    # Small rotating-friendly batch: search engines are discovery helpers,
+    # not a bulk API. Existing links remain cached in concerts.json.
+    for concert in pending[:20]:
 
         # Start conservatively: only concerts in the next 180 days.
         try:
@@ -134,7 +143,7 @@ def enrich_ticketswap_urls(concerts):
             print("TicketSwap gevonden:", concert.get("artist"), "->", best[1])
 
         # Keep the public search endpoint load modest.
-        time.sleep(0.25)
+        time.sleep(0.4)
 
     print("TicketSwap gecontroleerd:", checked)
     print("Nieuwe exacte TicketSwap-links:", found)
