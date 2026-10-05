@@ -158,15 +158,11 @@ private fun TicketSwapLookupWebView(
             .split("-").filter { it.length >= 2 }
         val city = ticketSwapSlugPartWeb(target.city)
         val venue = ticketSwapSlugPartWeb(target.venue)
-        val query = listOf(
-            "site:ticketswap.com/concert-tickets",
-            target.artist,
-            target.city,
-            target.venue,
-            date
-        ).filter { it.isNotBlank() }.joinToString(" ")
-        val searchUrl = "https://www.google.com/search?q=" +
-            java.net.URLEncoder.encode(query, "UTF-8")
+        val searchUrl = if (target.city.equals("Utrecht", ignoreCase = true)) {
+            "https://www.ticketswap.nl/concert-tickets/l/netherlands/utrecht/next-month"
+        } else {
+            "https://www.ticketswap.nl/concert-tickets/l/netherlands"
+        }
 
         fun inspect(view: WebView, attempt: Int) {
             view.evaluateJavascript(
