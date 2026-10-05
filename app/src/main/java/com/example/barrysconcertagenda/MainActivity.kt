@@ -202,7 +202,20 @@ private fun TicketSwapLookupWebView(
                 } else if (attempt < 5) {
                     view.postDelayed({ inspect(view, attempt + 1) }, 1200)
                 } else {
-                    onResult("ERROR:GEEN EXACTE MATCH")
+                    val sample = candidates.take(3).joinToString(" | ")
+                    view.evaluateJavascript(
+                        """(function(){return JSON.stringify({title:document.title,url:location.href,text:(document.body&&document.body.innerText?document.body.innerText.slice(0,180):"")});})();"""
+                    ) { pageRaw ->
+                        val pageInfo = pageRaw
+                            .removeSurrounding("\"")
+                            .replace("\\\\", "\\")
+                            .replace("\\\"", "\"")
+                        onResult(
+                            "ERROR:GEEN EXACTE MATCH · kandidaten " + candidates.size +
+                                (if (sample.isNotBlank()) " · " + sample else "") +
+                                " · pagina " + pageInfo.take(350)
+                        )
+                    }
                 }
             }
         }
