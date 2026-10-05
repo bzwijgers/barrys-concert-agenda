@@ -110,76 +110,44 @@ def enrich_ticketswap_urls(concerts):
     print("TICKETSWAP EXACTE EVENTLINKS")
     print("=" * 60)
 
-    by_city = {}
-    for concert in concerts:
-        city = concert.get("city", "").strip()
-        if city and concert.get("date"):
-            by_city.setdefault(city, []).append(concert)
-
     matched = 0
-    for city, city_concerts in sorted(by_city.items()):
-        city_slug = _ts_slug(city)
-        if not city_slug:
-            continue
+    checked = 0
 
-        urls = []
-        months = sorted({
-            _ts_month_name(concert.get("date", ""))
-            for concert in city_concerts
-            if _ts_month_name(concert.get("date", ""))
-        })
-        page_urls = [
-            f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}"
-        ]
-        page_urls.extend(
-            f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}/{month}"
-            for month in months
-        )
-        # TicketSwap toont veel events alleen in genre-overzichten. Deze pagina's
-        # zijn server-side leesbaar en bevatten de echte eventlinks.
-        for month in months:
-            for genre in ("rock", "pop", "indie", "metal", "dance", "jazz", "soul", "punk", "electronic"):
-                page_urls.append(
-                    f"{TICKETSWAP_BASE}/concert-tickets/g/{genre}/netherlands/{city_slug}/{month}"
-                )
-
-        for page_url in page_urls:
-            try:
-                page = download_page_retry(page_url, attempts=2)
-                urls.extend(_ts_event_links(page))
-            except Exception:
-                pass
-
-        urls = list(dict.fromkeys(urls))
-        if not urls:
-            continue
-
-        for concert in city_concerts:
-            scored = [
-                (_ts_candidate_score(concert, url), url)
-                for url in urls
-            ]
-            scored = [(score, url) for score, url in scored if score >= 0]
-            if not scored:
-                # TicketSwap city pages zijn deels client-side gerenderd. Gebruik
-                # alleen voor nog niet gevonden concerten een gerichte web-index fallback.
-                search_urls = _ts_search_event_links(concert)
-                scored = [
-                    (_ts_candidate_score(concert, url), url)
-                    for url in search_urls
-                ]
-                scored = [(score, url) for score, url in scored if score >= 0]
-            if not scored:
-                continue
-
-            scored.sort(reverse=True)
-            best_score, best_url = scored[0]
-            # Geen koppeling bij een gelijke beste score: dan is de match ambigu.
-            if len(scored) > 1 and scored[1][0] == best_score:
-                continue
-
-            concert["ticketSwapUrl"] = best_url
+    # TicketSwap-overzichtspagina's zijn client-side gerenderd en bleken in
+    # GitHub Actions geen bruikbare eventlinks op te leveren. Zoek daarom
+    # rechtstreeks naar geindexeerde eventpagina's en valideer streng op
+    # datum + artiest + locatie voordat een link wordt opgeslagen.
+    for concert in concerts:
+        if concert.get("ticketSwapUrl"):
             matched += 1
+            continue
 
+        artist = concert.get("artist", "").strip()
+        venue = concert.get("venue", "").strip()
+        city = concert.get("city", "").strip()
+        date = concert.get("date", "").strip()
+        if not artist or not venue or not city or not re.match(r"^20\d{2}-\d{2}-\d{2}$", date):
+            continue
+
+        checked += 1
+        urls = _ts_search_event_links(concert)
+        scored = [
+            (_ts_candidate_score(concert, url), url)
+            for url in urls
+        ]
+        scored = [(score, url) for score, url in scored if score >= 0]
+        if not scored:
+            continue
+
+        scored.sort(reverse=True)
+        best_score, best_url = scored[0]
+        if len(scored) > 1 and scored[1][0] == best_score:
+            continue
+
+        concert["ticketSwapUrl"] = best_url
+        matched += 1
+        print("TicketSwap match:", artist, date, "->", best_url)
+
+    print("TicketSwap concerten gecontroleerd:", checked)
     print("Exact gekoppelde TicketSwap-events:", matched)
     return concerts
