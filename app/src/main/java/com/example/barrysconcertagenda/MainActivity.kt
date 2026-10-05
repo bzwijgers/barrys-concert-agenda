@@ -169,10 +169,11 @@ private fun TicketSwapLookupWebView(
                     onResult("ERROR:HTTP 403")
                     return
                 }
-                view.postDelayed({
+
+                fun inspect(attempt: Int) {
                     view.evaluateJavascript(
                         """(function(){
-                          const links=[...document.querySelectorAll('a[href*="/concert-tickets/"]')].map(a=>a.href);
+                          const links=[...document.querySelectorAll('a')].map(a=>a.href).filter(Boolean);
                           return JSON.stringify(links);
                         })();"""
                     ) { raw ->
@@ -189,20 +190,25 @@ private fun TicketSwapLookupWebView(
                                 artistParts.count { it in lower } >= maxOf(1, artistParts.size / 2) &&
                                 (city.isBlank() || city in lower || venue in lower)
                         }
+
                         if (exact != null) {
                             onResult(exact)
+                        } else if (candidates.isEmpty() && attempt < 5) {
+                            view.postDelayed({ inspect(attempt + 1) }, 1200)
                         } else {
                             val artistHits = candidates.filter { candidate ->
                                 val lower = candidate.lowercase(Locale.ROOT)
                                 artistParts.any { it in lower }
                             }.take(3)
                             onResult(
-                                "ERROR:GEEN EXACTE MATCH · links ${candidates.size}" +
+                                "ERROR:GEEN EXACTE MATCH · links ${candidates.size} · poging $attempt" +
                                     if (artistHits.isNotEmpty()) " · " + artistHits.joinToString(" | ") else ""
                             )
                         }
                     }
-                }, 1200)
+                }
+
+                view.postDelayed({ inspect(1) }, 1200)
             }
         }
         webView.loadUrl(searchUrl)
