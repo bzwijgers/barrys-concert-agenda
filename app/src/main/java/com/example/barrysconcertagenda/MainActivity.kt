@@ -175,7 +175,7 @@ private fun TicketSwapLookupWebView(
                     .replace("\\\\", "\\")
                     .replace("\\\"", "\"")
                     .replace("\\\\/", "/")
-                val candidates = Regex("""https://www\\.ticketswap\\.nl/concert-tickets/[^"\\\\]+""")
+                val candidates = Regex("""https://www\\.ticketswap\\.(?:nl|com)/concert-tickets/[^"\\\\]+""")
                     .findAll(decoded).map { it.value }.distinct().toList()
                 val exact = candidates.firstOrNull { candidate ->
                     val lower = candidate.lowercase(Locale.ROOT)
