@@ -113,44 +113,62 @@ def enrich_ticketswap_urls(concerts):
     print("TICKETSWAP EXACTE EVENTLINKS")
     print("=" * 60)
 
-    matched = 0
-    checked = 0
+    # Verzamel TicketSwap-events per stad/maand. Dit is tientallen requests
+    # in plaats van een zoekmachine-request voor ieder concert.
+    pages = {}
+    event_urls = set()
+    for concert in concerts:
+        city = concert.get("city", "").strip()
+        date = concert.get("date", "").strip()
+        if not city or not re.match(r"^20\d{2}-\d{2}-\d{2}$", date):
+            continue
+        key = (_ts_slug(city), date[:7])
+        pages[key] = (city, date)
 
-    # TicketSwap-overzichtspagina's zijn client-side gerenderd en bleken in
-    # GitHub Actions geen bruikbare eventlinks op te leveren. Zoek daarom
-    # rechtstreeks naar geindexeerde eventpagina's en valideer streng op
-    # datum + artiest + locatie voordat een link wordt opgeslagen.
+    for (city_slug, year_month), (city, date) in sorted(pages.items()):
+        month = _ts_month_name(date)
+        # TicketSwap gebruikt momenteel /next-month voor de eerstvolgende
+        # kalendermaand en genre/maandpagina's als extra bron.
+        candidates = [
+            f"https://www.ticketswap.nl/concert-tickets/l/netherlands/{city_slug}/next-month",
+            f"https://www.ticketswap.nl/concert-tickets/l/netherlands/{city_slug}",
+        ]
+        if month:
+            candidates.extend([
+                f"https://www.ticketswap.nl/concert-tickets/g/rock/{month}",
+                f"https://www.ticketswap.nl/concert-tickets/g/pop/{month}",
+                f"https://www.ticketswap.nl/concert-tickets/g/indie/{month}",
+                f"https://www.ticketswap.nl/concert-tickets/g/metal/{month}",
+                f"https://www.ticketswap.nl/concert-tickets/g/folk/{month}",
+            ])
+
+        for page_url in candidates:
+            if page_url in event_urls:
+                continue
+            try:
+                page = download_page_retry(page_url, attempts=2)
+            except Exception:
+                continue
+            for url in _ts_event_links(page):
+                event_urls.add(url)
+
+    matched = 0
     for concert in concerts:
         if concert.get("ticketSwapUrl"):
             matched += 1
             continue
-
-        artist = concert.get("artist", "").strip()
-        venue = concert.get("venue", "").strip()
-        city = concert.get("city", "").strip()
-        date = concert.get("date", "").strip()
-        if not artist or not venue or not city or not re.match(r"^20\d{2}-\d{2}-\d{2}$", date):
-            continue
-
-        checked += 1
-        urls = _ts_search_event_links(concert)
-        scored = [
-            (_ts_candidate_score(concert, url), url)
-            for url in urls
-        ]
+        scored = [(_ts_candidate_score(concert, url), url) for url in event_urls]
         scored = [(score, url) for score, url in scored if score >= 0]
         if not scored:
             continue
-
         scored.sort(reverse=True)
         best_score, best_url = scored[0]
         if len(scored) > 1 and scored[1][0] == best_score:
             continue
-
-        concert["ticketSwapUrl"] = best_url
+        concert["ticketSwapUrl"] = best_url.replace("https://www.ticketswap.com/", "https://www.ticketswap.nl/")
         matched += 1
-        print("TicketSwap match:", artist, date, "->", best_url)
+        print("TicketSwap match:", concert.get("artist"), concert.get("date"), "->", concert["ticketSwapUrl"])
 
-    print("TicketSwap concerten gecontroleerd:", checked)
+    print("TicketSwap eventlinks verzameld:", len(event_urls))
     print("Exact gekoppelde TicketSwap-events:", matched)
     return concerts
