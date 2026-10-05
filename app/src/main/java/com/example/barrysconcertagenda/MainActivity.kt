@@ -248,6 +248,7 @@ fun ConcertApp() {
     var ticketSwapStatus by remember { mutableStateOf("") }
     var ticketSwapStatusUrl by remember { mutableStateOf("") }
     var ticketSwapLookupConcert by remember { mutableStateOf<Concert?>(null) }
+    var ticketSwapTestMode by remember { mutableStateOf(false) }
     val coroutineScope = rememberCoroutineScope()
 
     var concerts by remember {
@@ -633,7 +634,14 @@ fun ConcertApp() {
         concert = ticketSwapLookupConcert,
         onResult = { result ->
             val lookupConcert = ticketSwapLookupConcert ?: return@TicketSwapLookupWebView
-            if (!result.startsWith("ERROR:")) {
+            if (ticketSwapTestMode) {
+                ticketSwapStatus = if (!result.startsWith("ERROR:")) {
+                    "TicketSwap WebView test: GEVONDEN · " + result
+                } else {
+                    "TicketSwap WebView test: " + result.removePrefix("ERROR:")
+                }
+                ticketSwapTestMode = false
+            } else if (!result.startsWith("ERROR:")) {
                 concerts = concerts.map {
                     if (normalizeUrl(it.url) == normalizeUrl(lookupConcert.url)) {
                         it.copy(ticketSwapUrl = result)
@@ -936,10 +944,16 @@ fun ConcertApp() {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
                                     TextButton(
                                         onClick = {
-                                            ticketSwapStatus = "TicketSwap test wordt uitgevoerd..."
-                                            coroutineScope.launch {
-                                                ticketSwapStatus = probeTicketSwapFromPhone()
-                                            }
+                                            ticketSwapStatus = "TicketSwap WebView test wordt uitgevoerd..."
+                                            ticketSwapTestMode = true
+                                            ticketSwapLookupConcert = Concert(
+                                                artist = "James Blake",
+                                                venue = "TivoliVredenburg",
+                                                city = "Utrecht",
+                                                country = "NL",
+                                                date = "2026-10-06",
+                                                url = "__ticketswap_test__"
+                                            )
                                         }
                                     ) {
                                         Text("Test TicketSwap")
