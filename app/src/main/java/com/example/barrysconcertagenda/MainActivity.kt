@@ -153,78 +153,105 @@ private fun TicketSwapLookupWebView(
 
     LaunchedEffect(concert?.url) {
         val target = concert ?: return@LaunchedEffect
-        val date = parseConcertDate(target.date)?.toString().orEmpty()
-        val artistParts = ticketSwapSlugPartWeb(target.artist)
-            .split("-").filter { it.length >= 2 }
-        val city = ticketSwapSlugPartWeb(target.city)
-        val venue = ticketSwapSlugPartWeb(target.venue)
+        val parsedDate = parseConcertDate(target.date)
+        val date = parsedDate?.toString().orEmpty()
+        val artistSlug = ticketSwapSlugPartWeb(target.artist)
+        val artistText = target.artist.lowercase(Locale.ROOT)
+        val venueText = target.venue.lowercase(Locale.ROOT)
+        val cityText = target.city.lowercase(Locale.ROOT)
+        val dutchMonths = listOf("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec")
+        val dateText = parsedDate?.let { it.dayOfMonth.toString() + " " + dutchMonths[it.monthValue - 1] }.orEmpty()
+
         val searchUrl = if (target.city.equals("Utrecht", ignoreCase = true)) {
             "https://www.ticketswap.nl/concert-tickets/l/netherlands/utrecht/next-month"
         } else {
             "https://www.ticketswap.nl/concert-tickets/l/netherlands"
         }
 
-        fun inspect(view: WebView, attempt: Int) {
-            view.evaluateJavascript(
-                """(function(){
-                  const values=[];
-                  for(const a of document.querySelectorAll('a')){
-                    if(a.href) values.push(a.href);
-                    const h=a.getAttribute('href'); if(h) values.push(h);
-                  }
-                  const html=document.documentElement ? document.documentElement.innerHTML : "";
-                  const re=/\\/concert-tickets\\/[^"'<>\\s?]+/gi;
-                  let m;
-                  while((m=re.exec(html))!==null){
-                    values.push(new URL(m[0], location.origin).href);
-                  }
-                  return JSON.stringify([...new Set(values)]);
-                })();"""
-            ) { raw ->
-                val decoded = raw
-                    .removeSurrounding("\"")
-                    .replace("\\\\", "\\")
-                    .replace("\\\"", "\"")
-                    .replace("\\\\/", "/")
-                val direct = Regex("""https?://(?:www\.)?ticketswap\.(?:com|nl)/concert-tickets/[^"&?\\<> ]+""", RegexOption.IGNORE_CASE)
-                    .findAll(decoded).map { it.value }.toList()
-                val encoded = Regex("""https?%3A%2F%2F(?:www\.)?ticketswap\.(?:com|nl)%2Fconcert-tickets%2F[^"&]+""", RegexOption.IGNORE_CASE)
-                    .findAll(decoded)
-                    .map { java.net.URLDecoder.decode(it.value, "UTF-8") }
-                    .toList()
-                val candidates = (direct + encoded).distinct()
-                val exact = candidates.firstOrNull { candidate ->
-                    val lower = candidate.lowercase(Locale.ROOT)
-                    date.isNotBlank() && date in lower &&
-                        artistParts.count { it in lower } >= maxOf(1, artistParts.size / 2) &&
-                        (city.isBlank() || city in lower || venue in lower)
-                }
-                if (exact != null) {
-                    onResult(exact)
-                } else if (attempt < 5) {
-                    view.postDelayed({ inspect(view, attempt + 1) }, 1200)
+        var clicked = false
+        var finished = false
+
+        fun finish(result: String) {
+            if (!finished) {
+                finished = true
+                onResult(result)
+            }
+        }
+
+        fun inspectAndClick(view: WebView, attempt: Int) {
+            if (finished) return
+
+            val current = view.url.orEmpty()
+            val currentLower = current.lowercase(Locale.ROOT)
+            if (
+                "/concert-tickets/" in currentLower &&
+                date.isNotBlank() && date in currentLower &&
+                artistSlug.split("-").filter { it.length >= 2 }.count { it in currentLower } >= 1
+            ) {
+                finish(current.substringBefore("?"))
+                return
+            }
+
+            val jsArtist = org.json.JSONObject.quote(artistText)
+            val jsVenue = org.json.JSONObject.quote(venueText)
+            val jsCity = org.json.JSONObject.quote(cityText)
+            val jsDate = org.json.JSONObject.quote(dateText)
+
+            val script = "(function(){" +
+                "const artist=" + jsArtist + ",venue=" + jsVenue + ",city=" + jsCity + ",date=" + jsDate + ";" +
+                "const nodes=[...document.querySelectorAll('a,button,[role=link],[role=button],article,li,div')];" +
+                "const matches=nodes.filter(el=>{" +
+                "const t=(el.innerText||'').toLowerCase().replace(/\\\\s+/g,' ').trim();" +
+                "return t.includes(artist)&&t.includes(date)&&(t.includes(venue)||t.includes(city));" +
+                "});" +
+                "matches.sort((a,b)=>(a.innerText||'').length-(b.innerText||'').length);" +
+                "const el=matches[0];if(!el)return 'NO_MATCH';" +
+                "let clickable=el;" +
+                "while(clickable&&clickable!==document.body&&!['A','BUTTON'].includes(clickable.tagName)&&clickable.getAttribute('role')!=='link'&&clickable.getAttribute('role')!=='button'&&!clickable.onclick){clickable=clickable.parentElement;}" +
+                "if(clickable&&clickable!==document.body){clickable.click();return 'CLICKED:'+(clickable.href||clickable.innerText||'').slice(0,250);}" +
+                "el.click();return 'CLICKED_ELEMENT:'+(el.innerText||'').slice(0,250);" +
+                "})();"
+
+            view.evaluateJavascript(script) { raw ->
+                val result = raw.removeSurrounding("\"").replace("\\\"", "\"")
+                if (result.startsWith("CLICKED")) {
+                    clicked = true
+                    view.postDelayed({
+                        val afterClick = view.url.orEmpty()
+                        val lower = afterClick.lowercase(Locale.ROOT)
+                        if (
+                            "/concert-tickets/" in lower &&
+                            date.isNotBlank() && date in lower &&
+                            artistSlug.split("-").filter { it.length >= 2 }.count { it in lower } >= 1
+                        ) {
+                            finish(afterClick.substringBefore("?"))
+                        } else if (attempt < 8) {
+                            inspectAndClick(view, attempt + 1)
+                        } else {
+                            finish("ERROR:KLIK GEVONDEN MAAR GEEN EVENTPAGINA · " + afterClick)
+                        }
+                    }, 1200)
+                } else if (attempt < 8) {
+                    view.postDelayed({ inspectAndClick(view, attempt + 1) }, 1000)
                 } else {
-                    val sample = candidates.take(3).joinToString(" | ")
-                    view.evaluateJavascript(
-                        """(function(){return JSON.stringify({title:document.title,url:location.href,text:(document.body&&document.body.innerText?document.body.innerText.slice(0,180):"")});})();"""
-                    ) { pageRaw ->
-                        val pageInfo = pageRaw
-                            .removeSurrounding("\"")
-                            .replace("\\\\", "\\")
-                            .replace("\\\"", "\"")
-                        onResult(
-                            "ERROR:GEEN EXACTE MATCH · kandidaten " + candidates.size +
-                                (if (sample.isNotBlank()) " · " + sample else "") +
-                                " · pagina " + pageInfo.take(350)
-                        )
-                    }
+                    finish("ERROR:GEEN MATCH IN TICKETSWAP PAGINATEKST")
                 }
             }
         }
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
-                view.postDelayed({ inspect(view, 1) }, 1200)
+                if (finished) return
+                val lower = url.lowercase(Locale.ROOT)
+                if (
+                    "/concert-tickets/" in lower &&
+                    date.isNotBlank() && date in lower &&
+                    artistSlug.split("-").filter { it.length >= 2 }.count { it in lower } >= 1
+                ) {
+                    finish(url.substringBefore("?"))
+                } else {
+                    view.postDelayed({ inspectAndClick(view, if (clicked) 2 else 1) }, 900)
+                }
             }
         }
         webView.loadUrl(searchUrl)
