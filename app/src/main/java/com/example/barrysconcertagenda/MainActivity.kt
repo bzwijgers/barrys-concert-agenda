@@ -162,6 +162,7 @@ private fun TicketSwapLookupWebView(
             .filter { it.isNotBlank() }.joinToString(" ")
         val searchUrl = "https://www.ticketswap.nl/search?query=" +
             java.net.URLEncoder.encode(query, "UTF-8")
+        var searchStarted = false
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
@@ -169,6 +170,14 @@ private fun TicketSwapLookupWebView(
                     onResult("ERROR:HTTP 403")
                     return
                 }
+
+                if (!searchStarted && !url.contains("/search?")) {
+                    searchStarted = true
+                    view.postDelayed({ view.loadUrl(searchUrl) }, 1200)
+                    return
+                }
+
+                if (!url.contains("/search?")) return
 
                 fun inspect(attempt: Int) {
                     view.evaluateJavascript(
@@ -196,14 +205,7 @@ private fun TicketSwapLookupWebView(
                         } else if (candidates.isEmpty() && attempt < 5) {
                             view.postDelayed({ inspect(attempt + 1) }, 1200)
                         } else {
-                            val artistHits = candidates.filter { candidate ->
-                                val lower = candidate.lowercase(Locale.ROOT)
-                                artistParts.any { it in lower }
-                            }.take(3)
-                            onResult(
-                                "ERROR:GEEN EXACTE MATCH · links ${candidates.size} · poging $attempt" +
-                                    if (artistHits.isNotEmpty()) " · " + artistHits.joinToString(" | ") else ""
-                            )
+                            onResult("ERROR:GEEN EXACTE MATCH · links ${candidates.size} · poging $attempt")
                         }
                     }
                 }
@@ -211,7 +213,8 @@ private fun TicketSwapLookupWebView(
                 view.postDelayed({ inspect(1) }, 1200)
             }
         }
-        webView.loadUrl(searchUrl)
+
+        webView.loadUrl("https://www.ticketswap.nl/")
     }
 
     AndroidView(
