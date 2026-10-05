@@ -44,6 +44,17 @@ def _ts_link_date(url):
     return match.group(1) if match else ""
 
 
+def _ts_month_name(date_value):
+    names = {
+        1: "january", 2: "february", 3: "march", 4: "april",
+        5: "may", 6: "june", 7: "july", 8: "august",
+        9: "september", 10: "october", 11: "november", 12: "december",
+    }
+    if not re.match(r"^20\d{2}-\d{2}-\d{2}$", date_value or ""):
+        return ""
+    return names.get(int(date_value[5:7]), "")
+
+
 def _ts_search_event_links(concert):
     """Fallback via Bing: TicketSwap event pages are indexed even when city pages are JS-rendered."""
     artist = concert.get("artist", "").strip()
@@ -112,15 +123,10 @@ def enrich_ticketswap_urls(concerts):
             continue
 
         urls = []
-        month_names = {
-            1: "january", 2: "february", 3: "march", 4: "april",
-            5: "may", 6: "june", 7: "july", 8: "august",
-            9: "september", 10: "october", 11: "november", 12: "december",
-        }
         months = sorted({
-            month_names[int(concert["date"][5:7])]
+            _ts_month_name(concert.get("date", ""))
             for concert in city_concerts
-            if re.match(r"^20\d{2}-\d{2}-\d{2}$", concert.get("date", ""))
+            if _ts_month_name(concert.get("date", ""))
         })
         page_urls = [
             f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}"
@@ -129,7 +135,13 @@ def enrich_ticketswap_urls(concerts):
             f"{TICKETSWAP_BASE}/concert-tickets/l/netherlands/{city_slug}/{month}"
             for month in months
         )
-        page_urls.append(f"{TICKETSWAP_BASE}/city/{city_slug}")
+        # TicketSwap toont veel events alleen in genre-overzichten. Deze pagina's
+        # zijn server-side leesbaar en bevatten de echte eventlinks.
+        for month in months:
+            for genre in ("rock", "pop", "indie", "metal", "dance", "jazz", "soul", "punk", "electronic"):
+                page_urls.append(
+                    f"{TICKETSWAP_BASE}/concert-tickets/g/{genre}/netherlands/{city_slug}/{month}"
+                )
 
         for page_url in page_urls:
             try:
