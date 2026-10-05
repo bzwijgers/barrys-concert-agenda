@@ -144,6 +144,7 @@ fun ConcertApp() {
     var searchVenue by remember { mutableStateOf<String?>(null) }
     var venueMenuExpanded by remember { mutableStateOf(false) }
     var ticketSwapStatus by remember { mutableStateOf("") }
+    var ticketSwapStatusUrl by remember { mutableStateOf("") }
     val coroutineScope = rememberCoroutineScope()
 
     var concerts by remember {
@@ -898,7 +899,8 @@ fun ConcertApp() {
                                 )
 
                                 if (newFavorite && concert.ticketSwapUrl.isBlank()) {
-                                    ticketSwapStatus = "TicketSwap zoekt: ${concert.artist}..."
+                                    ticketSwapStatusUrl = normalizeUrl(concert.url)
+                                    ticketSwapStatus = "TicketSwap zoekt..."
                                     coroutineScope.launch {
                                         val result = findTicketSwapForConcert(concert)
                                         if (!result.startsWith("ERROR:")) {
@@ -908,9 +910,9 @@ fun ConcertApp() {
                                                 } else it
                                             }
                                             ConcertStorage.setTicketSwapUrl(context, concert.url, result)
-                                            ticketSwapStatus = "TicketSwap gevonden voor ${concert.artist}"
+                                            ticketSwapStatus = "TicketSwap gevonden"
                                         } else {
-                                            ticketSwapStatus = "TicketSwap: ${result.removePrefix("ERROR:")} (${concert.artist})"
+                                            ticketSwapStatus = "TicketSwap: ${result.removePrefix("ERROR:")}"
                                         }
                                     }
                                 }
@@ -936,7 +938,9 @@ fun ConcertApp() {
                                     url = concert.url,
                                     attending = newAttending
                                 )
-                            }
+                            },
+                            ticketSwapMessage =
+                                if (ticketSwapStatusUrl == normalizeUrl(concert.url)) ticketSwapStatus else ""
                         )
                     }
 
@@ -1046,7 +1050,7 @@ fun BarryDatePicker(initialDate: LocalDate? = null, onDismiss: () -> Unit, onDat
 }
 
 @Composable
-fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, showFavorite: Boolean, ticketDisplay: TicketDisplay, onAttendingClick: () -> Unit) {
+fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, showFavorite: Boolean, ticketDisplay: TicketDisplay, onAttendingClick: () -> Unit, ticketSwapMessage: String = "") {
     var confirmFavoriteRemoval by remember { mutableStateOf(false) }
     var confirmAttendingRemoval by remember { mutableStateOf(false) }
     if (confirmFavoriteRemoval) AlertDialog(onDismissRequest = { confirmFavoriteRemoval = false }, title = { Text("Favoriet verwijderen?") }, text = { Text("Wil je dit concert uit je favorieten verwijderen?") }, confirmButton = { TextButton(onClick = { confirmFavoriteRemoval = false; onFavoriteClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmFavoriteRemoval = false }) { Text("Annuleren") } })
@@ -1071,6 +1075,14 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                 if (showFavorite) {
                     TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
                 }
+            }
+            if (concert.isFavorite && concert.ticketSwapUrl.isBlank() && ticketSwapMessage.isNotBlank()) {
+                Text(
+                    text = ticketSwapMessage,
+                    fontSize = 10.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 2.dp)
+                )
             }
             if (concert.isFavorite && !concert.isAttending && concert.ticketSwapUrl.isNotBlank()) {
                 val context = LocalContext.current
