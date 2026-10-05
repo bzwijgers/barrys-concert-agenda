@@ -1,5 +1,5 @@
 from .common import *
-from urllib.parse import urljoin
+from urllib.parse import urljoin, quote_plus
 import unicodedata
 
 
@@ -42,6 +42,30 @@ def _ts_event_links(page):
 def _ts_link_date(url):
     match = re.search(r"-(20\d{2}-\d{2}-\d{2})-[A-Za-z0-9]+$", url)
     return match.group(1) if match else ""
+
+
+def _ts_search_event_links(concert):
+    """Fallback via Bing: TicketSwap event pages are indexed even when city pages are JS-rendered."""
+    artist = concert.get("artist", "").strip()
+    venue = concert.get("venue", "").strip()
+    city = concert.get("city", "").strip()
+    date = concert.get("date", "").strip()
+    if not artist or not date:
+        return []
+
+    query = f'site:ticketswap.com/concert-tickets "{artist}" "{venue}" "{city}" "{date}"'
+    search_url = "https://www.bing.com/search?q=" + quote_plus(query)
+    try:
+        page = download_page_retry(search_url, attempts=2)
+    except Exception:
+        return []
+
+    cleaned = html_module.unescape(page).replace("\\/", "/")
+    pattern = re.compile(
+        r'https?://www\.ticketswap\.com/concert-tickets/[a-z0-9][^"&<>\\\s?]*',
+        re.I,
+    )
+    return list(dict.fromkeys(match.group(0).rstrip("/") for match in pattern.finditer(cleaned)))
 
 
 def _ts_candidate_score(concert, url):
@@ -124,6 +148,15 @@ def enrich_ticketswap_urls(concerts):
                 for url in urls
             ]
             scored = [(score, url) for score, url in scored if score >= 0]
+            if not scored:
+                # TicketSwap city pages zijn deels client-side gerenderd. Gebruik
+                # alleen voor nog niet gevonden concerten een gerichte web-index fallback.
+                search_urls = _ts_search_event_links(concert)
+                scored = [
+                    (_ts_candidate_score(concert, url), url)
+                    for url in search_urls
+                ]
+                scored = [(score, url) for score, url in scored if score >= 0]
             if not scored:
                 continue
 
