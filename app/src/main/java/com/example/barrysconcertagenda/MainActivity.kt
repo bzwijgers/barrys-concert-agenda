@@ -221,7 +221,7 @@ private fun TicketSwapLookupWebView(
                     .replace("\\\"", "\"")
                     .replace("\\/", "/")
                 val candidates = Regex(
-                    """https?://(?:www\\.)?ticketswap\\.com/[^"&?\\\\<> ]+-tickets/[^"&?\\\\<> ]+""",
+                    """https?://(?:www\.)?ticketswap\.com/[^"&?\\<> ]+-tickets/[^"&?\\<> ]+""",
                     RegexOption.IGNORE_CASE
                 ).findAll(decoded).map { it.value }.distinct().toList()
                 val match = candidates.firstOrNull { exact(it) }
