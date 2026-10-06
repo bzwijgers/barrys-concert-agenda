@@ -106,6 +106,48 @@ def paradiso_find_program_urls(html):
     return unique_urls
 
 
+def paradiso_find_sitemap_program_urls():
+    """Collect Paradiso programme detail URLs from public XML sitemaps."""
+    seeds = (
+        PARADISO_BASE_URL + "/sitemap.xml",
+        PARADISO_BASE_URL + "/sitemap_index.xml",
+    )
+    queue = list(seeds)
+    visited = set()
+    urls = []
+    seen_urls = set()
+
+    while queue and len(visited) < 50:
+        sitemap_url = queue.pop(0)
+        if sitemap_url in visited:
+            continue
+        visited.add(sitemap_url)
+
+        try:
+            xml = download_page_retry(sitemap_url)
+        except Exception:
+            continue
+
+        for loc in re.findall(r"<loc>\s*(.*?)\s*</loc>", xml, flags=re.IGNORECASE | re.DOTALL):
+            loc = html_module.unescape(loc.strip())
+            if loc.lower().endswith(".xml") and "sitemap" in loc.lower():
+                if loc not in visited:
+                    queue.append(loc)
+                continue
+            if re.match(
+                r"https://www\.paradiso\.nl/(?:nl/)?programma/[A-Za-z0-9_%+.\-]+/\d+/?$",
+                loc,
+                flags=re.IGNORECASE,
+            ):
+                clean_url = loc.rstrip("/")
+                key = normalize_url(clean_url)
+                if key not in seen_urls:
+                    seen_urls.add(key)
+                    urls.append(clean_url)
+
+    return urls
+
+
 def paradiso_strip_tags(text):
     return re.sub(
         r"<[^>]+>",
@@ -559,6 +601,14 @@ def scrape_paradiso():
             if key not in seen_program_urls:
                 seen_program_urls.add(key)
                 program_urls.append(event_url)
+
+    sitemap_urls = paradiso_find_sitemap_program_urls()
+    print("Paradiso sitemap links:", len(sitemap_urls))
+    for event_url in sitemap_urls:
+        key = normalize_url(event_url)
+        if key not in seen_program_urls:
+            seen_program_urls.add(key)
+            program_urls.append(event_url)
 
     print(
         "Concertlinks gevonden:",
