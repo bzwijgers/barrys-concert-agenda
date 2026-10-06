@@ -4,9 +4,9 @@ from .common import *
 # PARADISO
 # ============================================================
 
-PARADISO_AGENDA_URL = (
-    "https://www.paradiso.nl/"
-    "landing/concertagenda-paradiso/2069817"
+PARADISO_AGENDA_URLS = (
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+    "https://www.paradiso.nl/",
 )
 
 PARADISO_BASE_URL = "https://www.paradiso.nl"
@@ -540,30 +540,30 @@ def scrape_paradiso():
         "============================================================"
     )
 
-    try:
-        agenda_html = (
-            download_page_retry(
-                PARADISO_AGENDA_URL
-            )
-        )
+    program_urls = []
+    seen_program_urls = set()
 
-    except Exception as error:
-        print(
-            "Paradiso concertagenda fout:",
-            str(error)
-        )
-        return []
+    # De concertagenda is soms dynamisch en kan incidenteel een response
+    # zonder programmalinks geven. Probeer beide publieke ingangen en doe
+    # per ingang meerdere pogingen; publiceer nooit een lege Paradiso-feed.
+    for agenda_url in PARADISO_AGENDA_URLS:
+        for attempt in range(3):
+            try:
+                agenda_html = download_page_retry(agenda_url)
+                found_urls = paradiso_find_program_urls(agenda_html)
+                for event_url in found_urls:
+                    key = normalize_url(event_url)
+                    if key not in seen_program_urls:
+                        seen_program_urls.add(key)
+                        program_urls.append(event_url)
+                if found_urls:
+                    break
+            except Exception as error:
+                print("Paradiso concertagenda fout:", agenda_url, "-", str(error))
+            if attempt < 2:
+                time.sleep(2.0 * (attempt + 1))
 
-    program_urls = (
-        paradiso_find_program_urls(
-            agenda_html
-        )
-    )
-
-    print(
-        "Concertlinks gevonden:",
-        len(program_urls)
-    )
+    print("Concertlinks gevonden:", len(program_urls))
 
     concerts = []
 
