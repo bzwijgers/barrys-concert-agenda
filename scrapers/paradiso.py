@@ -594,9 +594,9 @@ def scrape_paradiso():
                     event_url
                 )
                 if concert is not None:
-                    source = source_by_url.get(normalize_url(event_url), "Paradiso")
-                    concert["source"] = source
-                    concert["venue"] = source
+                    venue = paradiso_extract_venue(event_html)
+                    concert["venue"] = venue
+                    concert["source"] = "Tolhuistuin" if venue == "Tolhuistuin" else "Paradiso"
                 return concert
 
             except Exception as error:
