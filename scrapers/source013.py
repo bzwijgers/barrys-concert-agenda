@@ -232,8 +232,8 @@ def source013_parse_event(
 
     # 013 gebruikt in de Event JSON-LD soms de zichtbare combinatie
     # "artiest + tourtitel" als name. De canonical programma-URL bevat
-    # juist de artiestslug en is daarom voor 013 een betrouwbaardere
-    # bron voor de artiestnaam wanneer de JSON-LD naam daarmee begint.
+    # voor zulke pagina's de artiestslug. Gebruik die alleen wanneer
+    # de volledige slug aan het begin van de JSON-LD naam staat.
     url_slug_match = re.search(
         r"/programma/\\d+/([^/?#]+)",
         event_url,
@@ -241,26 +241,27 @@ def source013_parse_event(
     )
 
     if url_slug_match:
-        slug_words = [
-            word
-            for word in url_slug_match.group(1).split("-")
-            if word
-        ]
-
-        artist_words = artist.split()
+        slug = url_slug_match.group(1).strip("-")
+        normalized_artist = re.sub(
+            r"[^a-z0-9]+",
+            "-",
+            artist.lower(),
+        ).strip("-")
 
         if (
-            slug_words
-            and len(slug_words) <= len(artist_words)
-            and all(
-                re.sub(r"[^a-z0-9]", "", artist_words[index].lower())
-                == re.sub(r"[^a-z0-9]", "", slug_word.lower())
-                for index, slug_word in enumerate(slug_words)
-            )
+            slug
+            and normalized_artist != slug
+            and normalized_artist.startswith(slug + "-")
         ):
-            artist = " ".join(
-                artist_words[:len(slug_words)]
+            slug_word_count = len(
+                [word for word in slug.split("-") if word]
             )
+            artist_words = artist.split()
+
+            if slug_word_count <= len(artist_words):
+                artist = " ".join(
+                    artist_words[:slug_word_count]
+                )
 
     if not artist:
         return None
