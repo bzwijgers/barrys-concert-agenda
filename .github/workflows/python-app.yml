@@ -9,6 +9,7 @@ on:
     paths:
       - "scraper.py"
       - "scrapers/**"
+      - "tests/**"
       - ".github/workflows/python-app.yml"
 
   schedule:
@@ -36,6 +37,9 @@ jobs:
 
       - name: Compile Python files
         run: python -m compileall -q scraper.py scrapers
+
+      - name: Test scraper parsing
+        run: python -m unittest discover -s tests -p "test_*.py"
 
       - name: Run concert scraper
         run: python scraper.py
