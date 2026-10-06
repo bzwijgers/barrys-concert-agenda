@@ -43,7 +43,7 @@ def paradiso_find_program_urls(html):
         urls.append(event_url)
 
     relative_regex = re.compile(
-        r"/nl/programma/"
+        r"/(?:nl/)?programma/"
         r"[A-Za-z0-9_%+.\-]+/\d+",
         flags=re.IGNORECASE,
     )
@@ -69,8 +69,10 @@ def paradiso_find_program_urls(html):
     seen = set()
 
     for event_url in urls:
-        if not event_url.lower().startswith(
-            "https://www.paradiso.nl/nl/programma/"
+        if not re.match(
+            r"https://www\.paradiso\.nl/(?:nl/)?programma/",
+            event_url,
+            flags=re.IGNORECASE,
         ):
             continue
 
