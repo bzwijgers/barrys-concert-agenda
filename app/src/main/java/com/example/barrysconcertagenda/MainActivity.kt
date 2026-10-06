@@ -181,9 +181,25 @@ private fun TicketSwapLookupWebView(
         } else {
             "https://www.ticketswap.com/concert-tickets/l/" + countrySlug
         }
-        val searchTerm = target.artist
-            .replace("\\", "\\\\")
-            .replace("'", "\\'")
+        val fullSearchTerm = target.artist
+        val simplifiedSearchTerm = target.artist
+            .split(Regex("\\s+"))
+            .takeWhile { word ->
+                val normalized = ticketSwapSlugPartWeb(word)
+                normalized !in setOf(
+                    "the", "tour", "show", "live", "normal", "world",
+                    "european", "europe", "presents"
+                )
+            }
+            .joinToString(" ")
+            .ifBlank { target.artist }
+        val searchTerms = listOf(fullSearchTerm, simplifiedSearchTerm)
+            .distinct()
+            .map {
+                it.replace("\\", "\\\\")
+                    .replace("'", "\\'")
+            }
+        var searchTermIndex = 0
 
         var finished = false
 
@@ -218,6 +234,8 @@ private fun TicketSwapLookupWebView(
 
         var fallbackStarted = false
 
+        fun currentSearchTerm(): String = searchTerms[searchTermIndex]
+
         fun inspect(view: WebView, attempt: Int, injectSearch: Boolean) {
             if (finished) return
             view.evaluateJavascript(
@@ -227,11 +245,11 @@ private fun TicketSwapLookupWebView(
                         document.querySelector('input[placeholder*="artist" i]') ||
                         document.querySelector('input[type="search"]') ||
                         document.querySelector('input')""" else "null"};
-                    if(input && input.value !== '$searchTerm'){
+                    if(input && input.value !== '${currentSearchTerm()}'){
                         const setter = Object.getOwnPropertyDescriptor(
                             window.HTMLInputElement.prototype, 'value'
                         ).set;
-                        setter.call(input, '$searchTerm');
+                        setter.call(input, '${currentSearchTerm()}');
                         input.dispatchEvent(new Event('input', {bubbles:true}));
                         input.dispatchEvent(new Event('change', {bubbles:true}));
                         input.focus();
@@ -261,6 +279,9 @@ private fun TicketSwapLookupWebView(
                     )
                 } else if (attempt < 12) {
                     view.postDelayed({ inspect(view, attempt + 1, injectSearch) }, 1000)
+                } else if (injectSearch && searchTermIndex < searchTerms.lastIndex) {
+                    searchTermIndex += 1
+                    view.loadUrl("https://www.ticketswap.com/")
                 } else if (!fallbackStarted) {
                     fallbackStarted = true
                     view.loadUrl(fallbackUrl)
