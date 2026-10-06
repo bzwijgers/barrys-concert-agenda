@@ -1,6 +1,10 @@
 from .common import *
 
-TOLHUISTUIN_AGENDA_URLS = (\n    "https://tolhuistuin.nl/agenda",\n    "https://tolhuistuin.nl/zoeken",\n    "https://tolhuistuin.nl/",\n)
+TOLHUISTUIN_AGENDA_URLS = (
+    "https://tolhuistuin.nl/agenda",
+    "https://tolhuistuin.nl/zoeken",
+    "https://tolhuistuin.nl/",
+)
 TOLHUISTUIN_BASE_URL = "https://tolhuistuin.nl"
 
 
