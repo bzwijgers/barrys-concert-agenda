@@ -211,11 +211,10 @@ private fun TicketSwapLookupWebView(
             view.evaluateJavascript(
                 """(function(){
                     const input = ${if (injectSearch) """
-                        document.querySelector('input[placeholder*="event" i]') ||""" else "null ||"}
-
+                        document.querySelector('input[placeholder*="event" i]') ||
                         document.querySelector('input[placeholder*="artist" i]') ||
                         document.querySelector('input[type="search"]') ||
-                        document.querySelector('input');
+                        document.querySelector('input')""" else "null"};
                     if(input && input.value !== '$searchTerm'){
                         const setter = Object.getOwnPropertyDescriptor(
                             window.HTMLInputElement.prototype, 'value'
