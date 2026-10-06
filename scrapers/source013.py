@@ -235,7 +235,7 @@ def source013_parse_event(
     # voor zulke pagina's de artiestslug. Gebruik die alleen wanneer
     # de volledige slug aan het begin van de JSON-LD naam staat.
     url_slug_match = re.search(
-        r"/programma/\\d+/([^/?#]+)",
+        r"/programma/\d+/([^/?#]+)",
         event_url,
         flags=re.IGNORECASE,
     )
