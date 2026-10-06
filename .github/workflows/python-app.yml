@@ -61,6 +61,16 @@ jobs:
           print("Concert count:", len(concerts))
           print("Per source:", dict(counts))
 
+          puscifer = [
+              item for item in concerts
+              if item.get("url") == "https://www.013.nl/programma/128504/puscifer"
+          ]
+          if puscifer and puscifer[0].get("artist") != "Puscifer":
+              raise SystemExit(
+                  "013 regression: Puscifer artist is "
+                  + repr(puscifer[0].get("artist"))
+              )
+
           if missing:
               raise SystemExit(
                   "Refusing to publish: no concerts found for " + ", ".join(missing)
