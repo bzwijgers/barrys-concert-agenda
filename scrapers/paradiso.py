@@ -4,9 +4,9 @@ from .common import *
 # PARADISO
 # ============================================================
 
-PARADISO_AGENDA_URL = (
-    "https://www.paradiso.nl/"
-    "landing/concertagenda-paradiso/2069817"
+PARADISO_AGENDA_URLS = (
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+    "https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946",
 )
 
 PARADISO_BASE_URL = "https://www.paradiso.nl"
@@ -211,33 +211,32 @@ def paradiso_extract_artist(html):
 
 
 def paradiso_extract_venue(html):
-    text = paradiso_html_to_text(
-        html
+    text = paradiso_html_to_text(html)
+
+    # Pak de eerste eigen locatievermelding op de detailpagina. Aanbevolen
+    # programma's onderaan kunnen andere locaties noemen en mogen de zaal
+    # van het huidige evenement niet overschrijven.
+    venue_match = re.search(
+        r"\bIn\s+(Tolhuistuin|Paradiso|Bitterzoet|Cinetol|Zonnehuis|Vondelkerk|De Duif|Parallel|Skatecafe)\b",
+        text,
+        flags=re.IGNORECASE,
     )
-
-    venues = [
-        "Tolhuistuin",
-        "Bitterzoet",
-        "Cinetol",
-        "Zonnehuis",
-        "Vondelkerk",
-        "De Duif",
-        "Parallel",
-        "Skatecafe",
-    ]
-
-    for venue in venues:
-        if re.search(
-            r"\bIn\s+"
-            + re.escape(venue)
-            + r"\b",
-            text,
-            flags=re.IGNORECASE,
-        ):
-            return venue
+    if venue_match:
+        name = venue_match.group(1)
+        canonical = {
+            "tolhuistuin": "Tolhuistuin",
+            "paradiso": "Paradiso",
+            "bitterzoet": "Bitterzoet",
+            "cinetol": "Cinetol",
+            "zonnehuis": "Zonnehuis",
+            "vondelkerk": "Vondelkerk",
+            "de duif": "De Duif",
+            "parallel": "Parallel",
+            "skatecafe": "Skatecafe",
+        }
+        return canonical.get(name.lower(), name)
 
     return "Paradiso"
-
 
 def paradiso_find_best_date_candidate(
     html,
@@ -492,7 +491,7 @@ def paradiso_parse_event(
                 "country": "NL",
                 "date": concert_date,
                 "time": concert_time,
-                "source": "Paradiso",
+                "source": "Tolhuistuin" if paradiso_extract_venue(html) == "Tolhuistuin" else "Paradiso",
                 "url": event_url,
             }
 
@@ -521,7 +520,7 @@ def paradiso_parse_event(
         "country": "NL",
         "date": visible_date,
         "time": visible_time,
-        "source": "Paradiso",
+        "source": "Tolhuistuin" if paradiso_extract_venue(html) == "Tolhuistuin" else "Paradiso",
         "url": event_url,
     }
 
@@ -536,25 +535,21 @@ def scrape_paradiso():
         "============================================================"
     )
 
-    try:
-        agenda_html = (
-            download_page_retry(
-                PARADISO_AGENDA_URL
-            )
-        )
+    program_urls = []
+    seen_program_urls = set()
 
-    except Exception as error:
-        print(
-            "Paradiso concertagenda fout:",
-            str(error)
-        )
-        return []
+    for agenda_url in PARADISO_AGENDA_URLS:
+        try:
+            agenda_html = download_page_retry(agenda_url)
+        except Exception as error:
+            print("Paradiso agenda fout:", agenda_url, "-", str(error))
+            continue
 
-    program_urls = (
-        paradiso_find_program_urls(
-            agenda_html
-        )
-    )
+        for event_url in paradiso_find_program_urls(agenda_html):
+            key = normalize_url(event_url)
+            if key not in seen_program_urls:
+                seen_program_urls.add(key)
+                program_urls.append(event_url)
 
     print(
         "Concertlinks gevonden:",
