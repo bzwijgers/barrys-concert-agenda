@@ -1,4 +1,5 @@
-from .common import *\nfrom .common import _detail_title, _detail_date_time
+from .common import *
+from .common import _detail_title, _detail_date_time
 
 TOLHUISTUIN_AGENDA_URLS = (
     "https://tolhuistuin.nl/agenda",
