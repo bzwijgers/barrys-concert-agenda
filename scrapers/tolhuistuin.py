@@ -2,9 +2,7 @@ from .common import *
 from .common import _detail_title, _detail_date_time
 
 TOLHUISTUIN_AGENDA_URLS = (
-    "https://tolhuistuin.nl/agenda",
-    "https://tolhuistuin.nl/zoeken",
-    "https://tolhuistuin.nl/",
+    "https://tolhuistuin.nl/agenda/",
 )
 TOLHUISTUIN_BASE_URL = "https://tolhuistuin.nl"
 
@@ -23,11 +21,6 @@ def tolhuistuin_parse_event(page, event_url):
         return None
 
     text = clean_text(page)
-
-    # Paradiso is leidend voor alle programma's die door Paradiso
-    # in Tolhuistuin worden georganiseerd.
-    if re.search(r"\bMet\s+huisgenoot\s+Paradiso\b", text, flags=re.IGNORECASE):
-        return None
 
     # Alleen muziek/concerten. Tolhuistuin heeft daarnaast o.a. talks,
     # workshops, kunst, kinderprogramma en markten.
@@ -73,11 +66,37 @@ def scrape_tolhuistuin():
             print("Tolhuistuin overzicht fout:", agenda_url, "-", str(error))
             continue
 
-        for event_url in tolhuistuin_find_event_urls(agenda_html):
-            key = normalize_url(event_url)
-            if key not in seen_urls:
-                seen_urls.add(key)
-                event_urls.append(event_url)
+        pages = [agenda_html]
+        # De agenda laadt maar een eerste batch in de HTML. De site exposeert
+        # vervolgpagina's via de "Laad meer"-links; volg die zolang ze bestaan.
+        visited_pages = {normalize_url(agenda_url)}
+        current_html = agenda_html
+        while True:
+            load_more = re.search(
+                r'href=["\']([^"\']*(?:agenda|page|paged)[^"\']*)["\'][^>]*>[^<]*Laad meer',
+                current_html,
+                flags=re.IGNORECASE | re.DOTALL,
+            )
+            if not load_more:
+                break
+            href = html_module.unescape(load_more.group(1))
+            next_url = href if href.startswith("http") else TOLHUISTUIN_BASE_URL.rstrip("/") + "/" + href.lstrip("/")
+            key = normalize_url(next_url)
+            if key in visited_pages:
+                break
+            visited_pages.add(key)
+            try:
+                current_html = download_page_retry(next_url)
+            except Exception:
+                break
+            pages.append(current_html)
+
+        for page_html in pages:
+            for event_url in tolhuistuin_find_event_urls(page_html):
+                key = normalize_url(event_url)
+                if key not in seen_urls:
+                    seen_urls.add(key)
+                    event_urls.append(event_url)
 
     print("Eventlinks gevonden:", len(event_urls))
 
