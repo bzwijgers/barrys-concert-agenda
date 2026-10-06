@@ -156,38 +156,12 @@ for source_name, scraper_function in (
 
 
 # ============================================================
-# TOLHUISTUIN - EIGEN MUZIEKPROGRAMMERING
-# Paradiso blijft leidend voor Paradiso-programma in Tolhuistuin.
+# TOLHUISTUIN
 # ============================================================
-
-try:
-    tolhuistuin_concerts = scrape_tolhuistuin()
-
-    # Extra centrale ontdubbeling op artiest + datum:
-    # als Paradiso hetzelfde concert al heeft, blijft Paradiso leidend.
-    paradiso_keys = {
-        (
-            concert["artist"].strip().lower(),
-            concert["date"],
-        )
-        for concert in all_concerts
-        if concert.get("source") == "Paradiso"
-    }
-
-    tolhuistuin_concerts = [
-        concert
-        for concert in tolhuistuin_concerts
-        if (
-            concert["artist"].strip().lower(),
-            concert["date"],
-        ) not in paradiso_keys
-    ]
-
-    print("Tolhuistuin toegevoegd:", len(tolhuistuin_concerts))
-    all_concerts.extend(tolhuistuin_concerts)
-
-except Exception as error:
-    print("ERNSTIGE TOLHUISTUIN FOUT:", str(error))
+# Tolhuistuin-programma wordt rechtstreeks via de officiële Paradiso
+# Tolhuistuin-programmapagina opgehaald in scrape_paradiso(). Zo gebruiken
+# Paradiso en Tolhuistuin dezelfde bewezen eventparser en vermijden we de
+# onvolledige client-side agenda van tolhuistuin.nl.
 
 
 # ============================================================
