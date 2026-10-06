@@ -4,9 +4,9 @@ from .common import *
 # PARADISO
 # ============================================================
 
-PARADISO_AGENDA_URLS = (
-    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-    "https://www.paradiso.nl/",
+PARADISO_AGENDA_URL = (
+    "https://www.paradiso.nl/"
+    "landing/concertagenda-paradiso/2069817"
 )
 
 PARADISO_BASE_URL = "https://www.paradiso.nl"
@@ -211,7 +211,9 @@ def paradiso_extract_artist(html):
 
 
 def paradiso_extract_venue(html):
-    text = paradiso_html_to_text(html)
+    text = paradiso_html_to_text(
+        html
+    )
 
     venues = [
         "Tolhuistuin",
@@ -222,26 +224,20 @@ def paradiso_extract_venue(html):
         "De Duif",
         "Parallel",
         "Skatecafe",
-        "Paradiso",
     ]
 
-    # De eigen locatie staat bovenaan de eventpagina. Aanbevolen programma's
-    # verderop bevatten ook "In <locatie>". Kies daarom de vroegste match,
-    # niet de eerste zaal uit onze voorkeurslijst die ergens op de pagina staat.
-    matches = []
     for venue in venues:
-        match = re.search(
-            r"\bIn\s+" + re.escape(venue) + r"\b",
+        if re.search(
+            r"\bIn\s+"
+            + re.escape(venue)
+            + r"\b",
             text,
             flags=re.IGNORECASE,
-        )
-        if match:
-            matches.append((match.start(), venue))
-
-    if matches:
-        return min(matches, key=lambda item: item[0])[1]
+        ):
+            return venue
 
     return "Paradiso"
+
 
 def paradiso_find_best_date_candidate(
     html,
@@ -540,30 +536,30 @@ def scrape_paradiso():
         "============================================================"
     )
 
-    program_urls = []
-    seen_program_urls = set()
+    try:
+        agenda_html = (
+            download_page_retry(
+                PARADISO_AGENDA_URL
+            )
+        )
 
-    # De concertagenda is soms dynamisch en kan incidenteel een response
-    # zonder programmalinks geven. Probeer beide publieke ingangen en doe
-    # per ingang meerdere pogingen; publiceer nooit een lege Paradiso-feed.
-    for agenda_url in PARADISO_AGENDA_URLS:
-        for attempt in range(3):
-            try:
-                agenda_html = download_page_retry(agenda_url)
-                found_urls = paradiso_find_program_urls(agenda_html)
-                for event_url in found_urls:
-                    key = normalize_url(event_url)
-                    if key not in seen_program_urls:
-                        seen_program_urls.add(key)
-                        program_urls.append(event_url)
-                if found_urls:
-                    break
-            except Exception as error:
-                print("Paradiso concertagenda fout:", agenda_url, "-", str(error))
-            if attempt < 2:
-                time.sleep(2.0 * (attempt + 1))
+    except Exception as error:
+        print(
+            "Paradiso concertagenda fout:",
+            str(error)
+        )
+        return []
 
-    print("Concertlinks gevonden:", len(program_urls))
+    program_urls = (
+        paradiso_find_program_urls(
+            agenda_html
+        )
+    )
+
+    print(
+        "Concertlinks gevonden:",
+        len(program_urls)
+    )
 
     concerts = []
 
