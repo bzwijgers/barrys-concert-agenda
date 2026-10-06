@@ -199,8 +199,20 @@ private fun TicketSwapLookupWebView(
             if (!lower.startsWith("https://www.ticketswap.com/")) return false
             if ("-tickets/" !in lower) return false
             if (date.isBlank() || date !in lower) return false
-            if (artistParts.isNotEmpty() &&
-                artistParts.count { it in lower } < maxOf(1, artistParts.size / 2)) return false
+            if (artistParts.isNotEmpty()) {
+                val meaningfulArtistParts = artistParts.filterNot {
+                    it in setOf(
+                        "the", "tour", "show", "live", "normal", "isn", "isnt",
+                        "world", "european", "europe", "presents"
+                    )
+                }
+                val partsToMatch = meaningfulArtistParts.ifEmpty { artistParts }
+                val requiredMatches = when {
+                    partsToMatch.size <= 2 -> 1
+                    else -> 2
+                }
+                if (partsToMatch.count { it in lower } < requiredMatches) return false
+            }
             return citySlug.isBlank() || citySlug in lower || venueSlug in lower
         }
 
@@ -1266,7 +1278,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     modifier = Modifier.padding(top = 2.dp)
                 )
             }
-            if (concert.isFavorite && !concert.isAttending && concert.ticketSwapUrl.isNotBlank()) {
+            if (concert.isFavorite && concert.ticketSwapUrl.isNotBlank()) {
                 val context = LocalContext.current
                 Text(
                     text = "TicketSwap",
