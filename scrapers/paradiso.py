@@ -537,16 +537,25 @@ def scrape_paradiso():
 
     program_urls = []
     seen_program_urls = set()
+    source_by_url = {}
 
-    for agenda_url in PARADISO_AGENDA_URLS:
+    for agenda_index, agenda_url in enumerate(PARADISO_AGENDA_URLS):
+        agenda_source = "Paradiso" if agenda_index == 0 else "Tolhuistuin"
         try:
             agenda_html = download_page_retry(agenda_url)
         except Exception as error:
             print("Paradiso agenda fout:", agenda_url, "-", str(error))
             continue
 
-        for event_url in paradiso_find_program_urls(agenda_html):
+        found_here = paradiso_find_program_urls(agenda_html)
+        print(agenda_source + " agenda links:", len(found_here))
+
+        for event_url in found_here:
             key = normalize_url(event_url)
+            # If an event occurs on both landing pages, the dedicated
+            # Tolhuistuin page wins over the general Paradiso page.
+            if agenda_source == "Tolhuistuin" or key not in source_by_url:
+                source_by_url[key] = agenda_source
             if key not in seen_program_urls:
                 seen_program_urls.add(key)
                 program_urls.append(event_url)
@@ -580,10 +589,15 @@ def scrape_paradiso():
                     )
                 )
 
-                return paradiso_parse_event(
+                concert = paradiso_parse_event(
                     event_html,
                     event_url
                 )
+                if concert is not None:
+                    source = source_by_url.get(normalize_url(event_url), "Paradiso")
+                    concert["source"] = source
+                    concert["venue"] = source
+                return concert
 
             except Exception as error:
                 last_error = error
