@@ -1,6 +1,6 @@
 from .common import *
 
-TOLHUISTUIN_AGENDA_URL = "https://tolhuistuin.nl/agenda"
+TOLHUISTUIN_AGENDA_URLS = (\n    "https://tolhuistuin.nl/agenda",\n    "https://tolhuistuin.nl/zoeken",\n    "https://tolhuistuin.nl/",\n)
 TOLHUISTUIN_BASE_URL = "https://tolhuistuin.nl"
 
 
@@ -58,8 +58,21 @@ def scrape_tolhuistuin():
     print("TOLHUISTUIN")
     print("=" * 60)
 
-    agenda_html = download_page_retry(TOLHUISTUIN_AGENDA_URL)
-    event_urls = tolhuistuin_find_event_urls(agenda_html)
+    event_urls = []
+    seen_urls = set()
+
+    for agenda_url in TOLHUISTUIN_AGENDA_URLS:
+        try:
+            agenda_html = download_page_retry(agenda_url)
+        except Exception as error:
+            print("Tolhuistuin overzicht fout:", agenda_url, "-", str(error))
+            continue
+
+        for event_url in tolhuistuin_find_event_urls(agenda_html):
+            key = normalize_url(event_url)
+            if key not in seen_urls:
+                seen_urls.add(key)
+                event_urls.append(event_url)
 
     print("Eventlinks gevonden:", len(event_urls))
 
