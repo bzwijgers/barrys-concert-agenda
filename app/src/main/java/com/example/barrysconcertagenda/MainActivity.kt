@@ -166,21 +166,9 @@ private fun TicketSwapLookupWebView(
             else -> rawCitySlug
         }
         val venueSlug = ticketSwapSlugPartWeb(target.venue)
-        val englishMonths = listOf(
-            "january", "february", "march", "april", "may", "june",
-            "july", "august", "september", "october", "november", "december"
-        )
-        val countrySlug = when (target.country.uppercase(Locale.ROOT)) {
-            "BE" -> "belgium"
-            else -> "netherlands"
-        }
-        val monthSlug = parsedDate?.let { englishMonths[it.monthValue - 1] }.orEmpty()
-        val searchUrl = if (citySlug.isNotBlank() && monthSlug.isNotBlank()) {
-            "https://www.ticketswap.com/concert-tickets/l/" +
-                countrySlug + "/" + citySlug + "/" + monthSlug
-        } else {
-            "https://www.ticketswap.com/concert-tickets/l/" + countrySlug
-        }
+        val searchTerm = target.artist
+            .replace("\\", "\\\\")
+            .replace("'", "\\'")
 
         var finished = false
 
@@ -193,7 +181,8 @@ private fun TicketSwapLookupWebView(
 
         fun exact(candidate: String): Boolean {
             val lower = candidate.lowercase(Locale.ROOT)
-            if (!lower.startsWith("https://www.ticketswap.com/concert-tickets/")) return false
+            if (!lower.startsWith("https://www.ticketswap.com/")) return false
+            if ("-tickets/" !in lower) return false
             if (date.isBlank() || date !in lower) return false
             if (artistParts.isNotEmpty() &&
                 artistParts.count { it in lower } < maxOf(1, artistParts.size / 2)) return false
@@ -204,6 +193,20 @@ private fun TicketSwapLookupWebView(
             if (finished) return
             view.evaluateJavascript(
                 """(function(){
+                    const input =
+                        document.querySelector('input[placeholder*="event" i]') ||
+                        document.querySelector('input[placeholder*="artist" i]') ||
+                        document.querySelector('input[type="search"]') ||
+                        document.querySelector('input');
+                    if(input && input.value !== '$searchTerm'){
+                        const setter = Object.getOwnPropertyDescriptor(
+                            window.HTMLInputElement.prototype, 'value'
+                        ).set;
+                        setter.call(input, '$searchTerm');
+                        input.dispatchEvent(new Event('input', {bubbles:true}));
+                        input.dispatchEvent(new Event('change', {bubbles:true}));
+                        input.focus();
+                    }
                     const values=[];
                     document.querySelectorAll('a').forEach(a=>{
                         if(a.href) values.push(a.href);
@@ -218,18 +221,21 @@ private fun TicketSwapLookupWebView(
                     .replace("\\\"", "\"")
                     .replace("\\/", "/")
                 val candidates = Regex(
-                    """https?://(?:www\.)?ticketswap\.com/concert-tickets/[^"&?\\<> ]+""",
+                    """https?://(?:www\\.)?ticketswap\\.com/[^"&?\\\\<> ]+-tickets/[^"&?\\\\<> ]+""",
                     RegexOption.IGNORE_CASE
                 ).findAll(decoded).map { it.value }.distinct().toList()
                 val match = candidates.firstOrNull { exact(it) }
                 if (match != null) {
-                    finish(match.substringBefore("?").replace("https://www.ticketswap.com/", "https://www.ticketswap.nl/"))
-                } else if (attempt < 10) {
+                    finish(
+                        match.substringBefore("?")
+                            .replace("https://www.ticketswap.com/", "https://www.ticketswap.nl/")
+                    )
+                } else if (attempt < 12) {
                     view.postDelayed({ inspect(view, attempt + 1) }, 1000)
                 } else {
                     finish(
-                        "ERROR:GEEN EXACTE MATCH · TicketSwap.com " +
-                            view.title.orEmpty() + " · kandidaten " + candidates.size
+                        "ERROR:GEEN EXACTE MATCH · TicketSwap zoekfunctie · kandidaten " +
+                            candidates.size
                     )
                 }
             }
@@ -240,7 +246,7 @@ private fun TicketSwapLookupWebView(
                 if (!finished) view.postDelayed({ inspect(view, 1) }, 700)
             }
         }
-        webView.loadUrl(searchUrl)
+        webView.loadUrl("https://www.ticketswap.com/")
     }
 
     AndroidView(
