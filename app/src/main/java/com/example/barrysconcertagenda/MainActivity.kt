@@ -175,12 +175,22 @@ private fun TicketSwapLookupWebView(
             else -> "netherlands"
         }
         val monthSlug = parsedDate?.let { englishMonths[it.monthValue - 1] }.orEmpty()
-        val fallbackUrl = if (citySlug.isNotBlank() && monthSlug.isNotBlank()) {
-            "https://www.ticketswap.com/concert-tickets/l/" +
-                countrySlug + "/" + citySlug + "/" + monthSlug
+        val locationPath = if (citySlug.isNotBlank() && monthSlug.isNotBlank()) {
+            countrySlug + "/" + citySlug + "/" + monthSlug
         } else {
-            "https://www.ticketswap.com/concert-tickets/l/" + countrySlug
+            countrySlug
         }
+        val fallbackUrls = buildList {
+            add("https://www.ticketswap.com/concert-tickets/l/" + locationPath)
+            listOf(
+                "metal", "rock", "pop", "indie", "electronic", "hip-hop",
+                "rap", "jazz", "folk", "country", "classical", "funk",
+                "drum-and-bass", "hardstyle", "dubstep", "trap"
+            ).forEach { genre ->
+                add("https://www.ticketswap.com/concert-tickets/g/" + genre + "/" + locationPath)
+            }
+        }
+        var fallbackIndex = 0
         val fullSearchTerm = target.artist
         val simplifiedSearchTerm = target.artist
             .split(Regex("\\s+"))
@@ -277,17 +287,21 @@ private fun TicketSwapLookupWebView(
                         match.substringBefore("?")
                             .replace("https://www.ticketswap.com/", "https://www.ticketswap.nl/")
                     )
-                } else if (attempt < 12) {
+                } else if (attempt < if (injectSearch) 12 else 3) {
                     view.postDelayed({ inspect(view, attempt + 1, injectSearch) }, 1000)
                 } else if (injectSearch && searchTermIndex < searchTerms.lastIndex) {
                     searchTermIndex += 1
                     view.loadUrl("https://www.ticketswap.com/")
                 } else if (!fallbackStarted) {
                     fallbackStarted = true
-                    view.loadUrl(fallbackUrl)
+                    fallbackIndex = 0
+                    view.loadUrl(fallbackUrls[fallbackIndex])
+                } else if (fallbackIndex < fallbackUrls.lastIndex) {
+                    fallbackIndex += 1
+                    view.loadUrl(fallbackUrls[fallbackIndex])
                 } else {
                     finish(
-                        "ERROR:GEEN EXACTE MATCH · TicketSwap zoekfunctie + city/month · kandidaten " +
+                        "ERROR:GEEN EXACTE MATCH · TicketSwap zoekfunctie + city/month/genres · kandidaten " +
                             candidates.size
                     )
                 }
