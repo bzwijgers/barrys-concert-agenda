@@ -6,11 +6,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "scraper.py"
-      - "scrapers/**"
-      - "tests/**"
-      - ".github/workflows/python-app.yml"
 
   schedule:
     # GitHub Actions gebruikt UTC.
