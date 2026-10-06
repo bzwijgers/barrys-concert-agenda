@@ -48,6 +48,20 @@ def paradiso_find_program_urls(html):
         flags=re.IGNORECASE,
     )
 
+    # De agenda levert programma-URLs ook JSON-geescaped aan,
+    # niet alleen als normale hrefs. Pak daarom alle zichtbare
+    # /programma/<slug>/<id>-patronen uit de volledige response.
+    embedded_regex = re.compile(
+        r"/(?:nl/)?programma/"
+        r"[A-Za-z0-9_%+.\-]+/\d+",
+        flags=re.IGNORECASE,
+    )
+
+    for match in embedded_regex.finditer(cleaned_html):
+        event_url = PARADISO_BASE_URL + match.group(0)
+        event_url = event_url.split("?", 1)[0].split("#", 1)[0].rstrip("/")
+        urls.append(event_url)
+
     for match in relative_regex.finditer(
         cleaned_html
     ):
