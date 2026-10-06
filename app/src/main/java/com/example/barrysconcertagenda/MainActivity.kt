@@ -166,6 +166,21 @@ private fun TicketSwapLookupWebView(
             else -> rawCitySlug
         }
         val venueSlug = ticketSwapSlugPartWeb(target.venue)
+        val englishMonths = listOf(
+            "january", "february", "march", "april", "may", "june",
+            "july", "august", "september", "october", "november", "december"
+        )
+        val countrySlug = when (target.country.uppercase(Locale.ROOT)) {
+            "BE" -> "belgium"
+            else -> "netherlands"
+        }
+        val monthSlug = parsedDate?.let { englishMonths[it.monthValue - 1] }.orEmpty()
+        val fallbackUrl = if (citySlug.isNotBlank() && monthSlug.isNotBlank()) {
+            "https://www.ticketswap.com/concert-tickets/l/" +
+                countrySlug + "/" + citySlug + "/" + monthSlug
+        } else {
+            "https://www.ticketswap.com/concert-tickets/l/" + countrySlug
+        }
         val searchTerm = target.artist
             .replace("\\", "\\\\")
             .replace("'", "\\'")
@@ -189,12 +204,15 @@ private fun TicketSwapLookupWebView(
             return citySlug.isBlank() || citySlug in lower || venueSlug in lower
         }
 
-        fun inspect(view: WebView, attempt: Int) {
+        var fallbackStarted = false
+
+        fun inspect(view: WebView, attempt: Int, injectSearch: Boolean) {
             if (finished) return
             view.evaluateJavascript(
                 """(function(){
-                    const input =
-                        document.querySelector('input[placeholder*="event" i]') ||
+                    const input = ${if (injectSearch) """
+                        document.querySelector('input[placeholder*="event" i]') ||""" else "null ||"}
+
                         document.querySelector('input[placeholder*="artist" i]') ||
                         document.querySelector('input[type="search"]') ||
                         document.querySelector('input');
@@ -231,10 +249,13 @@ private fun TicketSwapLookupWebView(
                             .replace("https://www.ticketswap.com/", "https://www.ticketswap.nl/")
                     )
                 } else if (attempt < 12) {
-                    view.postDelayed({ inspect(view, attempt + 1) }, 1000)
+                    view.postDelayed({ inspect(view, attempt + 1, injectSearch) }, 1000)
+                } else if (!fallbackStarted) {
+                    fallbackStarted = true
+                    view.loadUrl(fallbackUrl)
                 } else {
                     finish(
-                        "ERROR:GEEN EXACTE MATCH · TicketSwap zoekfunctie · kandidaten " +
+                        "ERROR:GEEN EXACTE MATCH · TicketSwap zoekfunctie + city/month · kandidaten " +
                             candidates.size
                     )
                 }
@@ -243,7 +264,10 @@ private fun TicketSwapLookupWebView(
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
-                if (!finished) view.postDelayed({ inspect(view, 1) }, 700)
+                if (!finished) {
+                    val useSearch = !fallbackStarted
+                    view.postDelayed({ inspect(view, 1, useSearch) }, 700)
+                }
             }
         }
         webView.loadUrl("https://www.ticketswap.com/")
