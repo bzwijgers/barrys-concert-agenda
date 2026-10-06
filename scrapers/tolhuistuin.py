@@ -56,56 +56,42 @@ def scrape_tolhuistuin():
     print("TOLHUISTUIN")
     print("=" * 60)
 
-    event_urls = []
+    # De agenda wordt client-side gevuld. Server-side pagina's geven wel
+    # eventlinks en detailpagina's linken naar aanbevolen evenementen.
+    seed_urls = ("https://tolhuistuin.nl/", "https://tolhuistuin.nl/zoeken")
+    queue = []
     seen_urls = set()
 
-    for agenda_url in TOLHUISTUIN_AGENDA_URLS:
+    for seed_url in seed_urls:
         try:
-            agenda_html = download_page_retry(agenda_url)
+            page = download_page_retry(seed_url)
         except Exception as error:
-            print("Tolhuistuin overzicht fout:", agenda_url, "-", str(error))
+            print("Tolhuistuin startpagina fout:", seed_url, "-", str(error))
             continue
+        for event_url in tolhuistuin_find_event_urls(page):
+            key = normalize_url(event_url)
+            if key not in seen_urls:
+                seen_urls.add(key)
+                queue.append(event_url)
 
-        pages = [agenda_html]
-        # De agenda laadt maar een eerste batch in de HTML. De site exposeert
-        # vervolgpagina's via de "Laad meer"-links; volg die zolang ze bestaan.
-        visited_pages = {normalize_url(agenda_url)}
-        current_html = agenda_html
-        while True:
-            load_more = re.search(
-                r'href=["\']([^"\']*(?:agenda|page|paged)[^"\']*)["\'][^>]*>[^<]*Laad meer',
-                current_html,
-                flags=re.IGNORECASE | re.DOTALL,
-            )
-            if not load_more:
-                break
-            href = html_module.unescape(load_more.group(1))
-            next_url = href if href.startswith("http") else TOLHUISTUIN_BASE_URL.rstrip("/") + "/" + href.lstrip("/")
-            key = normalize_url(next_url)
-            if key in visited_pages:
-                break
-            visited_pages.add(key)
-            try:
-                current_html = download_page_retry(next_url)
-            except Exception:
-                break
-            pages.append(current_html)
-
-        for page_html in pages:
-            for event_url in tolhuistuin_find_event_urls(page_html):
-                key = normalize_url(event_url)
-                if key not in seen_urls:
-                    seen_urls.add(key)
-                    event_urls.append(event_url)
-
-    print("Eventlinks gevonden:", len(event_urls))
+    print("Eerste eventlinks gevonden:", len(queue))
 
     concerts = []
     today = date.today()
+    processed = 0
+    max_events = 500
 
-    for event_url in event_urls:
+    while queue and processed < max_events:
+        event_url = queue.pop(0)
+        processed += 1
         try:
             page = download_page_retry(event_url)
+            for linked_url in tolhuistuin_find_event_urls(page):
+                key = normalize_url(linked_url)
+                if key not in seen_urls and len(seen_urls) < max_events:
+                    seen_urls.add(key)
+                    queue.append(linked_url)
+
             concert = tolhuistuin_parse_event(page, event_url)
             if concert is None:
                 continue
@@ -115,21 +101,15 @@ def scrape_tolhuistuin():
         except Exception as error:
             print("Tolhuistuin detailpagina fout:", event_url, "-", str(error))
 
+    print("Tolhuistuin eventlinks ontdekt:", len(seen_urls))
+    print("Tolhuistuin detailpagina's verwerkt:", processed)
+
     unique = {}
     for concert in concerts:
-        key = (
-            concert["artist"].strip().lower(),
-            concert["date"],
-            concert["venue"].strip().lower(),
-        )
+        key = (concert["artist"].strip().lower(), concert["date"], concert["venue"].strip().lower())
         unique[key] = concert
 
     result = list(unique.values())
-    result.sort(key=lambda concert: (
-        concert["date"],
-        concert["time"],
-        concert["artist"].lower(),
-    ))
-
+    result.sort(key=lambda concert: (concert["date"], concert["time"], concert["artist"].lower()))
     print("Tolhuistuin eigen muziekprogramma:", len(result))
     return result
