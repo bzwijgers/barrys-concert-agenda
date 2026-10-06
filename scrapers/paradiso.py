@@ -211,9 +211,7 @@ def paradiso_extract_artist(html):
 
 
 def paradiso_extract_venue(html):
-    text = paradiso_html_to_text(
-        html
-    )
+    text = paradiso_html_to_text(html)
 
     venues = [
         "Tolhuistuin",
@@ -224,20 +222,26 @@ def paradiso_extract_venue(html):
         "De Duif",
         "Parallel",
         "Skatecafe",
+        "Paradiso",
     ]
 
+    # De eigen locatie staat bovenaan de eventpagina. Aanbevolen programma's
+    # verderop bevatten ook "In <locatie>". Kies daarom de vroegste match,
+    # niet de eerste zaal uit onze voorkeurslijst die ergens op de pagina staat.
+    matches = []
     for venue in venues:
-        if re.search(
-            r"\bIn\s+"
-            + re.escape(venue)
-            + r"\b",
+        match = re.search(
+            r"\bIn\s+" + re.escape(venue) + r"\b",
             text,
             flags=re.IGNORECASE,
-        ):
-            return venue
+        )
+        if match:
+            matches.append((match.start(), venue))
+
+    if matches:
+        return min(matches, key=lambda item: item[0])[1]
 
     return "Paradiso"
-
 
 def paradiso_find_best_date_candidate(
     html,
