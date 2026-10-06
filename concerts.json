@@ -1,5 +1,55 @@
 [
   {
+    "artist": "Gareth - Halfway Home Tour 2026",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/gareth-halfway-home-tour-2026/2913104"
+  },
+  {
+    "artist": "HEY, NOTHING - Hound World Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/hey-nothing-hound-world-tour/2904235"
+  },
+  {
+    "artist": "Monokate geeft op26 maart 2027 een optreden in Paradiso, Amsterdam.",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/monokate/2939266"
+  },
+  {
+    "artist": "Radio Free Alice in Paradiso op 10 november",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/radio-free-alice/2924901"
+  },
+  {
+    "artist": "The Womack Sisters in Tolhuistuin, Amsterdam",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/the-womack-sisters/2939464"
+  },
+  {
     "artist": "Asya Events presents: Fondip",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -18,6 +68,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/hallas/"
+  },
+  {
+    "artist": "СОЮЗ (SOYUZ)",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-06",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/soiuz-soyuz/2882457"
   },
   {
     "artist": "Gone Country",
@@ -352,16 +412,6 @@
     "url": "https://www.paard.nl/event/paardcafe-club-pony-100/"
   },
   {
-    "artist": "Tröckener Kecks concert in Paradiso Amsterdam",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "10:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/trockener-kecks/2940733"
-  },
-  {
     "artist": "Shadow of Intent",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -481,6 +531,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/greentea-peng/"
+  },
+  {
+    "artist": "Kinkajous",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/kinkajous/2867121"
   },
   {
     "artist": "Rapalje – Celtic Folk Night",
@@ -834,6 +894,16 @@
     "url": "https://patronaat.nl/event/the-narrator-11-10-26/"
   },
   {
+    "artist": "WU LYF",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/wu-lyf/2885451"
+  },
+  {
     "artist": "JANNE SCHRA",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -1046,6 +1116,16 @@
     "url": "https://www.paard.nl/event/los-cumbia-stars/"
   },
   {
+    "artist": "Cochemea",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-13",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/cochemea/2904440"
+  },
+  {
     "artist": "Thijs Veldhuis",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1177,6 +1257,16 @@
     "url": "https://www.effenaar.nl/agenda/youngthegiant"
   },
   {
+    "artist": "EST Gee",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/est-gee/2915653"
+  },
+  {
     "artist": "FLUX: Bokoesam",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -1288,6 +1378,16 @@
     "url": "https://poppodiumboerderij.nl/programma/tyketto-coreleoni/"
   },
   {
+    "artist": "30 Jaar Excelsior Recordings in Tolhuistuin, Amsterdam",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321"
+  },
+  {
     "artist": "Allie X",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -1298,6 +1398,16 @@
     "url": "https://www.013.nl/programma/128942/allie-x"
   },
   {
+    "artist": "Dirty Blond in Tolhuistuin Amsterdam",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/dirty-blond/2939630"
+  },
+  {
     "artist": "DUNE SESSIONS",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -1306,6 +1416,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/dune-sessions-15-10/"
+  },
+  {
+    "artist": "Op 18 februari 2027 staat 54 Ultra in Tolhuistuin Amsterdam. Klik hier voor meer info en tickets.",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/54-ultra/2935118"
   },
   {
     "artist": "Paardcafé: Noraly + False Perspective UNTOLD/UNFOLD tour",
@@ -1328,16 +1448,6 @@
     "url": "https://patronaat.nl/event/spain-15-10-26/"
   },
   {
-    "artist": "Super-Sonic Jam invites VOLTA Brussel: led by Diana Sidibé",
-    "venue": "Skatecafe",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-15",
-    "time": "20:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/super-sonic-jam-invites-volta-brussel-led-by-diana-sidibe/2926121"
-  },
-  {
     "artist": "Tamikrest",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -1356,6 +1466,16 @@
     "time": "20:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/beach-boys-best-15-10-26/"
+  },
+  {
+    "artist": "corto.alto",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/corto-alto/2889015"
   },
   {
     "artist": "Frank Boeijen",
@@ -1467,6 +1587,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/dotan-12/"
+  },
+  {
+    "artist": "Erotic Poetry Night - Berlin Special",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/erotic-poetry-night-berlin-special/2924619"
   },
   {
     "artist": "Hulvey",
@@ -1680,6 +1810,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/31500934/rolf-sanchez-17-10-2026/"
   },
   {
+    "artist": "Blood Red Shoes",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/blood-red-shoes/2813652"
+  },
+  {
     "artist": "Fanfare Ciocărlia",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -1778,6 +1918,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/snelle-17okt"
+  },
+  {
+    "artist": "Katherine Priddy",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/katherine-priddy/2815916"
   },
   {
     "artist": "Limehouse Lizzy",
@@ -2041,6 +2191,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/23104250/fkj-19-10-2026/"
   },
   {
+    "artist": "Dave East",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-19",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/dave-east/2854309"
+  },
+  {
     "artist": "Mercury Rev",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -2202,6 +2362,16 @@
     "url": "https://www.013.nl/programma/152582/culs-cult"
   },
   {
+    "artist": "Flowers for the Dead + The Sewing Club",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/flowers-dead-sewing-club"
+  },
+  {
     "artist": "DE BETOVERING: GERSON MAIN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2283,6 +2453,16 @@
     "url": "https://www.013.nl/programma/127222/ios"
   },
   {
+    "artist": "Jigitz | 13 februari 2027 | Tolhuistuin, Amsterdam",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/jigitz/2931868"
+  },
+  {
     "artist": "RONDÉ",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -2293,6 +2473,16 @@
     "url": "https://www.paard.nl/event/ronde-7/"
   },
   {
+    "artist": "Science & Cocktails: How Our Money Can Make Everyone Happy",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/science-cocktails-how-our-money-can-make-everyone-happy/2923591"
+  },
+  {
     "artist": "Theatre Of Hate + Skids",
     "venue": "MEZZ",
     "city": "Breda",
@@ -2301,16 +2491,6 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/theatre-of-hate-skids/"
-  },
-  {
-    "artist": "Flowers for the Dead + The Sewing Club",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/flowers-dead-sewing-club"
   },
   {
     "artist": "Popronde Utrecht",
@@ -2827,6 +3007,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/69214441/ceelo-green-26-10-2026/"
   },
   {
+    "artist": "Chanel Beads",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-26",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/chanel-beads/2907645"
+  },
+  {
     "artist": "Max Fry",
     "venue": "MEZZ",
     "city": "Breda",
@@ -2835,6 +3025,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/max-fry/"
+  },
+  {
+    "artist": "NOFX: 40 Years of Fuckin' Up",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/40-years-fuckin-up-nofx"
   },
   {
     "artist": "Clawfinger",
@@ -2887,16 +3087,6 @@
     "url": "https://poppodiumboerderij.nl/programma/geofftate/"
   },
   {
-    "artist": "NOFX: 40 Years of Fuckin' Up",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-27",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/40-years-fuckin-up-nofx"
-  },
-  {
     "artist": "Rob Lamberti presents A Celebration of George Michael",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -2905,6 +3095,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/127803/rob-lamberti-presents-a-celebration-of-george-michael"
+  },
+  {
+    "artist": "Yaro Mila",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-27",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/yaro-mila/2905947"
   },
   {
     "artist": "De Jukebox",
@@ -2976,6 +3176,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/frazey-ford/",
     "clubCard": false
+  },
+  {
+    "artist": "Girls In Hawaii",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-28",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/girls-in-hawaii/2866457"
   },
   {
     "artist": "Jon Allen & the Luna Kings",
@@ -3754,6 +3964,16 @@
     "url": "https://www.paard.nl/event/ago-gnawa-gnawa-festival-2026/"
   },
   {
+    "artist": "Teenage Fanclub",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/teenage-fanclub/2867949"
+  },
+  {
     "artist": "The Home Team",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -3916,6 +4136,16 @@
     "url": "https://www.013.nl/programma/128707/the-dire-straits-experience"
   },
   {
+    "artist": "The Meltdown",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-02",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/the-meltdown/2786535"
+  },
+  {
     "artist": "Valley of the Sun",
     "venue": "MEZZ",
     "city": "Breda",
@@ -4014,6 +4244,16 @@
     "time": "20:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/sam-bettens-doopsgezind-haarlem-03-11-26/"
+  },
+  {
+    "artist": "The Meltdown",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-03",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/the-meltdown/2786539"
   },
   {
     "artist": "Victoryland",
@@ -4167,6 +4407,16 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/digitalism-05-11-2026/"
+  },
+  {
+    "artist": "The Clockworks",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/the-clockworks/2836738"
   },
   {
     "artist": "Willow Avalon",
@@ -4419,6 +4669,16 @@
     "url": "https://www.effenaar.nl/agenda/electric-eel-shock"
   },
   {
+    "artist": "Kelsey Lu",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/kelsey-lu/2897403"
+  },
+  {
     "artist": "Pieter Savenberg",
     "venue": "MEZZ",
     "city": "Breda",
@@ -4468,16 +4728,6 @@
     "time": "21:00",
     "source": "013",
     "url": "https://www.013.nl/programma/131304/zer00s-heroes"
-  },
-  {
-    "artist": "Bomen voor Amsterdam",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-07",
-    "time": "",
-    "source": "Tolhuistuin",
-    "url": "https://tolhuistuin.nl/evenementen/bomen-voor-amsterdam"
   },
   {
     "artist": "Unfold by Patroon",
@@ -4530,16 +4780,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/marsh-07-11-2026/"
   },
   {
-    "artist": "Ploegendienst",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-07",
-    "time": "19:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/ploegendienst/2771941"
-  },
-  {
     "artist": "FISCHER-Z",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -4548,6 +4788,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/fischer-z/"
+  },
+  {
+    "artist": "Mark Ambor",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/mark-ambor/2941083"
   },
   {
     "artist": "Oi Va Voi",
@@ -4761,6 +5011,16 @@
     "url": "https://www.paard.nl/event/namesbliss/"
   },
   {
+    "artist": "Noha Saré",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/noha-sare/2907767"
+  },
+  {
     "artist": "O.R.k.",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -4820,6 +5080,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/64915139/mark-lettieri-09-11-2026/"
+  },
+  {
+    "artist": "Nick Hakim",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-09",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/nick-hakim/2904169"
   },
   {
     "artist": "Messa",
@@ -4882,16 +5152,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/jack-jack-10-11-2026/"
   },
   {
-    "artist": "Justin Nozuka in Tolhuistuin",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-10",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/justin-nozuka/2941101"
-  },
-  {
     "artist": "Keli Holiday",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -4900,16 +5160,6 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/keli-holiday-10-11-2026/"
-  },
-  {
-    "artist": "Paradiso | Friendly Fires in Tolhuistuin",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-10",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/friendly-fires/2933529"
   },
   {
     "artist": "Loma + Shearwater",
@@ -4952,6 +5202,16 @@
     "url": "https://www.paard.nl/event/takuya-kuroda/"
   },
   {
+    "artist": "Lily Seabird",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-10",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/lily-seabird/2906751"
+  },
+  {
     "artist": "Gone Country",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -4970,6 +5230,16 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/gavin-james-11-11-2026/"
+  },
+  {
+    "artist": "Alex Vargas",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-11",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/alex-vargas/2834731"
   },
   {
     "artist": "Enter Shikari",
@@ -5041,6 +5311,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/kiwi-jr/",
     "clubCard": true
+  },
+  {
+    "artist": "Prins S. en de Geit",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/prins-s-geit-12nov"
   },
   {
     "artist": "ElGrandeToto",
@@ -5133,14 +5413,14 @@
     "url": "https://www.paard.nl/event/queens-pleasure-6/"
   },
   {
-    "artist": "Prins S. en de Geit",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
+    "artist": "Adult DVD",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-12",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/prins-s-geit-12nov"
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/adult-dvd/2885447"
   },
   {
     "artist": "Early James",
@@ -5316,14 +5596,14 @@
     "url": "https://www.013.nl/programma/128999/the-soulful-sessions"
   },
   {
-    "artist": "Suzan & Freek in Paradiso",
-    "venue": "Paradiso",
+    "artist": "Bombino",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-13",
     "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/suzan-freek/2942224"
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/bombino/2867107"
   },
   {
     "artist": "The Next Movement",
@@ -5405,6 +5685,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/11885533/guido-belcanto-14-11-2026/"
+  },
+  {
+    "artist": "Lucky Fonz III",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/lucky-fonz-iii/2747841"
   },
   {
     "artist": "Rijck",
@@ -5659,6 +5949,16 @@
     "clubCard": false
   },
   {
+    "artist": "Feeble Little Horse",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/feeble-little-horse/2889551"
+  },
+  {
     "artist": "Fred Wesley Generations",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -5809,6 +6109,16 @@
     "url": "https://www.013.nl/programma/152830/kneecap"
   },
   {
+    "artist": "Genevieve Stokes - Hiding Places Tour",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-17",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/genevieve-stokes-hiding-places-tour/2903076"
+  },
+  {
     "artist": "De Jukebox",
     "venue": "Poppodium 013 - Foyer van Main Stage",
     "city": "Tilburg",
@@ -5877,6 +6187,16 @@
     "time": "20:15",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/blair-davie-18-11-26/"
+  },
+  {
+    "artist": "Ares",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/ares/2898554"
   },
   {
     "artist": "DAOUD",
@@ -6224,6 +6544,16 @@
     "url": "https://poppodiumboerderij.nl/programma/parkerbarrow/"
   },
   {
+    "artist": "Rijck",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/rijck/2885271"
+  },
+  {
     "artist": "CHARLOT",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -6539,6 +6869,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/wasia-project-23-11-2026/"
   },
   {
+    "artist": "Mighty Oaks",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-23",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/mighty-oaks/2771079"
+  },
+  {
     "artist": "Long Distance Calling",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -6599,6 +6939,26 @@
     "url": "https://www.melkweg.nl/nl/agenda/tinie-tempah-24-11-2026/"
   },
   {
+    "artist": "Dave Lofts",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-24",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/dave-lofts/2907741"
+  },
+  {
+    "artist": "Gong",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-24",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/gong/2832112"
+  },
+  {
     "artist": "Tom McRae",
     "venue": "MEZZ",
     "city": "Breda",
@@ -6607,36 +6967,6 @@
     "time": "20:30",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/tom-mcrae/"
-  },
-  {
-    "artist": "Eastern Margins & Natural Mind- ADE",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-24",
-    "time": "21:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/eastern-margins-ade/2926125"
-  },
-  {
-    "artist": "Nacht van het Absurdisme in Paradiso",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-24",
-    "time": "21:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/voorheen-nacht-van-het-absurdisme/2923753"
-  },
-  {
-    "artist": "Yaeger in Paradiso",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-24",
-    "time": "21:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/yaeger/2938680"
   },
   {
     "artist": "Ernst, Bobbie & de",
@@ -6760,6 +7090,26 @@
     "clubCard": false
   },
   {
+    "artist": "Koosje",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/koosje/2894184"
+  },
+  {
+    "artist": "NAFT",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/naft/2903089"
+  },
+  {
     "artist": "Cul's Cult Hondenfokker + Merk'dr'dr",
     "venue": "Cul de Sac",
     "city": "Tilburg",
@@ -6789,6 +7139,16 @@
     "time": "15:30",
     "source": "013",
     "url": "https://www.013.nl/programma/159494/ernst-bobbie-de-rest"
+  },
+  {
+    "artist": "Genesis Owusu",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/genesis-owusu/2896732"
   },
   {
     "artist": "Gone Country",
@@ -6982,6 +7342,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/47518906/lil-peep-30th-birthday-celebration-27-11-2026/"
+  },
+  {
+    "artist": "James Smith",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/james-smith/2894999"
   },
   {
     "artist": "Modestep",
@@ -7264,6 +7634,16 @@
     "url": "https://poppodiumboerderij.nl/programma/arena/"
   },
   {
+    "artist": "Pongo",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/pongo/2896697"
+  },
+  {
     "artist": "MICH",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -7275,14 +7655,34 @@
     "clubCard": false
   },
   {
-    "artist": "DRUK 2026",
-    "venue": "Paradiso",
+    "artist": "Justin Nozuka in Tolhuistuin",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-29",
     "time": "12:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/druk-2026/2843536"
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/justin-nozuka/2941101"
+  },
+  {
+    "artist": "Paradiso | Friendly Fires in Tolhuistuin",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "12:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/friendly-fires/2933529"
+  },
+  {
+    "artist": "Science & Cocktails: Food, Health and the Limits to Growth",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "12:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/science-cocktails-food-health-and-the-limits-to-growth/2925263"
   },
   {
     "artist": "Bezerkus Bingo",
@@ -7415,6 +7815,16 @@
     "url": "https://poppodiumboerderij.nl/programma/annekevangiersbergen2026/"
   },
   {
+    "artist": "MNEK - THE!! BULLDOZER!! TOUR!!",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/mnek-the-bulldozer-tour/2906246"
+  },
+  {
     "artist": "Coilguns",
     "venue": "Little Devil",
     "city": "Tilburg",
@@ -7455,14 +7865,14 @@
     "url": "https://www.mezz.nl/programma/sondre-lerche/"
   },
   {
-    "artist": "Marou & Massin",
-    "venue": "Paradiso",
+    "artist": "EMF",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-30",
     "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/marou-massin/2934667"
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/emf/2902439"
   },
   {
     "artist": "The Chameleons",
@@ -7503,6 +7913,16 @@
     "time": "19:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/terror-02-12-26/"
+  },
+  {
+    "artist": "Noor",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/noor/2852178"
   },
   {
     "artist": "Q Marsden",
@@ -7625,6 +8045,16 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/gotts-street-park-03-12-2026/"
+  },
+  {
+    "artist": "Hiigo",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/hiigo/2817397"
   },
   {
     "artist": "Romare (live)",
@@ -7761,6 +8191,16 @@
     "clubCard": false
   },
   {
+    "artist": "NO BARRIER",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/no-barrier-4dec"
+  },
+  {
     "artist": "Baroeg Tribute Night: Sex Pistols Exposé",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -7869,16 +8309,6 @@
     "time": "20:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/nieuwe-oogst-ila-rubincarter-04-12-26/"
-  },
-  {
-    "artist": "NO BARRIER",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-04",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/no-barrier-4dec"
   },
   {
     "artist": "Pene Corrida",
@@ -7992,6 +8422,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/29723887/luar-na-lubre-05-12-2026/"
   },
   {
+    "artist": "Sarah Julia",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/sarah-julia/2876921"
+  },
+  {
     "artist": "Alexandra Alden",
     "venue": "MEZZ",
     "city": "Breda",
@@ -8041,6 +8481,16 @@
     "time": "20:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/novulent-05-12-26/"
+  },
+  {
+    "artist": "Hans Williams",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/hans-williams/2927434"
   },
   {
     "artist": "Mostly Autumn",
@@ -8102,6 +8552,16 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/the-skints-06-12-2026/"
+  },
+  {
+    "artist": "The Tubs in Tolhuistuin op 6 december",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/the-tubs/2886934"
   },
   {
     "artist": "Emmy d'Arc",
@@ -8551,6 +9011,16 @@
     "url": "https://poppodiumboerderij.nl/programma/alexhenryfoster/"
   },
   {
+    "artist": "Isabel van Gelder",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/isabel-van-gelder/2914943"
+  },
+  {
     "artist": "DAVINA MICHELLE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -8620,6 +9090,26 @@
     "time": "19:15",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/89286088/dewolff-12-12-2026/"
+  },
+  {
+    "artist": "Bertolf",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/bertolf/2866301"
+  },
+  {
+    "artist": "Romy Liz Rose + Levi Boon",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/romy-liz-rose-x-levi-boon/2880461"
   },
   {
     "artist": "Timebox",
@@ -8784,6 +9274,16 @@
     "url": "https://www.013.nl/programma/128421/widowspeak"
   },
   {
+    "artist": ".multibeat",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/multibeat/2888719"
+  },
+  {
     "artist": "New Cool Collective",
     "venue": "MEZZ",
     "city": "Breda",
@@ -8804,6 +9304,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/ethan-regan-14-12-2026/"
   },
   {
+    "artist": "Rikas",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-14",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/rikas/2900357"
+  },
+  {
     "artist": "Quiz'm - Top 2000 Editie",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -8812,6 +9322,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/156627/quizm-top-2000-editie"
+  },
+  {
+    "artist": "Ibeyi",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-15",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/ibeyi/2896693"
   },
   {
     "artist": "Clean Pete's Kerstshow",
@@ -8976,6 +9496,16 @@
     "clubCard": false
   },
   {
+    "artist": "Isabèl Usher",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/isabel-usher-18dec"
+  },
+  {
     "artist": "Cancelled: Backfire! (farewell show) + Traumatizer",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -9014,16 +9544,6 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/my-baby-6/"
-  },
-  {
-    "artist": "Isabèl Usher",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-18",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/isabel-usher-18dec"
   },
   {
     "artist": "JUNGLE BY NIGHT",
@@ -9097,6 +9617,16 @@
     "clubCard": false
   },
   {
+    "artist": "Jett Rebel",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/jett-rebel-19dec"
+  },
+  {
     "artist": "De Unie",
     "venue": "Poppodium 013 - Main + Next",
     "city": "Tilburg",
@@ -9117,6 +9647,16 @@
     "url": "https://www.mezz.nl/programma/bettie-serveert-2/"
   },
   {
+    "artist": "Doodseskader",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/doodseskader/2885344"
+  },
+  {
     "artist": "STATE POWER",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -9125,16 +9665,6 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/state-power/"
-  },
-  {
-    "artist": "Jett Rebel",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-19",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/jett-rebel-19dec"
   },
   {
     "artist": "Library Card",
@@ -9196,6 +9726,16 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/new-model-army-20-12-2026/"
+  },
+  {
+    "artist": "Michael Prins",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/michael-prins/2847418"
   },
   {
     "artist": "Doodswens",
@@ -9401,6 +9941,16 @@
     "url": "https://www.013.nl/programma/155786/extince"
   },
   {
+    "artist": "Honey I'm Home",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-30",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/honey-im-home/2841259"
+  },
+  {
     "artist": "Effenaar Oud & Nieuw 2026",
     "venue": "Meerdere locaties",
     "city": "Eindhoven",
@@ -9482,6 +10032,16 @@
     "url": "https://www.mezz.nl/programma/wc-experience-12/"
   },
   {
+    "artist": "The Dirty Daddies",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-01-09",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/dirty-daddies-9jan27"
+  },
+  {
     "artist": "Loïs Lane",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -9500,16 +10060,6 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/the-bird-experience/"
-  },
-  {
-    "artist": "The Dirty Daddies",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-01-09",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/dirty-daddies-9jan27"
   },
   {
     "artist": "WC Experience",
@@ -9805,6 +10355,16 @@
     "url": "https://patronaat.nl/event/tribute-to-the-cats-band-22-01-27/"
   },
   {
+    "artist": "Black Box Revelation",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/black-box-revelation"
+  },
+  {
     "artist": "Biga*Ranx",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -9815,14 +10375,14 @@
     "url": "https://www.melkweg.nl/nl/agenda/bigaranx-23-01-2027/"
   },
   {
-    "artist": "Black Box Revelation",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
+    "artist": "Gilla Band",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
     "country": "NL",
     "date": "2027-01-23",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/black-box-revelation"
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/gilla-band/2896446"
   },
   {
     "artist": "J. Bernardt",
@@ -9885,16 +10445,6 @@
     "url": "https://www.013.nl/programma/159540/job-dutchtuber-billy-the-kit"
   },
   {
-    "artist": "Gallowstreet Kids Edition",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-24",
-    "time": "16:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/gallowstreet-kids-edition/2926681"
-  },
-  {
     "artist": "Wage War",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -9943,6 +10493,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/eddiejobsons-uk-revisited/"
+  },
+  {
+    "artist": "Slow Pulp",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-26",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/slow-pulp/2911639"
   },
   {
     "artist": "De Jukebox",
@@ -10015,26 +10575,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/dagny-29-01-2027/"
   },
   {
-    "artist": "The Mary Wallopers",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/the-mary-wallopers/2926208"
-  },
-  {
-    "artist": "Zeno",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/zeno/2938624"
-  },
-  {
     "artist": "DeWolff",
     "venue": "MEZZ",
     "city": "Breda",
@@ -10105,6 +10645,16 @@
     "url": "https://www.mezz.nl/programma/back-in-da-day-2/"
   },
   {
+    "artist": "The Smiths Presumably",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/thesmithspresumably"
+  },
+  {
     "artist": "D.U.R.F.",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -10143,16 +10693,6 @@
     "time": "20:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/extince-30-jaar-spraakwater-30-01-27/"
-  },
-  {
-    "artist": "The Smiths Presumably",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/thesmithspresumably"
   },
   {
     "artist": "ACinDC",
@@ -10255,14 +10795,14 @@
     "url": "https://www.013.nl/programma/128068/two-door-cinema-club"
   },
   {
-    "artist": "Radie Peat",
-    "venue": "Paradiso",
+    "artist": "Fionn Regan geeft op 23 maart 2027 een optreden in Tolhuistuin, Amsterdam.",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-01-31",
     "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/radie-peat/2910945"
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/fionn-regan/2936826"
   },
   {
     "artist": "Spite +",
@@ -10354,6 +10894,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/henge-3/"
+  },
+  {
+    "artist": "Mansur Brown",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-04",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/mansur-brown/2822089"
   },
   {
     "artist": "Elder",
@@ -10584,6 +11134,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/comedyoferrors/"
+  },
+  {
+    "artist": "Fulu Miziki",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-12",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/fulu-miziki/2910807"
   },
   {
     "artist": "DUTCHRAVE",
@@ -10996,8 +11556,18 @@
     "country": "NL",
     "date": "2027-02-23",
     "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/this-is-lorelei/2935972"
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/this-is-lorelei/2935972"
+  },
+  {
+    "artist": "This Is Lorelei",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-23",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/this-is-lorelei/2915826"
   },
   {
     "artist": "MIDGE URE",
@@ -11048,6 +11618,16 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/jersey-25-02-2027/"
+  },
+  {
+    "artist": "Ariel Posen",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-25",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/ariel-posen/2903043"
   },
   {
     "artist": "DRAMA",
@@ -11131,6 +11711,16 @@
     "url": "https://www.effenaar.nl/agenda/ruben-hillen"
   },
   {
+    "artist": "Vrij-gezellig",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/vrij-gezellig"
+  },
+  {
     "artist": "Haiden Henderson",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -11169,16 +11759,6 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/nubiyan-twist/"
-  },
-  {
-    "artist": "Vrij-gezellig",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-02-27",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/vrij-gezellig"
   },
   {
     "artist": "Ozric Tentacles",
@@ -11299,6 +11879,16 @@
     "time": "20:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/mike-lindup-trio-03-03-27/"
+  },
+  {
+    "artist": "СОЮЗ (SOYUZ)",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-03",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/soiuz-soyuz/2931680"
   },
   {
     "artist": "Jimmy Carr: Laughs Funny",
@@ -11468,7 +12058,7 @@
     "city": "Eindhoven",
     "country": "NL",
     "date": "2027-03-07",
-    "time": "19:00",
+    "time": "",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/moonspell"
   },
@@ -11513,6 +12103,16 @@
     "url": "https://www.mezz.nl/programma/jools-holland/"
   },
   {
+    "artist": "The Haunted Youth",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-03-10",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/thehauntedyouth"
+  },
+  {
     "artist": "Sam Quealy",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -11521,16 +12121,6 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/sam-quealy-10-03-2027/"
-  },
-  {
-    "artist": "The Haunted Youth",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-03-10",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/thehauntedyouth"
   },
   {
     "artist": "Mannarino",
@@ -11724,6 +12314,16 @@
     "url": "https://baroeg.nl/productie/oh-hiroshima-torzs/"
   },
   {
+    "artist": "Hallo Venray in Tolhuistuin",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-16",
+    "time": "19:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/40-jaar-hallo-venray/2925339"
+  },
+  {
     "artist": "KMFDM (Nieuwe datum)",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -11864,24 +12464,14 @@
     "url": "https://patronaat.nl/event/luicidal-19-03-27/"
   },
   {
-    "artist": "Bree Runway speelt op 30 november 2026 in Bitterzoet.",
-    "venue": "Bitterzoet",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-19",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/bree-runway/2931757"
-  },
-  {
     "artist": "Medium Build",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-03-19",
     "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/medium-build/2930279"
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/medium-build/2930279"
   },
   {
     "artist": "Physical Graffiti",
@@ -11963,6 +12553,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/black-box-revelation-1/",
     "clubCard": false
+  },
+  {
+    "artist": "Moses Boyd",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-23",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/moses-boyd/2927475"
   },
   {
     "artist": "PERSONAL TRAINER",
@@ -12076,14 +12676,14 @@
     "url": "https://www.mezz.nl/programma/theodor/"
   },
   {
-    "artist": "Westside Cowboy | 30 maart 2027",
-    "venue": "Paradiso",
+    "artist": "Westside Cowboy",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-03-30",
     "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/westside-cowboy/2932816"
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/westside-cowboy/2872946"
   },
   {
     "artist": "De Jukebox",
@@ -12412,6 +13012,16 @@
     "clubCard": false
   },
   {
+    "artist": "Air Traffic",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-14",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/air-traffic/2925151"
+  },
+  {
     "artist": "Roadburn 2027",
     "venue": "Poppodium 013 - Alle Zalen",
     "city": "Tilburg",
@@ -12492,6 +13102,16 @@
     "url": "https://www.mezz.nl/programma/magazines/"
   },
   {
+    "artist": "Say Yes Dog",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-16",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/say-yes-dog/2915729"
+  },
+  {
     "artist": "Roadburn 2027",
     "venue": "Poppodium 013 - Alle Zalen",
     "city": "Tilburg",
@@ -12542,6 +13162,16 @@
     "url": "https://poppodiumboerderij.nl/programma/magenta/"
   },
   {
+    "artist": "High Fade",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-04-18",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/high-fade"
+  },
+  {
     "artist": "Roadburn 2027",
     "venue": "Poppodium 013 - Alle Zalen",
     "city": "Tilburg",
@@ -12570,16 +13200,6 @@
     "time": "19:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/sonataarctica-rage/"
-  },
-  {
-    "artist": "High Fade",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-04-18",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/high-fade"
   },
   {
     "artist": "HIGH FADE",
@@ -12640,6 +13260,16 @@
     "time": "20:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/jim-gardner"
+  },
+  {
+    "artist": "Zoë Livay",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/zoe-livay/2931186"
   },
   {
     "artist": "Off The Wall: The Best of Michael Jackson met Jared Grant",
@@ -13013,6 +13643,16 @@
     "time": "20:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/nine-below-zero-50-year-anniversary-20-05-27/"
+  },
+  {
+    "artist": "Ruben Hillen",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-20",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/ruben-hillen/2896215"
   },
   {
     "artist": "Fuzz Club 2027 - Friday",
