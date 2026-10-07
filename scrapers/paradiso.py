@@ -728,7 +728,7 @@ def scrape_paradiso():
         raise last_error
 
     with ThreadPoolExecutor(
-        max_workers=8
+        max_workers=20
     ) as executor:
 
         future_to_url = {
