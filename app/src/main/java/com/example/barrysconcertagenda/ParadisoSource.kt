@@ -26,6 +26,9 @@ object ParadisoSource {
     private const val AGENDA_URL =
         "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
 
+    private const val TOLHUISTUIN_AGENDA_URL =
+        "https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946"
+
     var diagnosticInfo: String =
         "Paradiso wordt gecontroleerd..."
 
@@ -50,9 +53,33 @@ object ParadisoSource {
                 "Concertagenda: OK"
             )
 
-            val programUrls =
+            val paradisoProgramUrls =
                 findProgramUrls(agendaHtml)
 
+            val tolhuistuinHtml =
+                try {
+                    downloadPage(TOLHUISTUIN_AGENDA_URL)
+                } catch (_: Exception) {
+                    ""
+                }
+
+            val tolhuistuinProgramUrls =
+                if (tolhuistuinHtml.isNotBlank()) {
+                    findProgramUrls(tolhuistuinHtml)
+                } else {
+                    emptyList()
+                }
+
+            val programUrls =
+                (paradisoProgramUrls + tolhuistuinProgramUrls)
+                    .distinct()
+
+            diagnostic.appendLine(
+                "Paradiso concertlinks: ${paradisoProgramUrls.size}"
+            )
+            diagnostic.appendLine(
+                "Tolhuistuin aanvullende links: ${tolhuistuinProgramUrls.size}"
+            )
             diagnostic.appendLine(
                 "Concertlinks gevonden: ${programUrls.size}"
             )
