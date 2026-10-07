@@ -499,12 +499,23 @@ def paradiso_extract_visible_time(html):
     return ""
 
 
+def paradiso_normalize_artist(artist):
+    # Browser titles can contain Paradiso's location suffix.
+    artist = re.sub(
+        r"\\s+in\\s+(?:Tolhuistuin|Paradiso)(?:,\\s*Amsterdam)?(?:\\s+op\\s+\\d{1,2}\\s+[A-Za-z]+)?\\s*$",
+        "",
+        artist,
+        flags=re.IGNORECASE,
+    )
+    return artist.strip()
+
+
 def paradiso_parse_event(
     html,
     event_url
 ):
-    artist = paradiso_extract_artist(
-        html
+    artist = paradiso_normalize_artist(
+        paradiso_extract_artist(html)
     )
 
     if not artist:
