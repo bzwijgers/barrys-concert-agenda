@@ -6,7 +6,11 @@ from .common import *
 
 PARADISO_AGENDA_URLS = (
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817?page=2",
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817?page=3",
     "https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946",
+    "https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946?page=2",
+    "https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946?page=3",
 )
 
 PARADISO_BASE_URL = "https://www.paradiso.nl"
@@ -614,7 +618,7 @@ def scrape_paradiso():
     source_by_url = {}
 
     for agenda_index, agenda_url in enumerate(PARADISO_AGENDA_URLS):
-        agenda_source = "Paradiso" if agenda_index == 0 else "Tolhuistuin"
+        agenda_source = "Tolhuistuin" if "programma-in-tolhuistuin" in agenda_url else "Paradiso"
         try:
             agenda_html = download_page_retry(agenda_url)
         except Exception as error:
