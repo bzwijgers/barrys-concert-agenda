@@ -266,8 +266,11 @@ private fun TicketSwapLookupWebView(
                     }
                     const values=[];
                     document.querySelectorAll('a').forEach(a=>{
-                        if(a.href) values.push(a.href);
-                        const h=a.getAttribute('href'); if(h) values.push(h);
+                        const href=a.href || a.getAttribute('href') || '';
+                        if(href) values.push({
+                            href: href,
+                            text: (a.innerText || a.textContent || '').trim()
+                        });
                     });
                     return JSON.stringify(values);
                 })();"""
@@ -277,11 +280,38 @@ private fun TicketSwapLookupWebView(
                     .replace("\\\\", "\\")
                     .replace("\\\"", "\"")
                     .replace("\\/", "/")
-                val candidates = Regex(
-                    """https?://(?:www\.)?ticketswap\.com/[^"&?\\<> ]+-tickets/[^"&?\\<> ]+""",
+                val candidateRegex = Regex(
+                    """\\{"href":"(https?://(?:www\\.)?ticketswap\\.com/[^"]+-tickets/[^"]+)","text":"([^"]*)"\\}""",
                     RegexOption.IGNORE_CASE
-                ).findAll(decoded).map { it.value }.distinct().toList()
-                val match = candidates.firstOrNull { exact(it) }
+                )
+                val candidates = candidateRegex.findAll(decoded)
+                    .map { it.groupValues[1] to it.groupValues[2] }
+                    .distinctBy { it.first }
+                    .toList()
+                fun artistInText(text: String): Boolean {
+                    val normalizedText = ticketSwapSlugPartWeb(text)
+                    val meaningfulArtistParts = artistParts.filterNot {
+                        it in setOf(
+                            "the", "tour", "show", "live", "normal", "isn", "isnt",
+                            "world", "european", "europe", "presents"
+                        )
+                    }
+                    val partsToMatch = meaningfulArtistParts.ifEmpty { artistParts }
+                    val requiredMatches = when {
+                        partsToMatch.size <= 2 -> 1
+                        else -> 2
+                    }
+                    return partsToMatch.isNotEmpty() &&
+                        partsToMatch.count { it in normalizedText } >= requiredMatches
+                }
+                val match = candidates.firstOrNull { (url, text) ->
+                    exact(url) || (
+                        date.isNotBlank() && date in url.lowercase(Locale.ROOT) &&
+                        (citySlug.isBlank() || citySlug in url.lowercase(Locale.ROOT) ||
+                            venueSlug in url.lowercase(Locale.ROOT)) &&
+                        artistInText(text)
+                    )
+                }?.first
                 if (match != null) {
                     finish(
                         match.substringBefore("?")
