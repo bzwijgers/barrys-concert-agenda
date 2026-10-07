@@ -61,6 +61,17 @@ jobs:
               candidates = [m for m in matches if any(x in m.lower() for x in ("page", "offset", "load", "api", "agenda"))]
               print("pagination/API candidates:", candidates[-30:])
 
+          from scrapers.paradiso import paradiso_find_program_urls, paradiso_parse_event
+          found = paradiso_find_program_urls(agenda)
+          print("parsed agenda URLs:", len(found))
+          print("Hans URL parsed:", [u for u in found if "2927434" in u])
+          hans_url = "https://www.paradiso.nl/nl/programma/hans-williams/2927434"
+          hans_html = download_page_retry(hans_url)
+          print("Hans detail chars:", len(hans_html))
+          print("Hans parse result:", paradiso_parse_event(hans_html, hans_url))
+          hpos = hans_html.lower().find("hans williams")
+          print("Hans detail context:", hans_html[max(0,hpos-1000):hpos+2500] if hpos >= 0 else "not found")
+
           try:
               sitemap = download_page_retry("https://www.paradiso.nl/sitemap.xml")
               print("sitemap chars:", len(sitemap))
