@@ -42,31 +42,24 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
-      - name: Test Paradiso discovery routes
+      - name: Inspect Paradiso sitemap index
         run: |
           python - <<'PY'
+          import re
           from scrapers.common import download_page_retry
-          from scrapers.paradiso import paradiso_find_program_urls
-          routes = (
-              "/",
-              "/zoeken",
-              "/programma",
-              "/nl",
-              "/nl/zoeken",
-              "/nl/programma",
-              "/landing/popconcerten-in-paradiso/690539",
-              "/subbrand/indiestad/2048803",
-              "/subbrand/sugar-mountain/2048811",
-              "/subbrand/tones/2048840",
-          )
-          for route in routes:
+          xml = download_page_retry("https://www.paradiso.nl/sitemap.xml")
+          print(xml)
+          urls = re.findall(r"<loc>(.*?)</loc>", xml, re.I)
+          print("SITEMAP LOCS", len(urls), urls)
+          for url in urls:
+              if "sitemap" not in url.lower():
+                  continue
               try:
-                  html = download_page_retry("https://www.paradiso.nl"+route)
-                  urls = paradiso_find_program_urls(html)
-                  print(route, len(urls), "mary", any("2926204" in u for u in urls), "friendly", any("2933529" in u for u in urls))
+                  child = download_page_retry(url)
+                  print("CHILD", url, "chars", len(child), "program", child.lower().count("/programma/"), "mary", "2926204" in child, "friendly", "2933529" in child)
               except Exception as e:
-                  print(route, "ERROR", repr(e))
-          raise SystemExit("route diagnostic complete")
+                  print("CHILD ERROR", url, repr(e))
+          raise SystemExit("sitemap diagnostic complete")
           PY
 
       - name: Run concert scraper
