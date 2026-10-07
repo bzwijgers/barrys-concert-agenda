@@ -6,11 +6,7 @@ from .common import *
 
 PARADISO_AGENDA_URLS = (
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817?page=2",
-    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817?page=3",
     "https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946",
-    "https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946?page=2",
-    "https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946?page=3",
 )
 
 PARADISO_BASE_URL = "https://www.paradiso.nl"
@@ -671,10 +667,17 @@ def scrape_paradiso():
                     event_html,
                     event_url
                 )
-                if concert is not None:
-                    venue = paradiso_extract_venue(event_html)
-                    concert["venue"] = venue
-                    concert["source"] = "Tolhuistuin" if venue == "Tolhuistuin" else "Paradiso"
+                if concert is None:
+                    # Een incidenteel onvolledige Paradiso-response mag een
+                    # geldig concert niet stil uit de feed laten verdwijnen.
+                    if attempt < 2:
+                        time.sleep(2.0 * (attempt + 1))
+                        continue
+                    return None
+
+                venue = paradiso_extract_venue(event_html)
+                concert["venue"] = venue
+                concert["source"] = "Tolhuistuin" if venue == "Tolhuistuin" else "Paradiso"
                 return concert
 
             except Exception as error:
@@ -688,7 +691,7 @@ def scrape_paradiso():
         raise last_error
 
     with ThreadPoolExecutor(
-        max_workers=3
+        max_workers=2
     ) as executor:
 
         future_to_url = {
