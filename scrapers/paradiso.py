@@ -646,6 +646,16 @@ def scrape_paradiso():
                 seen_program_urls.add(key)
                 program_urls.append(event_url)
 
+        missing_from_queue = [
+            event_url for event_url in found_here
+            if normalize_url(event_url) not in seen_program_urls
+        ]
+        if missing_from_queue:
+            raise RuntimeError(
+                "Paradiso agenda links niet in werklijst: "
+                + ", ".join(missing_from_queue[:5])
+            )
+
     print(
         "Concertlinks gevonden:",
         len(program_urls)
