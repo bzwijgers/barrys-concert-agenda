@@ -42,30 +42,6 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
-      - name: Check Paradiso sitemap freshness coverage
-        run: |
-          python - <<'PY'
-          import json,re
-          from scrapers.common import download_page_retry
-          with open("concerts.json",encoding="utf-8") as f:
-              current={re.search(r"/(\\d+)$",x["url"]).group(1) for x in json.load(f) if "paradiso.nl/" in x.get("url","") and re.search(r"/(\\d+)$",x.get("url",""))}
-          rows={}
-          for n in range(1,33):
-              xml=download_page_retry(f"https://www.paradiso.nl/sitemap/event_{n}.xml")
-              for block in re.findall(r"<url>(.*?)</url>",xml,re.I|re.S):
-                  u=re.search(r"<loc>(.*?)</loc>",block,re.I|re.S)
-                  m=re.search(r"<lastmod>(.*?)</lastmod>",block,re.I|re.S)
-                  if u:
-                      mid=re.search(r"/(\\d+)$",u.group(1).strip())
-                      if mid: rows[mid.group(1)]=m.group(1).strip() if m else ""
-          dates=[rows[i] for i in current if i in rows]
-          print("CURRENT",len(current),"IN_SITEMAP",len(dates),"OLDEST_LASTMOD",min(dates) if dates else None)
-          for cutoff in ("2026-01-01","2026-04-01","2026-07-01"):
-              missed=[i for i in current if rows.get(i,"")[:10] < cutoff]
-              print("CUTOFF",cutoff,"MISSES_CURRENT",len(missed),missed[:20])
-          raise SystemExit("freshness diagnostic complete")
-          PY
-
       - name: Run concert scraper
         run: python scraper.py
 
