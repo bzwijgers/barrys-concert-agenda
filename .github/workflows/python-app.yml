@@ -21,6 +21,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: concert-feed-main
+  cancel-in-progress: true
+
 jobs:
   update-concerts:
     runs-on: ubuntu-latest
