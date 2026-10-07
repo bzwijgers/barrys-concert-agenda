@@ -462,45 +462,68 @@ def paradiso_parse_event(
     if not artist:
         return None
 
-    # Paradiso detail pages contain many recommended events below the
-    # current event. Only parse the visible header section of this event;
-    # otherwise dates/times/venues from recommendations can be selected.
-    header_end_candidates = [
-        position for position in (
-            html.lower().find("<h2", html.lower().find("<h1") + 1),
-            html.lower().find("line-up"),
-            html.lower().find("route naar"),
+    iso_date = (
+        paradiso_find_best_date_candidate(
+            html,
+            artist
         )
-        if position > 0
-    ]
-    header_end = min(header_end_candidates) if header_end_candidates else min(len(html), 120000)
-    event_html = html[:header_end]
+    )
 
-    visible_date = paradiso_extract_visible_date(
-        event_html
+    if iso_date:
+        local_result = (
+            paradiso_iso_to_local(
+                iso_date
+            )
+        )
+
+        if local_result:
+            concert_date, concert_time = (
+                local_result
+            )
+
+            return {
+                "artist": artist,
+                "venue":
+                    paradiso_extract_venue(
+                        html
+                    ),
+                "city": "Amsterdam",
+                "country": "NL",
+                "date": concert_date,
+                "time": concert_time,
+                "source": "Tolhuistuin" if paradiso_extract_venue(html) == "Tolhuistuin" else "Paradiso",
+                "url": event_url,
+            }
+
+    visible_date = (
+        paradiso_extract_visible_date(
+            html
+        )
     )
 
     if not visible_date:
         return None
 
-    visible_time = paradiso_extract_visible_time(
-        event_html
-    )
-
-    venue = paradiso_extract_venue(
-        event_html
+    visible_time = (
+        paradiso_extract_visible_time(
+            html
+        )
     )
 
     return {
         "artist": artist,
-        "venue": venue,
+        "venue":
+            paradiso_extract_venue(
+                html
+            ),
         "city": "Amsterdam",
         "country": "NL",
         "date": visible_date,
         "time": visible_time,
-        "source": "Tolhuistuin" if venue == "Tolhuistuin" else "Paradiso",
+        "source": "Tolhuistuin" if paradiso_extract_venue(html) == "Tolhuistuin" else "Paradiso",
         "url": event_url,
     }
+
 
 def scrape_paradiso():
     print()
