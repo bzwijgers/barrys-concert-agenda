@@ -42,6 +42,22 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
+      - name: Discover complete Paradiso source
+        run: |
+          python - <<'PY'
+          import re
+          from scrapers.common import download_page_retry
+          html = download_page_retry("https://www.paradiso.nl/landing/concertagenda-paradiso/2069817")
+          print("chars", len(html))
+          for needle in ("__NEXT_DATA__", "__APOLLO_STATE__", "api/", "graphql", "algolia", "programItems", "events", "pageSize", "limit"):
+              print("\nNEEDLE", needle)
+              for m in list(re.finditer(re.escape(needle), html, re.I))[:8]:
+                  print(html[max(0,m.start()-500):m.start()+1200].replace("\n"," ")[:1700])
+          scripts = re.findall(r'<script[^>]+src=["\\\']([^"\\\']+)["\\\']', html, re.I)
+          print("\nSCRIPTS", scripts[-30:])
+          raise SystemExit("Paradiso source discovery complete")
+          PY
+
       - name: Run concert scraper
         run: python scraper.py
 
