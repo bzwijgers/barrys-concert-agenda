@@ -237,28 +237,10 @@ def paradiso_extract_venue(html):
     return "Paradiso"
 
 def paradiso_extract_primary_event_date_time(html):
-    # Paradiso detailpagina's bevatten onder het eigen evenement ook veel
-    # aanbevolen programma's. Beperk datum/tijd daarom tot het bovenste
-    # deel van de pagina, vóór de aanbevelingen.
-    main_html = html
-    cut_markers = (
-        'aria-label="Programma"',
-        '>Programma<',
-        '"relatedEvents"',
-        '"recommendations"',
-    )
-    cut_positions = [
-        main_html.lower().find(marker.lower())
-        for marker in cut_markers
-        if main_html.lower().find(marker.lower()) >= 0
-    ]
-    if cut_positions:
-        main_html = main_html[:min(cut_positions)]
-
-    text = paradiso_html_to_text(main_html)
-
-    # De zichtbare Paradiso-datum heeft vaak geen jaar. Gebruik het
-    # huidige/volgende kalenderjaar zoals elders in de scraper.
+    # Gebruik alleen het eerste zichtbare datum/tijdblok van de detailpagina.
+    # Aanbevolen programma's komen later in de HTML en mogen nooit de datum
+    # van het huidige evenement bepalen.
+    text = paradiso_html_to_text(html)
     months = {
         "januari": 1, "februari": 2, "maart": 3, "april": 4,
         "mei": 5, "juni": 6, "juli": 7, "augustus": 8,
@@ -271,7 +253,7 @@ def paradiso_extract_primary_event_date_time(html):
     date_match = re.search(
         r"\\b(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|"
         r"monday|tuesday|wednesday|thursday|friday|saturday|sunday)?\\s*"
-        r"(\\d{1,2})\\s+(" + month_pattern + r")\\b",
+        r"(\\d{1,2})\\s+(" + month_pattern + r")(?:\\s+(20\\d{2}))?\\b",
         text,
         flags=re.IGNORECASE,
     )
@@ -280,27 +262,29 @@ def paradiso_extract_primary_event_date_time(html):
 
     day = int(date_match.group(1))
     month = months[date_match.group(2).lower()]
+    explicit_year = date_match.group(3)
     today = date.today()
-    year = today.year
+    year = int(explicit_year) if explicit_year else today.year
     candidate = date(year, month, day)
-    if candidate < today - timedelta(days=7):
+    if not explicit_year and candidate < today - timedelta(days=7):
         candidate = date(year + 1, month, day)
 
-    # Hoofdprogramma is leidend; zaal-open alleen als fallback.
+    # Zoek tijd alleen in het stuk direct na de gevonden hoofddatum.
+    # Zo kan een aanbevolen concert verderop geen tijd leveren.
+    after_date = text[date_match.end():date_match.end() + 1200]
     time_match = re.search(
         r"(?:Hoofdprogramma|Main program)\\s*:\\s*(\\d{1,2}:\\d{2})",
-        text,
+        after_date,
         flags=re.IGNORECASE,
     )
     if not time_match:
         time_match = re.search(
             r"(?:Zaal\\s+open|Doors)\\s*:\\s*(\\d{1,2}:\\d{2})",
-            text,
+            after_date,
             flags=re.IGNORECASE,
         )
 
     return candidate.isoformat(), (time_match.group(1) if time_match else "")
-
 
 def paradiso_find_best_date_candidate(
     html,
