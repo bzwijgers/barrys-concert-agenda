@@ -77,6 +77,10 @@ jobs:
                   ("30 Jaar Excelsior Recordings", "Tolhuistuin", "2026-12-27", "16:00"),
               "https://www.paradiso.nl/nl/programma/honey-im-home/2841259":
                   ("Honey I'm Home", "Tolhuistuin", "2026-12-30", "20:30"),
+              "https://www.paradiso.nl/nl/programma/hans-williams/2927434":
+                  ("Hans Williams", "Tolhuistuin", "2026-12-05", "20:30"),
+              "https://www.paradiso.nl/nl/programma/the-tubs/2886934":
+                  ("The Tubs", "Tolhuistuin", "2026-12-06", "19:30"),
               "https://www.paradiso.nl/nl/programma/fat-freddys-drop/2654360":
                   ("Fat Freddy's Drop + DJ Logg Cabin", "Paradiso", "2026-10-12", "20:30"),
           }
