@@ -251,9 +251,9 @@ def paradiso_extract_primary_event_date_time(html):
     }
     month_pattern = "|".join(months.keys())
     date_match = re.search(
-        r"\\b(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|"
-        r"monday|tuesday|wednesday|thursday|friday|saturday|sunday)?\\s*"
-        r"(\\d{1,2})\\s+(" + month_pattern + r")(?:\\s+(20\\d{2}))?\\b",
+        r"\b(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|"
+        r"monday|tuesday|wednesday|thursday|friday|saturday|sunday)?\s*"
+        r"(\d{1,2})\s+(" + month_pattern + r")(?:\s+(20\d{2}))?\b",
         text,
         flags=re.IGNORECASE,
     )
@@ -273,13 +273,13 @@ def paradiso_extract_primary_event_date_time(html):
     # Zo kan een aanbevolen concert verderop geen tijd leveren.
     after_date = text[date_match.end():date_match.end() + 1200]
     time_match = re.search(
-        r"(?:Hoofdprogramma|Main program)\\s*:\\s*(\\d{1,2}:\\d{2})",
+        r"(?:Hoofdprogramma|Main program)\s*:\s*(\d{1,2}:\d{2})",
         after_date,
         flags=re.IGNORECASE,
     )
     if not time_match:
         time_match = re.search(
-            r"(?:Zaal\\s+open|Doors)\\s*:\\s*(\\d{1,2}:\\d{2})",
+            r"(?:Zaal\s+open|Doors)\s*:\s*(\d{1,2}:\d{2})",
             after_date,
             flags=re.IGNORECASE,
         )
@@ -502,7 +502,7 @@ def paradiso_extract_visible_time(html):
 def paradiso_normalize_artist(artist):
     # Browser titles can contain Paradiso's location suffix.
     artist = re.sub(
-        r"\\s+in\\s+(?:Tolhuistuin|Paradiso)(?:,\\s*Amsterdam)?(?:\\s+op\\s+\\d{1,2}\\s+[A-Za-z]+)?\\s*$",
+        r"\s+in\s+(?:Tolhuistuin|Paradiso)(?:,\s*Amsterdam)?(?:\s+op\s+\d{1,2}\s+[A-Za-z]+)?\s*$",
         "",
         artist,
         flags=re.IGNORECASE,
