@@ -42,49 +42,6 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
-      - name: Diagnose Paradiso discovery
-        run: |
-          python - <<'PY'
-          import re
-          from scrapers.common import download_page_retry
-
-          agenda = download_page_retry("https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946")
-          print("agenda chars:", len(agenda))
-          print("Hans in agenda HTML:", "2927434" in agenda or "Hans Williams" in agenda)
-          for needle in ("2927434", "Hans Williams", "hans-williams"):
-              pos = agenda.find(needle)
-              if pos >= 0:
-                  print("Hans agenda context:", agenda[max(0,pos-1200):pos+1800])
-                  break
-          for pattern in (r'href=["\\\']([^"\\\']+)["\\\']', r'https?://[^"\\\'<> ]+'):
-              matches = re.findall(pattern, agenda, flags=re.I)
-              candidates = [m for m in matches if any(x in m.lower() for x in ("page", "offset", "load", "api", "agenda"))]
-              print("pagination/API candidates:", candidates[-30:])
-
-          from scrapers.paradiso import paradiso_find_program_urls, paradiso_parse_event
-          found = paradiso_find_program_urls(agenda)
-          print("parsed agenda URLs:", len(found))
-          print("Hans URL parsed:", [u for u in found if "2927434" in u])
-          hans_url = "https://www.paradiso.nl/nl/programma/hans-williams/2927434"
-          hans_html = download_page_retry(hans_url)
-          print("Hans detail chars:", len(hans_html))
-          print("Hans parse result:", paradiso_parse_event(hans_html, hans_url))
-          hpos = hans_html.lower().find("hans williams")
-          print("Hans detail context:", hans_html[max(0,hpos-1000):hpos+2500] if hpos >= 0 else "not found")
-
-          try:
-              sitemap = download_page_retry("https://www.paradiso.nl/sitemap.xml")
-              print("sitemap chars:", len(sitemap))
-              print("Hans in sitemap:", "2927434" in sitemap or "hans-williams" in sitemap.lower())
-              print("program URLs in sitemap:", len(re.findall(r'/programma/', sitemap, flags=re.I)))
-              pos = sitemap.lower().find("hans-williams")
-              if pos >= 0:
-                  print("Hans sitemap context:", sitemap[max(0,pos-300):pos+500])
-          except Exception as error:
-              print("sitemap error:", repr(error))
-          raise SystemExit("Paradiso discovery diagnostic complete")
-          PY
-
       - name: Run concert scraper
         run: python scraper.py
 
