@@ -42,6 +42,33 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
+      - name: Diagnose Paradiso discovery
+        run: |
+          python - <<'PY'
+          import re
+          from scrapers.common import download_page_retry
+
+          agenda = download_page_retry("https://www.paradiso.nl/landing/programma-in-tolhuistuin/689946")
+          print("agenda chars:", len(agenda))
+          print("Hans in agenda HTML:", "2927434" in agenda or "Hans Williams" in agenda)
+          for pattern in (r'href=["\\\']([^"\\\']+)["\\\']', r'https?://[^"\\\'<> ]+'):
+              matches = re.findall(pattern, agenda, flags=re.I)
+              candidates = [m for m in matches if any(x in m.lower() for x in ("page", "offset", "load", "api", "agenda"))]
+              print("pagination/API candidates:", candidates[-30:])
+
+          try:
+              sitemap = download_page_retry("https://www.paradiso.nl/sitemap.xml")
+              print("sitemap chars:", len(sitemap))
+              print("Hans in sitemap:", "2927434" in sitemap or "hans-williams" in sitemap.lower())
+              print("program URLs in sitemap:", len(re.findall(r'/programma/', sitemap, flags=re.I)))
+              pos = sitemap.lower().find("hans-williams")
+              if pos >= 0:
+                  print("Hans sitemap context:", sitemap[max(0,pos-300):pos+500])
+          except Exception as error:
+              print("sitemap error:", repr(error))
+          raise SystemExit("Paradiso discovery diagnostic complete")
+          PY
+
       - name: Run concert scraper
         run: python scraper.py
 
