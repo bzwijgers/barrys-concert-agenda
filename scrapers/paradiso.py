@@ -599,6 +599,50 @@ def paradiso_parse_event(
     }
 
 
+
+def paradiso_find_recent_sitemap_program_urls():
+    """Return all recently maintained Paradiso event pages from the official sitemap."""
+    sitemap_index = download_page_retry("https://www.paradiso.nl/sitemap.xml")
+    sitemap_urls = re.findall(
+        r"<loc>\s*(https://www\.paradiso\.nl/sitemap/event_\d+\.xml)\s*</loc>",
+        sitemap_index,
+        flags=re.IGNORECASE,
+    )
+    if not sitemap_urls:
+        raise RuntimeError("Paradiso sitemap-index bevat geen event-sitemaps")
+
+    cutoff = date(date.today().year, 1, 1).isoformat()
+    urls = []
+    seen = set()
+
+    for sitemap_url in sitemap_urls:
+        xml = download_page_retry(sitemap_url)
+        for block in re.findall(r"<url>(.*?)</url>", xml, flags=re.IGNORECASE | re.DOTALL):
+            loc_match = re.search(r"<loc>\s*(.*?)\s*</loc>", block, flags=re.IGNORECASE | re.DOTALL)
+            modified_match = re.search(r"<lastmod>\s*(.*?)\s*</lastmod>", block, flags=re.IGNORECASE | re.DOTALL)
+            if not loc_match:
+                continue
+
+            event_url = paradiso_decode_html(loc_match.group(1).strip())
+            modified = modified_match.group(1).strip() if modified_match else ""
+            if "/programma/" not in event_url:
+                continue
+            if modified and modified[:10] < cutoff:
+                continue
+
+            key = normalize_url(event_url)
+            if key not in seen:
+                seen.add(key)
+                urls.append(event_url)
+
+    if len(urls) < 500:
+        raise RuntimeError(
+            "Paradiso sitemap levert onverwacht weinig recente programma's: "
+            + str(len(urls))
+        )
+
+    return urls
+
 def scrape_paradiso():
     print()
     print(
@@ -609,52 +653,23 @@ def scrape_paradiso():
         "============================================================"
     )
 
-    program_urls = []
-    seen_program_urls = set()
-    source_by_url = {}
+    # De zichtbare concertagenda is begrensd op 100 items. Gebruik daarom
+    # Paradiso's officiële event-sitemaps als primaire ontdekking. Die bevatten
+    # ook programma's verder in de toekomst. De landingspagina's blijven als
+    # extra bron voor eventuele zojuist gepubliceerde items.
+    program_urls = paradiso_find_recent_sitemap_program_urls()
+    seen_program_urls = {normalize_url(url) for url in program_urls}
 
-    for agenda_index, agenda_url in enumerate(PARADISO_AGENDA_URLS):
-        agenda_source = "Tolhuistuin" if "programma-in-tolhuistuin" in agenda_url else "Paradiso"
-        found_here = []
-        last_agenda_error = None
-        for agenda_attempt in range(3):
-            try:
-                agenda_html = download_page_retry(agenda_url)
-                found_here = paradiso_find_program_urls(agenda_html)
-                if found_here:
-                    break
-                last_agenda_error = RuntimeError("agenda response bevat geen programmalinks")
-            except Exception as error:
-                last_agenda_error = error
-
-            if agenda_attempt < 2:
-                time.sleep(2.0 * (agenda_attempt + 1))
-
-        if not found_here:
-            print("Paradiso agenda fout:", agenda_url, "-", str(last_agenda_error))
-            continue
-
-        print(agenda_source + " agenda links:", len(found_here))
-
-        for event_url in found_here:
-            key = normalize_url(event_url)
-            # If an event occurs on both landing pages, the dedicated
-            # Tolhuistuin page wins over the general Paradiso page.
-            if agenda_source == "Tolhuistuin" or key not in source_by_url:
-                source_by_url[key] = agenda_source
-            if key not in seen_program_urls:
-                seen_program_urls.add(key)
-                program_urls.append(event_url)
-
-        missing_from_queue = [
-            event_url for event_url in found_here
-            if normalize_url(event_url) not in seen_program_urls
-        ]
-        if missing_from_queue:
-            raise RuntimeError(
-                "Paradiso agenda links niet in werklijst: "
-                + ", ".join(missing_from_queue[:5])
-            )
+    for agenda_url in PARADISO_AGENDA_URLS:
+        try:
+            agenda_html = download_page_retry(agenda_url)
+            for event_url in paradiso_find_program_urls(agenda_html):
+                key = normalize_url(event_url)
+                if key not in seen_program_urls:
+                    seen_program_urls.add(key)
+                    program_urls.append(event_url)
+        except Exception as error:
+            print("Paradiso aanvullende agenda fout:", agenda_url, "-", str(error))
 
     print(
         "Concertlinks gevonden:",
@@ -713,7 +728,7 @@ def scrape_paradiso():
         raise last_error
 
     with ThreadPoolExecutor(
-        max_workers=2
+        max_workers=8
     ) as executor:
 
         future_to_url = {
