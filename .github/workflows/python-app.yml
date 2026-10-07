@@ -46,28 +46,8 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
-      - name: Map current Paradiso events to sitemaps
-        run: |
-          python - <<'PY'
-          import json,re
-          from collections import Counter
-          from scrapers.common import download_page_retry
-          with open("concerts.json",encoding="utf-8") as f:
-              ids={x["url"].rstrip("/").split("/")[-1] for x in json.load(f) if "paradiso.nl/" in x.get("url","") and "/programma/" in x.get("url","")}
-          found={}
-          for n in range(1,33):
-              xml=download_page_retry(f"https://www.paradiso.nl/sitemap/event_{n}.xml")
-              locs=re.findall(r"<loc>(.*?)</loc>",xml,re.I)
-              for url in locs:
-                  eid=url.rstrip("/").split("/")[-1]
-                  if eid in ids: found[eid]=n
-          counts=Counter(found.values())
-          print("CURRENT_IDS",len(ids),"FOUND",len(found),"DISTRIBUTION",sorted(counts.items()))
-          print("UNFOUND",sorted(ids-set(found))[:30])
-          raise SystemExit("mapping complete")
-          PY
-
-
+      - name: Run concert scraper
+        run: python scraper.py
 
       - name: Check concerts.json
         run: |
