@@ -42,19 +42,31 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
-      - name: Test Paradiso month filters
+      - name: Test Paradiso discovery routes
         run: |
           python - <<'PY'
           from scrapers.common import download_page_retry
           from scrapers.paradiso import paradiso_find_program_urls
-          base = "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
-          for value in ("2026-10","2026-11","2026-12","2027-01","2027-02","2027-03","2027-04"):
-              for q in ("gteStartDateTime="+value, "gteStartDateTime="+value+"-01"):
-                  url = base + "?" + q
-                  html = download_page_retry(url)
+          routes = (
+              "/",
+              "/zoeken",
+              "/programma",
+              "/nl",
+              "/nl/zoeken",
+              "/nl/programma",
+              "/landing/popconcerten-in-paradiso/690539",
+              "/subbrand/indiestad/2048803",
+              "/subbrand/sugar-mountain/2048811",
+              "/subbrand/tones/2048840",
+          )
+          for route in routes:
+              try:
+                  html = download_page_retry("https://www.paradiso.nl"+route)
                   urls = paradiso_find_program_urls(html)
-                  print(q, len(urls), "mary", any("2926204" in u for u in urls), "friendly", any("2933529" in u for u in urls))
-          raise SystemExit("month filter diagnostic complete")
+                  print(route, len(urls), "mary", any("2926204" in u for u in urls), "friendly", any("2933529" in u for u in urls))
+              except Exception as e:
+                  print(route, "ERROR", repr(e))
+          raise SystemExit("route diagnostic complete")
           PY
 
       - name: Run concert scraper
