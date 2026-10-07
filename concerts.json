@@ -743,6 +743,16 @@
     "url": "https://www.paradiso.nl/nl/programma/babs/2892730"
   },
   {
+    "artist": "Songhoy Blues",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/songhoy-blues/2884193"
+  },
+  {
     "artist": "Sterre Weldring + Ze Zei",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -3619,16 +3629,6 @@
     "clubCard": true
   },
   {
-    "artist": "Ryan Beatty - Arms Over Armor Tour",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-28",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/ryan-beatty-arms-over-armor-tour/2892924"
-  },
-  {
     "artist": "Rabo Open Stage: innermotion",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -5783,12 +5783,12 @@
   },
   {
     "artist": "Sharp Pins",
-    "venue": "De Duif",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-09",
     "time": "20:30",
-    "source": "Paradiso",
+    "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/sharp-pins/2933525"
   },
   {
