@@ -157,6 +157,20 @@ def paradiso_html_to_text(html):
 
 
 def paradiso_extract_artist(html):
+    # De zichtbare H1 is de naam van het huidige programma en is
+    # betrouwbaarder dan de browser-title, die soms locatie/SEO-tekst bevat.
+    h1_match = re.search(
+        r"<h1[^>]*>(.*?)</h1>",
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if h1_match:
+        artist = paradiso_decode_html(
+            paradiso_strip_tags(h1_match.group(1))
+        ).strip()
+        if artist:
+            return artist
+
     title_match = re.search(
         r"<title[^>]*>(.*?)</title>",
         html,
@@ -191,23 +205,7 @@ def paradiso_extract_artist(html):
         if artist:
             return artist
 
-    h1_match = re.search(
-        r"<h1[^>]*>(.*?)</h1>",
-        html,
-        flags=re.IGNORECASE | re.DOTALL,
-    )
-
-    if not h1_match:
-        return ""
-
-    return (
-        paradiso_decode_html(
-            paradiso_strip_tags(
-                h1_match.group(1)
-            )
-        )
-        .strip()
-    )
+    return ""
 
 
 def paradiso_extract_venue(html):
