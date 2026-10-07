@@ -615,13 +615,25 @@ def scrape_paradiso():
 
     for agenda_index, agenda_url in enumerate(PARADISO_AGENDA_URLS):
         agenda_source = "Tolhuistuin" if "programma-in-tolhuistuin" in agenda_url else "Paradiso"
-        try:
-            agenda_html = download_page_retry(agenda_url)
-        except Exception as error:
-            print("Paradiso agenda fout:", agenda_url, "-", str(error))
+        found_here = []
+        last_agenda_error = None
+        for agenda_attempt in range(3):
+            try:
+                agenda_html = download_page_retry(agenda_url)
+                found_here = paradiso_find_program_urls(agenda_html)
+                if found_here:
+                    break
+                last_agenda_error = RuntimeError("agenda response bevat geen programmalinks")
+            except Exception as error:
+                last_agenda_error = error
+
+            if agenda_attempt < 2:
+                time.sleep(2.0 * (agenda_attempt + 1))
+
+        if not found_here:
+            print("Paradiso agenda fout:", agenda_url, "-", str(last_agenda_error))
             continue
 
-        found_here = paradiso_find_program_urls(agenda_html)
         print(agenda_source + " agenda links:", len(found_here))
 
         for event_url in found_here:
