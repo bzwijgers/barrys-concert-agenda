@@ -238,6 +238,72 @@ def paradiso_extract_venue(html):
 
     return "Paradiso"
 
+def paradiso_extract_primary_event_date_time(html):
+    # Paradiso detailpagina's bevatten onder het eigen evenement ook veel
+    # aanbevolen programma's. Beperk datum/tijd daarom tot het bovenste
+    # deel van de pagina, vóór de aanbevelingen.
+    main_html = html
+    cut_markers = (
+        'aria-label="Programma"',
+        '>Programma<',
+        '"relatedEvents"',
+        '"recommendations"',
+    )
+    cut_positions = [
+        main_html.lower().find(marker.lower())
+        for marker in cut_markers
+        if main_html.lower().find(marker.lower()) >= 0
+    ]
+    if cut_positions:
+        main_html = main_html[:min(cut_positions)]
+
+    text = paradiso_html_to_text(main_html)
+
+    # De zichtbare Paradiso-datum heeft vaak geen jaar. Gebruik het
+    # huidige/volgende kalenderjaar zoals elders in de scraper.
+    months = {
+        "januari": 1, "februari": 2, "maart": 3, "april": 4,
+        "mei": 5, "juni": 6, "juli": 7, "augustus": 8,
+        "september": 9, "oktober": 10, "november": 11, "december": 12,
+        "january": 1, "february": 2, "march": 3, "april": 4,
+        "may": 5, "june": 6, "july": 7, "august": 8,
+        "september": 9, "october": 10, "november": 11, "december": 12,
+    }
+    month_pattern = "|".join(months.keys())
+    date_match = re.search(
+        r"\\b(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|"
+        r"monday|tuesday|wednesday|thursday|friday|saturday|sunday)?\\s*"
+        r"(\\d{1,2})\\s+(" + month_pattern + r")\\b",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not date_match:
+        return None
+
+    day = int(date_match.group(1))
+    month = months[date_match.group(2).lower()]
+    today = date.today()
+    year = today.year
+    candidate = date(year, month, day)
+    if candidate < today - timedelta(days=7):
+        candidate = date(year + 1, month, day)
+
+    # Hoofdprogramma is leidend; zaal-open alleen als fallback.
+    time_match = re.search(
+        r"(?:Hoofdprogramma|Main program)\\s*:\\s*(\\d{1,2}:\\d{2})",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not time_match:
+        time_match = re.search(
+            r"(?:Zaal\\s+open|Doors)\\s*:\\s*(\\d{1,2}:\\d{2})",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+    return candidate.isoformat(), (time_match.group(1) if time_match else "")
+
+
 def paradiso_find_best_date_candidate(
     html,
     artist
@@ -461,6 +527,21 @@ def paradiso_parse_event(
 
     if not artist:
         return None
+
+    primary_date_time = paradiso_extract_primary_event_date_time(html)
+    if primary_date_time:
+        concert_date, concert_time = primary_date_time
+        venue = paradiso_extract_venue(html)
+        return {
+            "artist": artist,
+            "venue": venue,
+            "city": "Amsterdam",
+            "country": "NL",
+            "date": concert_date,
+            "time": concert_time,
+            "source": "Tolhuistuin" if venue == "Tolhuistuin" else "Paradiso",
+            "url": event_url,
+        }
 
     iso_date = (
         paradiso_find_best_date_candidate(
