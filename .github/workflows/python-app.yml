@@ -42,24 +42,26 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
-      - name: Count recent Paradiso sitemap events
+      - name: Check Paradiso sitemap freshness coverage
         run: |
           python - <<'PY'
-          import re
-          from scrapers.common import download_page_retry
-          rows = []
-          for n in range(1, 33):
-              xml = download_page_retry(f"https://www.paradiso.nl/sitemap/event_{n}.xml")
-              for block in re.findall(r"<url>(.*?)</url>", xml, re.I|re.S):
-                  murl = re.search(r"<loc>(.*?)</loc>", block, re.I|re.S)
-                  mmod = re.search(r"<lastmod>(.*?)</lastmod>", block, re.I|re.S)
-                  if murl:
-                      rows.append((murl.group(1).strip(), mmod.group(1).strip() if mmod else ""))
-          print("TOTAL", len(rows))
-          for cutoff in ("2025-01-01","2026-01-01","2026-04-01","2026-07-01"):
-              selected=[r for r in rows if r[1][:10] >= cutoff]
-              print("CUTOFF",cutoff,len(selected),"mary",any("2926204" in x[0] for x in selected),"friendly",any("2933529" in x[0] for x in selected))
-          raise SystemExit("count diagnostic complete")
+          import json,re
+          from scrapers.common import download_page_retry,normalize_url
+          with open("concerts.json",encoding="utf-8") as f:
+              current={normalize_url(x["url"]) for x in json.load(f) if "paradiso.nl/" in x.get("url","") and "/programma/" in x.get("url","")}
+          rows={}
+          for n in range(1,33):
+              xml=download_page_retry(f"https://www.paradiso.nl/sitemap/event_{n}.xml")
+              for block in re.findall(r"<url>(.*?)</url>",xml,re.I|re.S):
+                  u=re.search(r"<loc>(.*?)</loc>",block,re.I|re.S)
+                  m=re.search(r"<lastmod>(.*?)</lastmod>",block,re.I|re.S)
+                  if u: rows[normalize_url(u.group(1).strip())]=m.group(1).strip() if m else ""
+          dates=[rows[u] for u in current if u in rows]
+          print("CURRENT",len(current),"IN_SITEMAP",len(dates),"OLDEST_LASTMOD",min(dates) if dates else None)
+          for cutoff in ("2026-01-01","2026-04-01","2026-07-01"):
+              missed=[u for u in current if rows.get(u,"")[:10] < cutoff]
+              print("CUTOFF",cutoff,"MISSES_CURRENT",len(missed),missed[:10])
+          raise SystemExit("freshness diagnostic complete")
           PY
 
       - name: Run concert scraper
