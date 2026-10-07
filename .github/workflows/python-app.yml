@@ -72,6 +72,26 @@ jobs:
                   + repr(puscifer[0].get("artist"))
               )
 
+          paradiso_expected = {
+              "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321":
+                  ("30 Jaar Excelsior Recordings", "Tolhuistuin", "2026-12-27", "16:00"),
+              "https://www.paradiso.nl/nl/programma/honey-im-home/2841259":
+                  ("Honey I'm Home", "Tolhuistuin", "2026-12-30", "20:30"),
+              "https://www.paradiso.nl/nl/programma/fat-freddys-drop/2654360":
+                  ("Fat Freddy's Drop + DJ Logg Cabin", "Paradiso", "2026-10-12", "20:30"),
+          }
+          by_url = {item.get("url"): item for item in concerts}
+          for url, expected in paradiso_expected.items():
+              item = by_url.get(url)
+              if not item:
+                  raise SystemExit("Paradiso regression: missing " + url)
+              actual = (item.get("artist"), item.get("venue"), item.get("date"), item.get("time"))
+              if actual != expected:
+                  raise SystemExit(
+                      "Paradiso regression for " + url + ": "
+                      + repr(actual) + " != " + repr(expected)
+                  )
+
           if missing:
               raise SystemExit(
                   "Refusing to publish: no concerts found for " + ", ".join(missing)
