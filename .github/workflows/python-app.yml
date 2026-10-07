@@ -42,25 +42,13 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
-      - name: Inspect Paradiso current sitemap range
+      - name: Inspect Paradiso sitemap format
         run: |
           python - <<'PY'
-          import re
           from scrapers.common import download_page_retry
-          total_recent = 0
-          for n in range(1, 33):
-              xml = download_page_retry(f"https://www.paradiso.nl/sitemap/event_{n}.xml")
-              locs = re.findall(r"<loc>(.*?)</loc>", xml, re.I)
-              ids = []
-              for url in locs:
-                  m = re.search(r"/(\\d+)$", url)
-                  if m:
-                      ids.append(int(m.group(1)))
-              recent = [x for x in ids if x >= 2600000]
-              total_recent += len(recent)
-              print(n, len(ids), min(ids) if ids else None, max(ids) if ids else None, "recent", len(recent))
-          print("TOTAL_RECENT", total_recent)
-          raise SystemExit("range diagnostic complete")
+          xml = download_page_retry("https://www.paradiso.nl/sitemap/event_2.xml")
+          print(repr(xml[:5000]))
+          raise SystemExit("format diagnostic complete")
           PY
 
       - name: Run concert scraper
