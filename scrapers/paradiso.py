@@ -615,8 +615,12 @@ def paradiso_find_recent_sitemap_program_urls():
     urls = []
     seen = set()
 
-    for sitemap_url in sitemap_urls:
-        xml = download_page_retry(sitemap_url)
+    # De sitemap-index bestaat uit tientallen kleine event-sitemaps.
+    # Parallel ophalen voorkomt dat één trage sitemap de hele feed ophoudt.
+    with ThreadPoolExecutor(max_workers=8) as sitemap_executor:
+        sitemap_xmls = list(sitemap_executor.map(download_page_retry, sitemap_urls))
+
+    for xml in sitemap_xmls:
         for block in re.findall(r"<url>(.*?)</url>", xml, flags=re.IGNORECASE | re.DOTALL):
             loc_match = re.search(r"<loc>\s*(.*?)\s*</loc>", block, flags=re.IGNORECASE | re.DOTALL)
             modified_match = re.search(r"<lastmod>\s*(.*?)\s*</lastmod>", block, flags=re.IGNORECASE | re.DOTALL)
