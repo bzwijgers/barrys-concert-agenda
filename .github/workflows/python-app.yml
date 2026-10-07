@@ -47,15 +47,20 @@ jobs:
           python - <<'PY'
           import re
           from scrapers.common import download_page_retry
-          html = download_page_retry("https://www.paradiso.nl/landing/concertagenda-paradiso/2069817")
-          print("chars", len(html))
-          for needle in ("__NEXT_DATA__", "__APOLLO_STATE__", "api/", "graphql", "algolia", "programItems", "events", "pageSize", "limit"):
-              print("\nNEEDLE", needle)
-              for m in list(re.finditer(re.escape(needle), html, re.I))[:8]:
-                  print(html[max(0,m.start()-500):m.start()+1200].replace("\n"," ")[:1700])
+          base = "https://www.paradiso.nl"
+          html = download_page_retry(base + "/landing/concertagenda-paradiso/2069817")
           scripts = re.findall(r'<script[^>]+src=["\\\']([^"\\\']+)["\\\']', html, re.I)
-          print("\nSCRIPTS", scripts[-30:])
-          raise SystemExit("Paradiso source discovery complete")
+          for src in scripts:
+              try:
+                  js = download_page_retry(base + src)
+              except Exception:
+                  continue
+              if any(x in js for x in ("gteStartDateTime","pageSize","take:","limit:","Programme","program")):
+                  print("\nCHUNK", src, "chars", len(js))
+                  for needle in ("gteStartDateTime","pageSize","take:", "limit:", "/api/", "graphql", "searchParams"):
+                      for m in list(re.finditer(re.escape(needle), js, re.I))[:10]:
+                          print("MATCH", needle, js[max(0,m.start()-800):m.start()+1800][:2600])
+          raise SystemExit("Paradiso JS discovery complete")
           PY
 
       - name: Run concert scraper
