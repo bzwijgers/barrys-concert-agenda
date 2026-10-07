@@ -624,6 +624,12 @@ def paradiso_find_recent_sitemap_program_urls():
                 continue
 
             event_url = paradiso_decode_html(loc_match.group(1).strip())
+            if event_url.startswith("https://www.paradiso.nl/programma/"):
+                event_url = event_url.replace(
+                    "https://www.paradiso.nl/programma/",
+                    "https://www.paradiso.nl/nl/programma/",
+                    1,
+                )
             modified = modified_match.group(1).strip() if modified_match else ""
             if "/programma/" not in event_url:
                 continue
