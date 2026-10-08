@@ -1,4 +1,5 @@
 from .common import *
+from .common import _detail_title, _detail_date_time
 
 GEBOUW_T_AGENDA_URL = "https://gebouw-t.nl/agenda/"
 GEBOUW_T_BASE_URL = "https://gebouw-t.nl"
@@ -40,14 +41,14 @@ def gebouw_t_parse_event(page, event_url):
             "jan": 1, "feb": 2, "mrt": 3, "apr": 4, "mei": 5, "jun": 6,
             "jul": 7, "aug": 8, "sep": 9, "okt": 10, "nov": 11, "dec": 12,
         }
-        date_match = re.search(r"\\b(?:ma|di|wo|do|vr|za|zo)\\s+(\\d{1,2})\\s+(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)[a-z]*\\s+[’']?(\\d{2}|20\\d{2})\\b", text, flags=re.I)
+        date_match = re.search(r"\b(?:ma|di|wo|do|vr|za|zo)\s+(\d{1,2})\s+(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)[a-z]*\s+[’']?(\d{2}|20\d{2})\b", text, flags=re.I)
         if date_match:
             day = int(date_match.group(1))
             month = months[date_match.group(2).lower()[:3]]
             raw_year = int(date_match.group(3))
             year = raw_year if raw_year >= 2000 else 2000 + raw_year
             event_date = date(year, month, day).isoformat()
-        time_match = re.search(r"(?:aanvang|tijd)\\s*:?\\s*(\\d{1,2}[:.]\\d{2})", text, flags=re.I)
+        time_match = re.search(r"(?:aanvang|tijd)\s*:?\s*(\d{1,2}[:.]\d{2})", text, flags=re.I)
         if time_match:
             event_time = time_match.group(1).replace(".", ":")
     if not event_date:
