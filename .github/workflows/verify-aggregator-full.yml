@@ -1,0 +1,21 @@
+name: Verify full Amare Bolwerk concert programme
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "audit/parse_aggregator.py"
+      - ".github/workflows/verify-aggregator-full.yml"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify complete Amare and Bolwerk concert records
+        run: python -u audit/parse_aggregator.py
