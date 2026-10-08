@@ -26,5 +26,7 @@ for name,city,url in urls:
             for term in ("rave","afrobeats","fanparty","disco","clubnacht","nachtclub","clubnight"):
                 for m in list(re.finditer(term,html,re.I))[:2]:
                     print("FILTER FOUND",term,"CONTEXT",html[max(0,m.start()-100):m.end()+110],flush=True)
+    except AssertionError:
+        raise
     except Exception as e:
         print("ERROR",url,repr(e),flush=True)
