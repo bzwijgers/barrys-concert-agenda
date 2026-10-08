@@ -365,7 +365,7 @@ def scrape_venue(name, maximum=500):
         # Load every page and compare discovered event URLs with its own
         # total_rows count. Never silently publish the first 30 only.
         pager = re.search(
-            r'"pager":\\s*\\{[^}]*"total_rows":\\s*(\\d+)[^}]*"total_pages":\\s*(\\d+)',
+            r'"pager":\s*\{[^}]*"total_rows":\s*(\d+)[^}]*"total_pages":\s*(\d+)',
             html,
         )
         if not pager:
