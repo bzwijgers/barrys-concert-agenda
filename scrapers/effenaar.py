@@ -1,4 +1,5 @@
 from .common import *
+from .common import _detail_title, _detail_date_time
 
 # ============================================================
 # EFFENAAR
@@ -277,6 +278,51 @@ def scrape_effenaar():
                 "url": detail_url,
             }
         )
+
+    # Audit the official agenda's *all* detail anchors, not only links with
+    # exactly class="agenda-card". Effenaar sometimes publishes real shows
+    # before the card extractor recognizes them (Alpha Wolf, John Illsley).
+    # Only supplement links absent from card detection; do not reintroduce
+    # cancelled entries that the card filter intentionally removed.
+    card_urls = {
+        normalize_url(EFFENAAR_BASE_URL + m.group(1))
+        for m in matches
+    }
+    all_agenda_urls = find_site_event_urls(
+        page, EFFENAAR_BASE_URL, "/agenda/"
+    )
+    missing_card_urls = [
+        url for url in all_agenda_urls
+        if normalize_url(url) not in card_urls
+        and re.fullmatch(
+            r"https://www\\.effenaar\\.nl/agenda/[^/]+/?", url, flags=re.I
+        )
+        and not url.rstrip("/").endswith("/archief")
+    ]
+    print("Effenaar official links not matched as agenda cards:",
+          len(missing_card_urls), flush=True)
+    for event_url in missing_card_urls:
+        try:
+            detail = download_page_retry(event_url, attempts=2)
+            title = _detail_title(detail).strip()
+            event_date, event_time = _detail_date_time(detail)
+            if not title or not event_date:
+                continue
+            if date.fromisoformat(event_date) < date.today():
+                continue
+            if re.search(r"\\b(afgelast|geannuleerd|cancelled)\\b", title, re.I):
+                continue
+            base_concerts.append({
+                "artist": title, "venue": "Effenaar",
+                "city": "Eindhoven", "country": "NL",
+                "date": event_date, "time": event_time,
+                "source": "Effenaar", "url": event_url.rstrip("/")
+            })
+            print("Effenaar recovered official agenda concert:",
+                  title, event_date, flush=True)
+        except Exception as error:
+            print("Effenaar supplemental event not processed:",
+                  event_url, str(error), flush=True)
 
     times_found = 0
     times_missing = 0
