@@ -46,5 +46,19 @@ class ParadisoParserTests(unittest.TestCase):
             (result["artist"], result["venue"], result["source"], result["date"], result["time"]),
         )
 
+
+    def test_songhoy_blues_not_lost(self):
+        html = """<html><head><title>Songhoy Blues | Paradiso</title></head><body>
+        <h1>Songhoy Blues</h1><div>zaterdag 10 oktober 2026</div>
+        <div>In Tolhuistuin - Club</div>
+        <div>Zaal open: 19:30, Hoofdprogramma: 20:30</div></body></html>"""
+        result = paradiso_parse_event(
+            html, "https://www.paradiso.nl/nl/programma/songhoy-blues/2884193"
+        )
+        self.assertEqual(
+            ("Songhoy Blues", "Tolhuistuin", "2026-10-10", "20:30"),
+            (result["artist"], result["venue"], result["date"], result["time"]),
+        )
+
 if __name__ == "__main__":
     unittest.main()
