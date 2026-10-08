@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "audit/publish_bibelot_pul.py"
+      - "scrapers/new_venues.py"
       - ".github/workflows/publish-bibelot-pul.yml"
 
 permissions:
