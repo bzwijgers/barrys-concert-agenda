@@ -611,10 +611,12 @@ def paradiso_find_recent_sitemap_program_urls():
     if not sitemap_urls:
         raise RuntimeError("Paradiso sitemap-index bevat geen event-sitemaps")
 
-    # Gebruik geen lastmod-cutoff. Een toekomstig concert kan maanden eerder
-    # zijn aangemaakt en daarna niet meer gewijzigd zijn. De detailparser
-    # filtert later betrouwbaar op de daadwerkelijke concertdatum.
-    cutoff = ""
+    # Dagelijkse ontdekking: recent gewijzigde eventpagina's plus ALLE
+    # toekomstige evenementen uit de vorige gepubliceerde feed (verderop).
+    # Daardoor hoeven duizenden historische URL's niet dagelijks opnieuw
+    # te worden gedownload. Ook alle sitemapitems zonder lastmod blijven
+    # meegenomen: die kunnen we niet op ouderdom filteren.
+    cutoff = (date.today() - timedelta(days=180)).isoformat()
     urls = []
     seen = set()
 
@@ -640,15 +642,19 @@ def paradiso_find_recent_sitemap_program_urls():
             modified = modified_match.group(1).strip() if modified_match else ""
             if "/programma/" not in event_url:
                 continue
-            # lastmod zegt wanneer de webpagina gewijzigd is, niet wanneer
-            # het concert plaatsvindt. Daarom hier niet op lastmod filteren.
+            # Dit filter geldt alleen voor nieuwe sitemap-discovery.
+            # Oude toekomstige shows komen altijd alsnog via de vorige
+            # feed terug, ongeacht hun lastmod.
+            if modified and modified[:10] < cutoff:
+                continue
 
             key = normalize_url(event_url)
             if key not in seen:
                 seen.add(key)
                 urls.append(event_url)
 
-    if len(urls) < 500:
+    print("Paradiso recente sitemaplinks:", len(urls), "sinds", cutoff)
+    if len(urls) < 25:
         raise RuntimeError(
             "Paradiso sitemap levert onverwacht weinig recente programma's: "
             + str(len(urls))
