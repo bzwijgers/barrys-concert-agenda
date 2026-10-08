@@ -1,0 +1,46 @@
+name: Verify Bibelot and De Pul full agendas
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scrapers/new_venues.py"
+      - ".github/workflows/verify-bibelot-depul.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - venue: Bibelot
+            minimum: 30
+          - venue: De Pul
+            minimum: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify official full agenda
+        env:
+          VENUE: ${{ matrix.venue }}
+          MINIMUM: ${{ matrix.minimum }}
+        run: |
+          python - <<'PY'
+          import os
+          from scrapers.new_venues import scrape_venue
+          name = os.environ["VENUE"]
+          minimum = int(os.environ["MINIMUM"])
+          rows = scrape_venue(name)
+          print("FULL VENUE RESULT:", name, len(rows), "minimum:", minimum, flush=True)
+          for event in rows[:5]:
+              print("SAMPLE:", event, flush=True)
+          assert len(rows) >= minimum, f"{name}: only {len(rows)} validated concerts"
+          PY
