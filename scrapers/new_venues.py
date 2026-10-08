@@ -253,6 +253,35 @@ def scrape_venue(name, maximum=500):
     agenda, prefix,city=VENUES[name]
     html=download_page_retry(agenda,attempts=2)
     found=discover(html,agenda,prefix)
+    if name=="Neushoorn":
+        # Webflow renders a maximum of 100 events per collection page.
+        # Its next-page link uses a collection-specific query name rather
+        # than the generic ?page=2 parameter.
+        match=re.search(r'href=["\\\']\\?([A-Za-z0-9]+_page)=2["\\\']',html,re.I)
+        if len(found)>=100 and not match:
+            raise RuntimeError("Neushoorn lists 100 events but its pagination key was not found")
+        if match:
+            key_name=match.group(1)
+            found_keys={normalize_url(url) for url in found}
+            for page_number in range(2, 30):
+                next_url=agenda.split("?",1)[0]+"?"+key_name+"="+str(page_number)
+                html_page=download_page_retry(next_url,attempts=2)
+                page_links=discover(html_page,agenda,prefix)
+                additions=0
+                for event_url in page_links:
+                    key=normalize_url(event_url)
+                    if key not in found_keys:
+                        found.append(event_url)
+                        found_keys.add(key)
+                        additions+=1
+                print("Neushoorn Webflow page:",page_number,
+                      "page links:",len(page_links),"new:",additions,flush=True)
+                if not page_links or additions==0:
+                    break
+                if len(page_links)<100:
+                    break
+            else:
+                raise RuntimeError("Neushoorn pagination limit reached before agenda end")
     if name=="Metropool":
         # The agenda HTML contains only the first ten entries. Its own
         # infinite-scroll code calls /mvc/event/partial?pNumber=N.
