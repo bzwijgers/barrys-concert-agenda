@@ -1,9 +1,10 @@
-name: Android build
+name: Android build (V2 preview)
 
 on:
   push:
     branches:
       - main
+      - preview/agenda-v2
     paths:
       - "app/**"
       - "build.gradle.kts"
@@ -62,6 +63,6 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: barrys-concert-agenda-debug
+          name: barrys-concert-agenda-v2-preview-debug
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
