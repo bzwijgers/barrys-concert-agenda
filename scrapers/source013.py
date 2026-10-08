@@ -327,11 +327,22 @@ def scrape_013():
             + str(error)
         )
 
-    program_urls = (
-        source013_find_program_urls(
-            program_html
-        )
-    )
+    program_urls = source013_find_program_urls(program_html)
+
+    # 013 levert incidenteel een lege agenda ondanks HTTP 200.
+    # Probeer de ongefilterde agenda opnieuw met cache-busting.
+    if len(program_urls) < 25:
+        for suffix in ("?view=all", "?_concert_retry=1", "/?view=all"):
+            try:
+                retry_html = download_page_retry(SOURCE013_URL + suffix)
+                retry_urls = source013_find_program_urls(retry_html)
+                if len(retry_urls) > len(program_urls):
+                    program_urls = retry_urls
+                if len(program_urls) >= 25:
+                    break
+            except Exception as error:
+                print("013 agenda retry fout:", str(error))
+
 
     print(
         "Programma-links gevonden:",
