@@ -468,7 +468,7 @@ def paradiso_extract_visible_time(html):
     )
 
     main_program_match = re.search(
-        r"Hoofdprogramma\s*:\s*"
+        r"(?:Hoofdprogramma|Main program(?:me)?)\s*:\s*"
         r"(\d{1,2}:\d{2})",
         text,
         flags=re.IGNORECASE,
@@ -478,7 +478,7 @@ def paradiso_extract_visible_time(html):
         return main_program_match.group(1)
 
     doors_match = re.search(
-        r"Zaal\s+open\s*:\s*"
+        r"(?:Zaal\s+open|Doors)\s*:\s*"
         r"(\d{1,2}:\d{2})",
         text,
         flags=re.IGNORECASE,
