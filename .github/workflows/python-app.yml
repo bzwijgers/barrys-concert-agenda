@@ -76,6 +76,14 @@ jobs:
                   + repr(puscifer[0].get("artist"))
               )
 
+          paradiso_total = counts["Paradiso"] + counts["Tolhuistuin"]
+          if paradiso_total < 400:
+              raise SystemExit(
+                  "Paradiso completeness regression: only "
+                  + str(paradiso_total)
+                  + " future Paradiso/Tolhuistuin concerts found"
+              )
+
           paradiso_expected = {
               "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321":
                   ("30 Jaar Excelsior Recordings", "Tolhuistuin", "2026-12-27", "16:00"),
