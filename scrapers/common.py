@@ -379,6 +379,10 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
                                 int(slug_date.group(2)),
                                 int(slug_date.group(1)),
                             )
+                            # Never inherit the time from a different,
+                            # historical structured-data record.
+                            if event_date != candidate.isoformat():
+                                event_time = ""
                             event_date = candidate.isoformat()
                         except ValueError:
                             pass
