@@ -11,6 +11,7 @@ from scrapers.tolhuistuin import scrape_tolhuistuin
 from scrapers.gebouw_t import scrape_gebouw_t
 from scrapers.dbs import scrape_dbs
 from scrapers.ticketswap import enrich_ticketswap_urls
+from scrapers.new_venues import scrape_new_venues
 
 
 # ============================================================
@@ -190,6 +191,18 @@ try:
     )
 except Exception as error:
     print("ERNSTIGE dB's FOUT:", str(error))
+
+
+# ============================================================
+# EXTRA POPPODIA - OFFICIELE AGENDA'S
+# ============================================================
+# Iedere nieuwe bron rapporteert afzonderlijk fouten en aantallen.
+try:
+    additional_concerts = scrape_new_venues()
+    all_concerts.extend(additional_concerts)
+    print("Nieuwe podia samen:", len(additional_concerts), flush=True)
+except Exception as error:
+    print("ERNSTIGE FOUT NIEUWE PODIA:", repr(error), flush=True)
 
 
 # ============================================================
