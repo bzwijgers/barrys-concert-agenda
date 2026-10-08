@@ -253,6 +253,22 @@ all_concerts = list(
     unique_concerts.values()
 )
 
+# Never publish obvious parser placeholders or internal test events.
+# These can otherwise survive indefinitely through previous-feed recovery.
+invalid_labels = {"paradiso programme", "test"}
+removed_invalid = [
+    event for event in all_concerts
+    if event.get("artist", "").strip().casefold() in invalid_labels
+]
+if removed_invalid:
+    print("Removed placeholder/test records:",
+          [(event["source"], event["artist"], event["url"])
+           for event in removed_invalid], flush=True)
+all_concerts = [
+    event for event in all_concerts
+    if event.get("artist", "").strip().casefold() not in invalid_labels
+]
+
 
 # ============================================================
 # TICKETSWAP - ALLEEN EXACTE EVENTLINKS
