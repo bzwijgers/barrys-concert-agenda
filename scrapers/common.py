@@ -506,13 +506,42 @@ def scrape_tivolivredenburg():
     )
     urls = []
     seen = set()
+    # The official Tivoli agenda paginates every genre in sets of about
+    # twenty events. The previous implementation loaded page 1 only.
     for genre in genres:
-        page = download_page_retry(base + "/agenda?sf_genre=" + genre)
-        for url in find_site_event_urls(page, base, "/agenda/"):
-            key = normalize_url(url)
-            if key not in seen:
-                seen.add(key)
-                urls.append(url)
+        genre_found = 0
+        for page_number in range(1, 45):
+            agenda_url = (
+                base + "/agenda?sf_genre=" + genre if page_number == 1
+                else base + "/agenda/page/" + str(page_number)
+                + "/?sf_genre=" + genre
+            )
+            page = download_page_retry(agenda_url, attempts=3)
+            # Event detail URLs have a numeric event ID after /agenda/.
+            # The /agenda/page/N/ pagination links are not actual events.
+            page_urls = [
+                url for url in find_site_event_urls(page, base, "/agenda/")
+                if re.search(r"/agenda/\\d+/", url)
+            ]
+            if page_number == 1 and not page_urls:
+                raise RuntimeError("Tivoli genre " + genre + " returned no event URLs")
+            for url in page_urls:
+                key = normalize_url(url)
+                if key not in seen:
+                    seen.add(key)
+                    urls.append(url)
+                    genre_found += 1
+            next_pattern = (
+                r"/agenda/page/" + str(page_number + 1)
+                + r"/\\?sf_genre=" + re.escape(genre) + r"(?:[&\\\"'<>]|$)"
+            )
+            has_next = bool(re.search(next_pattern, page, flags=re.I))
+            if not has_next:
+                break
+        else:
+            raise RuntimeError("Tivoli genre " + genre + " pagination exceeded 44 pages")
+        print("Tivoli", genre, "pages:", page_number,
+              "new unique events:", genre_found, flush=True)
     print("TivoliVredenburg niet-klassieke links gevonden:", len(urls))
     return scrape_detail_events(
         urls,
