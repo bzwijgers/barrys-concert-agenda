@@ -1002,7 +1002,7 @@ def scrape_paradiso():
                 unique[key] = old_item
                 retained_count += 1
         except HTTPError as error:
-            if error.code in (404, 410):
+            if error.code in (404, 410) and key not in mandatory_keys:
                 print("Paradiso definitief verwijderd:", url, error.code)
             else:
                 unique[key] = old_item
