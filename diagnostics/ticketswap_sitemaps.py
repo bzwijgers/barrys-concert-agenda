@@ -16,7 +16,7 @@ for host in ("https://www.ticketswap.com", "https://www.ticketswap.nl"):
                 else:
                     urls=re.findall(r"<loc>(.*?)</loc>",raw,re.I)
                     print("SITEMAP URLS",len(urls),"sample",urls[:25],flush=True)
-                    event_sitemaps = [link for link in urls if re.search(r"/sitemap/event_\\d+\\.xml", link)]
+                    event_sitemaps = [link for link in urls if re.search(r"/sitemap/event_\d+\.xml", link)]
                     print("EVENT_SITEMAPS",len(event_sitemaps),flush=True)
                     if host.endswith(".com") and event_sitemaps:
                         for sample_url in [event_sitemaps[0], event_sitemaps[-1]]:
