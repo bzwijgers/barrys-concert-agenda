@@ -1110,6 +1110,11 @@ fun ConcertApp() {
                                             }
                                         }
                                     }
+                                    Text("Nieuwe zalen in voorbereiding", fontWeight = FontWeight.Bold)
+                                    Text("Bibelot — Dordrecht")
+                                    Text("De Bosuil — Weert")
+                                    Text("De Pul — Uden")
+                                    Text("Deze drie podia verschijnen in de agenda zodra het volledige concertprogramma betrouwbaar wordt opgehaald.", style = MaterialTheme.typography.bodySmall)
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
