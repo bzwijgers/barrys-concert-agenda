@@ -1,0 +1,23 @@
+name: Probe missing venues
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "diagnostics/legacy_venue_probe.py"
+      - ".github/workflows/legacy-venue-probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -u diagnostics/legacy_venue_probe.py
