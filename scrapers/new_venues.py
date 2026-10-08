@@ -385,7 +385,7 @@ def scrape_venue(name, maximum=500):
             if not isinstance(output, str):
                 raise RuntimeError("De Pul API: invalid event HTML")
             cards = len(re.findall(
-                r'class=["\\x27][^"\\x27]*\\bagenda-event--actual-event\\b',
+                r"""class=["'][^"']*\\bagenda-event--actual-event\\b""",
                 output, flags=re.I,
             ))
             links = discover(output, agenda, prefix)
