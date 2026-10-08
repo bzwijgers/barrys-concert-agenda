@@ -39,7 +39,15 @@ internal object TicketSwapSearch {
         val artist = tokens(concert.artist)
         if (artist.isEmpty()) return false
         if (artist.intersect(words).size < maxOf(1, (artist.size + 1) / 2)) return false
+        val cityAlternatives = when (concert.city.lowercase(Locale.ROOT)) {
+            "den haag", "'s-gravenhage", "s-gravenhage" -> setOf("the", "hague")
+            "antwerpen" -> setOf("antwerp")
+            "brussel", "bruxelles" -> setOf("brussels")
+            "gent" -> setOf("ghent")
+            else -> emptySet()
+        }
         return tokens(concert.city).intersect(words).isNotEmpty() ||
+            cityAlternatives.intersect(words).isNotEmpty() ||
             tokens(concert.venue).intersect(words).isNotEmpty()
     }
 
