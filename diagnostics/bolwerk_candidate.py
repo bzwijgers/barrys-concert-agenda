@@ -4,7 +4,7 @@ from urllib.request import Request,urlopen
 import json,re
 URLS={
 "Bolwerk":"https://www.podiuminfo.nl/podium/44/concerten/Het-Bolwerk/Sneek/",
-"Amare":"https://www.podiuminfo.nl/podium/4984/concerten/Amare/Den-Haag/",
+"Amare":"https://www.podiuminfo.nl/podium/5334/concerten/Amare/Den-Haag/",
 }
 for name,url in URLS.items():
  try:
