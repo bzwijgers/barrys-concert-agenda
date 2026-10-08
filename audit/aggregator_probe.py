@@ -38,6 +38,20 @@ for name,(url,venue,city) in all_sources:
         print("RAW LENGTH",len(html),"SCRIPTS",len(scripts),"TYPES",dict(types),
               "LOCATION COUNTS",dict(loc),"EVENT COUNT",len(music),flush=True)
         print("SAMPLES",music[:28],"LAST",music[-12:],flush=True)
+        links=re.findall(r'<a\b[^>]*href=["\x27]([^"\x27]+)["\x27]',html,re.I)
+        concert_links=[s for s in links if "/concert/" in s.lower()]
+        unique_concerts=list(dict.fromkeys(concert_links))
+        print("CONCERT HREFS",len(unique_concerts),"FIRST",unique_concerts[:12],
+              "LAST",unique_concerts[-12:],flush=True)
+        for term in ("dewolff","steve vai","haevn","teenage fanclub","ana popovic","Rufus Wainwright"):
+            match=re.search(re.escape(term),html,re.I)
+            if match:
+                excerpt=re.sub(r"\s+"," ",html[max(0,match.start()-450):match.end()+550])
+                print("EXCERPT",term,excerpt[:980],flush=True)
+        for p in ('page=', '?page=', 'pagina=', 'start=', 'offset=', '/concertagenda/podium/', 'data-page'):
+            print("PAGINATOR",p,[re.sub(r"\s+"," ",html[max(0,m.start()-60):m.end()+95])[:190]
+                    for m in list(re.finditer(re.escape(p),html,re.I))[:5]],flush=True)
+
         print("PAGING MARKERS",[(s,len(re.findall(s,html,re.I))) for s in
               ("page=2","/page/2","volgende","pagination","more","next","load")],flush=True)
     except Exception as error:
