@@ -1,0 +1,21 @@
+name: Audit TicketSwap missing favorites
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "audit/ticketswap_match_audit.py"
+      - ".github/workflows/ticketswap-coverage-audit.yml"
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: PYTHONPATH=. python -u -m audit.publish_ticketswap_sitemaps collect
+      - run: PYTHONPATH=. python -u -m audit.ticketswap_match_audit
