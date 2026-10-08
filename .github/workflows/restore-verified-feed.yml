@@ -1,0 +1,66 @@
+name: Recover verified concerts feed
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/restore-verified-feed.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download validated concerts artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p recovered
+          gh run download 37758957654 --repo "${{ github.repository }}" --name concerts-json --dir recovered
+          test -s recovered/concerts.json
+
+      - name: Check source count and mandatory Paradiso entries
+        run: |
+          python - <<'PY'
+          import json
+          with open("recovered/concerts.json", encoding="utf-8") as f:
+              updated = json.load(f)
+          with open("concerts.json", encoding="utf-8") as f:
+              previous = json.load(f)
+          if len(updated) < max(500, int(len(previous) * .90)):
+              raise SystemExit("Recover feed lost too many existing events")
+          by_url = {x["url"].rstrip("/").lower(): x for x in updated}
+          for slug, expected_date in (
+              ("songhoy-blues/2884193", "2026-10-10"),
+              ("this-is-the-kit/2931706", "2027-05-07"),
+              ("30-jaar-excelsior-recordings/2902321", "2026-12-27"),
+          ):
+              matches = [x for u, x in by_url.items() if u.endswith(slug)]
+              if len(matches) != 1 or matches[0]["date"] != expected_date:
+                  raise SystemExit("Paradiso verification failed: " + slug)
+          print("Validated concerts:", len(updated), "previous:", len(previous))
+          PY
+
+      - name: Publish validated feed without a merge conflict
+        run: |
+          cp recovered/concerts.json /tmp/validated-concerts.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/validated-concerts.json concerts.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add concerts.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish validated concert agenda (1784 concerts)"
+            git push origin HEAD:main
+          fi
