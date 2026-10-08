@@ -105,17 +105,29 @@ def download_page_retry(
     url,
     attempts=3
 ):
+    """Retry HTTP errors AND empty 200 responses.
+
+    Paradiso occasionally returns HTTP 200 with zero bytes, which must not
+    be mistaken for a successful event page. A cache-busted retry avoids
+    receiving the same empty CDN response repeatedly.
+    """
     last_error = None
 
     for attempt in range(attempts):
+        retry_url = url
+        if attempt:
+            separator = "&" if "?" in url else "?"
+            retry_url = url + separator + "_bca_retry=" + str(int(time.time())) + "-" + str(attempt)
         try:
-            return download_page(url)
+            page = download_page(retry_url)
+            if not page or not page.strip():
+                raise ValueError("Lege HTML-response ontvangen voor " + url)
+            return page
 
         except Exception as error:
             last_error = error
-
             if attempt < attempts - 1:
-                time.sleep(1)
+                time.sleep(1 + attempt)
 
     raise last_error
 
