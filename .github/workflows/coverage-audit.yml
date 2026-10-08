@@ -19,6 +19,8 @@ jobs:
           python-version: "3.12"
       - name: Compare official listings with published concerts.json
         run: python -u audit/coverage.py
+      - name: Probe missing concert details and pagination
+        run: python -u audit/targeted_probe.py
       - name: Upload coverage diagnostics
         if: always()
         uses: actions/upload-artifact@v4
