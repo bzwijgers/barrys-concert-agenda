@@ -23,6 +23,8 @@ jobs:
             minimum: 30
           - venue: De Pul
             minimum: 25
+          - venue: Klokgebouw
+            minimum: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
