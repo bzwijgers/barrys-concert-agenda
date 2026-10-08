@@ -41,6 +41,8 @@ class VenueCoverageTests(unittest.TestCase):
                         + "".join(f'<a href="/events/band-{x}">show</a>' for x in range(100)))
             if url==base+"?d9baa62c_page=2":
                 return "".join(f'<a href="/events/band-{x}">show</a>' for x in range(100,125))
+            if "/events/band-" in url:
+                return "<html>Mock event</html>"
             raise AssertionError("Unexpected url: "+url)
         download.side_effect=fake_html
         def fake_parse(html,url,name,city):
