@@ -17,5 +17,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Test production Amare Bolwerk parser
+        run: python -m unittest discover -s tests -p "test_podiuminfo_full.py" -v
+      - name: Fetch full production Amare Bolwerk sources
+        run: |
+          python -u - <<'PY'
+          from scrapers.podiuminfo_full import scrape_full_podiuminfo_source
+          for source in ("Amare","Bolwerk"):
+              events=scrape_full_podiuminfo_source(source)
+              print(source,"FULL PRODUCTION EVENTS",len(events))
+              for item in events[:6]:
+                  print(item["date"],item["artist"],item["url"])
+          PY
       - name: Verify complete Amare and Bolwerk concert records
         run: python -u audit/parse_aggregator.py
