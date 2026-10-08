@@ -1,0 +1,28 @@
+name: Audit concert venue completeness
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "audit/**"
+      - ".github/workflows/coverage-audit.yml"
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare official listings with published concerts.json
+        run: python -u audit/coverage.py
+      - name: Upload coverage diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: venue-coverage-audit
+          path: diagnostics/output/coverage.json
+          if-no-files-found: ignore
