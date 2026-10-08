@@ -18,6 +18,8 @@ def main():
     for e in night_concerts:
         print("INCORRECT CLUB EVENT:",e["artist"],e["date"],e["url"],flush=True)
     print("HEDON NIGHTS INCORRECTLY INCLUDED:",len(night_concerts),flush=True)
+    if night_concerts:
+        raise RuntimeError("Published concert feed contains official Hedon Nights events")
 
 if __name__=="__main__":
     main()
