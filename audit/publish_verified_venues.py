@@ -42,6 +42,19 @@ def update():
     if not any("slodde" in x["artist"].casefold() for x in new["Patronaat"]):
         raise RuntimeError("Required Patronaat concert SlodDe still absent")
     all_new=[x for group in new.values() for x in group]
+    # Preserve existing confirmed TicketSwap event links for replaced sources.
+    # Never strip them when updating Amare, Bolwerk or Patronaat.
+    prior_links = {
+        (norm(item["url"]), item.get("date", "")): item["ticketSwapUrl"]
+        for item in published if item.get("ticketSwapUrl")
+    }
+    restored = 0
+    for item in all_new:
+        key = (norm(item["url"]), item.get("date", ""))
+        if key in prior_links:
+            item["ticketSwapUrl"] = prior_links[key]
+            restored += 1
+    print("TARGETED VENUES TicketSwap links preserved:", restored, flush=True)
 
     def inappropriate(e):
         if e.get("source")=="TivoliVredenburg":
