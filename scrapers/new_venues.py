@@ -150,57 +150,49 @@ def main_time(text):
     return ""
 
 def hedon_primary_date_time(html, today=None):
-    """Read the event's own <dt>Datum</dt> block, not recommendation cards.
-
-    Hedon's primary date omits its year but prints the weekday. The weekday
-    lets us distinguish e.g. Fri 1 Oct 2027 from Thu 1 Oct 2026.
-    """
+    """Parse the event's own date block, not dates from recommendations."""
     today = today or date.today()
+
     def detail(label):
         pattern = (
-            r"<dt[^>]*>\\s*" + re.escape(label) + r"\\s*</dt>\\s*"
-            r"<dd[^>]*>(.*?)</dd>"
+            r"<dt[^>]*>\s*" + re.escape(label)
+            + r"\s*</dt>\s*<dd[^>]*>(.*?)</dd>"
         )
-        match = re.search(pattern, html, re.I | re.S)
+        match = re.search(pattern, html, flags=re.I | re.S)
         return page_text(match.group(1)) if match else ""
 
-    raw_day = detail("Datum")
+    raw_date = detail("Datum")
     match = re.search(
-        r"\\b(ma|di|wo|do|vr|za|zo)\\s+(\\d{1,2})\\s+"
+        r"\b(ma|di|wo|do|vr|za|zo)\s+(\d{1,2})\s+"
         r"(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)",
-        raw_day, re.I
+        raw_date, flags=re.I,
     )
-    # The final optional word boundary above is deliberately not required:
-    # the month is commonly followed by a dot and the end of the text.
-    if not match:
-        match = re.search(
-            r"\\b(ma|di|wo|do|vr|za|zo)\\s+(\\d{1,2})\\s+"
-            r"(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)",
-            raw_day, re.I
-        )
     if not match:
         return None
 
-    weekdays = {"ma":0,"di":1,"wo":2,"do":3,"vr":4,"za":5,"zo":6}
+    weekdays = {"ma":0, "di":1, "wo":2, "do":3, "vr":4, "za":5, "zo":6}
     month = MONTHS.get(match.group(3).lower())
     if not month:
         return None
-    candidates = []
+
+    possible = []
     for year in range(today.year, today.year + 4):
         try:
-            candidate = date(year,month,int(match.group(2)))
+            candidate = date(year, month, int(match.group(2)))
         except ValueError:
             continue
         if candidate >= today and candidate.weekday() == weekdays[match.group(1).lower()]:
-            candidates.append(candidate)
-    if not candidates:
+            possible.append(candidate)
+    if not possible:
         return None
 
     time_text = detail("Aanvang") or detail("Zaal open")
-    time_match = re.search(r"\\b([01]?\\d|2[0-3]):([0-5]\\d)\\b",time_text)
-    start = (f"{int(time_match.group(1)):02d}:{time_match.group(2)}"
-             if time_match else "")
-    return (min(candidates).isoformat(),start)
+    time_match = re.search(r"\b([01]?\d|2[0-3]):([0-5]\d)\b", time_text)
+    start = (
+        f"{int(time_match.group(1)):02d}:{time_match.group(2)}"
+        if time_match else ""
+    )
+    return min(possible).isoformat(), start
 
 
 def parse_event(html, url, name, city):
@@ -317,7 +309,7 @@ def scrape_venue(name, maximum=500):
         # Webflow renders a maximum of 100 events per collection page.
         # Its next-page link uses a collection-specific query name rather
         # than the generic ?page=2 parameter.
-        match=re.search(r'href=["\\\']\\?([A-Za-z0-9]+_page)=2["\\\']',html,re.I)
+        match = re.search(r"([A-Za-z0-9]+_page)=2", html, flags=re.I)
         if len(found)>=100 and not match:
             raise RuntimeError("Neushoorn lists 100 events but its pagination key was not found")
         if match:
