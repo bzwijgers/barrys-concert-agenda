@@ -1083,25 +1083,38 @@ fun ConcertApp() {
                                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
-                                    Text("Opgenomen zalen", fontWeight = FontWeight.Bold)
-                                    val mainVenues = listOf(
-                                        "013", "Amare", "Baroeg", "BIRD", "Boerderij",
-                                        "Bolwerk", "dB's", "De Helling", "Doornroosje",
-                                        "Dynamo", "Effenaar", "Gebouw-T", "Hedon",
-                                        "Klokgebouw", "Melkweg", "MEZZ", "Metropool",
-                                        "Neushoorn", "Paard", "Paradiso", "Patronaat",
-                                        "Rotown", "SPOT Groningen", "TivoliVredenburg",
-                                        "Tolhuistuin"
-                                    ).sortedBy { it.lowercase(Locale.getDefault()) }
-                                    mainVenues.forEach { mainVenue ->
-                                        val subVenues = if (mainVenue == "013") emptyList() else concerts
+                                    Text("Concertzalen", fontWeight = FontWeight.Bold)
+                                    val venueCities = mapOf(
+                                        "013" to "Tilburg", "Amare" to "Den Haag",
+                                        "Baroeg" to "Rotterdam", "BIRD" to "Rotterdam",
+                                        "Bibelot" to "Dordrecht", "Boerderij" to "Zoetermeer",
+                                        "Bolwerk" to "Sneek", "dB's" to "Utrecht",
+                                        "De Bosuil" to "Weert", "De Helling" to "Utrecht",
+                                        "De Pul" to "Uden", "Doornroosje" to "Nijmegen",
+                                        "Dynamo" to "Eindhoven", "Effenaar" to "Eindhoven",
+                                        "Gebouw-T" to "Bergen op Zoom", "Hedon" to "Zwolle",
+                                        "Klokgebouw" to "Eindhoven", "Melkweg" to "Amsterdam",
+                                        "MEZZ" to "Breda", "Metropool" to "Hengelo / Enschede / Almelo",
+                                        "Neushoorn" to "Leeuwarden", "PAARD" to "Den Haag",
+                                        "Paradiso" to "Amsterdam", "Patronaat" to "Haarlem",
+                                        "Rotown" to "Rotterdam", "SPOT Groningen" to "Groningen",
+                                        "TivoliVredenburg" to "Utrecht", "Tolhuistuin" to "Amsterdam"
+                                    )
+                                    val pendingVenues = setOf("Bibelot", "De Bosuil", "De Pul")
+                                    venueCities.keys.sortedWith(String.CASE_INSENSITIVE_ORDER).forEach { mainVenue ->
+                                        val subVenues = concerts
                                             .filter { it.source.equals(mainVenue, ignoreCase = true) }
                                             .map { it.venue.trim() }
                                             .filter { it.isNotBlank() && !it.equals(mainVenue, ignoreCase = true) }
                                             .distinct()
-                                            .sortedBy { it.lowercase(Locale.getDefault()) }
+                                            .sortedWith(String.CASE_INSENSITIVE_ORDER)
                                         Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                                            Text(mainVenue, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                                            Text(
+                                                "$" + "{mainVenue} — $" + "{venueCities.getValue(mainVenue)}" +
+                                                    if (mainVenue in pendingVenues) " (in voorbereiding)" else "",
+                                                fontWeight = FontWeight.Bold,
+                                                fontSize = 16.sp
+                                            )
                                             if (subVenues.isNotEmpty()) {
                                                 Text(
                                                     "(" + subVenues.joinToString(" · ") + ")",
@@ -1110,11 +1123,6 @@ fun ConcertApp() {
                                             }
                                         }
                                     }
-                                    Text("Nieuwe zalen in voorbereiding", fontWeight = FontWeight.Bold)
-                                    Text("Bibelot — Dordrecht")
-                                    Text("De Bosuil — Weert")
-                                    Text("De Pul — Uden")
-                                    Text("Deze drie podia verschijnen in de agenda zodra het volledige concertprogramma betrouwbaar wordt opgehaald.", style = MaterialTheme.typography.bodySmall)
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
