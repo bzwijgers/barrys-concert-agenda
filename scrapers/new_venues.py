@@ -311,6 +311,9 @@ def scrape_venue(name, maximum=500):
 def scrape_new_venues():
     combined=[]
     for name in VENUES:
+        # BIRD uses a separate complete Prismic live-category scraper.
+        if name == "BIRD":
+            continue
         try:combined.extend(scrape_venue(name))
         except Exception as error:print(name,"ERROR:",repr(error),flush=True)
     return combined
