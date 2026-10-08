@@ -74,6 +74,12 @@ jobs:
         id: scrape
         run: python -u scraper.py
 
+      - name: Enrich direct TicketSwap links from official public event sitemaps
+        id: enrich_ticketswap
+        run: |
+          PYTHONPATH=. python -u -m audit.publish_ticketswap_sitemaps collect
+          PYTHONPATH=. python -u -m audit.publish_ticketswap_sitemaps apply
+
       - name: Check concerts.json
         id: verify
         run: |
