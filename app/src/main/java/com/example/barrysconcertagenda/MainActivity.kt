@@ -401,9 +401,6 @@ fun ConcertApp() {
     var ticketSwapStatus by remember { mutableStateOf("") }
     var ticketSwapStatusUrl by remember { mutableStateOf("") }
     var ticketSwapLookupConcert by remember { mutableStateOf<Concert?>(null) }
-    // Scan existing favorites automatically, once per concert in this session.
-    // Failed lookups can be retried after the next app launch.
-    var ticketSwapAttempted by remember { mutableStateOf(setOf<String>()) }
     val coroutineScope = rememberCoroutineScope()
 
     var concerts by remember {
@@ -798,25 +795,6 @@ fun ConcertApp() {
         } else {
             searchedConcerts
         }
-
-    LaunchedEffect(selectedTab, loading, concerts, ticketSwapLookupConcert) {
-        if (selectedTab == 2 && !loading && ticketSwapLookupConcert == null) {
-            val next = concerts.firstOrNull { concert ->
-                val key = normalizeUrl(concert.url)
-                concert.isFavorite &&
-                    concert.ticketSwapUrl.isBlank() &&
-                    verifiedTicketSwapUrl(concert).isBlank() &&
-                    key !in ticketSwapAttempted &&
-                    (parseConcertDate(concert.date)?.isBefore(java.time.LocalDate.now()) == false)
-            }
-            if (next != null) {
-                ticketSwapAttempted = ticketSwapAttempted + normalizeUrl(next.url)
-                ticketSwapStatusUrl = normalizeUrl(next.url)
-                ticketSwapStatus = "TicketSwap zoekt..."
-                ticketSwapLookupConcert = next
-            }
-        }
-    }
 
     TicketSwapLookupWebView(
         concert = ticketSwapLookupConcert,
