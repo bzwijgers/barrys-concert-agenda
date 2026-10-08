@@ -11,7 +11,6 @@ EXPECTED = [
     ("SPOT Groningen", "Groningen", "https://www.spotgroningen.nl/programma/pieter-savenberg/", "2026-11-05"),
     ("SPOT Groningen", "Groningen", "https://www.spotgroningen.nl/programma/alexis-ffrench/", "2027-06-06"),
     ("Hedon", "Zwolle", "https://hedon-zwolle.nl/voorstelling/32962/big-sleep", "2026-11-15"),
-    ("Hedon", "Zwolle", "https://hedon-zwolle.nl/voorstelling/33038/never-too-late", "2026-10-10"),
     ("Metropool", "Hengelo", "https://metropool.nl/agenda/waxing-crescent", "2026-10-09"),
 ]
 def check(case):
