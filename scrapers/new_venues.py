@@ -435,6 +435,7 @@ def scrape_new_venues():
     # the weekly job wait for all slow detail pages sequentially.
     names=[name for name in VENUES if name!="BIRD"]
     combined=[]
+    failed=[]
     with ThreadPoolExecutor(max_workers=3) as executor:
         jobs={executor.submit(scrape_venue,name):name for name in names}
         for future in as_completed(jobs):
@@ -444,7 +445,10 @@ def scrape_new_venues():
                 combined.extend(concerts)
                 print("Finished",name,len(concerts),"concerts",flush=True)
             except Exception as error:
+                failed.append(f"{name}: {error}")
                 print(name,"ERROR:",repr(error),flush=True)
+    if failed:
+        raise RuntimeError("Incomplete new-venue scrape: " + "; ".join(failed))
     return combined
 
 if __name__=="__main__":
