@@ -363,6 +363,13 @@ private fun verifiedTicketSwapUrl(concert: Concert): String =
         concert.url.trimEnd('/') == "https://www.rotown.nl/agenda/the-apers-1"
     ) {
         "https://www.ticketswap.nl/concert-tickets/maladroit-rotterdam-rotown-2026-10-09-CbSFR53UXMVxNKodxWTdf"
+    } else if (
+        concert.date == "2026-12-27" &&
+        concert.artist.equals("30 Jaar Excelsior Recordings", ignoreCase = true) &&
+        concert.venue.equals("Tolhuistuin", ignoreCase = true) &&
+        concert.url.trimEnd('/') == "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321"
+    ) {
+        "https://www.ticketswap.nl/concert-tickets/30-jaar-excelsior-recordings-amsterdam-tolhuistuin-2026-12-27-CbhnzqXEdczxvu7WzXVv9"
     } else {
         concert.ticketSwapUrl
     }
