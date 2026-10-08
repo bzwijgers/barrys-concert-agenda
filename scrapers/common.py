@@ -604,6 +604,18 @@ def scrape_patronaat():
                 seen.add(key)
                 urls.append(url)
 
+    # Supplement genre-filtered lists with the official full programme.
+    # Some concerts (e.g. SlodDe & Vos) are not assigned to any selected
+    # genre but do appear in the official programme.
+    programme_html = download_page_retry(base + "/programma/", attempts=3)
+    for event_url in find_site_event_urls(programme_html, base, "/event/"):
+        if not re.search(r"^https://patronaat\.nl/event/[^/]+/?$", event_url):
+            continue
+        key = normalize_url(event_url)
+        if key not in seen:
+            seen.add(key)
+            urls.append(event_url)
+
     print("Patronaat concertlinks gevonden:", len(urls))
     concerts = scrape_detail_events(urls, "Patronaat", "Haarlem", "Patronaat")
 
