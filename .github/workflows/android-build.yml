@@ -37,4 +37,12 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew --no-daemon :app:assembleDebug
+
+      - name: Upload debug APK for phone testing
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: barrys-concert-agenda-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
