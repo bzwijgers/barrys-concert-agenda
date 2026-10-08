@@ -264,10 +264,34 @@ paradiso_combined = [
     concert for concert in all_concerts
     if concert["source"] in ("Paradiso", "Tolhuistuin")
 ]
-if len(paradiso_combined) < 400:
+# Vergelijk met de vorige GEPUBLICEERDE feed, maar tel alleen shows
+# die op de huidige datum nog moeten plaatsvinden. Daarmee voorkomen we
+# zowel een plotselinge scraper-uitval als een onterechte vaste ondergrens
+# naarmate de kalender vordert.
+previous_paradiso_count = 0
+try:
+    with open("concerts.json", "r", encoding="utf-8") as old_file:
+        previous_concerts = json.load(old_file)
+    today_string = datetime.now().date().isoformat()
+    previous_paradiso_count = sum(
+        1 for old_concert in previous_concerts
+        if old_concert.get("source") in ("Paradiso", "Tolhuistuin")
+        and old_concert.get("date", "") >= today_string
+    )
+except (OSError, ValueError, TypeError) as error:
+    print("Paradiso vorige-feedcontrole niet beschikbaar:", error)
+
+minimum_expected = max(1, int(previous_paradiso_count * 0.75))
+print(
+    "Paradiso/Tolhuistuin feedcontrole:",
+    len(paradiso_combined), "nieuw; ",
+    previous_paradiso_count, "vorige; minimaal", minimum_expected,
+)
+if len(paradiso_combined) < minimum_expected:
     raise RuntimeError(
-        "VEILIGHEIDSSTOP: Paradiso/Tolhuistuin slechts "
+        "VEILIGHEIDSSTOP: Paradiso/Tolhuistuin teruggevallen naar "
         + str(len(paradiso_combined))
+        + " vanaf " + str(previous_paradiso_count)
         + " toekomstige concerten; concerts.json blijft ongewijzigd."
     )
 
