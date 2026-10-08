@@ -674,7 +674,7 @@ def scrape_paradiso():
     # Bekende toekomstige programma's die in de sitemap/detailverwerking
     # incidenteel ontbreken, blijven als regressiecontrole in de ontdekking.
     for required_url in (
-        "https://www.paradiso.nl/nl/programma/cardinal-black/2941112",
+        # Actueel bevestigd programma dat net na sitemappublicatie kan verschijnen.
         "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706",
     ):
         if normalize_url(required_url) not in {normalize_url(u) for u in program_urls}:
