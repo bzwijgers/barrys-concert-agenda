@@ -866,7 +866,7 @@ fun ConcertApp() {
                                         "Rotown" to "Rotterdam", "SPOT Groningen" to "Groningen",
                                         "TivoliVredenburg" to "Utrecht", "Tolhuistuin" to "Amsterdam"
                                     )
-                                    val pendingVenues = setOf("Bibelot", "De Bosuil", "De Pul")
+                                    val pendingVenues = emptySet<String>()
                                     venueCities.keys.sortedWith(String.CASE_INSENSITIVE_ORDER).forEach { mainVenue ->
                                         val subVenues = concerts
                                             .filter { it.source.equals(mainVenue, ignoreCase = true) }
