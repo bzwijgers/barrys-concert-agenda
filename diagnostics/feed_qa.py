@@ -54,7 +54,7 @@ if invalid:
     raise RuntimeError("Invalid concerts: "+str(len(invalid)))
 
 cases={
-    "De Helling":("john-coffey-09-10-2026","2026-10-09"),
+    "De Helling":("john-coffey-support-eyesores-09-10-2026","2026-10-09"),
     "Klokgebouw":("danny-vera-2026","2026-10-31"),
     "Doornroosje":("event/sharp-pins/","2026-11-10"),
     "BIRD":("brothers-moving-10-10-2026","2026-10-10"),
