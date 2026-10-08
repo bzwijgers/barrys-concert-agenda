@@ -475,7 +475,7 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
         if source == "TivoliVredenburg":
             if re.search(
                 r"\b(?:podcast|pubquiz|karaoke|rondleiding|lezing|"
-                r"discozwemmen|clubnacht|fanparty|silent disco)\b|"
+                r"discozwemmen|clubnacht|fanparty|silent disco|workshop)\b|"
                 r"\bparty\s*$",
                 artist, flags=re.IGNORECASE,
             ):
