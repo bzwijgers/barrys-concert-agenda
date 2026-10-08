@@ -29,6 +29,10 @@ def main():
     for url in hints[:6]:
         try:
             js = download(url)
+            if "site.min.js" in url:
+                for needle in ('/query.php?', 'agenda-events__show-more', 'show_more_possible'):
+                    position = js.find(needle)
+                    print("PUL_SCRIPT_CONTEXT", needle, repr(js[max(0,position-2800):position+1000]) if position >= 0 else "NOT FOUND", flush=True)
             matches = list(KEYWORDS.finditer(js))
             print("SCRIPT", url, "bytes", len(js), "hits", len(matches), flush=True)
             for match in matches[:12]:
