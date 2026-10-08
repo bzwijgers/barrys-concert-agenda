@@ -290,7 +290,7 @@ def parse_event(html, url, name, city):
         return None
     if name=="Metropool" and re.search(r"comedy|muziekquiz|clubnacht|nightclub|party|silent disco",lowered):
         return None
-    if name=="Hedon" and re.search(r"hedon-academy|workshop|comedy|cabaret|lezing|rave|techno",lowered):
+    if name=="Hedon" and re.search(r"hedon-academy|workshop|comedy|cabaret|lezing|rave|techno|80s-verantwoord|80.s.verantwoord|clubnacht|fanparty",lowered):
         return None
     if name=="Klokgebouw" and re.search(r"snakepit|rave|dance|feest|party|festival-electronic",lowered):
         return None
