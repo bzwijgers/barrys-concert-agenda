@@ -51,6 +51,16 @@ jobs:
           set -o pipefail
           ./gradlew --no-daemon --stacktrace :app:testDebugUnitTest :app:assembleDebug 2>&1 | tee android-build.log
 
+      - name: Assert APK cannot replace V1 app
+        shell: bash
+        run: |
+          set -euo pipefail
+          AAPT=$(find "$ANDROID_HOME/build-tools" -mindepth 2 -maxdepth 2 -name aapt -type f | sort -V | tail -1)
+          test -n "$AAPT"
+          ACTUAL=$("$AAPT" dump badging app/build/outputs/apk/debug/app-debug.apk | sed -n "s/^package: name='\\([^']*\\)'.*/\\1/p")
+          echo "Built preview package ID: $ACTUAL"
+          test "$ACTUAL" = "com.example.barrysconcertagenda.preview"
+
       - name: Upload build diagnostics
         if: always()
         uses: actions/upload-artifact@v4
