@@ -352,6 +352,37 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
                     int(visible_date.group(1)),
                 ).isoformat()
 
+            # Some Patronaat pages have old schema.org timestamps in the
+            # global page shell. When the primary visible date is missing,
+            # use the event date in its URL, but only when the URL and the
+            # event heading describe the same artist/event. This prevents
+            # stale redirects such as Yuna -> another event from entering.
+            if not visible_date:
+                path_slug = urlsplit(url).path.rstrip("/").split("/")[-1]
+                slug_date = re.search(
+                    r"-(\d{1,2})-(\d{1,2})-(\d{2}|20\d{2})$", path_slug
+                )
+                if slug_date:
+                    significant = [
+                        token for token in path_slug[:slug_date.start()].split("-")
+                        if len(token) >= 4 and token not in
+                        ("the", "club", "event", "haarlem", "show", "music")
+                    ]
+                    normalized_title = re.sub(
+                        r"[^a-z0-9]", "", artist.casefold()
+                    )
+                    if significant and significant[0].casefold() in normalized_title:
+                        raw_year = int(slug_date.group(3))
+                        try:
+                            candidate = date(
+                                raw_year if raw_year >= 2000 else 2000 + raw_year,
+                                int(slug_date.group(2)),
+                                int(slug_date.group(1)),
+                            )
+                            event_date = candidate.isoformat()
+                        except ValueError:
+                            pass
+
             start_match = re.search(
                 r"\bStart:\s*(\d{1,2})[:.]([0-5]\d)\b",
                 page_text,
