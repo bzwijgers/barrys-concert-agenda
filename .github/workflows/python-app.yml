@@ -46,6 +46,24 @@ jobs:
       - name: Test scraper parsing
         run: python -m unittest discover -s tests -p "test_*.py"
 
+      - name: Check live Paradiso detail parsing
+        run: |
+          python - <<'PY'
+          from scrapers.common import download_page_retry
+          from scrapers.paradiso import paradiso_parse_event
+          url = "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706"
+          html = download_page_retry(url)
+          item = paradiso_parse_event(html, url)
+          print("Live Paradiso HTML bytes:", len(html))
+          print("Live Paradiso parsed:", item, flush=True)
+          expected = ("This Is the Kit", "Tolhuistuin", "2027-05-07", "20:30")
+          actual = (
+              item.get("artist"), item.get("venue"), item.get("date"), item.get("time")
+          ) if item else None
+          if actual != expected:
+              raise SystemExit(f"Paradiso live parser regression: {actual!r} != {expected!r}")
+          PY
+
       - name: Run concert scraper
         run: python scraper.py
 
@@ -99,9 +117,14 @@ jobs:
                   ("Friendly Fires", "Tolhuistuin", "2027-01-28", "20:30"),
               "https://www.paradiso.nl/nl/programma/fat-freddys-drop/2654360":
                   ("Fat Freddy's Drop + DJ Logg Cabin", "Paradiso", "2026-10-12", "20:30"),
+              "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706":
+                  ("This Is the Kit", "Tolhuistuin", "2027-05-07", "20:30"),
           }
           by_url = {item.get("url"): item for item in concerts}
+          from datetime import date
           for url, expected in paradiso_expected.items():
+              if expected[2] < date.today().isoformat():
+                  continue
               item = by_url.get(url)
               if not item:
                   raise SystemExit("Paradiso regression: missing " + url)
