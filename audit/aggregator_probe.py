@@ -5,7 +5,11 @@ from collections import Counter
 from html import unescape
 import json,re
 
-for name,(url,venue,city) in PODIUMINFO_VENUES.items():
+all_sources = list(PODIUMINFO_VENUES.items()) + [
+    ("Amare full", ("https://www.podiuminfo.nl/concertagenda/podium/amare/", "Amare", "Den Haag")),
+    ("Bolwerk full", ("https://www.podiuminfo.nl/concertagenda/podium/het-bolwerk/", "Het Bolwerk", "Sneek")),
+]
+for name,(url,venue,city) in all_sources:
     print("\n==== AGGREGATOR",name,url,"====",flush=True)
     try:
         html=download_page_retry(url,attempts=3)
@@ -33,7 +37,7 @@ for name,(url,venue,city) in PODIUMINFO_VENUES.items():
                 music.append((str(item.get("name",""))[:90],where,str(item.get("startDate",""))[:22]))
         print("RAW LENGTH",len(html),"SCRIPTS",len(scripts),"TYPES",dict(types),
               "LOCATION COUNTS",dict(loc),"EVENT COUNT",len(music),flush=True)
-        print("SAMPLES",music[:28],flush=True)
+        print("SAMPLES",music[:28],"LAST",music[-12:],flush=True)
         print("PAGING MARKERS",[(s,len(re.findall(s,html,re.I))) for s in
               ("page=2","/page/2","volgende","pagination","more","next","load")],flush=True)
     except Exception as error:
