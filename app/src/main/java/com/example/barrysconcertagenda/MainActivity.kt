@@ -355,6 +355,18 @@ private fun TicketSwapLookupWebView(
     )
 }
 
+private fun verifiedTicketSwapUrl(concert: Concert): String =
+    if (
+        concert.date == "2026-10-09" &&
+        concert.artist.equals("The Apers", ignoreCase = true) &&
+        concert.venue.equals("Rotown", ignoreCase = true) &&
+        concert.url.trimEnd('/') == "https://www.rotown.nl/agenda/the-apers-1"
+    ) {
+        "https://www.ticketswap.nl/concert-tickets/maladroit-rotterdam-rotown-2026-10-09-CbSFR53UXMVxNKodxWTdf"
+    } else {
+        concert.ticketSwapUrl
+    }
+
 private fun ticketSwapSlugPartWeb(value: String): String =
     java.text.Normalizer.normalize(value, java.text.Normalizer.Form.NFD)
         .replace(Regex("\\p{Mn}+"), "")
@@ -1191,7 +1203,7 @@ fun ConcertApp() {
                                     favorite = newFavorite
                                 )
 
-                                if (newFavorite && concert.ticketSwapUrl.isBlank()) {
+                                if (newFavorite && verifiedTicketSwapUrl(concert).isBlank()) {
                                     ticketSwapStatusUrl = normalizeUrl(concert.url)
                                     ticketSwapStatus = "TicketSwap zoekt..."
                                     ticketSwapLookupConcert = concert
@@ -1356,7 +1368,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
                 }
             }
-            if (concert.isFavorite && concert.ticketSwapUrl.isBlank() && ticketSwapMessage.isNotBlank()) {
+            if (concert.isFavorite && verifiedTicketSwapUrl(concert).isBlank() && ticketSwapMessage.isNotBlank()) {
                 Text(
                     text = ticketSwapMessage,
                     fontSize = 10.sp,
@@ -1364,7 +1376,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     modifier = Modifier.padding(top = 2.dp)
                 )
             }
-            if (concert.isFavorite && concert.ticketSwapUrl.isNotBlank()) {
+            if (concert.isFavorite && verifiedTicketSwapUrl(concert).isNotBlank()) {
                 val context = LocalContext.current
                 Text(
                     text = "TicketSwap",
@@ -1375,7 +1387,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                         .padding(top = 2.dp)
                         .clickable {
                             context.startActivity(
-                                Intent(Intent.ACTION_VIEW, Uri.parse(concert.ticketSwapUrl))
+                                Intent(Intent.ACTION_VIEW, Uri.parse(verifiedTicketSwapUrl(concert)))
                             )
                         }
                 )
