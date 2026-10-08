@@ -12,6 +12,7 @@ from scrapers.gebouw_t import scrape_gebouw_t
 from scrapers.dbs import scrape_dbs
 from scrapers.ticketswap import enrich_ticketswap_urls
 from scrapers.new_venues import scrape_new_venues
+from scrapers.bird import scrape_bird
 from scrapers.podiuminfo_venues import scrape_podiuminfo_venues
 
 
@@ -213,6 +214,18 @@ try:
     all_concerts.extend(scrape_podiuminfo_venues())
 except Exception as error:
     print("ERNSTIGE FOUT AMARE/BOLWERK:", str(error), flush=True)
+
+
+# ============================================================
+# BIRD ROTTERDAM - VOLLEDIGE LIVE-CONCERTAGENDA
+# ============================================================
+# Direct uit de officiële Prismic-agenda van BIRD. De beperkte
+# /concerts/-landingspagina wordt bewust niet meer gebruikt.
+try:
+    bird_live_concerts = scrape_bird()
+    all_concerts.extend(bird_live_concerts)
+except Exception as error:
+    print("ERNSTIGE BIRD LIVE FOUT:", str(error), flush=True)
 
 
 # ============================================================
