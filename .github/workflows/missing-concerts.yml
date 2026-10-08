@@ -7,6 +7,7 @@ on:
       - "audit/missing_concert_probe.py"
       - "audit/verify_live_missing.py"
       - "audit/hedon_nights_check.py"
+      - "audit/paradiso_recovery_check.py"
       - ".github/workflows/missing-concerts.yml"
 permissions:
   contents: read
@@ -25,5 +26,7 @@ jobs:
         run: python -u -m audit.verify_live_missing
       - name: Cross-check Hedon Nights against feed
         run: python -u -m audit.hedon_nights_check
+      - name: Check Paradiso official show and recovery
+        run: python -u -m audit.paradiso_recovery_check
       - name: Test absent official shows
         run: python -u -m audit.missing_concert_probe
