@@ -1,0 +1,35 @@
+name: Live Metropool completeness test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scrapers/new_venues.py"
+      - "tests/test_metropool_pagination.py"
+      - ".github/workflows/metropool-live-test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regression tests
+        run: python -m unittest discover -s tests -p "test_metropool_pagination.py"
+      - name: Scrape all official Metropool pages
+        run: |
+          python -u - <<'PY'
+          from scrapers.new_venues import scrape_venue
+          items=scrape_venue("Metropool")
+          print("COMPLETE_METROPOOL_EVENTS",len(items),flush=True)
+          print("SAMPLES",items[:5],flush=True)
+          assert len(items)>=20, "Metropool incomplete programme"
+          assert any("agenda/khemmis" in x["url"] and x["date"]=="2026-10-11" for x in items), "Khemmis missing or wrong date"
+          PY
