@@ -89,7 +89,7 @@ for source,url,day in recovered:
 # Do not mistake broad venue agendas for concert-only agendas.
 non_music_rejections={
     "Neushoorn":r"^(?:comedy night|uit de hoge hoed improv comedy|queens & quizzes|powerslam|family rave day|the grave rave)\b",
-    "Hedon":r"^(?:bezerkus bingo|q\s*music foute feestje|jimmy carr|never too late)\b",
+    "Hedon":r"^(?:bezerkus bingo|q\s*music foute feestje|jimmy carr|never too late|common ground festival|4am|night mode|vroegzat|pulse presents|emo night|rnb singalong|wasserette|club motion|40up)\b",
     "Gebouw-T":r"quiz['’]m|toppop yeah! the party",
 }
 bad_non_music=[
