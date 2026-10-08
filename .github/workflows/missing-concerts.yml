@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "audit/missing_concert_probe.py"
+      - "audit/verify_live_missing.py"
       - ".github/workflows/missing-concerts.yml"
 permissions:
   contents: read
@@ -17,5 +18,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+      - name: Verify official event pages
+        run: python -u -m audit.verify_live_missing
       - name: Test absent official shows
         run: python -u -m audit.missing_concert_probe
