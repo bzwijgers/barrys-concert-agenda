@@ -600,7 +600,7 @@ def paradiso_parse_event(
 
 
 
-def paradiso_find_recent_sitemap_program_urls():
+def paradiso_find_recent_sitemap_program_urls(lookback_days=21):
     """Return all recently maintained Paradiso event pages from the official sitemap."""
     sitemap_index = download_page_retry("https://www.paradiso.nl/sitemap.xml")
     sitemap_urls = re.findall(
@@ -616,7 +616,7 @@ def paradiso_find_recent_sitemap_program_urls():
     # Daardoor hoeven duizenden historische URL's niet dagelijks opnieuw
     # te worden gedownload. Ook alle sitemapitems zonder lastmod blijven
     # meegenomen: die kunnen we niet op ouderdom filteren.
-    cutoff = (date.today() - timedelta(days=180)).isoformat()
+    cutoff = (date.today() - timedelta(days=lookback_days)).isoformat()
     urls = []
     seen = set()
 
@@ -717,6 +717,11 @@ def scrape_paradiso():
         except Exception as error:
             print("Paradiso aanvullende agenda fout:", agenda_url, "-", str(error))
 
+    # Save discoveries before we append retained/previous-feed URLs.
+    # Recently changed sitemap entries and visible agenda links must be
+    # checked live; long-known distant events can use their last good data.
+    freshly_discovered_keys = {normalize_url(url) for url in program_urls}
+
     # De vorige feed is een tweede discoverybron. Een tijdelijke 403, 429,
     # lege HTML-response of onvolledige sitemap mag bekende toekomstige
     # concerten niet stil laten verdwijnen.
@@ -768,6 +773,33 @@ def scrape_paradiso():
         if key not in seen_program_urls:
             seen_program_urls.add(key)
             program_urls.append(old_item["url"])
+    # A daily re-download of every known future detail page generates
+    # hundreds of expensive requests, throttling and long cancelled runs.
+    # Refresh recently modified/discovered URLs, recovery regressions,
+    # and concerts happening soon. Reuse last published records for the
+    # other distant events. Each source remains discoverable from the sitemap.
+    horizon = (today_string[:10])
+    soon_date = (date.today() + timedelta(days=21)).isoformat()
+    mandatory_keys = {
+        normalize_url(url) for url, when in PARADISO_RECOVERY_EVENTS.items()
+        if when >= today_string
+    }
+    cached_unmodified = {}
+    for key, old_item in previous_paradiso.items():
+        if (
+            old_item.get("date", "") > soon_date
+            and key not in freshly_discovered_keys
+            and key not in mandatory_keys
+        ):
+            cached_unmodified[key] = old_item
+    program_urls = [
+        url for url in program_urls
+        if normalize_url(url) not in cached_unmodified
+    ]
+    print(
+        "Paradiso ongewijzigde toekomstige shows uit cache:",
+        len(cached_unmodified),
+    )
     print("Paradiso vorige-feed URLs bewaakt:", len(previous_paradiso))
 
     print(
@@ -898,7 +930,7 @@ def scrape_paradiso():
                     f"{processed}/{total}"
                 )
 
-    unique = {}
+    unique = dict(cached_unmodified)
 
     for concert in concerts:
         key = normalize_url(
