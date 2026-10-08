@@ -23,8 +23,9 @@ permissions:
 
 concurrency:
   group: concert-feed-main
-  # Run the newest scraper implementation; obsolete long-running jobs should not block it.
-  cancel-in-progress: true
+  # Never discard a near-finished full scrape when improvements are committed.
+  # Later runs are queued and use the newest source code.
+  cancel-in-progress: false
 
 jobs:
   update-concerts:
