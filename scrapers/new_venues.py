@@ -23,12 +23,14 @@ VENUES = {
     "Hedon": ("https://hedon-zwolle.nl/", "/voorstelling/", "Zwolle"),
     "SPOT Groningen": ("https://www.spotgroningen.nl/programma/?genre=muziek", "/programma/", "Groningen"),
     "Neushoorn": ("https://www.neushoorn.nl/programma", "/events/", "Leeuwarden"),
+    # Official Bibelot programme currently exposes its complete 97-event listing.
+    # The discovery floor below rejects accidentally truncated output.
+    "Bibelot": ("https://bibelot.net/programma/", "/programma/", "Dordrecht"),
 }
 
 # Candidate venues are kept out of the production batch until their full
 # programme pagination and event parsing are verified.
 CANDIDATE_VENUES = {
-    "Bibelot": ("https://bibelot.net/programma/", "/programma/", "Dordrecht"),
     "De Bosuil": ("https://www.debosuil.nl/programma/", "/programma/", "Weert"),
     "De Pul": ("https://www.livepul.com/agenda/", "/agenda/", "Uden"),
 }
