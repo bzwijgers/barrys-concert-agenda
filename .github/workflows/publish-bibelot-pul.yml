@@ -1,0 +1,52 @@
+name: Publish Bibelot and De Pul verified feeds
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "audit/publish_bibelot_pul.py"
+      - ".github/workflows/publish-bibelot-pul.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: targeted-bibelot-pul
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check Python source tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Collect full official venue programmes
+        run: PYTHONPATH=. python -u -m audit.publish_bibelot_pul collect
+      - name: Merge and publish to latest main atomically
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            PYTHONPATH=. python -u -m audit.publish_bibelot_pul apply
+            git add concerts.json
+            if git diff --cached --quiet; then
+              echo "Feed already published"
+              exit 0
+            fi
+            git commit -m "Publish complete Bibelot and De Pul concert programmes"
+            if git push origin HEAD:main; then
+              echo "SUCCESS verified venue feed published"
+              exit 0
+            fi
+          done
+          exit 1
