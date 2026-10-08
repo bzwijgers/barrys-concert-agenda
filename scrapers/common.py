@@ -338,6 +338,7 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
             return None
         event_date, event_time = _detail_date_time(page)
         if source == "Patronaat":
+            original_structured_date = event_date
             page_text = clean_text(page)
             month_names_short = "|".join(MONTHS_SHORT.keys())
             visible_date = re.search(
@@ -386,6 +387,12 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
                             event_date = candidate.isoformat()
                         except ValueError:
                             pass
+
+            # The page-wide JSON-LD can describe an unrelated historic
+            # event. If the current event date was corrected using visible
+            # content or its validated slug, never keep that old time.
+            if original_structured_date != event_date:
+                event_time = ""
 
             start_match = re.search(
                 r"\bStart:\s*(\d{1,2})[:.]([0-5]\d)\b",
