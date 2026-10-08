@@ -23,6 +23,9 @@ VENUES = {
     "Hedon": ("https://hedon-zwolle.nl/", "/voorstelling/", "Zwolle"),
     "SPOT Groningen": ("https://www.spotgroningen.nl/programma/?genre=muziek", "/programma/", "Groningen"),
     "Neushoorn": ("https://www.neushoorn.nl/programma", "/events/", "Leeuwarden"),
+    "Bibelot": ("https://bibelot.net/programma/", "/programma/", "Dordrecht"),
+    "De Bosuil": ("https://www.debosuil.nl/programma/", "/programma/", "Weert"),
+    "De Pul": ("https://www.livepul.com/agenda/", "/agenda/", "Uden"),
 }
 
 MONTHS = {
@@ -203,6 +206,8 @@ def parse_event(html, url, name, city):
     for delimiter in (" | "," // "," - Dynamo Eindhoven"," - Hedon Zwolle"," - Spot Groningen"," – De Helling"):
         if delimiter in title:title=title.split(delimiter,1)[0]
     title=title.strip() or (" ".join(parser.headings[:1]).strip())
+    if name in ("Bibelot", "De Bosuil", "De Pul"):
+        title = re.sub(r"\s*\|\s*(?:Bibelot|De Bosuil|De Pul).*$", "", title, flags=re.I).strip()
     if name=="Metropool" and " - " in title:
         title=title.split(" - ",1)[0].strip()
     if not title or title.lower() in ("agenda","programma","gerelateerde events","evenementen"):
@@ -281,6 +286,13 @@ def parse_event(html, url, name, city):
     # prose descriptions: an indie band may mention a rave in its biography,
     # and a rock tribute may be described as performing "klassiekers".
     identity=(primary+" "+url).lower()
+    if name in ("Bibelot", "De Bosuil", "De Pul") and re.search(
+        r"\b(?:40up|40.up|clubnight|clubnacht|pubquiz|spelletjes|game caf[eé]|rave|dj.set|disco|dance party|80.s classics|dans je|toen: the classics)\b",
+        identity, flags=re.I,
+    ):
+        return None
+    if name == "Bibelot" and re.search(r"\bclub\b", raw_text[:600], re.I) and not re.search(r"\bconcert\b", raw_text[:600], re.I):
+        return None
     if name=="Klokgebouw":
         # The agenda explicitly labels exhibitions, markets, conventions and parties.
         if re.search(r"fair|expo|vintage|design-week|kerstmarkt|conference|kennis|recruitment|beurs",lowered):
@@ -341,6 +353,15 @@ def scrape_venue(name, maximum=500):
     if name=="Hedon":
         nights=download_page_retry("https://hedon-zwolle.nl/nights",attempts=3)
         found=filter_hedon_nights(found,nights)
+    if name=="Bibelot":
+        # Bibelot loads an initial programme subset. A limited first page
+        # cannot be called a complete concert agenda.
+        if len(found) < 40:
+            raise RuntimeError("Bibelot: first-page discovery is incomplete; pagination/API integration required")
+    if name=="De Pul":
+        # De Pul explicitly has a Meer laden control. Do not publish
+        # a truncated first page as the complete schedule.
+        raise RuntimeError("De Pul: agenda requires verified Meer laden pagination/API discovery")
     if name=="Neushoorn":
         # Webflow renders a maximum of 100 events per collection page.
         # Its next-page link uses a collection-specific query name rather
