@@ -128,9 +128,20 @@ def enrich_ticketswap_urls(concerts):
         )
     )
 
-    # Small rotating-friendly batch: search engines are discovery helpers,
-    # not a bulk API. Existing links remain cached in concerts.json.
-    for concert in pending[:20]:
+    # Rotate the search window across *all* concerts, rather than checking
+    # the same first 20 unresolved events forever. A deterministic daily
+    # rotation means repeated runs on the same day remain predictable.
+    # Keep the request budget modest because search engines are not bulk APIs.
+    batch_size = min(40, len(pending))
+    if pending:
+        cycle = (datetime.now().date().toordinal() * batch_size) % len(pending)
+        batch = (pending[cycle:] + pending[:cycle])[:batch_size]
+    else:
+        batch = []
+    print("TicketSwap rotating batch:", len(batch), "of", len(pending),
+          "starting at index", cycle if pending else 0)
+
+    for concert in batch:
 
         # Start conservatively: only concerts in the next 180 days.
         try:
