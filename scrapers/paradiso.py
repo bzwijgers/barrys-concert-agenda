@@ -723,6 +723,7 @@ def scrape_paradiso():
                     if attempt < 2:
                         time.sleep(2.0 * (attempt + 1))
                         continue
+                    print("Paradiso niet parseerbaar:", event_url, "HTML lengte:", len(event_html))
                     return None
 
                 venue = paradiso_extract_venue(event_html)
@@ -841,6 +842,8 @@ def scrape_paradiso():
         "Paradiso mislukt:",
         failed_count
     )
+    if failed_count > 0:
+        print("Paradiso WAARSCHUWING: niet alle programmapagina's konden worden verwerkt")
 
     print(
         "Paradiso voorbij:",
