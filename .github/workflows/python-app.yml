@@ -49,12 +49,13 @@ jobs:
 
       - name: Check live Paradiso detail parsing
         id: live
+        continue-on-error: true
         run: |
           python - <<'PY'
           from scrapers.common import download_page_retry
           from scrapers.paradiso import paradiso_parse_event
           url = "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706"
-          html = download_page_retry(url)
+          html = download_page_retry(url, attempts=5)
           item = paradiso_parse_event(html, url)
           print("Live Paradiso HTML bytes:", len(html))
           print("Live Paradiso parsed:", item, flush=True)
