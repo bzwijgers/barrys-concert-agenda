@@ -19,6 +19,9 @@ SITES = {
  "Bolwerk":"https://www.hetbolwerk.nl/",
  "GebouwT":"https://gebouw-t.nl/agenda/",
  "dBs":"https://www.dbstudio.nl/events/categorie/alles/concert/lijst/",
+ "Bibelot":"https://bibelot.net/programma/",
+ "DePul":"https://www.livepul.com/agenda/",
+ "DeBosuil":"https://www.debosuil.nl/programma/",
 }
 
 def probe(entry):
@@ -38,6 +41,15 @@ def probe(entry):
   events=re.findall(r'''"@type"\s*:\s*"[^"]*(?:Event|MusicEvent)[^"]*"''',raw,re.I)
   dates=re.findall(r'''(?:startDate|dateTime|datetime)["'\s:=]+(20\d\d[-/]\d\d[-/]\d\d[^"<\s,}]*)''',raw,re.I)
   interesting=[x for x in links if not any(z in x for z in ("privacy","contact","nieuws","tickets","faq","terms","/info","/over-"))]
+  if name == "DePul":
+   # Inspect the currently unknown "Meer laden" endpoint without guessing
+   # that the first HTML page is the full calendar.
+   suspects = re.findall(
+    r'''[^\\s"'<>]{0,90}(?:ajax|loadmore|load_more|load-more|wp-json|endpoint|pagination|offset|page=)[^\\s"'<>]{0,160}''',
+    raw, re.I
+   )
+   print("DEPUL PAGINATION HINTS:",repr(list(dict.fromkeys(suspects))[:35]),flush=True)
+
   return f"\n=== {name} | HTTP {status} | len={len(raw)} | final={final} | anchor={len(links)} | ld={len(scripts)} eventtokens={len(events)} dates={len(dates)} ===\n"+ "\n".join(interesting[:22])+ "\nDATES "+repr(dates[:5])+"\nLD "+repr([x[:210] for x in scripts[:2]])
  except Exception as e:
   return f"\n=== {name} ERROR {type(e).__name__}: {str(e)[:200]} ==="
