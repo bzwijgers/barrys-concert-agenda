@@ -1,4 +1,4 @@
-"""Incremental publication of two independently verified official venue feeds.
+"""Incremental publication of three independently verified official venue feeds.
 
 The full nightly scraper can take many minutes and may fail on unrelated venues.
 This safe updater keeps all other concerts untouched. It refuses truncated
@@ -15,7 +15,7 @@ from scrapers.new_venues import scrape_venue
 from scrapers.ticketswap import VERIFIED_EVENTS
 
 FEED = Path("concerts.json")
-SOURCES = {"Bibelot": 30, "De Pul": 25}
+SOURCES = {"Bibelot": 30, "De Pul": 25, "De Bosuil": 40}
 CACHE = Path("/tmp/barrys-verified-bibelot-depul.json")
 
 
