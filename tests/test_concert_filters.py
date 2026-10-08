@@ -70,6 +70,15 @@ class PreventFalseExclusions(unittest.TestCase):
         self.assertIsNotNone(parse_event(html,"https://www.neushoorn.nl/events/wodan-boys",
                                          "Neushoorn","Leeuwarden"))
 
+    def test_hedon_dance_party_is_not_a_concert(self):
+        html=page("NEVER TOO LATE - Hedon Zwolle",
+                  "30+ CLUB DANCE EVENT - house and techno",
+                  "2027-10-10", "NEVER TOO LATE")
+        item=parse_event(html,
+            "https://hedon-zwolle.nl/voorstelling/33038/never-too-late",
+            "Hedon","Zwolle")
+        self.assertIsNone(item)
+
     def test_hedon_comedy_artist_excluded(self):
         html=page("Jimmy Carr - Hedon Zwolle","Comedyshow",
                   "2027-12-05","Jimmy Carr")
