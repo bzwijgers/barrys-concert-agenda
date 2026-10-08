@@ -119,6 +119,8 @@ jobs:
                   ("Friendly Fires", "Tolhuistuin", "2027-01-28", "20:30"),
               "https://www.paradiso.nl/nl/programma/fat-freddys-drop/2654360":
                   ("Fat Freddy's Drop + DJ Logg Cabin", "Paradiso", "2026-10-12", "20:30"),
+              "https://www.paradiso.nl/nl/programma/songhoy-blues/2884193":
+                  ("Songhoy Blues", "Tolhuistuin", "2026-10-10", "20:30"),
               "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706":
                   ("This Is the Kit", "Tolhuistuin", "2027-05-07", "20:30"),
           }
