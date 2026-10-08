@@ -16,6 +16,22 @@ def download(url):
 
 def main():
     html = download(BASE)
+    for offset in (0, 20):
+        endpoint = (
+            "https://www.livepul.com/query.php"
+            "?source=agenda&agenda_page=true&month=all&search=false"
+            "&amount_of_events_already_shown=" + str(offset)
+        )
+        try:
+            import json
+            data = json.loads(download(endpoint))
+            output = data.get("output", "")
+            print("PUL_API", offset, "output_len", len(output),
+                  "show_more_possible", data.get("show_more_possible"),
+                  "event_cards", output.count("agenda-event--actual-event"),
+                  "event_links", re.findall(r'href=["\\x27]([^"\\x27]+)', output)[:5], flush=True)
+        except Exception as error:
+            print("PUL_API_ERROR", offset, repr(error), flush=True)
     print("PUL_HTML_BYTES", len(html), flush=True)
     for match in list(KEYWORDS.finditer(html))[:45]:
         print("PAGE_HINT", repr(unescape(html[max(0, match.start()-90):match.end()+180])), flush=True)
