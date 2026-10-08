@@ -15,7 +15,12 @@ for name,city,url in urls:
         print("\nURL",url,"LEN",len(html),flush=True)
         print("DETAIL TITLE",_detail_title(html),"DATE",_detail_date_time(html),flush=True)
         if name=="De Helling":
-            print("PARSED",parse_event(html,url,name,city),flush=True)
+            parsed=parse_event(html,url,name,city)
+            print("PARSED",parsed,flush=True)
+            if "high-fade-" in url or "kruidkoek-joost" in url:
+                assert parsed is not None, "Confirmed Helling concert dropped: " + url
+            if "freax-" in url:
+                assert parsed is None, "Club night incorrectly included: " + url
             clean=page_text(html)
             print("TEXT HEAD",clean[:2000],flush=True)
             for term in ("rave","afrobeats","fanparty","disco","clubnacht","nachtclub","clubnight"):
