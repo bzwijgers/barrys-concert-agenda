@@ -2,6 +2,9 @@ name: Publish three verified venues
 
 on:
   workflow_dispatch:
+  schedule:
+    # Daily morning update: 05:00 UTC = 06:00 winter / 07:00 summer (NL).
+    - cron: "0 5 * * *"
   push:
     branches: [main]
     paths:
