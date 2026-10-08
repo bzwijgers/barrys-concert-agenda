@@ -676,6 +676,7 @@ def paradiso_find_recent_sitemap_program_urls(lookback_days=21):
     return urls
 
 PARADISO_RECOVERY_EVENTS = {
+    "https://www.paradiso.nl/nl/programma/honey-im-home/2841259": "2026-12-30",
     "https://www.paradiso.nl/nl/programma/songhoy-blues/2884193": "2026-10-10",
     "https://www.paradiso.nl/nl/programma/lowdown-brass-band/2907014": "2026-10-13",
     "https://www.paradiso.nl/nl/programma/erotic-poetry-night-berlin-special/2924619": "2026-10-16",
