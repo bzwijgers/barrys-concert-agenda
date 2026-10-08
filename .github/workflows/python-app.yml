@@ -157,15 +157,29 @@ jobs:
       - name: Publish concerts.json to main
         id: publish
         run: |
+          # Save the already verified output before synchronising main.
+          # Rebasing two generated JSON feeds creates unnecessary conflicts.
+          cp concerts.json /tmp/validated-concerts.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add concerts.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update concerts.json"
+          for attempt in 1 2 3; do
             git fetch origin main
-            git rebase origin/main
-            git push origin HEAD:main
-          fi
+            git reset --hard origin/main
+            cp /tmp/validated-concerts.json concerts.json
+            git add concerts.json
+            if git diff --cached --quiet; then
+              echo "Concert feed already up-to-date"
+              exit 0
+            fi
+            git commit -m "Update concerts.json"
+            if git push origin HEAD:main; then
+              echo "Concert feed published successfully"
+              exit 0
+            fi
+            echo "Concurrent update detected; retrying publish: $attempt"
+          done
+          echo "Unable to publish validated feed after 3 attempts"
+          exit 1
 
       - name: Record scraper run status
         if: always()
