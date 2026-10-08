@@ -732,6 +732,23 @@ def scrape_paradiso():
     except (OSError, ValueError, TypeError) as error:
         print("Paradiso vorige feed niet beschikbaar:", error)
 
+    # Herstelbestand met de 16 concrete concerten die op 8 oktober 2026
+    # door onvolledige scrapes uit de feed verdwenen. Live verwerking wint
+    # altijd; deze gegevens worden alleen als laatste redmiddel gebruikt.
+    try:
+        with open("scrapers/paradiso_recovery.json", "r", encoding="utf-8") as history_file:
+            historic_events = json.load(history_file)
+        for item in historic_events:
+            if (
+                isinstance(item, dict)
+                and item.get("date", "") >= today_string
+                and item.get("source") in ("Paradiso", "Tolhuistuin")
+                and item.get("url", "").startswith("https://www.paradiso.nl/")
+            ):
+                previous_paradiso.setdefault(normalize_url(item["url"]), item)
+    except (OSError, ValueError, TypeError) as error:
+        print("Paradiso historisch herstelbestand niet beschikbaar:", error)
+
     # Eenmalig herstel voor concerten die vóór deze beveiliging uit de
     # gepubliceerde feed verdwenen. Datums verlopen automatisch.
     for recovered_url, recovered_date in PARADISO_RECOVERY_EVENTS.items():
