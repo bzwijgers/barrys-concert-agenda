@@ -207,12 +207,11 @@ except Exception as error:
 # EXTRA POPPODIA - OFFICIELE AGENDA'S
 # ============================================================
 # Iedere nieuwe bron rapporteert afzonderlijk fouten en aantallen.
-try:
-    additional_concerts = scrape_new_venues()
-    all_concerts.extend(additional_concerts)
-    print("Nieuwe podia samen:", len(additional_concerts), flush=True)
-except Exception as error:
-    print("ERNSTIGE FOUT NIEUWE PODIA:", repr(error), flush=True)
+# A failure in any new venue must stop publication rather than silently
+# replacing the existing complete concerts.json with a partial feed.
+additional_concerts = scrape_new_venues()
+all_concerts.extend(additional_concerts)
+print("Nieuwe podia samen:", len(additional_concerts), flush=True)
 
 
 # ============================================================
