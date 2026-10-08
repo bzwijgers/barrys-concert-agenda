@@ -1,0 +1,62 @@
+name: Publish verified venue updates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "audit/publish_verified_venues.py"
+      - ".github/workflows/targeted-venue-update.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: concert-feed-main
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest verified feed
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit-test source parsers
+        run: |
+          python -m unittest discover -s tests -p "test_podiuminfo_full.py"
+          python -m unittest discover -s tests -p "test_patronaat_coverage.py"
+      - name: Refresh three validated venues without touching other venues
+        run: PYTHONPATH=. python -u audit/publish_verified_venues.py
+      - name: Save validated result as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-updated-concert-feed
+          path: concerts.json
+      - name: Publish latest verified feed
+        run: |
+          cp concerts.json /tmp/targeted-concerts.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/targeted-concerts.json concerts.json
+            git add concerts.json
+            if git diff --cached --quiet; then
+              echo "Published concert feed is already identical"
+              exit 0
+            fi
+            git commit -m "Publish complete verified Amare Bolwerk and Patronaat concert agendas"
+            if git push origin HEAD:main; then
+              echo "Targeted concert feed published successfully"
+              exit 0
+            fi
+          done
+          echo "Could not publish after retries" >&2
+          exit 1
