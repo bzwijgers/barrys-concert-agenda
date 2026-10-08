@@ -140,6 +140,16 @@
     "url": "https://www.effenaar.nl/agenda/monolord-dopelord"
   },
   {
+    "artist": "Northcote (CA) + Tom Jenkins (UK) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/northcote-ca-tom-jenkins-uk"
+  },
+  {
     "artist": "néomí + Romy Liz Roze",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -409,7 +419,8 @@
     "time": "19:15",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/the-apers-1/",
-    "clubCard": false
+    "clubCard": false,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/maladroit-rotterdam-rotown-2026-10-09-CbSFR53UXMVxNKodxWTdf"
   },
   {
     "artist": "Bladerdeeg fest III",
@@ -532,6 +543,16 @@
     "url": "https://www.paard.nl/event/greentea-peng/"
   },
   {
+    "artist": "IOS - ISOOKSCHITTEREND - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/ios-isookschitterend"
+  },
+  {
     "artist": "Kinkajous",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -540,6 +561,16 @@
     "time": "20:00",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/kinkajous/2867121"
+  },
+  {
+    "artist": "Studio Brandstof: The Bane Grams - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/studio-brandstof-the-bane-grams"
   },
   {
     "artist": "Rapalje – Celtic Folk Night",
@@ -560,6 +591,16 @@
     "time": "20:30",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/bare-jams/"
+  },
+  {
+    "artist": "Green Bay - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/green-bay"
   },
   {
     "artist": "Jamie Grey",
@@ -610,6 +651,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/sixpence-none-the-richer/2779816"
+  },
+  {
+    "artist": "Sylvan",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/sylvan-blind-ego"
   },
   {
     "artist": "Paarcafé: Mic Drop",
@@ -992,6 +1043,16 @@
     "url": "https://bird-rotterdam.nl/event/brothers-moving-10-10-2026"
   },
   {
+    "artist": "Kitty, Daisy & Lewis",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/kitty-daisy-lewis"
+  },
+  {
     "artist": "Pete Murray",
     "venue": "SPOT Groningen",
     "city": "Groningen",
@@ -1052,6 +1113,16 @@
     "url": "https://metropool.nl/agenda/new-wave-generation-10-okt"
   },
   {
+    "artist": "Vividly Frank",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "21:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/vividly-frank"
+  },
+  {
     "artist": "Nobu",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -1061,6 +1132,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/nobu-1/",
     "clubCard": false
+  },
+  {
+    "artist": "Dordtse Cultuurnacht 2026 - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-10",
+    "time": "21:45",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/dordtse-cultuurnacht-2026"
   },
   {
     "artist": "2CHARM",
@@ -2298,6 +2379,16 @@
     "url": "https://www.mezz.nl/programma/the-reverend-peytons-big-damn-band/"
   },
   {
+    "artist": "Yawning Man (US) + Hell Valley High - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/yawning-man-us"
+  },
+  {
     "artist": "Young The Giant + Ora The Molecule",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -2518,6 +2609,16 @@
     "url": "https://patronaat.nl/event/masters-of-reality-16-10-26/"
   },
   {
+    "artist": "Catch of the Day: Salmon On A Leash + My Strange Addiction + The Dethleffs - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/catch-of-the-day-salmon-on-a-leash-more"
+  },
+  {
     "artist": "Celine Cairo",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -2668,6 +2769,16 @@
     "url": "https://www.paard.nl/event/paardcafe-fosvor-provisional-angel-morts-2/"
   },
   {
+    "artist": "Rowwen Hèze",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/rowwen-heze-2026"
+  },
+  {
     "artist": "Sophie Hutchings",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -2677,6 +2788,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/sophie-hutchings-1/",
     "clubCard": false
+  },
+  {
+    "artist": "Niels Geusebroek sings Coldplay - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-16",
+    "time": "20:45",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/niels-geusebroek-sings-coldplay"
   },
   {
     "artist": "Beach Boys' Best",
@@ -3019,6 +3140,16 @@
     "url": "https://www.paard.nl/event/paardcafe-hba-on-tour-11/"
   },
   {
+    "artist": "Popronde Dordrecht: MAYTE + Igor + KRAM + Amani + Duygu Alkan + xico - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/popronde-dordrecht-mayte-igor-kram-duygu-alkan-amani"
+  },
+  {
     "artist": "THE NARRATOR",
     "venue": "Little Devil",
     "city": "Tilburg",
@@ -3027,6 +3158,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/120305/the-narrator"
+  },
+  {
+    "artist": "The Slackers (USA) + Leah Farmer & The Badasonics (US) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-slackers-usa"
   },
   {
     "artist": "Thijs Veldhuis",
@@ -3358,6 +3499,16 @@
     "time": "15:30",
     "source": "Bolwerk",
     "url": "https://www.podiuminfo.nl/concert/453725/Apennoten/Het-Bolwerk"
+  },
+  {
+    "artist": "Carl Verheyen",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "16:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/carl-verheyen"
   },
   {
     "artist": "DOTAN - EXTRA SHOW",
@@ -4331,6 +4482,16 @@
     "url": "https://www.paard.nl/event/de-betovering-gerson-main/"
   },
   {
+    "artist": "Dikkie Dik & Dirk Scheele - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "15:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/dikkie-dik-dirk-scheele"
+  },
+  {
     "artist": "MATTEO MYDERWYK (IN HET ACADEMIEHUIS)",
     "venue": "Hedon",
     "city": "Zwolle",
@@ -4420,6 +4581,16 @@
     "time": "19:30",
     "source": "De Helling",
     "url": "https://dehelling.nl/agenda/popronde-utrecht-22-10-2026"
+  },
+  {
+    "artist": "Wolvennest (BE) + Bedsore (IT) + Vigljos (CH) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "19:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/wolvennest-be-bedsore-it"
   },
   {
     "artist": "Baba Zula",
@@ -4874,6 +5045,16 @@
     "url": "https://www.paard.nl/event/paardcafe-rebel-as-a-poet/"
   },
   {
+    "artist": "Pearl Jam by Rearviewmirror + Radiohead by Lost Child - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/pearl-jam-by-rearviewmirror-radiohead-by-lost-child"
+  },
+  {
     "artist": "Voorronde Grote Prijs Breda @ Phoenix",
     "venue": "MEZZ",
     "city": "Breda",
@@ -4942,6 +5123,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/immortal-dance-ade/2915847"
+  },
+  {
+    "artist": "Mell VF - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/mell-vf"
   },
   {
     "artist": "SEGA - Guitar Now - featuring Leif de Leeuw",
@@ -5125,6 +5316,16 @@
     "clubCard": false
   },
   {
+    "artist": "FD Magical Popquiz - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "14:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/fd-magical-popquiz"
+  },
+  {
     "artist": "Left of the Dial",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -5306,6 +5507,16 @@
     "url": "https://patronaat.nl/event/oh-hirshima-barrens-24-10-26/"
   },
   {
+    "artist": "Ronker",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ronker"
+  },
+  {
     "artist": "Snelle",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -5344,6 +5555,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/wodan-boys-2/"
+  },
+  {
+    "artist": "Frank Boeijen - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "20:15",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/frank-boeijen"
   },
   {
     "artist": "ACinDC",
@@ -5594,6 +5815,16 @@
     "time": "12:30",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/ddw-trace-of-dinner-9"
+  },
+  {
+    "artist": "All For One",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-25",
+    "time": "13:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/all-for-one"
   },
   {
     "artist": "BEZERKUS BINGO – Halloween Editie",
@@ -6710,6 +6941,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/mike-d-30-10-2026/"
   },
   {
+    "artist": "Popronde Uden",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/popronde-uden-2026"
+  },
+  {
     "artist": "Benjamin Steer",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -6918,6 +7159,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/dan-whitlam/2885391"
+  },
+  {
+    "artist": "Focus - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/focus"
   },
   {
     "artist": "Noah Guthrie + Roofman",
@@ -7290,6 +7541,16 @@
     "time": "19:45",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/okonski-evita-polidoro"
+  },
+  {
+    "artist": "ABBA Revival",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/abba-revival"
   },
   {
     "artist": "Bartofso",
@@ -8366,16 +8627,6 @@
     "url": "https://www.paradiso.nl/nl/programma/the-howlers/2895925"
   },
   {
-    "artist": "ÃO",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/ao/"
-  },
-  {
     "artist": "Citizen + Modern Color",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -8394,6 +8645,16 @@
     "time": "20:00",
     "source": "Amare",
     "url": "https://www.podiuminfo.nl/concert/460521/Dire-Straits-Experience-The-Long-Highway-Tour/Amare"
+  },
+  {
+    "artist": "Kabaka Pyramid (JAM) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/kabaka-pyramid-jam"
   },
   {
     "artist": "Monkeyjam",
@@ -8416,6 +8677,16 @@
     "url": "https://patronaat.nl/event/rita-dakota-04-11-26/"
   },
   {
+    "artist": "The Obsessed (US) + Svjetlost - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-obsessed-us"
+  },
+  {
     "artist": "WIES",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -8424,6 +8695,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/128736/wies"
+  },
+  {
+    "artist": "ÃO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ao/"
   },
   {
     "artist": "SPYAIR",
@@ -8758,16 +9039,6 @@
     "url": "https://patronaat.nl/event/the-violet-parade-ep-release-05-11-26/"
   },
   {
-    "artist": "Ão",
-    "venue": "Bitterzoet",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/ao/2832033"
-  },
-  {
     "artist": "Frank Boeijen",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -8828,6 +9099,16 @@
     "url": "https://www.paard.nl/event/the-howlers-3/"
   },
   {
+    "artist": "Ão",
+    "venue": "Bitterzoet",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/en/program/ao/2832033"
+  },
+  {
     "artist": "BLØF",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -8836,6 +9117,16 @@
     "time": "20:45",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/blof"
+  },
+  {
+    "artist": "Reggae Central: Mark Wonder & The Rude Cut Band (JA) + Sista SoulJah - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/reggae-central-mark-wonder-the-rude-cut-band-ja-sista-souljah"
   },
   {
     "artist": "MEROL",
@@ -9048,6 +9339,16 @@
     "url": "https://patronaat.nl/event/nieuwe-oogst-kaya-maartje-06-11-26/"
   },
   {
+    "artist": "Loïs Lane - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:15",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/lois-lane"
+  },
+  {
     "artist": "O.R.k.",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -9129,6 +9430,16 @@
     "clubCard": false
   },
   {
+    "artist": "TAXITAXI + Vera & The Sleepover Club - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/taxitaxi"
+  },
+  {
     "artist": "The Fatal Flowers",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -9167,6 +9478,16 @@
     "time": "20:30",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/wow-factor"
+  },
+  {
+    "artist": "Zuco 103",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/zuco-103"
   },
   {
     "artist": "Fink",
@@ -9500,6 +9821,16 @@
     "url": "https://poppodiumboerderij.nl/programma/frankboeijen/"
   },
   {
+    "artist": "Gruppo Sportivo - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/gruppo-sportivo-afscheidsshow"
+  },
+  {
     "artist": "Mark Ambor",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -9508,6 +9839,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/mark-ambor/2941083"
+  },
+  {
+    "artist": "O.R.k.",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ork"
   },
   {
     "artist": "Ploegendienst + C’est Qui, GRGY",
@@ -9750,6 +10091,16 @@
     "url": "https://www.podiuminfo.nl/concert/449994/Church-of-Cash/Het-Bolwerk"
   },
   {
+    "artist": "Vengeance",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "16:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/vengeance"
+  },
+  {
     "artist": "Jeremy Pinnell",
     "venue": "Café Wilhelmina",
     "city": "Eindhoven",
@@ -9758,6 +10109,16 @@
     "time": "17:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/jeremy-pinnell"
+  },
+  {
+    "artist": "Helldriver",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "18:15",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/helldriver-2026"
   },
   {
     "artist": "FINK",
@@ -11105,6 +11466,16 @@
     "url": "https://www.effenaar.nl/agenda/vroegzat-13nov"
   },
   {
+    "artist": "Wild Ones",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/wild-ones-2026"
+  },
+  {
     "artist": "Yndling",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -11123,6 +11494,16 @@
     "time": "19:45",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/52113717/caro-13-11-2026/"
+  },
+  {
+    "artist": "Clobber (UK) + Pressure Pact + M.U.G. - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/clobber-uk"
   },
   {
     "artist": "Diggy Dex • Phil",
@@ -11223,6 +11604,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/en/program/suzan-freek/2942224"
+  },
+  {
+    "artist": "The Hillbilly Moonshiners",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/the-hillbilly-moonshiners"
   },
   {
     "artist": "The Next Movement",
@@ -11446,6 +11837,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/71531752/coos-14-11-2026/"
   },
   {
+    "artist": "Employed To Serve (UK) + CABAL (DK) + Cold Culture (DK) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "19:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/employed-to-serve-uk-cabal-dk-cold-culture-dk"
+  },
+  {
     "artist": "FLEMMING",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -11574,6 +11975,26 @@
     "time": "20:00",
     "source": "Dynamo",
     "url": "https://www.podiuminfo.nl/concert/497262/House-Mussen/Dynamo"
+  },
+  {
+    "artist": "The Elvis Concert (US) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-elvis-concert-us"
+  },
+  {
+    "artist": "305",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/305-album-release"
   },
   {
     "artist": "Delany",
@@ -12851,6 +13272,16 @@
     "url": "https://www.paard.nl/event/krav-boca/"
   },
   {
+    "artist": "MonkeyJam",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/monkeyjam-19nov"
+  },
+  {
     "artist": "Pitou + Lifeloan",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -13163,6 +13594,16 @@
     "url": "https://www.mezz.nl/programma/bso-x-reboot/"
   },
   {
+    "artist": "De Hardheid + Politie Warnsveld + ZOEKHETUITMAN - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/de-hardheid"
+  },
+  {
     "artist": "Emmy d’Arc",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -13291,6 +13732,26 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/merol"
+  },
+  {
+    "artist": "Call It Off - Eras Tour Goes Poppunk + Biddy Early - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/call-it-off-era-tour-goes-poppunk"
+  },
+  {
+    "artist": "King Of The World",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/king-of-the-world"
   },
   {
     "artist": "Momoko Gill",
@@ -13462,6 +13923,16 @@
     "time": "14:00",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/explore-the-north"
+  },
+  {
+    "artist": "Masters of Metal",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "15:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/masters-of-metal-2026"
   },
   {
     "artist": "Queerhoven Townhall",
@@ -14016,6 +14487,16 @@
     "url": "https://www.paradiso.nl/nl/programma/super-sonic-jazz-festival-isaiah-collier-plays-coltrane/2907943"
   },
   {
+    "artist": "Morbidfest: I Am Morbid (US) + Atheist (US) + Cancer (UK) + Narcotic Wasteland (US) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "18:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/morbidfest-i-am-morbid-us-atheist-us-cancer-uk-narcotic-wasteland-us"
+  },
+  {
     "artist": "jet van der steen",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -14094,6 +14575,16 @@
     "time": "20:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/58319183/delany-22-11-2026/"
+  },
+  {
+    "artist": "Ellen ten Damme",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ellen-ten-damme"
   },
   {
     "artist": "LORDS OF ALTAMONT",
@@ -14659,6 +15150,16 @@
     "url": "https://www.paradiso.nl/nl/programma/koosje/2894184"
   },
   {
+    "artist": "Liturgy solo (US) + Iskandr @ Wilhelminakerk - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/liturgy-solo-wilhelminakerk"
+  },
+  {
     "artist": "NAFT",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -14848,6 +15349,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/sons-3/"
+  },
+  {
+    "artist": "Sugar Spine + Braces @ Popcentrale - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/sugar-spine-braces-popcentrale"
   },
   {
     "artist": "Startblok Finale",
@@ -15193,6 +15704,16 @@
     "url": "https://www.013.nl/programma/128467/crush-xl-presents"
   },
   {
+    "artist": "Dordrecht Blues Night: Ian Siegal (UK) + Minko - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/dordrecht-blues-night-ian-siegal-uk-minko"
+  },
+  {
     "artist": "Flemming",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -15323,6 +15844,16 @@
     "url": "https://www.podiuminfo.nl/concert/449997/The-Fortunate-Sons/Het-Bolwerk"
   },
   {
+    "artist": "The Smiths Presumably",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/the-smiths-presumably-2026"
+  },
+  {
     "artist": "Timebox",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -15401,6 +15932,16 @@
     "time": "21:15",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/the-veils-4"
+  },
+  {
+    "artist": "Bonkers Bingo - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "21:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/bonkers-bingo"
   },
   {
     "artist": "PANN 25+",
@@ -15613,16 +16154,6 @@
     "url": "https://www.podiuminfo.nl/concert/487820/Shivam-Rajaram-10-jarig-bestaan-Baithak-Gana-Group-Natraj/Amare"
   },
   {
-    "artist": "Ão",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/ao"
-  },
-  {
     "artist": "Elmiene",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -15641,6 +16172,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/jack-shore-flaire/"
+  },
+  {
+    "artist": "Kaz Bałagane (PL) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/kaz-balagane"
   },
   {
     "artist": "Mietze Conte",
@@ -15663,6 +16204,16 @@
     "url": "https://www.paard.nl/event/prins-s-en-de-geit-x-residentie-orkest/"
   },
   {
+    "artist": "Shantel & Bucovina Club Orkestar (DE) + De Stokers - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/shantel-bucovina-club-orkestar-de"
+  },
+  {
     "artist": "stay away from dante!",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -15683,6 +16234,16 @@
     "url": "https://www.spotgroningen.nl/programma/subterranean-street-society-2"
   },
   {
+    "artist": "Tawny For A Dollar",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/tawny-for-a-dollar"
+  },
+  {
     "artist": "The Veils",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -15691,6 +16252,16 @@
     "time": "20:00",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/the-veils-2"
+  },
+  {
+    "artist": "Ão",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/ao"
   },
   {
     "artist": "Kingfishr",
@@ -15731,6 +16302,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/pongo/2896697"
+  },
+  {
+    "artist": "Studio Brandstof: L'Appel Du Vide - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/studio-brandstof-lappel-du-vide"
   },
   {
     "artist": "The Hillbilly Moonshiners",
@@ -15862,6 +16443,16 @@
     "time": "15:00",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/bezerkus-bingo-2"
+  },
+  {
+    "artist": "MKO",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "15:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/mko"
   },
   {
     "artist": "Sido Martens",
@@ -16787,6 +17378,16 @@
     "url": "https://www.podiuminfo.nl/concert/480367/State-Power/Dynamo"
   },
   {
+    "artist": "Treasure (Bruno Mars Tribute) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/treasure-bruno-mars-tribute-2"
+  },
+  {
     "artist": "Waterfront + Bonno Getz",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -17330,6 +17931,16 @@
     "url": "https://www.neushoorn.nl/events/friday"
   },
   {
+    "artist": "Let’s Go RØAK: Funky Friday",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "21:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/lets-go-roak-funky-friday"
+  },
+  {
     "artist": "Sarah Julia",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -17592,6 +18203,16 @@
     "url": "https://www.podiuminfo.nl/concert/480763/Bert-Heerink-Andre-Becker/Het-Bolwerk"
   },
   {
+    "artist": "China Crisis",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/china-crisis-1"
+  },
+  {
     "artist": "Gotu Jim",
     "venue": "Metropool Enschede",
     "city": "Enschede",
@@ -17662,6 +18283,16 @@
     "url": "https://www.spotgroningen.nl/programma/emo-night-mainland-6"
   },
   {
+    "artist": "The Dirty Daddies - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-dirty-daddies-2"
+  },
+  {
     "artist": "Alice Olsthoorn",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -17671,6 +18302,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/alice-olsthoorn/",
     "clubCard": false
+  },
+  {
+    "artist": "Týr + Twilight Force",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "13:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/tyr-twilight-force"
   },
   {
     "artist": "Baroeg On Tour @ SoundVille: ITGOW presents: Torturerama + Mancuerda + Daemorthan",
@@ -18466,6 +19107,26 @@
     "url": "https://www.effenaar.nl/agenda/emm-warm-up-2026"
   },
   {
+    "artist": "Paceshifters play Nirvana - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/paceshifters-play-nirvana"
+  },
+  {
+    "artist": "Peter & The Test Tube Babies (UK) + Disturbance + De Badslippers - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-10",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/peter-the-test-tube-babies-uk-de-badslippers"
+  },
+  {
     "artist": "POLITIEKE JONGEREN – VERZET! PROTEST!",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -18699,6 +19360,16 @@
     "url": "https://www.paradiso.nl/nl/programma/customs/2889452"
   },
   {
+    "artist": "FRIDAY",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "19:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/friday"
+  },
+  {
     "artist": "ISABÈL USHER",
     "venue": "Hedon",
     "city": "Zwolle",
@@ -18747,6 +19418,16 @@
     "time": "19:30",
     "source": "Hedon",
     "url": "https://hedon-zwolle.nl/voorstelling/32741/the-scene"
+  },
+  {
+    "artist": "Frans Huxie (reünieshow) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/frans-huxie-reunieshow"
   },
   {
     "artist": "Gotu Jim",
@@ -18898,6 +19579,16 @@
     "time": "21:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/davina-michelle-3/"
+  },
+  {
+    "artist": "Fabulous 90's",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "21:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/fabulous90s"
   },
   {
     "artist": "Lézard",
@@ -19693,16 +20384,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/48443390/jan-van-duikeren-marcel-veenendaal-16-12-2026/"
   },
   {
-    "artist": "Árstíðir",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-12-16",
-    "time": "19:30",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/22804567/arstidir-16-12-2026/"
-  },
-  {
     "artist": "Dylan LeBlanc",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -19731,6 +20412,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/61998136/jaimi-faulkner-16-12-2026/"
+  },
+  {
+    "artist": "Árstíðir",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-16",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/22804567/arstidir-16-12-2026/"
   },
   {
     "artist": "Accept",
@@ -19913,6 +20604,16 @@
     "url": "https://www.mezz.nl/programma/lezard/"
   },
   {
+    "artist": "MonkeyJam",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/monkeyjam-17dec"
+  },
+  {
     "artist": "My Baby",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -19964,16 +20665,6 @@
     "clubCard": false
   },
   {
-    "artist": "Árstíðir",
-    "venue": "SPOT Groningen",
-    "city": "Groningen",
-    "country": "NL",
-    "date": "2026-12-17",
-    "time": "20:30",
-    "source": "SPOT Groningen",
-    "url": "https://www.spotgroningen.nl/programma/arstidir"
-  },
-  {
     "artist": "Gotu Jim",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -19982,6 +20673,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/gotu-jim/2892814"
+  },
+  {
+    "artist": "Árstíðir",
+    "venue": "SPOT Groningen",
+    "city": "Groningen",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:30",
+    "source": "SPOT Groningen",
+    "url": "https://www.spotgroningen.nl/programma/arstidir"
   },
   {
     "artist": "Apeshit",
@@ -20215,6 +20916,16 @@
     "url": "https://www.paradiso.nl/nl/programma/gerson-main/2939679"
   },
   {
+    "artist": "Progproms V",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/progproms-v"
+  },
+  {
     "artist": "The Doors Alive",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -20263,6 +20974,16 @@
     "time": "21:00",
     "source": "De Helling",
     "url": "https://dehelling.nl/agenda/no-barrier-x-mas-special-18-12-2026"
+  },
+  {
+    "artist": "The Dirty Daddies - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-dirty-daddies-3"
   },
   {
     "artist": "The Hillbilly Moonshiners",
@@ -20496,6 +21217,16 @@
     "url": "https://www.paradiso.nl/nl/programma/michelle-david-the-true-tones-festival/2887286"
   },
   {
+    "artist": "The Doors Alive",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/the-doors-alive-2026"
+  },
+  {
     "artist": "The Hillbilly Moonshiners",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -20526,6 +21257,16 @@
     "url": "https://www.effenaar.nl/agenda/christmas-sing-a-long19dec"
   },
   {
+    "artist": "Finale Grote Prijs van Dordt - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/finale-grote-prijs-van-dordt-3"
+  },
+  {
     "artist": "Gary Moore Tribute Memorial Tour \"Walking by myself\"",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -20544,6 +21285,16 @@
     "time": "21:00",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/kromow"
+  },
+  {
+    "artist": "The Dirty Daddies - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-dirty-daddies-4"
   },
   {
     "artist": "Lucky Fonz III",
@@ -20675,6 +21426,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/81964810/thijs-boontjes-20-12-2026/"
+  },
+  {
+    "artist": "Blackbird - Kerstshow - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/blackbird-kerstshow"
   },
   {
     "artist": "Doodswens",
@@ -21026,7 +21787,8 @@
     "date": "2026-12-27",
     "time": "16:00",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321"
+    "url": "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/30-jaar-excelsior-recordings-amsterdam-tolhuistuin-2026-12-27-CbhnzqXEdczxvu7WzXVv9"
   },
   {
     "artist": "John the Revelator – Nothing But The Blues – Haarlem Blues Oudjaarsconcert",
@@ -21320,6 +22082,16 @@
     "url": "https://gebouw-t.nl/agenda/crazy-little-things-10"
   },
   {
+    "artist": "MegaMuziekQuiz - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-02",
+    "time": "19:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/megamuziekquiz-4"
+  },
+  {
     "artist": "Raymond van het Groenewoud",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -21501,6 +22273,36 @@
     "url": "https://www.effenaar.nl/agenda/dirty-daddies-8jan27"
   },
   {
+    "artist": "Drukwerk",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-08",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/drukwerk"
+  },
+  {
+    "artist": "h Natural: Steve Hogarth (Marillion) (UK) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-08",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/h-natural-steve-hogarth-marillion-uk"
+  },
+  {
+    "artist": "New Cool Collective - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-08",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/new-cool-collective-2"
+  },
+  {
     "artist": "Rutger van Barneveld & Justen de Wildt + Support + DJ René CD",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -21651,6 +22453,16 @@
     "url": "https://www.doornroosje.nl/event/vroegzat-12"
   },
   {
+    "artist": "The Dutch Queen - 50 jaar 'Somebody To Love' - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-09",
+    "time": "20:45",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-dutch-queen-tribute-50-jaar-somebody-to-love"
+  },
+  {
     "artist": "The James Brown Experience",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -21659,6 +22471,26 @@
     "time": "20:45",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/james-brown"
+  },
+  {
+    "artist": "Altoooooh!",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-09",
+    "time": "21:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/altoooooh-2027"
+  },
+  {
+    "artist": "The Wanderers - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-09",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-wanderers"
   },
   {
     "artist": "WC Experience",
@@ -21861,6 +22693,16 @@
     "url": "https://gebouw-t.nl/agenda/dewolff-4"
   },
   {
+    "artist": "Planet Pul",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-15",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/planet-pul"
+  },
+  {
     "artist": "Fleddy Melculy",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -21869,6 +22711,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/fleddy-melculy"
+  },
+  {
+    "artist": "ACinDC - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-15",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/acindc-2"
   },
   {
     "artist": "Drukwerk - Schijn Een Lichtje Op Mij",
@@ -21970,6 +22822,16 @@
     "time": "11:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/paradiso-korendagen-2027---zaterdag/2807453"
+  },
+  {
+    "artist": "Fatfest",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-16",
+    "time": "19:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/fatfest-2027"
   },
   {
     "artist": "Midjonno Prog 2",
@@ -22110,6 +22972,16 @@
     "time": "11:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/paradiso-korendagen-2027---zondag/2807461"
+  },
+  {
+    "artist": "Jan Akkerman 80",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-17",
+    "time": "15:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/jan-akkerman-80"
   },
   {
     "artist": "Isaiah Rashad",
@@ -22504,6 +23376,16 @@
     "url": "https://www.neushoorn.nl/events/pelican-dealer"
   },
   {
+    "artist": "The Fortunate Sons - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-fortunate-sons"
+  },
+  {
     "artist": "Yong Yello",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -22674,6 +23556,16 @@
     "url": "https://poppodiumboerderij.nl/programma/bjornriis/"
   },
   {
+    "artist": "Daredevils - Zing Nederlands Met Me - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/daredevils-zing-nederlands-met-me-2"
+  },
+  {
     "artist": "Genesis Project – Philled with Collins",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -22692,6 +23584,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/gilla-band/2896446"
+  },
+  {
+    "artist": "KÖFN (TR) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/kofn-tr"
   },
   {
     "artist": "Made in Purple",
@@ -22812,6 +23714,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/gallowstreet/2884634"
+  },
+  {
+    "artist": "Richie Malone & Leon Cave feat. Belgian Quo",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-24",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/richie-malone-leon-cave-feat-belgian-quo-band"
   },
   {
     "artist": "Josh Rouse",
@@ -23144,6 +24056,16 @@
     "url": "https://www.mezz.nl/programma/dewolff-2/"
   },
   {
+    "artist": "Dordtje Pop: KLINKT GOED + Mensenkinderen + See Sharp - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/dordtje-pop-klinkt-goed-mensenkinderen-see-sharp"
+  },
+  {
     "artist": "HET GOEDE DOEL®",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -23184,16 +24106,6 @@
     "url": "https://dbstudio.nl/event/zzz-stuurbaard-bakkebaard"
   },
   {
-    "artist": "‘LET LOVE RULE’ – songs by Lenny Kravitz, performed by Ro Krom",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "20:15",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/"
-  },
-  {
     "artist": "Erwin Nyhoff & The Prodigal Sons",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -23212,6 +24124,16 @@
     "time": "20:15",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/young-gun-silver-fox-4"
+  },
+  {
+    "artist": "‘LET LOVE RULE’ – songs by Lenny Kravitz, performed by Ro Krom",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/"
   },
   {
     "artist": "ANOTHER TASTE",
@@ -23272,6 +24194,26 @@
     "time": "21:00",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/clan-of-xymox-2"
+  },
+  {
+    "artist": "The Hillbilly Moonshiners - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-hillbilly-moonshiners"
+  },
+  {
+    "artist": "Studio Brandstof: KLINKT GOED - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "22:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/studio-brandstof-klinkt-goed"
   },
   {
     "artist": "Intercell",
@@ -23372,6 +24314,16 @@
     "time": "20:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/extince-30-jaar-spraakwater-30-01-27/"
+  },
+  {
+    "artist": "Rockparty Of The Year",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/rockparty-of-the-year"
   },
   {
     "artist": "The Mary Wallopers",
@@ -23985,6 +24937,16 @@
     "url": "https://www.013.nl/programma/127140/feuerengel"
   },
   {
+    "artist": "Leif de Leeuw Band - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-05",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/leif-de-leeuw-band-2"
+  },
+  {
     "artist": "Mooi Wark",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -24565,6 +25527,16 @@
     "url": "https://www.paradiso.nl/nl/programma/fulu-miziki/2910807"
   },
   {
+    "artist": "Magazines",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-02-12",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/magazines"
+  },
+  {
     "artist": "Pink Floyd Project -  \"The Full Circle\" clubtour",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -24843,6 +25815,16 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/mothica-14-02-2027/"
+  },
+  {
+    "artist": "Lost Society (FI) + HOKKA (FI) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-14",
+    "time": "19:40",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/lost-society-fi-hokka-fi"
   },
   {
     "artist": "Charlie Cunningham",
@@ -25338,6 +26320,16 @@
     "url": "https://patronaat.nl/event/m-o-b-presents-de-hardheid-eskalatie-19-02-27/"
   },
   {
+    "artist": "Ruben Hillen - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/ruben-hillen"
+  },
+  {
     "artist": "THE LEGENDARY PINK DOTS",
     "venue": "dB's",
     "city": "Utrecht",
@@ -25619,6 +26611,16 @@
     "url": "https://metropool.nl/agenda/the-dirty-daddies-20-feb"
   },
   {
+    "artist": "The Tool Experience",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/the-tool-experience"
+  },
+  {
     "artist": "ABBA Fever",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -25667,6 +26669,16 @@
     "time": "15:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/riffsniffer-presents-colour-haze-smokemaster/"
+  },
+  {
+    "artist": "Connolly Hayes",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-02-21",
+    "time": "15:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/connolly-hayes"
   },
   {
     "artist": "The Womack Sisters",
@@ -25757,6 +26769,16 @@
     "time": "20:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/the-tool-experience-previous-the-perfect-tool-21-02-27/"
+  },
+  {
+    "artist": "Fuzz Top - ZZ Top Tribute (FR) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-21",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/fuzz-top-zz-top-tribute-fr"
   },
   {
     "artist": "Lee Rocker",
@@ -26040,6 +27062,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/drama-25-02-2027/"
   },
   {
+    "artist": "Mad Caddies (US) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/mad-caddies-us"
+  },
+  {
     "artist": "Wende",
     "venue": "Maassilo",
     "city": "Rotterdam",
@@ -26271,6 +27303,16 @@
     "url": "https://www.paradiso.nl/nl/programma/julia-jacklin/2897147"
   },
   {
+    "artist": "Ozric Tentacles",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ozric-tentacles"
+  },
+  {
     "artist": "Wegsfeer + Swart - De Ultieme New Wave Tribute Band",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -26289,6 +27331,16 @@
     "time": "20:45",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/heideroosjes-2"
+  },
+  {
+    "artist": "The Dirty Daddies - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-dirty-daddies-9"
   },
   {
     "artist": "Kakkmaddafakka",
@@ -26349,6 +27401,16 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/kakkmaddafakka-27-02-2027/"
+  },
+  {
+    "artist": "British Invasion",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/british-invasion-2027"
   },
   {
     "artist": "Chef’Special",
@@ -26481,6 +27543,16 @@
     "url": "https://gebouw-t.nl/agenda/daredevils-2027"
   },
   {
+    "artist": "The Dirty Daddies - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-dirty-daddies"
+  },
+  {
     "artist": "Fatoumata Diawara",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -26519,6 +27591,16 @@
     "time": "14:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/chefspecial-rider-28-02-27/"
+  },
+  {
+    "artist": "The Clarks ft. Rinus Gerritsen & Cesar Zuiderwijk",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-02-28",
+    "time": "16:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/the-clarks-rinus-gerritsen-cesar-zuiderwijk"
   },
   {
     "artist": "Amble",
@@ -26973,6 +28055,16 @@
     "url": "https://www.paradiso.nl/nl/programma/kaya-imani/2884450"
   },
   {
+    "artist": "The Clarks feat. Rinus Gerritsen & Cesar Zuiderwijk - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-03-05",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-clarks-feat-rinus-gerritsen-cesar-zuiderwijk"
+  },
+  {
     "artist": "The Dirty Daddies – Let The Good Times Roll",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -26991,6 +28083,16 @@
     "time": "20:45",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/de-staat-14"
+  },
+  {
+    "artist": "De Kift - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-03-05",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/de-kift-2"
   },
   {
     "artist": "Hallo Venray",
@@ -27053,6 +28155,16 @@
     "url": "https://www.paradiso.nl/en/program/longo-longo/2939233"
   },
   {
+    "artist": "80's Verantwoord",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/80s-verantwoord-2027"
+  },
+  {
     "artist": "One Vision of Queen ft Marc Martel",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -27071,6 +28183,16 @@
     "time": "20:00",
     "source": "dB's",
     "url": "https://dbstudio.nl/event/orchestre-tout-puissant-marcel-duchamp"
+  },
+  {
+    "artist": "OZZYfied - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/ozzyfied"
   },
   {
     "artist": "The Dutch Queen: 50 jaar Somebody To Love",
@@ -27705,6 +28827,16 @@
     "url": "https://www.013.nl/programma/135844/van-dik-hout"
   },
   {
+    "artist": "Cooking with Knopfler",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/cooking-with-knoplfer"
+  },
+  {
     "artist": "Dirty Sound Magnet",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -27733,6 +28865,16 @@
     "time": "20:45",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/fleddy-melculy"
+  },
+  {
+    "artist": "Black Bottle Riot",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "21:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/black-bottle-riot-2027"
   },
   {
     "artist": "Ozzyfied",
@@ -28135,6 +29277,16 @@
     "url": "https://baroeg.nl/productie/uuhai-blossom-cult-muhurta/"
   },
   {
+    "artist": "Black-Out: Wegsfeer (BE) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "19:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/black-out-wegsfeer-be"
+  },
+  {
     "artist": "DAREDEVILS: ZING NEDERLANDS MET ME",
     "venue": "Hedon",
     "city": "Zwolle",
@@ -28223,6 +29375,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/physicalgraffiti/"
+  },
+  {
+    "artist": "St. Patricks Day: SCRUM",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/scrum"
   },
   {
     "artist": "Stephanie Struijk",
@@ -28697,6 +29859,16 @@
     "url": "https://www.paradiso.nl/nl/programma/dubioza-kolektiv/2908030"
   },
   {
+    "artist": "Ian Paice & Purpendicular",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ian-paice-purpendicular"
+  },
+  {
     "artist": "Luicidal",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -28825,6 +29997,16 @@
     "time": "20:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/tributeconcert-riplive-remembering-2026-27-03-27/"
+  },
+  {
+    "artist": "Ultimate Eagles",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-27",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ultimate-eagles-2027"
   },
   {
     "artist": "Physical Graffiti performing Led Zeppelin",
@@ -29187,6 +30369,16 @@
     "url": "https://bird-rotterdam.nl/event/saul-williams-02-04-2027"
   },
   {
+    "artist": "The Crazy World of Arthur Brown",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-04-02",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/the-crazy-world-of-arthur-brown"
+  },
+  {
     "artist": "Buster Shuffle + Antillectual",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -29326,6 +30518,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/132836/ilse-delange"
+  },
+  {
+    "artist": "Kraak & Smaak",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/kraak-smaak"
   },
   {
     "artist": "Modder + Lintworm",
@@ -29540,6 +30742,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/17344951/ao-08-04-2027/"
   },
   {
+    "artist": "FOREVER NU: Chop Suey + SlipNot + Blimp Bizkit + LP Tribute (UK) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-04-08",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/forever-nu-chop-suey-slipnot-blimp-bizkit-lp-tribute-uk"
+  },
+  {
     "artist": "Ruben Hillen",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -29681,6 +30893,16 @@
     "url": "https://metropool.nl/agenda/40-jaar-hallo-venray"
   },
   {
+    "artist": "Blackbird",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-04-09",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/blackbird"
+  },
+  {
     "artist": "Jools Holland and his Rhythm and Blues Orchestra",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -29791,6 +31013,16 @@
     "url": "https://www.neushoorn.nl/events/uuhai"
   },
   {
+    "artist": "ACinDC",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-04-10",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/acindc-2027"
+  },
+  {
     "artist": "Extince",
     "venue": "Metropool Enschede",
     "city": "Enschede",
@@ -29829,6 +31061,16 @@
     "time": "21:00",
     "source": "Gebouw-T",
     "url": "https://gebouw-t.nl/agenda/the-elvis-concert-2027"
+  },
+  {
+    "artist": "Voltage - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-04-10",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/voltage"
   },
   {
     "artist": "Chef'Special",
@@ -30343,6 +31585,16 @@
     "url": "https://dehelling.nl/agenda/buntspecht-17-04-2027"
   },
   {
+    "artist": "Plackband + For Absent Friends - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-04-17",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/plackband-for-absent-friends"
+  },
+  {
     "artist": "Blackbird",
     "venue": "Gebouw-T",
     "city": "Bergen op Zoom",
@@ -30573,6 +31825,16 @@
     "url": "https://bird-rotterdam.nl/event/kraak-smaak-22-04-27"
   },
   {
+    "artist": "Wishbone Ash (UK) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-04-22",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/wishbone-ash"
+  },
+  {
     "artist": "Zoë Livay",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -30741,6 +32003,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/23814001/jim-gardner-24-04-2027/"
+  },
+  {
+    "artist": "Pulverize Metalfest",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-04-24",
+    "time": "19:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/pulverize-metalfest-2027"
   },
   {
     "artist": "An Evening With The Pineapple Thief Far and wide - European tour 2027",
@@ -30994,6 +32266,16 @@
     "url": "https://www.013.nl/programma/153896/zoë-livay"
   },
   {
+    "artist": "Michael Jackson Project ft. Jared Grant - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-04-30",
+    "time": "20:15",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/michael-jackson-project-ft-jared-grant"
+  },
+  {
     "artist": "Black Box Revelation",
     "venue": "Gebouw-T",
     "city": "Bergen op Zoom",
@@ -31164,6 +32446,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/stereo-mcs-06-05-2027/"
   },
   {
+    "artist": "First Time Flyers (UK) - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-05-06",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/first-time-flyers-uk"
+  },
+  {
     "artist": "Johnny Delaware",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -31182,6 +32474,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/161454/bente"
+  },
+  {
+    "artist": "Gosse Bosma (release show) + ZOEKHETUITMAN + Asbest - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-05-07",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/gosse-bosma-release-show-zoekhetuitman-asbest"
   },
   {
     "artist": "Mood Bored",
@@ -31736,6 +33038,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/jeangu-macrooy-22-05-2027/"
   },
   {
+    "artist": "Julian Sas",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-05-22",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/julian-sas-2027"
+  },
+  {
     "artist": "StillMarillion",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -31877,6 +33189,16 @@
     "url": "https://www.spotgroningen.nl/programma/magnificent-seven"
   },
   {
+    "artist": "Massada + Hans Dulfer - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-05-29",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/massada-hans-dulfer"
+  },
+  {
     "artist": "Benjamin Herman Trio ft. BIGYUKI - The Tokyo Sessions",
     "venue": "Amare",
     "city": "Den Haag",
@@ -32008,6 +33330,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/89231258/slagerij-van-kampen-10-06-2027/"
   },
   {
+    "artist": "Wende - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-06-10",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/wende"
+  },
+  {
     "artist": "CineMusic Filmorkest - 20 Films Live in Concert",
     "venue": "Amare",
     "city": "Den Haag",
@@ -32108,6 +33440,16 @@
     "url": "https://www.paradiso.nl/nl/programma/luminosity-20-years-anniversary/2915396"
   },
   {
+    "artist": "Bob Marley Tribute by Rootsriders: Exodus50 - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-06-25",
+    "time": "20:45",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/bob-marley-tribute-by-rootsriders-exodus50"
+  },
+  {
     "artist": "Stef Bos",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -32116,6 +33458,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/61338998/stef-bos-26-06-2027/"
+  },
+  {
+    "artist": "StillMarillion",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-06-26",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/stillmarillion-2027"
   },
   {
     "artist": "The Royal Dutch Scam Do It Again: the Best of Steely Dan",
@@ -32358,6 +33710,16 @@
     "url": "https://metropool.nl/agenda/faaschtbankler"
   },
   {
+    "artist": "Donna's Hot Stuff - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-09-11",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/donnas-hot-stuff"
+  },
+  {
     "artist": "Gilbert O’Sullivan",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -32557,6 +33919,16 @@
     "time": "20:30",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/trockener-kecks"
+  },
+  {
+    "artist": "U2Two - Bibelot",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-10-22",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/u2two-3"
   },
   {
     "artist": "Bettie Serveert",
