@@ -1,0 +1,27 @@
+name: Stop superseded feed publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/cancel-stale-concert-scraper.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel older full scrape started before link-preservation repair
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/37852114761/cancel" && {
+            echo "Older workflow cancellation accepted"
+            exit 0
+          }
+          # If it already completed, GitHub may respond with 409/422.
+          echo "Review the old run state; cancellation was not accepted"
+          exit 1
