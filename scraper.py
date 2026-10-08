@@ -292,6 +292,42 @@ if source013_count_before_save < 25:
 
 
 # ============================================================
+# CONTROLE: HERSTELDE BRONNEN MOGEN NIET STIL VERDWIJNEN
+# ============================================================
+# Existing future events provide a moving baseline; unlike a fixed
+# minimum this safely decreases as old shows pass.
+try:
+    with open("concerts.json", encoding="utf-8") as existing_file:
+        previously_published = json.load(existing_file)
+except (OSError, ValueError, TypeError):
+    previously_published = []
+
+today_iso = datetime.now().date().isoformat()
+protected_sources = (
+    "TivoliVredenburg", "Hedon", "Neushoorn", "Patronaat",
+    "Amare", "Bolwerk", "BIRD", "Metropool", "Gebouw-T", "dB's"
+)
+for protected_source in protected_sources:
+    prev_count = sum(
+        x.get("source") == protected_source and x.get("date", "") >= today_iso
+        for x in previously_published if isinstance(x, dict)
+    )
+    new_count = sum(
+        x.get("source") == protected_source and x.get("date", "") >= today_iso
+        for x in all_concerts
+    )
+    minimum = max(1, int(prev_count * 0.70))
+    if new_count < minimum:
+        raise RuntimeError(
+            "VEILIGHEIDSSTOP: " + protected_source
+            + " has " + str(new_count) + " events versus "
+            + str(prev_count) + " in previous feed. Refusing partial publication."
+        )
+    print("Coverage protection:", protected_source,
+          new_count, "previous", prev_count, flush=True)
+
+
+# ============================================================
 # PARADISO: STOP BIJ ONVOLLEDIGE FEED
 # ============================================================
 # Paradiso + Tolhuistuin hoort een substantieel toekomstig programma
