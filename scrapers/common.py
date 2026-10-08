@@ -521,7 +521,7 @@ def scrape_tivolivredenburg():
             # The /agenda/page/N/ pagination links are not actual events.
             page_urls = [
                 url for url in find_site_event_urls(page, base, "/agenda/")
-                if re.search(r"/agenda/\\d+/", url)
+                if re.search(r"/agenda/\d+/", url)
             ]
             if page_number == 1 and not page_urls:
                 raise RuntimeError("Tivoli genre " + genre + " returned no event URLs")
@@ -531,11 +531,11 @@ def scrape_tivolivredenburg():
                     seen.add(key)
                     urls.append(url)
                     genre_found += 1
-            next_pattern = (
-                r"/agenda/page/" + str(page_number + 1)
-                + r"/\\?sf_genre=" + re.escape(genre) + r"(?:[&\\\"'<>]|$)"
+            next_url = (
+                "/agenda/page/" + str(page_number + 1)
+                + "/?sf_genre=" + genre
             )
-            has_next = bool(re.search(next_pattern, page, flags=re.I))
+            has_next = next_url in page
             if not has_next:
                 break
         else:
