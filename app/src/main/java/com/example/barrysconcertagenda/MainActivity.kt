@@ -1110,7 +1110,7 @@ fun ConcertApp() {
                                             .sortedWith(String.CASE_INSENSITIVE_ORDER)
                                         Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                                             Text(
-                                                "$" + "{mainVenue} — $" + "{venueCities.getValue(mainVenue)}" +
+                                                mainVenue + " — " + venueCities.getValue(mainVenue) +
                                                     if (mainVenue in pendingVenues) " (in voorbereiding)" else "",
                                                 fontWeight = FontWeight.Bold,
                                                 fontSize = 16.sp
