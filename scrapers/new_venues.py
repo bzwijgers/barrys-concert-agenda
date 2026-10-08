@@ -406,7 +406,8 @@ def scrape_venue(name, maximum=500):
                       "links:",len(found),flush=True)
             if not page_links or not added:
                 break
-    found=found[:maximum]
+    if len(found) > maximum:
+        raise RuntimeError(f"{name}: discovered {len(found)} links, exceeding processing limit {maximum}; refusing truncated agenda")
     if not found:raise RuntimeError(f"{name}: no event URLs discovered")
     items=[];errors=0
     def read(url):
@@ -422,6 +423,10 @@ def scrape_venue(name, maximum=500):
                 errors+=1
                 if errors<=3:print(name,"detail error:",futures[future],str(error)[:160],flush=True)
     unique={normalize_url(i["url"]):i for i in items}
+    if not unique:
+        raise RuntimeError(f"{name}: no future concerts parsed from {len(found)} links; refusing empty agenda")
+    if errors > max(2, int(len(found) * 0.10)):
+        raise RuntimeError(f"{name}: {errors}/{len(found)} detail requests failed; refusing incomplete agenda")
     print(name,"discovered:",len(found),"future concerts:",len(unique),"request errors:",errors,flush=True)
     return sorted(unique.values(),key=lambda i:(i["date"],i["time"],i["artist"]))
 
