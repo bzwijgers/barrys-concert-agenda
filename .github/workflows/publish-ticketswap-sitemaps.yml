@@ -1,0 +1,53 @@
+name: Publish verified TicketSwap event links
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "audit/publish_ticketswap_sitemaps.py"
+      - "tests/test_ticketswap_sitemaps.py"
+      - ".github/workflows/publish-ticketswap-sitemaps.yml"
+      - "concerts.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-ticketswap-sitemaps
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test matching rules
+        run: PYTHONPATH=. python -m unittest discover -s tests -p 'test_ticketswap_sitemaps.py'
+      - name: Download all official public event sitemaps
+        run: PYTHONPATH=. python -u -m audit.publish_ticketswap_sitemaps collect
+      - name: Merge exact event links into the latest published concert feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            PYTHONPATH=. python -u -m audit.publish_ticketswap_sitemaps apply
+            git add concerts.json
+            if git diff --cached --quiet; then
+              echo "No additional exact TicketSwap matches; keeping verified feed"
+              exit 0
+            fi
+            git commit -m "Enrich concerts with verified direct TicketSwap event links"
+            if git push origin HEAD:main; then
+              echo "SUCCESS published TicketSwap links"
+              exit 0
+            fi
+          done
+          exit 1
