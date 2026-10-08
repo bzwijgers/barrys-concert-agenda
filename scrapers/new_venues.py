@@ -214,7 +214,7 @@ def parse_event(html, url, name, city):
         if delimiter in title:title=title.split(delimiter,1)[0]
     title=title.strip() or (" ".join(parser.headings[:1]).strip())
     if name in ("Bibelot", "De Bosuil", "De Pul"):
-        title = re.sub(r"\s*\|\s*(?:Bibelot|De Bosuil|De Pul).*$", "", title, flags=re.I).strip()
+        title = re.sub(r"\s*[|–—-]\s*(?:Bibelot|De Bosuil|De Pul)\s*$", "", title, flags=re.I).strip()
     if name=="Metropool" and " - " in title:
         title=title.split(" - ",1)[0].strip()
     if not title or title.lower() in ("agenda","programma","gerelateerde events","evenementen"):
