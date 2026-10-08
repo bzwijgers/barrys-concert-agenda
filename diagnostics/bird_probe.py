@@ -51,3 +51,32 @@ for url in [
     for term in ("filter", "Live", "pagination", "loadMore", "agenda-filter", "nextPage", "month=", "__NEXT_DATA__"):
         matches=list(re.finditer(re.escape(term),html,re.I))
         print("SNIPPETS",term,[re.sub(r"\\s+"," ",html[max(0,m.start()-180):m.end()+220])[:400] for m in matches[:3]],flush=True)
+
+# Check the site's public Prismic content API, which can provide the complete
+# event catalogue rather than a single server-rendered six-event selection.
+from urllib.parse import urlencode
+from collections import Counter
+api_url = "https://bird-rotterdam.cdn.prismic.io/api/v2"
+print("\\n==== PRISMIC API ====",flush=True)
+try:
+    raw = fetch(api_url)
+    api = json.loads(raw)
+    print("API KEYS",list(api.keys()),flush=True)
+    print("REFS",[(x.get("ref"),x.get("isMasterRef")) for x in api.get("refs",[])[:4]],flush=True)
+    print("TYPES",api.get("types"),flush=True)
+    ref = next(x["ref"] for x in api["refs"] if x.get("isMasterRef"))
+    endpoint = api.get("forms",{}).get("everything",{}).get("action","https://bird-rotterdam.cdn.prismic.io/api/v2/documents/search")
+    for query in (None,'[[at(document.type,"event")]]','[[at(document.type,"events")]]','[[at(document.type,"agenda")]]'):
+        args={"ref":ref,"pageSize":100,"page":1}
+        if query: args["q"]=query
+        url=endpoint+"?"+urlencode(args)
+        print("QUERY",query,flush=True)
+        try:
+            data=json.loads(fetch(url))
+            print("RESULTS",data.get("results_size"),"TOTAL",data.get("total_results_size"),"PAGES",data.get("total_pages"),"NEXT",data.get("next_page"),flush=True)
+            print("TYPES",Counter(x.get("type") for x in data.get("results",[])),flush=True)
+            for x in data.get("results",[])[:3]:
+                print("SAMPLE",{"type":x.get("type"),"uid":x.get("uid"),"url":x.get("url"),"data_keys":list(x.get("data",{}).keys()),"data_sample":{k:str(v)[:260] for k,v in x.get("data",{}).items() if any(t in k for t in ("date","start","type","cat","title","time","name"))}},flush=True)
+        except Exception as exc:print("QUERY ERROR",repr(exc),flush=True)
+except Exception as exc:
+    print("API ERROR",repr(exc),flush=True)
