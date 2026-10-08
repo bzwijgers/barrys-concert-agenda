@@ -127,7 +127,6 @@ fun WelcomeScreen(
     )
 }
 
-@Composable
 private fun verifiedTicketSwapUrl(concert: Concert): String =
     if (
         concert.date == "2026-10-09" &&
