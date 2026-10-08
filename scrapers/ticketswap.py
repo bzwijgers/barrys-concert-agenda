@@ -7,6 +7,13 @@ from urllib.parse import parse_qs, quote_plus, unquote, urlparse
 from urllib.request import Request, urlopen
 
 
+# Verified links for shows whose TicketSwap slug does not name the headliner.
+# Keep the exact venue/date/source identity to avoid assigning unrelated events.
+VERIFIED_EVENTS = {
+    ("https://www.rotown.nl/agenda/the-apers-1/", "2026-10-09"):
+        "https://www.ticketswap.nl/concert-tickets/maladroit-rotterdam-rotown-2026-10-09-CbSFR53UXMVxNKodxWTdf",
+}
+
 SEARCH_URL = "https://html.duckduckgo.com/html/?q={query}"
 TICKETSWAP_EVENT_RE = re.compile(
     r"https?://(?:www\.)?ticketswap\.(?:nl|com)/concert-tickets/[^\s\"'<>]+",
@@ -94,6 +101,12 @@ def _search_candidates(concert):
 
 
 def enrich_ticketswap_urls(concerts):
+    for concert in concerts:
+        key = (concert.get("url", "").rstrip("/") + "/", concert.get("date", ""))
+        verified_url = VERIFIED_EVENTS.get(key)
+        if verified_url:
+            concert["ticketSwapUrl"] = verified_url
+
     existing = sum(1 for concert in concerts if concert.get("ticketSwapUrl"))
     found = 0
     checked = 0
