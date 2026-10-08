@@ -4,7 +4,7 @@ from scrapers.paradiso import paradiso_parse_event
 class ParadisoParserTests(unittest.TestCase):
     def test_excelsior_ignores_recommendations(self):
         html = """<html><head><title>30 Jaar Excelsior Recordings in Tolhuistuin, Amsterdam | Paradiso</title></head><body>
-        <h1>30 Jaar Excelsior Recordings</h1><div>zondag 27 december</div>
+        <h1>30 Jaar Excelsior Recordings</h1><div>zondag 27 december 2026</div>
         <div>In Tolhuistuin - Club, Zonzij, Club</div><div>Zaal open: 15:00, Hoofdprogramma: 16:00</div>
         <section>Programma <h2>This Is Lorelei</h2><div>In Tolhuistuin</div><div>23 februari</div>
         <script>{"startDate":"2027-02-23T19:30:00+01:00"}</script></section></body></html>"""
@@ -14,7 +14,7 @@ class ParadisoParserTests(unittest.TestCase):
 
     def test_honey_im_home(self):
         html = """<html><head><title>Honey I'm Home | Paradiso</title></head><body><h1>Honey I'm Home</h1>
-        <div>woensdag 30 december</div><div>In Tolhuistuin - Club</div>
+        <div>woensdag 30 december 2026</div><div>In Tolhuistuin - Club</div>
         <div>Zaal open: 19:00, Hoofdprogramma: 20:30</div></body></html>"""
         r = paradiso_parse_event(html, "https://www.paradiso.nl/nl/programma/honey-im-home/2841259")
         self.assertEqual(("Honey I'm Home","Tolhuistuin","2026-12-30","20:30"),
@@ -22,7 +22,7 @@ class ParadisoParserTests(unittest.TestCase):
 
     def test_fat_freddys_drop(self):
         html = """<html><head><title>Fat Freddy's Drop + DJ Logg Cabin | Paradiso</title></head><body>
-        <h1>Fat Freddy's Drop + DJ Logg Cabin</h1><div>maandag 12 oktober</div>
+        <h1>Fat Freddy's Drop + DJ Logg Cabin</h1><div>maandag 12 oktober 2026</div>
         <div>In Paradiso - Grote Zaal</div><div>Zaal open: 19:00, Voorprogramma: 19:30, Hoofdprogramma: 20:30</div>
         </body></html>"""
         r = paradiso_parse_event(html, "https://www.paradiso.nl/nl/programma/fat-freddys-drop/2654360")
