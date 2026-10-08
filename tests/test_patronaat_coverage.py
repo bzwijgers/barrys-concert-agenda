@@ -20,6 +20,19 @@ class PatronaatCoverageTests(unittest.TestCase):
         self.assertEqual(actual[0]["time"], "20:00")
 
     @patch("scrapers.common.download_page_retry")
+    def test_stale_structured_time_is_discarded(self, download):
+        download.return_value = """<html><head><title>SlodDe &amp; Vos | Patronaat</title>
+            <script>{"startDate":"2020-10-16T15:15:00"}</script></head>
+            <body><h1>SlodDe &amp; Vos</h1></body></html>"""
+        events = scrape_detail_events(
+            ["https://patronaat.nl/event/slodde-vos-16-10-26/"],
+            "Patronaat","Haarlem","Patronaat",
+        )
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["date"], "2026-10-16")
+        self.assertEqual(events[0]["time"], "")
+
+    @patch("scrapers.common.download_page_retry")
     def test_redirect_to_unrelated_event_must_not_be_mislabeled(self, download):
         download.return_value = """<html><head><title>SpoorBijster | Patronaat</title>
             <script>{"startDate":"2020-10-16T23:00:00"}</script></head>
