@@ -305,12 +305,12 @@ def parse_event(html, url, name, city):
     # artist biographies that happen to contain similar words.
     if name=="Neushoorn" and re.search(
         r"^(?:comedy night|uit de hoge hoed improv comedy|"
-        r"queens & quizzes|powerslam|family rave day|the grave rave)\\b",
+        r"queens & quizzes|powerslam|family rave day|the grave rave)\b",
         title, re.I,
     ):
         return None
     if name=="Hedon" and re.search(
-        r"^(?:bezerkus bingo|q\\s*music foute feestje|jimmy carr)\\b",
+        r"^(?:bezerkus bingo|q\s*music foute feestje|jimmy carr|never too late)\b",
         title, re.I,
     ):
         return None
