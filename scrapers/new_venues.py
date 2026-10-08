@@ -361,10 +361,41 @@ def scrape_venue(name, maximum=500):
         nights=download_page_retry("https://hedon-zwolle.nl/nights",attempts=3)
         found=filter_hedon_nights(found,nights)
     if name=="Bibelot":
-        # Bibelot loads an initial programme subset. A limited first page
-        # cannot be called a complete concert agenda.
-        if len(found) < 40:
-            raise RuntimeError("Bibelot: first-page discovery is incomplete; pagination/API integration required")
+        # Verified FacetWP pager: /programma/?_paged=2,3,...
+        # Load every page and compare discovered event URLs with its own
+        # total_rows count. Never silently publish the first 30 only.
+        pager = re.search(
+            r'"pager":\\s*\\{[^}]*"total_rows":\\s*(\\d+)[^}]*"total_pages":\\s*(\\d+)',
+            html,
+        )
+        if not pager:
+            raise RuntimeError("Bibelot: official FacetWP pagination metadata missing")
+        total_rows, total_pages = map(int, pager.groups())
+        if total_pages < 1 or total_pages > 30:
+            raise RuntimeError(f"Bibelot: suspicious page count {total_pages}")
+        keys = {normalize_url(url) for url in found}
+        for number in range(2, total_pages + 1):
+            html_page = download_page_retry(
+                agenda + "?_paged=" + str(number), attempts=2
+            )
+            page_links = discover(html_page, agenda, prefix)
+            additions = 0
+            for event_url in page_links:
+                key = normalize_url(event_url)
+                if key not in keys:
+                    found.append(event_url)
+                    keys.add(key)
+                    additions += 1
+            print("Bibelot page", number, "found", len(page_links),
+                  "new", additions, "total", len(found), flush=True)
+            if additions == 0:
+                raise RuntimeError(f"Bibelot: pagination stalled at page {number}")
+        minimum_coverage = max(40, int(total_rows * 0.90))
+        if len(found) < minimum_coverage:
+            raise RuntimeError(
+                f"Bibelot: incomplete agenda ({len(found)} of {total_rows} "
+                f"events, expected at least {minimum_coverage})"
+            )
     if name=="De Pul":
         # Exact load-more endpoint and parameters verified in the venue's
         # own /js/site.min.js. It returns {output, show_more_possible}.
