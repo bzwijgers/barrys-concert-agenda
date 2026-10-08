@@ -796,24 +796,6 @@ fun ConcertApp() {
             searchedConcerts
         }
 
-    TicketSwapLookupWebView(
-        concert = ticketSwapLookupConcert,
-        onResult = { result ->
-            val lookupConcert = ticketSwapLookupConcert ?: return@TicketSwapLookupWebView
-            if (!result.startsWith("ERROR:")) {
-                concerts = concerts.map {
-                    if (normalizeUrl(it.url) == normalizeUrl(lookupConcert.url)) {
-                        it.copy(ticketSwapUrl = result)
-                    } else it
-                }
-                ConcertStorage.setTicketSwapUrl(context, lookupConcert.url, result)
-                ticketSwapStatus = "TicketSwap gevonden"
-            } else {
-                ticketSwapStatus = "Nog niet gevonden op TicketSwap"
-            }
-            ticketSwapLookupConcert = null
-        }
-    )
 
     Scaffold(
         bottomBar = {
@@ -1210,9 +1192,30 @@ fun ConcertApp() {
                                     favorite = newFavorite
                                 )
 
-                                // TicketSwap WebView lookup is temporarily disabled after
-                                // reproducible app exits when marking favorites.
-                                // Favorite state is persisted above; verified links remain usable.
+                                // One safe background lookup; no hidden WebView.
+                                // A blocked search returns no result and never closes the app.
+                                if (newFavorite && verifiedTicketSwapUrl(concert).isBlank()) {
+                                    ticketSwapStatusUrl = normalizeUrl(concert.url)
+                                    ticketSwapStatus = "TicketSwap zoekt..."
+                                    coroutineScope.launch {
+                                        val foundUrl = TicketSwapSearch.find(concert)
+                                        if (foundUrl != null) {
+                                            concerts = concerts.map {
+                                                if (normalizeUrl(it.url) == normalizeUrl(concert.url)) {
+                                                    it.copy(ticketSwapUrl = foundUrl)
+                                                } else it
+                                            }
+                                            ConcertStorage.setTicketSwapUrl(context, concert.url, foundUrl)
+                                        }
+                                        if (ticketSwapStatusUrl == normalizeUrl(concert.url)) {
+                                            ticketSwapStatus = if (foundUrl != null) {
+                                                "TicketSwap gevonden"
+                                            } else {
+                                                "Nog niet gevonden op TicketSwap"
+                                            }
+                                        }
+                                    }
+                                }
 
                             },
                             showClubCardLabel = selectedTab != 4,
