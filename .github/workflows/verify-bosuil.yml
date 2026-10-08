@@ -1,0 +1,44 @@
+name: Verify De Bosuil full programme
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-bosuil.yml"
+      - "scrapers/new_venues.py"
+permissions:
+  contents: read
+jobs:
+  bosuil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Count all official programme links and parse sample details
+        run: |
+          python -u - <<'PY'
+          from scrapers import new_venues
+          from scrapers.common import download_page_retry
+          from collections import Counter
+          config = new_venues.CANDIDATE_VENUES["De Bosuil"]
+          page = download_page_retry(config[0], attempts=2)
+          links = new_venues.discover(page, config[0], config[1])
+          print("BOSUIL OFFICIAL PROGRAMME LINKS", len(links), flush=True)
+          print("BOSUIL FIRST LINKS", links[:8], flush=True)
+          new_venues.VENUES["De Bosuil"] = config
+          for url in links[:4] + links[-4:]:
+              html=download_page_retry(url,attempts=2)
+              event=new_venues.parse_event(html,url,"De Bosuil","Weert")
+              print("BOSUIL SAMPLE",url,event,flush=True)
+          events=new_venues.scrape_venue("De Bosuil")
+          years=Counter(e["date"][:4] for e in events)
+          print("BOSUIL FUTURE CONCERTS",len(events),"BY YEAR",dict(years),flush=True)
+          for event in events[:12]:
+              print("EVENT",event,flush=True)
+          assert len(links)>=45, "De Bosuil agenda likely truncated"
+          assert len(events)>=35, "De Bosuil parser not yet ready"
+          assert years.get("2027",0)>=8, "2027 programme not fully parsed"
+          PY
