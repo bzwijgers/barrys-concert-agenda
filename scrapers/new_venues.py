@@ -26,13 +26,13 @@ VENUES = {
     # Official Bibelot programme currently exposes its complete 97-event listing.
     # The discovery floor below rejects accidentally truncated output.
     "Bibelot": ("https://bibelot.net/programma/", "/programma/", "Dordrecht"),
+    "De Pul": ("https://www.livepul.com/agenda/", "/agenda/", "Uden"),
 }
 
 # Candidate venues are kept out of the production batch until their full
 # programme pagination and event parsing are verified.
 CANDIDATE_VENUES = {
     "De Bosuil": ("https://www.debosuil.nl/programma/", "/programma/", "Weert"),
-    "De Pul": ("https://www.livepul.com/agenda/", "/agenda/", "Uden"),
 }
 
 MONTHS = {
@@ -366,9 +366,52 @@ def scrape_venue(name, maximum=500):
         if len(found) < 40:
             raise RuntimeError("Bibelot: first-page discovery is incomplete; pagination/API integration required")
     if name=="De Pul":
-        # De Pul explicitly has a Meer laden control. Do not publish
-        # a truncated first page as the complete schedule.
-        raise RuntimeError("De Pul: agenda requires verified Meer laden pagination/API discovery")
+        # Exact load-more endpoint and parameters verified in the venue's
+        # own /js/site.min.js. It returns {output, show_more_possible}.
+        # Count actual rendered event cards, NOT unique links, for the offset.
+        found = []
+        seen = set()
+        shown = 0
+        for page_number in range(1, 90):
+            query = (
+                "https://www.livepul.com/query.php"
+                "?source=agenda&agenda_page=true&month=all&search=false"
+                "&amount_of_events_already_shown=" + str(shown)
+            )
+            payload = json.loads(download_page_retry(query, attempts=2))
+            if not isinstance(payload, dict) or "show_more_possible" not in payload:
+                raise RuntimeError("De Pul API: missing pagination marker")
+            output = payload.get("output", "")
+            if not isinstance(output, str):
+                raise RuntimeError("De Pul API: invalid event HTML")
+            cards = len(re.findall(
+                r'class=["\\x27][^"\\x27]*\\bagenda-event--actual-event\\b',
+                output, flags=re.I,
+            ))
+            links = discover(output, agenda, prefix)
+            added = 0
+            for event_url in links:
+                key = normalize_url(event_url)
+                if key not in seen:
+                    seen.add(key)
+                    found.append(event_url)
+                    added += 1
+            print("De Pul API page", page_number,
+                  "event cards", cards, "new links", added,
+                  "total", len(found), flush=True)
+            if cards == 0 and payload["show_more_possible"]:
+                raise RuntimeError("De Pul: load-more reports more events but page is empty")
+            shown += cards
+            if len(found) > maximum:
+                raise RuntimeError("De Pul: over maximum event count")
+            if not payload["show_more_possible"]:
+                break
+            if cards == 0:
+                raise RuntimeError("De Pul: pagination did not advance")
+        else:
+            raise RuntimeError("De Pul pagination page limit reached")
+        if shown < 20 or len(found) < 15:
+            raise RuntimeError("De Pul: suspiciously incomplete official programme")
     if name=="Neushoorn":
         # Webflow renders a maximum of 100 events per collection page.
         # Its next-page link uses a collection-specific query name rather
