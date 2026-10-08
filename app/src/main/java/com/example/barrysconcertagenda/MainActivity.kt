@@ -1210,11 +1210,10 @@ fun ConcertApp() {
                                     favorite = newFavorite
                                 )
 
-                                if (newFavorite && verifiedTicketSwapUrl(concert).isBlank()) {
-                                    ticketSwapStatusUrl = normalizeUrl(concert.url)
-                                    ticketSwapStatus = "TicketSwap zoekt..."
-                                    ticketSwapLookupConcert = concert
-                                }
+                                // TicketSwap WebView lookup is temporarily disabled after
+                                // reproducible app exits when marking favorites.
+                                // Favorite state is persisted above; verified links remain usable.
+
                             },
                             showClubCardLabel = selectedTab != 4,
                             showFavorite = selectedTab != 3 && selectedTab != 5,
