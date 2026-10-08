@@ -19,7 +19,7 @@ def get(url):
         h=r.read().decode("utf8","replace");return h,r.url,r.status
 
 URLS={
-"Neushoorn": ["https://www.neushoorn.nl/programma","https://www.neushoorn.nl/programma?page=2"],
+"Neushoorn": ["https://www.neushoorn.nl/programma","https://www.neushoorn.nl/programma?page=2","https://www.neushoorn.nl/programma?d9baa62c_page=2","https://www.neushoorn.nl/programma?d9baa62c_page=3"],
 "Tivoli": ["https://www.tivolivredenburg.nl/agenda?sf_genre=pop","https://www.tivolivredenburg.nl/agenda/page/2/?sf_genre=pop","https://www.tivolivredenburg.nl/agenda/page/3/?sf_genre=pop"],
 "Boerderij":[
 "https://poppodiumboerderij.nl/programma/myrath/","https://poppodiumboerderij.nl/programma/banned-from-utopia-1/","https://poppodiumboerderij.nl/programma/bigbigtrain/",
@@ -42,6 +42,10 @@ for key, urls in URLS.items():
             h1=re.search(r"<h1[^>]*>(.*?)</h1>",html,re.S|re.I)
             title=re.search(r"<title[^>]*>(.*?)</title>",html,re.S|re.I)
             print("PAGE",url,"FINAL",final,"STATUS",status,"BYTES",len(html),"TITLE",re.sub(r"<[^>]+>"," ",h1.group(1) if h1 else (title.group(1) if title else ""))[:100],"DATE",_detail_date_time(html),"TEXTDATE",date_from_text(re.sub(r"<[^>]+>"," ",html[:45000])),"LINKS",len(p.hrefs),"PAGELINKS",matched[:13],"SCRIPTS",script_src[:8],flush=True)
+            if key=="Hedon":
+                for term in ("Datum","19:30","2026-10","startDate","Voorstelling","2026-11","2027","2026-12"):
+                    matches=list(re.finditer(re.escape(term),html,re.I))
+                    print("HEDON MARK",term,"hits",len(matches),[(m.start(),re.sub(r"\\s+"," ",html[max(0,m.start()-130):m.end()+260])[:420]) for m in matches[:5]],flush=True)
             if key in ("Hedon","Helling"):
                 name,city=("Hedon","Zwolle") if key=="Hedon" else ("De Helling","Utrecht")
                 print("PARSED",parse_event(html,url,name,city),flush=True)
