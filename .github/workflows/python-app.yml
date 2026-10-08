@@ -23,11 +23,12 @@ permissions:
 
 concurrency:
   group: concert-feed-main
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update-concerts:
     runs-on: ubuntu-latest
+    timeout-minutes: 55
 
     steps:
       - name: Download repository
