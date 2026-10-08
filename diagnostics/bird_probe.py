@@ -80,3 +80,17 @@ try:
         except Exception as exc:print("QUERY ERROR",repr(exc),flush=True)
 except Exception as exc:
     print("API ERROR",repr(exc),flush=True)
+
+for q in (
+  '[[at(document.type,"agenda")][date.after(my.agenda.event_date, "2026-10-07")]]',
+  '[[date.after(my.agenda.event_date, "2026-10-07")]]',
+  '[[at(document.type,"agenda")][date.after(my.agenda.event_date, "2026-10-07T00:00:00+0000")]]'
+):
+    print("FUTURE QUERY",q,flush=True)
+    try:
+        raw=fetch(endpoint+"?"+urlencode({"ref":ref,"pageSize":100,"page":1,"q":q}))
+        data=json.loads(raw)
+        print("FUTURE TOTAL",data.get("total_results_size"),"PAGES",data.get("total_pages"),flush=True)
+        events=data.get("results",[])
+        print("FUTURE SAMPLE",[(x.get("uid"),x.get("data",{}).get("event_date"),[a.get("main_category",{}).get("uid") for a in x.get("data",{}).get("main_categories",[])]) for x in events[:25]],flush=True)
+    except Exception as e:print("FUTURE ERROR",repr(e),flush=True)
