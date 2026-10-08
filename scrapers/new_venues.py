@@ -267,6 +267,13 @@ def scrape_venue(name, maximum=500):
             try:
                 page_html=download_page_retry(partial_url,attempts=2)
             except Exception as error:
+                # Metropool's final batch returns HTTP 200 with an empty
+                # response instead of a normal end-of-pagination marker.
+                # This is a valid stopping condition after prior batches.
+                if "Lege HTML-response" in str(error) and number > 2:
+                    print("Metropool pagination complete at page", number,
+                          "collected links:", len(found), flush=True)
+                    break
                 raise RuntimeError("Metropool pagination page "
                                    + str(number) + " failed: " + str(error))
             page_links=discover(page_html,agenda,prefix)
