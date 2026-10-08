@@ -64,7 +64,7 @@ cases={
 }
 for name,(needle,expected_day) in cases.items():
     if expected_day < today:continue
-    matches=[x for x in feed if x.get("source")==name and needle in x.get("url","")]
+    matches=[x for x in feed if x.get("source")==name and needle.rstrip("/") in x.get("url","").rstrip("/")]
     if not matches or all(x["date"]!=expected_day for x in matches):
         raise RuntimeError("Missing or incorrect expected event: "+name+" "+needle)
 print("PASS: all sources present, dates valid, unique URLs, known shows correctly dated")
