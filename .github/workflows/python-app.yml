@@ -173,7 +173,12 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
+            cp concerts.json /tmp/latest-published-concerts.json
             cp /tmp/validated-concerts.json concerts.json
+            # A scraper started before TicketSwap enrichment must not delete
+            # verified links published in the meantime.
+            PYTHONPATH=. python -u -m audit.merge_published_ticketswap \
+              /tmp/latest-published-concerts.json concerts.json
             git add concerts.json
             if git diff --cached --quiet; then
               echo "Concert feed already up-to-date"
