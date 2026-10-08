@@ -434,6 +434,18 @@ def scrape_detail_events(urls, venue, city, source, date_from_url=False, reject_
                 )
                 if start_match:
                     event_time = f"{int(start_match.group(1)):02d}:{int(start_match.group(2)):02d}"
+        # Genre pages contain some DJ parties and spoken-word events.
+        # This is a concert-only app: skip clear non-concert titles while
+        # retaining live bands, acoustic sets and festivals.
+        if source == "TivoliVredenburg":
+            if re.search(
+                r"\b(?:podcast|pubquiz|karaoke|rondleiding|lezing|"
+                r"discozwemmen|clubnacht|fanparty|silent disco)\b|"
+                r"\bparty\s*$",
+                artist, flags=re.IGNORECASE,
+            ):
+                return None
+
         if not artist or not event_date:
             return None
         if date.fromisoformat(event_date) < today:
