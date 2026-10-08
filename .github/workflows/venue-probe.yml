@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "diagnostics/venue_probe.py"
+      - "diagnostics/*.py"
       - ".github/workflows/venue-probe.yml"
   workflow_dispatch:
 
@@ -21,4 +21,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: Probe venue HTML and URL shapes
-        run: python -u diagnostics/venue_probe.py
+        run: |
+          python -u diagnostics/venue_probe.py
+          python -u diagnostics/detail_probe.py
