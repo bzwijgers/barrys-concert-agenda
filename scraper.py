@@ -1,5 +1,6 @@
 from datetime import datetime
 import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from scrapers.common import normalize_url, scrape_boerderij, scrape_paard, scrape_melkweg, scrape_tivolivredenburg, scrape_mezz, scrape_patronaat
 from scrapers.effenaar import scrape_effenaar
@@ -142,20 +143,27 @@ except Exception as error:
 # NIEUWE PODIA
 # ============================================================
 
-for source_name, scraper_function in (
+# The six independent venue feeds can be downloaded concurrently.
+# This avoids serially waiting for Tivoli's extensive paginated programme
+# before the other venues even start.
+source_jobs=(
     ("Boerderij", scrape_boerderij),
     ("PAARD", scrape_paard),
     ("Melkweg", scrape_melkweg),
     ("TivoliVredenburg", scrape_tivolivredenburg),
     ("MEZZ", scrape_mezz),
     ("Patronaat", scrape_patronaat),
-):
-    try:
-        source_concerts = scraper_function()
-        print(source_name + " opgehaald:", len(source_concerts))
-        all_concerts.extend(source_concerts)
-    except Exception as error:
-        print("ERNSTIGE " + source_name.upper() + " FOUT:", str(error))
+)
+with ThreadPoolExecutor(max_workers=3) as executor:
+    running={executor.submit(fn):name for name,fn in source_jobs}
+    for future in as_completed(running):
+        name=running[future]
+        try:
+            concerts=future.result()
+            all_concerts.extend(concerts)
+            print(name+" opgehaald:",len(concerts),flush=True)
+        except Exception as error:
+            print("ERNSTIGE "+name.upper()+" FOUT:",str(error),flush=True)
 
 
 # ============================================================
