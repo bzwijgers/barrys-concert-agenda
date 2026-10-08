@@ -23,7 +23,7 @@ jobs:
           from scrapers import new_venues
           from scrapers.common import download_page_retry
           from collections import Counter
-          config = new_venues.CANDIDATE_VENUES["De Bosuil"]
+          config = new_venues.VENUES["De Bosuil"]
           page = download_page_retry(config[0], attempts=2)
           links = new_venues.discover(page, config[0], config[1])
           print("BOSUIL OFFICIAL PROGRAMME LINKS", len(links), flush=True)
