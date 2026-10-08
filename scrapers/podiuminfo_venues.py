@@ -8,6 +8,11 @@ from .common import *
 from zoneinfo import ZoneInfo
 
 PODIUMINFO_VENUES = {
+    "Dynamo": (
+        "https://www.podiuminfo.nl/podium/187/concerten/Dynamo/Eindhoven/",
+        "Dynamo",
+        "Eindhoven",
+    ),
     "Bolwerk": (
         "https://www.podiuminfo.nl/podium/44/concerten/Het-Bolwerk/Sneek/",
         "Het Bolwerk",
