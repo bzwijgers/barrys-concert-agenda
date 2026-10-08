@@ -299,6 +299,8 @@ if len(paradiso_combined) < minimum_expected:
 # volledige feed staan. De datumcontrole maakt de bewaking automatisch
 # niet-actief zodra het concert heeft plaatsgevonden.
 known_paradiso_events = {
+    "https://www.paradiso.nl/nl/programma/songhoy-blues/2884193":
+        ("2026-10-10", "Tolhuistuin"),
     "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706":
         ("2027-05-07", "Tolhuistuin"),
 }
