@@ -2527,7 +2527,7 @@
     "date": "2026-10-20",
     "time": "22:00",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/any-young-mechanic/2918766"
+    "url": "https://www.paradiso.nl/en/program/any-young-mechanic/2918766"
   },
   {
     "artist": "Malugi - ADE",
@@ -2648,7 +2648,7 @@
     "date": "2026-10-21",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/s-rene-ade/2919587"
+    "url": "https://www.paradiso.nl/en/program/s-rene-ade/2919587"
   },
   {
     "artist": "Cul's Cult De Mis + Omstander",
@@ -4811,7 +4811,7 @@
     "date": "2026-11-01",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/alela-diane/2854279"
+    "url": "https://www.paradiso.nl/en/program/alela-diane/2854279"
   },
   {
     "artist": "Floor Jansen",
@@ -6142,7 +6142,7 @@
   },
   {
     "artist": "Sharp Pins",
-    "venue": "Bitterzoet",
+    "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-09",
@@ -6282,13 +6282,13 @@
   },
   {
     "artist": "Radio Free Alice",
-    "venue": "Tolhuistuin",
+    "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-10",
     "time": "20:30",
-    "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/en/program/radio-free-alice/2924901"
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/radio-free-alice/2924901"
   },
   {
     "artist": "Rita Wilson - Sound of a Woman UK & Europe Tour + Inge Lamboo",
@@ -7275,7 +7275,7 @@
     "date": "2026-11-15",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/feeble-little-horse/2889551"
+    "url": "https://www.paradiso.nl/en/program/feeble-little-horse/2889551"
   },
   {
     "artist": "Fred Wesley Generations",
@@ -8635,7 +8635,7 @@
     "date": "2026-11-25",
     "time": "19:15",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/peper-zuur-srefidensi-editie/2925090"
+    "url": "https://www.paradiso.nl/en/program/peper-zuur-srefidensi-editie/2925090"
   },
   {
     "artist": "Mortimer",
@@ -9681,7 +9681,7 @@
     "date": "2026-11-30",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/bree-runway/2931757"
+    "url": "https://www.paradiso.nl/en/program/bree-runway/2931757"
   },
   {
     "artist": "EMF",
@@ -11751,7 +11751,7 @@
     "date": "2026-12-17",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/gotu-jim/2892814"
+    "url": "https://www.paradiso.nl/en/program/gotu-jim/2892814"
   },
   {
     "artist": "Apeshit",
@@ -17021,7 +17021,7 @@
     "date": "2027-04-29",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/the-hempolics/2926163"
+    "url": "https://www.paradiso.nl/en/program/the-hempolics/2926163"
   },
   {
     "artist": "Mood Bored",
@@ -17709,12 +17709,12 @@
   },
   {
     "artist": "Workshops SDF 31 August",
-    "venue": "Tolhuistuin",
+    "venue": "Parallel",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-08-31",
     "time": "10:00",
-    "source": "Tolhuistuin",
+    "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/workshops-sdf-31-august/2894217"
   },
   {
