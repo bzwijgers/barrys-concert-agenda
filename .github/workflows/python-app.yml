@@ -86,12 +86,12 @@ jobs:
               concerts = json.load(handle)
 
           counts = Counter(item.get("source", "") for item in concerts)
-          required = ("Effenaar", "Rotown", "013", "Paradiso", "Baroeg", "Boerderij", "PAARD", "Melkweg", "TivoliVredenburg", "MEZZ", "Patronaat", "Tolhuistuin", "Gebouw-T", "dB's", "De Helling", "Klokgebouw", "Dynamo", "Doornroosje", "BIRD", "Metropool", "Hedon", "SPOT Groningen", "Neushoorn", "Bibelot", "Amare", "Bolwerk")
+          required = ("Effenaar", "Rotown", "013", "Paradiso", "Baroeg", "Boerderij", "PAARD", "Melkweg", "TivoliVredenburg", "MEZZ", "Patronaat", "Tolhuistuin", "Gebouw-T", "dB's", "De Helling", "Klokgebouw", "Dynamo", "Doornroosje", "BIRD", "Metropool", "Hedon", "SPOT Groningen", "Neushoorn", "Bibelot", "De Pul", "Amare", "Bolwerk")
           missing = [source for source in required if counts[source] == 0]
 
           print("Concert count:", len(concerts))
           print("Per source:", dict(counts))
-          thresholds = {"De Helling": 10, "Doornroosje": 20, "Hedon": 20, "SPOT Groningen": 30, "Neushoorn": 20, "Metropool": 20, "Bibelot": 30}
+          thresholds = {"De Helling": 10, "Doornroosje": 20, "Hedon": 20, "SPOT Groningen": 30, "Neushoorn": 20, "Metropool": 20, "Bibelot": 30, "De Pul": 25}
           too_few = {s: (counts[s], limit) for s,limit in thresholds.items() if counts[s] < limit}
           if too_few:
               raise SystemExit("Incomplete newly added venue feeds: " + repr(too_few))
