@@ -277,6 +277,10 @@ def parse_event(html, url, name, city):
 
     # Only music performances: no non-music exhibitions, meetings or generic club nights.
     lowered=(primary+" "+description+" "+url).lower()
+    # Classify nightlife/classical restrictions using the event identity, not
+    # prose descriptions: an indie band may mention a rave in its biography,
+    # and a rock tribute may be described as performing "klassiekers".
+    identity=(primary+" "+url).lower()
     if name=="Klokgebouw":
         # The agenda explicitly labels exhibitions, markets, conventions and parties.
         if re.search(r"fair|expo|vintage|design-week|kerstmarkt|conference|kennis|recruitment|beurs",lowered):
@@ -284,17 +288,17 @@ def parse_event(html, url, name, city):
         genre_match=re.search(r"Agenda\s*/\s*([A-Za-z]+)",raw_text[:2000],re.I)
         if genre_match and genre_match.group(1).lower() in ("retail","public","expo","kennis","culture"):
             return None
-    if name=="De Helling" and re.search(r"\b(?:rave|afrobeats|fanparty|disco|clubnachten?|nachtclub|clubnight)\b|paardenrave|day-rave",lowered):
+    if name=="De Helling" and re.search(r"\b(?:rave|afrobeats|fanparty|disco|clubnachten?|nachtclub|clubnight)\b|paardenrave|day-rave",identity):
         return None
     if name=="BIRD" and re.search(r"360-degrees|talk|clubnight|clubnacht|cafe-dj-sessions",lowered):
         return None
-    if name=="Metropool" and re.search(r"comedy|muziekquiz|clubnacht|nightclub|party|silent disco",lowered):
+    if name=="Metropool" and re.search(r"comedy|muziekquiz|clubnacht|nightclub|party|silent disco",identity):
         return None
-    if name=="Hedon" and re.search(r"hedon-academy|workshop|comedy|cabaret|lezing|rave|techno|80s-verantwoord|80.s.verantwoord|clubnacht|fanparty",lowered):
+    if name=="Hedon" and re.search(r"hedon-academy|workshop|comedy|cabaret|lezing|rave|techno|80s-verantwoord|80.s.verantwoord|clubnacht|fanparty",identity):
         return None
     if name=="Klokgebouw" and re.search(r"snakepit|rave|dance|feest|party|festival-electronic",lowered):
         return None
-    if name=="SPOT Groningen" and re.search(r"klassiek|kamermuziek|orkestconcert|opera|ballet|cabaret|toneel",lowered):
+    if name=="SPOT Groningen" and re.search(r"klassieke?[- ]muziek|kamermuziek|orkestconcert|opera|ballet|cabaret|toneel",identity):
         return None
 
     return {"artist":title,"venue":venue,"city":city,"country":"NL",
