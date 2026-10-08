@@ -1,15 +1,5 @@
 [
   {
-    "artist": "English",
-    "venue": "SPOT Groningen",
-    "city": "Groningen",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "",
-    "source": "SPOT Groningen",
-    "url": "https://www.spotgroningen.nl/programma/verzameling/english"
-  },
-  {
     "artist": "RONDÉ",
     "venue": "Hedon",
     "city": "Zwolle",
@@ -94,17 +84,6 @@
     "url": "https://www.mezz.nl/programma/fontaines-d-c-luistersessie/"
   },
   {
-    "artist": "Monolord + Dopelord",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/monolord-dopelord",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/monolord-dopelord-eindhoven-effenaar-2026-10-08-CajCd8JWmn3HJSCctmsR8"
-  },
-  {
     "artist": "Northcote (CA) + Tom Jenkins (UK)",
     "venue": "Bibelot",
     "city": "Dordrecht",
@@ -114,27 +93,6 @@
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/northcote-ca-tom-jenkins-uk",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/northcote-ca-tom-jenkins-uk-dordrecht-bibelot-poppodium-2026-10-08-CavMR3gxFvUG1QTdpXrTU"
-  },
-  {
-    "artist": "SAVINE",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "20:00",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/savine-4/",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/savine-the-hague-paard-2026-10-08-CaXZVrQFKUZs6NZUdoePC"
-  },
-  {
-    "artist": "Home Grown Sessions #30",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "20:30",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/494715/Home-Grown-Sessions-30/Dynamo"
   },
   {
     "artist": "LOE. + Lindi",
@@ -154,7 +112,7 @@
     "date": "2026-10-08",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/mary-in-the-junkyard/2892090"
+    "url": "https://www.paradiso.nl/en/program/mary-in-the-junkyard/2892090"
   },
   {
     "artist": "MonkeyJam",
@@ -201,17 +159,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/wodan-boys-leeuwarden-neushoorn-2026-10-08-Cat5NPZpiPXLLoc3xpTNE"
   },
   {
-    "artist": "Father Of Peace",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "21:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/father-of-peace",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/father-of-peace-eindhoven-cafe-altstadt-2026-10-08-CcS3VBHCbncJkw5RGgNgb"
-  },
-  {
     "artist": "Panchiko + Alison’s Halo, CJ’s Mirra Maze",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -220,6 +167,17 @@
     "time": "21:00",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/panchiko/2741543"
+  },
+  {
+    "artist": "Nona",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-10-08",
+    "time": "21:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/nona",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/nona-hengelo-metropool-hengelo-2026-10-08-CZRDFPhSHDxdkdZ1p3JD7"
   },
   {
     "artist": "Kiss Facility",
@@ -558,7 +516,7 @@
     "date": "2026-10-09",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/ronde/2852163"
+    "url": "https://www.paradiso.nl/en/program/ronde/2852163"
   },
   {
     "artist": "Rowwen Hèze",
@@ -674,18 +632,8 @@
     "date": "2026-10-09",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/robertjon-the-wreck"
-  },
-  {
-    "artist": "Waxing Crescent",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "21:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/waxing-crescent",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/waxing-crescent-enschede-metropool-enschede-2026-10-09-CdCruoPenui9HYEniGwim"
+    "url": "https://www.debosuil.nl/programma/robertjon-the-wreck",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/robert-jon-the-wreck-weert-poppodium-de-bosuil-2026-10-09-CZps3zUdhSJuXrEnxbCRp"
   },
   {
     "artist": "South Summit",
@@ -757,7 +705,7 @@
     "date": "2026-10-10",
     "time": "",
     "source": "Doornroosje",
-    "url": "https://www.doornroosje.nl/event/soulcrusher-2026"
+    "url": "https://www.doornroosje.nl/event/soulcrusher-2026-1"
   },
   {
     "artist": "Soulcrusher",
@@ -767,7 +715,7 @@
     "date": "2026-10-10",
     "time": "",
     "source": "Doornroosje",
-    "url": "https://www.doornroosje.nl/event/soulcrusher-2026-1"
+    "url": "https://www.doornroosje.nl/event/soulcrusher-2026"
   },
   {
     "artist": "Jesse Hoefnagels",
@@ -1019,7 +967,8 @@
     "date": "2026-10-10",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/hard2get"
+    "url": "https://www.debosuil.nl/programma/hard2get",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hard2get-weert-poppodium-de-bosuil-2026-10-10-CfCHsHDVBrVMWaoXrcWUh"
   },
   {
     "artist": "Kitty, Daisy & Lewis",
@@ -1084,17 +1033,6 @@
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/ios",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ios-hengelo-metropool-hengelo-2026-10-10-CZBxd9YCuNX4cN4RBDHc8"
-  },
-  {
-    "artist": "New Wave Generation",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/new-wave-generation-10-okt",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/new-wave-generation-hengelo-metropool-hengelo-2026-10-10-Cb29Ummy9mw8DddZZf6iE"
   },
   {
     "artist": "Vividly Frank",
@@ -1209,6 +1147,16 @@
     "time": "23:59",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/hush-aat-michel-de-hey-simon-kidzoo/2917131"
+  },
+  {
+    "artist": "English",
+    "venue": "SPOT Groningen",
+    "city": "Groningen",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "",
+    "source": "SPOT Groningen",
+    "url": "https://www.spotgroningen.nl/programma/verzameling/english"
   },
   {
     "artist": "T-Sessie",
@@ -3063,16 +3011,6 @@
     "url": "https://www.neushoorn.nl/events/fajtfest-fryslan-26"
   },
   {
-    "artist": "LEGENDS of ROCK Tribute Festival",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-17",
-    "time": "16:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/legends-of-rock-tribute-festival"
-  },
-  {
     "artist": "DOTAN",
     "venue": "Hedon",
     "city": "Zwolle",
@@ -3144,7 +3082,7 @@
     "date": "2026-10-17",
     "time": "19:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/amsterdamse-popprijs-halve-finales/2935127"
+    "url": "https://www.paradiso.nl/en/program/amsterdamse-popprijs-halve-finales/2935127"
   },
   {
     "artist": "Fanfare Ciocărlia",
@@ -3624,7 +3562,8 @@
     "date": "2026-10-18",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/elo-encounter"
+    "url": "https://www.debosuil.nl/programma/elo-encounter",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/elo-encounter-weert-poppodium-de-bosuil-2026-10-18-Cf7G4HTgRqsd7buu1qXZA"
   },
   {
     "artist": "DOTAN - EXTRA SHOW",
@@ -4545,17 +4484,6 @@
     "url": "https://www.paradiso.nl/en/program/s-rene-ade/2919587"
   },
   {
-    "artist": "Codefendants",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-10-21",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/codefendants",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/codefendants-enschede-metropool-enschede-2026-10-21-CabYhed4VT6VMDxxAv3To"
-  },
-  {
     "artist": "Cul's Cult De Mis + Omstander",
     "venue": "Cul de Sac",
     "city": "Tilburg",
@@ -5281,17 +5209,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/de-rolf-sanchez-club-eindhoven-effenaar-2026-10-23-CfJocLBCAEXovbhZzweqs"
   },
   {
-    "artist": "ACinDC",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "20:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/acindc",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/acindc-hengelo-metropool-hengelo-2026-10-23-CXsVetjarcrpz7fNQpde4"
-  },
-  {
     "artist": "Celine Cairo",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -5404,7 +5321,8 @@
     "date": "2026-10-23",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/rowwenheze"
+    "url": "https://www.debosuil.nl/programma/rowwenheze",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rowwen-heze-weert-poppodium-de-bosuil-2026-10-23-CbQ296JQVHxMKqKrFkuVV"
   },
   {
     "artist": "Warhaus - Ha Ha Heartbeats - ADE",
@@ -6166,7 +6084,8 @@
     "date": "2026-10-25",
     "time": "16:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/donnas-hotstuff"
+    "url": "https://www.debosuil.nl/programma/donnas-hotstuff",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/donnas-hot-stuff-donna-summer-tribute-weert-poppodium-de-bosuil-2026-10-25-CfCHsQnQW4bqeGuBWU5XA"
   },
   {
     "artist": "Amsterdam Dub Event: Moritz von Oswald / Radikal Guru e.a.",
@@ -6274,12 +6193,12 @@
   },
   {
     "artist": "Backstage & Blik Vooruit",
-    "venue": "Paradiso",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-10-26",
     "time": "17:00",
-    "source": "Paradiso",
+    "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/backstage-blik-vooruit/2935212"
   },
   {
@@ -8099,7 +8018,8 @@
     "date": "2026-10-31",
     "time": "21:00",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/gewoon-nederpop"
+    "url": "https://www.debosuil.nl/programma/gewoon-nederpop",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gewoon-nederpop-weert-poppodium-de-bosuil-2026-10-31-CfZTxzmwfKajJr3kaMaXa"
   },
   {
     "artist": "R.E.M. by The 40 Watt Band",
@@ -8350,7 +8270,8 @@
     "date": "2026-11-01",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/circle-of-mud"
+    "url": "https://www.debosuil.nl/programma/circle-of-mud",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/circle-of-mud-out-of-season-weert-poppodium-de-bosuil-2026-11-01-CXqznmR9FeaJsepYeXKNn"
   },
   {
     "artist": "Eyeball III The IIIrd Eye",
@@ -8562,7 +8483,7 @@
     "date": "2026-11-01",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/alela-diane/2854279"
+    "url": "https://www.paradiso.nl/en/program/alela-diane/2854279"
   },
   {
     "artist": "Breabach",
@@ -10488,7 +10409,8 @@
     "date": "2026-11-07",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/levara"
+    "url": "https://www.debosuil.nl/programma/levara",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/levara-weert-poppodium-de-bosuil-2026-11-07-CeHRsrQWCc1fsL2Pzx4ff"
   },
   {
     "artist": "Benjamin Herman Trio ft. Tomoaki Baba",
@@ -10595,6 +10517,17 @@
     "url": "https://www.doornroosje.nl/event/froday-27"
   },
   {
+    "artist": "Platenbeurs Hengelo",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "11:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/platenbeurs-hengelo",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/platenbeurs-hengelo-metropool-hengelo-2026-11-08-Cd7BYGNT1tW41qeR8ukhM"
+  },
+  {
     "artist": "Kunstscene: Luistersessies",
     "venue": "Poppodium 013 - Next + Foyer",
     "city": "Tilburg",
@@ -10673,7 +10606,8 @@
     "date": "2026-11-08",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/danielle-nicole-band"
+    "url": "https://www.debosuil.nl/programma/danielle-nicole-band",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/danielle-nicole-band-weert-poppodium-de-bosuil-2026-11-08-CfCHy6w38XnBVhvcDv1SN"
   },
   {
     "artist": "Jeremy Pinnell",
@@ -10996,7 +10930,7 @@
   },
   {
     "artist": "Sharp Pins",
-    "venue": "De Duif",
+    "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-09",
@@ -12381,7 +12315,8 @@
     "date": "2026-11-13",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/raywilson-26"
+    "url": "https://www.debosuil.nl/programma/raywilson-26",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ray-wilson-weert-poppodium-de-bosuil-2026-11-13-CfCHyAP9g64LcKYXXT8kY"
   },
   {
     "artist": "Hiigo",
@@ -12713,6 +12648,16 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-elvis-concert-us-dordrecht-bibelot-poppodium-2026-11-14-Cd32EQQqJFuRpNwpzZhfQ"
   },
   {
+    "artist": "305",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/305-album-release"
+  },
+  {
     "artist": "Delany",
     "venue": "BIRD",
     "city": "Rotterdam",
@@ -12763,7 +12708,7 @@
     "date": "2026-11-14",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/lucky-fonz-iii/2747841"
+    "url": "https://www.paradiso.nl/en/program/lucky-fonz-iii/2747841"
   },
   {
     "artist": "Merol",
@@ -14292,7 +14237,8 @@
     "date": "2026-11-19",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/erdling"
+    "url": "https://www.debosuil.nl/programma/erdling",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/erdling-weert-poppodium-de-bosuil-2026-11-19-CXqznCgf2GSk1uwR5ZntL"
   },
   {
     "artist": "Fleshcrawl + Avulsed",
@@ -14651,6 +14597,17 @@
     "url": "https://www.podiuminfo.nl/concert/468695/Money-The-Man-Dan-The-Middle-Men/Het-Bolwerk"
   },
   {
+    "artist": "Niels Geusebroek sings Coldplay",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/niels-geusebroek-sings-coldplay",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/niels-geusebroek-sings-coldplay-hengelo-metropool-hengelo-2026-11-20-CYWCrymhcbFtcnhiuZvGG"
+  },
+  {
     "artist": "Parker Barrow",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -14684,17 +14641,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-bluesbones-leeuwarden-neushoorn-2026-11-20-CYvUY37YMWbC7nm81N98Y"
   },
   {
-    "artist": "Trixie Whitley",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-11-20",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/trixie-whitley",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/trixie-whitley-hengelo-metropool-hengelo-2026-11-20-CZPKnbKyKmF79psByLNAz"
-  },
-  {
     "artist": "Frank Boeijen",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -14712,7 +14658,8 @@
     "date": "2026-11-20",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/regressivehypnosis"
+    "url": "https://www.debosuil.nl/programma/regressivehypnosis",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/regressive-hypnosis-weert-poppodium-de-bosuil-2026-11-20-CfCHyHABr9K8bDWorLL9o"
   },
   {
     "artist": "CHARLOT",
@@ -14725,17 +14672,6 @@
     "url": "https://www.rotown.nl/agenda/charlot-1/",
     "clubCard": false,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/charlot-rotterdam-rotown-2026-11-20-CapHDZo7Lk3QShmythwd1"
-  },
-  {
-    "artist": "Electric Six",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-11-20",
-    "time": "21:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/electric-six",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/electric-six-enschede-metropool-enschede-2026-11-20-CZagYfx8wnKZSCBUGx1AT"
   },
   {
     "artist": "Joshua Idehen",
@@ -15166,7 +15102,7 @@
     "date": "2026-11-21",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/hey-nothing-hound-world-tour/2904235"
+    "url": "https://www.paradiso.nl/en/program/hey-nothing-hound-world-tour/2904235"
   },
   {
     "artist": "Noah Derksen",
@@ -15228,7 +15164,8 @@
     "date": "2026-11-21",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/parker-barrow"
+    "url": "https://www.debosuil.nl/programma/parker-barrow",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/parker-barrow-usa-weert-poppodium-de-bosuil-2026-11-21-CfCHyLSdNsK9xEJVtveMg"
   },
   {
     "artist": "Desire",
@@ -15416,7 +15353,8 @@
     "date": "2026-11-22",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/oliver-wakeman"
+    "url": "https://www.debosuil.nl/programma/oliver-wakeman",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/oliver-wakeman-weert-poppodium-de-bosuil-2026-11-22-CfCHyPkZngXwGqZV49puR"
   },
   {
     "artist": "Morbidfest: I Am Morbid (US) + Atheist (US) + Cancer (UK) + Narcotic Wasteland (US)",
@@ -15859,7 +15797,7 @@
   },
   {
     "artist": "Luka Bloom",
-    "venue": "Stadsschouwburg",
+    "venue": "De Oosterpoort",
     "city": "Groningen",
     "country": "NL",
     "date": "2026-11-24",
@@ -16807,7 +16745,7 @@
     "date": "2026-11-27",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/james-smith/2894999",
+    "url": "https://www.paradiso.nl/en/program/james-smith/2894999",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/james-smith-amsterdam-tolhuistuin-2026-11-27-Cb9cAq55rWURRU8wDbtyn"
   },
   {
@@ -16936,7 +16874,8 @@
     "date": "2026-11-27",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/laura-cox"
+    "url": "https://www.debosuil.nl/programma/laura-cox",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/laura-cox-weert-poppodium-de-bosuil-2026-11-27-CXqznLq3eUANh8joMNvUA"
   },
   {
     "artist": "Snelle",
@@ -17266,7 +17205,7 @@
   },
   {
     "artist": "Subterranean Street Society",
-    "venue": "De Oosterpoort",
+    "venue": "SPOT Groningen",
     "city": "Groningen",
     "country": "NL",
     "date": "2026-11-28",
@@ -17421,6 +17360,17 @@
     "url": "https://www.rotown.nl/agenda/mich-3/",
     "clubCard": false,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mich-rotterdam-rotown-2026-11-28-CbxYqewgFt5wNdhT1GoqJ"
+  },
+  {
+    "artist": "CLASSIC (R&B & Hiphop)",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "22:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/classic-rb-hiphop-28-nov",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/classic-rb-hiphop-hengelo-metropool-hengelo-2026-11-28-CaGSX4cNVyN6wvaeSPZvF"
   },
   {
     "artist": "Ronis Goliath",
@@ -18270,7 +18220,7 @@
     "date": "2026-12-02",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/noor/2852178"
+    "url": "https://www.paradiso.nl/en/program/noor/2852178"
   },
   {
     "artist": "Radio Z",
@@ -19120,7 +19070,8 @@
     "date": "2026-12-04",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/stahlzeit-vr-2026"
+    "url": "https://www.debosuil.nl/programma/stahlzeit-vr-2026",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/stahlzeit-weert-poppodium-de-bosuil-2026-12-04-CXqznPbyoHMRAcrwpNL1F"
   },
   {
     "artist": "Sarah Julia",
@@ -19504,7 +19455,8 @@
     "date": "2026-12-05",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/stahlzeit-za-2026"
+    "url": "https://www.debosuil.nl/programma/stahlzeit-za-2026",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/stahlzeit-weert-poppodium-de-bosuil-2026-12-05-CXqznSKSnBCNu2ESDksd4"
   },
   {
     "artist": "Alice Olsthoorn",
@@ -19610,7 +19562,8 @@
     "date": "2026-12-06",
     "time": "16:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/stahlzeit-zo-2026"
+    "url": "https://www.debosuil.nl/programma/stahlzeit-zo-2026",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/stahlzeit-weert-poppodium-de-bosuil-2026-12-06-CXqznV6PSV4Nh1Ydu168x"
   },
   {
     "artist": "Napalm Death",
@@ -20899,17 +20852,6 @@
     "url": "https://www.livepul.com/agenda/fabulous90s"
   },
   {
-    "artist": "Lézard",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-12-11",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/lezard",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/lezard-hengelo-metropool-hengelo-2026-12-11-CaLEDeiLWMYpiv1pte1KE"
-  },
-  {
     "artist": "J. Bernardt",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -20927,7 +20869,8 @@
     "date": "2026-12-11",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/kingsoffloyd-2026"
+    "url": "https://www.debosuil.nl/programma/kingsoffloyd-2026",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kings-of-floyd-weert-poppodium-de-bosuil-2026-12-11-CfCHwTRGtcAERMrA2k23Q"
   },
   {
     "artist": "Ciao Lucifer",
@@ -21297,17 +21240,8 @@
     "date": "2026-12-12",
     "time": "21:00",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/hill-billy-moonshiners"
-  },
-  {
-    "artist": "Tjolk! Everything 80's",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-12-12",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/tjolk-everything-80s"
+    "url": "https://www.debosuil.nl/programma/hill-billy-moonshiners",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-hillbilly-moonshiners-bluegrass-band-weert-poppodium-de-bosuil-2026-12-12-CfCHwWpujhFS2QQh8AUAM"
   },
   {
     "artist": "Gallowstreet",
@@ -22084,7 +22018,8 @@
     "date": "2026-12-17",
     "time": "20:45",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/coldplace-2"
+    "url": "https://www.debosuil.nl/programma/coldplace-2",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/coldplace-weert-poppodium-de-bosuil-2026-12-17-CfCHwaBpXvJHVMhfZMwqp"
   },
   {
     "artist": "Apeshit",
@@ -22778,7 +22713,8 @@
     "date": "2026-12-19",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/prog-proms"
+    "url": "https://www.debosuil.nl/programma/prog-proms",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/progproms-tribute-to-edward-reekers-weert-poppodium-de-bosuil-2026-12-19-CXqznagEnHFEq7sHwLLNt"
   },
   {
     "artist": "Bertolf",
@@ -22891,7 +22827,8 @@
     "date": "2026-12-20",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/steve-n-seagulls"
+    "url": "https://www.debosuil.nl/programma/steve-n-seagulls",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/steve-n-seagulls-weert-poppodium-de-bosuil-2026-12-20-CfCHwdV16brmZ5fTbHHiN"
   },
   {
     "artist": "New Model Army",
@@ -23300,7 +23237,8 @@
     "date": "2026-12-27",
     "time": "16:00",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/treasure-brunomars"
+    "url": "https://www.debosuil.nl/programma/treasure-brunomars",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/treasure-bruno-mars-tribute-band-weert-poppodium-de-bosuil-2026-12-27-Ce1129jJBw1yULDghBdpb"
   },
   {
     "artist": "John the Revelator – Nothing But The Blues – Haarlem Blues Oudjaarsconcert",
@@ -23899,7 +23837,19 @@
     "date": "2027-01-08",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/classichitsinconcert"
+    "url": "https://www.debosuil.nl/programma/classichitsinconcert",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/classic-hits-in-concert-weert-poppodium-de-bosuil-2027-01-08-Cf6cXyG9s96jjtmZkbf4J"
+  },
+  {
+    "artist": "Ohrima Album Release",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2027-01-08",
+    "time": "21:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/ohrima-album-release",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ohrima-album-release-hengelo-metropool-hengelo-2027-01-08-CeM8TqVo5qpmfcw2yMhem"
   },
   {
     "artist": "WC Experience",
@@ -24069,7 +24019,8 @@
     "date": "2027-01-09",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/madeinpurple"
+    "url": "https://www.debosuil.nl/programma/madeinpurple",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/made-in-purple-weert-poppodium-de-bosuil-2027-01-09-Cf6cY2ab92nLbcphnwLGW"
   },
   {
     "artist": "WC Experience",
@@ -24546,6 +24497,17 @@
     "url": "https://www.debosuil.nl/programma/billy-joel-experience-ft-string-quartet"
   },
   {
+    "artist": "Fleddy Melculy",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2027-01-16",
+    "time": "21:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/fleddy-melculy",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/fleddy-melculy-enschede-metropool-enschede-2027-01-16-CbvzYweodnX5gA3kDZBT3"
+  },
+  {
     "artist": "Julian Sas",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -24840,7 +24802,8 @@
     "date": "2027-01-21",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/ontaard"
+    "url": "https://www.debosuil.nl/programma/ontaard",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ontaard-weert-poppodium-de-bosuil-2027-01-21-Cf6cY94GMEb9QcK6ATpiM"
   },
   {
     "artist": "Punch Brothers",
@@ -25301,7 +25264,8 @@
     "date": "2027-01-23",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/bouke2027"
+    "url": "https://www.debosuil.nl/programma/bouke2027",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bouke-the-elvis-matters-band-weert-poppodium-de-bosuil-2027-01-23-CZrcHQTQTGKL2MjnKtNes"
   },
   {
     "artist": "De Swing Reunion Party",
@@ -26632,17 +26596,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/broos-utrecht-tivolivredenburg-2027-02-05-CfJPZdvQ1w6B81SSSXJix"
   },
   {
-    "artist": "Erwin Nyhoff & The Prodigal Sons",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2027-02-05",
-    "time": "20:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/erwin-nyhoff-the-prodigal-sons",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/erwin-nyhoff-the-prodigal-sons-hengelo-metropool-hengelo-2027-02-05-CecGxZJmPMnJRhprfjp4V"
-  },
-  {
     "artist": "Status Quotes",
     "venue": "Metropool Enschede",
     "city": "Enschede",
@@ -27565,7 +27518,8 @@
     "date": "2027-02-14",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/themetalstuds"
+    "url": "https://www.debosuil.nl/programma/themetalstuds",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-metal-studs-weert-poppodium-de-bosuil-2027-02-14-Cf6cWeoNs2CqyxLupPgJu"
   },
   {
     "artist": "Whitechapel",
@@ -29258,7 +29212,8 @@
     "date": "2027-02-26",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/physical-graffiti-2"
+    "url": "https://www.debosuil.nl/programma/physical-graffiti-2",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-ultimate-led-zeppelin-tribute-by-physical-graffiti-weert-poppodium-de-bosuil-2027-02-26-Cf6cWmPkMfnUyF9wvMQZc"
   },
   {
     "artist": "Kakkmaddafakka",
@@ -30589,7 +30544,7 @@
     "date": "2027-03-11",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/tiny-habits/2932820",
+    "url": "https://www.paradiso.nl/nl/programma/tiny-habits/2932820",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tiny-habits-amsterdam-paradiso-2027-03-11-CfGA8MVTnW11p8RqsTsoC"
   },
   {
@@ -30956,7 +30911,8 @@
     "date": "2027-03-14",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/cookingwithknopfler"
+    "url": "https://www.debosuil.nl/programma/cookingwithknopfler",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/cooking-with-knopfler-weert-poppodium-de-bosuil-2027-03-14-Cf6cWsnEHNurwCGUxqNCX"
   },
   {
     "artist": "Banji",
@@ -31525,7 +31481,8 @@
     "date": "2027-03-19",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/kai-strauss-the-electric-blues-allstars"
+    "url": "https://www.debosuil.nl/programma/kai-strauss-the-electric-blues-allstars",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kai-strauss-the-electric-blues-allstars-weert-poppodium-de-bosuil-2027-03-19-Cf6cWzMrWEfD4ogL2ogfi"
   },
   {
     "artist": "Personal Trainer",
@@ -32453,16 +32410,6 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/black-bottle-riot-2/"
-  },
-  {
-    "artist": "Booster Showcasefestival",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2027-04-02",
-    "time": "20:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/booster-showcasefestival"
   },
   {
     "artist": "Chef'Special",
@@ -33485,7 +33432,7 @@
     "date": "2027-04-14",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/air-traffic/2925151",
+    "url": "https://www.paradiso.nl/en/program/air-traffic/2925151",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/air-traffic-amsterdam-tolhuistuin-2027-04-14-CfAUmvzTHa4sDfybomcYF"
   },
   {
@@ -35080,7 +35027,7 @@
     "date": "2027-05-13",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/florence-road/2933871",
+    "url": "https://www.paradiso.nl/en/program/florence-road/2933871",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/florence-road-amsterdam-paradiso-2027-05-13-CfkZJ4ULk41aT1HakrwwH"
   },
   {
@@ -35165,7 +35112,8 @@
     "date": "2027-05-14",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/saga"
+    "url": "https://www.debosuil.nl/programma/saga",
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/saga-weert-poppodium-de-bosuil-2027-05-14-Cf6cXCYLVHsMtby3xu7rd"
   },
   {
     "artist": "JOB Dutchtuber & Billy The Kit",
@@ -35345,7 +35293,7 @@
     "date": "2027-05-20",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/bleech-93/2938613",
+    "url": "https://www.paradiso.nl/nl/programma/bleech-93/2938613",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bleech-93-amsterdam-paradiso-2027-05-20-CfifVnKmiPj6VW5MjBtrk"
   },
   {
@@ -36108,7 +36056,7 @@
     "city": "Eindhoven",
     "country": "NL",
     "date": "2027-09-10",
-    "time": "20:15",
+    "time": "",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/eisbrecher-10sep"
   },
