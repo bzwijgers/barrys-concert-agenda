@@ -1,4 +1,5 @@
 from .common import *
+from .common import _detail_title, _detail_date_time
 
 DBS_CONCERT_URL = "https://www.dbstudio.nl/events/categorie/alles/concert/lijst/"
 DBS_BASE_URL = "https://www.dbstudio.nl"
