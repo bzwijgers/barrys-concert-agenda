@@ -284,7 +284,7 @@ def parse_event(html, url, name, city):
         genre_match=re.search(r"Agenda\s*/\s*([A-Za-z]+)",raw_text[:2000],re.I)
         if genre_match and genre_match.group(1).lower() in ("retail","public","expo","kennis","culture"):
             return None
-    if name=="De Helling" and re.search(r"\\b(?:rave|afrobeats|fanparty|disco|clubnachten?|nachtclub|clubnight)\\b|paardenrave|day-rave",lowered):
+    if name=="De Helling" and re.search(r"\b(?:rave|afrobeats|fanparty|disco|clubnachten?|nachtclub|clubnight)\b|paardenrave|day-rave",lowered):
         return None
     if name=="BIRD" and re.search(r"360-degrees|talk|clubnight|clubnacht|cafe-dj-sessions",lowered):
         return None
