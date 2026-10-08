@@ -27,13 +27,11 @@ VENUES = {
     # The discovery floor below rejects accidentally truncated output.
     "Bibelot": ("https://bibelot.net/programma/", "/programma/", "Dordrecht"),
     "De Pul": ("https://www.livepul.com/agenda/", "/agenda/", "Uden"),
-}
-
-# Candidate venues are kept out of the production batch until their full
-# programme pagination and event parsing are verified.
-CANDIDATE_VENUES = {
     "De Bosuil": ("https://www.debosuil.nl/programma/", "/programma/", "Weert"),
 }
+
+# All previously pending venues are live after independent agenda checks.
+CANDIDATE_VENUES = {}
 
 MONTHS = {
     "jan":1,"januari":1,"january":1,"feb":2,"februari":2,"february":2,
@@ -298,6 +296,11 @@ def parse_event(html, url, name, city):
         identity, flags=re.I,
     ):
         return None
+    if name == "De Bosuil" and re.search(
+        r"/programma/(?:het-feestje-2026|club-motion[^/]*|40up[^/]*|oud-en-nieuw[^/]*)$",
+        urlsplit(url).path, re.I,
+    ):
+        return None
     if name == "Bibelot" and re.search(r"\bclub\b", raw_text[:600], re.I) and not re.search(r"\bconcert\b", raw_text[:600], re.I):
         return None
     if name=="Klokgebouw":
@@ -357,6 +360,15 @@ def scrape_venue(name, maximum=500):
     agenda, prefix,city=VENUES[name]
     html=download_page_retry(agenda,attempts=2)
     found=discover(html,agenda,prefix)
+    if name == "De Bosuil":
+        # /programma/archief is a navigation link, not a concert detail.
+        # The previous parser invented a date from its archive listings.
+        found = [url for url in found
+                 if not re.search(r"/programma/archief(?:/|$)", urlsplit(url).path, re.I)]
+        # The official programme currently lists ~67 future events.
+        # Refuse a silently truncated first page.
+        if len(found) < 45:
+            raise RuntimeError(f"De Bosuil: incomplete programme: {len(found)} event URLs")
     if name == "Klokgebouw":
         # Known non-concert listings return HTTP 500 on their detail URLs.
         # Filter only these unmistakably non-music events before detail fetch.
