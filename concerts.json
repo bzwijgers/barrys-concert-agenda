@@ -1313,6 +1313,16 @@
     "url": "https://www.013.nl/programma/128842/natewantstobattle"
   },
   {
+    "artist": ".Multibeat",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-11",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/multibeat-at-v11-11-10-2026"
+  },
+  {
     "artist": "Adje",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -1341,16 +1351,6 @@
     "time": "20:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/marou-massin/"
-  },
-  {
-    "artist": "Multibeat album release party at V11 Rotterdam 11 Oct 2026 – 11 okt 2026",
-    "venue": "BIRD",
-    "city": "Rotterdam",
-    "country": "NL",
-    "date": "2026-10-11",
-    "time": "20:30",
-    "source": "BIRD",
-    "url": "https://bird-rotterdam.nl/event/multibeat-at-v11-11-10-2026"
   },
   {
     "artist": "Pete Murray + Brett Wood",
@@ -1806,6 +1806,16 @@
     "url": "https://www.effenaar.nl/agenda/audrey-horne"
   },
   {
+    "artist": "corto.alto",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "20:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/corto-alto-14-10-26"
+  },
+  {
     "artist": "DEATHCHANT (USA) + Shitman",
     "venue": "dB's",
     "city": "Utrecht",
@@ -1925,6 +1935,16 @@
     "time": "21:40",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/mondo-drag-early-moods"
+  },
+  {
+    "artist": "Gabriel Cassaro e sua Oficina",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-14",
+    "time": "22:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/birdsessions-14-10-2026"
   },
   {
     "artist": "Sego",
@@ -2225,6 +2245,16 @@
     "time": "20:30",
     "source": "Gebouw-T",
     "url": "https://gebouw-t.nl/agenda/marble-sounds"
+  },
+  {
+    "artist": "Myles Sanko",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-15",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/myles-sanko-15-10-26"
   },
   {
     "artist": "Nina Winder-Lind",
@@ -3508,6 +3538,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/ronde-18okt"
+  },
+  {
+    "artist": "Dina Ögon",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-18",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/dina-ogon-18-10-26"
   },
   {
     "artist": "Douwe Bob",
@@ -5276,6 +5316,16 @@
     "url": "https://metropool.nl/agenda/leif-de-leeuw-band"
   },
   {
+    "artist": "Lizz Wright",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/lizz-wright-24-10-26"
+  },
+  {
     "artist": "Loïs Lane",
     "venue": "Metropool Hengelo",
     "city": "Hengelo",
@@ -6790,6 +6840,16 @@
     "url": "https://www.podiuminfo.nl/concert/462515/Noah-Guthrie-Roofman/Het-Bolwerk"
   },
   {
+    "artist": "Ruben Hein",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/ruben-hein-30-10-2026"
+  },
+  {
     "artist": "Scheldefestival 2026: Django Wagner & Senna",
     "venue": "Gebouw-T",
     "city": "Bergen op Zoom",
@@ -6808,6 +6868,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/theclarks/"
+  },
+  {
+    "artist": "The Meltdown",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/the-meltdown-30-10-25"
   },
   {
     "artist": "Velocity Made Good",
@@ -7724,6 +7794,16 @@
     "url": "https://www.paard.nl/event/louis-pedro/"
   },
   {
+    "artist": "Mark Guiliana Beat Music",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/mark-guiliana-beat-music-01-11-2026"
+  },
+  {
     "artist": "Noah Guthrie",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -7853,6 +7933,16 @@
     "time": "20:15",
     "source": "013",
     "url": "https://www.013.nl/programma/128707/the-dire-straits-experience"
+  },
+  {
+    "artist": "Tasha",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-02",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/tasha-02-11-2026"
   },
   {
     "artist": "The Meltdown",
@@ -8116,6 +8206,16 @@
     "url": "https://www.paradiso.nl/nl/programma/the-howlers/2895925"
   },
   {
+    "artist": "ÃO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ao/"
+  },
+  {
     "artist": "Citizen + Modern Color",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -8166,16 +8266,6 @@
     "url": "https://www.013.nl/programma/128736/wies"
   },
   {
-    "artist": "ÃO",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/ao/"
-  },
-  {
     "artist": "SPYAIR",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -8194,6 +8284,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/en/program/fink/2862246"
+  },
+  {
+    "artist": "Manu Van Kersbergen",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/manu-van-kersbergen-04-11-26"
   },
   {
     "artist": "World News",
@@ -8488,6 +8588,16 @@
     "url": "https://patronaat.nl/event/the-violet-parade-ep-release-05-11-26/"
   },
   {
+    "artist": "Ão",
+    "venue": "Bitterzoet",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/ao/2832033"
+  },
+  {
     "artist": "Frank Boeijen",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -8546,16 +8656,6 @@
     "time": "20:30",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/uit-de-hoge-hoed-improv-comedy-nov"
-  },
-  {
-    "artist": "Ão",
-    "venue": "Bitterzoet",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/ao/2832033"
   },
   {
     "artist": "BLØF",
@@ -9208,6 +9308,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/ploegendienst/2771941"
+  },
+  {
+    "artist": "RAUW Festival",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/rauw-festival-7-11-2026"
   },
   {
     "artist": "Sirenia + Illumishade + Support",
@@ -10091,6 +10201,16 @@
     "url": "https://www.spotgroningen.nl/programma/eva-eikhout"
   },
   {
+    "artist": "Infinity Song",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-11",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/infinity-song-11-11-26"
+  },
+  {
     "artist": "Kiwi Jr.",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -10715,6 +10835,16 @@
     "url": "https://patronaat.nl/event/diggy-dex-phil-13-11-26/"
   },
   {
+    "artist": "EEK-A-MOUSE + JAHVOLUTION - Rude Boy Jamaican",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/eek-a-mouse-13-11-26"
+  },
+  {
     "artist": "Gallowstreet",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -10753,6 +10883,16 @@
     "time": "20:30",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/gruppo-sportivo"
+  },
+  {
+    "artist": "NYVE",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/nyve-13-11-2026"
   },
   {
     "artist": "Roberto Jacketti & the Scooters + DJ René CD",
@@ -11518,6 +11658,16 @@
     "url": "https://www.paradiso.nl/nl/programma/neal-francis/2469338"
   },
   {
+    "artist": "SML",
+    "venue": "LantarenVenster",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/sml-15-11-2026"
+  },
+  {
     "artist": "The Elvis Concert",
     "venue": "Metropool Hengelo",
     "city": "Hengelo",
@@ -12028,7 +12178,7 @@
     "url": "https://www.paard.nl/event/daoud/"
   },
   {
-    "artist": "Joyce Moreno live in Rotterdam, 18 nov, LantarenVenster – 18 nov 2026",
+    "artist": "Joyce Moreno",
     "venue": "BIRD",
     "city": "Rotterdam",
     "country": "NL",
@@ -12171,6 +12321,16 @@
     "clubCard": false
   },
   {
+    "artist": "Gotu Jim",
+    "venue": "Maassilo",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/gotu-jim-19-11-26"
+  },
+  {
     "artist": "Heath",
     "venue": "MEZZ",
     "city": "Breda",
@@ -12219,6 +12379,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/charlot/2889499"
+  },
+  {
+    "artist": "Chico Chico",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-19",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/chico-chico-19-11-2026"
   },
   {
     "artist": "Ellen ten Damme",
@@ -12583,6 +12753,16 @@
     "url": "https://www.effenaar.nl/agenda/merol"
   },
   {
+    "artist": "Momoko Gill",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/momoko-gill-20-11-26"
+  },
+  {
     "artist": "Niels Geusebroek sings Coldplay",
     "venue": "Metropool Hengelo",
     "city": "Hengelo",
@@ -12762,6 +12942,16 @@
     "time": "17:00",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/personal-trainer-8-2"
+  },
+  {
+    "artist": "Collier plays Coltrane",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "19:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/collier-plays-coltrane-21-11-2026"
   },
   {
     "artist": "DIGGY DEX (THEATER DE SPIEGEL)",
@@ -12973,6 +13163,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/acindc/"
+  },
+  {
+    "artist": "Caoilfhionn Rose",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/caoilfhionn-rose-21-11-26"
   },
   {
     "artist": "De Kift",
@@ -13325,6 +13525,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/isabel-usher/2900846"
+  },
+  {
+    "artist": "Trixie Whitley",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/trixie-whitley-22-11-2026"
   },
   {
     "artist": "yuraa",
@@ -13981,6 +14191,16 @@
     "clubCard": false
   },
   {
+    "artist": "Rijck",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/rijck-26-11-2026"
+  },
+  {
     "artist": "Seb Lowe + Kate couriel",
     "venue": "Bitterzoet",
     "city": "Amsterdam",
@@ -14323,6 +14543,16 @@
     "url": "https://www.spotgroningen.nl/programma/jp-den-tex-tineke-schoemaker"
   },
   {
+    "artist": "MT Jones",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/mt-jones-27-11-26"
+  },
+  {
     "artist": "Queens & Quizzes: A Drag Pubquiz Extravaganza!",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -14593,6 +14823,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/52304790/the-last-waltz-door-dawn-brothers-28-11-2026/"
   },
   {
+    "artist": "Ão",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/ao"
+  },
+  {
     "artist": "Elmiene",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -14661,16 +14901,6 @@
     "time": "20:00",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/the-veils-2"
-  },
-  {
-    "artist": "Ão",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/ao"
   },
   {
     "artist": "Kingfishr",
@@ -15577,6 +15807,16 @@
     "url": "https://www.paard.nl/event/jack-and-the-weatherman-4/"
   },
   {
+    "artist": "Josylvio",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/josylvio-03-12-2026"
+  },
+  {
     "artist": "Loïs Lane In concert: 40 jaar",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -15626,6 +15866,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/zwangere-guy/",
     "clubCard": false
+  },
+  {
+    "artist": "Zwangere Guy",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/zwangere-guy-03-12-2026"
   },
   {
     "artist": "Davina Michelle",
@@ -16772,6 +17022,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/benny-sings/2892760"
+  },
+  {
+    "artist": "Nusantara Beat",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-08",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/nusantara-beat-08-12-26"
   },
   {
     "artist": "Opus Kink",
@@ -17933,6 +18193,16 @@
     "clubCard": false
   },
   {
+    "artist": "Gallowstreet",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "20:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/gallowstreet-at-annabel-13-12-2026"
+  },
+  {
     "artist": "Moving Pictures",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -18334,16 +18604,6 @@
     "clubCard": false
   },
   {
-    "artist": "Gotu Jim",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-17",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/gotu-jim/2892814"
-  },
-  {
     "artist": "Árstíðir",
     "venue": "SPOT Groningen",
     "city": "Groningen",
@@ -18352,6 +18612,16 @@
     "time": "20:30",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/arstidir"
+  },
+  {
+    "artist": "Gotu Jim",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/gotu-jim/2892814"
   },
   {
     "artist": "Apeshit",
@@ -21064,6 +21334,16 @@
     "url": "https://dbstudio.nl/event/zzz-stuurbaard-bakkebaard"
   },
   {
+    "artist": "‘LET LOVE RULE’ – songs by Lenny Kravitz, performed by Ro Krom",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/"
+  },
+  {
     "artist": "Erwin Nyhoff & The Prodigal Sons",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -21082,16 +21362,6 @@
     "time": "20:15",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/young-gun-silver-fox-4"
-  },
-  {
-    "artist": "‘LET LOVE RULE’ – songs by Lenny Kravitz, performed by Ro Krom",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "20:15",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/"
   },
   {
     "artist": "ANOTHER TASTE",
@@ -22447,6 +22717,16 @@
     "url": "https://www.paradiso.nl/nl/programma/joan-as-police-woman/2877137"
   },
   {
+    "artist": "Karate Boogaloo",
+    "venue": "V11",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-14",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/karate-boogaloo-14-02-2027-at-v11"
+  },
+  {
     "artist": "KYTES",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -22879,7 +23159,7 @@
     "url": "https://www.paradiso.nl/nl/programma/wende/2931992"
   },
   {
-    "artist": "Yong Yello at BIRD Rotterdam",
+    "artist": "Yong Yello",
     "venue": "BIRD",
     "city": "Rotterdam",
     "country": "NL",
@@ -23007,6 +23287,16 @@
     "time": "20:30",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/jesper-lindell-the-brunnsvick-sounds"
+  },
+  {
+    "artist": "New Cool Collective",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/new-cool-collective-20-02-2027"
   },
   {
     "artist": "The Dirty Daddies",
@@ -23641,7 +23931,7 @@
     "url": "https://www.spotgroningen.nl/programma/roxeanne-hazes-5"
   },
   {
-    "artist": "anaiis live in BIRD Rotterdam",
+    "artist": "ANAIIS",
     "venue": "BIRD",
     "city": "Rotterdam",
     "country": "NL",
@@ -24264,6 +24554,16 @@
     "url": "https://patronaat.nl/event/made-in-purple-55-years-of-made-in-japan-06-03-27/"
   },
   {
+    "artist": "SOYUZ (СОЮЗ)",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-03-06",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/soyuz-06-03-27"
+  },
+  {
     "artist": "De Staat",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -24563,6 +24863,16 @@
     "time": "20:00",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/britpop-a-flashback-to-the-nineties"
+  },
+  {
+    "artist": "Kans",
+    "venue": "Annabel",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "20:00",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/kans-12-03-27"
   },
   {
     "artist": "Rudeboy x Boskat",
@@ -25857,6 +26167,16 @@
     "url": "https://dbstudio.nl/event/zeke-usa"
   },
   {
+    "artist": "Saul Williams",
+    "venue": "BIRD",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-04-02",
+    "time": "20:30",
+    "source": "BIRD",
+    "url": "https://bird-rotterdam.nl/event/saul-williams-02-04-2027"
+  },
+  {
     "artist": "Buster Shuffle + Antillectual",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -26993,7 +27313,7 @@
     "url": "https://www.effenaar.nl/agenda/jim-gardner"
   },
   {
-    "artist": "Kraak & Smaak (LIVE) @ Maassilo Rotterdam",
+    "artist": "Kraak & Smaak",
     "venue": "BIRD",
     "city": "Rotterdam",
     "country": "NL",
