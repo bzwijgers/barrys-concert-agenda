@@ -24,6 +24,7 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
@@ -156,6 +157,7 @@ fun ConcertApp() {
         mutableStateOf(1)
     }
 
+    var searchExpanded by remember { mutableStateOf(false) }
     var searchQuery by remember { mutableStateOf("") }
     var searchDateFrom by remember { mutableStateOf<LocalDate?>(null) }
     var searchDateTo by remember { mutableStateOf<LocalDate?>(null) }
@@ -530,23 +532,24 @@ fun ConcertApp() {
     val hasSearchCriteria =
         normalizedSearch.isNotBlank() || searchDateFrom != null || searchDateTo != null || searchVenue != null
 
+    // Search stays active when moving between Agenda, New, Favorites, Tickets,
+    // Rotown Clubkaart and Archive. It never filters the More/Info menus.
     val searchedConcerts =
-        if (selectedTab != 6) {
+        if (!hasSearchCriteria || selectedTab == 7 || selectedTab == 8) {
             tabConcerts
-        } else if (!hasSearchCriteria) {
-            emptyList()
         } else {
             tabConcerts.filter { concert ->
                 val textMatches =
                     normalizedSearch.isBlank() ||
                         concert.artist.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
-                        concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch)
-                val venueMatches = searchVenue == null || concert.venue.equals(searchVenue, ignoreCase = true)
+                        concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
+                        concert.city.lowercase(Locale.getDefault()).contains(normalizedSearch)
+                val venueMatches =
+                    searchVenue == null || concert.venue.equals(searchVenue, ignoreCase = true)
                 val concertDate = parseConcertDate(concert.date)
                 val dateMatches =
-                    concertDate != null &&
-                        (searchDateFrom == null || !concertDate.isBefore(searchDateFrom)) &&
-                        (searchDateTo == null || !concertDate.isAfter(searchDateTo))
+                    (searchDateFrom == null || (concertDate != null && !concertDate.isBefore(searchDateFrom))) &&
+                    (searchDateTo == null || (concertDate != null && !concertDate.isAfter(searchDateTo)))
                 textMatches && venueMatches && dateMatches
             }
         }
@@ -564,75 +567,36 @@ fun ConcertApp() {
     // cancels this scan. Known direct links are never overwritten.
     Scaffold(
         bottomBar = {
-
             NavigationBar {
-
                 NavigationBarItem(
-                    selected =
-                        selectedTab == 0,
-                    onClick = {
-                        selectedTab = 0
-                    },
-                    icon = {
-                        Text("✦", fontSize = 20.sp)
-                    },
+                    selected = selectedTab == 1,
+                    onClick = { selectedTab = 1 },
+                    icon = { Text("☷", fontSize = 19.sp) },
+                    label = { Text("Agenda", fontSize = 10.sp) }
                 )
-
                 NavigationBarItem(
-                    selected =
-                        selectedTab == 1,
-                    onClick = {
-                        selectedTab = 1
-                    },
-                    icon = {
-                        Text("☷", fontSize = 20.sp)
-                    },
+                    selected = selectedTab == 0,
+                    onClick = { selectedTab = 0 },
+                    icon = { Text("✦", fontSize = 19.sp) },
+                    label = { Text("Nieuw", fontSize = 10.sp) }
                 )
-
                 NavigationBarItem(
-                    selected =
-                        selectedTab == 2,
-                    onClick = {
-                        selectedTab = 2
-                    },
-                    icon = {
-                        Text("♥", fontSize = 20.sp)
-                    },
+                    selected = selectedTab == 2,
+                    onClick = { selectedTab = 2 },
+                    icon = { Text("♥", fontSize = 19.sp) },
+                    label = { Text("Favorieten", fontSize = 10.sp) }
                 )
-
-                NavigationBarItem(
-                    selected =
-                        selectedTab == 4,
-                    onClick = {
-                        selectedTab = 4
-                    },
-                    icon = {
-                        Text("♣", fontSize = 20.sp)
-                    },
-                )
-
                 NavigationBarItem(
                     selected = selectedTab == 3,
                     onClick = { selectedTab = 3 },
-                    icon = { Text("🎟", fontSize = 20.sp, color = Color(0xFF2E7D32)) }
+                    icon = { Text("🎟", fontSize = 18.sp) },
+                    label = { Text("Tickets", fontSize = 10.sp) }
                 )
-
                 NavigationBarItem(
-                    selected = selectedTab == 5,
-                    onClick = { selectedTab = 5 },
-                    icon = { Text("▤", fontSize = 20.sp) }
-                )
-
-                NavigationBarItem(
-                    selected = selectedTab == 6,
-                    onClick = { selectedTab = 6 },
-                    icon = { Text("⌕", fontSize = 20.sp) }
-                )
-
-                NavigationBarItem(
-                    selected = selectedTab == 7,
-                    onClick = { selectedTab = 7 },
-                    icon = { Text("ⓘ", fontSize = 20.sp) }
+                    selected = selectedTab in setOf(4, 5, 7, 8),
+                    onClick = { selectedTab = 8 },
+                    icon = { Text("⋯", fontSize = 21.sp) },
+                    label = { Text("Meer", fontSize = 10.sp) }
                 )
             }
         }
@@ -653,17 +617,20 @@ fun ConcertApp() {
             ) {
                 Text(
                     text = "Barry's concert agenda",
-                    fontSize = 18.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
-                    maxLines = 1
+                    maxLines = 1,
+                    modifier = Modifier.weight(1f)
                 )
-                Spacer(Modifier.width(5.dp))
                 NetherlandsFlag()
                 Spacer(Modifier.width(3.dp))
                 BelgiumFlag()
+                IconButton(onClick = { searchExpanded = !searchExpanded }) {
+                    Text(if (searchExpanded) "×" else "⌕", fontSize = 24.sp)
+                }
             }
 
-            if (selectedTab == 6) {
+            if (searchExpanded && selectedTab != 7 && selectedTab != 8) {
                 OutlinedTextField(
                     value = searchQuery,
                     onValueChange = { searchQuery = it },
@@ -845,6 +812,31 @@ fun ConcertApp() {
                                 }
                             }
 
+                            8 -> {
+                                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                    Text("Meer", fontWeight = FontWeight.Bold, fontSize = 21.sp)
+                                    Text("Je concerten en aanvullende overzichten",
+                                        style = MaterialTheme.typography.bodySmall)
+                                    listOf(
+                                        4 to "♣   Rotown Clubkaart",
+                                        5 to "▤   Archief · bezochte concerten",
+                                        7 to "ⓘ   Info en concertzalen"
+                                    ).forEach { (targetTab, title) ->
+                                        Card(
+                                            modifier = Modifier.fillMaxWidth()
+                                                .clickable { selectedTab = targetTab }
+                                        ) {
+                                            Text(
+                                                text = title,
+                                                modifier = Modifier.padding(18.dp),
+                                                fontWeight = FontWeight.Medium,
+                                                fontSize = 16.sp
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+
                             7 -> {
                                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
@@ -906,21 +898,31 @@ fun ConcertApp() {
                         )
                     }
 
-                    items(
-                        items =
-                            visibleConcerts,
-                        key = { concert ->
-
+                    itemsIndexed(
+                        items = visibleConcerts,
+                        key = { _, concert ->
                             concert.url.ifBlank {
-
-                                concert.artist +
-                                        concert.date +
-                                        concert.venue
+                                concert.artist + concert.date + concert.venue
                             }
                         }
-                    ) { concert ->
-
-                        ConcertCard(
+                    ) { index, concert ->
+                        Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                            if (selectedTab in setOf(1, 2, 3, 4, 5) &&
+                                (index == 0 || concert.date != visibleConcerts[index - 1].date)
+                            ) {
+                                val groupDate = parseConcertDate(concert.date)
+                                    ?.format(DateTimeFormatter.ofPattern(
+                                        "EEEE d MMMM yyyy",
+                                        Locale.forLanguageTag("nl-NL")
+                                    )) ?: concert.date
+                                Text(
+                                    text = groupDate,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = MaterialTheme.colorScheme.primary,
+                                    modifier = Modifier.padding(top = 12.dp, bottom = 2.dp)
+                                )
+                            }
+                            ConcertCard(
                             concert =
                                 concert,
                             onFavoriteClick = {
@@ -988,7 +990,8 @@ fun ConcertApp() {
                             },
                             ticketSwapMessage =
                                 if (ticketSwapStatusUrl == normalizeUrl(concert.url)) ticketSwapStatus else ""
-                        )
+                            )
+                        }
                     }
 
                     item {
@@ -1104,8 +1107,14 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
     if (confirmAttendingRemoval) AlertDialog(onDismissRequest = { confirmAttendingRemoval = false }, title = { Text("Concert verwijderen uit Tickets?") }, text = { Text("Wil je aangeven dat je niet meer naar dit concert gaat?") }, confirmButton = { TextButton(onClick = { confirmAttendingRemoval = false; onAttendingClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmAttendingRemoval = false }) { Text("Annuleren") } })
     Card(modifier = Modifier.fillMaxWidth()) {
         Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
-            Text(concert.artist, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium, maxLines = 1)
-            Text(buildString { append(concert.venue); if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country)) }, style = MaterialTheme.typography.bodyMedium)
+            Text(concert.artist, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium, maxLines = 2)
+            Text(buildString {
+                append(concert.venue)
+                if (concert.city.isNotBlank() && !concert.venue.contains(concert.city, ignoreCase = true)) {
+                    append(" · " + concert.city)
+                }
+                if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country))
+            }, style = MaterialTheme.typography.bodyMedium)
             val displayDate = parseConcertDate(concert.date)?.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("nl-NL"))) ?: concert.date
             Text(if (concert.time.isBlank()) displayDate else "$displayDate · ${concert.time}", style = MaterialTheme.typography.bodyMedium)
             if (concert.clubCard && showClubCardLabel) Text("ROTOWN CLUBKAART", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
