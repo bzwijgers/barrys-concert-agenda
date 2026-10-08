@@ -273,7 +273,7 @@ def paradiso_extract_primary_event_date_time(html):
     # Zo kan een aanbevolen concert verderop geen tijd leveren.
     after_date = text[date_match.end():date_match.end() + 1200]
     time_match = re.search(
-        r"(?:Hoofdprogramma|Main program)\s*:\s*(\d{1,2}:\d{2})",
+        r"(?:Hoofdprogramma|Main program(?:me)?)\s*:\s*(\d{1,2}:\d{2})",
         after_date,
         flags=re.IGNORECASE,
     )
