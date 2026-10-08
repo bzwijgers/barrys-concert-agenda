@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "audit/quick_missing.py"
+      - "scrapers/new_venues.py"
+      - "scrapers/effenaar.py"
       - ".github/workflows/targeted-concert-audit.yml"
 permissions:
   contents: read
