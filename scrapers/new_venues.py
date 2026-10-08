@@ -409,13 +409,20 @@ def scrape_venue(name, maximum=500):
     return sorted(unique.values(),key=lambda i:(i["date"],i["time"],i["artist"]))
 
 def scrape_new_venues():
+    # Each venue is independent. Running them concurrently avoids making
+    # the weekly job wait for all slow detail pages sequentially.
+    names=[name for name in VENUES if name!="BIRD"]
     combined=[]
-    for name in VENUES:
-        # BIRD uses a separate complete Prismic live-category scraper.
-        if name == "BIRD":
-            continue
-        try:combined.extend(scrape_venue(name))
-        except Exception as error:print(name,"ERROR:",repr(error),flush=True)
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        jobs={executor.submit(scrape_venue,name):name for name in names}
+        for future in as_completed(jobs):
+            name=jobs[future]
+            try:
+                concerts=future.result()
+                combined.extend(concerts)
+                print("Finished",name,len(concerts),"concerts",flush=True)
+            except Exception as error:
+                print(name,"ERROR:",repr(error),flush=True)
     return combined
 
 if __name__=="__main__":
