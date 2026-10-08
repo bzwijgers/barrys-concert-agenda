@@ -29,5 +29,22 @@ class ParadisoParserTests(unittest.TestCase):
         self.assertEqual(("Fat Freddy's Drop + DJ Logg Cabin","Paradiso","2026-10-12","20:30"),
                          (r["artist"],r["venue"],r["date"],r["time"]))
 
+
+    def test_this_is_the_kit_2027(self):
+        html = """<html><head><title>This Is the Kit in Tolhuistuin op 7 mei 2027 | Paradiso</title></head><body>
+        <h1>This Is the Kit</h1>
+        <div>vrijdag 7 mei 2027</div><div>In Tolhuistuin - Club</div>
+        <div>Zaal open: 19:00, Hoofdprogramma: 20:30</div>
+        <section><h2>Aanbevolen</h2><div>In Paradiso</div><div>3 oktober 2027</div></section>
+        </body></html>"""
+        result = paradiso_parse_event(
+            html, "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706"
+        )
+        self.assertIsNotNone(result)
+        self.assertEqual(
+            ("This Is the Kit", "Tolhuistuin", "Tolhuistuin", "2027-05-07", "20:30"),
+            (result["artist"], result["venue"], result["source"], result["date"], result["time"]),
+        )
+
 if __name__ == "__main__":
     unittest.main()
