@@ -23,7 +23,8 @@ permissions:
 
 concurrency:
   group: concert-feed-main
-  cancel-in-progress: false
+  # Run the newest scraper implementation; obsolete long-running jobs should not block it.
+  cancel-in-progress: true
 
 jobs:
   update-concerts:
@@ -70,7 +71,7 @@ jobs:
 
       - name: Run concert scraper
         id: scrape
-        run: python scraper.py
+        run: python -u scraper.py
 
       - name: Check concerts.json
         id: verify
