@@ -1,4 +1,4 @@
-name: Diagnose BIRD live agenda
+name: Verify BIRD live agenda
 
 on:
   workflow_dispatch:
@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - "diagnostics/bird_probe.py"
+      - "scrapers/bird.py"
+      - "tests/test_bird.py"
       - ".github/workflows/bird-probe.yml"
 
 permissions:
@@ -31,5 +33,3 @@ jobs:
               print(event["date"], event["time"], event["artist"], event["venue"], event["url"])
           print("CONFIRMED BIRD LIVE EVENTS:", len(events))
           PY
-      - name: Inspect BIRD agenda HTML
-        run: python -u diagnostics/bird_probe.py
