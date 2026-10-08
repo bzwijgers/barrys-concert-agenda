@@ -797,6 +797,44 @@ fun ConcertApp() {
         }
 
 
+    // Check existing favorites sequentially when opening the Favorites tab.
+    // Only one bounded network request is active at a time; switching tabs
+    // cancels this scan. Known direct links are never overwritten.
+    LaunchedEffect(selectedTab, loading) {
+        if (selectedTab == 2 && !loading) {
+            val missingFavorites = concerts.filter { item ->
+                item.isFavorite &&
+                    verifiedTicketSwapUrl(item).isBlank() &&
+                    (parseConcertDate(item.date)?.isBefore(LocalDate.now()) == false)
+            }
+            for (favorite in missingFavorites) {
+                val favoriteKey = normalizeUrl(favorite.url)
+                if (concerts.none {
+                    normalizeUrl(it.url) == favoriteKey &&
+                        it.isFavorite && verifiedTicketSwapUrl(it).isBlank()
+                }) continue
+
+                ticketSwapStatusUrl = favoriteKey
+                ticketSwapStatus = "TicketSwap zoekt..."
+                val result = TicketSwapSearch.find(favorite)
+                if (result != null) {
+                    concerts = concerts.map { current ->
+                        if (normalizeUrl(current.url) == favoriteKey &&
+                            current.isFavorite && verifiedTicketSwapUrl(current).isBlank()) {
+                            current.copy(ticketSwapUrl = result)
+                        } else current
+                    }
+                    ConcertStorage.setTicketSwapUrl(context, favorite.url, result)
+                }
+                ticketSwapStatus = if (result != null) {
+                    "TicketSwap gevonden"
+                } else {
+                    "Nog niet gevonden op TicketSwap"
+                }
+            }
+        }
+    }
+
     Scaffold(
         bottomBar = {
 
