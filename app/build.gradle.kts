@@ -20,6 +20,12 @@ android {
     }
 
     buildTypes {
+        // Preview uses an independent package ID: it can be installed next to
+        // the stable app without touching the stable app's favorites or tickets.
+        debug {
+            applicationIdSuffix = ".preview"
+            versionNameSuffix = "-v2-preview"
+        }
         release {
             optimization {
                 enable = false
