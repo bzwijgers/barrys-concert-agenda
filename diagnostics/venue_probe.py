@@ -45,7 +45,7 @@ def probe(entry):
    # Inspect the currently unknown "Meer laden" endpoint without guessing
    # that the first HTML page is the full calendar.
    suspects = re.findall(
-    r'''[^\\s"'<>]{0,90}(?:ajax|loadmore|load_more|load-more|wp-json|endpoint|pagination|offset|page=)[^\\s"'<>]{0,160}''',
+    r'''[^\s"'<>]{0,90}(?:ajax|loadmore|load_more|load-more|wp-json|endpoint|pagination|offset|page=)[^\s"'<>]{0,160}''',
     raw, re.I
    )
    print("DEPUL PAGINATION HINTS:",repr(list(dict.fromkeys(suspects))[:35]),flush=True)
