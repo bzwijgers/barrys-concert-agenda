@@ -15,6 +15,19 @@ def download(url):
 
 def main():
     page=download(BASE)
+    for qs in ("?_paged=2", "?fwp_paged=2", "?paged=2"):
+        try:
+            candidate = download(BASE + qs)
+            anchors = set(re.findall(
+                r"""href=["'](?:https?://bibelot.net)?(/programma/[^"']+)""",
+                candidate, re.I
+            ))
+            print("BIBELOT GET PAGE", qs, "bytes", len(candidate),
+                  "unique links", len(anchors),
+                  "samples", sorted(anchors)[:4],
+                  "page2", '"page":2' in candidate, flush=True)
+        except Exception as e:
+            print("BIBELOT GET ERROR", qs, repr(e), flush=True)
     print("BIBELOT HTML BYTES:",len(page),flush=True)
     print("OFFICIAL EVENT LINK COUNT:",len(set(re.findall(
         r'href=["\\x27](https?://bibelot.net/programma/[^"\\x27]+)',page,re.I
