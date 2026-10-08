@@ -27,8 +27,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Test matching rules
-        run: PYTHONPATH=. python -m unittest discover -s tests -p 'test_ticketswap_sitemaps.py'
+      - name: Test matching and preservation rules
+        run: |
+          PYTHONPATH=. python -m unittest discover -s tests -p 'test_ticketswap_sitemaps.py'
+          PYTHONPATH=. python -m unittest discover -s tests -p 'test_preserve_ticketswap_links.py'
       - name: Download all official public event sitemaps
         run: PYTHONPATH=. python -u -m audit.publish_ticketswap_sitemaps collect
       - name: Merge exact event links into the latest published concert feed
@@ -51,3 +53,25 @@ jobs:
             fi
           done
           exit 1
+      - name: Verify actual published TicketSwap feed
+        run: |
+          python - <<'PY'
+          import json, time
+          from urllib.request import urlopen, Request
+          base = "https://bzwijgers.github.io/barrys-concert-agenda/concerts.json"
+          for attempt in range(12):
+              url = base + "?ticketswap_verify=" + str(${{ github.run_id }}) + "-" + str(attempt)
+              try:
+                  with urlopen(Request(url, headers={"Cache-Control": "no-cache"}), timeout=22) as response:
+                      events = json.load(response)
+                  linked = sum(bool(event.get("ticketSwapUrl")) for event in events)
+                  print("LIVE APP FEED:", len(events), "concerts,", linked, "TicketSwap URLs", flush=True)
+                  if linked >= 1000:
+                      print("VERIFIED: Android feed includes direct event links", flush=True)
+                      break
+              except Exception as exc:
+                  print("LIVE FEED RETRY", repr(exc), flush=True)
+              time.sleep(8)
+          else:
+              raise SystemExit("Live GitHub Pages feed is still missing verified TicketSwap URLs")
+          PY
