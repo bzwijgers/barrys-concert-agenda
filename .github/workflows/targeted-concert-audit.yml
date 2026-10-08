@@ -1,0 +1,21 @@
+name: Verify missing venue events
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "audit/quick_missing.py"
+      - ".github/workflows/targeted-concert-audit.yml"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inspect live missing event pages
+        run: PYTHONPATH=. python -u audit/quick_missing.py
