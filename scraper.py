@@ -256,6 +256,40 @@ if source013_count_before_save < 25:
 
 
 # ============================================================
+# PARADISO: STOP BIJ ONVOLLEDIGE FEED
+# ============================================================
+# Paradiso + Tolhuistuin hoort een substantieel toekomstig programma
+# te leveren. Sla nooit een gedeeltelijke scrape over de goede feed op.
+paradiso_combined = [
+    concert for concert in all_concerts
+    if concert["source"] in ("Paradiso", "Tolhuistuin")
+]
+if len(paradiso_combined) < 400:
+    raise RuntimeError(
+        "VEILIGHEIDSSTOP: Paradiso/Tolhuistuin slechts "
+        + str(len(paradiso_combined))
+        + " toekomstige concerten; concerts.json blijft ongewijzigd."
+    )
+
+# Een bekend, officieel bevestigd concert moet ook daadwerkelijk in de
+# volledige feed staan. De datumcontrole maakt de bewaking automatisch
+# niet-actief zodra het concert heeft plaatsgevonden.
+known_paradiso_events = {
+    "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706":
+        ("2027-05-07", "Tolhuistuin"),
+}
+present_paradiso = {normalize_url(c["url"]): c for c in paradiso_combined}
+for required_url, (required_date, required_source) in known_paradiso_events.items():
+    if required_date < datetime.now().date().isoformat():
+        continue
+    event = present_paradiso.get(normalize_url(required_url))
+    if not event or event["date"] != required_date or event["source"] != required_source:
+        raise RuntimeError(
+            "VEILIGHEIDSSTOP: bevestigd Paradiso-programma ontbreekt of "
+            "heeft verkeerde datum/locatie: " + required_url
+        )
+
+# ============================================================
 # JSON OPSLAAN
 # ============================================================
 
