@@ -479,7 +479,7 @@
     "date": "2026-10-09",
     "time": "19:45",
     "source": "De Helling",
-    "url": "https://dehelling.nl/agenda/john-coffey-09-10-2026"
+    "url": "https://dehelling.nl/agenda/john-coffey-support-eyesores-09-10-2026"
   },
   {
     "artist": "Bokkeryers",
@@ -1853,7 +1853,7 @@
     "date": "2026-10-14",
     "time": "20:15",
     "source": "De Helling",
-    "url": "https://dehelling.nl/agenda/jhariah-14-10-2026"
+    "url": "https://dehelling.nl/agenda/jhariah-support-plonki-14-10-2026"
   },
   {
     "artist": "Young The Giant",
@@ -2248,7 +2248,7 @@
   },
   {
     "artist": "Myles Sanko",
-    "venue": "BIRD",
+    "venue": "LantarenVenster",
     "city": "Rotterdam",
     "country": "NL",
     "date": "2026-10-15",
@@ -2586,16 +2586,6 @@
     "time": "20:30",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/bokkers-4"
-  },
-  {
-    "artist": "Frank Boeijen",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-16",
-    "time": "20:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/frank-boeijen"
   },
   {
     "artist": "Géonne Hartman",
@@ -4211,16 +4201,6 @@
     "url": "https://www.paradiso.nl/en/program/s-rene-ade/2919587"
   },
   {
-    "artist": "Codefendants",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-10-21",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/codefendants"
-  },
-  {
     "artist": "Cul's Cult De Mis + Omstander",
     "venue": "Cul de Sac",
     "city": "Tilburg",
@@ -4469,7 +4449,7 @@
     "date": "2026-10-22",
     "time": "20:15",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/tones-presents-juls-ade/2941966"
+    "url": "https://www.paradiso.nl/en/program/tones-presents-juls-ade/2941966"
   },
   {
     "artist": "058 Jazzcafé: Ladybirds trio",
@@ -4934,6 +4914,16 @@
     "url": "https://www.neushoorn.nl/events/helen-jewett"
   },
   {
+    "artist": "Ruben Hillen",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "21:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/ruben-hillen"
+  },
+  {
     "artist": "Warhaus - Ha Ha Heartbeats - ADE",
     "venue": "Cinetol",
     "city": "Amsterdam",
@@ -4942,16 +4932,6 @@
     "time": "21:15",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/warhaus-ha-ha-heartbeats-ade/2930261"
-  },
-  {
-    "artist": "Ploegendienst",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "21:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/ploegendienst"
   },
   {
     "artist": "Thijs Veldhuis",
@@ -5326,16 +5306,6 @@
     "url": "https://bird-rotterdam.nl/event/lizz-wright-24-10-26"
   },
   {
-    "artist": "Loïs Lane",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-24",
-    "time": "20:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/lois-lane"
-  },
-  {
     "artist": "Threshold",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -5366,6 +5336,16 @@
     "url": "https://www.doornroosje.nl/event/archspire-3"
   },
   {
+    "artist": "Foreign Affairs",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "21:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/foreign-affairs"
+  },
+  {
     "artist": "Niels Geusebroek sings Coldplay",
     "venue": "Gebouw-T",
     "city": "Bergen op Zoom",
@@ -5394,6 +5374,16 @@
     "time": "21:30",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/ida"
+  },
+  {
+    "artist": "Loïs Lane",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "21:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/lois-lane"
   },
   {
     "artist": "Paardcafé: Djani",
@@ -5677,12 +5667,12 @@
   },
   {
     "artist": "Backstage & Blik Vooruit",
-    "venue": "Paradiso",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-10-26",
     "time": "17:00",
-    "source": "Paradiso",
+    "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/backstage-blik-vooruit/2935212"
   },
   {
@@ -6378,16 +6368,6 @@
     "url": "https://www.mezz.nl/programma/the-sewing-club/"
   },
   {
-    "artist": "Voorspel: Nederlandstalig",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-10-29",
-    "time": "20:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/voorspel-nederlandstalig"
-  },
-  {
     "artist": "BLØF | Extra show",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -6810,16 +6790,6 @@
     "url": "https://www.spotgroningen.nl/programma/axel-flovent"
   },
   {
-    "artist": "Bökkers",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "20:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/bokkers-30-okt"
-  },
-  {
     "artist": "Dan Whitlam + Zoë Love Smith + May",
     "venue": "Zonnehuis",
     "city": "Amsterdam",
@@ -6889,16 +6859,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/velocity-made-good/",
     "clubCard": false
-  },
-  {
-    "artist": "Drive By Wire",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/drive-by-wire"
   },
   {
     "artist": "Hardcore Vrijdag",
@@ -7342,6 +7302,16 @@
     "url": "https://metropool.nl/agenda/wende"
   },
   {
+    "artist": "R.E.M. by The 40 Watt Band",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "21:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/rem-by-the-40-watt-band"
+  },
+  {
     "artist": "SODEKNETTER",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -7501,16 +7471,6 @@
     "time": "15:00",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/hippe-gasten"
-  },
-  {
-    "artist": "JazzRock Café",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-11-01",
-    "time": "15:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/jazzrock-cafe-erly-thornton"
   },
   {
     "artist": "Swamp of the Low North + Here To Stay",
@@ -8206,16 +8166,6 @@
     "url": "https://www.paradiso.nl/nl/programma/the-howlers/2895925"
   },
   {
-    "artist": "ÃO",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-11-04",
-    "time": "20:00",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/ao/"
-  },
-  {
     "artist": "Citizen + Modern Color",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -8266,6 +8216,16 @@
     "url": "https://www.013.nl/programma/128736/wies"
   },
   {
+    "artist": "ÃO",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/ao/"
+  },
+  {
     "artist": "SPYAIR",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -8283,7 +8243,7 @@
     "date": "2026-11-04",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/fink/2862246"
+    "url": "https://www.paradiso.nl/nl/programma/fink/2862246"
   },
   {
     "artist": "Manu Van Kersbergen",
@@ -8588,16 +8548,6 @@
     "url": "https://patronaat.nl/event/the-violet-parade-ep-release-05-11-26/"
   },
   {
-    "artist": "Ão",
-    "venue": "Bitterzoet",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/ao/2832033"
-  },
-  {
     "artist": "Frank Boeijen",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -8656,6 +8606,16 @@
     "time": "20:30",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/uit-de-hoge-hoed-improv-comedy-nov"
+  },
+  {
+    "artist": "Ão",
+    "venue": "Bitterzoet",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/ao/2832033"
   },
   {
     "artist": "BLØF",
@@ -8795,7 +8755,7 @@
     "date": "2026-11-06",
     "time": "19:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/josiah-and-the-bonnevilles/2892085"
+    "url": "https://www.paradiso.nl/en/program/josiah-and-the-bonnevilles/2892085"
   },
   {
     "artist": "NIELS GEUSEBROEK SINGS COLDPLAY",
@@ -8989,16 +8949,6 @@
     "url": "https://www.effenaar.nl/agenda/vals-alarm"
   },
   {
-    "artist": "WOW Factor",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "20:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/wow-factor"
-  },
-  {
     "artist": "Fink",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -9007,16 +8957,6 @@
     "time": "20:45",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/fink-angela-autumn"
-  },
-  {
-    "artist": "De Baron",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/de-baron"
   },
   {
     "artist": "Disco Inferno met Discophonic Orchestra",
@@ -9720,6 +9660,16 @@
     "url": "https://www.neushoorn.nl/events/eek-a-mouse"
   },
   {
+    "artist": "Desinteresse",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "21:00",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/desinteresse/2943553"
+  },
+  {
     "artist": "thistle.",
     "venue": "V11",
     "city": "Rotterdam",
@@ -9822,7 +9772,7 @@
   },
   {
     "artist": "Sharp Pins",
-    "venue": "Bitterzoet",
+    "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-09",
@@ -10342,14 +10292,14 @@
     "url": "https://www.mezz.nl/programma/bombino-3/"
   },
   {
-    "artist": "BORIS - PINK 20th Anniversary Tour",
+    "artist": "BORIS - PINK 20th Anniversary Tour + Planning To Burial",
     "venue": "De Helling",
     "city": "Utrecht",
     "country": "NL",
     "date": "2026-11-12",
     "time": "20:00",
     "source": "De Helling",
-    "url": "https://dehelling.nl/agenda/boris-pink-20th-anniversary-tour-12-11-2026"
+    "url": "https://dehelling.nl/agenda/boris-pink-20th-anniversary-tour-planning-to-burial-12-11-2026"
   },
   {
     "artist": "dB’s & TivoliVredenburg present: VALS ALARM + Jackie & The Facts",
@@ -10624,16 +10574,6 @@
     "clubCard": false
   },
   {
-    "artist": "Thorbjørn Risager & The Black Tornado",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-11-12",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/thorbjrn-risager-the-black-tornado"
-  },
-  {
     "artist": "Rijck",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -10893,6 +10833,16 @@
     "time": "20:30",
     "source": "BIRD",
     "url": "https://bird-rotterdam.nl/event/nyve-13-11-2026"
+  },
+  {
+    "artist": "Paardcafé: Sea Foam Grey + Talks Make Do + The Dark Wave",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "20:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-sea-foam-grey-talks-make-do-the-dark-wave/"
   },
   {
     "artist": "Roberto Jacketti & the Scooters + DJ René CD",
@@ -11335,16 +11285,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/grommet/",
     "clubCard": false
-  },
-  {
-    "artist": "Deppie",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-11-14",
-    "time": "22:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/deppie-idioot-ep-release"
   },
   {
     "artist": "Moon Walker",
@@ -12179,7 +12119,7 @@
   },
   {
     "artist": "Joyce Moreno",
-    "venue": "BIRD",
+    "venue": "LantarenVenster",
     "city": "Rotterdam",
     "country": "NL",
     "date": "2026-11-18",
@@ -13045,14 +12985,14 @@
     "url": "https://patronaat.nl/event/wies-21-11-26/"
   },
   {
-    "artist": "Violent Vira",
+    "artist": "Violent Vira + support cl_audio_dj",
     "venue": "De Helling",
     "city": "Utrecht",
     "country": "NL",
     "date": "2026-11-21",
     "time": "19:45",
     "source": "De Helling",
-    "url": "https://dehelling.nl/agenda/violent-vira-21-11-2026"
+    "url": "https://dehelling.nl/agenda/violent-vira-support-cl_audio_dj-21-11-2026"
   },
   {
     "artist": "Biddy Early",
@@ -13719,7 +13659,7 @@
   },
   {
     "artist": "Luka Bloom",
-    "venue": "Stadsschouwburg",
+    "venue": "De Oosterpoort",
     "city": "Groningen",
     "country": "NL",
     "date": "2026-11-24",
@@ -13835,7 +13775,7 @@
     "date": "2026-11-25",
     "time": "19:15",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/peper-zuur-srefidensi-editie/2925090"
+    "url": "https://www.paradiso.nl/nl/programma/peper-zuur-srefidensi-editie/2925090"
   },
   {
     "artist": "Mortimer",
@@ -14271,6 +14211,16 @@
     "time": "23:00",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/cest-qui"
+  },
+  {
+    "artist": "Paardcafé: Club Pony",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-club-pony-108/"
   },
   {
     "artist": "BEZERKUS BINGO",
@@ -14823,16 +14773,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/52304790/the-last-waltz-door-dawn-brothers-28-11-2026/"
   },
   {
-    "artist": "Ão",
-    "venue": "Kleine Zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-28",
-    "time": "20:00",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/ao"
-  },
-  {
     "artist": "Elmiene",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -14901,6 +14841,16 @@
     "time": "20:00",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/the-veils-2"
+  },
+  {
+    "artist": "Ão",
+    "venue": "Kleine Zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/ao"
   },
   {
     "artist": "Kingfishr",
@@ -15575,6 +15525,16 @@
     "clubCard": false
   },
   {
+    "artist": "Monkeyjam",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/monkeyjam-2-dec"
+  },
+  {
     "artist": "PEARL & THE OYSTERS",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -15869,7 +15829,7 @@
   },
   {
     "artist": "Zwangere Guy",
-    "venue": "BIRD",
+    "venue": "Maassilo",
     "city": "Rotterdam",
     "country": "NL",
     "date": "2026-12-03",
@@ -16308,16 +16268,6 @@
     "time": "20:45",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/risin-up-dec"
-  },
-  {
-    "artist": "90's loves 00's",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-12-04",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/90s-loves-00s-4-dec"
   },
   {
     "artist": "FRIDAY",
@@ -16851,7 +16801,7 @@
     "date": "2026-12-06",
     "time": "22:00",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/ledbyher/2941187"
+    "url": "https://www.paradiso.nl/en/program/ledbyher/2941187"
   },
   {
     "artist": "SYML & Metropole Orkest",
@@ -16994,16 +16944,6 @@
     "url": "https://hedon-zwolle.nl/voorstelling/32994/razorlight"
   },
   {
-    "artist": "David Ellefson",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-12-08",
-    "time": "20:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/david-ellefson-bass-warrior"
-  },
-  {
     "artist": "Alain Clark",
     "venue": "Stadsschouwburg",
     "city": "Groningen",
@@ -17093,6 +17033,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/67542809/voila-09-12-2026/"
+  },
+  {
+    "artist": "CAFÉ EUROPA EINDEJAARSSHOW",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-09",
+    "time": "19:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/cafe-europa-eindejaarsshow-8/"
   },
   {
     "artist": "NAFT",
@@ -17529,6 +17479,16 @@
     "url": "https://hedon-zwolle.nl/voorstelling/32982/isabel-usher"
   },
   {
+    "artist": "NILE & Guests: REDSPHERE + INTREPID + ORECUS",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "19:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/nile-guests-redsphere-intrepid-orecus"
+  },
+  {
     "artist": "Prins S. en de Geit",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -17698,16 +17658,6 @@
     "time": "21:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/davina-michelle-3/"
-  },
-  {
-    "artist": "Lézard",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-12-11",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/lezard"
   },
   {
     "artist": "J. Bernardt",
@@ -18109,7 +18059,7 @@
     "date": "2026-12-13",
     "time": "11:00",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/tomo-katsurada-x-jonny-nash/2939050"
+    "url": "https://www.paradiso.nl/en/program/tomo-katsurada-x-jonny-nash/2939050"
   },
   {
     "artist": "TANKSTATION FESTIVAL 2026",
@@ -18604,16 +18554,6 @@
     "clubCard": false
   },
   {
-    "artist": "Árstíðir",
-    "venue": "SPOT Groningen",
-    "city": "Groningen",
-    "country": "NL",
-    "date": "2026-12-17",
-    "time": "20:30",
-    "source": "SPOT Groningen",
-    "url": "https://www.spotgroningen.nl/programma/arstidir"
-  },
-  {
     "artist": "Gotu Jim",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -18622,6 +18562,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/gotu-jim/2892814"
+  },
+  {
+    "artist": "Árstíðir",
+    "venue": "SPOT Groningen",
+    "city": "Groningen",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:30",
+    "source": "SPOT Groningen",
+    "url": "https://www.spotgroningen.nl/programma/arstidir"
   },
   {
     "artist": "Apeshit",
@@ -18873,6 +18823,16 @@
     "time": "21:00",
     "source": "De Helling",
     "url": "https://dehelling.nl/agenda/no-barrier-x-mas-special-18-12-2026"
+  },
+  {
+    "artist": "The Hillbilly Moonshiners",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "21:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/the-hillbilly-moonshiners"
   },
   {
     "artist": "John Coffey",
@@ -19951,16 +19911,6 @@
     "url": "https://www.spotgroningen.nl/programma/the-james-brown-experience"
   },
   {
-    "artist": "AD INFINITUM + TAKIDA",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2027-01-08",
-    "time": "20:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/ad-infinitum-takida"
-  },
-  {
     "artist": "Coming on Strong",
     "venue": "Theater De Maagd",
     "city": "Bergen op Zoom",
@@ -20029,16 +19979,6 @@
     "time": "21:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/allnightlong-erick-e/"
-  },
-  {
-    "artist": "Ohrima Album Release",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2027-01-08",
-    "time": "21:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/ohrima-album-release"
   },
   {
     "artist": "WC Experience",
@@ -20329,6 +20269,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/fleddy-melculy"
+  },
+  {
+    "artist": "Jazzalike",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2027-01-15",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/jazzalike-15th-anniversary"
   },
   {
     "artist": "Made In Purple",
@@ -20814,16 +20764,6 @@
     "url": "https://www.neushoorn.nl/events/pelican-dealer"
   },
   {
-    "artist": "The Steepwater Band",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2027-01-22",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/the-steepwater-band"
-  },
-  {
     "artist": "Yong Yello",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -20834,6 +20774,16 @@
     "url": "https://www.doornroosje.nl/event/yong-yello"
   },
   {
+    "artist": "The Steepwater Band",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "22:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/the-steepwater-band"
+  },
+  {
     "artist": "Distant",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -20841,7 +20791,7 @@
     "date": "2027-01-22",
     "time": "23:59",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/distant/2941885"
+    "url": "https://www.paradiso.nl/nl/programma/distant/2941885"
   },
   {
     "artist": "Physical Graffiti",
@@ -20952,6 +20902,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/gilla-band/2896446"
+  },
+  {
+    "artist": "New Cool Collective",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/new-cool-collective"
   },
   {
     "artist": "Pink Project The Band",
@@ -21274,16 +21234,6 @@
     "url": "https://www.paradiso.nl/nl/programma/zeno/2938624"
   },
   {
-    "artist": "David Ramirez",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "20:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/david-ramirez"
-  },
-  {
     "artist": "DeWolff",
     "venue": "MEZZ",
     "city": "Breda",
@@ -21334,16 +21284,6 @@
     "url": "https://dbstudio.nl/event/zzz-stuurbaard-bakkebaard"
   },
   {
-    "artist": "‘LET LOVE RULE’ – songs by Lenny Kravitz, performed by Ro Krom",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "20:15",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/"
-  },
-  {
     "artist": "Erwin Nyhoff & The Prodigal Sons",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -21362,6 +21302,16 @@
     "time": "20:15",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/young-gun-silver-fox-4"
+  },
+  {
+    "artist": "‘LET LOVE RULE’ – songs by Lenny Kravitz, performed by Ro Krom",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "20:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/let-love-rule-songs-by-lenny-kravitz-performed-by-ro-krom-29-01-27/"
   },
   {
     "artist": "ANOTHER TASTE",
@@ -21594,16 +21544,6 @@
     "url": "https://gebouw-t.nl/agenda/temple-fang-heath"
   },
   {
-    "artist": "State Power",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2027-01-30",
-    "time": "21:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/state-power"
-  },
-  {
     "artist": "Ouwe Stijl is Botergeil",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -21741,7 +21681,7 @@
     "date": "2027-02-01",
     "time": "19:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/sheherazaad/2924096"
+    "url": "https://www.paradiso.nl/nl/programma/sheherazaad/2924096"
   },
   {
     "artist": "Dirty Honey",
@@ -22505,16 +22445,6 @@
     "url": "https://www.podiuminfo.nl/concert/496693/Comastatic/Dynamo"
   },
   {
-    "artist": "Deadly Alliance",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2027-02-13",
-    "time": "19:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/deadly-alliance"
-  },
-  {
     "artist": "Bazart",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -22563,6 +22493,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/afever/"
+  },
+  {
+    "artist": "Drukwerk",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2027-02-13",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/drukwerk"
   },
   {
     "artist": "flowerovlove",
@@ -23117,16 +23057,6 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/britishinvasion/"
-  },
-  {
-    "artist": "GRIMNER + WAYLANDER + VANSIND",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2027-02-19",
-    "time": "20:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/grimner-waylander-vansind"
   },
   {
     "artist": "The Dirty Daddies",
@@ -23689,6 +23619,16 @@
     "time": "20:30",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/the-classic-rock-show"
+  },
+  {
+    "artist": "Tommy Castro & The Painkillers",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2027-02-25",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/tommy-castro-the-painkillers"
   },
   {
     "artist": "Emeli Sandé",
@@ -24704,6 +24644,16 @@
     "url": "https://www.doornroosje.nl/event/pussy-riot-riot-days"
   },
   {
+    "artist": "THE JACKETS (CH) + WEIRD OMEN (FR)",
+    "venue": "dB's",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-03-09",
+    "time": "20:00",
+    "source": "dB's",
+    "url": "https://dbstudio.nl/event/the-jackets-ch-weird-omen-fr"
+  },
+  {
     "artist": "Trentemøller",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -25053,16 +25003,6 @@
     "time": "20:45",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/fleddy-melculy"
-  },
-  {
-    "artist": "Ozzyfied",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2027-03-13",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/ozzyfied-in-memory-of-ozzy-osbourne"
   },
   {
     "artist": "Banji",
@@ -25435,6 +25375,16 @@
     "url": "https://patronaat.nl/event/luicidal-19-03-27/"
   },
   {
+    "artist": "FIEP",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/fiep"
+  },
+  {
     "artist": "Medium Build",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -25543,16 +25493,6 @@
     "time": "19:30",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/fimiguerrero-20-03-2027/"
-  },
-  {
-    "artist": "The Dutch Queen",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2027-03-20",
-    "time": "20:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/the-dutch-queen"
   },
   {
     "artist": "Dressed Like Boys",
@@ -25824,7 +25764,7 @@
     "date": "2027-03-26",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/monokate/2939266"
+    "url": "https://www.paradiso.nl/en/program/monokate/2939266"
   },
   {
     "artist": "The Dutch Queen",
@@ -25905,6 +25845,16 @@
     "time": "20:45",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/physical-graffiti"
+  },
+  {
+    "artist": "Copperhead County",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2027-03-27",
+    "time": "21:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/copperhead-county"
   },
   {
     "artist": "Dubioza Kolektiv",
@@ -26669,16 +26619,6 @@
     "time": "20:00",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/uuhai"
-  },
-  {
-    "artist": "Extince",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2027-04-10",
-    "time": "20:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/extince"
   },
   {
     "artist": "RPWL",
@@ -28505,7 +28445,7 @@
     "date": "2027-06-15",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/osees/2942205"
+    "url": "https://www.paradiso.nl/en/program/osees/2942205"
   },
   {
     "artist": "SoulTrash",
@@ -28689,7 +28629,7 @@
   },
   {
     "artist": "Workshops SDF 31 August",
-    "venue": "Paradiso",
+    "venue": "Bitterzoet",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-08-31",
