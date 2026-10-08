@@ -58,7 +58,11 @@ def gebouw_t_parse_event(page, event_url):
         "comedynight", "muziekquiz", "themafeest", "quiz'm",
         "vroegzat", "80's verantwoord", "90's now"
     )
-    if any(x in title.lower() for x in reject):
+    normal_title = title.casefold().replace("’", "'").replace("‘", "'")
+    if any(x in normal_title for x in reject):
+        return None
+    # A themed DJ party is not an artist playing a live concert.
+    if "toppop yeah! the party" in normal_title:
         return None
 
     music_signals = (
