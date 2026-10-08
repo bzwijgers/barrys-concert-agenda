@@ -1,0 +1,39 @@
+name: Verify Patronaat full concert feed
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tests/test_patronaat_coverage.py"
+      - "scrapers/common.py"
+      - ".github/workflows/patronaat-verify.yml"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test Patronaat missing-concert regressions
+        run: python -m unittest discover -s tests -p "test_patronaat_coverage.py" -v
+      - name: Independently fetch official Patronaat programme
+        run: |
+          python -u - <<'PY'
+          from scrapers.common import scrape_patronaat
+          events=scrape_patronaat()
+          print("PATRONAAT OFFICIAL PROGRAMME EVENTS",len(events))
+          for term in ("SlodDe","Yuna"):
+              matching=[e for e in events if term.lower() in e["artist"].lower()]
+              print("MATCH",term,matching)
+          if len(events)<142:
+              raise RuntimeError("Concert coverage fell below previous 142")
+          if not any("slodde" in e["artist"].lower() for e in events):
+              raise RuntimeError("Previously missed SlodDe concert still absent")
+          for e in events:
+              if "yuna-10-10-26" in e["url"] and "spoorbijster" in e["artist"].lower():
+                  raise RuntimeError("Stale Yuna redirect misattributed")
+          PY
