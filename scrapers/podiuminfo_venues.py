@@ -6,6 +6,7 @@ legacy site blocks them. Use only structured records linked to the exact venue.
 """
 from .common import *
 from zoneinfo import ZoneInfo
+from .podiuminfo_full import scrape_full_podiuminfo_source
 
 PODIUMINFO_VENUES = {
     "Dynamo": (
@@ -70,6 +71,11 @@ def parse_podiuminfo_music_event(item, source, target_venue, city):
 def scrape_podiuminfo_venues():
     combined = []
     for source, (url, venue, city) in PODIUMINFO_VENUES.items():
+        # Dynamo stays on the established official/Podiuminfo combination.
+        # Amare and Bolwerk use the full dedicated feed below instead of
+        # Podiuminfo's truncated first 25 event metadata cards.
+        if source in ("Amare", "Bolwerk"):
+            continue
         try:
             html = download_page_retry(url, attempts=2)
             blobs = re.findall(
@@ -91,4 +97,9 @@ def scrape_podiuminfo_venues():
             combined.extend(matching.values())
         except Exception as error:
             print("Podiuminfo", source, "ERROR:", str(error), flush=True)
+    # Use Podiuminfo's complete venue-specific concert pages for both
+    # blocked official websites. Do not quietly republish 16 or 14 events
+    # after a source regression: the scraper requires at least 25.
+    for full_source in ("Amare", "Bolwerk"):
+        combined.extend(scrape_full_podiuminfo_source(full_source))
     return combined
