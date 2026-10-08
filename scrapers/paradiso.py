@@ -622,8 +622,21 @@ def paradiso_find_recent_sitemap_program_urls(lookback_days=21):
 
     # De sitemap-index bestaat uit tientallen kleine event-sitemaps.
     # Parallel ophalen voorkomt dat één trage sitemap de hele feed ophoudt.
+    sitemap_xmls = []
+    sitemap_errors = 0
     with ThreadPoolExecutor(max_workers=8) as sitemap_executor:
-        sitemap_xmls = list(sitemap_executor.map(download_page_retry, sitemap_urls))
+        futures = {
+            sitemap_executor.submit(download_page_retry, url, attempts=2): url
+            for url in sitemap_urls
+        }
+        for future in as_completed(futures):
+            try:
+                sitemap_xmls.append(future.result())
+            except Exception as error:
+                sitemap_errors += 1
+                print("Paradiso sitemap tijdelijk onbereikbaar:", futures[future], str(error))
+    print("Paradiso sitemaps opgehaald:", len(sitemap_xmls), "van", len(sitemap_urls),
+          "(mislukt:", sitemap_errors, ")")
 
     for xml in sitemap_xmls:
         for block in re.findall(r"<url>(.*?)</url>", xml, flags=re.IGNORECASE | re.DOTALL):
@@ -778,7 +791,6 @@ def scrape_paradiso():
     # Refresh recently modified/discovered URLs, recovery regressions,
     # and concerts happening soon. Reuse last published records for the
     # other distant events. Each source remains discoverable from the sitemap.
-    horizon = (today_string[:10])
     soon_date = (date.today() + timedelta(days=21)).isoformat()
     mandatory_keys = {
         normalize_url(url) for url, when in PARADISO_RECOVERY_EVENTS.items()
@@ -823,11 +835,11 @@ def scrape_paradiso():
     def fetch_paradiso(event_url):
         last_error = None
 
-        for attempt in range(3):
+        for attempt in range(2):
             try:
                 event_html = (
                     download_page_retry(
-                        event_url
+                        event_url, attempts=2
                     )
                 )
 
@@ -838,7 +850,7 @@ def scrape_paradiso():
                 if concert is None:
                     # Een incidenteel onvolledige Paradiso-response mag een
                     # geldig concert niet stil uit de feed laten verdwijnen.
-                    if attempt < 2:
+                    if attempt < 1:
                         time.sleep(2.0 * (attempt + 1))
                         continue
                     print("Paradiso niet parseerbaar:", event_url, "HTML lengte:", len(event_html))
@@ -852,7 +864,7 @@ def scrape_paradiso():
             except Exception as error:
                 last_error = error
 
-                if attempt < 2:
+                if attempt < 1:
                     time.sleep(
                         2.0 * (attempt + 1)
                     )
