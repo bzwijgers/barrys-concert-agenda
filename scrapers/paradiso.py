@@ -656,6 +656,25 @@ def paradiso_find_recent_sitemap_program_urls():
 
     return urls
 
+PARADISO_RECOVERY_EVENTS = {
+    "https://www.paradiso.nl/nl/programma/songhoy-blues/2884193": "2026-10-10",
+    "https://www.paradiso.nl/nl/programma/lowdown-brass-band/2907014": "2026-10-13",
+    "https://www.paradiso.nl/nl/programma/erotic-poetry-night-berlin-special/2924619": "2026-10-16",
+    "https://www.paradiso.nl/nl/programma/suzan-freek/2942224": "2026-11-13",
+    "https://www.paradiso.nl/nl/programma/tina-dico/2752660": "2026-11-13",
+    "https://www.paradiso.nl/nl/programma/slift/2885768": "2026-11-23",
+    "https://www.paradiso.nl/nl/programma/pongo/2896697": "2026-11-28",
+    "https://www.paradiso.nl/nl/programma/mulaa-joans/2923337": "2026-12-03",
+    "https://www.paradiso.nl/nl/programma/hermanos-gutierrez/2896806": "2026-12-13",
+    "https://www.paradiso.nl/nl/programma/rikas/2900357": "2026-12-14",
+    "https://www.paradiso.nl/nl/programma/camille/2900348": "2027-03-03",
+    "https://www.paradiso.nl/nl/programma/sven-ross/2925145": "2027-03-05",
+    "https://www.paradiso.nl/nl/programma/kalandra/2924600": "2027-03-27",
+    "https://www.paradiso.nl/nl/programma/10-wie-niet-weg-is-is-gezien-10-jaar-smartlappen-karaoke-in-paradiso/2867814": "2027-04-04",
+    "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706": "2027-05-07",
+    "https://www.paradiso.nl/nl/programma/workshops-sdf-31-august/2894217": "2027-08-31",
+}
+
 def scrape_paradiso():
     print()
     print(
@@ -691,6 +710,42 @@ def scrape_paradiso():
                     program_urls.append(event_url)
         except Exception as error:
             print("Paradiso aanvullende agenda fout:", agenda_url, "-", str(error))
+
+    # De vorige feed is een tweede discoverybron. Een tijdelijke 403, 429,
+    # lege HTML-response of onvolledige sitemap mag bekende toekomstige
+    # concerten niet stil laten verdwijnen.
+    previous_paradiso = {}
+    today_string = date.today().isoformat()
+    try:
+        with open("concerts.json", "r", encoding="utf-8") as previous_file:
+            previous_items = json.load(previous_file)
+        for item in previous_items:
+            if not isinstance(item, dict):
+                continue
+            url = item.get("url", "")
+            if (
+                item.get("source") in ("Paradiso", "Tolhuistuin")
+                and item.get("date", "") >= today_string
+                and url.startswith("https://www.paradiso.nl/")
+            ):
+                previous_paradiso[normalize_url(url)] = item
+    except (OSError, ValueError, TypeError) as error:
+        print("Paradiso vorige feed niet beschikbaar:", error)
+
+    # Eenmalig herstel voor concerten die vóór deze beveiliging uit de
+    # gepubliceerde feed verdwenen. Datums verlopen automatisch.
+    for recovered_url, recovered_date in PARADISO_RECOVERY_EVENTS.items():
+        if recovered_date >= today_string:
+            key = normalize_url(recovered_url)
+            if key not in seen_program_urls:
+                seen_program_urls.add(key)
+                program_urls.append(recovered_url)
+
+    for key, old_item in previous_paradiso.items():
+        if key not in seen_program_urls:
+            seen_program_urls.add(key)
+            program_urls.append(old_item["url"])
+    print("Paradiso vorige-feed URLs bewaakt:", len(previous_paradiso))
 
     print(
         "Concertlinks gevonden:",
@@ -828,6 +883,43 @@ def scrape_paradiso():
         )
 
         unique[key] = concert
+
+    # Controleer in een rustige tweede ronde wat wél in de vorige feed
+    # stond maar niet in de nieuwe respons. Verwerk echte gewijzigde
+    # data opnieuw; behoud bij tijdelijke netwerk-/parsefouten de
+    # laatst bekende versie (niet bij HTTP 404/410).
+    disappeared = [
+        (key, item) for key, item in previous_paradiso.items()
+        if key not in unique
+    ]
+    print("Paradiso vorige concerten onverwacht verdwenen:", len(disappeared))
+    recovered_count = 0
+    retained_count = 0
+    for key, old_item in disappeared:
+        url = old_item["url"]
+        try:
+            recovered = fetch_paradiso(url)
+            if recovered is not None:
+                if date.fromisoformat(recovered["date"]) >= today:
+                    unique[key] = recovered
+                    recovered_count += 1
+                # Een aantoonbaar verstreken datum niet behouden.
+            else:
+                unique[key] = old_item
+                retained_count += 1
+        except HTTPError as error:
+            if error.code in (404, 410):
+                print("Paradiso definitief verwijderd:", url, error.code)
+            else:
+                unique[key] = old_item
+                retained_count += 1
+        except Exception as error:
+            print("Paradiso laatste bekende versie bewaard:", url, error)
+            unique[key] = old_item
+            retained_count += 1
+
+    print("Paradiso hersteld via tweede controle:", recovered_count)
+    print("Paradiso tijdelijk behouden uit vorige feed:", retained_count)
 
     concerts = list(
         unique.values()
