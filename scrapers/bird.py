@@ -88,7 +88,7 @@ def parse_bird_prismic_event(item, today=None):
         start = f"{int(match.group(1)):02d}:{match.group(2)}"
 
     venue = "BIRD"
-    title_context = str(data.get("meta_title") or "") + " " + str(data.get("top_title") or "")
+    title_context = " ".join((str(data.get("meta_title") or ""), str(data.get("top_title") or ""), _rich_text(data.get("subtitle")), uid.replace("-", " ")))
     # Some concerts BIRD presents are held at partner venues.
     for candidate in ("Annabel", "V11", "LantarenVenster", "Maassilo"):
         if re.search(r"\b(?:at|in|@)\s+" + re.escape(candidate) + r"\b", title_context, re.I):
