@@ -67,4 +67,41 @@ for name,(needle,expected_day) in cases.items():
     matches=[x for x in feed if x.get("source")==name and needle.rstrip("/") in x.get("url","").rstrip("/")]
     if not matches or all(x["date"]!=expected_day for x in matches):
         raise RuntimeError("Missing or incorrect expected event: "+name+" "+needle)
+# These real shows disappeared because generic words in artist biographies
+# were mistakenly treated as nightlife/classical-event categories.
+# Guard them until their performance dates have passed.
+recovered=[
+    ("SPOT Groningen","https://www.spotgroningen.nl/programma/timebox/","2026-11-27"),
+    ("SPOT Groningen","https://www.spotgroningen.nl/programma/pitou/","2026-11-20"),
+    ("SPOT Groningen","https://www.spotgroningen.nl/programma/levi-sct/","2026-11-18"),
+    ("SPOT Groningen","https://www.spotgroningen.nl/programma/pieter-savenberg/","2026-11-05"),
+    ("SPOT Groningen","https://www.spotgroningen.nl/programma/alexis-ffrench/","2027-06-06"),
+    ("Hedon","https://hedon-zwolle.nl/voorstelling/32962/big-sleep","2026-11-15"),
+    ("Hedon","https://hedon-zwolle.nl/voorstelling/33038/never-too-late","2026-10-10"),
+]
+by_url={x["url"].rstrip("/").lower():x for x in feed}
+for source,url,day in recovered:
+    if day<today:
+        continue
+    item=by_url.get(url.rstrip("/").lower())
+    if not item or item["source"]!=source or item["date"]!=day:
+        raise RuntimeError("Recovered live concert absent or misdated: "+url)
+
+# Do not mistake broad venue agendas for concert-only agendas.
+non_music_rejections={
+    "Neushoorn":r"^(?:comedy night|uit de hoge hoed improv comedy|queens & quizzes|powerslam|family rave day|the grave rave)\\b",
+    "Hedon":r"^(?:bezerkus bingo|q\\s*music foute feestje|jimmy carr)\\b",
+    "Gebouw-T":r"quiz['’]m|toppop yeah! the party",
+}
+bad_non_music=[
+    (x["source"],x["artist"],x["url"])
+    for x in feed
+    if x["source"] in non_music_rejections
+    and re.search(non_music_rejections[x["source"]],x["artist"],re.I)
+]
+if bad_non_music:
+    raise RuntimeError("Non-concert entries still in published feed: "+repr(bad_non_music[:15]))
+
+print("PASS: recovered official concerts retained, non-music entries excluded")
+
 print("PASS: all sources present, dates valid, unique URLs, known shows correctly dated")
