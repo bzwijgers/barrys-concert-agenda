@@ -236,6 +236,8 @@ def parse_event(html, url, name, city):
         return None
     if name=="BIRD" and re.search(r"360-degrees|talk|clubnight|clubnacht|cafe-dj-sessions",lowered):
         return None
+    if name=="Metropool" and re.search(r"comedy|muziekquiz|clubnacht|nightclub|party|silent disco",lowered):
+        return None
     if name=="Hedon" and re.search(r"hedon-academy|workshop|comedy|cabaret|lezing|rave|techno",lowered):
         return None
     if name=="Klokgebouw" and re.search(r"snakepit|rave|dance|feest|party|festival-electronic",lowered):
@@ -247,10 +249,40 @@ def parse_event(html, url, name, city):
             "date":event_date,"time":event_time,
             "source":name,"url":url}
 
-def scrape_venue(name, maximum=230):
+def scrape_venue(name, maximum=500):
     agenda, prefix,city=VENUES[name]
     html=download_page_retry(agenda,attempts=2)
-    found=discover(html,agenda,prefix)[:maximum]
+    found=discover(html,agenda,prefix)
+    if name=="Metropool":
+        # The agenda HTML contains only the first ten entries. Its own
+        # infinite-scroll code calls /mvc/event/partial?pNumber=N.
+        discovered_keys={normalize_url(url) for url in found}
+        for number in range(2, 65):
+            partial_url=(
+                "https://metropool.nl/mvc/event/partial?pNumber="
+                + str(number)
+                + "&keyword=&genre=&tag=&type=&StartDate=&EndDate="
+                + "&locatie=&label=&newAnnounced=False"
+            )
+            try:
+                page_html=download_page_retry(partial_url,attempts=2)
+            except Exception as error:
+                raise RuntimeError("Metropool pagination page "
+                                   + str(number) + " failed: " + str(error))
+            page_links=discover(page_html,agenda,prefix)
+            added=0
+            for url in page_links:
+                key=normalize_url(url)
+                if key not in discovered_keys:
+                    found.append(url)
+                    discovered_keys.add(key)
+                    added+=1
+            if number%5==0:
+                print("Metropool agenda batches:",number,
+                      "links:",len(found),flush=True)
+            if not page_links or not added:
+                break
+    found=found[:maximum]
     if not found:raise RuntimeError(f"{name}: no event URLs discovered")
     items=[];errors=0
     def read(url):
