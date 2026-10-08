@@ -273,6 +273,26 @@ all_concerts = [
 # ============================================================
 # TICKETSWAP - ALLEEN EXACTE EVENTLINKS
 # ============================================================
+# Preserve successful exact matches from the previous published feed.
+# A complete venue refresh must never erase known TicketSwap URLs.
+try:
+    with open("concerts.json", encoding="utf-8") as previous_file:
+        old_ticketswap_events = json.load(previous_file)
+    previous_links = {
+        (normalize_url(item.get("url", "")), item.get("date", "")):
+            item["ticketSwapUrl"]
+        for item in old_ticketswap_events
+        if isinstance(item, dict) and item.get("ticketSwapUrl")
+    }
+    restored = 0
+    for concert in all_concerts:
+        key = (normalize_url(concert.get("url", "")), concert.get("date", ""))
+        if not concert.get("ticketSwapUrl") and key in previous_links:
+            concert["ticketSwapUrl"] = previous_links[key]
+            restored += 1
+    print("TicketSwap cached exact matches restored:", restored, flush=True)
+except (OSError, ValueError, TypeError) as error:
+    print("TicketSwap previous feed unavailable:", error, flush=True)
 
 try:
     all_concerts = enrich_ticketswap_urls(all_concerts)
