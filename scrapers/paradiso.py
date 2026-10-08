@@ -698,7 +698,7 @@ PARADISO_RECOVERY_EVENTS = {
 def paradiso_event_key(url):
     """Match Dutch and English URLs for the same Paradiso event by numeric ID."""
     match = re.search(
-        r"https?://(?:www\\.)?paradiso\\.nl/(?:nl/programma|en/program|programma)/[^/?#]+/(\\d+)(?:[/?#]|$)",
+        r"https?://(?:www\.)?paradiso\.nl/(?:nl/programma|en/program|programma)/[^/?#]+/(\d+)(?:[/?#]|$)",
         url or "",
         flags=re.IGNORECASE,
     )
