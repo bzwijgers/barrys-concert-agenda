@@ -1,0 +1,80 @@
+name: Verify Paradiso and Tolhuistuin
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scrapers/paradiso.py"
+      - "scrapers/paradiso_recovery.json"
+      - "scrapers/common.py"
+      - "tests/test_paradiso.py"
+      - ".github/workflows/paradiso-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-paradiso:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile and run offline parser tests
+        run: |
+          python -m compileall -q scrapers scraper.py
+          python -m unittest discover -s tests -p "test_paradiso.py" -v
+      - name: Live Paradiso discovery, parsing, retained-feed and regression checks
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import date
+          from scrapers.paradiso import scrape_paradiso
+
+          with open("concerts.json", encoding="utf-8") as file:
+              old = json.load(file)
+          old_count = sum(
+              e.get("source") in ("Paradiso", "Tolhuistuin")
+              and e.get("date", "") >= date.today().isoformat()
+              for e in old
+          )
+          events = scrape_paradiso()
+          lookup = {e["url"].rstrip("/").lower(): e for e in events}
+          print("Previous future Paradiso+Tolhuistuin:", old_count, flush=True)
+          print("New future Paradiso+Tolhuistuin:", len(events), flush=True)
+
+          if len(lookup) != len(events):
+              raise SystemExit("Duplicate Paradiso event URLs")
+          if len(events) < max(100, int(old_count * 0.75)):
+              raise SystemExit("Paradiso feed unexpectedly dropped below 75% of previous future feed")
+
+          known = {
+              "https://www.paradiso.nl/nl/programma/songhoy-blues/2884193": ("2026-10-10", "Tolhuistuin"),
+              "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706": ("2027-05-07", "Tolhuistuin"),
+              "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321": ("2026-12-27", "Tolhuistuin"),
+          }
+          for url, (concert_date, source) in known.items():
+              if concert_date < date.today().isoformat():
+                  continue
+              e = lookup.get(url)
+              if e is None:
+                  raise SystemExit("Missing confirmed event: " + url)
+              if (e["date"], e["source"]) != (concert_date, source):
+                  raise SystemExit("Incorrect date/source for "+url+": "+repr(e))
+
+          with open("paradiso-test-results.json", "w", encoding="utf-8") as file:
+              json.dump(events, file, ensure_ascii=False, indent=2)
+          print("PARADISO CHECK PASSED", flush=True)
+          PY
+      - name: Upload inspected event data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paradiso-test-results
+          path: paradiso-test-results.json
+          if-no-files-found: ignore
