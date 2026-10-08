@@ -357,6 +357,19 @@ def scrape_venue(name, maximum=500):
     agenda, prefix,city=VENUES[name]
     html=download_page_retry(agenda,attempts=2)
     found=discover(html,agenda,prefix)
+    if name == "Klokgebouw":
+        # Known non-concert listings return HTTP 500 on their detail URLs.
+        # Filter only these unmistakably non-music events before detail fetch.
+        excluded_slugs = (
+            "/agenda/dutch-design-week",
+            "/agenda/kerstmarkt",
+            "/agenda/chili-fest",
+        )
+        excluded = [url for url in found if any(
+            slug in url.lower() for slug in excluded_slugs
+        )]
+        found = [url for url in found if url not in excluded]
+        print("Klokgebouw non-concert listings excluded:", excluded, flush=True)
     if name=="Hedon":
         nights=download_page_retry("https://hedon-zwolle.nl/nights",attempts=3)
         found=filter_hedon_nights(found,nights)
