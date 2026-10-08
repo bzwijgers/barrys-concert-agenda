@@ -320,10 +320,27 @@ def parse_event(html, url, name, city):
             "date":event_date,"time":event_time,
             "source":name,"url":url}
 
+def filter_hedon_nights(urls, html):
+    """Exclude URLs assigned to Hedon's official nightlife listings."""
+    listed=discover(html,"https://hedon-zwolle.nl/nights","/voorstelling/")
+    if len(listed)<5:
+        raise RuntimeError("Hedon Nights list unexpectedly small")
+    def key(url):
+        u=urlsplit(url)
+        return (u.hostname or "").lower().removeprefix("www."),u.path.lower().rstrip("/")
+    blocked={key(u) for u in listed}
+    remaining=[u for u in urls if key(u) not in blocked]
+    print("Hedon official Nights excluded:",len(urls)-len(remaining),flush=True)
+    return remaining
+
+
 def scrape_venue(name, maximum=500):
     agenda, prefix,city=VENUES[name]
     html=download_page_retry(agenda,attempts=2)
     found=discover(html,agenda,prefix)
+    if name=="Hedon":
+        nights=download_page_retry("https://hedon-zwolle.nl/nights",attempts=3)
+        found=filter_hedon_nights(found,nights)
     if name=="Neushoorn":
         # Webflow renders a maximum of 100 events per collection page.
         # Its next-page link uses a collection-specific query name rather
