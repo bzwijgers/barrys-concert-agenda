@@ -90,7 +90,7 @@ jobs:
 
           print("Concert count:", len(concerts))
           print("Per source:", dict(counts))
-          thresholds = {"De Helling": 10, "Doornroosje": 20, "Hedon": 20, "SPOT Groningen": 30, "Neushoorn": 20, "Metropool": 3}
+          thresholds = {"De Helling": 10, "Doornroosje": 20, "Hedon": 20, "SPOT Groningen": 30, "Neushoorn": 20, "Metropool": 20}
           too_few = {s: (counts[s], limit) for s,limit in thresholds.items() if counts[s] < limit}
           if too_few:
               raise SystemExit("Incomplete newly added venue feeds: " + repr(too_few))
