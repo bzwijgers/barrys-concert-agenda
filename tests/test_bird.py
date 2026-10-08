@@ -30,6 +30,14 @@ class BirdPrismicTests(unittest.TestCase):
                          ("Rijck", "2026-11-26", "20:30", "BIRD"))
         self.assertEqual(event["url"], "https://bird-rotterdam.nl/event/rijck-26-11-2026")
 
+    def test_partner_venues_from_bird_subtitle(self):
+        gallowstreet = item(uid="gallowstreet-at-annabel-13-12-2026", title="Gallowstreet")
+        gallowstreet["data"]["subtitle"] = [{"type": "paragraph", "text": "at Annabel"}]
+        kraak = item(uid="kraak-smaak-22-04-27", title="Kraak & Smaak")
+        kraak["data"]["subtitle"] = [{"type": "paragraph", "text": "At Maassilo"}]
+        self.assertEqual(parse_bird_prismic_event(gallowstreet, today=date(2026, 10, 8))["venue"], "Annabel")
+        self.assertEqual(parse_bird_prismic_event(kraak, today=date(2026, 10, 8))["venue"], "Maassilo")
+
     def test_club_event_is_not_a_live_concert(self):
         self.assertIsNone(parse_bird_prismic_event(item(category="club"),
                                                    today=date(2026, 10, 8)))
