@@ -12,6 +12,7 @@ from scrapers.gebouw_t import scrape_gebouw_t
 from scrapers.dbs import scrape_dbs
 from scrapers.ticketswap import enrich_ticketswap_urls
 from scrapers.new_venues import scrape_new_venues
+from scrapers.podiuminfo_venues import scrape_podiuminfo_venues
 
 
 # ============================================================
@@ -203,6 +204,15 @@ try:
     print("Nieuwe podia samen:", len(additional_concerts), flush=True)
 except Exception as error:
     print("ERNSTIGE FOUT NIEUWE PODIA:", repr(error), flush=True)
+
+
+# ============================================================
+# AMARE EN BOLWERK (VEILIG GEFILTERDE CONCERTEN)
+# ============================================================
+try:
+    all_concerts.extend(scrape_podiuminfo_venues())
+except Exception as error:
+    print("ERNSTIGE FOUT AMARE/BOLWERK:", str(error), flush=True)
 
 
 # ============================================================
