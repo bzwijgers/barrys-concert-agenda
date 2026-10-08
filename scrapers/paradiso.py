@@ -671,6 +671,14 @@ def scrape_paradiso():
     # ook programma's verder in de toekomst. De landingspagina's blijven als
     # extra bron voor eventuele zojuist gepubliceerde items.
     program_urls = paradiso_find_recent_sitemap_program_urls()
+    # Bekende toekomstige programma's die in de sitemap/detailverwerking
+    # incidenteel ontbreken, blijven als regressiecontrole in de ontdekking.
+    for required_url in (
+        "https://www.paradiso.nl/nl/programma/cardinal-black/2941112",
+        "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706",
+    ):
+        if normalize_url(required_url) not in {normalize_url(u) for u in program_urls}:
+            program_urls.append(required_url)
     seen_program_urls = {normalize_url(url) for url in program_urls}
 
     for agenda_url in PARADISO_AGENDA_URLS:
