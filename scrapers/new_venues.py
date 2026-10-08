@@ -149,6 +149,60 @@ def main_time(text):
     if m and int(m.group(1))<24:return f"{int(m.group(1)):02d}:{m.group(2)}"
     return ""
 
+def hedon_primary_date_time(html, today=None):
+    """Read the event's own <dt>Datum</dt> block, not recommendation cards.
+
+    Hedon's primary date omits its year but prints the weekday. The weekday
+    lets us distinguish e.g. Fri 1 Oct 2027 from Thu 1 Oct 2026.
+    """
+    today = today or date.today()
+    def detail(label):
+        pattern = (
+            r"<dt[^>]*>\\s*" + re.escape(label) + r"\\s*</dt>\\s*"
+            r"<dd[^>]*>(.*?)</dd>"
+        )
+        match = re.search(pattern, html, re.I | re.S)
+        return page_text(match.group(1)) if match else ""
+
+    raw_day = detail("Datum")
+    match = re.search(
+        r"\\b(ma|di|wo|do|vr|za|zo)\\s+(\\d{1,2})\\s+"
+        r"(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)",
+        raw_day, re.I
+    )
+    # The final optional word boundary above is deliberately not required:
+    # the month is commonly followed by a dot and the end of the text.
+    if not match:
+        match = re.search(
+            r"\\b(ma|di|wo|do|vr|za|zo)\\s+(\\d{1,2})\\s+"
+            r"(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)",
+            raw_day, re.I
+        )
+    if not match:
+        return None
+
+    weekdays = {"ma":0,"di":1,"wo":2,"do":3,"vr":4,"za":5,"zo":6}
+    month = MONTHS.get(match.group(3).lower())
+    if not month:
+        return None
+    candidates = []
+    for year in range(today.year, today.year + 4):
+        try:
+            candidate = date(year,month,int(match.group(2)))
+        except ValueError:
+            continue
+        if candidate >= today and candidate.weekday() == weekdays[match.group(1).lower()]:
+            candidates.append(candidate)
+    if not candidates:
+        return None
+
+    time_text = detail("Aanvang") or detail("Zaal open")
+    time_match = re.search(r"\\b([01]?\\d|2[0-3]):([0-5]\\d)\\b",time_text)
+    start = (f"{int(time_match.group(1)):02d}:{time_match.group(2)}"
+             if time_match else "")
+    return (min(candidates).isoformat(),start)
+
+
 def parse_event(html, url, name, city):
     parser=Page();parser.feed(html)
     meta=parser.meta
@@ -173,6 +227,12 @@ def parse_event(html, url, name, city):
         if event_name and title[:12].lower() not in str(event_name).lower():continue
         parsed=iso_date_time(event.get("startDate"))
         if parsed:break
+    # Hedon's own primary date block is yearless; derive the correct year
+    # using its printed weekday rather than nearby recommended events.
+    if name == "Hedon":
+        primary = hedon_primary_date_time(html)
+        if primary:
+            parsed = primary
     if not parsed:
         for source in primary_parts:
             found=date_from_text(source)
