@@ -56,5 +56,25 @@ class PreventFalseExclusions(unittest.TestCase):
         self.assertIsNone(parse_event(html,"https://www.spotgroningen.nl/programma/klassieke-muziek-3/",
                                       "SPOT Groningen","Groningen"))
 
+    def test_neushoorn_comedy_and_wrestling_excluded(self):
+        for label,slug in (("Comedy Night","comedy-night"),("Powerslam @ De Harmonie","powerslam-de-harmonie"),("Family Rave Day","family-rave-day")):
+            with self.subTest(label=label):
+                html=page(label+" | Neushoorn", "Evenement", "2027-11-15", label)
+                item=parse_event(html,"https://www.neushoorn.nl/events/"+slug,
+                                 "Neushoorn","Leeuwarden")
+                self.assertIsNone(item)
+
+    def test_neushoorn_real_band_stays(self):
+        html=page("Wodan Boys | Neushoorn", "Een krachtige live rockband",
+                  "2027-11-15","Wodan Boys")
+        self.assertIsNotNone(parse_event(html,"https://www.neushoorn.nl/events/wodan-boys",
+                                         "Neushoorn","Leeuwarden"))
+
+    def test_hedon_comedy_artist_excluded(self):
+        html=page("Jimmy Carr - Hedon Zwolle","Comedyshow",
+                  "2027-12-05","Jimmy Carr")
+        self.assertIsNone(parse_event(html,"https://hedon-zwolle.nl/voorstelling/32496/jimmy-carr-theater-de-spiegel",
+                                      "Hedon","Zwolle"))
+
 if __name__=="__main__":
     unittest.main()
