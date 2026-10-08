@@ -67,6 +67,10 @@ jobs:
               if (e["date"], e["source"]) != (concert_date, source):
                   raise SystemExit("Incorrect date/source for "+url+": "+repr(e))
 
+          tones = [e for e in events if e["url"].rstrip("/").endswith("/2941966")]
+          if len(tones) != 1 or (tones[0]["date"], tones[0]["source"]) != ("2026-10-22", "Paradiso"):
+              raise SystemExit("Paradiso English fallback regression: Tones Presents Juls ADE")
+
           with open("paradiso-test-results.json", "w", encoding="utf-8") as file:
               json.dump(events, file, ensure_ascii=False, indent=2)
           print("PARADISO CHECK PASSED", flush=True)

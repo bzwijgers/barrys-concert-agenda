@@ -1,5 +1,5 @@
 import unittest
-from scrapers.paradiso import paradiso_parse_event
+from scrapers.paradiso import paradiso_parse_event, paradiso_event_key
 
 class ParadisoParserTests(unittest.TestCase):
     def test_excelsior_ignores_recommendations(self):
@@ -58,6 +58,23 @@ class ParadisoParserTests(unittest.TestCase):
         self.assertEqual(
             ("Songhoy Blues", "Tolhuistuin", "2026-10-10", "20:30"),
             (result["artist"], result["venue"], result["date"], result["time"]),
+        )
+
+    def test_nl_en_urls_share_event_id(self):
+        dutch = "https://www.paradiso.nl/nl/programma/tones-presents-juls-ade/2941966"
+        english = "https://www.paradiso.nl/en/program/tones-presents-juls-ade/2941966"
+        self.assertEqual(paradiso_event_key(dutch), paradiso_event_key(english))
+
+    def test_english_paradiso_date_and_main_time(self):
+        html = """<html><head><title>Tones Presents: Juls - ADE | Paradiso</title></head>
+        <body><h1>Tones Presents: Juls - ADE</h1><div>Thursday 22 October 2026</div>
+        <div>In Paradiso - Main Hall</div><div>Doors: 18:45, Main programme: 20:15</div></body></html>"""
+        event = paradiso_parse_event(
+            html, "https://www.paradiso.nl/en/program/tones-presents-juls-ade/2941966"
+        )
+        self.assertEqual(
+            ("Tones Presents: Juls - ADE", "2026-10-22", "20:15", "Paradiso"),
+            (event["artist"], event["date"], event["time"], event["source"]),
         )
 
 if __name__ == "__main__":

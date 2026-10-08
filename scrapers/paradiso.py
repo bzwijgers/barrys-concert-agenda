@@ -694,6 +694,17 @@ PARADISO_RECOVERY_EVENTS = {
     "https://www.paradiso.nl/nl/programma/workshops-sdf-31-august/2894217": "2027-08-31",
 }
 
+
+def paradiso_event_key(url):
+    """Match Dutch and English URLs for the same Paradiso event by numeric ID."""
+    match = re.search(
+        r"https?://(?:www\\.)?paradiso\\.nl/(?:nl/programma|en/program|programma)/[^/?#]+/(\\d+)(?:[/?#]|$)",
+        url or "",
+        flags=re.IGNORECASE,
+    )
+    return "paradiso:" + match.group(1) if match else normalize_url(url)
+
+
 def scrape_paradiso():
     print()
     print(
@@ -715,15 +726,15 @@ def scrape_paradiso():
         # Actueel bevestigd programma dat net na sitemappublicatie kan verschijnen.
         "https://www.paradiso.nl/nl/programma/this-is-the-kit/2931706",
     ):
-        if normalize_url(required_url) not in {normalize_url(u) for u in program_urls}:
+        if paradiso_event_key(required_url) not in {paradiso_event_key(u) for u in program_urls}:
             program_urls.append(required_url)
-    seen_program_urls = {normalize_url(url) for url in program_urls}
+    seen_program_urls = {paradiso_event_key(url) for url in program_urls}
 
     for agenda_url in PARADISO_AGENDA_URLS:
         try:
             agenda_html = download_page_retry(agenda_url)
             for event_url in paradiso_find_program_urls(agenda_html):
-                key = normalize_url(event_url)
+                key = paradiso_event_key(event_url)
                 if key not in seen_program_urls:
                     seen_program_urls.add(key)
                     program_urls.append(event_url)
@@ -733,7 +744,7 @@ def scrape_paradiso():
     # Save discoveries before we append retained/previous-feed URLs.
     # Recently changed sitemap entries and visible agenda links must be
     # checked live; long-known distant events can use their last good data.
-    freshly_discovered_keys = {normalize_url(url) for url in program_urls}
+    freshly_discovered_keys = {paradiso_event_key(url) for url in program_urls}
 
     # De vorige feed is een tweede discoverybron. Een tijdelijke 403, 429,
     # lege HTML-response of onvolledige sitemap mag bekende toekomstige
@@ -752,7 +763,7 @@ def scrape_paradiso():
                 and item.get("date", "") >= today_string
                 and url.startswith("https://www.paradiso.nl/")
             ):
-                previous_paradiso[normalize_url(url)] = item
+                previous_paradiso[paradiso_event_key(url)] = item
     except (OSError, ValueError, TypeError) as error:
         print("Paradiso vorige feed niet beschikbaar:", error)
 
@@ -769,7 +780,7 @@ def scrape_paradiso():
                 and item.get("source") in ("Paradiso", "Tolhuistuin")
                 and item.get("url", "").startswith("https://www.paradiso.nl/")
             ):
-                previous_paradiso.setdefault(normalize_url(item["url"]), item)
+                previous_paradiso.setdefault(paradiso_event_key(item["url"]), item)
     except (OSError, ValueError, TypeError) as error:
         print("Paradiso historisch herstelbestand niet beschikbaar:", error)
 
@@ -777,7 +788,7 @@ def scrape_paradiso():
     # gepubliceerde feed verdwenen. Datums verlopen automatisch.
     for recovered_url, recovered_date in PARADISO_RECOVERY_EVENTS.items():
         if recovered_date >= today_string:
-            key = normalize_url(recovered_url)
+            key = paradiso_event_key(recovered_url)
             if key not in seen_program_urls:
                 seen_program_urls.add(key)
                 program_urls.append(recovered_url)
@@ -793,7 +804,7 @@ def scrape_paradiso():
     # other distant events. Each source remains discoverable from the sitemap.
     soon_date = (date.today() + timedelta(days=21)).isoformat()
     mandatory_keys = {
-        normalize_url(url) for url, when in PARADISO_RECOVERY_EVENTS.items()
+        paradiso_event_key(url) for url, when in PARADISO_RECOVERY_EVENTS.items()
         if when >= today_string
     }
     cached_unmodified = {}
@@ -806,7 +817,7 @@ def scrape_paradiso():
             cached_unmodified[key] = old_item
     program_urls = [
         url for url in program_urls
-        if normalize_url(url) not in cached_unmodified
+        if paradiso_event_key(url) not in cached_unmodified
     ]
     print(
         "Paradiso ongewijzigde toekomstige shows uit cache:",
@@ -854,7 +865,8 @@ def scrape_paradiso():
                         time.sleep(2.0 * (attempt + 1))
                         continue
                     print("Paradiso niet parseerbaar:", event_url, "HTML lengte:", len(event_html))
-                    return None
+                    last_error = ValueError("Paradiso HTML niet parseerbaar: " + event_url)
+                    break
 
                 venue = paradiso_extract_venue(event_html)
                 concert["venue"] = venue
@@ -868,6 +880,20 @@ def scrape_paradiso():
                     time.sleep(
                         2.0 * (attempt + 1)
                     )
+
+        # Some official Dutch programme URLs intermittently return 404 or
+        # empty HTML while the English event URL is still fully available.
+        # Recover the event and use the working English link in the feed.
+        if "/nl/programma/" in event_url:
+            english_url = event_url.replace("/nl/programma/", "/en/program/", 1)
+            try:
+                english_html = download_page_retry(english_url, attempts=2)
+                recovered = paradiso_parse_event(english_html, english_url)
+                if recovered is not None:
+                    print("Paradiso Engelse detailfallback:", english_url)
+                    return recovered
+            except Exception as english_error:
+                print("Paradiso Engelse fallback niet beschikbaar:", english_url, str(english_error))
 
         raise last_error
 
@@ -945,7 +971,7 @@ def scrape_paradiso():
     unique = dict(cached_unmodified)
 
     for concert in concerts:
-        key = normalize_url(
+        key = paradiso_event_key(
             concert["url"]
         )
 
