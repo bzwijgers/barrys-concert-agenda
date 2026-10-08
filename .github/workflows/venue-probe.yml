@@ -14,7 +14,7 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -24,3 +24,4 @@ jobs:
         run: |
           python -u diagnostics/venue_probe.py
           python -u diagnostics/detail_probe.py
+          python -u diagnostics/new_venues_candidate.py
