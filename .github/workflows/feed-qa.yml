@@ -1,0 +1,22 @@
+name: Verify published concert feed
+on:
+  push:
+    branches: [main]
+    paths:
+      - "concerts.json"
+      - "diagnostics/feed_qa.py"
+      - ".github/workflows/feed-qa.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify source counts schema and known concert dates
+        run: python -u diagnostics/feed_qa.py
