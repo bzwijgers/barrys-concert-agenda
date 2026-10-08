@@ -1,12 +1,46 @@
 from .common import *
 from .common import _detail_title, _detail_date_time
+from html.parser import HTMLParser
 
 GEBOUW_T_AGENDA_URL = "https://gebouw-t.nl/agenda/"
 GEBOUW_T_BASE_URL = "https://gebouw-t.nl"
 
 
+class _GebouwTLinkParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.urls = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag != "a":
+            return
+        href = dict(attrs).get("href", "")
+        if href:
+            self.urls.append(href)
+
+
 def gebouw_t_find_event_urls(page):
-    return find_site_event_urls(page, GEBOUW_T_BASE_URL, "/agenda/")
+    # The official site uses unquoted attributes:
+    # <a href=https://gebouw-t.nl/agenda/marble-sounds/ ...>
+    # The generic quoted-href regex silently returned zero events.
+    parser = _GebouwTLinkParser()
+    parser.feed(page)
+    urls = []
+    seen = set()
+    for href in parser.urls:
+        if href.startswith("/"):
+            href = GEBOUW_T_BASE_URL + href
+        if not href.startswith(GEBOUW_T_BASE_URL + "/agenda/"):
+            continue
+        event_url = href.split("?", 1)[0].split("#", 1)[0].rstrip("/")
+        slug = event_url.split("/agenda/", 1)[-1].strip("/")
+        if not slug or slug.startswith("page/") or slug == "feed":
+            continue
+        key = normalize_url(event_url)
+        if key not in seen:
+            urls.append(event_url)
+            seen.add(key)
+    return urls
 
 
 def gebouw_t_parse_event(page, event_url):
@@ -24,7 +58,7 @@ def gebouw_t_parse_event(page, event_url):
         "comedynight", "muziekquiz", "themafeest", "quiz'm",
         "vroegzat", "80's verantwoord", "90's now"
     )
-    if any(x in lower for x in reject):
+    if any(x in title.lower() for x in reject):
         return None
 
     music_signals = (
@@ -81,24 +115,63 @@ def scrape_gebouw_t():
     print("=" * 60)
     print("GEBOUW-T")
     print("=" * 60)
-    agenda = download_page_retry(GEBOUW_T_AGENDA_URL)
-    urls = gebouw_t_find_event_urls(agenda)
-    today = date.today()
-    concerts = []
 
-    for url in urls:
+    # The official agenda is paginated at /agenda/page/<n>/.
+    # Reading only page one lost all concerts beyond October.
+    discovered = []
+    seen_urls = set()
+    for page_no in range(1, 11):
+        agenda_url = (
+            GEBOUW_T_AGENDA_URL if page_no == 1
+            else GEBOUW_T_AGENDA_URL + "page/" + str(page_no) + "/"
+        )
         try:
-            event = gebouw_t_parse_event(download_page_retry(url), url)
-            if event and date.fromisoformat(event["date"]) >= today:
-                concerts.append(event)
-        except Exception as error:
-            print("Gebouw-T event overgeslagen:", url, str(error))
+            html = download_page_retry(agenda_url, attempts=2)
+        except HTTPError as error:
+            if error.code in (404, 410) and page_no > 1:
+                break
+            raise
+        urls = gebouw_t_find_event_urls(html)
+        added = 0
+        for url in urls:
+            key = normalize_url(url)
+            if key not in seen_urls:
+                discovered.append(url)
+                seen_urls.add(key)
+                added += 1
+        print("Gebouw-T agenda page", page_no, "new links:", added, flush=True)
+        if not urls or added == 0:
+            break
+
+    if not discovered:
+        raise RuntimeError("Gebouw-T agenda has no event links")
+    concerts = []
+    failed = 0
+    today = date.today()
+
+    def parse_link(url):
+        return gebouw_t_parse_event(download_page_retry(url, attempts=2), url)
+
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = {executor.submit(parse_link, url): url for url in discovered}
+        for future in as_completed(futures):
+            try:
+                event = future.result()
+                if event and date.fromisoformat(event["date"]) >= today:
+                    concerts.append(event)
+            except Exception as error:
+                failed += 1
+                if failed <= 4:
+                    print("Gebouw-T event error:", futures[future], str(error), flush=True)
 
     unique = {}
     for concert in concerts:
-        key = (concert["artist"].lower(), concert["date"], concert["venue"].lower())
-        unique[key] = concert
-
-    result = sorted(unique.values(), key=lambda x: (x["date"], x["artist"].lower()))
-    print("Gebouw-T concerten:", len(result))
+        unique[normalize_url(concert["url"])] = concert
+    result = sorted(
+        unique.values(), key=lambda x: (x["date"], x["artist"].lower())
+    )
+    print("Gebouw-T found:", len(discovered), "parsed:", len(result),
+          "failed:", failed, flush=True)
+    if not result:
+        raise RuntimeError("Gebouw-T returned zero upcoming concerts")
     return result
