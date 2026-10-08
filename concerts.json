@@ -107,7 +107,7 @@
     "date": "2026-10-08",
     "time": "19:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/v-i-c/2900215"
+    "url": "https://www.paradiso.nl/nl/programma/v-i-c/2900215"
   },
   {
     "artist": "Fontaines D.C. luistersessie",
@@ -298,17 +298,7 @@
     "date": "2026-10-08",
     "time": "21:00",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/panchiko/2741543"
-  },
-  {
-    "artist": "Nona",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "21:30",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/nona"
+    "url": "https://www.paradiso.nl/en/program/panchiko/2741543"
   },
   {
     "artist": "Kiss Facility",
@@ -590,6 +580,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/ronde/2852163"
+  },
+  {
+    "artist": "Rowwen Hèze",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/rowwen-heze"
   },
   {
     "artist": "Sari Schorr",
@@ -1032,24 +1032,14 @@
     "url": "https://hedon-zwolle.nl/voorstelling/33037/4am"
   },
   {
-    "artist": "IOS",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
+    "artist": "Good Times 80's, 90's, 00's Party",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
     "country": "NL",
     "date": "2026-10-10",
     "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/ios"
-  },
-  {
-    "artist": "New Wave Generation",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/new-wave-generation-10-okt"
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/456480/Good-Times-80s-90s-00s-Party/Het-Bolwerk"
   },
   {
     "artist": "Nobu",
@@ -2378,14 +2368,14 @@
     "url": "https://www.doornroosje.nl/event/ida"
   },
   {
-    "artist": "80'S VERANTWOORD",
-    "venue": "Hedon",
-    "city": "Zwolle",
+    "artist": "SlodDe & Vos",
+    "venue": "Patronaat",
+    "city": "Haarlem",
     "country": "NL",
     "date": "2026-10-16",
-    "time": "18:00",
-    "source": "Hedon",
-    "url": "https://hedon-zwolle.nl/voorstelling/32957/80s-verantwoord"
+    "time": "15:15",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/slodde-vos-16-10-26/"
   },
   {
     "artist": "Humanity's Last Breath",
@@ -4582,6 +4572,16 @@
     "url": "https://www.spotgroningen.nl/programma/treasure"
   },
   {
+    "artist": "Walk Off The Earth",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "21:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/walk-off-the-earth"
+  },
+  {
     "artist": "Lawrence Hart & Mera Bhai pres: Dreamtraxx - ADE",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -4630,16 +4630,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paardcafe-club-pony-104/"
-  },
-  {
-    "artist": "Rolf Sanchez",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/rolf-sanchez"
   },
   {
     "artist": "Kruidkoek & Joost Oomen",
@@ -4892,6 +4882,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/voorronde-grote-prijs-breda/"
+  },
+  {
+    "artist": "Rolf Sanchez",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "20:15",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/rolf-sanchez"
   },
   {
     "artist": "ACinDC",
@@ -5506,6 +5506,16 @@
     "url": "https://metropool.nl/agenda/4am"
   },
   {
+    "artist": "Rocky Horror Patronaat Show",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "23:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rocky-horror-patronaat-show-24-10-26/"
+  },
+  {
     "artist": "Paardcafé: Osoulsconcept & Friends",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -5594,6 +5604,16 @@
     "time": "12:30",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/ddw-trace-of-dinner-9"
+  },
+  {
+    "artist": "BEZERKUS BINGO – Halloween Editie",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-25",
+    "time": "14:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/bezerkus-bingo-halloween-editie-25-10-26/"
   },
   {
     "artist": "17e Bergs Bluesfestival",
@@ -5757,7 +5777,7 @@
   },
   {
     "artist": "Backstage & Blik Vooruit",
-    "venue": "Paradiso",
+    "venue": "Skatecafe",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-10-26",
@@ -5943,7 +5963,7 @@
     "date": "2026-10-27",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/goldie-boutilier/2895936"
+    "url": "https://www.paradiso.nl/nl/programma/goldie-boutilier/2895936"
   },
   {
     "artist": "Yaro Mila + BEL",
@@ -6519,6 +6539,16 @@
     "url": "https://www.neushoorn.nl/events/guess-the-gig"
   },
   {
+    "artist": "MOB presents: LA Sagne + Paranoid State + Slan",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/mob-okt-26-29-10-26/"
+  },
+  {
     "artist": "New Jazz Underground",
     "venue": "BIRD",
     "city": "Rotterdam",
@@ -6648,26 +6678,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/picasso-halloween-feest/"
-  },
-  {
-    "artist": "Discozwemmen",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-29",
-    "time": "23:55",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/32970205/discozwemmen-29-10-2026/"
-  },
-  {
-    "artist": "Het Danspaleis",
-    "venue": "Amare",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "13:30",
-    "source": "Amare",
-    "url": "https://www.podiuminfo.nl/concert/460520/Het-Danspaleis/Amare"
   },
   {
     "artist": "London Calling",
@@ -7110,16 +7120,6 @@
     "time": "23:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paardcafe-getting-80s-90s-wit-it/"
-  },
-  {
-    "artist": "ICONIC – Queer Pop Party",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "23:55",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/25584878/iconic-queer-pop-party-30-10-2026/"
   },
   {
     "artist": "Fi Di Gyal Dem",
@@ -7673,6 +7673,16 @@
     "url": "https://www.neushoorn.nl/events/hippe-gasten"
   },
   {
+    "artist": "JazzRock Café",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "15:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/jazzrock-cafe-erly-thornton"
+  },
+  {
     "artist": "Swamp of the Low North + Here To Stay",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -7681,16 +7691,6 @@
     "time": "15:00",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/swamp-of-the-low-north-here-to-stay"
-  },
-  {
-    "artist": "Raymon Hermans",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-01",
-    "time": "15:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/raymon-hermans"
   },
   {
     "artist": "Momentum III - Potochkine + Vioflesh + Silent Runners",
@@ -8185,16 +8185,6 @@
     "url": "https://hedon-zwolle.nl/voorstelling/33023/bluesworld-cafe-olav-the-blues-cruise"
   },
   {
-    "artist": "Hagelslag de Podcast",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-11-03",
-    "time": "19:30",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/25768324/hagelslag-de-podcast-03-11-2026/"
-  },
-  {
     "artist": "Pebbledash",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -8424,6 +8414,16 @@
     "time": "20:00",
     "source": "Amare",
     "url": "https://www.podiuminfo.nl/concert/460521/Dire-Straits-Experience-The-Long-Highway-Tour/Amare"
+  },
+  {
+    "artist": "Monkeyjam",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/monkeyjam-4-nov"
   },
   {
     "artist": "Rita Dakota",
@@ -8995,7 +8995,7 @@
     "date": "2026-11-06",
     "time": "19:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/josiah-and-the-bonnevilles/2892085"
+    "url": "https://www.paradiso.nl/nl/programma/josiah-and-the-bonnevilles/2892085"
   },
   {
     "artist": "NIELS GEUSEBROEK SINGS COLDPLAY",
@@ -9086,6 +9086,16 @@
     "time": "20:15",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/ork"
+  },
+  {
+    "artist": "Yoràn Vroom Quintet",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/460522/Yoran-Vroom-Quintet/Amare"
   },
   {
     "artist": "Eek-A-Mouse",
@@ -9379,6 +9389,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/oi-va-voi-07-11-2026/"
   },
   {
+    "artist": "Gnawa Diffusion",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/491822/Gnawa-Diffusion/Amare"
+  },
+  {
     "artist": "Studio15 x Museumnacht",
     "venue": "Metropool Enschede",
     "city": "Enschede",
@@ -9387,6 +9407,16 @@
     "time": "19:45",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/studio15-x-museumnacht"
+  },
+  {
+    "artist": "Edu Lobo - Cantiga de Longe",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/475105/Edu-Lobo-Cantiga-de-Longe/Amare"
   },
   {
     "artist": "I Love You Honey Bunny",
@@ -9410,6 +9440,16 @@
     "clubCard": false
   },
   {
+    "artist": "Sonische Reis – Een avond van Dans, Adem & Gong",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/yoga-en-gong-07-11-26/"
+  },
+  {
     "artist": "Superclassics XL",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -9428,6 +9468,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/tusky-2/"
+  },
+  {
+    "artist": "Yazz Ahmed - A Paradise in the Hold",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/480257/Yazz-Ahmed-A-Paradise-in-the-Hold/Amare"
   },
   {
     "artist": "Diggy Dex",
@@ -9578,6 +9628,16 @@
     "time": "21:00",
     "source": "Hedon",
     "url": "https://hedon-zwolle.nl/voorstelling/33034/pulse-presents-mason-senders"
+  },
+  {
+    "artist": "WIES",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "21:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/wies"
   },
   {
     "artist": "FLEMMING",
@@ -10022,12 +10082,12 @@
   },
   {
     "artist": "Sharp Pins",
-    "venue": "Tolhuistuin",
+    "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-09",
     "time": "20:30",
-    "source": "Tolhuistuin",
+    "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/sharp-pins/2933525"
   },
   {
@@ -10492,6 +10552,16 @@
     "url": "https://www.doornroosje.nl/event/piss"
   },
   {
+    "artist": "Prins S. en de Geit",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/prins-s-geit-12nov"
+  },
+  {
     "artist": "Against the Current",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -10710,16 +10780,6 @@
     "time": "20:00",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/tina-dico"
-  },
-  {
-    "artist": "Prins S. en de Geit",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-12",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/prins-s-geit-12nov"
   },
   {
     "artist": "Adult DVD",
@@ -10942,6 +11002,16 @@
     "time": "23:00",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/pert-near-sandstone"
+  },
+  {
+    "artist": "Paardcafé: Club Pony",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "23:30",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/paardcafe-club-pony-110/"
   },
   {
     "artist": "De Avond van - Edwin Evers Band",
@@ -11336,6 +11406,16 @@
     "url": "https://metropool.nl/agenda/thijs-veldhuis"
   },
   {
+    "artist": "RIFT",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "23:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rift-13-11-26/"
+  },
+  {
     "artist": "Ziongate x Moonshine",
     "venue": "Parallel",
     "city": "Amsterdam",
@@ -11444,6 +11524,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/11885533/guido-belcanto-14-11-2026/"
+  },
+  {
+    "artist": "Ignite + Cancer Bats + Outspoken + To The Wire",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "19:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/474151/Ignite-Cancer-Bats-Outspoken-To-The-Wire/Het-Bolwerk"
   },
   {
     "artist": "Julia Sabaté",
@@ -11787,6 +11877,16 @@
     "url": "https://gebouw-t.nl/agenda/vanja-sky"
   },
   {
+    "artist": "Daan Kluwer Band",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "15:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/485131/Daan-Kluwer-Band/Amare"
+  },
+  {
     "artist": "Plackband",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -11915,6 +12015,16 @@
     "time": "20:00",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/noor-2"
+  },
+  {
+    "artist": "Asaf Avidan - Unfurl",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/473184/Asaf-Avidan-Unfurl/Amare"
   },
   {
     "artist": "Ash",
@@ -12599,6 +12709,16 @@
     "url": "https://www.mezz.nl/programma/the-elvis-concert-2/"
   },
   {
+    "artist": "Xzibit + Support",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-11-18",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/491732/Xzibit-Support/Het-Bolwerk"
+  },
+  {
     "artist": "Anda Morts",
     "venue": "V11",
     "city": "Rotterdam",
@@ -13223,6 +13343,16 @@
     "url": "https://bird-rotterdam.nl/event/momoko-gill-20-11-26"
   },
   {
+    "artist": "Money & The Man + Dan & The Middle Men",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/468695/Money-The-Man-Dan-The-Middle-Men/Het-Bolwerk"
+  },
+  {
     "artist": "Niels Geusebroek sings Coldplay",
     "venue": "Metropool Hengelo",
     "city": "Hengelo",
@@ -13261,16 +13391,6 @@
     "time": "20:45",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/the-bluesbones"
-  },
-  {
-    "artist": "Trixie Whitley",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-11-20",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/trixie-whitley"
   },
   {
     "artist": "Frank Boeijen",
@@ -13331,7 +13451,7 @@
     "date": "2026-11-21",
     "time": "",
     "source": "Klokgebouw",
-    "url": "https://www.klokgebouw.nl/agenda/revolution-calling-21-11"
+    "url": "https://www.klokgebouw.nl/agenda/revolution-calling-20-11"
   },
   {
     "artist": "Revolution Calling",
@@ -13341,7 +13461,7 @@
     "date": "2026-11-21",
     "time": "",
     "source": "Klokgebouw",
-    "url": "https://www.klokgebouw.nl/agenda/revolution-calling-20-11"
+    "url": "https://www.klokgebouw.nl/agenda/revolution-calling-21-11"
   },
   {
     "artist": "The Dirty Daddies",
@@ -13715,6 +13835,16 @@
     "url": "https://metropool.nl/agenda/noah-derksen"
   },
   {
+    "artist": "Oliver Wakeman",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/455710/Oliver-Wakeman/Het-Bolwerk"
+  },
+  {
     "artist": "Trixie Whitley",
     "venue": "Bitterzoet",
     "city": "Amsterdam",
@@ -13856,6 +13986,16 @@
     "url": "https://hedon-zwolle.nl/voorstelling/32921/bluesfestival-bluesz-more-2026"
   },
   {
+    "artist": "Ameezing - Merel Martens & Guests",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "14:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/474405/Ameezing-Merel-Martens-Guests/Amare"
+  },
+  {
     "artist": "Artin muziek & friends",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -13884,6 +14024,16 @@
     "time": "15:00",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/ranestrane/"
+  },
+  {
+    "artist": "Martha High & The Funky Divas",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/481826/Martha-High-The-Funky-Divas/Het-Bolwerk"
   },
   {
     "artist": "Super-Sonic Jazz Festival · Isaiah Collier plays Coltrane",
@@ -14458,6 +14608,16 @@
     "url": "https://www.paard.nl/event/the-bug-club/"
   },
   {
+    "artist": "Creedence Gold - Creedence Clearwater Revival by The Fortunate Sons",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/466067/Creedence-Gold-Creedence-Clearwater-Revival-by-The-Fortunate-Sons/Amare"
+  },
+  {
     "artist": "Conway the Machine & Daringer",
     "venue": "MEZZ",
     "city": "Breda",
@@ -14648,6 +14808,16 @@
     "time": "19:30",
     "source": "Hedon",
     "url": "https://hedon-zwolle.nl/voorstelling/32926/wies"
+  },
+  {
+    "artist": "MEAU - Liefde Onderschat",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/463155/MEAU-Liefde-Onderschat/Amare"
   },
   {
     "artist": "Davina Michelle + support",
@@ -14861,16 +15031,6 @@
     "time": "23:00",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/cest-qui"
-  },
-  {
-    "artist": "Discozwemmen",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-11-26",
-    "time": "23:00",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/97602782/discozwemmen-26-11-2026/"
   },
   {
     "artist": "Paardcafé: Club Pony",
@@ -15123,6 +15283,16 @@
     "url": "https://www.mezz.nl/programma/weval/"
   },
   {
+    "artist": "HAEVN",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/455727/HAEVN/Amare"
+  },
+  {
     "artist": "Fatoumata Diawara",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -15131,6 +15301,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/fatoumata-diawara/2765584"
+  },
+  {
+    "artist": "FEUERENGEL",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/feuerengel-a-tribute-to-rammstein"
   },
   {
     "artist": "James Smith",
@@ -15181,6 +15361,16 @@
     "time": "20:30",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/queens-quizzes"
+  },
+  {
+    "artist": "The Fortunate Sons",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/449997/The-Fortunate-Sons/Het-Bolwerk"
   },
   {
     "artist": "Plan Nine",
@@ -15453,6 +15643,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/52304790/the-last-waltz-door-dawn-brothers-28-11-2026/"
   },
   {
+    "artist": "Shivam Rajaram — 10-jarig bestaan Baithak Gana Group Natraj",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/487820/Shivam-Rajaram-10-jarig-bestaan-Baithak-Gana-Group-Natraj/Amare"
+  },
+  {
     "artist": "Elmiene",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -15581,6 +15781,16 @@
     "time": "20:45",
     "source": "De Helling",
     "url": "https://dehelling.nl/agenda/the-hillbilly-moonshiners-28-11-2026"
+  },
+  {
+    "artist": "New Wave Generation - The Best of Depeche Mode, Blondie, Talking He...",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-11-28",
+    "time": "21:00",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/459345/New-Wave-Generation-The-Best-of-Depeche-Mode-Blondie-Talking-He-/Het-Bolwerk"
   },
   {
     "artist": "The Smiths Presumably",
@@ -15714,6 +15924,16 @@
     "url": "https://www.neushoorn.nl/events/sido-martens"
   },
   {
+    "artist": "The Kilkennys",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/452686/The-Kilkennys/Het-Bolwerk"
+  },
+  {
     "artist": "Wednesday 13 + The Birthday Massacre + Killus",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -15802,6 +16022,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/40343863/sondre-lerche-29-11-2026/"
+  },
+  {
+    "artist": "Joss Stone - Merry Christmas, Love Tour",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/494418/Joss-Stone-Merry-Christmas-Love-Tour/Amare"
   },
   {
     "artist": "SBP4",
@@ -16244,6 +16474,16 @@
     "url": "https://www.melkweg.nl/nl/agenda/raquel-rodriguez-02-12-2026/"
   },
   {
+    "artist": "Metropole Orkest / SYML",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/453604/Metropole-Orkest-SYML/Amare"
+  },
+  {
     "artist": "Chuck Prophet & The Amsterdam String Ensemble",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -16424,6 +16664,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/20611433/froukje-03-12-2026/"
+  },
+  {
+    "artist": "Jimmy Carr • PHIL",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "19:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/jimmy-car-phil-03-12-26/"
   },
   {
     "artist": "Miss Bashful",
@@ -16750,6 +17000,16 @@
     "clubCard": false
   },
   {
+    "artist": "Jimmy Carr • PHIL (21:30)",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "21:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/jimmy-carr-phil-2100-03-12-26/"
+  },
+  {
     "artist": "Kids With Buns",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -16910,6 +17170,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/89152736/spite-house-04-12-2026/"
   },
   {
+    "artist": "Share a Folk Song",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/490240/Share-a-Folk-Song/Amare"
+  },
+  {
     "artist": "40UP",
     "venue": "MEZZ",
     "city": "Breda",
@@ -17040,6 +17310,16 @@
     "url": "https://www.effenaar.nl/agenda/naft-0"
   },
   {
+    "artist": "Focus",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/449998/Focus/Het-Bolwerk"
+  },
+  {
     "artist": "Joël Domingos",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -17168,7 +17448,7 @@
     "date": "2026-12-04",
     "time": "23:59",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/mama-africa/2940689"
+    "url": "https://www.paradiso.nl/nl/programma/mama-africa/2940689"
   },
   {
     "artist": "Zeitgeist 2026",
@@ -17282,6 +17562,26 @@
     "clubCard": false
   },
   {
+    "artist": "Ben van Gelder kwintet - The Whole Wide World is Round",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/484189/Ben-van-Gelder-kwintet-The-Whole-Wide-World-is-Round/Amare"
+  },
+  {
+    "artist": "Farhad Darya",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/495961/Farhad-Darya/Amare"
+  },
+  {
     "artist": "Focus",
     "venue": "MEZZ",
     "city": "Breda",
@@ -17350,6 +17650,16 @@
     "time": "20:00",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/prateek-kuhad/2929580"
+  },
+  {
+    "artist": "Bert Heerink & André Becker",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/480763/Bert-Heerink-Andre-Becker/Het-Bolwerk"
   },
   {
     "artist": "Gotu Jim",
@@ -17453,6 +17763,16 @@
     "url": "https://baroeg.nl/productie/baroeg-on-tour-soundville-itgow-presents-torturerama-mancuerda-daemorthan/"
   },
   {
+    "artist": "Just Graduated: Marco Bernardi en Katrina Kabineca",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "15:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/485136/Just-Graduated-Marco-Bernardi-en-Katrina-Kabineca/Amare"
+  },
+  {
     "artist": "Sacred Reich",
     "venue": "Dynamo",
     "city": "Eindhoven",
@@ -17471,6 +17791,16 @@
     "time": "15:30",
     "source": "Dynamo",
     "url": "https://www.podiuminfo.nl/concert/496105/Sacred-Reich/Dynamo"
+  },
+  {
+    "artist": "Treasure - Bruno Mars Tribute",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/453716/Treasure-Bruno-Mars-Tribute/Het-Bolwerk"
   },
   {
     "artist": "Bente - middagshow",
@@ -17521,6 +17851,16 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/blondshell-06-12-2026/"
+  },
+  {
+    "artist": "Mistu Bardhan - The Nightingale: The Voice of Lata Mangeshkar",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "19:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/494884/Mistu-Bardhan-The-Nightingale-The-Voice-of-Lata-Mangeshkar/Amare"
   },
   {
     "artist": "The Skints",
@@ -17603,6 +17943,16 @@
     "url": "https://patronaat.nl/event/nervy-06-12-26/"
   },
   {
+    "artist": "DeWolff - Full Moon Ritual",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-06",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/457139/DeWolff-Full-Moon-Ritual/Amare"
+  },
+  {
     "artist": "Maite Hontelé & LA NOVIA",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -17661,7 +18011,7 @@
     "date": "2026-12-06",
     "time": "22:00",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/ledbyher/2941187"
+    "url": "https://www.paradiso.nl/nl/programma/ledbyher/2941187"
   },
   {
     "artist": "SYML & Metropole Orkest",
@@ -18570,6 +18920,26 @@
     "url": "https://www.paradiso.nl/nl/programma/isabel-van-gelder/2914943"
   },
   {
+    "artist": "Ozzy Lives On! - Een Ode Door Bloody Sabbath & Ultimate Ozzy",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/449999/Ozzy-Lives-On!-Een-Ode-Door-Bloody-Sabbath-Ultimate-Ozzy/Het-Bolwerk"
+  },
+  {
+    "artist": "The Fortunate Sons – A Tribute To CCR",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-12-11",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/the-fortunate-sons-a-tribute-to-ccr-11-dec"
+  },
+  {
     "artist": "Ares",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -18721,16 +19091,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/mammoth-12-12-2026/"
   },
   {
-    "artist": "One Direction Fanparty",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-12-12",
-    "time": "19:00",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/99108133/one-direction-fanparty-12-12-2026/"
-  },
-  {
     "artist": "PopMonument",
     "venue": "MEZZ",
     "city": "Breda",
@@ -18801,6 +19161,16 @@
     "url": "https://hedon-zwolle.nl/voorstelling/32976/zwartewater"
   },
   {
+    "artist": "Back to the Disco",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/back-to-the-disco-12-12-26/"
+  },
+  {
     "artist": "Froukje + Jaïr Faria",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -18829,6 +19199,16 @@
     "time": "20:00",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/hiigo-2"
+  },
+  {
+    "artist": "Sjoerd van Eijck Trio - Pegasus",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/469781/Sjoerd-van-Eijck-Trio-Pegasus/Amare"
   },
   {
     "artist": "Anúna",
@@ -18889,6 +19269,16 @@
     "time": "20:30",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/jett-rebel"
+  },
+  {
+    "artist": "The Scene",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/447790/The-Scene/Het-Bolwerk"
   },
   {
     "artist": "The Smiths Presumably",
@@ -19029,7 +19419,7 @@
     "date": "2026-12-13",
     "time": "11:00",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/tomo-katsurada-x-jonny-nash/2939050"
+    "url": "https://www.paradiso.nl/nl/programma/tomo-katsurada-x-jonny-nash/2939050"
   },
   {
     "artist": "TANKSTATION FESTIVAL 2026",
@@ -19060,6 +19450,16 @@
     "time": "15:00",
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/nile-redsphere-intrepid-orecus/"
+  },
+  {
+    "artist": "Julian Sas - Miles And Memories",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/480765/Julian-Sas-Miles-And-Memories/Het-Bolwerk"
   },
   {
     "artist": "Dominum",
@@ -19253,6 +19653,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/41996264/rabo-open-stage-jen-13-12-2026/"
   },
   {
+    "artist": "Gouwe Ouwe",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-14",
+    "time": "14:30",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/487159/Gouwe-Ouwe/Amare"
+  },
+  {
     "artist": "Ethan Regan",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -19281,6 +19691,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/rikas/2900357"
+  },
+  {
+    "artist": "De Niemanders - Café Habibi",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-15",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/468930/De-Niemanders-Cafe-Habibi/Amare"
   },
   {
     "artist": "Quiz'm - Top 2000 Editie",
@@ -19411,6 +19831,16 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/16-12-music-that-changed-the-world/"
+  },
+  {
+    "artist": "Jazz Orchestra of the Concertgebouw & Kurt Elling - Swinging Holidays",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-16",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/468931/Jazz-Orchestra-of-the-Concertgebouw-Kurt-Elling-Swinging-Holidays/Amare"
   },
   {
     "artist": "Maarten Heijmans & Xander Vrienten",
@@ -19583,6 +20013,16 @@
     "url": "https://patronaat.nl/event/jaimi-faulkner-17-12-26/"
   },
   {
+    "artist": "Ladysmith Black Mambazo",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-17",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/460558/Ladysmith-Black-Mambazo/Amare"
+  },
+  {
     "artist": "After Elmer",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -19733,6 +20173,16 @@
     "time": "19:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/my-baby-6/"
+  },
+  {
+    "artist": "The ARTisT Rhymz Jamsessie | Stories, Lyrics & Music",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "19:30",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/463551/The-ARTisT-Rhymz-Jamsessie-Stories-Lyrics-Music/Amare"
   },
   {
     "artist": "Zoë Livay",
@@ -20096,6 +20546,16 @@
     "url": "https://poppodiumboerderij.nl/programma/top2000/"
   },
   {
+    "artist": "Backfire! - De allerlaatste show ooit!",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2026-12-19",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/460066/Backfire!-De-allerlaatste-show-ooit!/Het-Bolwerk"
+  },
+  {
     "artist": "Blackbird Kerstshow",
     "venue": "Metropool Enschede",
     "city": "Enschede",
@@ -20247,6 +20707,16 @@
     "url": "https://www.neushoorn.nl/events/family-rave-day"
   },
   {
+    "artist": "Beyond Hancock",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "15:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/485137/Beyond-Hancock/Amare"
+  },
+  {
     "artist": "Clean Pete's Kerstmatinee",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -20275,6 +20745,16 @@
     "time": "16:00",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/bente-middagshow/2853017"
+  },
+  {
+    "artist": "Millennium Jazz Orchestra ft. Claron McFadden & Manu van Kersbergen...",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-12-20",
+    "time": "16:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/468932/Millennium-Jazz-Orchestra-ft-Claron-McFadden-Manu-van-Kersbergen-/Amare"
   },
   {
     "artist": "New Model Army",
@@ -20569,16 +21049,6 @@
     "url": "https://www.paradiso.nl/nl/programma/gerson-main/2896689"
   },
   {
-    "artist": "Discozwemmen",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-12-24",
-    "time": "23:00",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/53918301/discozwemmen-24-12-2026/"
-  },
-  {
     "artist": "Laugh Maroc",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -20637,6 +21107,16 @@
     "time": "13:00",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/k-pop-day"
+  },
+  {
+    "artist": "Patro Quiz Eindejaarseditie",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2026-12-27",
+    "time": "14:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/patro-quiz-kersteditie-27-12-26/"
   },
   {
     "artist": "Quiz’m Top 2000",
@@ -20950,6 +21430,16 @@
     "url": "https://dehelling.nl/agenda/getikt-nye-31-12-2026"
   },
   {
+    "artist": "Nieuwjaarsgala",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-01",
+    "time": "16:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/nieuwjaarsgala-01-01-27/"
+  },
+  {
     "artist": "Crazy Little Things",
     "venue": "Gebouw-T",
     "city": "Bergen op Zoom",
@@ -20989,6 +21479,16 @@
     "time": "21:00",
     "source": "De Helling",
     "url": "https://dehelling.nl/agenda/honk-02-01-2027"
+  },
+  {
+    "artist": "Folle Lok & Rock",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-01-03",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/459478/Folle-Lok-Rock/Het-Bolwerk"
   },
   {
     "artist": "Raymond van het Groenewoud",
@@ -21129,6 +21629,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/dirty-daddies-8jan27"
+  },
+  {
+    "artist": "Rutger van Barneveld & Justen de Wildt + Support + DJ René CD",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-01-08",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/492951/Rutger-van-Barneveld-Justen-de-Wildt-Support-DJ-Rene-CD/Het-Bolwerk"
   },
   {
     "artist": "The Fortunate Sons",
@@ -21351,6 +21861,16 @@
     "url": "https://www.013.nl/programma/143444/imminence"
   },
   {
+    "artist": "Rufus Wainwright & Metropole Orkest – Wainwright Does Weill",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-10",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/460559/Rufus-Wainwright-Metropole-Orkest-Wainwright-Does-Weill/Amare"
+  },
+  {
     "artist": "Queen's Pleasure + KRAM",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -21398,7 +21918,7 @@
     "date": "2027-01-12",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/ludowic/2905314"
+    "url": "https://www.paradiso.nl/nl/programma/ludowic/2905314"
   },
   {
     "artist": "Nickless",
@@ -21489,6 +22009,16 @@
     "time": "20:15",
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/fleddy-melculy"
+  },
+  {
+    "artist": "Drukwerk - Schijn Een Lichtje Op Mij",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-01-15",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/451537/Drukwerk-Schijn-Een-Lichtje-Op-Mij/Het-Bolwerk"
   },
   {
     "artist": "Jazzalike",
@@ -21642,6 +22172,16 @@
     "url": "https://www.mezz.nl/programma/spunyboys-2/"
   },
   {
+    "artist": "Drukwerk - Schijn Een Lichtje Op Mij",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-01-16",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/451538/Drukwerk-Schijn-Een-Lichtje-Op-Mij/Het-Bolwerk"
+  },
+  {
     "artist": "Ten Years After",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -21709,7 +22249,7 @@
     "date": "2027-01-17",
     "time": "11:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/paradiso-korendagen-2027---zondag/2807461"
+    "url": "https://www.paradiso.nl/nl/programma/paradiso-korendagen-2027---zondag/2807461"
   },
   {
     "artist": "Isaiah Rashad",
@@ -22034,6 +22574,16 @@
     "url": "https://www.paard.nl/event/the-dirty-daddies-22-01/"
   },
   {
+    "artist": "Cockney Rejects + Supports",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/464830/Cockney-Rejects-Supports/Het-Bolwerk"
+  },
+  {
     "artist": "Regressive Hypnosis",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -22121,7 +22671,7 @@
     "date": "2027-01-22",
     "time": "23:59",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/distant/2941885"
+    "url": "https://www.paradiso.nl/nl/programma/distant/2941885"
   },
   {
     "artist": "Physical Graffiti",
@@ -22282,6 +22832,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/gilla-band/2896446"
+  },
+  {
+    "artist": "Made in Purple",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/460614/Made-in-Purple/Het-Bolwerk"
   },
   {
     "artist": "New Cool Collective",
@@ -22911,7 +23471,7 @@
     "date": "2027-01-30",
     "time": "19:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/sven-cilliers/2927438"
+    "url": "https://www.paradiso.nl/en/program/sven-cilliers/2927438"
   },
   {
     "artist": "THE DIRTY DADDIES",
@@ -23024,6 +23584,16 @@
     "url": "https://www.effenaar.nl/agenda/mothers-cake"
   },
   {
+    "artist": "Prof. Nomad's David Bowie - A Tribute To David Bowie",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/460067/Prof-Nomads-David-Bowie-A-Tribute-To-David-Bowie/Het-Bolwerk"
+  },
+  {
     "artist": "Rockabilly Blitz 2027",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -23112,6 +23682,16 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/almost-monday-31-01-2027/"
+  },
+  {
+    "artist": "Carolina Deslandes",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-01-31",
+    "time": "19:30",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/494558/Carolina-Deslandes/Amare"
   },
   {
     "artist": "Infloyd",
@@ -23655,6 +24235,16 @@
     "url": "https://dehelling.nl/agenda/rudeboy-x-boskat-persona-non-grata-06-02-2027"
   },
   {
+    "artist": "Doe Maar Tribute Winnetoe",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-02-06",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/495722/-Doe-Maar-Tribute-Winnetoe/Het-Bolwerk"
+  },
+  {
     "artist": "Erwin Nyhoff & The Prodigal Sons",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -23733,6 +24323,16 @@
     "time": "15:00",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/blue-grass-boogiemen-pieternel"
+  },
+  {
+    "artist": "Erwin Nyhoff & The Prodigal Sons",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-02-07",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/492139/Erwin-Nyhoff-The-Prodigal-Sons/Het-Bolwerk"
   },
   {
     "artist": "Catch Your Breath",
@@ -24293,6 +24893,16 @@
     "time": "20:45",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/wende-2"
+  },
+  {
+    "artist": "Good Times!",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-02-13",
+    "time": "21:00",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/459376/Good-Times!/Het-Bolwerk"
   },
   {
     "artist": "International Burlesque Circus",
@@ -24929,6 +25539,16 @@
     "url": "https://metropool.nl/agenda/grimner-waylander-vansind"
   },
   {
+    "artist": "Lee Rocker",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-02-19",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/492029/Lee-Rocker/Het-Bolwerk"
+  },
+  {
     "artist": "The Dirty Daddies",
     "venue": "Metropool Enschede",
     "city": "Enschede",
@@ -25089,6 +25709,16 @@
     "url": "https://www.effenaar.nl/agenda/rudeboy-boskat"
   },
   {
+    "artist": "StarkLinnemann Quintet - Eroïca",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/494808/StarkLinnemann-Quintet-Eroica/Amare"
+  },
+  {
     "artist": "Tramhaus",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -25237,6 +25867,26 @@
     "time": "19:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/the-velveteers/2930750"
+  },
+  {
+    "artist": "Starman - The Legacy Tour",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-21",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/468948/Starman-The-Legacy-Tour/Amare"
+  },
+  {
+    "artist": "Clouseau in Amare",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-21",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/496216/Clouseau-in-Amare/Amare"
   },
   {
     "artist": "Ruth Jacott",
@@ -25396,7 +26046,7 @@
     "date": "2027-02-23",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/en/program/this-is-lorelei/2935972"
+    "url": "https://www.paradiso.nl/nl/programma/this-is-lorelei/2935972"
   },
   {
     "artist": "Shred Fest 2027",
@@ -25721,6 +26371,16 @@
     "url": "https://www.013.nl/programma/155823/wende"
   },
   {
+    "artist": "Jan Van Duikeren & Marcel Veenendaal",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/492429/Jan-Van-Duikeren-Marcel-Veenendaal/Amare"
+  },
+  {
     "artist": "Ripe",
     "venue": "De Helling",
     "city": "Utrecht",
@@ -25769,6 +26429,16 @@
     "time": "20:30",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/julia-jacklin/2897147"
+  },
+  {
+    "artist": "Wegsfeer + Swart - De Ultieme New Wave Tribute Band",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/460068/Wegsfeer-Swart-De-Ultieme-New-Wave-Tribute-Band/Het-Bolwerk"
   },
   {
     "artist": "Heideroosjes",
@@ -25929,6 +26599,16 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/ozrictentacles/"
+  },
+  {
+    "artist": "The Undertones + Support",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/493267/The-Undertones-Support/Het-Bolwerk"
   },
   {
     "artist": "Raptiel: Betty’s 50ste verjaardag",
@@ -26333,6 +27013,16 @@
     "url": "https://gebouw-t.nl/agenda/kees-van-amstel-3"
   },
   {
+    "artist": "Shantel & Bucovina Club Orkestar",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-04",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/482938/Shantel-Bucovina-Club-Orkestar/Het-Bolwerk"
+  },
+  {
     "artist": "De Staat",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -26423,6 +27113,16 @@
     "url": "https://www.effenaar.nl/agenda/dead-daisies"
   },
   {
+    "artist": "Bert Heerink & André Becker - Heroes of Rock",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-05",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/494810/Bert-Heerink-Andre-Becker-Heroes-of-Rock/Het-Bolwerk"
+  },
+  {
     "artist": "Kaya Imani",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -26504,13 +27204,13 @@
   },
   {
     "artist": "Longo Longo",
-    "venue": "Paradiso",
+    "venue": "Parallel",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-03-06",
     "time": "19:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/longo-longo/2939233"
+    "url": "https://www.paradiso.nl/en/program/longo-longo/2939233"
   },
   {
     "artist": "One Vision of Queen ft Marc Martel",
@@ -26622,6 +27322,16 @@
     "time": "23:00",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/banji-2"
+  },
+  {
+    "artist": "Dirk Scheele",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-07",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/492140/Dirk-Scheele/Het-Bolwerk"
   },
   {
     "artist": "Evil Invaders + Heathen + Exhorder",
@@ -26975,6 +27685,16 @@
     "url": "https://patronaat.nl/event/rudeboy-x-boskat-12-03-27/"
   },
   {
+    "artist": "Karsu",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/460562/Karsu/Amare"
+  },
+  {
     "artist": "The Dirty Daddies Let The Good Times Roll",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -26993,6 +27713,16 @@
     "time": "20:30",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/andre-kuipers-kamerata-zuid"
+  },
+  {
+    "artist": "De Kift + Immen",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/483505/De-Kift-Immen/Het-Bolwerk"
   },
   {
     "artist": "Forq",
@@ -27155,6 +27885,16 @@
     "url": "https://poppodiumboerderij.nl/programma/dirtysoundmagnet/"
   },
   {
+    "artist": "Tribute to Toto",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/461614/Tribute-to-Toto/Het-Bolwerk"
+  },
+  {
     "artist": "Fleddy Melculy",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -27165,6 +27905,16 @@
     "url": "https://www.neushoorn.nl/events/fleddy-melculy"
   },
   {
+    "artist": "Ozzyfied",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "21:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/ozzyfied-in-memory-of-ozzy-osbourne"
+  },
+  {
     "artist": "Utrecht Blues Festival 2027",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -27173,6 +27923,16 @@
     "time": "14:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/16670607/utrecht-blues-festival-2027-14-03-2027/"
+  },
+  {
+    "artist": "Scrum",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-14",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/453767/Scrum/Het-Bolwerk"
   },
   {
     "artist": "Banji",
@@ -27645,6 +28405,16 @@
     "url": "https://www.spotgroningen.nl/programma/stephanie-struijk-7"
   },
   {
+    "artist": "Ultimate Eagles",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/456491/Ultimate-Eagles/Het-Bolwerk"
+  },
+  {
     "artist": "Alvin Youngblood Hart",
     "venue": "Metropool Hengelo",
     "city": "Hengelo",
@@ -27793,6 +28563,16 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/153847/alcest"
+  },
+  {
+    "artist": "Baas B - Theatercollege Vind Je Flow",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-21",
+    "time": "20:00",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/492141/Baas-B-Theatercollege-Vind-Je-Flow/Het-Bolwerk"
   },
   {
     "artist": "Physical Graffiti",
@@ -27976,6 +28756,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/33294100/the-dutch-queen-25-03-2027/"
   },
   {
+    "artist": "Stef Bos - Ik zing",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-03-25",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/469014/Stef-Bos-Ik-zing/Amare"
+  },
+  {
     "artist": "Pokey LaFarge",
     "venue": "MEZZ",
     "city": "Breda",
@@ -28077,6 +28867,16 @@
     "url": "https://www.paradiso.nl/nl/programma/dubioza-kolektiv/2908030"
   },
   {
+    "artist": "Luicidal",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/497220/Luicidal/Het-Bolwerk"
+  },
+  {
     "artist": "Monokate",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -28084,7 +28884,7 @@
     "date": "2027-03-26",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/monokate/2939266"
+    "url": "https://www.paradiso.nl/nl/programma/monokate/2939266"
   },
   {
     "artist": "The Dutch Queen",
@@ -28719,6 +29519,16 @@
     "clubCard": false
   },
   {
+    "artist": "Temple Of New Wave",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/482932/Temple-Of-New-Wave/Het-Bolwerk"
+  },
+  {
     "artist": "The Crazy World Of Arthur Brown",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -28738,6 +29548,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/politie-warnsveld/",
     "clubCard": false
+  },
+  {
+    "artist": "The Real McKenzies",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-04-04",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/495053/The-Real-McKenzies/Het-Bolwerk"
   },
   {
     "artist": "10! WIE NIET WEG IS, IS GEZIEN! 10 jaar Smartlappen Karaoke in Paradiso!",
@@ -28938,6 +29758,16 @@
     "time": "20:30",
     "source": "013",
     "url": "https://www.013.nl/programma/132848/the-elvis-concert-2027"
+  },
+  {
+    "artist": "The Toy Dolls + Support",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-04-08",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/497122/The-Toy-Dolls-Support/Het-Bolwerk"
   },
   {
     "artist": "Kraak & Smaak (LIVE)",
@@ -29141,6 +29971,16 @@
     "url": "https://metropool.nl/agenda/extince"
   },
   {
+    "artist": "JAVA|WEBSTER",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-04-10",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/492142/JAVA-WEBSTER/Het-Bolwerk"
+  },
+  {
     "artist": "RPWL",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -29331,6 +30171,16 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/94264032/duo-jatekok-14-04-2027/"
+  },
+  {
+    "artist": "Anneke van Giersbergen - The Irish Road Trip",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-04-14",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/468968/Anneke-van-Giersbergen-The-Irish-Road-Trip/Amare"
   },
   {
     "artist": "Air Traffic",
@@ -29551,6 +30401,16 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/magazines/"
+  },
+  {
+    "artist": "Michael Jackson Project ft. Jared Grant",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-04-16",
+    "time": "20:00",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/482886/Michael-Jackson-Project-ft-Jared-Grant/Het-Bolwerk"
   },
   {
     "artist": "Starman",
@@ -29813,6 +30673,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/79172410/luwten-21-04-2027/"
   },
   {
+    "artist": "Frank Boeijen - In Concert",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-04-21",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/468972/Frank-Boeijen-In-Concert/Amare"
+  },
+  {
     "artist": "High Fade",
     "venue": "Metropool Enschede",
     "city": "Enschede",
@@ -29983,6 +30853,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/34050680/hooverphonic-23-04-2027/"
   },
   {
+    "artist": "Matt Simons",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-04-23",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/463380/Matt-Simons/Amare"
+  },
+  {
     "artist": "The Kik",
     "venue": "Theater De Maagd",
     "city": "Bergen op Zoom",
@@ -30053,6 +30933,16 @@
     "url": "https://www.013.nl/programma/154895/the-pineapple-thief"
   },
   {
+    "artist": "Extince + DJ DNS",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-04-24",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/495606/Extince-DJ-DNS/Het-Bolwerk"
+  },
+  {
     "artist": "Michael Jackson Project feat Jared Grant",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -30101,6 +30991,16 @@
     "time": "",
     "source": "Klokgebouw",
     "url": "https://www.klokgebouw.nl/agenda/echte-vrienden-dutchtuber-and-billy-the-kit"
+  },
+  {
+    "artist": "Wishbone Ash",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-04-25",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/482884/Wishbone-Ash/Het-Bolwerk"
   },
   {
     "artist": "Moss",
@@ -30184,6 +31084,16 @@
     "url": "https://www.013.nl/programma/154328/this-is-lenny-jays-michael"
   },
   {
+    "artist": "Hooverphonic",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-04-29",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/474450/Hooverphonic/Amare"
+  },
+  {
     "artist": "Comedy Night",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -30251,7 +31161,7 @@
     "date": "2027-04-30",
     "time": "19:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/en/program/mood-bored/2927459"
+    "url": "https://www.paradiso.nl/nl/programma/mood-bored/2927459"
   },
   {
     "artist": "Adrian Vandenberg, 50 years of Rock!",
@@ -30332,6 +31242,16 @@
     "time": "20:00",
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/ruben-hillen-1-mei"
+  },
+  {
+    "artist": "Rumours of Fleetwood Mac",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-05-01",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/475858/Rumours-of-Fleetwood-Mac/Amare"
   },
   {
     "artist": "Karsu",
@@ -30593,6 +31513,16 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/josua-peter/",
     "clubCard": true
+  },
+  {
+    "artist": "The Animals & Friends ft. John Steele - The Last Farewell Tour",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-05-09",
+    "time": "15:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/462539/The-Animals-Friends-ft-John-Steele-The-Last-Farewell-Tour/Het-Bolwerk"
   },
   {
     "artist": "Nevermore",
@@ -30866,6 +31796,16 @@
     "clubCard": false
   },
   {
+    "artist": "Eliane Elias - Time and Again",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-05-18",
+    "time": "19:45",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/485063/Eliane-Elias-Time-and-Again/Amare"
+  },
+  {
     "artist": "Groundation – A Tribute to Bob Marley",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -31067,6 +32007,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/85026197/harry-sacksioni-26-05-2027/"
   },
   {
+    "artist": "Tomatito",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-05-26",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/468981/Tomatito/Amare"
+  },
+  {
     "artist": "Joris Teepe presents: NYCTG",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -31115,6 +32065,16 @@
     "time": "20:30",
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/magnificent-seven"
+  },
+  {
+    "artist": "Benjamin Herman Trio ft. BIGYUKI - The Tokyo Sessions",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-05-30",
+    "time": "19:30",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/495989/Benjamin-Herman-Trio-ft-BIGYUKI-The-Tokyo-Sessions/Amare"
   },
   {
     "artist": "John Vincent III",
@@ -31178,6 +32138,16 @@
     "url": "https://www.paard.nl/event/steve-vai-met-residentie-orkest/"
   },
   {
+    "artist": "Steve Vai met Residentie Orkest - Symphonic Junction XL",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-06-06",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/489355/Steve-Vai-met-Residentie-Orkest-Symphonic-Junction-XL/Amare"
+  },
+  {
     "artist": "Gipsy Kings ft Nicolas Reyes",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -31218,6 +32188,16 @@
     "url": "https://www.tivolivredenburg.nl/agenda/89231258/slagerij-van-kampen-10-06-2027/"
   },
   {
+    "artist": "CineMusic Filmorkest - 20 Films Live in Concert",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-06-10",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/486456/CineMusic-Filmorkest-20-Films-Live-in-Concert/Amare"
+  },
+  {
     "artist": "Steve Vai & Metropole Orkest",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -31226,6 +32206,16 @@
     "time": "19:00",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/99326734/steve-vai-metropole-orkest-11-06-2027/"
+  },
+  {
+    "artist": "CineMusic Filmorkest - 20 Films Live in Concert",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-06-11",
+    "time": "20:15",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/486457/CineMusic-Filmorkest-20-Films-Live-in-Concert/Amare"
   },
   {
     "artist": "BETTIE SERVEERT",
@@ -31459,12 +32449,12 @@
   },
   {
     "artist": "Workshops SDF 31 August",
-    "venue": "Paradiso",
+    "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-08-31",
     "time": "10:00",
-    "source": "Paradiso",
+    "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/workshops-sdf-31-august/2894217"
   },
   {
@@ -31568,6 +32558,16 @@
     "url": "https://www.paard.nl/event/wodan-boys-in-amare/"
   },
   {
+    "artist": "Wodan Boys — De grootste Wodan Boys show ooit",
+    "venue": "Amare",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-09-18",
+    "time": "20:00",
+    "source": "Amare",
+    "url": "https://www.podiuminfo.nl/concert/497072/Wodan-Boys-De-grootste-Wodan-Boys-show-ooit/Amare"
+  },
+  {
     "artist": "BLUEFINGER FESTIVAL 2027",
     "venue": "Hedon",
     "city": "Zwolle",
@@ -31616,16 +32616,6 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/new-purple-celebration/"
-  },
-  {
-    "artist": "Agnes Obel",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2027-09-29",
-    "time": "19:15",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/66038558/agnes-obel-29-09-2027/"
   },
   {
     "artist": "Jain",
@@ -31706,6 +32696,16 @@
     "time": "19:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/masters-of-reality-13-10-27/"
+  },
+  {
+    "artist": "Ana Popovic",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-10-15",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/494667/Ana-Popovic/Het-Bolwerk"
   },
   {
     "artist": "Bettie Serveert",
@@ -31877,6 +32877,16 @@
     "time": "21:15",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/trockener-kecks"
+  },
+  {
+    "artist": "Gewoon André",
+    "venue": "Het Bolwerk",
+    "city": "Sneek",
+    "country": "NL",
+    "date": "2027-12-18",
+    "time": "20:30",
+    "source": "Bolwerk",
+    "url": "https://www.podiuminfo.nl/concert/497138/Gewoon-Andre/Het-Bolwerk"
   },
   {
     "artist": "Tröckener Kecks",
