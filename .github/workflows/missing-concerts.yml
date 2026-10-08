@@ -1,0 +1,21 @@
+name: Check missing concerts
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "audit/missing_concert_probe.py"
+      - ".github/workflows/missing-concerts.yml"
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test absent official shows
+        run: python -u -m audit.missing_concert_probe
