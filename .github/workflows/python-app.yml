@@ -153,6 +153,9 @@ jobs:
               )
           PY
 
+      - name: Verify published-source coverage and recovered concerts
+        run: python -u diagnostics/feed_qa.py
+
       - name: Upload concerts.json as artifact
         uses: actions/upload-artifact@v4
         with:
