@@ -12,6 +12,8 @@ from urllib.request import Request, urlopen
 VERIFIED_EVENTS = {
     ("https://www.rotown.nl/agenda/the-apers-1/", "2026-10-09"):
         "https://www.ticketswap.nl/concert-tickets/maladroit-rotterdam-rotown-2026-10-09-CbSFR53UXMVxNKodxWTdf",
+    ("https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321/", "2026-12-27"):
+        "https://www.ticketswap.nl/concert-tickets/30-jaar-excelsior-recordings-amsterdam-tolhuistuin-2026-12-27-CbhnzqXEdczxvu7WzXVv9",
 }
 
 SEARCH_URL = "https://html.duckduckgo.com/html/?q={query}"
