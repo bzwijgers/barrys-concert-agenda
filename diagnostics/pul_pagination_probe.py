@@ -22,10 +22,11 @@ def main():
 
     scripts = re.findall(r"""<script[^>]+src\s*=\s*["']([^"']+)""", html, re.I)
     print("SCRIPT_COUNT", len(scripts), flush=True)
-    hints = [urljoin(BASE, unescape(s)) for s in scripts if
-             re.search(r"agenda|event|custom|main|app|script|bundle|load", s, re.I)]
-    # Inspect only a few scripts; this is diagnostics, not scraping production.
-    for url in hints[-6:]:
+    hints = [urljoin(BASE, unescape(s)) for s in scripts
+             if "swiper" not in s.lower()]
+    print("PAGE_SCRIPT_URLS", hints, flush=True)
+    # Inspect each site's own scripts, excluding the external slider library.
+    for url in hints[:6]:
         try:
             js = download(url)
             matches = list(KEYWORDS.finditer(js))
