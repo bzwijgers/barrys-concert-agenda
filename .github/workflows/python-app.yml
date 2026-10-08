@@ -95,12 +95,10 @@ jobs:
               )
 
           paradiso_total = counts["Paradiso"] + counts["Tolhuistuin"]
-          if paradiso_total < 400:
-              raise SystemExit(
-                  "Paradiso completeness regression: only "
-                  + str(paradiso_total)
-                  + " future Paradiso/Tolhuistuin concerts found"
-              )
+          # Dynamische vergelijking met de vorige gepubliceerde feed
+          # gebeurt al in scraper.py. Dit is een aanvullende sanitycheck.
+          if paradiso_total < 1:
+              raise SystemExit("Paradiso/Tolhuistuin heeft geen concerten gevonden")
 
           paradiso_expected = {
               "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321":
