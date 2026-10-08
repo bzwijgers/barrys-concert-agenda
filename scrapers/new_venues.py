@@ -230,9 +230,9 @@ def parse_event(html, url, name, city):
     # Hedon's own primary date block is yearless; derive the correct year
     # using its printed weekday rather than nearby recommended events.
     if name == "Hedon":
-        primary = hedon_primary_date_time(html)
-        if primary:
-            parsed = primary
+        hedon_result = hedon_primary_date_time(html)
+        if hedon_result:
+            parsed = hedon_result
     if not parsed:
         for source in primary_parts:
             found=date_from_text(source)
