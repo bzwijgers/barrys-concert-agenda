@@ -1,0 +1,19 @@
+name: Force-stop superseded concert scraper
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/force-stop-stale-concert-run.yml"
+permissions:
+  contents: read
+  actions: write
+jobs:
+  force_stop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Force-cancel old unpatched workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/37852114761/force-cancel"
+          echo "GitHub accepted force-cancel for superseded full scraper"
