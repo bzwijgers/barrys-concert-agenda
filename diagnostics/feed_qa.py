@@ -77,7 +77,6 @@ recovered=[
     ("SPOT Groningen","https://www.spotgroningen.nl/programma/pieter-savenberg/","2026-11-05"),
     ("SPOT Groningen","https://www.spotgroningen.nl/programma/alexis-ffrench/","2027-06-06"),
     ("Hedon","https://hedon-zwolle.nl/voorstelling/32962/big-sleep","2026-11-15"),
-    ("Hedon","https://hedon-zwolle.nl/voorstelling/33038/never-too-late","2026-10-10"),
 ]
 by_url={x["url"].rstrip("/").lower():x for x in feed}
 for source,url,day in recovered:
@@ -89,8 +88,8 @@ for source,url,day in recovered:
 
 # Do not mistake broad venue agendas for concert-only agendas.
 non_music_rejections={
-    "Neushoorn":r"^(?:comedy night|uit de hoge hoed improv comedy|queens & quizzes|powerslam|family rave day|the grave rave)\\b",
-    "Hedon":r"^(?:bezerkus bingo|q\\s*music foute feestje|jimmy carr)\\b",
+    "Neushoorn":r"^(?:comedy night|uit de hoge hoed improv comedy|queens & quizzes|powerslam|family rave day|the grave rave)\b",
+    "Hedon":r"^(?:bezerkus bingo|q\s*music foute feestje|jimmy carr|never too late)\b",
     "Gebouw-T":r"quiz['’]m|toppop yeah! the party",
 }
 bad_non_music=[
