@@ -60,6 +60,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.graphics.Color
@@ -731,36 +734,42 @@ fun ConcertApp() {
                 }
 
             } else {
-                // Soft midnight-blue stage backdrop. A subtle lilac-blue
-                // spotlight and a faint launcher watermark give the screen
-                // depth, without competing with the concerts or affecting taps.
+                // Keep a stage-light accent at the top of every screen. The
+                // original logo was centred *behind opaque concert cards* at
+                // 5.5% opacity and therefore practically invisible.
                 Box(
                     modifier = Modifier.fillMaxSize().background(
                         Brush.verticalGradient(
                             colors = listOf(
-                                Color(0xFF192033),
-                                Color(0xFF0F1828),
-                                Color(0xFF121A2B)
+                                Color(0xFF1D2439),
+                                Color(0xFF121A2B),
+                                Color(0xFF0B1423)
                             )
                         )
                     )
                 ) {
                     Box(
-                        modifier = Modifier.fillMaxSize().background(
-                            Brush.radialGradient(
-                                colors = listOf(
-                                    Color(0x332D4569),
-                                    Color(0x18294058),
-                                    Color.Transparent
+                        modifier = Modifier
+                            .align(Alignment.TopEnd)
+                            .size(325.dp)
+                            .background(
+                                Brush.radialGradient(
+                                    colors = listOf(
+                                        Color(0x804D416D),
+                                        Color(0x403A4263),
+                                        Color.Transparent
+                                    )
                                 )
                             )
-                        )
                     )
                     Image(
                         painter = painterResource(id = R.mipmap.ic_launcher_foreground),
                         contentDescription = null,
-                        alpha = 0.055f,
-                        modifier = Modifier.align(Alignment.Center).size(320.dp)
+                        alpha = 0.19f,
+                        modifier = Modifier
+                            .align(Alignment.TopEnd)
+                            .padding(top = 18.dp, end = 14.dp)
+                            .size(208.dp)
                     )
                     LazyColumn(
                     state = listState,
@@ -810,6 +819,7 @@ fun ConcertApp() {
                                     ) {
                                         Text("♣ Rotown Clubkaart · ${concerts.count { it.clubCard && !it.archived }} concerten",
                                              fontWeight = FontWeight.Bold,
+                                             color = BackstageColors.pink,
                                              fontSize = 14.sp,
                                              maxLines = 1,
                                              softWrap = false,
@@ -1369,13 +1379,17 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                 } else Modifier
             )
             Text(
-                text = buildString {
+                text = buildAnnotatedString {
                     append(concert.venue)
                     if (concert.city.isNotBlank() &&
                         !concert.venue.contains(concert.city, ignoreCase = true)) {
                         append(" · " + concert.city)
                     }
-                    if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country))
+                    if (concert.country.isNotBlank()) {
+                        withStyle(SpanStyle(fontSize = 9.sp)) {
+                            append(" " + countryFlag(concert.country))
+                        }
+                    }
                 },
                 style = MaterialTheme.typography.bodySmall,
                 maxLines = 1,
