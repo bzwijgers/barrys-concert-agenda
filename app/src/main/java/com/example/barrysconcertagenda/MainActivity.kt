@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
@@ -171,7 +172,7 @@ fun ConcertApp() {
 
     var mySection by remember { mutableStateOf(3) }
     var discoveryFilter by remember { mutableStateOf("all") }
-    var calendarMode by remember { mutableStateOf(true) }
+    var calendarMode by remember { mutableStateOf(false) }
     var calendarMonth by remember { mutableStateOf(YearMonth.now()) }
     var calendarDay by remember { mutableStateOf<LocalDate?>(null) }
 
@@ -237,6 +238,8 @@ fun ConcertApp() {
                 "paradiso_initialized",
                 false
             )
+
+        val needsDiscoveryBaseline = !setupPrefs.getBoolean("backstage_discovery_baseline_v2", false)
 
         var sourceLoadError = ""
 
@@ -315,8 +318,8 @@ fun ConcertApp() {
                         old?.ticketSwapUrl?.takeIf { it.isNotBlank() }
                             ?: source.ticketSwapUrl,
                     firstFound =
-                        old?.firstFound
-                            ?: now,
+                        if (needsDiscoveryBaseline) 0L
+                        else old?.firstFound ?: now,
                     isFavorite =
                         old?.isFavorite
                             ?: false,
@@ -363,8 +366,8 @@ fun ConcertApp() {
                 merged[key] =
                     concert.copy(
                         firstFound =
-                            old?.firstFound
-                                ?: concert.firstFound,
+                            if (needsDiscoveryBaseline) 0L
+                            else old?.firstFound ?: concert.firstFound,
                         isFavorite =
                             old?.isFavorite
                                 ?: concert.isFavorite,
@@ -379,22 +382,16 @@ fun ConcertApp() {
             }
         }
 
-        val storedAfter =
-            merged.values.map { concert ->
-                if (
-                    normalizeUrl(concert.url) ==
-                    "https://www.rotown.nl/agenda/republica"
-                ) {
-                    concert.copy(isAttending = true)
-                } else {
-                    concert
-                }
-            }
+        // A removed ticket must stay removed. Never re-add an old event on startup.
+        val storedAfter = merged.values.toList()
 
         ConcertStorage.saveConcerts(
             context,
             storedAfter
         )
+        if (needsDiscoveryBaseline) {
+            setupPrefs.edit().putBoolean("backstage_discovery_baseline_v2", true).apply()
+        }
 
         val paradisoWasDownloaded =
             sourceConcerts.any {
@@ -491,76 +488,17 @@ fun ConcertApp() {
     }
 
     val tabConcerts =
-        when (
-            selectedTab
-        ) {
-
+        when (selectedTab) {
             9 -> concerts.filter { !it.archived }
-
-            10 -> concerts.filter { concert ->
-                !concert.archived && when (discoveryFilter) {
-                    "new" -> concert.isNew
-                    "rotterdam" -> concert.city.equals("Rotterdam", ignoreCase = true)
-                    "belgium" -> concert.country.equals("BE", ignoreCase = true) ||
-                        concert.country.equals("Belgium", ignoreCase = true)
-                    "club" -> concert.clubCard
-                    else -> true
-                }
-            }
-
-            11 -> concerts.filter {
-                when (mySection) {
-                    2 -> it.isFavorite && !it.archived
-                    5 -> it.isAttending && it.archived
-                    else -> it.isAttending && !it.archived
-                }
-            }
-
-            0 ->
-                concerts.filter {
-                    it.isNew &&
-                            !it.archived
-                }
-
-            1 ->
-                concerts.filter {
-                    !it.archived
-                }
-
-            2 ->
-                concerts.filter {
-                    it.isFavorite &&
-                            !it.archived
-                }
-
-            3 ->
-                concerts.filter {
-                    it.isAttending &&
-                            !it.archived
-                }
-
-            4 ->
-                concerts.filter {
-                    it.clubCard &&
-                            !it.archived
-                }
-
-            5 ->
-                concerts.filter {
-                    it.isAttending &&
-                            it.archived
-                }
-
-            6 ->
-                concerts.filter {
-                    !it.archived
-                }
-
-            7 ->
-                emptyList()
-
-            else ->
-                emptyList()
+            10 -> BackstageSelectors.discover(concerts, discoveryFilter)
+            11 -> BackstageSelectors.mine(concerts, mySection)
+            0 -> concerts.filter { it.isNew && !it.archived }
+            1, 6 -> concerts.filter { !it.archived }
+            2 -> BackstageSelectors.mine(concerts, 2)
+            3 -> BackstageSelectors.mine(concerts, 3)
+            4 -> BackstageSelectors.discover(concerts, "club")
+            5 -> BackstageSelectors.mine(concerts, 5)
+            else -> emptyList()
         }
 
     val availableVenues = concerts.map { it.venue.trim() }.filter { it.isNotBlank() }.distinct().sortedBy { it.lowercase(Locale.getDefault()) }
@@ -598,18 +536,20 @@ fun ConcertApp() {
             selectedTab == 0 || (selectedTab == 10 && discoveryFilter == "new") ->
                 searchedConcerts.sortedByDescending { it.firstFound }
             selectedTab == 9 -> searchedConcerts.take(8)
-            selectedTab == 1 && calendarMode -> searchedConcerts.filter { concert ->
-                val parsed = parseConcertDate(concert.date)
-                parsed != null && YearMonth.from(parsed) == calendarMonth &&
-                    (calendarDay == null || parsed == calendarDay)
-            }
+            selectedTab == 1 && calendarMode ->
+                BackstageSelectors.calendar(searchedConcerts, calendarMonth, calendarDay)
             else -> searchedConcerts
         }
 
 
-    // Check existing favorites sequentially when opening the Favorites tab.
-    // Only one bounded network request is active at a time; switching tabs
-    // cancels this scan. Known direct links are never overwritten.
+    // Reset the list scroll after selecting another view/filter; otherwise it
+    // can look as if a chip didn't change the data at all.
+    val listState = rememberLazyListState()
+    LaunchedEffect(selectedTab, mySection, discoveryFilter, calendarMode, calendarMonth,
+        calendarDay, searchQuery, searchVenue, searchDateFrom, searchDateTo) {
+        listState.scrollToItem(0)
+    }
+
     Scaffold(
         containerColor = BackstageColors.background,
         bottomBar = {
@@ -762,6 +702,7 @@ fun ConcertApp() {
             } else {
 
                 LazyColumn(
+                    state = listState,
                     modifier =
                         Modifier
                             .fillMaxSize()
@@ -783,16 +724,17 @@ fun ConcertApp() {
 
                             9 -> {
                                 Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                                    Text("JOUW LIVE OVERZICHT", fontSize = 11.sp,
-                                        color = BackstageColors.pink,
-                                        fontWeight = FontWeight.Bold, letterSpacing = 1.sp)
-                                    Text("Jouw muziek.\nJouw concerten.",
-                                        fontSize = 28.sp, lineHeight = 32.sp,
-                                        fontWeight = FontWeight.ExtraBold)
-                                    BackstageHero(
-                                        concert = concerts.firstOrNull { it.isAttending && !it.archived },
-                                        onTicketsClick = { mySection = 3; selectedTab = 11 }
-                                    )
+                                    Text("Home", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
+                                    val nextTicket = concerts.firstOrNull { it.isAttending && !it.archived }
+                                    if (nextTicket != null) {
+                                        BackstageHero(
+                                            concert = nextTicket,
+                                            onTicketsClick = { mySection = 3; selectedTab = 11 }
+                                        )
+                                    } else {
+                                        Text("Nog geen tickets geregistreerd in V3. Je tickets uit V1 staan nog in V1.",
+                                            color = BackstageColors.subtle, fontSize = 12.sp)
+                                    }
                                     BackstageQuickStats(
                                         tickets = concerts.count { it.isAttending && !it.archived },
                                         favorites = concerts.count { it.isFavorite && !it.archived },
@@ -801,6 +743,13 @@ fun ConcertApp() {
                                         onFavorites = { mySection = 2; selectedTab = 11 },
                                         onNew = { discoveryFilter = "new"; selectedTab = 10 }
                                     )
+                                    TextButton(
+                                        onClick = { selectedTab = 4 },
+                                        modifier = Modifier.fillMaxWidth()
+                                    ) {
+                                        Text("♣ Rotown Clubkaart · ${concerts.count { it.clubCard && !it.archived }} concerten",
+                                            fontWeight = FontWeight.Bold)
+                                    }
                                     Text("Binnenkort", fontSize = 20.sp,
                                         fontWeight = FontWeight.Bold)
                                 }
@@ -808,32 +757,29 @@ fun ConcertApp() {
 
                             10 -> {
                                 Column(verticalArrangement = Arrangement.spacedBy(13.dp)) {
-                                    Text("ONTDEK LIVE MUZIEK",
-                                        fontSize = 11.sp, fontWeight = FontWeight.Bold,
-                                        color = BackstageColors.pink)
-                                    Text("Wat komt eraan?",
-                                        fontWeight = FontWeight.ExtraBold, fontSize = 27.sp)
-                                    Text("Ontdek optredens in Nederland en België",
-                                        color = BackstageColors.subtle, fontSize = 12.sp)
+                                    Text("Ontdek", fontSize = 27.sp,
+                                        fontWeight = FontWeight.ExtraBold)
                                     BackstageChips(
                                         options = listOf(
-                                            "all" to "Alles", "new" to "✦ Nieuw",
-                                            "rotterdam" to "Rotterdam", "belgium" to "🇧🇪 België",
-                                            "club" to "♣ Clubkaart"
+                                            "all" to "Alles (${BackstageSelectors.discover(concerts, "all").size})",
+                                            "new" to "Nieuw (${BackstageSelectors.discover(concerts, "new").size})",
+                                            "rotterdam" to "Rotterdam (${BackstageSelectors.discover(concerts, "rotterdam").size})",
+                                            "belgium" to "België (${BackstageSelectors.discover(concerts, "belgium").size})",
+                                            "club" to "♣ Clubkaart (${BackstageSelectors.discover(concerts, "club").size})"
                                         ),
                                         current = discoveryFilter,
                                         onSelect = { discoveryFilter = it }
                                     )
-                                    Text("${visibleConcerts.size} concerten", fontWeight = FontWeight.Bold)
+                                    Text("${visibleConcerts.size} resultaten",
+                                        color = BackstageColors.lime,
+                                        fontWeight = FontWeight.Bold)
                                 }
                             }
 
                             11 -> {
                                 Column(verticalArrangement = Arrangement.spacedBy(13.dp)) {
-                                    Text("PERSOONLIJK", color = BackstageColors.pink,
-                                        fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                                    Text("Mijn concerten.",
-                                        fontWeight = FontWeight.ExtraBold, fontSize = 27.sp)
+                                    Text("Mijn concerten", fontWeight = FontWeight.ExtraBold,
+                                        fontSize = 27.sp)
                                     BackstageChips(
                                         options = listOf(
                                             "3" to "🎟 Tickets",
@@ -847,10 +793,14 @@ fun ConcertApp() {
                                         when (mySection) {
                                             2 -> "${visibleConcerts.size} favorieten"
                                             5 -> "${visibleConcerts.size} bezochte concerten"
-                                            else -> "${visibleConcerts.size} concerten waarvoor ik een kaartje heb"
+                                            else -> "${visibleConcerts.size} tickets"
                                         },
                                         fontWeight = FontWeight.Bold
                                     )
+                                    if (visibleConcerts.isEmpty()) {
+                                        Text("V3 bewaart favorieten en tickets apart van V1. Tik in Agenda op een hartje of ticket om ze hier te zien.",
+                                            color = BackstageColors.subtle, fontSize = 12.sp)
+                                    }
                                 }
                             }
 
@@ -870,9 +820,7 @@ fun ConcertApp() {
 
                             1 -> {
                                 Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                                    Text("CONCERTOVERZICHT", color = BackstageColors.pink,
-                                        fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                                    Text("Agenda.", fontSize = 27.sp,
+                                    Text("Agenda", fontSize = 27.sp,
                                         fontWeight = FontWeight.ExtraBold)
                                     BackstageChips(
                                         options = listOf("calendar" to "▦ Kalender", "list" to "☷ Lijst"),
@@ -900,12 +848,22 @@ fun ConcertApp() {
                                             onSelectDay = { calendarDay = it }
                                         )
                                     }
-                                    Text(
-                                        if (calendarMode)
-                                            "${visibleConcerts.size} concerten in ${calendarMonth.month.name.lowercase(Locale.forLanguageTag("nl-NL"))}"
-                                        else "${visibleConcerts.size} aankomende concerten",
-                                        fontWeight = FontWeight.Bold
-                                    )
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Text(
+                                            if (calendarMode && calendarDay != null)
+                                                "${visibleConcerts.size} op ${calendarDay!!.format(DateTimeFormatter.ofPattern("d MMMM", Locale.forLanguageTag("nl-NL")))}"
+                                            else if (calendarMode)
+                                                "${visibleConcerts.size} in deze maand"
+                                            else "${visibleConcerts.size} aankomende concerten",
+                                            fontWeight = FontWeight.Bold,
+                                            modifier = Modifier.weight(1f)
+                                        )
+                                        if (calendarMode && calendarDay != null) {
+                                            TextButton(onClick = { calendarDay = null }) {
+                                                Text("Hele maand")
+                                            }
+                                        }
+                                    }
                                 }
                             }
 
@@ -1116,8 +1074,8 @@ fun ConcertApp() {
 
                             },
                             showClubCardLabel = selectedTab != 4,
-                            showFavorite = selectedTab != 3 && selectedTab != 5 &&
-                                !(selectedTab == 11 && mySection != 2),
+                            showFavorite = selectedTab != 5 &&
+                                !(selectedTab == 11 && mySection == 5),
                             ticketDisplay = when {
                                 selectedTab == 5 || (selectedTab == 11 && mySection == 5) -> TicketDisplay.VISITED
                                 concert.isAttending -> TicketDisplay.OWNED
@@ -1145,8 +1103,17 @@ fun ConcertApp() {
                     }
 
                     item {
-                        if (visibleConcerts.isEmpty() && selectedTab in setOf(1, 9, 10, 11)) {
-                            Text("Geen concerten in dit overzicht.",
+                        if (visibleConcerts.isEmpty() && selectedTab in setOf(1, 4, 9, 10, 11)) {
+                            Text(
+                                when {
+                                    selectedTab == 10 && discoveryFilter == "new" ->
+                                        "Nog geen nieuwe concerten sinds de eerste V3-synchronisatie."
+                                    selectedTab == 4 || (selectedTab == 10 && discoveryFilter == "club") ->
+                                        "Geen Clubkaart-concerten beschikbaar in de huidige gegevens."
+                                    selectedTab == 11 ->
+                                        "Nog geen concerten geregistreerd in dit V3-overzicht."
+                                    else -> "Geen concerten voor deze selectie. Wis eventuele zoekfilters of kies een andere datum."
+                                },
                                 color = BackstageColors.subtle,
                                 modifier = Modifier.padding(vertical = 20.dp))
                         }
