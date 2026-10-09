@@ -7,6 +7,9 @@ import org.json.JSONObject
 object ConcertStorage {
 
     private const val PREFS_NAME = "concert_storage"
+    // Keep a small separate journal of user actions. Never rewrite thousands
+    // of concert records synchronously just to toggle one heart or ticket.
+    private const val USER_STATE_PREFS = "concert_user_state"
     private const val KEY_CONCERTS = "concerts"
     private const val KEY_LAST_CHECK = "last_check"
 
@@ -25,6 +28,7 @@ object ConcertStorage {
         return try {
 
             val array = JSONArray(json)
+            val userPrefs = context.getSharedPreferences(USER_STATE_PREFS, Context.MODE_PRIVATE)
             val concerts = mutableListOf<StoredConcert>()
 
             for (i in 0 until array.length()) {
@@ -43,8 +47,14 @@ object ConcertStorage {
                         url = item.optString("url", ""),
                         ticketSwapUrl = item.optString("ticketSwapUrl", ""),
                         firstFound = item.optLong("firstFound", 0L),
-                        isFavorite = item.optBoolean("isFavorite", false),
-                        isAttending = item.optBoolean("isAttending", false),
+                        isFavorite = userPrefs.getBoolean(
+                            "favorite:" + normalizeUrl(item.optString("url", "")),
+                            item.optBoolean("isFavorite", false)
+                        ),
+                        isAttending = userPrefs.getBoolean(
+                            "attending:" + normalizeUrl(item.optString("url", "")),
+                            item.optBoolean("isAttending", false)
+                        ),
                         clubCard = item.optBoolean("clubCard", false)
                     )
                 )
@@ -99,55 +109,18 @@ object ConcertStorage {
             .apply()
     }
 
-    fun setFavorite(
-        context: Context,
-        url: String,
-        favorite: Boolean
-    ) {
-
-        val concerts = loadConcerts(context)
-
-        val normalizedTarget = normalizeUrl(url)
-
-        val updated = concerts.map { concert ->
-
-            if (
-                normalizeUrl(concert.url) ==
-                normalizedTarget
-            ) {
-
-                concert.copy(
-                    isFavorite = favorite
-                )
-
-            } else {
-
-                concert
-            }
-        }
-
-        saveConcerts(
-            context,
-            updated
-        )
+    fun setFavorite(context: Context, url: String, favorite: Boolean) {
+        context.getSharedPreferences(USER_STATE_PREFS, Context.MODE_PRIVATE)
+            .edit().putBoolean("favorite:" + normalizeUrl(url), favorite).apply()
     }
 
-    fun setAttending(
-        context: Context,
-        url: String,
-        attending: Boolean
-    ) {
-        val normalizedTarget = normalizeUrl(url)
-        val updated = loadConcerts(context).map { concert ->
-            if (normalizeUrl(concert.url) == normalizedTarget) {
-                concert.copy(isAttending = attending)
-            } else {
-                concert
-            }
-        }
-        saveConcerts(context, updated)
+    fun setAttending(context: Context, url: String, attending: Boolean) {
+        context.getSharedPreferences(USER_STATE_PREFS, Context.MODE_PRIVATE)
+            .edit().putBoolean("attending:" + normalizeUrl(url), attending).apply()
     }
 
+    // Existing flags embedded in concert_storage remain readable. The small
+    // user-state journal takes precedence after the first user action.
 
     fun setTicketSwapUrl(
         context: Context,
