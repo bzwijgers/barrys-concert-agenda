@@ -100,6 +100,29 @@ jobs:
                 sorted(suspected, reverse=True)[:30], flush=True)
           if not items:
               raise SystemExit("Ticketmaster key works but scraper returned zero Dutch events")
+          # AFAS Live is visible on the Ticketmaster consumer site but is
+          # absent from the broad Music segment: inspect official API records.
+          from scrapers.ticketmaster_nl import _get_json, event_to_concert
+          for term in ("Tokio Hotel", "Jill Scott"):
+              try:
+                  response = _get_json({"countryCode": "NL", "keyword": term, "size": 100},
+                                       os.environ["TICKETMASTER_API_KEY"])
+              except Exception as exc:
+                  print("TM venue diagnosis failed:", type(exc).__name__, flush=True)
+                  continue
+              matches = []
+              for raw in (response.get("_embedded") or {}).get("events", []):
+                  places = ((raw.get("_embedded") or {}).get("venues") or [])
+                  venue = places[0] if places else {}
+                  matches.append((
+                      raw.get("name"), venue.get("name"),
+                      (venue.get("country") or {}).get("countryCode"),
+                      ((raw.get("dates") or {}).get("start") or {}).get("localDate"),
+                      [(c.get("segment") or {}).get("name")
+                       for c in raw.get("classifications", [])],
+                      bool(event_to_concert(raw, today="2026-10-10")),
+                  ))
+              print("Ticketmaster NL AFAS candidate", term, matches[:12], flush=True)
           if any(x.get("country") != "NL" for x in added):
               raise SystemExit("Non-Dutch concert leaked into Ticketmaster results")
           PY
