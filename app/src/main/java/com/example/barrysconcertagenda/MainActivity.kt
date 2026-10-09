@@ -1184,7 +1184,18 @@ fun ConcertApp() {
                                         fontSize = 18.sp, color = infoTextColor)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Concertzalen", fontWeight = FontWeight.Bold)
-                                    val venueCities = mapOf(
+                                    // Ticketmaster expands the programme with arenas and
+                                    // other Dutch locations. Derive these from the published
+                                    // concert feed; do not maintain a second hardcoded list.
+                                    val ticketmasterVenues = concerts
+                                        .filter {
+                                            it.source.equals("Ticketmaster NL", ignoreCase = true) &&
+                                                it.venue.isNotBlank() && it.city.isNotBlank() &&
+                                                !it.venue.contains("Ziggo Dome Club", ignoreCase = true) &&
+                                                !it.venue.contains("Sky Lounge", ignoreCase = true)
+                                        }
+                                        .associate { it.venue.trim() to it.city.trim() }
+                                    val venueCities = ticketmasterVenues + mapOf(
                                         "013" to "Tilburg", "Amare" to "Den Haag",
                                         "Baroeg" to "Rotterdam", "BIRD" to "Rotterdam",
                                         "Bibelot" to "Dordrecht", "Boerderij" to "Zoetermeer",
