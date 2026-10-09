@@ -103,6 +103,11 @@ if bad_non_music:
 
 # Protect future publications against exact performances entering again
 # through a different indexed/ticket-site URL.
+import sys
+from pathlib import Path
+# This script is called as 'python diagnostics/feed_qa.py' by GitHub Actions.
+# That puts diagnostics/ (not the repository root) on sys.path.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scrapers.feed_quality import deduplicate_performances, is_known_nonconcert
 _, duplicate_performances = deduplicate_performances(feed)
 if duplicate_performances:
