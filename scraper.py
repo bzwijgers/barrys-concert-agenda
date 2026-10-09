@@ -255,7 +255,9 @@ try:
 except Exception as error:
     # A temporary TM API outage must NOT block updates from the official
     # concert halls or wipe previously published data.
-    print("TICKETMASTER NL OVERGESLAGEN:", type(error).__name__, str(error)[:250], flush=True)
+    # Never print the exception URL: the Discovery API URL includes the key.
+    print("TICKETMASTER NL OVERGESLAGEN:", type(error).__name__,
+          "HTTP", getattr(error, "code", ""), flush=True)
 
 # ============================================================
 # DUBBELEN VERWIJDEREN
