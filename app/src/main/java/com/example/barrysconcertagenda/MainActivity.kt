@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.core.view.WindowCompat
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -115,6 +116,8 @@ class MainActivity : ComponentActivity() {
         savedInstanceState: Bundle?
     ) {
         super.onCreate(savedInstanceState)
+        // Light full-screen page: use dark system status-bar icons.
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
 
         setContent {
             MaterialTheme(colorScheme = darkColorScheme(
@@ -180,6 +183,8 @@ fun ConcertApp() {
     var calendarMonth by remember { mutableStateOf(YearMonth.now()) }
     var calendarDay by remember { mutableStateOf<LocalDate?>(null) }
 
+    var refreshVersion by remember { mutableStateOf(0) }
+    var lastChecked by remember { mutableStateOf(ConcertStorage.getLastCheck(context)) }
     var searchExpanded by remember { mutableStateOf(false) }
     var searchQuery by remember { mutableStateOf("") }
     var searchDateFrom by remember { mutableStateOf<LocalDate?>(null) }
@@ -212,7 +217,7 @@ fun ConcertApp() {
         )
     }
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(refreshVersion) {
 
         loading = true
 
@@ -321,9 +326,14 @@ fun ConcertApp() {
                     ticketSwapUrl =
                         source.ticketSwapUrl.takeIf { it.isNotBlank() }
                             ?: old?.ticketSwapUrl.orEmpty(),
-                    firstFound =
-                        if (needsDiscoveryBaseline) 0L
-                        else old?.firstFound ?: now,
+                    firstFound = when {
+                        old != null && old.firstFound > 0L && source.firstFound > 0L ->
+                            minOf(old.firstFound, source.firstFound)
+                        old != null && old.firstFound > 0L -> old.firstFound
+                        source.firstFound >= 0L -> source.firstFound
+                        needsDiscoveryBaseline -> 0L
+                        else -> now
+                    },
                     isFavorite =
                         old?.isFavorite
                             ?: false,
@@ -369,9 +379,8 @@ fun ConcertApp() {
 
                 merged[key] =
                     concert.copy(
-                        firstFound =
-                            if (needsDiscoveryBaseline) 0L
-                            else old?.firstFound ?: concert.firstFound,
+                        firstFound = listOf(old?.firstFound ?: 0L, concert.firstFound)
+                            .filter { it > 0L }.minOrNull() ?: 0L,
                         isFavorite =
                             old?.isFavorite
                                 ?: concert.isFavorite,
@@ -437,8 +446,7 @@ fun ConcertApp() {
                             stored.firstFound,
                         isNew =
                             stored.firstFound > 0L &&
-                            now - stored.firstFound <=
-                                7L * 24L * 60L * 60L * 1000L,
+                            (now - stored.firstFound) in 0L..(7L * 24L * 60L * 60L * 1000L),
                         isFavorite =
                             if (isPastConcert(stored.date) && stored.isAttending) {
                                 false
@@ -460,14 +468,16 @@ fun ConcertApp() {
                             it.date
                         )
                     }.thenBy {
-                        it.time
+                        if (it.time.isBlank()) "99:99" else it.time
+                    }.thenBy {
+                        it.artist.lowercase(Locale.forLanguageTag("nl-NL"))
                     }
                 )
 
-        ConcertStorage.setLastCheck(
-            context,
-            now
-        )
+        if (sourceConcerts.isNotEmpty() && sourceLoadError.isBlank()) {
+            ConcertStorage.setLastCheck(context, now)
+            lastChecked = now
+        }
 
         statusText =
             if (
@@ -509,7 +519,9 @@ fun ConcertApp() {
         selectedTab == 10 && discoveryFilter == "new" &&
             BackstageSelectors.discover(concerts, "new").isEmpty()
 
-    val availableVenues = concerts.map { it.venue.trim() }.filter { it.isNotBlank() }.distinct().sortedBy { it.lowercase(Locale.getDefault()) }
+    // Include the umbrella source as a searchable venue (Metropool's three cities).
+    val availableVenues = (concerts.map { it.venue.trim() } + concerts.map { it.source.trim() })
+        .filter { it.isNotBlank() }.distinct().sortedBy { it.lowercase(Locale.getDefault()) }
 
     val normalizedSearch =
         searchQuery.trim().lowercase(Locale.getDefault())
@@ -530,7 +542,9 @@ fun ConcertApp() {
                         concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
                         concert.city.lowercase(Locale.getDefault()).contains(normalizedSearch)
                 val venueMatches =
-                    searchVenue == null || concert.venue.equals(searchVenue, ignoreCase = true)
+                    searchVenue == null ||
+                        concert.venue.equals(searchVenue, ignoreCase = true) ||
+                        concert.source.equals(searchVenue, ignoreCase = true)
                 val dateMatches = BackstageSelectors.withinDateRange(
                     concert, searchDateFrom, searchDateTo
                 )
@@ -545,6 +559,11 @@ fun ConcertApp() {
                 searchedConcerts, discoveryFilter, noRecentlyDiscoveredConcerts
             )
             selectedTab == 9 -> searchedConcerts.take(8)
+            selectedTab == 5 || (selectedTab == 11 && mySection == 5) ->
+                searchedConcerts.sortedWith(
+                    compareByDescending<Concert> { concertSortDate(it.date) }
+                        .thenBy { it.artist.lowercase(Locale.forLanguageTag("nl-NL")) }
+                )
             selectedTab == 1 && calendarMode ->
                 BackstageSelectors.calendar(searchedConcerts, calendarMonth, calendarDay)
             else -> searchedConcerts
@@ -834,7 +853,7 @@ fun ConcertApp() {
                                             onTicketsClick = { mySection = 3; selectedTab = 11 }
                                         )
                                     } else {
-                                        Text("Nog geen tickets geregistreerd in V3. Je tickets uit V1 staan nog in V1.",
+                                        Text("Nog geen tickets. Markeer een concert met het ticketicoon om het hier te zien.",
                                             color = BackstageColors.pageMuted, fontSize = 12.sp)
                                     }
                                     BackstageQuickStats(
@@ -866,6 +885,15 @@ fun ConcertApp() {
                                 Column(verticalArrangement = Arrangement.spacedBy(13.dp)) {
                                     Text("Ontdek", fontSize = 27.sp,
                                         fontWeight = FontWeight.ExtraBold)
+                                    Row(verticalAlignment = Alignment.CenterVertically,
+                                        modifier = Modifier.fillMaxWidth()) {
+                                        Text("Nieuwe concerten blijven 7 dagen zichtbaar",
+                                            color = BackstageColors.pageMuted, fontSize = 12.sp,
+                                            modifier = Modifier.weight(1f))
+                                        TextButton(onClick = { refreshVersion++ }) {
+                                            Text("↻", color = BackstageColors.pageAccent, fontSize = 17.sp)
+                                        }
+                                    }
                                     BackstageChips(
                                         options = listOf(
                                             "all" to "Alles (${BackstageSelectors.discover(concerts, "all").size})",
@@ -945,6 +973,25 @@ fun ConcertApp() {
                                 Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                                     Text("Agenda", fontSize = 27.sp,
                                         fontWeight = FontWeight.ExtraBold)
+                                    Row(verticalAlignment = Alignment.CenterVertically,
+                                        modifier = Modifier.fillMaxWidth()) {
+                                        Text(
+                                            if (lastChecked == 0L) "Nog niet gecontroleerd"
+                                            else "Gecontroleerd: " +
+                                                java.time.Instant.ofEpochMilli(lastChecked)
+                                                    .atZone(java.time.ZoneId.systemDefault())
+                                                    .format(DateTimeFormatter.ofPattern("dd MMM HH:mm", Locale.forLanguageTag("nl-NL"))),
+                                            color = BackstageColors.pageMuted,
+                                            fontSize = 12.sp,
+                                            modifier = Modifier.weight(1f)
+                                        )
+                                        TextButton(onClick = { refreshVersion++ }) {
+                                            Text("↻ Vernieuwen", color = BackstageColors.pageAccent, fontSize = 12.sp)
+                                        }
+                                    }
+                                    if (statusText.startsWith("⚠")) {
+                                        Text(statusText, color = BackstageColors.pageAccent, fontSize = 12.sp)
+                                    }
                                     BackstageChips(
                                         options = listOf("calendar" to "▦ Kalender", "list" to "☷ Lijst"),
                                         current = if (calendarMode) "calendar" else "list",
@@ -1155,7 +1202,7 @@ fun ConcertApp() {
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
-                                    Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via de aanklikbare zaalnaam open je de betreffende evenementpagina.")
+                                    Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via de onderstreepte artiestennaam open je de betreffende evenementpagina.")
                                     Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall,
                                         color = infoTextColor)
                                 }
