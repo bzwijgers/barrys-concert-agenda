@@ -41,11 +41,20 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Restore V3 debug signing key
+        id: signing-cache
         if: github.ref == 'refs/heads/preview/backstage-v3'
         uses: actions/cache@v4
         with:
           path: ~/.android/debug.keystore
           key: backstage-v3-debug-keystore-v1
+
+      - name: Confirm signing-key cache state
+        if: github.ref == 'refs/heads/preview/backstage-v3'
+        run: |
+          echo "V3 signing cache restored: ${{ steps.signing-cache.outputs.cache-hit }}"
+          if [ "${{ steps.signing-cache.outputs.cache-hit }}" = "true" ]; then
+            test -s "$HOME/.android/debug.keystore"
+          fi
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
