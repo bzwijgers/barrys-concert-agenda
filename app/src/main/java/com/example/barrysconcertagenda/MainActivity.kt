@@ -40,6 +40,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.material3.NavigationBar
@@ -49,6 +50,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -610,14 +612,15 @@ fun ConcertApp() {
                 modifier = Modifier.fillMaxSize().background(
                     Brush.verticalGradient(
                         listOf(
-                            Color(0x7A08101B),
-                            Color(0x8808101B),
-                            Color(0xA508101B)
+                            Color(0x9C08101B),
+                            Color(0xA008101B),
+                            Color(0xB508101B)
                         )
                     )
                 )
             )
 
+        CompositionLocalProvider(LocalContentColor provides Color.White) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -654,6 +657,7 @@ fun ConcertApp() {
             ) {
                 Text(
                     text = "Barry's Concerten",
+                    color = Color.White,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
@@ -1244,6 +1248,7 @@ fun ConcertApp() {
                 }
             }
         }
+        } // Content color provider
         } // Full-screen photo background behind all pages
     }
 }
