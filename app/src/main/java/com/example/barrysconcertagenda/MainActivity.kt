@@ -630,9 +630,11 @@ fun ConcertApp() {
                 modifier = Modifier.fillMaxSize().background(
                     Brush.verticalGradient(
                         listOf(
-                            Color(0x4AFFFFFF),
-                            Color(0x5CF9FAFB),
-                            Color(0x68F7F8FA)
+                            // An all-over dark wash, NOT a separate card: keep
+                            // the guitar/photo recognizable behind lavender text.
+                            Color(0x440E1725),
+                            Color(0x550E1725),
+                            Color(0x620E1725)
                         )
                     )
                 )
@@ -726,7 +728,7 @@ fun ConcertApp() {
             ) {
                 Text(
                     text = "Barry's Concerten",
-                    color = BackstageColors.pageText,
+                    color = if (selectedTab == 7) Color(0xFFF5F0FA) else BackstageColors.pageText,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
@@ -738,7 +740,10 @@ fun ConcertApp() {
                 NetherlandsFlag()
                 Spacer(Modifier.width(3.dp))
                 BelgiumFlag()
-                IconButton(onClick = { searchExpanded = !searchExpanded }) {
+                IconButton(onClick = {
+                    searchExpanded = !searchExpanded
+                    if (selectedTab == 7 || selectedTab == 8) selectedTab = 1
+                }) {
                     Text(if (searchExpanded) "×" else "⌕",
                         fontSize = 26.sp, color = BackstageColors.pageAccent)
                 }
@@ -920,7 +925,10 @@ fun ConcertApp() {
                                             "rotterdam" to "Rotterdam (${BackstageSelectors.discover(concerts, "rotterdam").size})",
                                             "belgium" to "België (${BackstageSelectors.discover(concerts, "belgium").size})",
                                             "club" to "♣ Clubkaart (${BackstageSelectors.discover(concerts, "club").size})"
-                                        ),
+                                        ).filter {
+                                            it.first != "belgium" ||
+                                                BackstageSelectors.discover(concerts, "belgium").isNotEmpty()
+                                        },
                                         current = discoveryFilter,
                                         onSelect = { discoveryFilter = it }
                                     )
