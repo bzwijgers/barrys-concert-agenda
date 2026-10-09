@@ -72,6 +72,10 @@ jobs:
 
       - name: Run concert scraper
         id: scrape
+        env:
+          # GitHub Actions secret, never committed or shown in debug logs.
+          # If unset, Ticketmaster is skipped without affecting any other halls.
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
         run: python -u scraper.py
 
       - name: Enrich direct TicketSwap links from official public event sitemaps
