@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.background
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -61,6 +62,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.launch
@@ -557,33 +562,33 @@ fun ConcertApp() {
                 NavigationBarItem(
                     selected = selectedTab == 9,
                     onClick = { selectedTab = 9 },
-                    icon = { Text("⌂", fontSize = 23.sp) },
-                    label = { Text("Home", fontSize = 10.sp) }
+                    icon = { Text("⌂", fontSize = 25.sp,
+                        modifier = Modifier.semantics { contentDescription = "Home" }) }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 10,
                     onClick = { selectedTab = 10 },
-                    icon = { Text("✦", fontSize = 21.sp) },
-                    label = { Text("Ontdek", fontSize = 10.sp) }
+                    icon = { Text("✦", fontSize = 23.sp,
+                        modifier = Modifier.semantics { contentDescription = "Ontdek" }) }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 1,
                     onClick = { selectedTab = 1 },
-                    icon = { Text("▦", fontSize = 21.sp) },
-                    label = { Text("Agenda", fontSize = 10.sp) }
+                    icon = { Text("▦", fontSize = 23.sp,
+                        modifier = Modifier.semantics { contentDescription = "Agenda" }) }
                 )
                 NavigationBarItem(
-                    selected = selectedTab == 11 && mySection == 2,
-                    onClick = { mySection = 2; selectedTab = 11 },
-                    icon = { Text("♥", fontSize = 20.sp) },
-                    label = { Text("Favorieten", fontSize = 10.sp) }
+                    selected = selectedTab == 11 && mySection == 3,
+                    onClick = { mySection = 3; selectedTab = 11 },
+                    icon = { Text("🎟", fontSize = 23.sp,
+                        modifier = Modifier.semantics { contentDescription = "Mijn tickets" }) }
                 )
                 NavigationBarItem(
                     selected = selectedTab in setOf(4, 5, 7, 8) ||
-                        (selectedTab == 11 && mySection != 2),
+                        (selectedTab == 11 && mySection != 3),
                     onClick = { searchExpanded = false; selectedTab = 8 },
-                    icon = { Text("⋯", fontSize = 23.sp) },
-                    label = { Text("Meer", fontSize = 10.sp) }
+                    icon = { Text("⋯", fontSize = 25.sp,
+                        modifier = Modifier.semantics { contentDescription = "Meer" }) }
                 )
             }
         }
@@ -603,17 +608,18 @@ fun ConcertApp() {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    "Barry's Concerten",
+                    text = "Barry's Concerten",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
-                    modifier = Modifier.weight(1f, fill = false)
+                    softWrap = false,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f)
                 )
-                Spacer(Modifier.width(8.dp))
-                NetherlandsFlag()
                 Spacer(Modifier.width(5.dp))
+                NetherlandsFlag()
+                Spacer(Modifier.width(3.dp))
                 BelgiumFlag()
-                Spacer(Modifier.weight(1f))
                 IconButton(onClick = { searchExpanded = !searchExpanded }) {
                     Text(if (searchExpanded) "×" else "⌕",
                         fontSize = 26.sp, color = BackstageColors.pink)
@@ -704,8 +710,26 @@ fun ConcertApp() {
                 }
 
             } else {
-
-                LazyColumn(
+                // Faint launcher-icon watermark, fixed behind the scrolling list.
+                // It has no touch handling and stays readable underneath opaque cards.
+                Box(
+                    modifier = Modifier.fillMaxSize().background(
+                        Brush.verticalGradient(
+                            listOf(
+                                Color(0xFF171627),
+                                BackstageColors.background,
+                                Color(0xFF141827)
+                            )
+                        )
+                    )
+                ) {
+                    Image(
+                        painter = painterResource(id = R.mipmap.ic_launcher),
+                        contentDescription = null,
+                        alpha = 0.08f,
+                        modifier = Modifier.align(Alignment.Center).size(270.dp)
+                    )
+                    LazyColumn(
                     state = listState,
                     modifier =
                         Modifier
@@ -930,7 +954,7 @@ fun ConcertApp() {
                                         style = MaterialTheme.typography.bodySmall)
                                     listOf(
                                         4 to "♣   Rotown Clubkaart",
-                                        11 to "🎟   Mijn tickets",
+                                        2 to "♥   Favorieten",
                                         5 to "▤   Archief",
                                         7 to "ⓘ   Info en concertzalen"
                                     ).forEach { (targetTab, title) ->
@@ -1127,6 +1151,7 @@ fun ConcertApp() {
                         }
                         Spacer(modifier = Modifier.height(20.dp))
                     }
+                }
                 }
             }
         }
