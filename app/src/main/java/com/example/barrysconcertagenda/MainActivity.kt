@@ -147,23 +147,7 @@ fun WelcomeScreen(
 }
 
 private fun verifiedTicketSwapUrl(concert: Concert): String =
-    if (
-        concert.date == "2026-10-09" &&
-        concert.artist.equals("The Apers", ignoreCase = true) &&
-        concert.venue.equals("Rotown", ignoreCase = true) &&
-        concert.url.trimEnd('/') == "https://www.rotown.nl/agenda/the-apers-1"
-    ) {
-        "https://www.ticketswap.nl/concert-tickets/maladroit-rotterdam-rotown-2026-10-09-CbSFR53UXMVxNKodxWTdf"
-    } else if (
-        concert.date == "2026-12-27" &&
-        concert.artist.equals("30 Jaar Excelsior Recordings", ignoreCase = true) &&
-        concert.venue.equals("Tolhuistuin", ignoreCase = true) &&
-        concert.url.trimEnd('/') == "https://www.paradiso.nl/nl/programma/30-jaar-excelsior-recordings/2902321"
-    ) {
-        "https://www.ticketswap.nl/concert-tickets/30-jaar-excelsior-recordings-amsterdam-tolhuistuin-2026-12-27-CbhnzqXEdczxvu7WzXVv9"
-    } else {
-        concert.ticketSwapUrl
-    }
+    TicketSwapLinks.directUrl(concert)
 
 @Composable
 fun ConcertApp() {
@@ -320,8 +304,8 @@ fun ConcertApp() {
                     source = source.source,
                     url = source.url,
                     ticketSwapUrl =
-                        old?.ticketSwapUrl?.takeIf { it.isNotBlank() }
-                            ?: source.ticketSwapUrl,
+                        source.ticketSwapUrl.takeIf { it.isNotBlank() }
+                            ?: old?.ticketSwapUrl.orEmpty(),
                     firstFound =
                         if (needsDiscoveryBaseline) 0L
                         else old?.firstFound ?: now,
@@ -380,8 +364,8 @@ fun ConcertApp() {
                             old?.isAttending
                                 ?: concert.isAttending,
                         ticketSwapUrl =
-                            old?.ticketSwapUrl?.takeIf { it.isNotBlank() }
-                                ?: concert.ticketSwapUrl,
+                            concert.ticketSwapUrl.takeIf { it.isNotBlank() }
+                                ?: old?.ticketSwapUrl.orEmpty(),
                         clubCard = concert.clubCard
                     )
             }
@@ -1128,6 +1112,8 @@ fun ConcertApp() {
                                     attending = newAttending
                                 )
                             },
+                            showTicketSwapUnavailable =
+                                selectedTab == 2 || (selectedTab == 11 && mySection == 2),
                             ticketSwapMessage =
                                 if (ticketSwapStatusUrl == normalizeUrl(concert.url)) ticketSwapStatus else ""
                             )
@@ -1249,7 +1235,7 @@ fun BarryDatePicker(initialDate: LocalDate? = null, onDismiss: () -> Unit, onDat
 }
 
 @Composable
-fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, showFavorite: Boolean, ticketDisplay: TicketDisplay, onAttendingClick: () -> Unit, ticketSwapMessage: String = "") {
+fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel: Boolean, showFavorite: Boolean, ticketDisplay: TicketDisplay, onAttendingClick: () -> Unit, showTicketSwapUnavailable: Boolean = false, ticketSwapMessage: String = "") {
     var confirmFavoriteRemoval by remember { mutableStateOf(false) }
     var confirmAttendingRemoval by remember { mutableStateOf(false) }
     if (confirmFavoriteRemoval) AlertDialog(onDismissRequest = { confirmFavoriteRemoval = false }, title = { Text("Favoriet verwijderen?") }, text = { Text("Wil je dit concert uit je favorieten verwijderen?") }, confirmButton = { TextButton(onClick = { confirmFavoriteRemoval = false; onFavoriteClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmFavoriteRemoval = false }) { Text("Annuleren") } })
@@ -1321,6 +1307,12 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 2.dp)
                 )
+            }
+            if (concert.isFavorite && verifiedTicketSwapUrl(concert).isBlank() &&
+                showTicketSwapUnavailable) {
+                Text("TicketSwap: geen directe, gecontroleerde concertlink gevonden",
+                    fontSize = 10.sp, color = BackstageColors.subtle,
+                    modifier = Modifier.padding(top = 3.dp))
             }
             if (concert.isFavorite && verifiedTicketSwapUrl(concert).isNotBlank()) {
                 val context = LocalContext.current
