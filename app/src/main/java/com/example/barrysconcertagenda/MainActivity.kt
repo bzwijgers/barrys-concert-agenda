@@ -56,6 +56,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -550,7 +551,9 @@ fun ConcertApp() {
     }
 
     Scaffold(
-        containerColor = BackstageColors.background,
+        // The same start photo as the launch screen fills the entire page
+        // behind the fixed header and all tabs.
+        containerColor = Color.Transparent,
         bottomBar = {
             NavigationBar(containerColor = Color(0xFF111B2B)) {
                 NavigationBarItem(
@@ -593,6 +596,27 @@ fun ConcertApp() {
             }
         }
     ) { innerPadding ->
+        Box(modifier = Modifier.fillMaxSize()) {
+            Image(
+                painter = painterResource(id = R.drawable.barrys_concerten_splash),
+                contentDescription = null,
+                contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .testTag("backstage-fullscreen-start-photo")
+            )
+            // Maintain white-text contrast without hiding the concert photo.
+            Box(
+                modifier = Modifier.fillMaxSize().background(
+                    Brush.verticalGradient(
+                        listOf(
+                            Color(0x7A08101B),
+                            Color(0x8808101B),
+                            Color(0xA508101B)
+                        )
+                    )
+                )
+            )
 
         Column(
             modifier = Modifier
@@ -734,43 +758,9 @@ fun ConcertApp() {
                 }
 
             } else {
-                // Keep a stage-light accent at the top of every screen. The
-                // original logo was centred *behind opaque concert cards* at
-                // 5.5% opacity and therefore practically invisible.
-                Box(
-                    modifier = Modifier.fillMaxSize().background(
-                        Brush.verticalGradient(
-                            colors = listOf(
-                                Color(0xFF1D2439),
-                                Color(0xFF121A2B),
-                                Color(0xFF0B1423)
-                            )
-                        )
-                    )
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .align(Alignment.TopEnd)
-                            .size(325.dp)
-                            .background(
-                                Brush.radialGradient(
-                                    colors = listOf(
-                                        Color(0x804D416D),
-                                        Color(0x403A4263),
-                                        Color.Transparent
-                                    )
-                                )
-                            )
-                    )
-                    Image(
-                        painter = painterResource(id = R.mipmap.ic_launcher_foreground),
-                        contentDescription = null,
-                        alpha = 0.19f,
-                        modifier = Modifier
-                            .align(Alignment.TopEnd)
-                            .padding(top = 18.dp, end = 14.dp)
-                            .size(208.dp)
-                    )
+                // No extra background within the list: the photo is attached to
+                // the scaffold itself and stays fixed as the concert list scrolls.
+                Box(modifier = Modifier.fillMaxSize()) {
                     LazyColumn(
                     state = listState,
                     modifier =
@@ -1254,6 +1244,7 @@ fun ConcertApp() {
                 }
             }
         }
+        } // Full-screen photo background behind all pages
     }
 }
 
@@ -1356,7 +1347,9 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(containerColor = BackstageColors.surface),
+        colors = CardDefaults.cardColors(
+            containerColor = BackstageColors.surface.copy(alpha = 0.86f)
+        ),
         border = BorderStroke(1.dp, Color(0xFF29384E))
     ) {
         Column(modifier = Modifier.padding(horizontal = 13.dp, vertical = 8.dp)) {
