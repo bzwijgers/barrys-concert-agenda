@@ -41,6 +41,26 @@ object BackstageSelectors {
             }
         }
 
+    /**
+     * A date selected from the calendar means the rest of the agenda,
+     * including the selected day. The end date is optional.
+     */
+    fun withinDateRange(concert: Concert, from: LocalDate?, to: LocalDate?): Boolean {
+        if (from == null && to == null) return true
+        val eventDate = try { LocalDate.parse(concert.date) } catch (_: Exception) { return false }
+        return (from == null || !eventDate.isBefore(from)) &&
+            (to == null || !eventDate.isAfter(to))
+    }
+
+    /**
+     * The "New" fallback should match the chronological "All" agenda.
+     * Only genuinely newly discovered shows are sorted by discovery time.
+     */
+    fun orderDiscovery(concerts: List<Concert>, filter: String, noNew: Boolean): List<Concert> {
+        return if (filter == "new" && !noNew) concerts.sortedByDescending { it.firstFound }
+            else concerts
+    }
+
     fun calendar(
         concerts: List<Concert>,
         month: YearMonth,
