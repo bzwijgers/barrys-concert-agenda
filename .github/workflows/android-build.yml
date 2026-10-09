@@ -18,6 +18,12 @@ on:
 permissions:
   contents: read
 
+# Debug signing must be stable across runs. Without this, Android refuses
+# upgrades and V3 users risk losing locally saved favorites and tickets.
+concurrency:
+  group: backstage-v3-signing-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,6 +39,13 @@ jobs:
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
+
+      - name: Restore V3 debug signing key
+        if: github.ref == 'refs/heads/preview/backstage-v3'
+        uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: backstage-v3-debug-keystore-v1
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
@@ -75,6 +88,22 @@ jobs:
           ACTUAL=$("$AAPT" dump badging app/build/outputs/apk/debug/app-debug.apk | sed -n "s/^package: name='\\([^']*\\)'.*/\\1/p")
           echo "Built Backstage V3 package ID: $ACTUAL"
           test "$ACTUAL" = "com.example.barrysconcertagenda.backstage"
+
+      - name: Record APK signing certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          APKSIGNER=$(find "$ANDROID_HOME/build-tools" -mindepth 2 -maxdepth 2 -name apksigner -type f | sort -V | tail -1)
+          test -n "$APKSIGNER"
+          "$APKSIGNER" verify --print-certs app/build/outputs/apk/debug/app-debug.apk | tee backstage-v3-signing.txt
+
+      - name: Upload signing details
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backstage-v3-signing
+          path: backstage-v3-signing.txt
+          if-no-files-found: warn
 
       - name: Upload build diagnostics
         if: always()
