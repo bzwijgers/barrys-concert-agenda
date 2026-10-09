@@ -83,6 +83,37 @@ class TicketSwapLinksTest {
         assertEquals("", TicketSwapLinks.directUrl(lemonheads.copy(venue = "Paradiso")))
     }
 
+    @Test fun verifiedLordsHeadlinerResolvesDespiteMissingSupportAct() {
+        val lords = show(
+            artist = "LORDS OF ALTAMONT + Sick Shooters",
+            venue = "dB's",
+            city = "Utrecht",
+            date = "2026-11-22",
+            url = "https://dbstudio.nl/event/lords-of-altamont"
+        )
+        val link = TicketSwapLinks.directUrl(lords)
+        assertTrue(link.contains("lords-of-altamont-utrecht-dbs"))
+        assertEquals("", TicketSwapLinks.directUrl(lords.copy(date = "2026-11-23")))
+        assertEquals("", TicketSwapLinks.directUrl(lords.copy(venue = "Paradiso")))
+        assertEquals("", TicketSwapLinks.directUrl(lords.copy(url = "https://dbstudio.nl/event/other")))
+        assertEquals("", TicketSwapLinks.directUrl(lords.copy(city = "Amsterdam")))
+    }
+
+    @Test fun freeAmareConcertNeverLinksToTicketResale() {
+        val free = show(
+            artist = "Just Graduated: Marco Bernardi en Katrina Kabineca",
+            venue = "Amare",
+            city = "Den Haag",
+            date = "2026-12-06",
+            url = "https://www.podiuminfo.nl/concert/485136/Just-Graduated-Marco-Bernardi-en-Katrina-Kabineca/Amare",
+            ticketSwapUrl = "https://www.ticketswap.nl/concert-tickets/just-graduated-marco-bernardi-katrina-kabinecka-the-hague-amare-2026-12-06-CaVMYZZezZidh1f2RqyDT"
+        )
+        assertEquals("", TicketSwapLinks.directUrl(free))
+        // Another paid concert at Amare must not be affected.
+        val paid = free.copy(artist = "Paid artist")
+        assertEquals("", TicketSwapLinks.directUrl(paid))
+    }
+
     @Test fun verifiedExcelsiorLinkDoesNotMatchDifferentConcert() {
         val official = show(
             artist = "30 Jaar Excelsior Recordings",
