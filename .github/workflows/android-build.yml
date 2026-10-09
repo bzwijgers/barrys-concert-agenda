@@ -1,10 +1,10 @@
-name: Android build (V2 preview)
+name: Android build (Backstage V3)
 
 on:
   push:
     branches:
       - main
-      - preview/agenda-v2
+      - preview/backstage-v3
     paths:
       - "app/**"
       - "build.gradle.kts"
@@ -58,8 +58,8 @@ jobs:
           AAPT=$(find "$ANDROID_HOME/build-tools" -mindepth 2 -maxdepth 2 -name aapt -type f | sort -V | tail -1)
           test -n "$AAPT"
           ACTUAL=$("$AAPT" dump badging app/build/outputs/apk/debug/app-debug.apk | sed -n "s/^package: name='\\([^']*\\)'.*/\\1/p")
-          echo "Built preview package ID: $ACTUAL"
-          test "$ACTUAL" = "com.example.barrysconcertagenda.preview"
+          echo "Built Backstage V3 package ID: $ACTUAL"
+          test "$ACTUAL" = "com.example.barrysconcertagenda.backstage"
 
       - name: Upload build diagnostics
         if: always()
@@ -73,6 +73,6 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: barrys-concert-agenda-v2-preview-debug
+          name: barrys-backstage-v3-debug
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
