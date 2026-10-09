@@ -24,6 +24,18 @@ class BackstageSelectorsTest {
         assertEquals(listOf("Rotown artist"),BackstageSelectors.discover(shows,"club").map{it.artist})
         assertEquals(listOf("Belgian artist"),BackstageSelectors.discover(shows,"belgium").map{it.artist})
     }
+    @Test fun emptyNewTabShowsUpcomingWithoutPretendingTheyAreNew() {
+        val baseline = shows.map { it.copy(isNew = false) }
+        val upcoming = BackstageSelectors.discoverOrUpcoming(baseline, "new")
+        assertEquals(3, upcoming.size)
+        assertTrue(upcoming.all { !it.archived && !it.isNew })
+        // If actual new shows arrive, display only those.
+        assertEquals(
+            listOf("Belgian artist"),
+            BackstageSelectors.discoverOrUpcoming(shows, "new").map { it.artist }
+        )
+    }
+
     @Test fun myConcertsKeepTicketsFavoritesAndArchiveSeparate() {
         assertEquals(listOf("Belgian artist"),BackstageSelectors.mine(shows,2).map{it.artist})
         assertEquals(listOf("Ticket concert"),BackstageSelectors.mine(shows,3).map{it.artist})
