@@ -799,7 +799,11 @@ fun ConcertApp() {
                                         modifier = Modifier.fillMaxWidth()
                                     ) {
                                         Text("♣ Rotown Clubkaart · ${concerts.count { it.clubCard && !it.archived }} concerten",
-                                            fontWeight = FontWeight.Bold)
+                                             fontWeight = FontWeight.Bold,
+                                             fontSize = 14.sp,
+                                             maxLines = 1,
+                                             softWrap = false,
+                                             overflow = TextOverflow.Ellipsis)
                                     }
                                     Text("Binnenkort", fontSize = 20.sp,
                                         fontWeight = FontWeight.Bold)
@@ -956,9 +960,10 @@ fun ConcertApp() {
                             4 -> {
 
                                 Text(
-                                    "${visibleConcerts.size} Rotown Clubkaart concerten",
-                                    fontWeight =
-                                        FontWeight.Bold
+                                    "${visibleConcerts.size} Rotown Clubkaart-concerten",
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 14.sp,
+                                    maxLines = 1
                                 )
 
                             }
@@ -1101,7 +1106,7 @@ fun ConcertApp() {
                                 Text(
                                     text = groupDate,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = MaterialTheme.colorScheme.primary,
+                                    color = BackstageColors.lime,
                                     modifier = Modifier.padding(top = 12.dp, bottom = 2.dp)
                                 )
                             }
@@ -1185,7 +1190,7 @@ fun ConcertApp() {
                             Text(
                                 when {
                                     selectedTab == 10 && discoveryFilter == "new" ->
-                                        "Nog geen nieuwe concerten sinds de eerste V3-synchronisatie."
+                                        "Geen nieuwe concerten in de afgelopen 7 dagen. De volledige agenda staat bij Alles."
                                     selectedTab == 4 || (selectedTab == 10 && discoveryFilter == "club") ->
                                         "Geen Clubkaart-concerten beschikbaar in de huidige gegevens."
                                     selectedTab == 11 ->
@@ -1194,6 +1199,11 @@ fun ConcertApp() {
                                 },
                                 color = BackstageColors.subtle,
                                 modifier = Modifier.padding(vertical = 20.dp))
+                            if (selectedTab == 10 && discoveryFilter == "new") {
+                                TextButton(onClick = { discoveryFilter = "all" }) {
+                                    Text("Toon alle concerten", color = BackstageColors.lime)
+                                }
+                            }
                         }
                         Spacer(modifier = Modifier.height(20.dp))
                     }
@@ -1268,7 +1278,7 @@ fun TicketStatusIcon(display: TicketDisplay) {
 
 @Composable
 fun NetherlandsFlag() {
-    Column(modifier = Modifier.width(22.dp).height(15.dp)) {
+    Column(modifier = Modifier.width(18.dp).height(12.dp)) {
         Box(Modifier.weight(1f).fillMaxWidth().background(Color(0xFFAE1C28)))
         Box(Modifier.weight(1f).fillMaxWidth().background(Color.White))
         Box(Modifier.weight(1f).fillMaxWidth().background(Color(0xFF21468B)))
@@ -1277,7 +1287,7 @@ fun NetherlandsFlag() {
 
 @Composable
 fun BelgiumFlag() {
-    Row(modifier = Modifier.width(22.dp).height(15.dp)) {
+    Row(modifier = Modifier.width(18.dp).height(12.dp)) {
         Box(Modifier.weight(1f).fillMaxSize().background(Color.Black))
         Box(Modifier.weight(1f).fillMaxSize().background(Color(0xFFFDE100)))
         Box(Modifier.weight(1f).fillMaxSize().background(Color(0xFFEF3340)))
@@ -1334,7 +1344,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     }
                     if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country))
                 },
-                style = MaterialTheme.typography.bodyMedium,
+                style = MaterialTheme.typography.bodySmall,
                 maxLines = 1,
                 softWrap = false,
                 overflow = TextOverflow.Ellipsis,
