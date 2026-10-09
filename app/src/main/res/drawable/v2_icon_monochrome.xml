@@ -19,11 +19,15 @@
         android:strokeLineCap="round"
         android:pathData="M40,39 V65 M40,39 H53 C64,39 64,51 53,51 H40 M40,51 H54 C65,51 65,65 54,65 H40" />
     <path
-        android:fillColor="#FFFFFFFF"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="2.8"
         android:pathData="M72,59 A13,13 0,1 1,72,85 A13,13 0,1 1,72,59 Z" />
     <path
         android:fillColor="#00000000"
-        android:strokeColor="#00000000"
-        android:strokeWidth="0"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:strokeWidth="3"
         android:pathData="M67,69 C67,63 78,64 78,69 C78,72 72,75 67,78 H78" />
 </vector>
