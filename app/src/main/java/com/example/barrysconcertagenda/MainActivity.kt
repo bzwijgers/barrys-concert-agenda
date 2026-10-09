@@ -481,7 +481,7 @@ fun ConcertApp() {
     val tabConcerts =
         when (selectedTab) {
             9 -> concerts.filter { !it.archived }
-            10 -> BackstageSelectors.discover(concerts, discoveryFilter)
+            10 -> BackstageSelectors.discoverOrUpcoming(concerts, discoveryFilter)
             11 -> BackstageSelectors.mine(concerts, mySection)
             0 -> concerts.filter { it.isNew && !it.archived }
             1, 6 -> concerts.filter { !it.archived }
@@ -491,6 +491,10 @@ fun ConcertApp() {
             5 -> BackstageSelectors.mine(concerts, 5)
             else -> emptyList()
         }
+
+    val noRecentlyDiscoveredConcerts =
+        selectedTab == 10 && discoveryFilter == "new" &&
+            BackstageSelectors.discover(concerts, "new").isEmpty()
 
     val availableVenues = concerts.map { it.venue.trim() }.filter { it.isNotBlank() }.distinct().sortedBy { it.lowercase(Locale.getDefault()) }
 
@@ -825,9 +829,25 @@ fun ConcertApp() {
                                         current = discoveryFilter,
                                         onSelect = { discoveryFilter = it }
                                     )
-                                    Text("${visibleConcerts.size} resultaten",
-                                        color = BackstageColors.lime,
-                                        fontWeight = FontWeight.Bold)
+                                    if (noRecentlyDiscoveredConcerts) {
+                                        Text(
+                                            "Er zijn nog geen recent ontdekte concerten. " +
+                                                "Hieronder zie je voorlopig de volledige aankomende agenda.",
+                                            color = BackstageColors.subtle,
+                                            fontSize = 12.sp
+                                        )
+                                        Text(
+                                            "${visibleConcerts.size} aankomende concerten",
+                                            color = BackstageColors.lime,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                    } else {
+                                        Text(
+                                            "${visibleConcerts.size} resultaten",
+                                            color = BackstageColors.lime,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                    }
                                 }
                             }
 
