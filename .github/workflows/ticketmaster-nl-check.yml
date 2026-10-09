@@ -123,6 +123,13 @@ jobs:
                       bool(event_to_concert(raw, today="2026-10-10")),
                   ))
               print("Ticketmaster NL AFAS candidate", term, matches[:12], flush=True)
+              for raw in (response.get("_embedded") or {}).get("events", []):
+                  if "arena tour" in (raw.get("name") or "").lower() or "to whom" in (raw.get("name") or "").lower():
+                      venue = ((raw.get("_embedded") or {}).get("venues") or [{}])[0]
+                      print("Ticketmaster NL unnamed venue details", term,
+                            {key: venue.get(key) for key in
+                             ("id", "name", "type", "city", "country", "address", "location", "url")},
+                            "event id:", raw.get("id"), flush=True)
           if any(x.get("country") != "NL" for x in added):
               raise SystemExit("Non-Dutch concert leaked into Ticketmaster results")
           PY
