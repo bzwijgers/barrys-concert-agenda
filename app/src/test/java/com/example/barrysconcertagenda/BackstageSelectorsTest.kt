@@ -36,6 +36,33 @@ class BackstageSelectorsTest {
         )
     }
 
+    @Test fun november22ShowsThatDayAndAllSubsequentConcerts() {
+        val selected = LocalDate.of(2026, 11, 22)
+        val dates = listOf("2026-11-21", "2026-11-22", "2026-11-23", "2026-12-01")
+        val result = dates.map { Concert(artist = "Artist", venue = "Rotown",
+            city = "Rotterdam", country = "NL", date = it) }
+            .filter { BackstageSelectors.withinDateRange(it, selected, null) }
+        assertEquals(listOf("2026-11-22", "2026-11-23", "2026-12-01"),
+            result.map { it.date })
+        assertTrue(BackstageSelectors.withinDateRange(result[0], selected,
+            LocalDate.of(2026, 11, 22)))
+        assertTrue(!BackstageSelectors.withinDateRange(result[2], selected,
+            LocalDate.of(2026, 11, 30)))
+    }
+
+    @Test fun emptyNewFallbackStaysChronologicalLikeAll() {
+        val chronological = listOf(
+            Concert(artist = "Earlier", venue = "Rotown", city = "Rotterdam",
+                country = "NL", date = "2026-11-22", firstFound = 200),
+            Concert(artist = "Later", venue = "Rotown", city = "Rotterdam",
+                country = "NL", date = "2026-12-10", firstFound = 100),
+        )
+        assertEquals(listOf("Earlier", "Later"),
+            BackstageSelectors.orderDiscovery(chronological, "new", true).map { it.artist })
+        assertEquals(listOf("Later", "Earlier"),
+            BackstageSelectors.orderDiscovery(chronological, "new", false).map { it.artist })
+    }
+
     @Test fun myConcertsKeepTicketsFavoritesAndArchiveSeparate() {
         assertEquals(listOf("Belgian artist"),BackstageSelectors.mine(shows,2).map{it.artist})
         assertEquals(listOf("Ticket concert"),BackstageSelectors.mine(shows,3).map{it.artist})
