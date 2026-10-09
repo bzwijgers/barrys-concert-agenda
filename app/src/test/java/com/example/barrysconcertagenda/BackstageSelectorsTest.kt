@@ -67,9 +67,9 @@ class BackstageSelectorsTest {
     @Test fun emptyNewFallbackStaysChronologicalLikeAll() {
         val chronological = listOf(
             Concert(artist = "Earlier", venue = "Rotown", city = "Rotterdam",
-                country = "NL", date = "2026-11-22", firstFound = 200),
+                country = "NL", date = "2026-11-22", firstFound = 100),
             Concert(artist = "Later", venue = "Rotown", city = "Rotterdam",
-                country = "NL", date = "2026-12-10", firstFound = 100),
+                country = "NL", date = "2026-12-10", firstFound = 200),
         )
         assertEquals(listOf("Earlier", "Later"),
             BackstageSelectors.orderDiscovery(chronological, "new", true).map { it.artist })
