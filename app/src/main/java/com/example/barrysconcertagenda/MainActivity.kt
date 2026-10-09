@@ -1101,15 +1101,12 @@ fun ConcertApp() {
                             }
 
                             7 -> {
-                                // The original photo stays visible around an easy-to-read
-                                // dark inset; all Info text uses a soft lavender colour.
+                                // Info text sits directly over the original start photo:
+                                // no card, tinted panel or extra border.
                                 val infoTextColor = Color(0xFFE6D5FA)
                                 CompositionLocalProvider(LocalContentColor provides infoTextColor) {
                                 Column(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .background(Color(0xDD262039), RoundedCornerShape(16.dp))
-                                        .padding(18.dp),
+                                    modifier = Modifier.fillMaxWidth(),
                                     verticalArrangement = Arrangement.spacedBy(10.dp)
                                 ) {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold,
@@ -1162,7 +1159,7 @@ fun ConcertApp() {
                                     Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall,
                                         color = infoTextColor)
                                 }
-                                } // Lavender Info text on dark translucent panel
+                                } // Light-purple Info text directly on photo
                             }
                         }
 
