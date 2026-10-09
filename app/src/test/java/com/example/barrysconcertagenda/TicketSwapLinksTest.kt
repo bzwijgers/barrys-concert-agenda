@@ -55,6 +55,34 @@ class TicketSwapLinksTest {
         assertEquals("", TicketSwapLinks.directUrl(apers.copy(date = "2026-10-10")))
     }
 
+    @Test fun knownOctoberEventsOpenTheRightTicketSwapPage() {
+        val lemonheads = show(
+            artist = "The Lemonheads", venue = "TivoliVredenburg",
+            city = "Utrecht", date = "2026-10-15"
+        )
+        assertTrue(TicketSwapLinks.directUrl(lemonheads).contains(
+            "the-lemonheads-utrecht-tivolivredenburg-2026-10-15-"
+        ))
+        val devil = show(
+            artist = "The Devil Wears Prada", venue = "Effenaar",
+            city = "Eindhoven", date = "2026-10-10"
+        )
+        assertTrue(TicketSwapLinks.directUrl(devil).contains(
+            "the-devil-wears-prada-eindhoven-effenaar-2026-10-10-"
+        ))
+        val robert = show(
+            artist = "Robert Jon & The Wreck", venue = "De Bosuil",
+            city = "Weert", date = "2026-10-09"
+        )
+        assertTrue(TicketSwapLinks.directUrl(robert).contains(
+            "robert-jon-the-wreck-weert-poppodium-de-bosuil-2026-10-09-"
+        ))
+        // Guard against accidentally assigning another concert's page.
+        assertEquals("", TicketSwapLinks.directUrl(robert.copy(city = "Utrecht")))
+        assertEquals("", TicketSwapLinks.directUrl(devil.copy(date = "2026-11-10")))
+        assertEquals("", TicketSwapLinks.directUrl(lemonheads.copy(venue = "Paradiso")))
+    }
+
     @Test fun verifiedExcelsiorLinkDoesNotMatchDifferentConcert() {
         val official = show(
             artist = "30 Jaar Excelsior Recordings",
