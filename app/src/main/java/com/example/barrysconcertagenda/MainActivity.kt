@@ -975,10 +975,6 @@ fun ConcertApp() {
                                         },
                                         fontWeight = FontWeight.Bold
                                     )
-                                    if (visibleConcerts.isEmpty()) {
-                                        Text("V3 bewaart favorieten en tickets apart van V1. Tik in Agenda op een hartje of ticket om ze hier te zien.",
-                                            color = BackstageColors.pageMuted, fontSize = 12.sp)
-                                    }
                                 }
                             }
 
@@ -1178,6 +1174,7 @@ fun ConcertApp() {
                                 // Info text sits directly over the original start photo:
                                 // no card, tinted panel or extra border.
                                 val infoTextColor = Color(0xFFE6D5FA)
+                                var expandedInfoVenue by remember { mutableStateOf<String?>(null) }
                                 CompositionLocalProvider(LocalContentColor provides infoTextColor) {
                                 Column(
                                     modifier = Modifier.fillMaxWidth(),
@@ -1219,9 +1216,18 @@ fun ConcertApp() {
                                                 fontSize = 16.sp
                                             )
                                             if (subVenues.isNotEmpty()) {
+                                                val expanded = expandedInfoVenue == mainVenue
+                                                val shown = if (expanded) subVenues else subVenues.take(3)
+                                                val more = subVenues.size - shown.size
                                                 Text(
-                                                    "(" + subVenues.joinToString(" · ") + ")",
-                                                    style = MaterialTheme.typography.bodySmall
+                                                    "(" + shown.joinToString(" · ") +
+                                                        if (more > 0) " · +$more meer)" else ")",
+                                                    style = MaterialTheme.typography.bodySmall,
+                                                    modifier = if (subVenues.size > 3) {
+                                                        Modifier.clickable {
+                                                            expandedInfoVenue = if (expanded) null else mainVenue
+                                                        }
+                                                    } else Modifier
                                                 )
                                             }
                                         }
