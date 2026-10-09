@@ -721,7 +721,7 @@ fun ConcertApp() {
                 )
                 Box(modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)) {
                     TextButton(onClick = { venueMenuExpanded = true }) {
-                        Text("Zaal: " + (searchVenue ?: "Alle zalen"))
+                        Text("Zaal: " + (searchVenue ?: "Alle zalen"), color = BackstageColors.pageAccent)
                     }
                     DropdownMenu(
                         expanded = venueMenuExpanded,
@@ -744,11 +744,11 @@ fun ConcertApp() {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     TextButton(onClick = { datePickerTarget = "from" }, modifier = Modifier.weight(1f)) {
-                        Text("Van: " + (searchDateFrom?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "datum"))
+                        Text("Van: " + (searchDateFrom?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "datum"), color = BackstageColors.pageAccent)
                     }
                     Text(" t/m ", style = MaterialTheme.typography.bodySmall)
                     TextButton(onClick = { datePickerTarget = "to" }, modifier = Modifier.weight(1f)) {
-                        Text("Tot: " + (searchDateTo?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "datum"))
+                        Text("Tot: " + (searchDateTo?.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")) ?: "datum"), color = BackstageColors.pageAccent)
                     }
                 }
                 if (searchQuery.isNotBlank() || searchDateFrom != null || searchDateTo != null || searchVenue != null) {
@@ -1270,7 +1270,7 @@ fun ConcertApp() {
                                         "Nog geen concerten geregistreerd in dit V3-overzicht."
                                     else -> "Geen concerten voor deze selectie. Wis eventuele zoekfilters of kies een andere datum."
                                 },
-                                color = BackstageColors.subtle,
+                                color = BackstageColors.pageMuted,
                                 modifier = Modifier.padding(vertical = 20.dp))
                             if (selectedTab == 10 && discoveryFilter == "new") {
                                 TextButton(onClick = { discoveryFilter = "all" }) {
@@ -1389,7 +1389,8 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = BackstageColors.surface.copy(alpha = 0.86f)
+            containerColor = BackstageColors.surface.copy(alpha = 0.86f),
+            contentColor = Color.White
         ),
         border = BorderStroke(1.dp, Color(0xFF29384E))
     ) {
