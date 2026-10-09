@@ -54,7 +54,23 @@ jobs:
           disk-size: 6G
           disable-animations: true
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
-          script: ./gradlew --no-daemon --stacktrace :app:connectedDebugAndroidTest
+          script: |
+            set -e
+            ./gradlew --no-daemon --stacktrace :app:connectedDebugAndroidTest
+            # Also capture real emulator pixels for visual review. These are
+            # read-only screenshots; the APK remains tested through Android Studio.
+            adb shell am force-stop com.example.barrysconcertagenda.backstage || true
+            adb shell am start -n com.example.barrysconcertagenda.backstage/com.example.barrysconcertagenda.MainActivity
+            sleep 4
+            adb shell input tap 540 1100
+            sleep 14
+            mkdir -p backstage-v3-screenshots
+            adb shell screencap -p /sdcard/backstage-home.png
+            adb pull /sdcard/backstage-home.png backstage-v3-screenshots/home.png
+            adb shell input tap 270 2200
+            sleep 3
+            adb shell screencap -p /sdcard/backstage-discover.png
+            adb pull /sdcard/backstage-discover.png backstage-v3-screenshots/discover.png
 
       - name: Upload Android UI-test results
         if: always()
@@ -64,4 +80,12 @@ jobs:
           path: |
             app/build/reports/androidTests/connected/**
             app/build/outputs/androidTest-results/connected/**
+          if-no-files-found: warn
+
+      - name: Upload emulator screenshots for visual review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backstage-v3-emulator-screenshots
+          path: backstage-v3-screenshots/*.png
           if-no-files-found: warn
