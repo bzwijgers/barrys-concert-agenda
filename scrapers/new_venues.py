@@ -318,7 +318,7 @@ def parse_event(html, url, name, city):
         return None
     if name=="Hedon" and re.search(r"hedon-academy|workshop|comedy|cabaret|lezing|rave|techno|80s-verantwoord|80.s.verantwoord|clubnacht|fanparty",identity):
         return None
-    if name=="Klokgebouw" and re.search(r"snakepit|rave|dance|feest|party|festival-electronic",lowered):
+    if name=="Klokgebouw" and re.search(r"snakepit|rave|dance|feest|party|festival-electronic|kerstborrel|cisco-connect",identity):
         return None
     if name=="SPOT Groningen" and re.search(r"klassieke?[- ]muziek|kamermuziek|orkestconcert|opera|ballet|cabaret|toneel",identity):
         return None
@@ -356,10 +356,107 @@ def filter_hedon_nights(urls, html):
     return remaining
 
 
+
+# The Klokgebouw agenda itself labels each linked card (Rock / Pop / Dance /
+# Business / etc.) and shows its day and month. These details are more reliable
+# than dates inferred from related-event widgets on the individual pages.
+class KlokgebouwAgendaCards(HTMLParser):
+    def __init__(self, base):
+        super().__init__()
+        self.base = base
+        self.current = None
+        self.depth = 0
+        self.cards = {}
+
+    def handle_starttag(self, tag, attrs):
+        data = dict(attrs)
+        if tag == "a" and self.current is None:
+            url = urljoin(self.base, unescape(data.get("href", "")))
+            if (urlsplit(url).hostname or "").removeprefix("www.") == "klokgebouw.nl" and "/agenda/" in urlsplit(url).path:
+                self.current = [normalize_url(url), []]
+                self.depth = 1
+                return
+        if self.current is not None:
+            self.depth += 1
+
+    def handle_endtag(self, tag):
+        if self.current is None:
+            return
+        self.depth -= 1
+        if self.depth == 0:
+            key, parts = self.current
+            text = re.sub(r"\\s+", " ", " ".join(parts)).strip()
+            genre = re.search(r"\\b(Rock|Pop|Dance|Business|Retail|Public|Expo|Culture|Kennis)\\b", text, re.I)
+            shown = re.search(
+                r"\\b(?:ma|di|wo|do|vr|za|zo)\\.?\\s*(\\d{1,2})\\s*"
+                r"(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)\\.?\\b",
+                text, re.I,
+            )
+            self.cards[key] = {
+                "genre": genre.group(1).lower() if genre else "",
+                "day": int(shown.group(1)) if shown else None,
+                "month": MONTHS.get(shown.group(2).lower()) if shown else None,
+            }
+            self.current = None
+
+    def handle_data(self, data):
+        if self.current is not None:
+            self.current[1].append(data)
+
+
+def klokgebouw_listing_cards(html, base="https://www.klokgebouw.nl/agenda"):
+    parser = KlokgebouwAgendaCards(base)
+    parser.feed(html)
+    return parser.cards
+
+
+def is_nonconcert_listing(name, url):
+    path = urlsplit(url).path.lower()
+    if name == "SPOT Groningen":
+        # These are category, information or subscription pages; their
+        # recommended shows previously produced fictitious "concerts".
+        return bool(re.search(r"/programma/(?:verzameling|abonnement)(?:/|-|$)", path))
+    if name == "Klokgebouw":
+        return bool(re.search(
+            r"(?:cisco-connect|kerstborrel|dutch-design-week|kerstmarkt|chili-fest)",
+            path,
+        ))
+    return False
+
+
+def deduplicate_doornroosje_festival_days(events):
+    """A festival landing page and numbered ticket page are not two concerts."""
+    retained = {}
+    for event in events:
+        url = urlsplit(event["url"]).path.lower().rstrip("/")
+        if (event.get("source") == "Doornroosje"
+                and re.fullmatch(r"/event/soulcrusher-20\\d\\d(?:-\\d+)?", url)):
+            key = (event["artist"].casefold().strip(),
+                   event["date"], event["venue"].casefold().strip())
+            old = retained.get(key)
+            # Prefer the canonical unnumbered URL, not an arbitrary
+            # fetch/concurrency order.
+            if old is None or (
+                re.search(r"-\\d+$", url) is None
+                and re.search(r"-\\d+$", urlsplit(old["url"]).path.lower().rstrip("/")) is not None
+            ):
+                retained[key] = event
+        else:
+            retained[(normalize_url(event["url"]),)] = event
+    return list(retained.values())
+
 def scrape_venue(name, maximum=500):
     agenda, prefix,city=VENUES[name]
     html=download_page_retry(agenda,attempts=2)
     found=discover(html,agenda,prefix)
+    listing_cards = klokgebouw_listing_cards(html, agenda) if name == "Klokgebouw" else {}
+    found = [url for url in found if not is_nonconcert_listing(name, url)]
+    if name == "Klokgebouw":
+        excluded_categories = {"dance", "business", "retail", "public", "expo", "culture", "kennis"}
+        found = [
+            url for url in found
+            if listing_cards.get(normalize_url(url), {}).get("genre") not in excluded_categories
+        ]
     if name == "De Bosuil":
         # /programma/archief is a navigation link, not a concert detail.
         # The previous parser invented a date from its archive listings.
@@ -551,7 +648,22 @@ def scrape_venue(name, maximum=500):
         for future in as_completed(futures):
             try:
                 item=future.result()
-                if item:items.append(item)
+                if item:
+                    if name == "Klokgebouw":
+                        metadata = listing_cards.get(normalize_url(url), {})
+                        day, month = metadata.get("day"), metadata.get("month")
+                        if day is not None and month is not None:
+                            # Use the date printed beside this exact event link.
+                            # Never inherit a time belonging to the wrong day.
+                            year = date.fromisoformat(item["date"]).year
+                            try:
+                                shown_date = date(year, month, day).isoformat()
+                                if shown_date != item["date"]:
+                                    item["date"] = shown_date
+                                    item["time"] = ""
+                            except ValueError:
+                                pass
+                    items.append(item)
             except Exception as error:
                 url = futures[future]
                 saved = previous.get(normalize_url(url))
@@ -564,6 +676,8 @@ def scrape_venue(name, maximum=500):
                     errors+=1
                     if errors<=3:
                         print(name,"detail error:",url,str(error)[:160],flush=True)
+    if name == "Doornroosje":
+        items = deduplicate_doornroosje_festival_days(items)
     unique={normalize_url(i["url"]):i for i in items}
     if not unique:
         raise RuntimeError(f"{name}: no future concerts parsed from {len(found)} links; refusing empty agenda")
