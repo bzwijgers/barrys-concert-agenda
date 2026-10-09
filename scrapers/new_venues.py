@@ -264,6 +264,17 @@ def parse_event(html, url, name, city):
         return None
 
     if not event_time:
+        if name == "SPOT Groningen":
+            # SPOT prints the show's official starting time *before* its label:
+            # "20:30 start programma". This is not a door-opening time.
+            # Read only the lead event block, not recommendations below.
+            spot_start = re.search(
+                r"\b([01]?\d|2[0-3])[:.]([0-5]\d)\s+"
+                r"(?:start\s+programma|start\s+of\s+event)\b",
+                raw_text[:2600], re.I,
+            )
+            if spot_start:
+                event_time = f"{int(spot_start.group(1)):02d}:{spot_start.group(2)}"
         if name=='Doornroosje':
             body_match=re.search(r'\blocatie:\s*.+?\bdatum:\s*.+?\bzaal open:\s*\d{1,2}:\d{2}\s*uur\s*\bstart:\s*(\d{1,2}:\d{2})',raw_text[:1300],re.I)
             if body_match:event_time=body_match.group(1)
