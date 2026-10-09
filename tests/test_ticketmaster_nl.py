@@ -71,6 +71,21 @@ class TicketmasterTests(unittest.TestCase):
         self.assertEqual(len(added), 2)
         self.assertEqual(duplicate_count, 0)
 
+    def test_existing_pop_podium_and_main_room_are_not_double_listed(self):
+        official = {
+            "artist": "Band A", "date": "2027-03-22",
+            "city": "Amsterdam", "venue": "Paradiso",
+            "source": "Paradiso", "url": "https://www.paradiso.nl/a"
+        }
+        ticketmaster = {
+            "artist": "Band A", "date": "2027-03-22",
+            "city": "Amsterdam", "venue": "Paradiso Grote Zaal",
+            "source": "Ticketmaster NL",
+            "url": "https://www.ticketmaster.nl/event/a"
+        }
+        added, repeats = merge_ticketmaster([official], [ticketmaster])
+        self.assertEqual((len(added), repeats), (0, 1))
+
     def test_same_artist_same_city_different_venue_stays_separate(self):
         old = {"artist": "Foo Fighters", "date": "2027-02-04", "city": "Amsterdam", "venue": "Ziggo Dome"}
         candidate = dict(old, venue="AFAS Live")
