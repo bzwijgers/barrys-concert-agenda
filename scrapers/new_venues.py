@@ -641,6 +641,7 @@ def scrape_venue(name, maximum=500):
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futures={ex.submit(read,url):url for url in found}
         for future in as_completed(futures):
+            url = futures[future]
             try:
                 item=future.result()
                 if item:
