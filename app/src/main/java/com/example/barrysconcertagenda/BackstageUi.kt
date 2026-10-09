@@ -41,6 +41,10 @@ object BackstageColors {
     val pink = Color(0xFFFF719D)
     val lime = Color(0xFFD5F378)
     val subtle = Color(0xFFA9B8D0)
+    // Soft slate-blue for date dividers; no fluorescent green against pink titles.
+    val date = Color(0xFFB5C4DB)
+    // Result counts are supporting information, not a second accent colour.
+    val resultCount = Color(0xFFE4EAF3)
 }
 
 @Composable
