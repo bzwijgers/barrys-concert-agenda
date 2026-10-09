@@ -5,6 +5,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.test.assertDoesNotExist
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -98,21 +99,25 @@ class BackstageNavigationUiTest {
         compose.onNodeWithContentDescription("Ontdek").assertIsSelected()
     }
 
-    @Test fun startPhotoCoversFullPageAndSurvivesTabSwitch() {
+    @Test fun originalPhotoAppearsOnlyOnInfoPageAndFillsScreen() {
         compose.onNodeWithContentDescription("Barry's concert agenda").performClick()
+        // Home and Discover are intentionally plain, not photo-backed.
+        compose.onNodeWithTag("backstage-fullscreen-start-photo").assertDoesNotExist()
+        compose.onNodeWithContentDescription("Ontdek").performClick()
+        compose.onNodeWithTag("backstage-fullscreen-start-photo").assertDoesNotExist()
+        // In V3 the photo is shown only underneath Info, edge-to-edge,
+        // with lavender text directly over the picture (without a card).
+        compose.onNodeWithContentDescription("Meer").performClick()
+        compose.onNodeWithText("ⓘ   Info en concertzalen").performClick()
         val screen = compose.onRoot().getUnclippedBoundsInRoot()
         val photo = compose.onNodeWithTag("backstage-fullscreen-start-photo")
             .assertExists()
             .getUnclippedBoundsInRoot()
-        assertTrue(
-            "Photo should span full screen width",
-            (photo.right - photo.left) >= (screen.right - screen.left) * 0.98f
-        )
-        assertTrue(
-            "Photo should span full screen height",
-            (photo.bottom - photo.top) >= (screen.bottom - screen.top) * 0.98f
-        )
-        compose.onNodeWithContentDescription("Ontdek").performClick()
-        compose.onNodeWithTag("backstage-fullscreen-start-photo").assertExists()
+        assertTrue("Photo should span full screen width",
+            (photo.right - photo.left) >= (screen.right - screen.left) * 0.98f)
+        assertTrue("Photo should span full screen height",
+            (photo.bottom - photo.top) >= (screen.bottom - screen.top) * 0.98f)
+        compose.onNodeWithContentDescription("Agenda").performClick()
+        compose.onNodeWithTag("backstage-fullscreen-start-photo").assertDoesNotExist()
     }
 }
