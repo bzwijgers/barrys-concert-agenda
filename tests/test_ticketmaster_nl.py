@@ -54,6 +54,28 @@ class TicketmasterTests(unittest.TestCase):
                              today="2026-10-10")
         )
 
+    def test_missing_afas_live_venue_name_restored_from_official_venue_page(self):
+        main_show = event(
+            name="Tokio Hotel - ARENA TOUR 2026",
+            venue="AFAS Live", city="Amsterdam",
+            when="2026-11-04",
+        )
+        main_show["_embedded"]["venues"][0]["name"] = None
+        main_show["_embedded"]["venues"][0]["url"] = (
+            "https://www.ticketmaster.nl/venue/afas-live-amsterdam-tickets/afas/107"
+        )
+        self.assertEqual(event_to_concert(main_show, today="2026-10-10")["venue"], "AFAS Live")
+        main_show["_embedded"]["venues"][0]["url"] = ""
+        self.assertIsNone(event_to_concert(main_show, today="2026-10-10"))
+
+    def test_null_name_premium_venue_still_excluded(self):
+        show = event(name="Jill Scott", venue="AFAS Live Sky Lounge", city="Amsterdam")
+        show["_embedded"]["venues"][0]["name"] = None
+        show["_embedded"]["venues"][0]["url"] = (
+            "https://www.ticketmaster.nl/venue/afas-live-sky-lounge-amsterdam-tickets/afassky/107"
+        )
+        self.assertIsNone(event_to_concert(show, today="2026-10-10"))
+
     def test_dutch_festival_classified_outside_music_is_included(self):
         bospop = event(name="Bospop 2027 - weekend",
                        when="2027-07-09", venue="Bospop Festivalterrein",
