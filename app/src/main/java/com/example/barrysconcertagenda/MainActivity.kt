@@ -945,8 +945,12 @@ fun ConcertApp() {
                                         Card(
                                             modifier = Modifier.fillMaxWidth()
                                                 .clickable {
-                                                    if (targetTab == 11) mySection = 3
-                                                    selectedTab = targetTab
+                                                    if (targetTab == 2) {
+                                                        mySection = 2
+                                                        selectedTab = 11
+                                                    } else {
+                                                        selectedTab = targetTab
+                                                    }
                                                 }
                                         ) {
                                             Text(
