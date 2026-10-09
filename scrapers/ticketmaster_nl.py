@@ -31,11 +31,18 @@ _NEXT_API_REQUEST = 0.0
 _MIN_REQUEST_INTERVAL_SECONDS = 0.65
 # Extra ticket products, parking and loge seats are NOT additional concerts.
 TICKET_PRODUCT = re.compile(
-    r"\b(?:premium seats?|platinum tickets?|vip(?:-| )?(?:tickets?|package|arrangement)?|"
+    r"\b(?:premium seats?|platinum tickets?|venue premium packages?|"
+    r"vip(?:-| )?(?:tickets?|package|arrangement)?|sky lounge|"
     r"loge|meet\s*(?:&|and)\s*greet|hospitality|parking|parkeer(?:ticket|kaart|plek)|"
     r"upgrades?|lockers?|fast\s*lane|early\s*entry|rolstoelplaats|"
     r"membership|lidmaatschap|club\s*card|jaarkaart)\b",
     re.I,
+)
+# These are hospitality product locations, not stages. Verified in the
+# official Ticketmaster venue listings (Club=Venue Premium Packages,
+# Sky Lounge=separate paid lounge products).
+UPSSELL_VENUE = re.compile(
+    r"\b(?:ziggo dome club|afas live (?:sky lounge|loge))\b", re.I
 )
 CANCELLED = {"cancelled", "canceled", "postponed", "rescheduled"}
 GENERIC_NAME = {"", "concert", "muziek", "unknown"}
@@ -171,7 +178,7 @@ def event_to_concert(event, today=None):
         return None
     venue = (v.get("name") or "").strip()
     city = ((v.get("city") or {}).get("name") or "").strip()
-    if not venue or not city:
+    if not venue or not city or UPSSELL_VENUE.search(venue):
         return None
     start = ((event.get("dates") or {}).get("start") or {})
     day = start.get("localDate") or ""
