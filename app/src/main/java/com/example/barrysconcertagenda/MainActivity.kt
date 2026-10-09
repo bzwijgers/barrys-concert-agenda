@@ -579,10 +579,11 @@ fun ConcertApp() {
                     label = { Text("Favorieten", fontSize = 10.sp) }
                 )
                 NavigationBarItem(
-                    selected = selectedTab == 11 && mySection != 2,
-                    onClick = { mySection = 3; selectedTab = 11 },
-                    icon = { Text("🎟", fontSize = 20.sp) },
-                    label = { Text("Tickets", fontSize = 10.sp) }
+                    selected = selectedTab in setOf(4, 5, 7, 8) ||
+                        (selectedTab == 11 && mySection != 2),
+                    onClick = { searchExpanded = false; selectedTab = 8 },
+                    icon = { Text("⋯", fontSize = 23.sp) },
+                    label = { Text("Meer", fontSize = 10.sp) }
                 )
             }
         }
@@ -601,21 +602,21 @@ fun ConcertApp() {
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Column(modifier = Modifier.weight(1f)) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text("BARRY'S", fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
-                        Text(" / LIVE", color = BackstageColors.pink,
-                            fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
-                    }
-                    Text("Concert agenda  🇳🇱 / 🇧🇪", fontSize = 10.sp,
-                        color = BackstageColors.subtle)
-                }
+                Text(
+                    "Barry's Concerten",
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    modifier = Modifier.weight(1f, fill = false)
+                )
+                Spacer(Modifier.width(8.dp))
+                NetherlandsFlag()
+                Spacer(Modifier.width(5.dp))
+                BelgiumFlag()
+                Spacer(Modifier.weight(1f))
                 IconButton(onClick = { searchExpanded = !searchExpanded }) {
                     Text(if (searchExpanded) "×" else "⌕",
-                        fontSize = 27.sp, color = BackstageColors.pink)
-                }
-                IconButton(onClick = { searchExpanded = false; selectedTab = 8 }) {
-                    Text("⋯", fontSize = 25.sp, color = BackstageColors.lime)
+                        fontSize = 26.sp, color = BackstageColors.pink)
                 }
             }
 
@@ -929,7 +930,8 @@ fun ConcertApp() {
                                         style = MaterialTheme.typography.bodySmall)
                                     listOf(
                                         4 to "♣   Rotown Clubkaart",
-                                        11 to "🎟   Tickets, favorieten en archief",
+                                        11 to "🎟   Mijn tickets",
+                                        5 to "▤   Archief",
                                         7 to "ⓘ   Info en concertzalen"
                                     ).forEach { (targetTab, title) ->
                                         Card(
@@ -994,7 +996,7 @@ fun ConcertApp() {
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
-                                    Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via Bron open je de bijbehorende evenementpagina van de vermelde bron.")
+                                    Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via de aanklikbare zaalnaam open je de betreffende evenementpagina.")
                                     Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall)
                                 }
                             }
@@ -1233,21 +1235,46 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
         Column(modifier = Modifier.padding(horizontal = 15.dp, vertical = 12.dp)) {
             Text(concert.artist, fontWeight = FontWeight.ExtraBold,
                 fontSize = 16.sp, maxLines = 2)
-            Text(buildString {
-                append(concert.venue)
-                if (concert.city.isNotBlank() && !concert.venue.contains(concert.city, ignoreCase = true)) {
-                    append(" · " + concert.city)
-                }
-                if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country))
-            }, style = MaterialTheme.typography.bodyMedium)
+            // The venue name itself links to the event page. No separate
+            // "Bron" row or misleading source-label hyperlink.
+            val context = LocalContext.current
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = concert.venue,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = if (concert.url.isNotBlank())
+                        BackstageColors.pink else MaterialTheme.colorScheme.onSurface,
+                    textDecoration = if (concert.url.isNotBlank())
+                        androidx.compose.ui.text.style.TextDecoration.Underline else null,
+                    maxLines = 2,
+                    modifier = Modifier.weight(1f, fill = false).then(
+                        if (concert.url.isNotBlank()) Modifier.clickable {
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url)))
+                        } else Modifier
+                    )
+                )
+                Text(
+                    text = buildString {
+                        if (concert.city.isNotBlank() &&
+                            !concert.venue.contains(concert.city, ignoreCase = true)) {
+                            append(" · " + concert.city)
+                        }
+                        if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country))
+                    },
+                    style = MaterialTheme.typography.bodyMedium,
+                    maxLines = 1
+                )
+            }
             val displayDate = parseConcertDate(concert.date)?.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("nl-NL"))) ?: concert.date
             Text(if (concert.time.isBlank()) displayDate else "$displayDate · ${concert.time}",
                 style = MaterialTheme.typography.bodySmall,
                 color = BackstageColors.subtle)
             if (concert.clubCard && showClubCardLabel) Text("ROTOWN CLUBKAART", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                val context = LocalContext.current
-                Text(text = if (concert.source.isBlank()) "" else "Bron: ${concert.source.replace("PAARD", "Paard")}", fontSize = 10.sp, maxLines = 1, color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = if (concert.url.isNotBlank()) androidx.compose.ui.text.style.TextDecoration.Underline else null, modifier = Modifier.weight(1f).then(if (concert.url.isNotBlank()) Modifier.clickable { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url))) } else Modifier))
+                Spacer(modifier = Modifier.weight(1f))
                 TextButton(
                     modifier = Modifier.size(38.dp),
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
