@@ -58,7 +58,7 @@ object BackstageSelectors {
         }
         val position = order.indexOf(active)
         if (position == -1) return null
-        val next = position + if (towardsNext) 1 else -1
+        val next = position + (if (towardsNext) 1 else -1)
         if (next !in order.indices) return null
         return when (order[next]) {
             3 -> 11 to 3
