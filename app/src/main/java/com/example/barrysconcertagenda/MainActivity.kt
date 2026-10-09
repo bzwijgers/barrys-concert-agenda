@@ -53,6 +53,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -65,6 +66,8 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -185,6 +188,21 @@ fun ConcertApp() {
 
     var refreshVersion by remember { mutableStateOf(0) }
     var lastChecked by remember { mutableStateOf(ConcertStorage.getLastCheck(context)) }
+    var lastRefreshAttempt by remember { mutableStateOf(System.currentTimeMillis()) }
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner, loading, lastRefreshAttempt) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME && !loading &&
+                System.currentTimeMillis() - lastRefreshAttempt > 60L * 60L * 1000L
+            ) {
+                // Fetch fresh published concerts when returning after an hour,
+                // including when the app stayed alive through the 07:00 update.
+                refreshVersion += 1
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
     var searchExpanded by remember { mutableStateOf(false) }
     var searchQuery by remember { mutableStateOf("") }
     var searchDateFrom by remember { mutableStateOf<LocalDate?>(null) }
@@ -218,7 +236,7 @@ fun ConcertApp() {
     }
 
     LaunchedEffect(refreshVersion) {
-
+        lastRefreshAttempt = System.currentTimeMillis()
         loading = true
 
         statusText =
