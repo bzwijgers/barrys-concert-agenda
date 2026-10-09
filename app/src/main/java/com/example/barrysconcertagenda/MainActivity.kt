@@ -573,16 +573,16 @@ fun ConcertApp() {
                     label = { Text("Agenda", fontSize = 10.sp) }
                 )
                 NavigationBarItem(
-                    selected = selectedTab == 11,
-                    onClick = { selectedTab = 11 },
+                    selected = selectedTab == 11 && mySection == 2,
+                    onClick = { mySection = 2; selectedTab = 11 },
                     icon = { Text("♥", fontSize = 20.sp) },
-                    label = { Text("Mijn", fontSize = 10.sp) }
+                    label = { Text("Favorieten", fontSize = 10.sp) }
                 )
                 NavigationBarItem(
-                    selected = selectedTab in setOf(4, 5, 7, 8),
-                    onClick = { selectedTab = 8 },
-                    icon = { Text("⋯", fontSize = 23.sp) },
-                    label = { Text("Meer", fontSize = 10.sp) }
+                    selected = selectedTab == 11 && mySection != 2,
+                    onClick = { mySection = 3; selectedTab = 11 },
+                    icon = { Text("🎟", fontSize = 20.sp) },
+                    label = { Text("Tickets", fontSize = 10.sp) }
                 )
             }
         }
@@ -613,6 +613,9 @@ fun ConcertApp() {
                 IconButton(onClick = { searchExpanded = !searchExpanded }) {
                     Text(if (searchExpanded) "×" else "⌕",
                         fontSize = 27.sp, color = BackstageColors.pink)
+                }
+                IconButton(onClick = { searchExpanded = false; selectedTab = 8 }) {
+                    Text("⋯", fontSize = 25.sp, color = BackstageColors.lime)
                 }
             }
 
@@ -926,7 +929,7 @@ fun ConcertApp() {
                                         style = MaterialTheme.typography.bodySmall)
                                     listOf(
                                         4 to "♣   Rotown Clubkaart",
-                                        11 to "♥   Mijn concerten en archief",
+                                        11 to "🎟   Tickets, favorieten en archief",
                                         7 to "ⓘ   Info en concertzalen"
                                     ).forEach { (targetTab, title) ->
                                         Card(
