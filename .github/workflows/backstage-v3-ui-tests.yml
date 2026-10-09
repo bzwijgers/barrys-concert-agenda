@@ -57,13 +57,16 @@ jobs:
           script: |
             set -e
             ./gradlew --no-daemon --stacktrace :app:connectedDebugAndroidTest
-            # Also capture real emulator pixels for visual review. These are
-            # read-only screenshots; the APK remains tested through Android Studio.
+            # Gradle may uninstall the APK after instrumentation. Explicitly
+            # reinstall it before trying to launch it for visual screenshots.
+            ./gradlew --no-daemon :app:installDebug
+            # Capture actual emulator pixels for visual review. No interaction
+            # with V1 and no change to the Android Studio installation workflow.
             adb shell am force-stop com.example.barrysconcertagenda.backstage || true
             adb shell am start -n com.example.barrysconcertagenda.backstage/com.example.barrysconcertagenda.MainActivity
             sleep 4
             adb shell input tap 540 1100
-            sleep 14
+            sleep 22
             mkdir -p backstage-v3-screenshots
             adb shell screencap -p /sdcard/backstage-home.png
             adb pull /sdcard/backstage-home.png backstage-v3-screenshots/home.png
