@@ -7,6 +7,7 @@ from scrapers.new_venues import (
     deduplicate_doornroosje_festival_days,
     is_nonconcert_listing,
     klokgebouw_listing_cards,
+    parse_event,
     scrape_venue,
 )
 
@@ -57,6 +58,26 @@ class VenueQualityTests(unittest.TestCase):
         self.assertEqual(events[0]["date"], "2026-11-20")
         self.assertEqual(events[0]["time"], "")
         self.assertEqual(parse.call_count, 1)
+
+    def test_spot_start_programma_is_show_time_not_foyer_opening(self):
+        html = (
+            '<html><head>'
+            '<meta property="og:title" content="Ed O’Brien">'
+            '<meta property="og:description" content="woensdag 14 oktober 2026">'
+            '</head><body>'
+            '<h1>Ed O’Brien</h1><p>Woensdag 14 oktober 2026</p>'
+            '<p>19:30 foyerdeuren open</p>'
+            '<p>20:30 start programma</p>'
+            '<p>20:30 start of event</p>'
+            '</body></html>'
+        )
+        event = parse_event(
+            html, "https://www.spotgroningen.nl/programma/ed-obrien",
+            "SPOT Groningen", "Groningen",
+        )
+        self.assertIsNotNone(event)
+        self.assertEqual(event["date"], "2026-10-14")
+        self.assertEqual(event["time"], "20:30")
 
     def test_gebouw_t_primary_aanvang_overrides_midnight_metadata(self):
         html = (
