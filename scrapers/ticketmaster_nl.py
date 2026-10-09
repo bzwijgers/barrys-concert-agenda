@@ -52,6 +52,16 @@ def _venue_name(value):
         return "ziggo dome"
     if name.startswith("tivolivredenburg"):
         return "tivolivredenburg"
+    if name.startswith("melkweg"):
+        return "melkweg"
+    if name.startswith("paard ") or name == "paard":
+        return "paard"
+    if name.startswith("metropool"):
+        return "metropool"
+    if name.startswith("paradiso noord") or name.startswith("paradiso tolhuistuin"):
+        return "tolhuistuin"
+    if name.startswith("paradiso"):
+        return "paradiso"
     if name.startswith("spot de oosterpoort") or name == "de oosterpoort":
         return "de oosterpoort"
     return name
