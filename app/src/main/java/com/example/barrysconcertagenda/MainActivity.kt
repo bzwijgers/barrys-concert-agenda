@@ -559,7 +559,7 @@ fun ConcertApp() {
         listState.scrollToItem(0)
     }
 
-    // The original splash artwork becomes a subtle, pale full-page background.
+    // Keep the original splash artwork visible and recognisable while the concert cards remain readable.
     // Do not use the example screenshot as an app asset.
     val monochromePhoto = remember {
         ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0f) })
@@ -579,21 +579,21 @@ fun ConcertApp() {
             painter = painterResource(id = R.drawable.barrys_concerten_splash),
             contentDescription = null,
             contentScale = androidx.compose.ui.layout.ContentScale.Crop,
-            alpha = 0.65f,
+            alpha = 0.95f,
             colorFilter = monochromePhoto,
             modifier = Modifier
                 .fillMaxSize()
                 .graphicsLayer(scaleX = 1.09f, scaleY = 1.09f)
-                .blur(7.dp)
+                .blur(2.dp)
                 .testTag("backstage-fullscreen-start-photo")
         )
         Box(
             modifier = Modifier.fillMaxSize().background(
                 Brush.verticalGradient(
                     listOf(
-                        Color(0x8AFFFFFF),
-                        Color(0xA1F9FAFB),
-                        Color(0xAEF7F8FA)
+                        Color(0x4AFFFFFF),
+                        Color(0x5CF9FAFB),
+                        Color(0x68F7F8FA)
                     )
                 )
             )
