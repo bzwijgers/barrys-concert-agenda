@@ -8,7 +8,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -56,9 +55,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.text.style.TextOverflow
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.launch
@@ -159,7 +155,6 @@ fun ConcertApp() {
     var selectedTab by remember {
         mutableStateOf(1)
     }
-    var moreMenuExpanded by remember { mutableStateOf(false) }
 
     var searchQuery by remember { mutableStateOf("") }
     var searchDateFrom by remember { mutableStateOf<LocalDate?>(null) }
@@ -536,10 +531,10 @@ fun ConcertApp() {
         normalizedSearch.isNotBlank() || searchDateFrom != null || searchDateTo != null || searchVenue != null
 
     val searchedConcerts =
-        if (selectedTab == 7) {
-            emptyList()
+        if (selectedTab != 6) {
+            tabConcerts
         } else if (!hasSearchCriteria) {
-            if (selectedTab == 6) emptyList() else tabConcerts
+            emptyList()
         } else {
             tabConcerts.filter { concert ->
                 val textMatches =
@@ -571,87 +566,85 @@ fun ConcertApp() {
         bottomBar = {
 
             NavigationBar {
-                // Five primary tabs, plus overflow for Search, Archive and Info.
+
                 NavigationBarItem(
-                    selected = selectedTab == 1,
-                    onClick = { selectedTab = 1 },
-                    icon = { Text("⌂", fontSize = 24.sp) }
+                    selected =
+                        selectedTab == 0,
+                    onClick = {
+                        selectedTab = 0
+                    },
+                    icon = {
+                        Text("✦", fontSize = 20.sp)
+                    },
                 )
+
                 NavigationBarItem(
-                    selected = selectedTab == 0,
-                    onClick = { selectedTab = 0 },
-                    icon = { Text("✦", fontSize = 21.sp) }
+                    selected =
+                        selectedTab == 1,
+                    onClick = {
+                        selectedTab = 1
+                    },
+                    icon = {
+                        Text("☷", fontSize = 20.sp)
+                    },
                 )
+
                 NavigationBarItem(
-                    selected = selectedTab == 4,
-                    onClick = { selectedTab = 4 },
-                    icon = { Text("♣", fontSize = 21.sp) }
+                    selected =
+                        selectedTab == 2,
+                    onClick = {
+                        selectedTab = 2
+                    },
+                    icon = {
+                        Text("♥", fontSize = 20.sp)
+                    },
                 )
+
+                NavigationBarItem(
+                    selected =
+                        selectedTab == 4,
+                    onClick = {
+                        selectedTab = 4
+                    },
+                    icon = {
+                        Text("♣", fontSize = 20.sp)
+                    },
+                )
+
                 NavigationBarItem(
                     selected = selectedTab == 3,
                     onClick = { selectedTab = 3 },
                     icon = { Text("🎟", fontSize = 20.sp, color = Color(0xFF2E7D32)) }
                 )
+
                 NavigationBarItem(
-                    selected = selectedTab == 2,
-                    onClick = { selectedTab = 2 },
-                    icon = { Text("♥", fontSize = 21.sp) }
+                    selected = selectedTab == 5,
+                    onClick = { selectedTab = 5 },
+                    icon = { Text("▤", fontSize = 20.sp) }
                 )
+
                 NavigationBarItem(
-                    selected = selectedTab in listOf(5, 6, 7),
-                    onClick = { moreMenuExpanded = true },
-                    icon = {
-                        Box {
-                            Text("⋯", fontSize = 24.sp)
-                            DropdownMenu(
-                                expanded = moreMenuExpanded,
-                                onDismissRequest = { moreMenuExpanded = false }
-                            ) {
-                                DropdownMenuItem(
-                                    text = { Text("Zoeken") },
-                                    onClick = { selectedTab = 6; moreMenuExpanded = false }
-                                )
-                                DropdownMenuItem(
-                                    text = { Text("Archief") },
-                                    onClick = { selectedTab = 5; moreMenuExpanded = false }
-                                )
-                                DropdownMenuItem(
-                                    text = { Text("Info") },
-                                    onClick = { selectedTab = 7; moreMenuExpanded = false }
-                                )
-                            }
-                        }
-                    }
+                    selected = selectedTab == 6,
+                    onClick = { selectedTab = 6 },
+                    icon = { Text("⌕", fontSize = 20.sp) }
+                )
+
+                NavigationBarItem(
+                    selected = selectedTab == 7,
+                    onClick = { selectedTab = 7 },
+                    icon = { Text("ⓘ", fontSize = 20.sp) }
                 )
             }
         }
     ) { innerPadding ->
 
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-                .pointerInput(selectedTab) {
-                    var horizontalDrag = 0f
-                    detectHorizontalDragGestures(
-                        onHorizontalDrag = { change, dragAmount ->
-                            horizontalDrag += dragAmount
-                            change.consume()
-                        },
-                        onDragEnd = {
-                            val tabOrder = listOf(1, 0, 4, 3, 2, 6, 5, 7)
-                            val currentIndex = tabOrder.indexOf(selectedTab)
-                            if (kotlin.math.abs(horizontalDrag) > 80.dp.toPx()) {
-                                val nextIndex = if (horizontalDrag < 0f) currentIndex + 1 else currentIndex - 1
-                                if (nextIndex in tabOrder.indices) {
-                                    selectedTab = tabOrder[nextIndex]
-                                }
-                            }
-                            horizontalDrag = 0f
-                        },
-                        onDragCancel = { horizontalDrag = 0f }
+            modifier =
+                Modifier
+                    .fillMaxSize()
+                    .padding(
+                        innerPadding
                     )
-                }
         ) {
 
             Row(
@@ -659,7 +652,7 @@ fun ConcertApp() {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Barry's Concerten",
+                    text = "Barry's concert agenda",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1
@@ -725,9 +718,7 @@ fun ConcertApp() {
                     onDateSelected = { picked ->
                         if (datePickerTarget == "from") {
                             searchDateFrom = picked
-                            // A single starting date means every concert from that day onward.
-                            searchDateTo = null
-                            selectedTab = 1
+                            if (searchDateTo != null && picked.isAfter(searchDateTo)) searchDateTo = picked
                         } else {
                             searchDateTo = picked
                             if (searchDateFrom != null && picked.isBefore(searchDateFrom)) searchDateFrom = picked
@@ -785,7 +776,10 @@ fun ConcertApp() {
                                         FontWeight.Bold
                                 )
 
-                                // Keep the header height the same as on the Home tab.
+                                Text(
+                                    "Nieuw in de afgelopen 7 dagen",
+                                    style = MaterialTheme.typography.labelSmall
+                                )
                             }
 
                             1 -> {
@@ -820,10 +814,9 @@ fun ConcertApp() {
                             4 -> {
 
                                 Text(
-                                    "${visibleConcerts.size} Rotown Clubkaart-concerten",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 14.sp,
-                                    maxLines = 1
+                                    "${visibleConcerts.size} Rotown Clubkaart concerten",
+                                    fontWeight =
+                                        FontWeight.Bold
                                 )
 
                             }
@@ -911,16 +904,6 @@ fun ConcertApp() {
                                     10.dp
                                 )
                         )
-                    }
-
-                    if (selectedTab == 0 && visibleConcerts.isEmpty()) {
-                        item {
-                            Text(
-                                "Er zijn momenteel geen nieuwe concerten in de afgelopen 7 dagen.",
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                style = MaterialTheme.typography.bodyMedium
-                            )
-                        }
                     }
 
                     items(
@@ -1087,7 +1070,7 @@ fun TicketStatusIcon(display: TicketDisplay) {
 
 @Composable
 fun NetherlandsFlag() {
-    Column(modifier = Modifier.width(18.dp).height(12.dp)) {
+    Column(modifier = Modifier.width(22.dp).height(15.dp)) {
         Box(Modifier.weight(1f).fillMaxWidth().background(Color(0xFFAE1C28)))
         Box(Modifier.weight(1f).fillMaxWidth().background(Color.White))
         Box(Modifier.weight(1f).fillMaxWidth().background(Color(0xFF21468B)))
@@ -1096,7 +1079,7 @@ fun NetherlandsFlag() {
 
 @Composable
 fun BelgiumFlag() {
-    Row(modifier = Modifier.width(18.dp).height(12.dp)) {
+    Row(modifier = Modifier.width(22.dp).height(15.dp)) {
         Box(Modifier.weight(1f).fillMaxSize().background(Color.Black))
         Box(Modifier.weight(1f).fillMaxSize().background(Color(0xFFFDE100)))
         Box(Modifier.weight(1f).fillMaxSize().background(Color(0xFFEF3340)))
@@ -1120,74 +1103,26 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
     if (confirmFavoriteRemoval) AlertDialog(onDismissRequest = { confirmFavoriteRemoval = false }, title = { Text("Favoriet verwijderen?") }, text = { Text("Wil je dit concert uit je favorieten verwijderen?") }, confirmButton = { TextButton(onClick = { confirmFavoriteRemoval = false; onFavoriteClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmFavoriteRemoval = false }) { Text("Annuleren") } })
     if (confirmAttendingRemoval) AlertDialog(onDismissRequest = { confirmAttendingRemoval = false }, title = { Text("Concert verwijderen uit Tickets?") }, text = { Text("Wil je aangeven dat je niet meer naar dit concert gaat?") }, confirmButton = { TextButton(onClick = { confirmAttendingRemoval = false; onAttendingClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmAttendingRemoval = false }) { Text("Annuleren") } })
     Card(modifier = Modifier.fillMaxWidth()) {
-        Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)) {
-            Text(
-                text = concert.artist,
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp,
-                color = Color(0xFFB02F40),
-                textDecoration = TextDecoration.Underline,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            Text(
-                text = buildString {
-                    append(concert.venue)
-                    if (concert.city.isNotBlank() && !concert.venue.contains(concert.city, ignoreCase = true)) {
-                        append(" · " + concert.city)
-                    }
-                    if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country))
-                },
-                fontSize = 13.sp,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            val displayDate = parseConcertDate(concert.date)
-                ?.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("nl-NL")))
-                ?: concert.date
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = if (concert.time.isBlank()) displayDate else "$displayDate · ${concert.time}",
-                    fontSize = 13.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 1,
-                    modifier = Modifier.weight(1f)
-                )
+        Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+            Text(concert.artist, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium, maxLines = 1)
+            Text(buildString { append(concert.venue); if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country)) }, style = MaterialTheme.typography.bodyMedium)
+            val displayDate = parseConcertDate(concert.date)?.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("nl-NL"))) ?: concert.date
+            Text(if (concert.time.isBlank()) displayDate else "$displayDate · ${concert.time}", style = MaterialTheme.typography.bodyMedium)
+            if (concert.clubCard && showClubCardLabel) Text("ROTOWN CLUBKAART", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
+            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                val context = LocalContext.current
+                Text(text = if (concert.source.isBlank()) "" else "Bron: ${concert.source.replace("PAARD", "Paard")}", fontSize = 10.sp, maxLines = 1, color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant, textDecoration = if (concert.url.isNotBlank()) androidx.compose.ui.text.style.TextDecoration.Underline else null, modifier = Modifier.weight(1f).then(if (concert.url.isNotBlank()) Modifier.clickable { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url))) } else Modifier))
                 TextButton(
-                    modifier = Modifier.size(34.dp),
+                    modifier = Modifier.size(38.dp),
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
                     onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }
                 ) {
                     TicketStatusIcon(display = ticketDisplay)
                 }
                 if (showFavorite) {
-                    TextButton(
-                        modifier = Modifier.size(34.dp),
-                        contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
-                        onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }
-                    ) {
-                        Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp)
-                    }
+                    TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
                 }
             }
-            if (concert.clubCard && showClubCardLabel) {
-                Text("ROTOWN CLUBKAART", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
-            }
-            val context = LocalContext.current
-            Text(
-                text = if (concert.source.isBlank()) "" else "Bron: ${concert.source.replace("PAARD", "Paard")}",
-                fontSize = 10.sp,
-                maxLines = 1,
-                color = if (concert.url.isNotBlank()) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
-                textDecoration = if (concert.url.isNotBlank()) TextDecoration.Underline else null,
-                modifier = if (concert.url.isNotBlank()) Modifier.clickable {
-                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url)))
-                } else Modifier
-            )
             if (concert.isFavorite && verifiedTicketSwapUrl(concert).isBlank() && ticketSwapMessage.isNotBlank()) {
                 Text(
                     text = ticketSwapMessage,
