@@ -1101,12 +1101,19 @@ fun ConcertApp() {
                             }
 
                             7 -> {
-                                // Info is the only tab showing the washed-out start photo.
-                                // Force a dark ink colour; otherwise the theme can tint text purple.
-                                CompositionLocalProvider(LocalContentColor provides BackstageColors.pageText) {
-                                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                // The original photo stays visible around an easy-to-read
+                                // dark inset; all Info text uses a soft lavender colour.
+                                val infoTextColor = Color(0xFFE6D5FA)
+                                CompositionLocalProvider(LocalContentColor provides infoTextColor) {
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .background(Color(0xDD262039), RoundedCornerShape(16.dp))
+                                        .padding(18.dp),
+                                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                                ) {
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold,
-                                        fontSize = 18.sp, color = BackstageColors.pageText)
+                                        fontSize = 18.sp, color = infoTextColor)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Concertzalen", fontWeight = FontWeight.Bold)
                                     val venueCities = mapOf(
@@ -1153,9 +1160,9 @@ fun ConcertApp() {
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
                                     Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via de aanklikbare zaalnaam open je de betreffende evenementpagina.")
                                     Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall,
-                                        color = BackstageColors.pageText)
+                                        color = infoTextColor)
                                 }
-                                } // Info-only dark text colour
+                                } // Lavender Info text on dark translucent panel
                             }
                         }
 
