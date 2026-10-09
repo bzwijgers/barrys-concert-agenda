@@ -43,8 +43,12 @@ object BackstageColors {
     val subtle = Color(0xFFA9B8D0)
     // Soft slate-blue for date dividers; no fluorescent green against pink titles.
     val date = Color(0xFFB5C4DB)
-    // Result counts are supporting information, not a second accent colour.
-    val resultCount = Color(0xFFE4EAF3)
+    // Legible labels over the faded light photo; concert cards stay dark.
+    val pageText = Color(0xFF263543)
+    val pageMuted = Color(0xFF526272)
+    val pageDate = Color(0xFF526274)
+    val pageAccent = Color(0xFF9E365A)
+    val resultCount = Color(0xFF485868)
 }
 
 @Composable
@@ -171,7 +175,7 @@ fun BackstageCalendar(
         Row(modifier = Modifier.fillMaxWidth()) {
             listOf("MA", "DI", "WO", "DO", "VR", "ZA", "ZO").forEach { day ->
                 Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
-                    Text(day, fontSize = 10.sp, color = BackstageColors.subtle)
+                    Text(day, fontSize = 10.sp, color = BackstageColors.pageMuted)
                 }
             }
         }
@@ -201,7 +205,11 @@ fun BackstageCalendar(
                         if (valid) {
                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                 Text(number.toString(), fontSize = 13.sp,
-                                    color = if (chosen) Color(0xFF192633) else Color.White,
+                                    color = when {
+                                        chosen -> Color(0xFF192633)
+                                        hasEvents -> Color.White
+                                        else -> BackstageColors.pageText
+                                    },
                                     fontWeight = if (chosen) FontWeight.Bold else FontWeight.Normal)
                                 if (hasEvents) Text("•", fontSize = 10.sp, lineHeight = 10.sp,
                                     color = if (chosen) Color(0xFF192633) else BackstageColors.pink)
