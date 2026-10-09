@@ -1,0 +1,47 @@
+name: Check feed quality and duplicate performances
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scrapers/feed_quality.py"
+      - "scrapers/discovery.py"
+      - "scraper.py"
+      - "tests/test_feed_quality.py"
+      - "tests/test_first_discovery.py"
+      - ".github/workflows/feed-quality-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile full scraper
+        run: python -m compileall -q scraper.py scrapers tests
+      - name: Test cross-source dedup and seven-day discovery history
+        run: |
+          python -m unittest discover -s tests -p "test_feed_quality.py" -v
+          python -m unittest discover -s tests -p "test_first_discovery.py" -v
+          python -m unittest discover -s tests -p "test_ticketmaster_nl.py" -v
+      - name: Audit existing published feed for known cross-site repeats
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from scrapers.feed_quality import deduplicate_performances
+          with open("concerts.json", encoding="utf-8") as handle:
+              shows = json.load(handle)
+          kept, duplicate = deduplicate_performances(shows)
+          print("Existing published:", len(shows))
+          print("Potential repeated performances to remove on next update:", len(duplicate))
+          print("Examples:", [(x["artist"], x["date"], x["venue"]) for x in duplicate[:16]])
+          if len(duplicate) > 90:
+              raise SystemExit("Unexpectedly high duplicate count: check matching rules")
+          PY
