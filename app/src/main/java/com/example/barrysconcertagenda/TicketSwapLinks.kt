@@ -17,10 +17,32 @@ internal object TicketSwapLinks {
     private const val ROBERT_JON_WEERT =
         "https://www.ticketswap.nl/concert-tickets/robert-jon-the-wreck-weert-poppodium-de-bosuil-2026-10-09-CZps3zUdhSJuXrEnxbCRp"
 
+    // Verified against the official dB's programme and TicketSwap event
+    // on 9 October 2026. TicketSwap lists only the headliner.
+    private const val LORDS_OF_ALTAMONT =
+        "https://www.ticketswap.nl/concert-tickets/lords-of-altamont-utrecht-dbs-oefenstudios-concertzaal-muziekcafe-2026-11-22-CdENvHWLHRMhVuoMG4LxW"
+
     // Both exceptions identify the complete event (date, venue, source URL).
     // The Apers are a co-headliner; their band name is not in the URL slug.
     internal fun directUrl(concert: Concert): String {
         val original = concert.url.trimEnd('/')
+
+        // Free-admission concert confirmed by Amare, 6 December 2026:
+        // there is no ticket to resell, regardless of imported URL spelling.
+        if (concert.date == "2026-12-06" &&
+            concert.artist.equals("Just Graduated: Marco Bernardi en Katrina Kabineca", ignoreCase = true) &&
+            concert.venue.equals("Amare", ignoreCase = true) &&
+            concert.city.equals("Den Haag", ignoreCase = true) &&
+            original == "https://www.podiuminfo.nl/concert/485136/Just-Graduated-Marco-Bernardi-en-Katrina-Kabineca/Amare"
+        ) return ""
+
+        if (concert.date == "2026-11-22" &&
+            concert.artist.equals("LORDS OF ALTAMONT + Sick Shooters", ignoreCase = true) &&
+            concert.venue.equals("dB's", ignoreCase = true) &&
+            concert.city.equals("Utrecht", ignoreCase = true) &&
+            original == "https://dbstudio.nl/event/lords-of-altamont"
+        ) return LORDS_OF_ALTAMONT
+
         if (concert.date == "2026-10-09" &&
             concert.artist.equals("The Apers", ignoreCase = true) &&
             concert.venue.equals("Rotown", ignoreCase = true) &&
