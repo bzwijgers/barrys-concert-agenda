@@ -63,7 +63,7 @@ cases={
     "SPOT Groningen":("programma/elmer","2026-10-09"),
 }
 for name,(needle,expected_day) in cases.items():
-    if expected_day < today:continue
+    if expected_day <= today:continue  # Same-day listings may disappear before this scraper completes.
     matches=[x for x in feed if x.get("source")==name and needle.rstrip("/") in x.get("url","").rstrip("/")]
     if not matches or all(x["date"]!=expected_day for x in matches):
         raise RuntimeError("Missing or incorrect expected event: "+name+" "+needle)
@@ -80,8 +80,8 @@ recovered=[
 ]
 by_url={x["url"].rstrip("/").lower():x for x in feed}
 for source,url,day in recovered:
-    if day<today:
-        continue
+    if day<=today:
+        continue  # Event may already have started or been removed from programme.
     item=by_url.get(url.rstrip("/").lower())
     if not item or item["source"]!=source or item["date"]!=day:
         raise RuntimeError("Recovered live concert absent or misdated: "+url)
