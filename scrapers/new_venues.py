@@ -365,7 +365,6 @@ class KlokgebouwAgendaCards(HTMLParser):
         super().__init__()
         self.base = base
         self.current = None
-        self.depth = 0
         self.cards = {}
 
     def handle_starttag(self, tag, attrs):
@@ -374,22 +373,18 @@ class KlokgebouwAgendaCards(HTMLParser):
             url = urljoin(self.base, unescape(data.get("href", "")))
             if (urlsplit(url).hostname or "").removeprefix("www.") == "klokgebouw.nl" and "/agenda/" in urlsplit(url).path:
                 self.current = [normalize_url(url), []]
-                self.depth = 1
                 return
-        if self.current is not None:
-            self.depth += 1
 
     def handle_endtag(self, tag):
-        if self.current is None:
+        if self.current is None or tag != "a":
             return
-        self.depth -= 1
-        if self.depth == 0:
+        if self.current is not None:
             key, parts = self.current
-            text = re.sub(r"\\s+", " ", " ".join(parts)).strip()
-            genre = re.search(r"\\b(Rock|Pop|Dance|Business|Retail|Public|Expo|Culture|Kennis)\\b", text, re.I)
+            text = re.sub(r"\s+", " ", " ".join(parts)).strip()
+            genre = re.search(r"\b(Rock|Pop|Dance|Business|Retail|Public|Expo|Culture|Kennis)\b", text, re.I)
             shown = re.search(
-                r"\\b(?:ma|di|wo|do|vr|za|zo)\\.?\\s*(\\d{1,2})\\s*"
-                r"(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)\\.?\\b",
+                r"\b(?:ma|di|wo|do|vr|za|zo)\.?\s*(\d{1,2})\s*"
+                r"(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)\.?\b",
                 text, re.I,
             )
             self.cards[key] = {
@@ -430,15 +425,15 @@ def deduplicate_doornroosje_festival_days(events):
     for event in events:
         url = urlsplit(event["url"]).path.lower().rstrip("/")
         if (event.get("source") == "Doornroosje"
-                and re.fullmatch(r"/event/soulcrusher-20\\d\\d(?:-\\d+)?", url)):
+                and re.fullmatch(r"/event/soulcrusher-20\d\d(?:-\d+)?", url)):
             key = (event["artist"].casefold().strip(),
                    event["date"], event["venue"].casefold().strip())
             old = retained.get(key)
             # Prefer the canonical unnumbered URL, not an arbitrary
             # fetch/concurrency order.
             if old is None or (
-                re.search(r"-\\d+$", url) is None
-                and re.search(r"-\\d+$", urlsplit(old["url"]).path.lower().rstrip("/")) is not None
+                re.search(r"-20\d\d-\d+$", url) is None
+                and re.search(r"-20\d\d-\d+$", urlsplit(old["url"]).path.lower().rstrip("/")) is not None
             ):
                 retained[key] = event
         else:
