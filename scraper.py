@@ -14,6 +14,7 @@ from scrapers.dbs import scrape_dbs
 from scrapers.ticketswap import enrich_ticketswap_urls
 from scrapers.new_venues import scrape_new_venues
 from scrapers.bird import scrape_bird
+from scrapers.ticketmaster_nl import scrape_ticketmaster_nl, merge_ticketmaster
 from scrapers.discovery import attach_first_found
 from scrapers.podiuminfo_venues import scrape_podiuminfo_venues
 
@@ -235,6 +236,26 @@ try:
 except Exception as error:
     print("ERNSTIGE BIRD LIVE FOUT:", str(error), flush=True)
 
+
+# ============================================================
+# TICKETMASTER NL - CONCERTEN / FESTIVALS (OFFICIELE API)
+# ============================================================
+# Keep official venue feeds first. New Ticketmaster shows are appended only
+# if date + city + venue + artist does not describe an existing concert.
+# The API key is a GitHub secret; no direct website scraping is performed.
+try:
+    ticketmaster_shows = scrape_ticketmaster_nl()
+    ticketmaster_unique, ticketmaster_duplicates = merge_ticketmaster(
+        all_concerts, ticketmaster_shows
+    )
+    all_concerts.extend(ticketmaster_unique)
+    print("Ticketmaster NL nieuw:", len(ticketmaster_unique),
+          "dubbele voorstellingen onderdrukt:", ticketmaster_duplicates,
+          flush=True)
+except Exception as error:
+    # A temporary TM API outage must NOT block updates from the official
+    # concert halls or wipe previously published data.
+    print("TICKETMASTER NL OVERGESLAGEN:", type(error).__name__, str(error)[:250], flush=True)
 
 # ============================================================
 # DUBBELEN VERWIJDEREN
