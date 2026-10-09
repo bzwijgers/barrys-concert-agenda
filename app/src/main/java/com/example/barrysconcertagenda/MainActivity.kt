@@ -1150,6 +1150,7 @@ fun ConcertApp() {
                                     ).forEach { (targetTab, title) ->
                                         Card(
                                             modifier = Modifier.fillMaxWidth()
+                                                .testTag("backstage-more-" + targetTab)
                                                 .clickable {
                                                     if (targetTab == 2) {
                                                         mySection = 2
