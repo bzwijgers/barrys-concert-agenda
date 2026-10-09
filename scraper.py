@@ -14,6 +14,7 @@ from scrapers.dbs import scrape_dbs
 from scrapers.ticketswap import enrich_ticketswap_urls
 from scrapers.new_venues import scrape_new_venues
 from scrapers.bird import scrape_bird
+from scrapers.discovery import attach_first_found
 from scrapers.podiuminfo_venues import scrape_podiuminfo_venues
 
 
@@ -269,6 +270,21 @@ all_concerts = [
     if event.get("artist", "").strip().casefold() not in invalid_labels
 ]
 
+
+# ============================================================
+# FIRST DISCOVERED - zentral recorded, not dependent on app launch
+# ============================================================
+# Previous feed is the authoritative baseline. Legacy published concerts
+# start with firstFound=0 (not "new"); genuinely added shows get a single
+# epoch-millisecond timestamp that survives subsequent successful refreshes.
+try:
+    with open("concerts.json", encoding="utf-8") as previous_file:
+        previously_seen = json.load(previous_file)
+    if not isinstance(previously_seen, list):
+        previously_seen = []
+except (OSError, ValueError, TypeError):
+    previously_seen = []
+attach_first_found(all_concerts, previously_seen, int(datetime.now().timestamp() * 1000))
 
 # ============================================================
 # TICKETSWAP - ALLEEN EXACTE EVENTLINKS
