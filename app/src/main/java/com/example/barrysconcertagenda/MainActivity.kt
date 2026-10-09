@@ -603,22 +603,15 @@ fun ConcertApp() {
                             change.consume()
                         },
                         onDragEnd = {
-                            // Home -> Discover -> Agenda -> Tickets -> Favorites -> More.
-                            val order = listOf(9, 10, 1, 3, 2, 8)
-                            val current = when (selectedTab) {
-                                11 -> if (mySection == 2) 2 else if (mySection == 3) 3 else 8
-                                4, 5, 7, 8 -> 8
-                                else -> selectedTab
-                            }
-                            val index = order.indexOf(current)
-                            if (index >= 0 && kotlin.math.abs(horizontalDrag) > 80.dp.toPx()) {
-                                val nextIndex = if (horizontalDrag < 0f) index + 1 else index - 1
-                                if (nextIndex in order.indices) {
-                                    when (order[nextIndex]) {
-                                        3 -> { mySection = 3; selectedTab = 11 }
-                                        2 -> { mySection = 2; selectedTab = 11 }
-                                        else -> selectedTab = order[nextIndex]
-                                    }
+                            if (kotlin.math.abs(horizontalDrag) > 80.dp.toPx()) {
+                                val destination = BackstageSelectors.swipeTarget(
+                                    selectedTab = selectedTab,
+                                    mySection = mySection,
+                                    towardsNext = horizontalDrag < 0f
+                                )
+                                if (destination != null) {
+                                    selectedTab = destination.first
+                                    mySection = destination.second
                                 }
                             }
                             horizontalDrag = 0f
