@@ -731,24 +731,36 @@ fun ConcertApp() {
                 }
 
             } else {
-                // Faint launcher-icon watermark, fixed behind the scrolling list.
-                // It has no touch handling and stays readable underneath opaque cards.
+                // Soft midnight-blue stage backdrop. A subtle lilac-blue
+                // spotlight and a faint launcher watermark give the screen
+                // depth, without competing with the concerts or affecting taps.
                 Box(
                     modifier = Modifier.fillMaxSize().background(
                         Brush.verticalGradient(
-                            listOf(
-                                Color(0xFF171627),
-                                BackstageColors.background,
-                                Color(0xFF141827)
+                            colors = listOf(
+                                Color(0xFF192033),
+                                Color(0xFF0F1828),
+                                Color(0xFF121A2B)
                             )
                         )
                     )
                 ) {
+                    Box(
+                        modifier = Modifier.fillMaxSize().background(
+                            Brush.radialGradient(
+                                colors = listOf(
+                                    Color(0x332D4569),
+                                    Color(0x18294058),
+                                    Color.Transparent
+                                )
+                            )
+                        )
+                    )
                     Image(
                         painter = painterResource(id = R.mipmap.ic_launcher_foreground),
                         contentDescription = null,
-                        alpha = 0.08f,
-                        modifier = Modifier.align(Alignment.Center).size(270.dp)
+                        alpha = 0.055f,
+                        modifier = Modifier.align(Alignment.Center).size(320.dp)
                     )
                     LazyColumn(
                     state = listState,
@@ -832,13 +844,13 @@ fun ConcertApp() {
                                         )
                                         Text(
                                             "${visibleConcerts.size} aankomende concerten",
-                                            color = BackstageColors.lime,
+                                            color = BackstageColors.resultCount,
                                             fontWeight = FontWeight.Bold
                                         )
                                     } else {
                                         Text(
                                             "${visibleConcerts.size} resultaten",
-                                            color = BackstageColors.lime,
+                                            color = BackstageColors.resultCount,
                                             fontWeight = FontWeight.Bold
                                         )
                                     }
@@ -1127,7 +1139,7 @@ fun ConcertApp() {
                                 Text(
                                     text = groupDate,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = BackstageColors.lime,
+                                    color = BackstageColors.date,
                                     modifier = Modifier.padding(top = 12.dp, bottom = 2.dp)
                                 )
                             }
@@ -1385,7 +1397,7 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
                     maxLines = 1,
                     softWrap = false,
                     overflow = TextOverflow.Ellipsis,
-                    color = BackstageColors.subtle,
+                    color = BackstageColors.date,
                     modifier = Modifier.weight(1f)
                 )
                 TextButton(
