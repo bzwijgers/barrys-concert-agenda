@@ -42,3 +42,42 @@ jobs:
           else
             echo "::notice::Add GitHub repository secret TICKETMASTER_API_KEY to enable the official Ticketmaster source."
           fi
+
+      - name: Check live Dutch concert import and existing venue duplicates
+        timeout-minutes: 4
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+        run: |
+          if test -z "$TICKETMASTER_API_KEY"; then
+            echo "::notice::Ticketmaster live event audit skipped until API secret is configured."
+            exit 0
+          fi
+          python - <<'PY'
+          import collections
+          import json
+          import os
+          from scrapers.ticketmaster_nl import scrape_ticketmaster_nl, merge_ticketmaster
+          with open("concerts.json", encoding="utf-8") as fp:
+              official = json.load(fp)
+          try:
+              items = scrape_ticketmaster_nl()
+          except Exception as err:
+              # API URLs contain credentials: never print raw exception URLs.
+              raise SystemExit("Live Ticketmaster API retrieval failed: " +
+                               type(err).__name__ + " status=" +
+                               str(getattr(err, "code", ""))) from None
+          added, duplicates = merge_ticketmaster(official, items)
+          print("Ticketmaster NL live music events:", len(items), flush=True)
+          print("Ticketmaster NL duplicates with current venue feed:", duplicates, flush=True)
+          print("Ticketmaster NL unique new concerts:", len(added), flush=True)
+          print("Ticketmaster NL biggest venue counts:",
+                collections.Counter(x["venue"] for x in added).most_common(25), flush=True)
+          print("Ticketmaster NL festival matches:",
+                [x["artist"] for x in items
+                 if any(word in x["artist"].lower() for word in ("pinkpop", "lowlands", "bospop"))],
+                flush=True)
+          if not items:
+              raise SystemExit("Ticketmaster key works but scraper returned zero Dutch events")
+          if any(x.get("country") != "NL" for x in added):
+              raise SystemExit("Non-Dutch concert leaked into Ticketmaster results")
+          PY
