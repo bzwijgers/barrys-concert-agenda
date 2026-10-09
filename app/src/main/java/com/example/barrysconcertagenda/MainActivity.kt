@@ -1242,63 +1242,96 @@ fun ConcertCard(concert: Concert, onFavoriteClick: () -> Unit, showClubCardLabel
     if (confirmAttendingRemoval) AlertDialog(onDismissRequest = { confirmAttendingRemoval = false }, title = { Text("Concert verwijderen uit Tickets?") }, text = { Text("Wil je aangeven dat je niet meer naar dit concert gaat?") }, confirmButton = { TextButton(onClick = { confirmAttendingRemoval = false; onAttendingClick() }) { Text("Verwijderen") } }, dismissButton = { TextButton(onClick = { confirmAttendingRemoval = false }) { Text("Annuleren") } })
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = BackstageColors.surface),
         border = BorderStroke(1.dp, Color(0xFF29384E))
     ) {
-        Column(modifier = Modifier.padding(horizontal = 15.dp, vertical = 12.dp)) {
-            Text(concert.artist, fontWeight = FontWeight.ExtraBold,
-                fontSize = 16.sp, maxLines = 2)
-            // The venue name itself links to the event page. No separate
-            // "Bron" row or misleading source-label hyperlink.
+        Column(modifier = Modifier.padding(horizontal = 13.dp, vertical = 8.dp)) {
             val context = LocalContext.current
+            // The artist opens the official event, leaving the venue/city as plain text.
+            Text(
+                text = concert.artist,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 16.sp,
+                maxLines = 2,
+                lineHeight = 19.sp,
+                color = if (concert.url.isNotBlank())
+                    BackstageColors.pink else MaterialTheme.colorScheme.onSurface,
+                textDecoration = if (concert.url.isNotBlank())
+                    androidx.compose.ui.text.style.TextDecoration.Underline else null,
+                modifier = if (concert.url.isNotBlank()) {
+                    Modifier.clickable {
+                        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url)))
+                    }
+                } else Modifier
+            )
+            Text(
+                text = buildString {
+                    append(concert.venue)
+                    if (concert.city.isNotBlank() &&
+                        !concert.venue.contains(concert.city, ignoreCase = true)) {
+                        append(" · " + concert.city)
+                    }
+                    if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country))
+                },
+                style = MaterialTheme.typography.bodyMedium,
+                maxLines = 1,
+                softWrap = false,
+                overflow = TextOverflow.Ellipsis,
+                color = BackstageColors.subtle
+            )
+            val displayDate = parseConcertDate(concert.date)
+                ?.format(DateTimeFormatter.ofPattern("d MMM yyyy", Locale.forLanguageTag("nl-NL")))
+                ?: concert.date
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = concert.venue,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = if (concert.url.isNotBlank())
-                        BackstageColors.pink else MaterialTheme.colorScheme.onSurface,
-                    textDecoration = if (concert.url.isNotBlank())
-                        androidx.compose.ui.text.style.TextDecoration.Underline else null,
-                    maxLines = 2,
-                    modifier = Modifier.weight(1f, fill = false).then(
-                        if (concert.url.isNotBlank()) Modifier.clickable {
-                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(concert.url)))
-                        } else Modifier
-                    )
+                    text = if (concert.time.isBlank()) displayDate
+                        else "$displayDate · ${concert.time}",
+                    style = MaterialTheme.typography.bodySmall,
+                    maxLines = 1,
+                    softWrap = false,
+                    overflow = TextOverflow.Ellipsis,
+                    color = BackstageColors.subtle,
+                    modifier = Modifier.weight(1f)
                 )
-                Text(
-                    text = buildString {
-                        if (concert.city.isNotBlank() &&
-                            !concert.venue.contains(concert.city, ignoreCase = true)) {
-                            append(" · " + concert.city)
-                        }
-                        if (concert.country.isNotBlank()) append(" " + countryFlag(concert.country))
-                    },
-                    style = MaterialTheme.typography.bodyMedium,
-                    maxLines = 1
-                )
-            }
-            val displayDate = parseConcertDate(concert.date)?.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("nl-NL"))) ?: concert.date
-            Text(if (concert.time.isBlank()) displayDate else "$displayDate · ${concert.time}",
-                style = MaterialTheme.typography.bodySmall,
-                color = BackstageColors.subtle)
-            if (concert.clubCard && showClubCardLabel) Text("ROTOWN CLUBKAART", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelSmall)
-            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                Spacer(modifier = Modifier.weight(1f))
                 TextButton(
-                    modifier = Modifier.size(38.dp),
+                    modifier = Modifier.size(36.dp),
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
-                    onClick = { if (concert.isAttending) confirmAttendingRemoval = true else onAttendingClick() }
+                    onClick = {
+                        if (concert.isAttending) confirmAttendingRemoval = true
+                        else onAttendingClick()
+                    }
                 ) {
                     TicketStatusIcon(display = ticketDisplay)
                 }
                 if (showFavorite) {
-                    TextButton(modifier = Modifier.size(38.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp), onClick = { if (concert.isFavorite) confirmFavoriteRemoval = true else onFavoriteClick() }) { Text(if (concert.isFavorite) "♥" else "♡", fontSize = 20.sp) }
+                    TextButton(
+                        modifier = Modifier.size(36.dp),
+                        contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
+                        onClick = {
+                            if (concert.isFavorite) confirmFavoriteRemoval = true
+                            else onFavoriteClick()
+                        }
+                    ) {
+                        Text(
+                            if (concert.isFavorite) "♥" else "♡",
+                            fontSize = 22.sp,
+                            color = if (concert.isFavorite) BackstageColors.pink
+                                else MaterialTheme.colorScheme.onSurface
+                        )
+                    }
                 }
+            }
+            if (concert.clubCard && showClubCardLabel) {
+                Text(
+                    "ROTOWN CLUBKAART",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 10.sp,
+                    color = BackstageColors.lime
+                )
             }
             if (concert.isFavorite && verifiedTicketSwapUrl(concert).isBlank() && ticketSwapMessage.isNotBlank()) {
                 Text(
