@@ -51,10 +51,11 @@ jobs:
           set -o pipefail
           ./gradlew --no-daemon --stacktrace :app:testDebugUnitTest :app:assembleDebug 2>&1 | tee android-build.log
 
-      - name: Audit live TicketSwap links (read-only)
+      - name: Test and audit TicketSwap links (read-only)
         shell: bash
         run: |
           set -o pipefail
+          python3 -m unittest audit.test_audit_ticketswap_v3
           python3 audit/audit_ticketswap_v3.py 2>&1 | tee v3-ticketswap-audit.log
 
       - name: Upload TicketSwap audit report
