@@ -254,6 +254,16 @@ fun ConcertApp() {
                     it.url
                 )
             }
+        // A verified central dedup may switch an event from a secondary
+        // aggregator URL to the official venue URL. Preserve the user's
+        // heart/ticket against that identity when there is only one match.
+        fun showIdentity(artist: String, date: String, city: String, venue: String) =
+            listOf(artist, date, city, venue)
+                .joinToString("|") { it.trim().lowercase(Locale.ROOT) }
+        val oldByShow = storedBefore.groupBy {
+            showIdentity(it.artist, it.date, it.city, it.venue)
+        }
+        val matchedOldUrls = mutableSetOf<String>()
 
         val setupPrefs =
             context.getSharedPreferences(
@@ -312,9 +322,11 @@ fun ConcertApp() {
                     )
 
                 val old =
-                    oldByUrl[
-                        normalizedUrl
-                    ]
+                    oldByUrl[normalizedUrl]
+                        ?: oldByShow[
+                            showIdentity(source.artist, source.date, source.city, source.venue)
+                        ]?.singleOrNull()
+                if (old != null) matchedOldUrls.add(normalizeUrl(old.url))
 
                 val isFirstParadisoBaseline =
                     source.source.equals(
@@ -366,20 +378,20 @@ fun ConcertApp() {
         val merged =
             linkedMapOf<String, StoredConcert>()
 
-        storedBefore.forEach { concert ->
-
-            val key =
-                normalizeUrl(
-                    concert.url
-                )
-
-            if (
-                key.isNotBlank()
-            ) {
-
-                merged[key] =
-                    concert
+        // An updated, nonempty remote feed is authoritative. Do NOT retain
+        // thousands of deleted/duplicate source entries from previous runs.
+        // Keep manually saved favorites/tickets if the organizer removed a
+        // show; retain the full local cache only during a network failure.
+        val downloadedUrls = downloadedStored.map { normalizeUrl(it.url) }.toSet()
+        val cachedToKeep = if (sourceConcerts.isEmpty()) storedBefore else
+            storedBefore.filter { existing ->
+                (existing.isFavorite || existing.isAttending) &&
+                    normalizeUrl(existing.url) !in downloadedUrls &&
+                    normalizeUrl(existing.url) !in matchedOldUrls
             }
+        cachedToKeep.forEach { concert ->
+            val key = normalizeUrl(concert.url)
+            if (key.isNotBlank()) merged[key] = concert
         }
 
         downloadedStored.forEach { concert ->
