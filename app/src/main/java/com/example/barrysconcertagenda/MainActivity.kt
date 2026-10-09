@@ -8,6 +8,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -63,6 +64,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -568,8 +570,14 @@ fun ConcertApp() {
                         modifier = Modifier.semantics { contentDescription = "Mijn tickets" }) }
                 )
                 NavigationBarItem(
+                    selected = selectedTab == 11 && mySection == 2,
+                    onClick = { mySection = 2; selectedTab = 11 },
+                    icon = { Text("♥", fontSize = 23.sp,
+                        modifier = Modifier.semantics { contentDescription = "Favorieten" }) }
+                )
+                NavigationBarItem(
                     selected = selectedTab in setOf(4, 5, 7, 8) ||
-                        (selectedTab == 11 && mySection != 3),
+                        (selectedTab == 11 && mySection == 5),
                     onClick = { searchExpanded = false; selectedTab = 8 },
                     icon = { Text("⋯", fontSize = 25.sp,
                         modifier = Modifier.semantics { contentDescription = "Meer" }) }
@@ -579,12 +587,40 @@ fun ConcertApp() {
     ) { innerPadding ->
 
         Column(
-            modifier =
-                Modifier
-                    .fillMaxSize()
-                    .padding(
-                        innerPadding
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .pointerInput(selectedTab, mySection) {
+                    var horizontalDrag = 0f
+                    detectHorizontalDragGestures(
+                        onHorizontalDrag = { change, dragAmount ->
+                            horizontalDrag += dragAmount
+                            change.consume()
+                        },
+                        onDragEnd = {
+                            // Home -> Discover -> Agenda -> Tickets -> Favorites -> More.
+                            val order = listOf(9, 10, 1, 3, 2, 8)
+                            val current = when (selectedTab) {
+                                11 -> if (mySection == 2) 2 else if (mySection == 3) 3 else 8
+                                4, 5, 7, 8 -> 8
+                                else -> selectedTab
+                            }
+                            val index = order.indexOf(current)
+                            if (index >= 0 && kotlin.math.abs(horizontalDrag) > 80.dp.toPx()) {
+                                val nextIndex = if (horizontalDrag < 0f) index + 1 else index - 1
+                                if (nextIndex in order.indices) {
+                                    when (order[nextIndex]) {
+                                        3 -> { mySection = 3; selectedTab = 11 }
+                                        2 -> { mySection = 2; selectedTab = 11 }
+                                        else -> selectedTab = order[nextIndex]
+                                    }
+                                }
+                            }
+                            horizontalDrag = 0f
+                        },
+                        onDragCancel = { horizontalDrag = 0f }
                     )
+                }
         ) {
 
             Row(
@@ -665,7 +701,10 @@ fun ConcertApp() {
                     onDateSelected = { picked ->
                         if (datePickerTarget == "from") {
                             searchDateFrom = picked
-                            if (searchDateTo != null && picked.isAfter(searchDateTo)) searchDateTo = picked
+                            searchDateTo = null
+                            selectedTab = 1
+                            calendarMode = false
+                            calendarDay = null
                         } else {
                             searchDateTo = picked
                             if (searchDateFrom != null && picked.isBefore(searchDateFrom)) searchDateFrom = picked
@@ -842,6 +881,18 @@ fun ConcertApp() {
                                             calendarDay = null
                                         }
                                     )
+                                    if (!calendarMode && searchDateFrom != null) {
+                                        TextButton(onClick = {
+                                            searchDateFrom = null
+                                            searchDateTo = null
+                                        }) {
+                                            Text(
+                                                "Vanaf ${searchDateFrom!!.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("nl-NL")))} · Wis datum",
+                                                color = BackstageColors.lime,
+                                                fontSize = 13.sp
+                                            )
+                                        }
+                                    }
                                     if (calendarMode) {
                                         BackstageCalendar(
                                             month = calendarMonth,
@@ -857,7 +908,12 @@ fun ConcertApp() {
                                                 calendarMonth = calendarMonth.plusMonths(1)
                                                 calendarDay = null
                                             },
-                                            onSelectDay = { calendarDay = it }
+                                            onSelectDay = { chosenDay ->
+                                                searchDateFrom = chosenDay
+                                                searchDateTo = null
+                                                calendarMode = false
+                                                calendarDay = null
+                                            }
                                         )
                                     }
                                     Row(verticalAlignment = Alignment.CenterVertically) {
