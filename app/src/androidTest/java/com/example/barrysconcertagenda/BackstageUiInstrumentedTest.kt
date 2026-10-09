@@ -107,7 +107,7 @@ class BackstageNavigationUiTest {
         // In V3 the photo is shown only underneath Info, edge-to-edge,
         // with lavender text directly over the picture (without a card).
         compose.onNodeWithContentDescription("Meer").performClick()
-        compose.onNodeWithText("ⓘ   Info en concertzalen").performClick()
+        compose.onNodeWithTag("backstage-more-7").performClick()
         val screen = compose.onRoot().getUnclippedBoundsInRoot()
         val photo = compose.onNodeWithTag("backstage-fullscreen-start-photo")
             .assertExists()
