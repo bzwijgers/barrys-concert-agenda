@@ -11,6 +11,8 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.getUnclippedBoundsInRoot
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTouchInput
@@ -19,6 +21,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import java.time.LocalDate
 import java.time.YearMonth
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.Rule
 import org.junit.runner.RunWith
@@ -93,5 +96,17 @@ class BackstageNavigationUiTest {
         compose.onNodeWithContentDescription("Home").assertIsSelected()
         compose.onRoot().performTouchInput { swipeLeft() }
         compose.onNodeWithContentDescription("Ontdek").assertIsSelected()
+    }
+
+    @Test fun startPhotoCoversFullPageAndSurvivesTabSwitch() {
+        compose.onNodeWithContentDescription("Barry's concert agenda").performClick()
+        val screen = compose.onRoot().getUnclippedBoundsInRoot()
+        val photo = compose.onNodeWithTag("backstage-fullscreen-start-photo")
+            .assertExists()
+            .getUnclippedBoundsInRoot()
+        assertTrue("Photo should span full screen width", photo.width >= screen.width * 0.98f)
+        assertTrue("Photo should span full screen height", photo.height >= screen.height * 0.98f)
+        compose.onNodeWithContentDescription("Ontdek").performClick()
+        compose.onNodeWithTag("backstage-fullscreen-start-photo").assertExists()
     }
 }
