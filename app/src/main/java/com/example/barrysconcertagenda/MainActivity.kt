@@ -45,7 +45,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -72,6 +74,8 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.style.TextOverflow
@@ -555,71 +559,82 @@ fun ConcertApp() {
         listState.scrollToItem(0)
     }
 
-    // The start photo is a quiet, fixed backdrop behind the ENTIRE app,
-    // including the header and bottom navigation. Keep it out of the scrolling list.
+    // The original splash artwork becomes a subtle, pale full-page background.
+    // Do not use the example screenshot as an app asset.
+    val monochromePhoto = remember {
+        ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0f) })
+    }
+    val navigationColors = NavigationBarItemDefaults.colors(
+        selectedIconColor = BackstageColors.pageAccent,
+        unselectedIconColor = BackstageColors.pageMuted,
+        indicatorColor = Color(0xFFDDE1E5)
+    )
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF07111D))
+            .background(Color(0xFFF2F3F4))
             .clipToBounds()
     ) {
         Image(
             painter = painterResource(id = R.drawable.barrys_concerten_splash),
             contentDescription = null,
             contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+            alpha = 0.65f,
+            colorFilter = monochromePhoto,
             modifier = Modifier
                 .fillMaxSize()
-                // Blur the busy lettering/details of the splash photo into a
-                // subtle texture; enlarge slightly to avoid blur at the edges.
-                .graphicsLayer(scaleX = 1.14f, scaleY = 1.14f)
-                .blur(21.dp)
+                .graphicsLayer(scaleX = 1.09f, scaleY = 1.09f)
+                .blur(7.dp)
                 .testTag("backstage-fullscreen-start-photo")
         )
         Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(
-                    Brush.verticalGradient(
-                        listOf(
-                            Color(0xBC07111D),
-                            Color(0xC807111D),
-                            Color(0xD007111D)
-                        )
+            modifier = Modifier.fillMaxSize().background(
+                Brush.verticalGradient(
+                    listOf(
+                        Color(0x8AFFFFFF),
+                        Color(0xA1F9FAFB),
+                        Color(0xAEF7F8FA)
                     )
                 )
+            )
         )
 
     Scaffold(
         containerColor = Color.Transparent,
         bottomBar = {
-            NavigationBar(containerColor = Color(0xEA0D1826)) {
+            NavigationBar(containerColor = Color(0xE8F4F5F7)) {
                 NavigationBarItem(
                     selected = selectedTab == 9,
                     onClick = { selectedTab = 9 },
+                    colors = navigationColors,
                     icon = { Text("⌂", fontSize = 25.sp,
                         modifier = Modifier.semantics { contentDescription = "Home" }) }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 10,
                     onClick = { selectedTab = 10 },
+                    colors = navigationColors,
                     icon = { Text("✦", fontSize = 23.sp,
                         modifier = Modifier.semantics { contentDescription = "Ontdek" }) }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 1,
                     onClick = { selectedTab = 1 },
+                    colors = navigationColors,
                     icon = { Text("▦", fontSize = 23.sp,
                         modifier = Modifier.semantics { contentDescription = "Agenda" }) }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 11 && mySection == 3,
                     onClick = { mySection = 3; selectedTab = 11 },
+                    colors = navigationColors,
                     icon = { Text("🎟", fontSize = 23.sp,
                         modifier = Modifier.semantics { contentDescription = "Mijn tickets" }) }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 11 && mySection == 2,
                     onClick = { mySection = 2; selectedTab = 11 },
+                    colors = navigationColors,
                     icon = { Text("♥", fontSize = 23.sp,
                         modifier = Modifier.semantics { contentDescription = "Favorieten" }) }
                 )
@@ -627,13 +642,14 @@ fun ConcertApp() {
                     selected = selectedTab in setOf(4, 5, 7, 8) ||
                         (selectedTab == 11 && mySection == 5),
                     onClick = { searchExpanded = false; selectedTab = 8 },
+                    colors = navigationColors,
                     icon = { Text("⋯", fontSize = 25.sp,
                         modifier = Modifier.semantics { contentDescription = "Meer" }) }
                 )
             }
         }
     ) { innerPadding ->
-        CompositionLocalProvider(LocalContentColor provides Color.White) {
+        CompositionLocalProvider(LocalContentColor provides BackstageColors.pageText) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -670,7 +686,7 @@ fun ConcertApp() {
             ) {
                 Text(
                     text = "Barry's Concerten",
-                    color = Color.White,
+                    color = BackstageColors.pageText,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
@@ -684,7 +700,7 @@ fun ConcertApp() {
                 BelgiumFlag()
                 IconButton(onClick = { searchExpanded = !searchExpanded }) {
                     Text(if (searchExpanded) "×" else "⌕",
-                        fontSize = 26.sp, color = BackstageColors.pink)
+                        fontSize = 26.sp, color = BackstageColors.pageAccent)
                 }
             }
 
@@ -692,7 +708,14 @@ fun ConcertApp() {
                 OutlinedTextField(
                     value = searchQuery,
                     onValueChange = { searchQuery = it },
-                    placeholder = { Text("Artiest, zaal of stad…", fontSize = 12.sp) },
+                    placeholder = { Text("Artiest, zaal of stad…", fontSize = 12.sp, color = BackstageColors.pageMuted) },
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedTextColor = BackstageColors.pageText,
+                        unfocusedTextColor = BackstageColors.pageText,
+                        cursorColor = BackstageColors.pageAccent,
+                        focusedBorderColor = BackstageColors.pageAccent,
+                        unfocusedBorderColor = BackstageColors.pageMuted
+                    ),
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 4.dp)
                 )
@@ -810,7 +833,7 @@ fun ConcertApp() {
                                         )
                                     } else {
                                         Text("Nog geen tickets geregistreerd in V3. Je tickets uit V1 staan nog in V1.",
-                                            color = BackstageColors.subtle, fontSize = 12.sp)
+                                            color = BackstageColors.pageMuted, fontSize = 12.sp)
                                     }
                                     BackstageQuickStats(
                                         tickets = concerts.count { it.isAttending && !it.archived },
@@ -826,7 +849,7 @@ fun ConcertApp() {
                                     ) {
                                         Text("♣ Rotown Clubkaart · ${concerts.count { it.clubCard && !it.archived }} concerten",
                                              fontWeight = FontWeight.Bold,
-                                             color = BackstageColors.pink,
+                                             color = BackstageColors.pageAccent,
                                              fontSize = 14.sp,
                                              maxLines = 1,
                                              softWrap = false,
@@ -856,7 +879,7 @@ fun ConcertApp() {
                                         Text(
                                             "Er zijn nog geen recent ontdekte concerten. " +
                                                 "Hieronder zie je voorlopig de volledige aankomende agenda.",
-                                            color = BackstageColors.subtle,
+                                            color = BackstageColors.pageMuted,
                                             fontSize = 12.sp
                                         )
                                         Text(
@@ -897,7 +920,7 @@ fun ConcertApp() {
                                     )
                                     if (visibleConcerts.isEmpty()) {
                                         Text("V3 bewaart favorieten en tickets apart van V1. Tik in Agenda op een hartje of ticket om ze hier te zien.",
-                                            color = BackstageColors.subtle, fontSize = 12.sp)
+                                            color = BackstageColors.pageMuted, fontSize = 12.sp)
                                     }
                                 }
                             }
@@ -942,7 +965,7 @@ fun ConcertApp() {
                                         }) {
                                             Text(
                                                 "Vanaf ${searchDateFrom!!.format(DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.forLanguageTag("nl-NL")))} · Wis datum",
-                                                color = BackstageColors.lime,
+                                                color = BackstageColors.pageAccent,
                                                 fontSize = 13.sp
                                             )
                                         }
@@ -1156,7 +1179,7 @@ fun ConcertApp() {
                                 Text(
                                     text = groupDate,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = BackstageColors.date,
+                                    color = BackstageColors.pageDate,
                                     modifier = Modifier.padding(top = 12.dp, bottom = 2.dp)
                                 )
                             }
@@ -1251,7 +1274,7 @@ fun ConcertApp() {
                                 modifier = Modifier.padding(vertical = 20.dp))
                             if (selectedTab == 10 && discoveryFilter == "new") {
                                 TextButton(onClick = { discoveryFilter = "all" }) {
-                                    Text("Toon alle concerten", color = BackstageColors.lime)
+                                    Text("Toon alle concerten", color = BackstageColors.pageAccent)
                                 }
                             }
                         }
