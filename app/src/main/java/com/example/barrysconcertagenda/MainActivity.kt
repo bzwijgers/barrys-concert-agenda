@@ -708,7 +708,7 @@ fun ConcertApp() {
                     )
                 ) {
                     Image(
-                        painter = painterResource(id = R.mipmap.ic_launcher),
+                        painter = painterResource(id = R.mipmap.ic_launcher_foreground),
                         contentDescription = null,
                         alpha = 0.08f,
                         modifier = Modifier.align(Alignment.Center).size(270.dp)
