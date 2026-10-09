@@ -55,6 +55,44 @@ def _norm(value):
     return " ".join(value.split())
 
 
+def _venue_label(venue):
+    """Recover an event's official venue name only from its canonical venue URL.
+
+    Some Discovery API event records have venue.name=null even for real shows
+    such as Tokio Hotel / Jill Scott at AFAS Live. The same venue includes the
+    official Ticketmaster venue page URL. Never infer a venue from artist,
+    address, city alone, or from a secondary upsell's name.
+    """
+    explicit = (venue.get("name") or "").strip()
+    if explicit:
+        return explicit
+    venue_url = (venue.get("url") or "").strip()
+    parts = urlsplit(venue_url)
+    if parts.scheme != "https" or (
+        parts.hostname or ""
+    ).lower().removeprefix("www.") != "ticketmaster.nl":
+        return ""
+    match = re.match(r"^/venue/([^/]+)-tickets(?:/|$)", parts.path, re.I)
+    if not match:
+        return ""
+    slug = match.group(1).lower()
+    city_slug = re.sub(r"[^a-z0-9]+", "-", _norm((venue.get("city") or {}).get("name")))
+    if city_slug and slug.endswith("-" + city_slug):
+        slug = slug[:-(len(city_slug) + 1)]
+    exact = {
+        "afas-live": "AFAS Live",
+        "ziggo-dome": "Ziggo Dome",
+        "rotterdam-ahoy": "Rotterdam Ahoy",
+        "rtm-stage-rotterdam-ahoy": "RTM Stage - Rotterdam Ahoy",
+        "johan-cruijff-arena": "Johan Cruijff ArenA",
+        "koninklijk-theater-carre": "Koninklijk Theater Carré",
+        "tivolivredenburg": "TivoliVredenburg",
+        "melkweg": "Melkweg",
+        "paradiso": "Paradiso",
+    }
+    return exact.get(slug, slug.replace("-", " ").title())
+
+
 def _venue_name(value):
     name = _norm(value).replace("poppodium ", "").strip()
     # Ahoy has several mutually equivalent marketed labels.
@@ -186,7 +224,7 @@ def event_to_concert(event, today=None):
     country = (v.get("country") or {}).get("countryCode")
     if country != "NL":
         return None
-    venue = (v.get("name") or "").strip()
+    venue = _venue_label(v)
     city = ((v.get("city") or {}).get("name") or "").strip()
     if not venue or not city or UPSSELL_VENUE.search(venue):
         return None
