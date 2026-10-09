@@ -84,17 +84,6 @@
     "url": "https://www.mezz.nl/programma/fontaines-d-c-luistersessie/"
   },
   {
-    "artist": "Northcote (CA) + Tom Jenkins (UK)",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-08",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/northcote-ca-tom-jenkins-uk",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/northcote-ca-tom-jenkins-uk-dordrecht-bibelot-poppodium-2026-10-08-CavMR3gxFvUG1QTdpXrTU"
-  },
-  {
     "artist": "LOE. + Lindi",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -446,16 +435,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kinkajous-amsterdam-tolhuistuin-2026-10-09-CZRGVWJnrKEHuc26Ycjkc"
   },
   {
-    "artist": "Studio Brandstof: The Bane Grams",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/studio-brandstof-the-bane-grams"
-  },
-  {
     "artist": "Rapalje – Celtic Folk Night",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -549,6 +528,16 @@
     "time": "20:30",
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/sixpence-none-the-richer/2779816"
+  },
+  {
+    "artist": "Studio Brandstof: The Bane Grams",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-10-09",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/studio-brandstof-the-bane-grams"
   },
   {
     "artist": "Sylvan",
@@ -8198,6 +8187,16 @@
     "time": "00:59",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/wtf-halloween-6"
+  },
+  {
+    "artist": "MuziS presenteert: Joyful",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "12:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/muzis-joyful"
   },
   {
     "artist": "Elia Penrose - 'Everyday Sublime'",
@@ -24224,6 +24223,16 @@
     "url": "https://hedon-zwolle.nl/voorstelling/33003/physical-graffiti-led-zeppelin-over-europe"
   },
   {
+    "artist": "Planet Pul",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-15",
+    "time": "19:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/planet-pul"
+  },
+  {
     "artist": "DeWolff",
     "venue": "Theater De Maagd",
     "city": "Bergen op Zoom",
@@ -24232,16 +24241,6 @@
     "time": "20:00",
     "source": "Gebouw-T",
     "url": "https://gebouw-t.nl/agenda/dewolff-4"
-  },
-  {
-    "artist": "Planet Pul",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2027-01-15",
-    "time": "20:00",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/planet-pul"
   },
   {
     "artist": "Fleddy Melculy",
