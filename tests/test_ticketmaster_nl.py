@@ -39,6 +39,22 @@ class TicketmasterTests(unittest.TestCase):
                                                     venue="Megaland", city="Landgraaf",
                                                     when="2027-06-18"), today="2026-10-10"))
 
+    def test_dutch_festival_classified_outside_music_is_included(self):
+        bospop = event(name="Bospop 2027 - weekend",
+                       when="2027-07-09", venue="Bospop Festivalterrein",
+                       city="Weert", segment="Festival",
+                       url="https://www.ticketmaster.nl/event/bospop-2027-tickets/100")
+        self.assertIsNotNone(event_to_concert(bospop, today="2026-10-10"))
+        # Unknown foreign festival titles are not silently classified as music.
+        self.assertIsNone(event_to_concert(event(name="Local Tech Conference",
+                                                  segment="Festival"), today="2026-10-10"))
+
+    def test_concert_in_other_nl_city_is_included(self):
+        ziggo = event(name="Foo Fighters", when="2027-06-21",
+                      venue="Ziggo Dome", city="Amsterdam",
+                      url="https://www.ticketmaster.nl/event/foo-fighters-tickets/123")
+        self.assertEqual(event_to_concert(ziggo, today="2026-10-10")["venue"], "Ziggo Dome")
+
     def test_official_venue_wins_ticketmaster_duplicate(self):
         old = {"artist": "Papa Roach", "date": "2026-11-11",
                "venue": "Rotterdam Ahoy", "city": "Rotterdam",
