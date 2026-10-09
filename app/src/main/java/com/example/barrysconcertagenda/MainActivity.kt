@@ -936,7 +936,10 @@ fun ConcertApp() {
                                     ).forEach { (targetTab, title) ->
                                         Card(
                                             modifier = Modifier.fillMaxWidth()
-                                                .clickable { selectedTab = targetTab }
+                                                .clickable {
+                                                    if (targetTab == 11) mySection = 3
+                                                    selectedTab = targetTab
+                                                }
                                         ) {
                                             Text(
                                                 text = title,
