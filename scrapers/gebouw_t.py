@@ -99,7 +99,7 @@ def gebouw_t_parse_event(page, event_url):
     # regardless of whether the structured date was present.
     official_start = re.search(
         r"\baanvang\s*:?\s*([01]?\d|2[0-3])[:.]([0-5]\d)\b",
-        text[:2200], flags=re.I,
+        text, flags=re.I,
     )
     if official_start:
         event_time = f"{int(official_start.group(1)):02d}:{official_start.group(2)}"
