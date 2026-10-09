@@ -536,26 +536,70 @@ def scrape_venue(name, maximum=500):
     if len(found) > maximum:
         raise RuntimeError(f"{name}: discovered {len(found)} links, exceeding processing limit {maximum}; refusing truncated agenda")
     if not found:raise RuntimeError(f"{name}: no event URLs discovered")
-    items=[];errors=0
+    items=[];errors=0;recovered=0
+    # If Metropool intermittently returns 500 for particular detail pages,
+    # the most recent *verified* published record is the only safe fallback.
+    # Recovery is URL-exact and only allowed for still-future concerts.
+    previous = previous_published_venue_events(name) if name=="Metropool" else {}
     def read(url):
-        event_html=download_page_retry(url,attempts=2)
+        event_html=download_page_retry(url,attempts=3 if name=="Metropool" else 2)
         return parse_event(event_html,url,name,city)
-    with ThreadPoolExecutor(max_workers=7) as ex:
+    # Fewer parallel requests reduce HTTP 500s from Metropool's backend.
+    workers = 3 if name=="Metropool" else 7
+    with ThreadPoolExecutor(max_workers=workers) as ex:
         futures={ex.submit(read,url):url for url in found}
         for future in as_completed(futures):
             try:
                 item=future.result()
                 if item:items.append(item)
             except Exception as error:
-                errors+=1
-                if errors<=3:print(name,"detail error:",futures[future],str(error)[:160],flush=True)
+                url = futures[future]
+                saved = previous.get(normalize_url(url))
+                if saved:
+                    recovered+=1
+                    items.append(saved)
+                    if recovered<=3:
+                        print("Metropool: reused previously verified future event:",url,flush=True)
+                else:
+                    errors+=1
+                    if errors<=3:
+                        print(name,"detail error:",url,str(error)[:160],flush=True)
     unique={normalize_url(i["url"]):i for i in items}
     if not unique:
         raise RuntimeError(f"{name}: no future concerts parsed from {len(found)} links; refusing empty agenda")
     if errors > max(2, int(len(found) * 0.10)):
-        raise RuntimeError(f"{name}: {errors}/{len(found)} detail requests failed; refusing incomplete agenda")
-    print(name,"discovered:",len(found),"future concerts:",len(unique),"request errors:",errors,flush=True)
+        raise RuntimeError(f"{name}: {errors}/{len(found)} detail requests failed without verified fallback; refusing incomplete agenda")
+    if recovered > max(10,int(len(found)*0.20)):
+        raise RuntimeError(f"{name}: {recovered}/{len(found)} events needed fallback; refusing overly stale agenda")
+    print(name,"discovered:",len(found),"future concerts:",len(unique),
+          "request errors:",errors,"verified fallbacks:",recovered,flush=True)
     return sorted(unique.values(),key=lambda i:(i["date"],i["time"],i["artist"]))
+
+def previous_published_venue_events(name, today=None, path="concerts.json"):
+    """Exact URL fallback from the already published feed (never a guessed date).
+
+    Failure to read prior data must not bypass the normal completeness checks.
+    """
+    today = today or date.today().isoformat()
+    try:
+        with open(path, encoding="utf-8") as handle:
+            events = json.load(handle)
+    except (OSError, ValueError, TypeError):
+        return {}
+    if not isinstance(events, list):
+        return {}
+    return {
+        normalize_url(event["url"]): event
+        for event in events
+        if isinstance(event, dict)
+        and event.get("source") == name
+        and isinstance(event.get("url"), str)
+        and isinstance(event.get("date"), str)
+        and event["date"] >= today
+        and event.get("artist")
+        and event.get("venue")
+    }
+
 
 def scrape_new_venues():
     # Each venue is independent. Running them concurrently avoids making
