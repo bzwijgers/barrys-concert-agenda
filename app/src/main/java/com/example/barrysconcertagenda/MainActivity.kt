@@ -68,6 +68,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.Color
@@ -554,12 +555,44 @@ fun ConcertApp() {
         listState.scrollToItem(0)
     }
 
+    // The start photo is a quiet, fixed backdrop behind the ENTIRE app,
+    // including the header and bottom navigation. Keep it out of the scrolling list.
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFF07111D))
+            .clipToBounds()
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.barrys_concerten_splash),
+            contentDescription = null,
+            contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxSize()
+                // Blur the busy lettering/details of the splash photo into a
+                // subtle texture; enlarge slightly to avoid blur at the edges.
+                .graphicsLayer(scaleX = 1.14f, scaleY = 1.14f)
+                .blur(21.dp)
+                .testTag("backstage-fullscreen-start-photo")
+        )
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(
+                    Brush.verticalGradient(
+                        listOf(
+                            Color(0xBC07111D),
+                            Color(0xC807111D),
+                            Color(0xD007111D)
+                        )
+                    )
+                )
+        )
+
     Scaffold(
-        // The same start photo as the launch screen fills the entire page
-        // behind the fixed header and all tabs.
         containerColor = Color.Transparent,
         bottomBar = {
-            NavigationBar(containerColor = Color(0xFF111B2B)) {
+            NavigationBar(containerColor = Color(0xEA0D1826)) {
                 NavigationBarItem(
                     selected = selectedTab == 9,
                     onClick = { selectedTab = 9 },
@@ -600,32 +633,6 @@ fun ConcertApp() {
             }
         }
     ) { innerPadding ->
-        Box(modifier = Modifier.fillMaxSize().clipToBounds()) {
-            Image(
-                painter = painterResource(id = R.drawable.barrys_concerten_splash),
-                contentDescription = null,
-                contentScale = androidx.compose.ui.layout.ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxSize()
-                    // The splash artwork includes a mock phone status bar and
-                    // home indicator. A slight centred zoom crops both away
-                    // when reusing the original photo as the app background.
-                    .graphicsLayer(scaleX = 1.11f, scaleY = 1.11f)
-                    .testTag("backstage-fullscreen-start-photo")
-            )
-            // Maintain white-text contrast without hiding the concert photo.
-            Box(
-                modifier = Modifier.fillMaxSize().background(
-                    Brush.verticalGradient(
-                        listOf(
-                            Color(0x9C08101B),
-                            Color(0xA008101B),
-                            Color(0xB508101B)
-                        )
-                    )
-                )
-            )
-
         CompositionLocalProvider(LocalContentColor provides Color.White) {
         Column(
             modifier = Modifier
@@ -1255,8 +1262,8 @@ fun ConcertApp() {
             }
         }
         } // Content color provider
-        } // Full-screen photo background behind all pages
-    }
+    } // Scaffold
+    } // Full-screen, blurred background behind all pages
 }
 
 enum class TicketDisplay { DEFAULT, OWNED, VISITED }
