@@ -559,8 +559,8 @@ fun ConcertApp() {
         listState.scrollToItem(0)
     }
 
-    // Keep the original splash artwork visible and recognisable while the concert cards remain readable.
-    // Do not use the example screenshot as an app asset.
+    // The splash photograph belongs on the Info page ONLY; other tabs stay plain.
+    // The user's reference screenshot must never replace the original image resource.
     val monochromePhoto = remember {
         ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0f) })
     }
@@ -575,29 +575,31 @@ fun ConcertApp() {
             .background(Color(0xFFF2F3F4))
             .clipToBounds()
     ) {
-        Image(
-            painter = painterResource(id = R.drawable.barrys_concerten_splash),
-            contentDescription = null,
-            contentScale = androidx.compose.ui.layout.ContentScale.Crop,
-            alpha = 0.95f,
-            colorFilter = monochromePhoto,
-            modifier = Modifier
-                .fillMaxSize()
-                .graphicsLayer(scaleX = 1.09f, scaleY = 1.09f)
-                .blur(2.dp)
-                .testTag("backstage-fullscreen-start-photo")
-        )
-        Box(
-            modifier = Modifier.fillMaxSize().background(
-                Brush.verticalGradient(
-                    listOf(
-                        Color(0x4AFFFFFF),
-                        Color(0x5CF9FAFB),
-                        Color(0x68F7F8FA)
+        if (selectedTab == 7) {
+            Image(
+                painter = painterResource(id = R.drawable.barrys_concerten_splash),
+                contentDescription = null,
+                contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                alpha = 0.95f,
+                colorFilter = monochromePhoto,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .graphicsLayer(scaleX = 1.09f, scaleY = 1.09f)
+                    .blur(2.dp)
+                    .testTag("backstage-fullscreen-start-photo")
+            )
+            Box(
+                modifier = Modifier.fillMaxSize().background(
+                    Brush.verticalGradient(
+                        listOf(
+                            Color(0x4AFFFFFF),
+                            Color(0x5CF9FAFB),
+                            Color(0x68F7F8FA)
+                        )
                     )
                 )
             )
-        )
+        }
 
     Scaffold(
         containerColor = Color.Transparent,
@@ -1099,8 +1101,12 @@ fun ConcertApp() {
                             }
 
                             7 -> {
+                                // Info is the only tab showing the washed-out start photo.
+                                // Force a dark ink colour; otherwise the theme can tint text purple.
+                                CompositionLocalProvider(LocalContentColor provides BackstageColors.pageText) {
                                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                    Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                                    Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold,
+                                        fontSize = 18.sp, color = BackstageColors.pageText)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
                                     Text("Concertzalen", fontWeight = FontWeight.Bold)
                                     val venueCities = mapOf(
@@ -1146,8 +1152,10 @@ fun ConcertApp() {
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
                                     Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via de aanklikbare zaalnaam open je de betreffende evenementpagina.")
-                                    Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall)
+                                    Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall,
+                                        color = BackstageColors.pageText)
                                 }
+                                } // Info-only dark text colour
                             }
                         }
 
