@@ -60,7 +60,7 @@ def deduplicate_performances(events):
 NON_CONCERT_TITLE = re.compile(
     r"^(?:fiesta macumba|90['’]?s now|cheeky monday\b|"
     r"muziek bingo(?: xxl)?\b|qmusic the party\b|"
-    r"jimmy carr(?:\b|:)|)"
+    r"jimmy carr(?:\b|:))"
     r"|(?:^|[\s\-])(?:comedy show|stand[\s-]?up comedy)(?:\b|$)",
     re.I,
 )
