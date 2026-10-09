@@ -101,6 +101,25 @@ class TicketmasterTests(unittest.TestCase):
         added, repeats = merge_ticketmaster([official], [ticketmaster])
         self.assertEqual((len(added), repeats), (0, 1))
 
+    def test_title_variants_are_one_show_but_separate_ade_events_remain(self):
+        official = [
+            {"artist": "Mogwai", "venue": "TivoliVredenburg", "city": "Utrecht", "date": "2026-11-10"},
+            {"artist": "Moss (luistersessie)", "venue": "Melkweg", "city": "Amsterdam", "date": "2026-11-05"},
+            {"artist": "Quadeca", "venue": "Melkweg", "city": "Amsterdam", "date": "2027-02-15"},
+            {"artist": "Eihwar", "venue": "Melkweg", "city": "Amsterdam", "date": "2027-02-23"},
+            {"artist": "Blendsworld - ADE SPECIAL", "venue": "Melkweg", "city": "Amsterdam", "date": "2026-10-24"},
+        ]
+        candidate = [
+            dict(artist="Mogwai 30", venue="TivoliVredenburg", city="Utrecht", date="2026-11-10"),
+            dict(artist="Moss (listening session)", venue="Melkweg", city="Amsterdam", date="2026-11-05"),
+            dict(artist="Quadeca + support", venue="Melkweg", city="Amsterdam", date="2027-02-15"),
+            dict(artist="Eihwar + support", venue="Melkweg", city="Amsterdam", date="2027-02-23"),
+            dict(artist="Encore ADE Special", venue="Melkweg", city="Amsterdam", date="2026-10-24"),
+        ]
+        added, duplicates = merge_ticketmaster(official, candidate)
+        self.assertEqual(duplicates, 4)
+        self.assertEqual([x["artist"] for x in added], ["Encore ADE Special"])
+
     def test_same_artist_same_city_different_venue_stays_separate(self):
         old = {"artist": "Foo Fighters", "date": "2027-02-04", "city": "Amsterdam", "venue": "Ziggo Dome"}
         candidate = dict(old, venue="AFAS Live")
