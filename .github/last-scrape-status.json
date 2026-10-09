@@ -1,9 +1,9 @@
 {
-  "run_id": 37996716757,
-  "source_commit": "294592317904a962c7f25733cb7859d3ac1bc968",
+  "run_id": 37997358214,
+  "source_commit": "98efee22e31118f7010f5b86ebd9e01be3d9ab3a",
   "unit_tests": "success",
   "paradiso_live": "success",
-  "full_scrape": "failure",
-  "feed_validation": "skipped",
+  "full_scrape": "success",
+  "feed_validation": "success",
   "publish": "skipped"
 }
