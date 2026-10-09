@@ -12,6 +12,8 @@ from datetime import datetime, date, timedelta
 from difflib import SequenceMatcher
 from urllib.parse import urlencode, urlsplit
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
+from threading import Lock
 from collections import Counter
 import json
 import os
@@ -22,6 +24,11 @@ import unicodedata
 DISCOVERY_URL = "https://app.ticketmaster.com/discovery/v2/events.json"
 MUSIC_SEGMENT = "KZFzniwnSyZfZ7v7nJ"
 FESTIVALS = ("pinkpop", "lowlands", "bospop")
+# Discovery API has short-term rate limits. Do not rely on the general 5,000/day
+# quota as evidence that requests can be issued in a tight loop.
+_API_LOCK = Lock()
+_NEXT_API_REQUEST = 0.0
+_MIN_REQUEST_INTERVAL_SECONDS = 0.65
 # Extra ticket products, parking and loge seats are NOT additional concerts.
 TICKET_PRODUCT = re.compile(
     r"\b(?:premium seats?|platinum tickets?|vip(?:-| )?(?:tickets?|package|arrangement)?|"
@@ -187,11 +194,29 @@ def event_to_concert(event, today=None):
 
 
 def _get_json(params, api_key):
+    """Pace queries, retry short-lived rate limits, never log the secret URL."""
+    global _NEXT_API_REQUEST
     url = DISCOVERY_URL + "?" + urlencode({**params, "apikey": api_key})
     req = Request(url, headers={"Accept": "application/json",
                                 "User-Agent": "BarrysConcertAgenda/1.0"})
-    with urlopen(req, timeout=25) as response:
-        return json.load(response)
+    for attempt in range(5):
+        with _API_LOCK:
+            wait = max(0.0, _NEXT_API_REQUEST - time.monotonic())
+            if wait:
+                time.sleep(wait)
+            _NEXT_API_REQUEST = time.monotonic() + _MIN_REQUEST_INTERVAL_SECONDS
+        try:
+            with urlopen(req, timeout=25) as response:
+                return json.load(response)
+        except HTTPError as error:
+            if error.code != 429 or attempt >= 4:
+                # A raw HTTPError contains a URL with the API key; hide it.
+                raise RuntimeError("Ticketmaster API HTTP " + str(error.code)) from None
+            retry_after = error.headers.get("Retry-After", "")
+            delay = min(45, float(retry_after)) if retry_after.isdecimal() else (3 * 2 ** attempt)
+            print("Ticketmaster API request temporarily limited (429), retrying.", flush=True)
+            time.sleep(delay)
+    raise RuntimeError("Ticketmaster Discovery API temporarily unavailable")
 
 
 def _months_from_today(today, months=24):
@@ -243,9 +268,10 @@ def scrape_ticketmaster_nl(api_key=None, today=None, getter=_get_json):
         print("Ticketmaster NL: API key ontbreekt; officiële bron nog niet actief.", flush=True)
         return []
     today = today or date.today()
-    events = []
-    for start, end in _months_from_today(today):
-        events.extend(_fetch_range(start, end, key, getter=getter))
+    # Query the full 24-month horizon in one range where possible.
+    # Previously querying 24 separate months caused avoidable HTTP 429s.
+    # _fetch_range() splits only when the result set exceeds the safe paging cap.
+    events = _fetch_range(today, today + timedelta(days=730), key, getter=getter)
     # Festivals may not all be assigned to the Music segment. Search by name
     # without the segment restriction, then still enforce Music classification.
     for festival in FESTIVALS:
