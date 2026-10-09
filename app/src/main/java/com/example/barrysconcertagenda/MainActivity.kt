@@ -623,6 +623,7 @@ fun ConcertApp() {
                         }
                     }
                 )
+            }
         }
     ) { innerPadding ->
 
