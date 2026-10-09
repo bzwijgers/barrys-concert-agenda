@@ -98,7 +98,7 @@ def gebouw_t_parse_event(page, event_url):
     # from reading the actual show time. Read the official 'Aanvang' field
     # regardless of whether the structured date was present.
     official_start = re.search(
-        r"\baanvang\s*:\s*([01]?\d|2[0-3])[:.]([0-5]\d)\b",
+        r"\baanvang\s*:?\s*([01]?\d|2[0-3])[:.]([0-5]\d)\b",
         text[:2200], flags=re.I,
     )
     if official_start:
