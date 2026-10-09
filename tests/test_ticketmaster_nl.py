@@ -39,6 +39,21 @@ class TicketmasterTests(unittest.TestCase):
                                                     venue="Megaland", city="Landgraaf",
                                                     when="2027-06-18"), today="2026-10-10"))
 
+    def test_venue_premium_products_are_not_concerts(self):
+        for venue, title in [
+            ("Ziggo Dome Club", "The Strokes | Venue Premium Packages"),
+            ("AFAS Live Sky Lounge", "Jill Scott | Sky Lounge"),
+            ("AFAS Live Loge", "Tokio Hotel | Premium Seats"),
+            ("Ziggo Dome", "J. Cole | Venue Premium Packages"),
+        ]:
+            with self.subTest(venue=venue, title=title):
+                item = event(name=title, venue=venue)
+                self.assertIsNone(event_to_concert(item, today="2026-10-10"))
+        self.assertIsNotNone(
+            event_to_concert(event(name="Jill Scott", venue="AFAS Live"),
+                             today="2026-10-10")
+        )
+
     def test_dutch_festival_classified_outside_music_is_included(self):
         bospop = event(name="Bospop 2027 - weekend",
                        when="2027-07-09", venue="Bospop Festivalterrein",
