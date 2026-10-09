@@ -36,6 +36,20 @@ class BackstageSelectorsTest {
         )
     }
 
+    @Test fun swipeMovesThroughEveryMainTabInCorrectOrder() {
+        var target = 9 to 3
+        val sequence = listOf(10 to 3, 1 to 3, 11 to 3, 11 to 2, 8 to 2)
+        for (expected in sequence) {
+            target = BackstageSelectors.swipeTarget(
+                target.first, target.second, towardsNext = true
+            ) ?: error("Missing forward tab")
+            assertEquals(expected, target)
+        }
+        assertEquals(null, BackstageSelectors.swipeTarget(8, 2, towardsNext = true))
+        assertEquals(11 to 2, BackstageSelectors.swipeTarget(8, 2, towardsNext = false))
+        assertEquals(null, BackstageSelectors.swipeTarget(9, 3, towardsNext = false))
+    }
+
     @Test fun november22ShowsThatDayAndAllSubsequentConcerts() {
         val selected = LocalDate.of(2026, 11, 22)
         val dates = listOf("2026-11-21", "2026-11-22", "2026-11-23", "2026-12-01")
