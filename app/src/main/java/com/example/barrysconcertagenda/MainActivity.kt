@@ -897,6 +897,13 @@ fun ConcertApp() {
                                         onSelect = {
                                             calendarMode = it == "calendar"
                                             calendarDay = null
+                                            // After listing shows from a selected date, reopening
+                                            // the calendar must show ALL dates again, allowing
+                                            // the user to select an earlier starting point.
+                                            if (calendarMode) {
+                                                searchDateFrom = null
+                                                searchDateTo = null
+                                            }
                                         }
                                     )
                                     if (!calendarMode && searchDateFrom != null) {
