@@ -101,6 +101,23 @@ bad_non_music=[
 if bad_non_music:
     raise RuntimeError("Non-concert entries still in published feed: "+repr(bad_non_music[:15]))
 
+# Protect future publications against exact performances entering again
+# through a different indexed/ticket-site URL.
+from scrapers.feed_quality import deduplicate_performances, is_known_nonconcert
+_, duplicate_performances = deduplicate_performances(feed)
+if duplicate_performances:
+    raise RuntimeError(
+        "Multiple URLs for identical performances: " +
+        repr([(x["artist"], x["date"], x["venue"]) for x in duplicate_performances[:15]])
+    )
+bad_titles=[x for x in feed if is_known_nonconcert(x)]
+if bad_titles:
+    raise RuntimeError(
+        "Known nonconcert events leaked into feed: " +
+        repr([(x["artist"], x["source"]) for x in bad_titles[:15]])
+    )
+print("PASS: one listing per performance, nonconcert titles excluded")
+
 print("PASS: recovered official concerts retained, non-music entries excluded")
 
 print("PASS: all sources present, dates valid, unique URLs, known shows correctly dated")
