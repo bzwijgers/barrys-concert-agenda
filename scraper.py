@@ -15,6 +15,7 @@ from scrapers.ticketswap import enrich_ticketswap_urls
 from scrapers.new_venues import scrape_new_venues
 from scrapers.bird import scrape_bird
 from scrapers.ticketmaster_nl import scrape_ticketmaster_nl, merge_ticketmaster
+from scrapers.feed_quality import deduplicate_performances, is_known_nonconcert
 from scrapers.discovery import attach_first_found
 from scrapers.podiuminfo_venues import scrape_podiuminfo_venues
 
@@ -276,6 +277,18 @@ for concert in all_concerts:
 all_concerts = list(
     unique_concerts.values()
 )
+# A shared show can have distinct Ticketmaster, hall, BIRD or Podiuminfo URLs.
+# Remove true repeated performances but preserve earlier/later showtimes.
+all_concerts, repeated_performances = deduplicate_performances(all_concerts)
+print("Repeated live performances suppressed:", len(repeated_performances),
+      [(item["artist"], item["date"], item["source"]) for item in repeated_performances[:10]],
+      flush=True)
+
+not_live = [event for event in all_concerts if is_known_nonconcert(event)]
+if not_live:
+    print("Known club/comedy/quiz listings removed:", len(not_live),
+          [event["artist"] for event in not_live[:12]], flush=True)
+all_concerts = [event for event in all_concerts if not is_known_nonconcert(event)]
 
 # Never publish obvious parser placeholders or internal test events.
 # These can otherwise survive indefinitely through previous-feed recovery.
