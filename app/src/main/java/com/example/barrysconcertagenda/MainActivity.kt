@@ -518,18 +518,19 @@ fun ConcertApp() {
                         concert.city.lowercase(Locale.getDefault()).contains(normalizedSearch)
                 val venueMatches =
                     searchVenue == null || concert.venue.equals(searchVenue, ignoreCase = true)
-                val concertDate = parseConcertDate(concert.date)
-                val dateMatches =
-                    (searchDateFrom == null || (concertDate != null && !concertDate.isBefore(searchDateFrom))) &&
-                    (searchDateTo == null || (concertDate != null && !concertDate.isAfter(searchDateTo)))
+                val dateMatches = BackstageSelectors.withinDateRange(
+                    concert, searchDateFrom, searchDateTo
+                )
                 textMatches && venueMatches && dateMatches
             }
         }
 
     val visibleConcerts =
         when {
-            selectedTab == 0 || (selectedTab == 10 && discoveryFilter == "new") ->
-                searchedConcerts.sortedByDescending { it.firstFound }
+            selectedTab == 0 -> searchedConcerts.sortedByDescending { it.firstFound }
+            selectedTab == 10 -> BackstageSelectors.orderDiscovery(
+                searchedConcerts, discoveryFilter, noRecentlyDiscoveredConcerts
+            )
             selectedTab == 9 -> searchedConcerts.take(8)
             selectedTab == 1 && calendarMode ->
                 BackstageSelectors.calendar(searchedConcerts, calendarMonth, calendarDay)
