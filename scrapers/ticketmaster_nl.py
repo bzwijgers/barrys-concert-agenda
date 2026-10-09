@@ -106,6 +106,14 @@ def merge_ticketmaster(existing, incoming):
     return added, repeats
 
 
+def _festival_identity(name):
+    title = _norm(name)
+    for festival in FESTIVALS:
+        if title == festival or title.startswith(festival + " "):
+            return festival
+    return None
+
+
 def _music_classification(event):
     classifications = event.get("classifications") or []
     if not classifications:
@@ -125,9 +133,12 @@ def event_to_concert(event, today=None):
     status = ((event.get("dates") or {}).get("status") or {}).get("code", "").lower()
     if status in CANCELLED:
         return None
-    if not _music_classification(event):
-        return None
     raw_name = (event.get("name") or "").strip()
+    # Some festival admissions are categorized under Festivals, not Music.
+    # Their unmistakable festival title is enough to include the event,
+    # but only after the NL venue and date checks below.
+    if not _music_classification(event) and _festival_identity(raw_name) is None:
+        return None
     if not raw_name or TICKET_PRODUCT.search(raw_name):
         return None
     url = (event.get("url") or "").strip()
@@ -239,7 +250,21 @@ def scrape_ticketmaster_nl(api_key=None, today=None, getter=_get_json):
         # Same event can occur in a monthly segment response and a festival search.
         k = (show["date"], _norm(show["city"]), _venue_name(show["venue"]), _norm(_concert_title(show["artist"])))
         concerts.setdefault(k, show)
-    counts = Counter(x["venue"] for x in concerts.values())
-    print("Ticketmaster NL: valid music/festival shows", len(concerts),
-          "venues:", len(counts), flush=True)
-    return list(concerts.values())
+    # Avoid different "Friday / Saturday / weekend / regular / day ticket"
+    # products presenting the same festival as several different concerts.
+    # One festival per annual edition, displayed on the earliest event day.
+    by_festival, regular = {}, []
+    for show in concerts.values():
+        festival = _festival_identity(show["artist"])
+        if festival:
+            edition = (festival, show["date"][:4])
+            old = by_festival.get(edition)
+            if old is None or show["date"] < old["date"]:
+                by_festival[edition] = show
+        else:
+            regular.append(show)
+    final = regular + list(by_festival.values())
+    counts = Counter(x["venue"] for x in final)
+    print("Ticketmaster NL: valid music/festival shows", len(final),
+          "venues:", len(counts), "festival editions:", len(by_festival), flush=True)
+    return final
