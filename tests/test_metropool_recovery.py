@@ -71,6 +71,8 @@ class MetropoolRecoveryTests(unittest.TestCase):
         def get(url, attempts=2):
             if url.endswith("/agenda") or "pNumber=2" in url:
                 return "".join(f'<a href="/agenda/show-{i}">Show</a>' for i in range(4))
+            if url.endswith("/show-3"):
+                return '<html><meta property="og:title" content="Live music"><meta property="og:description" content="Concert 14 November 2027"></html>'
             raise RuntimeError("HTTP Error 500")
         download.side_effect = get
         with self.assertRaisesRegex(RuntimeError, "detail requests failed"):
