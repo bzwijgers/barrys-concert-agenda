@@ -1,0 +1,44 @@
+name: Validate Ticketmaster NL importer
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scrapers/ticketmaster_nl.py"
+      - "scraper.py"
+      - "tests/test_ticketmaster_nl.py"
+      - ".github/workflows/ticketmaster-nl-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-ticketmaster:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile Ticketmaster importer
+        run: python -m py_compile scrapers/ticketmaster_nl.py scraper.py tests/test_ticketmaster_nl.py
+      - name: Check Netherlands-only, festivals, duplicate removal and API pagination
+        run: python -m unittest discover -s tests -p "test_ticketmaster_nl.py" -v
+      - name: Check whether optional official API is configured
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+        run: |
+          if test -n "$TICKETMASTER_API_KEY"; then
+            echo "Ticketmaster Discovery API secret is configured."
+            python - <<'PY'
+          import os
+          from scrapers.ticketmaster_nl import _get_json
+          data = _get_json({"countryCode": "NL", "segmentId": "KZFzniwnSyZfZ7v7nJ", "size": 1}, os.environ["TICKETMASTER_API_KEY"])
+          print("API total Dutch music events:", (data.get("page") or {}).get("totalElements"))
+          if (data.get("page") or {}).get("totalElements", 0) < 1:
+              raise SystemExit("No Dutch music events received from official API")
+          PY
+          else
+            echo "::notice::Add GitHub repository secret TICKETMASTER_API_KEY to enable the official Ticketmaster source."
+          fi
