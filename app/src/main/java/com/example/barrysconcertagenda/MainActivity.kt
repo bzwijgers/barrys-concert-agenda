@@ -68,6 +68,8 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.input.pointer.pointerInput
@@ -598,13 +600,17 @@ fun ConcertApp() {
             }
         }
     ) { innerPadding ->
-        Box(modifier = Modifier.fillMaxSize()) {
+        Box(modifier = Modifier.fillMaxSize().clipToBounds()) {
             Image(
                 painter = painterResource(id = R.drawable.barrys_concerten_splash),
                 contentDescription = null,
                 contentScale = androidx.compose.ui.layout.ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxSize()
+                    // The splash artwork includes a mock phone status bar and
+                    // home indicator. A slight centred zoom crops both away
+                    // when reusing the original photo as the app background.
+                    .graphicsLayer(scaleX = 1.11f, scaleY = 1.11f)
                     .testTag("backstage-fullscreen-start-photo")
             )
             // Maintain white-text contrast without hiding the concert photo.
