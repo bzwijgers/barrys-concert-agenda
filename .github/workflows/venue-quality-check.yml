@@ -27,3 +27,33 @@ jobs:
         run: |
           python -m unittest discover -s tests -p "test_venue_quality_regression.py" -v
           python -m unittest discover -s tests -p "test_metropool_*.py" -v
+      - name: Verify live official event cards and show starts
+        run: |
+          python - <<'PY'
+          from scrapers.common import download_page_retry, normalize_url
+          from scrapers.new_venues import klokgebouw_listing_cards, parse_event
+          from scrapers.gebouw_t import gebouw_t_parse_event
+          venue = "https://www.klokgebouw.nl/agenda"
+          cards = klokgebouw_listing_cards(download_page_retry(venue, attempts=3), venue)
+          print("Klokgebouw categorized cards:", len(cards), flush=True)
+          first = cards.get(normalize_url(venue + "/revolution-calling-20-11"))
+          print("Klokgebouw Revolution Calling Friday:", first, flush=True)
+          if not first or first.get("day") != 20 or first.get("month") != 11:
+              raise SystemExit("Klokgebouw live Friday event date missing or not parseable")
+          if first.get("genre") != "rock":
+              raise SystemExit("Klokgebouw live Rock genre missing: " + repr(first))
+          corporate = cards.get(normalize_url(venue + "/cisco-connect-benelux"))
+          print("Klokgebouw Cisco event:", corporate, flush=True)
+          if corporate and corporate.get("genre") != "business":
+              raise SystemExit("Klokgebouw live Business filter not supported by card")
+          pitou = "https://gebouw-t.nl/agenda/pitou/"
+          geb = gebouw_t_parse_event(download_page_retry(pitou, attempts=3), pitou)
+          print("Gebouw-T Pitou:", geb, flush=True)
+          if not geb or geb["date"] != "2026-11-05" or geb["time"] != "21:00":
+              raise SystemExit("Gebouw-T official Pitou start not recognized")
+          spot = "https://www.spotgroningen.nl/programma/ed-obrien"
+          show = parse_event(download_page_retry(spot, attempts=3), spot, "SPOT Groningen", "Groningen")
+          print("SPOT Ed O'Brien:", show, flush=True)
+          if not show or show["date"] != "2026-10-14" or show["time"] != "20:30":
+              raise SystemExit("SPOT official Ed O'Brien show start not recognized")
+          PY
