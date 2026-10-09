@@ -104,8 +104,14 @@ class BackstageNavigationUiTest {
         val photo = compose.onNodeWithTag("backstage-fullscreen-start-photo")
             .assertExists()
             .getUnclippedBoundsInRoot()
-        assertTrue("Photo should span full screen width", photo.width >= screen.width * 0.98f)
-        assertTrue("Photo should span full screen height", photo.height >= screen.height * 0.98f)
+        assertTrue(
+            "Photo should span full screen width",
+            (photo.right - photo.left) >= (screen.right - screen.left) * 0.98f
+        )
+        assertTrue(
+            "Photo should span full screen height",
+            (photo.bottom - photo.top) >= (screen.bottom - screen.top) * 0.98f
+        )
         compose.onNodeWithContentDescription("Ontdek").performClick()
         compose.onNodeWithTag("backstage-fullscreen-start-photo").assertExists()
     }
