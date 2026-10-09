@@ -32,10 +32,10 @@ class VenueQualityTests(unittest.TestCase):
             '<span>vr. 13 nov.</span><b>Dance</b> Winson</a>'
         )
         data = klokgebouw_listing_cards(html)
-        rock = data["klokgebouw.nl/agenda/revolution-calling-20-11"]
+        rock = data["https://www.klokgebouw.nl/agenda/revolution-calling-20-11"]
         self.assertEqual((rock["day"], rock["month"], rock["genre"]), (20, 11, "rock"))
-        self.assertEqual(data["klokgebouw.nl/agenda/cisco-connect-benelux"]["genre"], "business")
-        self.assertEqual(data["klokgebouw.nl/agenda/winson-all-day-long"]["genre"], "dance")
+        self.assertEqual(data["https://www.klokgebouw.nl/agenda/cisco-connect-benelux"]["genre"], "business")
+        self.assertEqual(data["https://www.klokgebouw.nl/agenda/winson-all-day-long"]["genre"], "dance")
 
     @patch("scrapers.new_venues.download_page_retry")
     @patch("scrapers.new_venues.parse_event")
