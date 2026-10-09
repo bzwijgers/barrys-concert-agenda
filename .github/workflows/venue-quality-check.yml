@@ -1,0 +1,29 @@
+name: Verify priority venue quality
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scrapers/new_venues.py"
+      - "scrapers/gebouw_t.py"
+      - "tests/test_venue_quality_regression.py"
+      - ".github/workflows/venue-quality-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  priority-venue-parsers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile venue parsers
+        run: python -m compileall -q scrapers tests
+      - name: Regressions for Klokgebouw SPOT Gebouw-T Doornroosje Metropool
+        run: |
+          python -m unittest discover -s tests -p "test_venue_quality_regression.py" -v
+          python -m unittest discover -s tests -p "test_metropool_*.py" -v
