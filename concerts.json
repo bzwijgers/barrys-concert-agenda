@@ -73,18 +73,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/declan-welsh-and-the-decadent-west-amsterdam-paradiso-2026-10-09-CZsme38PH57fkTekR97Rp"
   },
   {
-    "artist": "PAUW",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "19:30",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/pauw/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/pauw-at-paard-the-hague-the-hague-paard-2026-10-09-CfW4gxSAgzRTMs8ymvuST"
-  },
-  {
     "artist": "VroegZat",
     "venue": "MEZZ",
     "city": "Breda",
@@ -209,17 +197,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/studio-brandstof-the-bane-grams",
-    "firstFound": 0
-  },
-  {
-    "artist": "Paarcafé: Mic Drop",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:35",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/paarcafe-mic-drop/",
     "firstFound": 0
   },
   {
