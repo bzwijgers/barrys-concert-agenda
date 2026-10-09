@@ -21,6 +21,17 @@ object BackstageSelectors {
             }
         }
 
+    /**
+     * On a newly installed app, historical discovery timestamps are unknown.
+     * Do not label old concerts as "new"; show upcoming concerts as an
+     * explicitly labelled fallback so the Discover tab is never empty.
+     */
+    fun discoverOrUpcoming(all: List<Concert>, filter: String): List<Concert> {
+        val matching = discover(all, filter)
+        return if (filter == "new" && matching.isEmpty()) discover(all, "all")
+            else matching
+    }
+
     fun mine(all: List<Concert>, section: Int): List<Concert> =
         all.filter {
             when (section) {
