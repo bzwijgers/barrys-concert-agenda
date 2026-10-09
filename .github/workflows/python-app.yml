@@ -14,9 +14,9 @@ on:
       - ".github/workflows/python-app.yml"
 
   schedule:
-    # GitHub Actions gebruikt UTC.
-    # 05:00 UTC = 07:00 in Nederland tijdens zomertijd.
-    - cron: "0 5 * * *"
+    # Elke ochtend 07:00 Nederlandse tijd, ook na omschakeling zomer/winter.
+    - cron: "0 7 * * *"
+      timezone: "Europe/Amsterdam"
 
 permissions:
   contents: write
