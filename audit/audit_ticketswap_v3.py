@@ -35,8 +35,27 @@ def words(s):
             if len(w) > 1 and w not in STOP}
 
 
+def free_entry(concert):
+    """Known free-admission event: a TicketSwap URL should not be offered."""
+    return (
+        concert.get("date") == "2026-12-06"
+        and concert.get("artist", "").lower() == "just graduated: marco bernardi en katrina kabineca"
+        and concert.get("venue", "").lower() == "amare"
+        and concert.get("city", "").lower() == "den haag"
+        and concert.get("url", "").rstrip("/")
+            == "https://www.podiuminfo.nl/concert/485136/Just-Graduated-Marco-Bernardi-en-Katrina-Kabineca/Amare"
+    )
+
+
 def exception(concert, link):
     source = concert.get("url", "").rstrip("/")
+    if (concert.get("artist", "").lower() == "lords of altamont + sick shooters"
+            and concert.get("date") == "2026-11-22"
+            and concert.get("venue", "").lower() == "db's"
+            and concert.get("city", "").lower() == "utrecht"
+            and source == "https://dbstudio.nl/event/lords-of-altamont"
+            and link == "https://www.ticketswap.nl/concert-tickets/lords-of-altamont-utrecht-dbs-oefenstudios-concertzaal-muziekcafe-2026-11-22-CdENvHWLHRMhVuoMG4LxW"):
+        return True
     if (concert.get("artist", "").lower() == "the apers"
             and concert.get("date") == "2026-10-09"
             and concert.get("venue", "").lower() == "rotown"
@@ -53,6 +72,8 @@ def exception(concert, link):
 
 
 def problem(concert):
+    if free_entry(concert):
+        return "suppressed-free-admission"
     link = (concert.get("ticketSwapUrl") or "").strip()
     if not link:
         return "missing"
@@ -105,7 +126,7 @@ def main():
     print("FUTURE WITH TICKETSWAP LINK:", len(with_link), "/", len(future))
     print("TICKETSWAP VALIDATION:", dict(by_status))
     mismatches = [(problem(c), c) for c in with_link
-                  if problem(c) not in {"matched", "verified-exception"}]
+                  if problem(c) not in {"matched", "verified-exception", "suppressed-free-admission"}]
     print("QUESTIONABLE EXAMPLES:")
     for kind, c in mismatches[:35]:
         print(kind, "|", c.get("artist"), "|", c.get("date"), "|", c.get("venue"),
