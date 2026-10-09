@@ -100,11 +100,21 @@ def _same_performance(a, b):
     y = _norm(_concert_title(b.get("artist")))
     if not x or not y:
         return False
+    # The same artist may be followed by "+ support", an anniversary number
+    # or "luistersessie" / "listening session" at the other provider.
+    # Normalize these descriptions for matching ONLY; retain display titles.
+    def identity(value):
+        value = re.sub(r"\b(?:listening session|luistersessie)\b", "", value)
+        value = re.sub(r"\s+(?:support|with support|and support)\b.*$", "", value)
+        return re.sub(r"\s+", " ", value).strip()
+    x, y = identity(x), identity(y)
+    if not x or not y:
+        return False
     if x == y:
         return True
-    # Ticketmaster often adds "The [Tour name]" to the same headliner.
-    # Require a meaningful complete artist name, not one common word.
-    if min(len(x), len(y)) >= 8 and (x.startswith(y + " ") or y.startswith(x + " ")):
+    # Lower bound 5 allows real short artist names (Mogwai, Eihwar and
+    # Quadeca) while avoiding ambiguous single words like "DJ" or "Live".
+    if min(len(x), len(y)) >= 5 and (x.startswith(y + " ") or y.startswith(x + " ")):
         return True
     return SequenceMatcher(None, x, y).ratio() >= 0.92
 
