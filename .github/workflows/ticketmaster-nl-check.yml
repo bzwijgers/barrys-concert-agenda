@@ -76,6 +76,24 @@ jobs:
                 [x["artist"] for x in items
                  if any(word in x["artist"].lower() for word in ("pinkpop", "lowlands", "bospop"))],
                 flush=True)
+          # Identify same-day/same-venue artist-title mismatches still needing review.
+          # This is diagnostic only: do not collapse two distinct performances.
+          from difflib import SequenceMatcher
+          from scrapers.ticketmaster_nl import _norm, _venue_name
+          by_place = {}
+          for entry in official:
+              key = (entry.get("date"), _norm(entry.get("city")), _venue_name(entry.get("venue")))
+              by_place.setdefault(key, []).append(entry)
+          suspected = []
+          for item in added:
+              key = (item["date"], _norm(item["city"]), _venue_name(item["venue"]))
+              for old in by_place.get(key, ()):
+                  score = SequenceMatcher(None, _norm(item["artist"]), _norm(old.get("artist"))).ratio()
+                  if score >= 0.55:
+                      suspected.append((round(score, 2), item["date"],
+                                        item["artist"], old.get("artist"), item["venue"]))
+          print("Ticketmaster NL possible title-variant duplicates:",
+                sorted(suspected, reverse=True)[:30], flush=True)
           if not items:
               raise SystemExit("Ticketmaster key works but scraper returned zero Dutch events")
           if any(x.get("country") != "NL" for x in added):
