@@ -11,7 +11,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="Barry's concert agenda"
+        android:label="Barry's agenda V2"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BarrysConcertAgenda">
@@ -19,7 +19,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Barry's concert agenda"
+            android:label="Barry's agenda V2"
             android:theme="@style/Theme.BarrysConcertAgenda"
             android:windowSoftInputMode="adjustResize">
 
