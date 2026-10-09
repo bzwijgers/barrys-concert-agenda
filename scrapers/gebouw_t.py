@@ -61,6 +61,8 @@ def gebouw_t_parse_event(page, event_url):
     normal_title = title.casefold().replace("’", "'").replace("‘", "'")
     if any(x in normal_title for x in reject):
         return None
+    if re.search(r"\bgenre\s*:\s*themafeest\b", text[:1800], re.I):
+        return None
     # A themed DJ party is not an artist playing a live concert.
     if "toppop yeah! the party" in normal_title:
         return None
@@ -91,6 +93,16 @@ def gebouw_t_parse_event(page, event_url):
             event_time = time_match.group(1).replace(".", ":")
     if not event_date:
         return None
+
+    # A date-only schema.org startDate can prevent _detail_date_time()
+    # from reading the actual show time. Read the official 'Aanvang' field
+    # regardless of whether the structured date was present.
+    official_start = re.search(
+        r"\baanvang\s*:\s*([01]?\d|2[0-3])[:.]([0-5]\d)\b",
+        text[:2200], flags=re.I,
+    )
+    if official_start:
+        event_time = f"{int(official_start.group(1)):02d}:{official_start.group(2)}"
 
     location = "Gebouw-T"
     city = "Bergen op Zoom"
