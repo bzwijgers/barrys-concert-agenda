@@ -72,6 +72,10 @@ jobs:
           print("Ticketmaster NL unique new concerts:", len(added), flush=True)
           print("Ticketmaster NL biggest venue counts:",
                 collections.Counter(x["venue"] for x in added).most_common(25), flush=True)
+          print("Ticketmaster NL AFAS Live diagnostics:",
+                [(venue, count) for venue, count
+                 in collections.Counter(x["venue"] for x in items).items()
+                 if "afas" in venue.lower()], flush=True)
           print("Ticketmaster NL festival matches:",
                 [x["artist"] for x in items
                  if any(word in x["artist"].lower() for word in ("pinkpop", "lowlands", "bospop"))],
