@@ -42,6 +42,32 @@ object BackstageSelectors {
         }
 
     /**
+     * Match horizontal swipes to the six visible navigation items:
+     * Home, Discover, Agenda, Tickets, Favorites, and More.
+     */
+    fun swipeTarget(selectedTab: Int, mySection: Int, towardsNext: Boolean): Pair<Int, Int>? {
+        val order = listOf(9, 10, 1, 3, 2, 8)
+        val active = when (selectedTab) {
+            11 -> when (mySection) {
+                2 -> 2
+                3 -> 3
+                else -> 8
+            }
+            4, 5, 7, 8 -> 8
+            else -> selectedTab
+        }
+        val position = order.indexOf(active)
+        if (position == -1) return null
+        val next = position + if (towardsNext) 1 else -1
+        if (next !in order.indices) return null
+        return when (order[next]) {
+            3 -> 11 to 3
+            2 -> 11 to 2
+            else -> order[next] to mySection
+        }
+    }
+
+    /**
      * A date selected from the calendar means the rest of the agenda,
      * including the selected day. The end date is optional.
      */
