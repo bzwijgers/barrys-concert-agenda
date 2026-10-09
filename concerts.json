@@ -36,19 +36,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/snelle-amsterdam-melkweg-2026-10-09-CXMwLxnLkN5oRNBX8jWS8"
   },
   {
-    "artist": "The Apers",
-    "venue": "Rotown",
-    "city": "Rotterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "19:15",
-    "source": "Rotown",
-    "url": "https://www.rotown.nl/agenda/the-apers-1/",
-    "clubCard": false,
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/maladroit-rotterdam-rotown-2026-10-09-CbSFR53UXMVxNKodxWTdf"
-  },
-  {
     "artist": "Chrissy Chlapecka",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -534,15 +521,15 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jack-savoretti-amsterdam-paradiso-2026-10-10-CXMzq24R6J8zffjJesKbG"
   },
   {
-    "artist": "Jill Scott | Sky Lounge",
-    "venue": "AFAS Live Sky Lounge",
+    "artist": "Jill Scott – To Whom This May Concern Tour",
+    "venue": "AFAS Live",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-10-10",
     "time": "20:00",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/jill-scott-%7C-sky-lounge-tickets/1534966272?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/jill-scott--to-whom-this-may-concern-tour-tickets/1211443604?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "JOHN COFFEY + Van Tastik",
@@ -1017,17 +1004,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "The Strokes | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-11",
-    "time": "19:35",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/the-strokes-%7C-venue-premium-packages-tickets/311655302?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Dublin Legends",
     "venue": "Amare",
     "city": "Den Haag",
@@ -1307,6 +1283,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jasmine-myra-the-hague-paard-2026-10-12-CfbzsnGME125ynb1GsgHf"
   },
   {
+    "artist": "Khalid: It's Always Summer Somewhere Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-12",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/khalid-its-always-summer-somewhere-tour-tickets/1313944552?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Pete Murray",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -1342,17 +1329,6 @@
     "source": "De Helling",
     "url": "https://dehelling.nl/agenda/the-magic-numbers-support-simon-joan-12-10-2026",
     "firstFound": 0
-  },
-  {
-    "artist": "J. Cole | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-12",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/j-cole-%7C-venue-premium-packages-tickets/81636214?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Cuca Roseta - Bezielde stem van de fado",
@@ -1505,6 +1481,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/los-cumbia-stars-the-hague-paard-2026-10-13-CfN3PMY5b9hfzyXeewMU3"
   },
   {
+    "artist": "TYLA",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-13",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/tyla-the-apop-world-tour-tickets/1157550807?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tyla-amsterdam-afas-live-2026-10-13-CdTx8nHvZFPHaNT4Mt6Y8"
+  },
+  {
     "artist": "Young the Giant",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -1515,17 +1503,6 @@
     "url": "https://www.spotgroningen.nl/programma/young-the-giant",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/young-the-giant-groningen-spot-de-oosterpoort-2026-10-13-CahDcExC9HoWexhJW92s8"
-  },
-  {
-    "artist": "J. Cole | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-13",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/j-cole-%7C-venue-premium-packages-tickets/242487551?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Cochemea",
@@ -1786,26 +1763,16 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/thijs-veldhuis-breda-mezz-2026-10-14-Cawrj8bGM12kvFQoCBrkX"
   },
   {
-    "artist": "Young Thug | Sky Lounge",
-    "venue": "AFAS Live Sky Lounge",
+    "artist": "YSL Records & Young Thug Presents: The New Generation Tour",
+    "venue": "AFAS Live",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-10-14",
     "time": "20:00",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/young-thug-%7C-sky-lounge-tickets/1321517509?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Bryan Adams | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-14",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/bryan-adams-%7C-venue-premium-packages-tickets/1080219612?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/ysl-records--young-thug-presents-the-new-generation-tour-tickets/99863888?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ysl-the-new-generation-young-thug-afterparty-amsterdam-club-up-2026-10-14-CfXbDe6TMBZm7UGjeqBnm"
   },
   {
     "artist": "Jhariah + support Plonki",
@@ -2207,17 +2174,6 @@
     "source": "Gebouw-T",
     "url": "https://gebouw-t.nl/agenda/tangarine",
     "firstFound": 0
-  },
-  {
-    "artist": "Niall Horan | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-15",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/niall-horan-%7C-venue-premium-packages-tickets/965529181?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Beach Boys’ Best",
@@ -2726,17 +2682,6 @@
     "url": "https://www.neushoorn.nl/events/vrij-gezellig",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/vrij-gezellig-leeuwarden-neushoorn-2026-10-16-CcKNr95XCaJoRg9hUTcP1"
-  },
-  {
-    "artist": "Niall Horan | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-16",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/niall-horan-%7C-venue-premium-packages-tickets/2000183313?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Pink Project: Echoes",
@@ -3957,17 +3902,6 @@
     "firstFound": 0
   },
   {
-    "artist": "LE SSERAFIM | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-18",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/le-sserafim-%7C-venue-premium-packages-tickets/413617737?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "RONDÉ",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -4731,6 +4665,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Jean-Michel Jarre",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-21",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jean-michel-jarre-tickets/857364471?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jean-michel-jarre-amsterdam-afas-live-2026-10-21-CYtvTsvJJVFCYvFabt2DF"
+  },
+  {
     "artist": "KANAAN (Norway) + THE TELESCOPES (UK)",
     "venue": "dB's",
     "city": "Utrecht",
@@ -4989,6 +4935,17 @@
     "url": "https://bibelot.net/programma/dikkie-dik-dirk-scheele",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dikkie-dik-dirk-scheele-dordrecht-bibelot-poppodium-2026-10-22-CcZDdKi8b5rD4RUXbpDmX"
+  },
+  {
+    "artist": "STMPD 10 YEARS - ADE",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "17:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/stmpd-10-years-ade-tickets/1718475544?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "MATTEO MYDERWYK (IN HET ACADEMIEHUIS)",
@@ -7269,17 +7226,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rob-lamberti-presents-a-celebration-of-george-michael-tilburg-poppodium-013-2026-10-27-CcfKmCXxvfECfk2DRTBaz"
   },
   {
-    "artist": "Placebo | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-27",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/placebo-%7C-venue-premium-packages-tickets/215502472?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Goldie Boutilier + Ugly Ozo",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -7593,17 +7539,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/83747984/the-meltdown-28-10-2026/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-meltdown-utrecht-tivolivredenburg-2026-10-28-CWFa94xtR9Fq7Ro3zq1yy"
-  },
-  {
-    "artist": "Stevie Wonder | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-28",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/stevie-wonder-%7C-venue-premium-packages-tickets/365722460?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Dan Owen",
@@ -8335,6 +8270,17 @@
     "url": "https://www.013.nl/programma/124715/40up",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/40up-tijdmachine-tour-tilburg-poppodium-013-2026-10-30-CfEVG1RA2Qskp7XrmuTK6"
+  },
+  {
+    "artist": "D-Block Europe x French Montana",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/d-block-europe-x-french-montana-tickets/356658943?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Danko Jones + Split Dogs",
@@ -9098,6 +9044,17 @@
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/timo-tolkki-plays-stratovarius",
     "firstFound": 0
+  },
+  {
+    "artist": "Treasure in AFAS LIVE",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/treasure-in-afas-live-tickets/1462060349?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "FLEMMING",
@@ -10186,17 +10143,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Jungle | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-03",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/jungle-%7C-venue-premium-packages-tickets/979682595?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Kalben  'Land of Lost Poets' Tour",
     "venue": "Bitterzoet",
     "city": "Amsterdam",
@@ -10439,15 +10385,16 @@
     "firstFound": 0
   },
   {
-    "artist": "Tokio Hotel | Sky Lounge",
-    "venue": "AFAS Live Sky Lounge",
+    "artist": "Tokio Hotel - ARENA TOUR 2026",
+    "venue": "AFAS Live",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-04",
     "time": "20:00",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/tokio-hotel-%7C-sky-lounge-tickets/40908210?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/tokio-hotel-arena-tour-2026-tickets/1026773949?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tokio-hotel-arena-tour-2026-amsterdam-afas-live-2026-11-04-XyivuNcDsik4h864PQH7ah"
   },
   {
     "artist": "WIES",
@@ -10471,17 +10418,6 @@
     "url": "https://www.paard.nl/event/ao/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ao-the-hague-paard-2026-11-04-CeyDhNE5B4HtcaDGHqyrk"
-  },
-  {
-    "artist": "Myles Smith | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-04",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/myles-smith-%7C-venue-premium-packages-tickets/2082948179?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "SPYAIR",
@@ -10620,18 +10556,6 @@
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/workshop-introduction-to-touchdesigner-animation",
     "firstFound": 0
-  },
-  {
-    "artist": "Moss (listening session)",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "19:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/moss-listening-session--tickets/1911161532?language=en-us",
-    "firstFound": 1791588107075,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/moss-listening-session-amsterdam-melkweg-2026-11-05-CfVPQJacBfS5bcKAHTLXf"
   },
   {
     "artist": "Moss (luistersessie)",
@@ -10784,6 +10708,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Puscifer",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/puscifer-tickets/91515609?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/puscifer-amsterdam-gashouder-westergasfabriek-2026-11-05-Cb2BgSYQNX5TFVY1c2fvf"
+  },
+  {
     "artist": "Rolf Sanchez",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -10805,6 +10741,17 @@
     "url": "https://dbstudio.nl/event/shining-norway",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/shining-norway-utrecht-dbs-oefenstudios-concertzaal-muziekcafe-2026-11-05-CcsZTXSBgskvYJkWHggps"
+  },
+  {
+    "artist": "The Kid LAROI - A Perfect World Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/the-kid-laroi-a-perfect-world-tour-tickets/1142589285?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "The Soulful Sessions – David Michael Wyatt (US) & Josh Barry (UK)",
@@ -10839,17 +10786,6 @@
     "url": "https://www.013.nl/programma/130623/wende",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/wende-het-experiment-2-tilburg-poppodium-013-2026-11-05-CcWNdMfVFTYQDCoyBbxBs"
-  },
-  {
-    "artist": "Don Toliver | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-05",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/don-toliver-%7C-venue-premium-packages-tickets/1131122845?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Ciao Lucifer",
@@ -11223,6 +11159,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/skeler-amsterdam-melkweg-2026-11-06-Ccp9NbfEc8wiaqUJ1VpyG"
   },
   {
+    "artist": "Buiten Westen",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/buiten-westen-tickets/558392780?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/buiten-westen-amsterdam-gashouder-westergasfabriek-2026-11-06-Ccp9NrGZyHnnAVFsZTcGB"
+  },
+  {
     "artist": "Chasing Abbey + Miranda Faul",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -11349,6 +11297,18 @@
     "url": "https://www.effenaar.nl/agenda/electric-eel-shock",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/electric-eel-shock-effenaar-show-eindhoven-cafe-the-jack-2026-11-06-CZx761PRd6awLTZHvUXKj"
+  },
+  {
+    "artist": "Guus Meeuwis",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "20:30",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/guus-meeuwis-tickets/915600898?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/guus-meeuwis-amsterdam-afas-live-2026-11-06-CcMe69D6VBrVYuP3xxfwF"
   },
   {
     "artist": "K-otic",
@@ -11739,6 +11699,18 @@
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/studio15-x-museumnacht",
     "firstFound": 0
+  },
+  {
+    "artist": "Buiten Westen",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/buiten-westen-tickets/743126011?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/buiten-westen-amsterdam-gashouder-westergasfabriek-2026-11-07-CcsvyPpL1K7gbyJB39pBL"
   },
   {
     "artist": "Edu Lobo - Cantiga de Longe",
@@ -12349,6 +12321,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-temperance-movement-amsterdam-melkweg-2026-11-08-CaGSLENh2ktM6TM2DVCcy"
   },
   {
+    "artist": "Buiten Westen",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/buiten-westen-tickets/632627776?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/buiten-westen-amsterdam-gashouder-westergasfabriek-2026-11-08-CcwrH4KW6yjo74mp9WQtK"
+  },
+  {
     "artist": "Chali 2na & band + support",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -12439,17 +12423,6 @@
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/oi-va-voi",
     "firstFound": 0
-  },
-  {
-    "artist": "Korn | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-08",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/korn-%7C-venue-premium-packages-tickets/1179693171?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Ghostly Kisses",
@@ -12648,28 +12621,6 @@
     "url": "https://www.013.nl/programma/126189/messa",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/messa-eu-uk-tour-fall-2026-tilburg-poppodium-013-2026-11-09-CZPx6QNMzFPR15fQmDCuA"
-  },
-  {
-    "artist": "Deep Purple | Comfort Seats",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-09",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/deep-purple-%7C-comfort-seats-tickets/1745621383?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Deep Purple | Vinyl Room Package",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-09",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/deep-purple-%7C-vinyl-room-package-tickets/991027467?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Caro",
@@ -12872,17 +12823,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Mogwai 30",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-11-10",
-    "time": "20:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/mogwai-30-tickets/711665906?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "The Fray",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -12893,17 +12833,6 @@
     "url": "https://www.013.nl/programma/127397/the-fray",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-fray-tilburg-poppodium-013-2026-11-10-CZErwPgpBenuzE5i33kXf"
-  },
-  {
-    "artist": "Fontaines D.C. | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-10",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/fontaines-dc-%7C-venue-premium-packages-tickets/1884761424?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Abigail Lapell",
@@ -13183,6 +13112,18 @@
     "source": "PAARD",
     "url": "https://www.paard.nl/event/oh-voyage-3/",
     "firstFound": 0
+  },
+  {
+    "artist": "Overmono: Pure Devotion",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/overmono-pure-devotion-world-tour-tickets/179380501?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/overmono-pure-devotion-amsterdam-gashouder-westergasfabriek-2026-11-11-CbBeByY6MgrvekC9CLm8p"
   },
   {
     "artist": "Papa Roach – Rise Of The Roach",
@@ -13600,6 +13541,17 @@
     "source": "SPOT Groningen",
     "url": "https://www.spotgroningen.nl/programma/tina-dico",
     "firstFound": 0
+  },
+  {
+    "artist": "Tove Lo: Estrus",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/tove-lo-estrus-tickets/6967943?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Prins S. en de Geit",
@@ -14135,6 +14087,18 @@
     "firstFound": 1791588107075
   },
   {
+    "artist": "Montell Fish",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/montell-fish-the-nest-tour-tickets/1833841315?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/montell-fish-the-nest-tour-amsterdam-gashouder-westergasfabriek-2026-11-13-CeP26DRrdU5gYsN6tXCPk"
+  },
+  {
     "artist": "The Soulful Sessions",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -14653,6 +14617,17 @@
     "url": "https://www.mezz.nl/programma/emo-night-mainland-5/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/emo-night-mainland-breda-mezz-2026-11-14-Cawrj4vFTuDp7ah3Da9gD"
+  },
+  {
+    "artist": "Freya Skye - Stars Align Tour",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/freya-skye-stars-align-tour-tickets/1183427205?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Froukje + support",
@@ -15246,15 +15221,15 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/froukje-support-haarlem-patronaat-2026-11-15-CbSo4bgMgktFbGYJHF49w"
   },
   {
-    "artist": "Hatsune Miku | Sky Lounge",
-    "venue": "AFAS Live Sky Lounge",
+    "artist": "Hatsune Miku: Miku Expo 2026 Europe",
+    "venue": "AFAS Live",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-15",
     "time": "20:00",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/hatsune-miku-%7C-sky-lounge-tickets/1157359470?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/hatsune-miku-miku-expo-2026-europe-tickets/1223675978?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Kula Shaker",
@@ -15444,6 +15419,17 @@
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/immersion",
     "firstFound": 0
+  },
+  {
+    "artist": "Good Charlotte - Motel Du Cap EU/UK Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-16",
+    "time": "19:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/good-charlotte-motel-du-cap-eu-uk-tour-tickets/1261058603?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "The Wallflowers",
@@ -15644,6 +15630,17 @@
     "url": "https://www.tivolivredenburg.nl/agenda/12346515/soen-17-11-2026/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/soen-utrecht-tivolivredenburg-2026-11-17-Ca3BhkL2tygw785LM5Tt7"
+  },
+  {
+    "artist": "Bloc Party + Interpol",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-17",
+    "time": "19:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/bloc-party--interpol-tickets/1552969366?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Conway the Machine",
@@ -16690,17 +16687,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/muna-amsterdam-melkweg-2026-11-20-CavJTSKSFam37sEXSk4KL"
   },
   {
-    "artist": "MUNA + support",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-20",
-    "time": "19:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/muna--support-tickets/1612462391?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Super-Sonic Jazz Festival · Friday",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -16964,17 +16950,6 @@
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/voxtechnik",
     "firstFound": 0
-  },
-  {
-    "artist": "De Avond van de Filmmuziek | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-20",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/de-avond-van-de-filmmuziek-%7C-venue-premium-packages-tickets/14844279?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Krav Boca + Emirhan X",
@@ -17533,6 +17508,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/isabel-usher-groningen-spot-de-oosterpoort-2026-11-21-CbqXbnR7KZ9bXxRYBfEia"
   },
   {
+    "artist": "Jessie Ware",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jessie-ware-the-superbloom-tour-2026-tickets/1325258064?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jessie-ware-amsterdam-afas-live-2026-11-21-Ca6yRDN8RAn4MRQZJrHuJ"
+  },
+  {
     "artist": "Just + Engel + 't Gilde",
     "venue": "MEZZ",
     "city": "Breda",
@@ -17564,17 +17551,6 @@
     "source": "013",
     "url": "https://www.013.nl/programma/129939/triggerfinger",
     "firstFound": 0
-  },
-  {
-    "artist": "De Avond van de Filmmuziek | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-21",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/de-avond-van-de-filmmuziek-%7C-venue-premium-packages-tickets/101164919?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "ACinDC",
@@ -17689,7 +17665,7 @@
     "date": "2026-11-21",
     "time": "21:00",
     "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-21nov",
+    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-20nov",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-bergen-op-zoom-poppodium-gebouw-t-2026-11-21-CXX4jvQx6xTtsyXJCG1cY"
   },
@@ -17701,7 +17677,7 @@
     "date": "2026-11-21",
     "time": "21:00",
     "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-20nov",
+    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-21nov",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-bergen-op-zoom-poppodium-gebouw-t-2026-11-21-CXX4jvQx6xTtsyXJCG1cY"
   },
@@ -17887,17 +17863,6 @@
     "source": "Amare",
     "url": "https://www.podiuminfo.nl/concert/474405/Ameezing-Merel-Martens-Guests/Amare",
     "firstFound": 0
-  },
-  {
-    "artist": "De Avond van de Filmmuziek matinee | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-22",
-    "time": "14:30",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/de-avond-van-de-filmmuziek-matinee-%7C-venue-premium-packages-tickets/1364833636?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Artin muziek & friends",
@@ -18134,6 +18099,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/platina-haarlem-patronaat-2026-11-22-CfQ9b3YPdoPBn5aL73CMX"
   },
   {
+    "artist": "TAYC – AFAS Live Amsterdam",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-22",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/tayc--afas-live-amsterdam-tickets/390304566?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tayc-afas-live-amsterdam-amsterdam-afas-live-2026-11-22-Cb3sgnphvQgNfykb9KSES"
+  },
+  {
     "artist": "Temple of Wave",
     "venue": "MEZZ",
     "city": "Breda",
@@ -18299,6 +18276,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/long-distance-calling-utrecht-tivolivredenburg-2026-11-23-CavJUbW7anCEbomLdnAeE"
   },
   {
+    "artist": "The Pretty Reckless: Dear God Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-23",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/the-pretty-reckless-dear-god-tour-tickets/1380854702?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Westlife 25 The Anniversary World Tour",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -18307,28 +18295,6 @@
     "time": "20:00",
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/westlife-25-the-anniversary-world-tour-tickets/777027174?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Westlife | Comfort Seats",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-23",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/westlife-%7C-comfort-seats-tickets/2005935437?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Westlife | Vinyl Room Package",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-23",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/westlife-%7C-vinyl-room-package-tickets/577624106?language=en-us",
     "firstFound": 1791588107075
   },
   {
@@ -18504,17 +18470,6 @@
     "url": "https://www.podiuminfo.nl/concert/476389/The-Hara/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-hara-eindhoven-dynamo-rock-metal-cafe-2026-11-24-Cbg44hHza3uv1wUUWQzau"
-  },
-  {
-    "artist": "Bryson Tiller | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-24",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/bryson-tiller-%7C-venue-premium-packages-tickets/216761078?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Luka Bloom",
@@ -18736,6 +18691,17 @@
     "source": "Amare",
     "url": "https://www.podiuminfo.nl/concert/466067/Creedence-Gold-Creedence-Clearwater-Revival-by-The-Fortunate-Sons/Amare",
     "firstFound": 0
+  },
+  {
+    "artist": "BUNT. In The Round",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/bunt-in-the-round-tickets/452909759?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Conway the Machine & Daringer",
@@ -19079,17 +19045,6 @@
     "time": "20:00",
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/the-script-man-in-the-arena-tour-tickets/1516159579?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "The Script | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-26",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/the-script-%7C-venue-premium-packages-tickets/1884436924?language=en-us",
     "firstFound": 1791588107075
   },
   {
@@ -19576,17 +19531,6 @@
     "url": "https://www.mezz.nl/programma/weval/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/weval-breda-mezz-2026-11-27-CdFBADtoLFnb7HtzF493T"
-  },
-  {
-    "artist": "The Script | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-27",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/the-script-%7C-venue-premium-packages-tickets/377901443?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "HAEVN",
@@ -20736,17 +20680,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/wrest-breda-mezz-2026-11-29-CY1TmP1AzHSpNiQDbNhUf"
   },
   {
-    "artist": "Muse | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-29",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/muse-%7C-venue-premium-packages-tickets/1339955925?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Sugar Spine + Braces",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -20920,6 +20853,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dakhabrakha-ptakh-the-hague-paard-2026-11-30-Cf6rq9crXzP1c4j6YxoRB"
   },
   {
+    "artist": "EsDeeKid - Council House Rat Tour",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/esdeekid-council-house-rat-tour-tickets/1694146546?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Muse",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -20942,17 +20886,6 @@
     "url": "https://www.mezz.nl/programma/sondre-lerche/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sondre-lerche-breda-mezz-2026-11-30-CaykU1iup8SRWy3V3dL4N"
-  },
-  {
-    "artist": "Muse | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-11-30",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/muse-%7C-venue-premium-packages-tickets/1258686967?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Tophouse",
@@ -21072,6 +21005,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-chameleons-amsterdam-melkweg-2026-12-01-Ca1J5uuoWPHZAKxLvUJmn"
   },
   {
+    "artist": "Beth Hart",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-01",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/beth-hart-tickets/566640342?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/beth-hart-amsterdam-afas-live-2026-12-01-CbSbPNzFQq1sCf8KY33Qw"
+  },
+  {
     "artist": "JOE JACKSON + BAND - HOPE AND FURY TOUR 2026",
     "venue": "Koninklijk Theater Carre",
     "city": "Amsterdam",
@@ -21115,17 +21060,6 @@
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/the-blend-3",
     "firstFound": 0
-  },
-  {
-    "artist": "Noah Kahan | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-01",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/noah-kahan-%7C-venue-premium-packages-tickets/101353302?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "APOLLO BROWN & SKYZOO",
@@ -21266,6 +21200,17 @@
     "firstFound": 0
   },
   {
+    "artist": "beabadoobee: The Powerlines Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/beabadoobee-the-powerlines-tour-tickets/745077100?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Chuck Prophet & The Amsterdam String Ensemble",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -21334,6 +21279,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Nia Archives",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-02",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/nia-archives-tickets/1449263071?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/nia-archives-amsterdam-gashouder-westergasfabriek-2026-12-02-CeM8PA95xt42nx4a9m6vm"
+  },
+  {
     "artist": "PEARL & THE OYSTERS",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -21377,17 +21334,6 @@
     "source": "Gebouw-T",
     "url": "https://gebouw-t.nl/agenda/rowwen-heze-3",
     "firstFound": 0
-  },
-  {
-    "artist": "Noah Kahan | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-02",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/noah-kahan-%7C-venue-premium-packages-tickets/1861952742?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Davina Michelle | extra show",
@@ -21600,6 +21546,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/a-forest-of-stars-uk-nemorous-uk-utrecht-dbs-oefenstudios-concertzaal-muziekcafe-2026-12-03-Cdin6jRsSXh8DSTGtxubn"
   },
   {
+    "artist": "beabadoobee: The Powerlines Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/beabadoobee-the-powerlines-tour-tickets/352127738?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Bertolf",
     "venue": "LantarenVenster",
     "city": "Rotterdam",
@@ -21669,6 +21626,18 @@
     "url": "https://bird-rotterdam.nl/event/josylvio-03-12-2026",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/josylvio-rotterdam-annabel-2026-12-03-CfkBJYeh424VrYgAZyhZA"
+  },
+  {
+    "artist": "Kingfishr",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/kingfishr-tickets/1616160970?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kingfishr-amsterdam-gashouder-westergasfabriek-2026-12-03-Cbc4R3tn8bTJz8Rv31jWW"
   },
   {
     "artist": "Loïs Lane In concert: 40 jaar",
@@ -21753,17 +21722,6 @@
     "url": "https://bird-rotterdam.nl/event/zwangere-guy-03-12-2026",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/zwangere-guy-rotterdam-maassilo-2026-12-03-Cbtm7Ttz4gWTyM51nefbH"
-  },
-  {
-    "artist": "Kensington | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/kensington-%7C-venue-premium-packages-tickets/1391574273?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Davina Michelle",
@@ -22149,6 +22107,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Beth Hart",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/beth-hart-tickets/1113011122?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/beth-hart-amsterdam-afas-live-2026-12-04-CbwCG4eRSoWbcpsmpwUQq"
+  },
+  {
     "artist": "Dark Oath",
     "venue": "Little Devil",
     "city": "Tilburg",
@@ -22250,17 +22220,6 @@
     "source": "013",
     "url": "https://www.013.nl/programma/137896/zwangere-guy",
     "firstFound": 0
-  },
-  {
-    "artist": "Kensington | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-04",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/kensington-%7C-venue-premium-packages-tickets/1008533440?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Dawn Brothers & Friends presenteren",
@@ -22564,6 +22523,17 @@
     "firstFound": 0
   },
   {
+    "artist": "FS Green presents All Good",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/fs-green-presents-all-good-tickets/381118564?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "MAITE HONTELÉ & LA NOVIA",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -22736,17 +22706,6 @@
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/prateek-kuhad/2929580",
     "firstFound": 0
-  },
-  {
-    "artist": "SBMG | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-05",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/sbmg-%7C-venue-premium-packages-tickets/430196512?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Bert Heerink & André Becker",
@@ -23172,17 +23131,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "Kehlani | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-06",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/kehlani-%7C-venue-premium-packages-tickets/1827847662?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "DeWolff - Full Moon Ritual",
     "venue": "Amare",
     "city": "Den Haag",
@@ -23359,17 +23307,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Phoebe Bridgers | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-07",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/phoebe-bridgers-%7C-venue-premium-packages-tickets/559595922?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "The Scratch",
     "venue": "De Helling",
     "city": "Utrecht",
@@ -23439,6 +23376,17 @@
     "url": "https://www.melkweg.nl/nl/agenda/bilal-08-12-2026/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bilal-amsterdam-melkweg-2026-12-08-CZageiHSmZw9xFxznux8U"
+  },
+  {
+    "artist": "Polyphia: BE NOT AFRAID World Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-08",
+    "time": "19:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/polyphia-be-not-afraid-world-tour-tickets/175314658?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "thrown + Counterparts",
@@ -24834,6 +24782,17 @@
     "firstFound": 1791588107075
   },
   {
+    "artist": "Nacht Van De Nederpop XXL",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/nacht-van-de-nederpop-xxl-tickets/1471042228?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Sjoerd van Eijck Trio - Pegasus",
     "venue": "Amare",
     "city": "Den Haag",
@@ -25643,17 +25602,6 @@
     "firstFound": 0
   },
   {
-    "artist": "SBMG | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-16",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/sbmg-%7C-venue-premium-packages-tickets/1015278297?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Jazz Orchestra of the Concertgebouw & Kurt Elling - Swinging Holidays",
     "venue": "Amare",
     "city": "Den Haag",
@@ -26079,6 +26027,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/zoe-livay-utrecht-tivolivredenburg-2026-12-18-Cf3q9XnMw47ReKRFo2bGN"
   },
   {
+    "artist": "Antoon",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/antoon-tickets/1166021416?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/antoon-amsterdam-gashouder-westergasfabriek-2026-12-18-CeM8ShVZYLgxkpKZ3tjTc"
+  },
+  {
     "artist": "Isabèl Usher",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -26135,17 +26095,6 @@
     "url": "https://patronaat.nl/event/will-knox-18-12-26/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/will-knox-haarlem-patronaat-2026-12-18-CcX7GKpnDU1oXsHW5PQ2k"
-  },
-  {
-    "artist": "Najib & Roué | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-18",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/najib--roue-%7C-venue-premium-packages-tickets/1273521957?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Bar Hollandia: Mart Hoogkamer, Django Wagner & meer",
@@ -28700,6 +28649,17 @@
     "firstFound": 0
   },
   {
+    "artist": "The Gathering - Mandylion & Nighttime Birds Live",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-16",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/the-gathering-mandylion--nighttime-birds-live-tickets/1763309050?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Drukwerk - Schijn Een Lichtje Op Mij",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -28875,17 +28835,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mike-masse-eindhoven-effenaar-2027-01-17-CabpEiki7eXZ3JFZYeC3i"
   },
   {
-    "artist": "WWE | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-17",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/wwe-%7C-venue-premium-packages-tickets/1387239167?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Sawyer Hill",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -28966,17 +28915,6 @@
     "url": "https://www.013.nl/programma/140392/black-veil-brides",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/black-veil-brides-tilburg-poppodium-013-2027-01-19-CcFFmhWSiyvuZWXQHDgw8"
-  },
-  {
-    "artist": "Aespa | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-19",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/aespa-%7C-venue-premium-packages-tickets/1135114543?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Novastar",
@@ -29242,6 +29180,18 @@
     "source": "013",
     "url": "https://www.013.nl/programma/152957/enemy-inside",
     "firstFound": 0
+  },
+  {
+    "artist": "FAMKE LOUISE 1 0",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/famke-louise-1-0-tickets/221736388?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/famke-louise-amsterdam-afas-live-2027-01-22-CfJvE34VhEL9f81GGkvQU"
   },
   {
     "artist": "Physical Graffiti Performing LED ZEPPELIN",
@@ -29541,6 +29491,18 @@
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/black-box-revelation",
     "firstFound": 0
+  },
+  {
+    "artist": "FAMKE LOUISE 1 0",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/famke-louise-1-0-tickets/1062519151?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/famke-louise-1-0-amsterdam-afas-live-2027-01-23-CfMpV3n9LmTCeRfrp7r5E"
   },
   {
     "artist": "J. Bernardt",
@@ -31080,6 +31042,18 @@
     "firstFound": 0
   },
   {
+    "artist": "IJSLAND GASHOUDER",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/ijsland-gashouder-tickets/941565676?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ijsland-gashouder-amsterdam-gashouder-westergasfabriek-2027-02-04-CeaP9w6whAMt8RUMB7QiU"
+  },
+  {
     "artist": "Paskal Jakobsen Solo",
     "venue": "Theater De Maagd",
     "city": "Bergen op Zoom",
@@ -31229,6 +31203,18 @@
     "url": "https://metropool.nl/agenda/erwin-nyhoff-the-prodigal-sons",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/erwin-nyhoff-the-prodigal-sons-hengelo-metropool-hengelo-2027-02-05-CecGxZJmPMnJRhprfjp4V"
+  },
+  {
+    "artist": "IJSLAND GASHOUDER",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-05",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/ijsland-gashouder-tickets/1492721037?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ijsland-gashouder-amsterdam-gashouder-westergasfabriek-2027-02-05-CeSouxFPXP3VYghtEix23"
   },
   {
     "artist": "Status Quotes",
@@ -31391,6 +31377,18 @@
     "source": "PAARD",
     "url": "https://www.paard.nl/event/robin-scherpen/",
     "firstFound": 0
+  },
+  {
+    "artist": "IJSLAND GASHOUDER",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-06",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/ijsland-gashouder-tickets/476301443?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ijsland-gashouder-amsterdam-gashouder-westergasfabriek-2027-02-06-CeQv79N7pueyA3WYBaQK2"
   },
   {
     "artist": "Rudeboy x Boskat - Persona Non Grata",
@@ -31565,6 +31563,17 @@
     "url": "https://www.tivolivredenburg.nl/agenda/86164892/nits-07-02-2027/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/nits-utrecht-tivolivredenburg-2027-02-07-Ca7rNtziRApyw8tMCFpxh"
+  },
+  {
+    "artist": "Five Finger Death Punch: 20th Anniversary World Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-07",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/five-finger-death-punch-20th-anniversary-world-tour-tickets/1788904960?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Spanish Love Songs",
@@ -32126,6 +32135,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Role Model Presents: Chuck On Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/role-model-presents-chuck-on-tour-tickets/149564637?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Uncle Acid And the Deadbeats",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -32385,15 +32405,15 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "Electric Callboy | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
+    "artist": "Role Model Presents: Chuck On Tour",
+    "venue": "AFAS Live",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-02-14",
-    "time": "20:01",
+    "time": "20:00",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/electric-callboy-%7C-venue-premium-packages-tickets/1339113262?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/role-model-presents-chuck-on-tour-tickets/2070147348?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "An Evening with Josh Ritter (solo)",
@@ -32469,18 +32489,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/quadeca-support-amsterdam-melkweg-2027-02-15-CfkY4SfLAbUrHc6Ks2ckN"
   },
   {
-    "artist": "Quadeca + support",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-15",
-    "time": "19:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/quadeca--support-tickets/1082137131?language=en-us",
-    "firstFound": 1791588107075,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/quadeca-support-amsterdam-melkweg-2027-02-15-CfkY4SfLAbUrHc6Ks2ckN"
-  },
-  {
     "artist": "Tarja",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -32515,6 +32523,17 @@
     "url": "https://www.melkweg.nl/nl/agenda/knox-15-02-2027/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/knox-amsterdam-melkweg-2027-02-15-Cd1UE4TJUWgt2EU7iFUHU"
+  },
+  {
+    "artist": "Cage The Elephant - Dying In Reverse Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-15",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/cage-the-elephant-dying-in-reverse-tour-tickets/752721309?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Hudson Freeman",
@@ -32811,17 +32830,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/turmion-katilot-haarlem-patronaat-2027-02-18-CfPiJZKtTnbyjMPJhDYwY"
   },
   {
-    "artist": "Editors | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-18",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/editors-%7C-venue-premium-packages-tickets/1478859684?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "54 Ultra",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -32998,6 +33006,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/vroegzat-groningen-spot-de-oosterpoort-2027-02-19-Cey3NRcXMd2JPB84twqFh"
   },
   {
+    "artist": "Bullet For My Valentine",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/bullet-for-my-valentine-tickets/1478608729?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bullet-for-my-valentine-amsterdam-afas-live-2027-02-19-CfPiJiDgwnPW6tE588UBC"
+  },
+  {
     "artist": "Enslaved + Sólstafir",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -33007,6 +33027,17 @@
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/enslaved-solstafir",
     "firstFound": 0
+  },
+  {
+    "artist": "Jpegmafia - Experimental Rap Tour",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-19",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jpegmafia-experimental-rap-tour-tickets/1899173286?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "M.O.B. presents De Hardheid + Eskalatie",
@@ -33056,17 +33087,6 @@
     "clubCard": false,
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-reytons-rotterdam-annabel-2027-02-19-CaECyRBDTWuZV15aEZo95"
-  },
-  {
-    "artist": "Disney Worlds Collide | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-19",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/disney-worlds-collide-%7C-venue-premium-packages-tickets/474096235?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Heideroosjes",
@@ -33300,6 +33320,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Ezra Collective - Here Because of Hope",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/ezra-collective-here-because-of-hope-tickets/83481807?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Rudeboy X BOSKAT",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -33334,15 +33365,16 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tramhaus-amsterdam-paradiso-2027-02-20-CbhnzukVHMxAiAo2xnQfW"
   },
   {
-    "artist": "James Blunt | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
+    "artist": "Warhaus",
+    "venue": "Gashouder",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-02-20",
-    "time": "20:01",
+    "time": "20:00",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/james-blunt-%7C-venue-premium-packages-tickets/902506137?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/warhaus-tickets/1044195473?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/warhaus-amsterdam-gashouder-westergasfabriek-2027-02-20-CewD5itH7LqLuTVTFAHrT"
   },
   {
     "artist": "Outlander in Concert",
@@ -33573,6 +33605,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Malcolm Todd: Do That Again Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-21",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/malcolm-todd-do-that-again-tour-tickets/995921285?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Clouseau in Amare",
     "venue": "Amare",
     "city": "Den Haag",
@@ -33655,17 +33698,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Charli xcx | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-22",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/charli-xcx-%7C-venue-premium-packages-tickets/1581980762?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Loreena McKennitt",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -33723,18 +33755,6 @@
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/eihwar-23-02-2027/",
     "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/eihwar-support-amsterdam-melkweg-2027-02-23-Cfb5CUSXfNXSYBX51QS1P"
-  },
-  {
-    "artist": "Eihwar + support",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-23",
-    "time": "19:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/eihwar--support-tickets/1295057718?language=en-us",
-    "firstFound": 1791588107075,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/eihwar-support-amsterdam-melkweg-2027-02-23-Cfb5CUSXfNXSYBX51QS1P"
   },
   {
@@ -33817,17 +33837,6 @@
     "url": "https://www.ticketmaster.nl/event/rush-fifty-something-tickets/932555362?language=en-us",
     "firstFound": 1791588107075,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rush-fifty-something-tour-amsterdam-ziggo-dome-2027-02-23-CZdKa2nrsaGB48jcdcamr"
-  },
-  {
-    "artist": "RUSH | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-02-23",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/rush-%7C-venue-premium-packages-tickets/822972519?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "The Rasmus",
@@ -34027,6 +34036,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Chase & Status Live",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/chase--status-live-world-tour-tickets/1244538854?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/chase-status-live-amsterdam-afas-live-2027-02-25-CfJvEQLv9Hu1dn9gv7mCN"
+  },
+  {
     "artist": "Mad Caddies (US)",
     "venue": "Bibelot",
     "city": "Dordrecht",
@@ -34213,6 +34234,17 @@
     "url": "https://www.spotgroningen.nl/programma/amble",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/amble-groningen-spot-de-oosterpoort-2027-02-26-CbSbcMVKSZwqEFgemgsQ4"
+  },
+  {
+    "artist": "Royal Blood",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/royal-blood-tickets/1134391934?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Rudeboy x BOSKAT",
@@ -34884,17 +34916,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/south-arcade-amsterdam-melkweg-2027-03-02-Cc6Tffx844cUXVPGQNGhW"
   },
   {
-    "artist": "ENHYPEN | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-02",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/enhypen-%7C-venue-premium-packages-tickets/549922481?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Clouseau",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -35211,6 +35232,17 @@
     "url": "https://www.paradiso.nl/nl/programma/sven-ross/2925145",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sven-ross-amsterdam-paradiso-2027-03-05-Ceg5ZT4pZWpFuDTf2L6pV"
+  },
+  {
+    "artist": "BONOBO // DISTANCE IN STATIC - LIVE // AMSTERDAM",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-05",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/bonobo-distance-in-static-live-amsterdam-tickets/1012510332?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Clouseau",
@@ -35641,6 +35673,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/angelique-kidjo-038-metropole-orkest-groningen-spot-de-oosterpoort-2027-03-07-CbDKhAPJrWJwaVFDnFHkN"
   },
   {
+    "artist": "FLO - Therapy At The Club Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-07",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/flo-therapy-at-the-club-tour-tickets/1856771323?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/flo-therapy-at-the-club-tour-amsterdam-afas-live-2027-03-07-CfkY7AbmPmtgivXw8c8Ug"
+  },
+  {
     "artist": "Jools Holland",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -35651,6 +35695,18 @@
     "url": "https://www.spotgroningen.nl/programma/jools-holland-2",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jools-holland-groningen-spot-de-oosterpoort-2027-03-07-Cbhk4R84U7jFr2wGYzVkp"
+  },
+  {
+    "artist": "Palace",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-07",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/palace-tickets/561539599?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/palace-amsterdam-gashouder-westergasfabriek-2027-03-07-CfXHbwdRywpdZsNUpDQxm"
   },
   {
     "artist": "Wende + support",
@@ -36008,6 +36064,17 @@
     "url": "https://patronaat.nl/event/rudeboy-x-boskat-12-03-27/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rudeboy-x-boskat-haarlem-patronaat-2027-03-12-CfnS3iX6DMX3HuEdtZnmP"
+  },
+  {
+    "artist": "¥ØU$UK€ ¥UK1MAT$U (Yousuke Yukimatsu) - AM$T€RDAM",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/uuk-uk1matu-yousuke-yukimatsu-amtrdam-tickets/1179541818?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Karsu",
@@ -36377,6 +36444,17 @@
     "firstFound": 0
   },
   {
+    "artist": "SIENNA SPIRO: My House Tour",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-14",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/sienna-spiro-my-house-tour-tickets/1822929088?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Het Goede Doel",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -36409,6 +36487,17 @@
     "source": "Baroeg",
     "url": "https://baroeg.nl/productie/oh-hiroshima-torzs/",
     "firstFound": 0
+  },
+  {
+    "artist": "SIENNA SPIRO: My House Tour",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-15",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/sienna-spiro-my-house-tour-tickets/902392897?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "The Haunted Youth",
@@ -36480,6 +36569,18 @@
     "source": "dB's",
     "url": "https://dbstudio.nl/event/dbs-tivolivredenburg-present-ruby-haunt-usa",
     "firstFound": 0
+  },
+  {
+    "artist": "Nessa Barrett: The Tough Love Tour",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-16",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/nessa-barrett-the-tough-love-tour-tickets/1284315634?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/nessa-barrett-the-tough-love-tour-amsterdam-gashouder-westergasfabriek-2027-03-16-CfZBQaJH3tgVwCJtMZqKY"
   },
   {
     "artist": "Ruby Haunt",
@@ -37195,6 +37296,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Passenger - Wild Love Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-21",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/passenger-wild-love-tour-tickets/1042103897?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Physical Graffiti",
     "venue": "MEZZ",
     "city": "Breda",
@@ -37288,17 +37400,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "Olivia Rodrigo | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-23",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/olivia-rodrigo-%7C-venue-premium-packages-tickets/2093112222?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Clouseau",
     "venue": "Metropool Enschede",
     "city": "Enschede",
@@ -37358,6 +37459,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Megadeth - Breakout: Hibernation Of The Nations Europe Tour 2027",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-24",
+    "time": "19:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/megadeth-breakout-hibernation-of-the-nations-europe-tour-2027-tickets/1372783969?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Olivia Rodrigo: The Unraveled Tour",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -37415,17 +37527,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/morgan-wallen-tribute-hengelo-metropool-hengelo-2027-03-24-Cf2rMbouVdMwQbff7V6DR"
   },
   {
-    "artist": "Olivia Rodrigo | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-24",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/olivia-rodrigo-%7C-venue-premium-packages-tickets/1160532322?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Getdown Services",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -37459,6 +37560,17 @@
     "source": "Amare",
     "url": "https://www.podiuminfo.nl/concert/469014/Stef-Bos-Ik-zing/Amare",
     "firstFound": 0
+  },
+  {
+    "artist": "Ice Nine Kills - March in Silence Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-25",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/ice-nine-kills-march-in-silence-tour-tickets/1700855080?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Pokey LaFarge",
@@ -37579,17 +37691,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jet-van-der-steen-groningen-spot-de-oosterpoort-2027-03-26-CeHHMLrEWAsQ8ziGZqPCX"
   },
   {
-    "artist": "Tash Sultana | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-26",
-    "time": "20:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/tash-sultana-%7C-venue-premium-packages-tickets/739710540?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Dubioza Kolektiv",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -37600,6 +37701,17 @@
     "url": "https://www.paradiso.nl/nl/programma/dubioza-kolektiv/2908030",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dubioza-kolektiv-amsterdam-paradiso-2027-03-26-CcPYwD3x7MwZkevFArFZv",
     "firstFound": 0
+  },
+  {
+    "artist": "Ian Paice & Purpendicular",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ian-paice-purpendicular",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Luicidal",
@@ -37737,17 +37849,6 @@
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/kalandra/2924600",
     "firstFound": 0
-  },
-  {
-    "artist": "Olivia Rodrigo | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-27",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/olivia-rodrigo-%7C-venue-premium-packages-tickets/793459783?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Anneke van Giersbergen",
@@ -37912,17 +38013,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Olivia Rodrigo | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-28",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/olivia-rodrigo-%7C-venue-premium-packages-tickets/1619325011?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "André Kuipers & Kamerata-Zuid",
     "venue": "de Doelen",
     "city": "Rotterdam",
@@ -37978,17 +38068,6 @@
     "time": "20:00",
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/kaleo-way-down-we-go-tour-tickets/1421869958?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "KALEO | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-03-30",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/kaleo-%7C-venue-premium-packages-tickets/104272166?language=en-us",
     "firstFound": 1791588107075
   },
   {
@@ -38485,6 +38564,30 @@
     "source": "013",
     "url": "https://www.013.nl/programma/132836/ilse-delange",
     "firstFound": 0
+  },
+  {
+    "artist": "SOR LIVE IN GASHOUDER",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/sor-live-in-gashouder-tickets/87017033?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sor-live-in-gashouder-amsterdam-gashouder-westergasfabriek-2027-04-03-CfHzptm7YmA2R1nTfhVhZ"
+  },
+  {
+    "artist": "Eurovision in Concert 2027",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "20:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/eurovision-in-concert-2027-tickets/1507315289?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/eurovision-in-concert-2027-amsterdam-afas-live-2027-04-03-CfkY9XUBsKoJVR9s3NxPh"
   },
   {
     "artist": "Guus Meeuwis in Ahoy",
@@ -39383,6 +39486,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hot-water-music-eindhoven-dynamo-rock-metal-cafe-2027-04-13-CfXFWEAwK6gRYNQro43dg"
   },
   {
+    "artist": "Jordan Rakei",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-13",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jordan-rakei-tickets/1880141461?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jordan-rakei-amsterdam-gashouder-westergasfabriek-2027-04-13-Cd5FtixsyDVyhTYJSfza2"
+  },
+  {
     "artist": "Kees Prins",
     "venue": "Stadsschouwburg",
     "city": "Groningen",
@@ -40002,17 +40117,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/new-wave-all-stars-amsterdam-ziggo-dome-2027-04-20-CeQt2Wgto2hj3m4LHwEog"
   },
   {
-    "artist": "New Wave | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-20",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/new-wave-%7C-venue-premium-packages-tickets/563640276?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Sammy Rae & The Friends",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -40105,17 +40209,6 @@
     "url": "https://www.ticketmaster.nl/event/new-wave-all-stars-tickets/734144550?language=en-us",
     "firstFound": 1791588107075,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/new-wave-all-stars-amsterdam-ziggo-dome-2027-04-21-CeQt2ZfjD8yUNHdgM3K21"
-  },
-  {
-    "artist": "New Wave | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-21",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/new-wave-%7C-venue-premium-packages-tickets/675299672?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Mariza | Live in concert",
@@ -40232,17 +40325,6 @@
     "url": "https://www.paradiso.nl/nl/programma/zoe-livay/2931186",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/zoe-livay-amsterdam-tolhuistuin-2027-04-22-CfJ3vVCndyA61Xrk9Ur58"
-  },
-  {
-    "artist": "New Wave | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-22",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/new-wave-%7C-venue-premium-packages-tickets/1831251041?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Joris Teepe presents: NYCTG",
@@ -40385,17 +40467,6 @@
     "firstFound": 0
   },
   {
-    "artist": "New Wave | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-23",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/new-wave-%7C-venue-premium-packages-tickets/1248647045?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "High Fade",
     "venue": "De Helling",
     "city": "Utrecht",
@@ -40510,17 +40581,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/new-wave-all-stars-amsterdam-ziggo-dome-2027-04-24-CeSmqoHnUYKt5pB8djHDH"
   },
   {
-    "artist": "New Wave | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-24",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/new-wave-%7C-venue-premium-packages-tickets/1144659072?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Extince + DJ DNS",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -40612,15 +40672,16 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/new-wave-all-stars-amsterdam-ziggo-dome-2027-04-25-CeU3v14hDRuH3rL8irFBZ"
   },
   {
-    "artist": "New Wave | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
+    "artist": "Thirty Seconds to Mars Presents A Beautiful Lie vs This Is War",
+    "venue": "AFAS Live",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-04-25",
-    "time": "20:01",
+    "time": "20:00",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/new-wave-%7C-venue-premium-packages-tickets/327529978?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/thirty-seconds-to-mars-presents-a-beautiful-lie-vs-this-is-war-tickets/814873880?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/thirty-seconds-to-mars-presents-a-beautiful-lie-vs-this-is-war-amsterdam-afas-live-2027-04-25-Ca3SaYrnBcmvtJauCAQvf"
   },
   {
     "artist": "Moss",
@@ -40659,17 +40720,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/new-wave-all-stars-amsterdam-ziggo-dome-2027-04-26-CeV13F4tyeRzdWdcP2tBH"
   },
   {
-    "artist": "New Wave | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-26",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/new-wave-%7C-venue-premium-packages-tickets/350721248?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Kandace Springs",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -40693,17 +40743,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "New Wave | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-27",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/new-wave-%7C-venue-premium-packages-tickets/1965613108?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "De Jukebox",
     "venue": "Poppodium 013 - Foyer van Main Stage",
     "city": "Tilburg",
@@ -40713,17 +40752,6 @@
     "source": "013",
     "url": "https://www.013.nl/programma/152188/de-jukebox",
     "firstFound": 0
-  },
-  {
-    "artist": "The World of Hans Zimmer | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-28",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/the-world-of-hans-zimmer-%7C-venue-premium-packages-tickets/579899201?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Matt Simons",
@@ -40760,6 +40788,17 @@
     "url": "https://www.tivolivredenburg.nl/agenda/12982123/karsu-29-04-2027/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/karsu-utrecht-tivolivredenburg-2027-04-29-CcbHfQEGTJFZvCNxkpwhP"
+  },
+  {
+    "artist": "BOUKE - with symphonic orchestra",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-29",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/bouke-with-symphonic-orchestra-tickets/2070565892?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "This Is Lenny Jay's Michael",
@@ -40866,6 +40905,17 @@
     "firstFound": 0
   },
   {
+    "artist": "BOUKE - with symphonic orchestra",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-30",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/bouke-with-symphonic-orchestra-tickets/698673977?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Simple Minds - V Tour 2027",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -40887,17 +40937,6 @@
     "source": "013",
     "url": "https://www.013.nl/programma/153896/zoë-livay",
     "firstFound": 0
-  },
-  {
-    "artist": "Simple Minds | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-30",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/simple-minds-%7C-venue-premium-packages-tickets/2079849618?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Michael Jackson Project ft. Jared Grant",
@@ -41005,17 +41044,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/simple-minds-amsterdam-ziggo-dome-2027-05-01-CewAyeQzy95KWJNWMWh2X"
   },
   {
-    "artist": "Simple Minds | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-01",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/simple-minds-%7C-venue-premium-packages-tickets/1612634296?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Karsu",
     "venue": "Stadsschouwburg",
     "city": "Groningen",
@@ -41105,17 +41133,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Clair Obscur | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-03",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/clair-obscur-%7C-venue-premium-packages-tickets/1782680999?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Boy In Space",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -41159,6 +41176,18 @@
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/first-time-flyers-uk",
     "firstFound": 0
+  },
+  {
+    "artist": "B-Brave in AFAS Live",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-06",
+    "time": "21:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/b-brave-in-afas-live-tickets/1623266612?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/b-brave-in-afas-live-amsterdam-afas-live-2027-05-06-Cbu6xEKkMC2RaxVU3pjex"
   },
   {
     "artist": "Johnny Delaware",
@@ -41228,17 +41257,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Gracie Abrams | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-07",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/gracie-abrams-%7C-venue-premium-packages-tickets/1932243253?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "This Is the Kit",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -41262,6 +41280,18 @@
     "firstFound": 0
   },
   {
+    "artist": "B-Brave in AFAS Live",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-07",
+    "time": "21:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/b-brave-in-afas-live-tickets/1530667808?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/b-brave-in-afas-live-amsterdam-afas-live-2027-05-07-CbT35RXaA8vNtLbmweHyC"
+  },
+  {
     "artist": "SKA’D FOR LIFE VI",
     "venue": "dB's",
     "city": "Utrecht",
@@ -41271,6 +41301,17 @@
     "source": "dB's",
     "url": "https://dbstudio.nl/event/skad-for-life-vi",
     "firstFound": 0
+  },
+  {
+    "artist": "B-Brave in AFAS Live",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-08",
+    "time": "15:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/b-brave-in-afas-live-tickets/1402924482?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Frank Boeijen",
@@ -41343,17 +41384,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "Gracie Abrams | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-08",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/gracie-abrams-%7C-venue-premium-packages-tickets/406970587?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "First Time Flyers",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -41422,6 +41452,17 @@
     "clubCard": true,
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/josua-peter-rotterdam-rotown-2027-05-08-CfHfV8iynjD4FjZC74CLx"
+  },
+  {
+    "artist": "B-Brave in AFAS Live",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-09",
+    "time": "15:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/b-brave-in-afas-live-tickets/1904939787?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "The Animals & Friends ft. John Steele - The Last Farewell Tour",
@@ -41503,17 +41544,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Gracie Abrams | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-10",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/gracie-abrams-%7C-venue-premium-packages-tickets/1504484305?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "The Dire Straits Experience",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -41526,6 +41556,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dire-straits-experience-utrecht-tivolivredenburg-2027-05-11-CcAFGCiFDgKdxAFEBqUYx"
   },
   {
+    "artist": "ANGÈLE – INSTINCT TOUR",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-11",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/angele--instinct-tour-tickets/1301376544?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Big Monti Amundson Band",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -41535,6 +41576,17 @@
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/52592343/big-monti-amundson-band-12-05-2027/",
     "firstFound": 0
+  },
+  {
+    "artist": "Craig David - Born To Do It 25th Anniversary Tour",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-12",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/craig-david-born-to-do-it-25th-anniversary-tour-tickets/616719289?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Bente",
@@ -41711,6 +41763,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Discophonic Orchestra",
+    "venue": "De Basiliek",
+    "city": "Veenendaal",
+    "country": "NL",
+    "date": "2027-05-15",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/discophonic-orchestra-tickets/253225448?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/discophonic-orchestra-veenendaal-de-basiliek-2027-05-15-CeDXCKw2mRrFSJLGejwDG"
+  },
+  {
     "artist": "Bettie Serveert + Hallo Venray",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -41793,17 +41857,6 @@
     "url": "https://www.ticketmaster.nl/event/hilary-duff-the-lucky-me-tour-tickets/483716086?language=en-us",
     "firstFound": 1791588107075,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hilary-duff-the-lucky-me-tour-amsterdam-ziggo-dome-2027-05-17-CfMnVsVJeXnqkeUNeHDsZ"
-  },
-  {
-    "artist": "Hilary Duff | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-17",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/hilary-duff-%7C-venue-premium-packages-tickets/637686111?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Eliane Elias - Time and Again",
@@ -42080,17 +42133,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "Greta Van Fleet | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-24",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/greta-van-fleet-%7C-venue-premium-packages-tickets/638163171?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Culture (ft Kenyatta Hill) & Cedric Myton",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -42135,15 +42177,16 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "Jorja Smith | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
+    "artist": "Weezer",
+    "venue": "AFAS Live",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-05-26",
-    "time": "20:01",
+    "time": "20:00",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/jorja-smith-%7C-venue-premium-packages-tickets/1011093769?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/weezer-tickets/1205197733?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/weezer-amsterdam-afas-live-2027-05-26-Cdm1uPoVxYyZ4z2B5h8im"
   },
   {
     "artist": "Tomatito",
@@ -42180,6 +42223,18 @@
     "firstFound": 0
   },
   {
+    "artist": "ELECTRO SYMPHONY: ORCHESTRA DANCE PARTY",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-05-27",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/electro-symphony-orchestra-dance-party-tickets/489911010?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/electro-symphony-orchestra-dance-party-amsterdam-afas-live-2027-05-27-CcckbGE6adx1Zai1yEvep"
+  },
+  {
     "artist": "Rod Stewart - The Final Encore",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -42188,17 +42243,6 @@
     "time": "20:00",
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/rod-stewart-the-final-encore-tickets/608491455?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Rod Stewart | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-28",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/rod-stewart-%7C-venue-premium-packages-tickets/61336176?language=en-us",
     "firstFound": 1791588107075
   },
   {
@@ -42295,17 +42339,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "SOMBR | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-05-31",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/sombr-%7C-venue-premium-packages-tickets/1164301729?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "SOMBR // You Are The Reason Tour // Amsterdam",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -42317,17 +42350,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "SOMBR | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-06-01",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/sombr-%7C-venue-premium-packages-tickets/1755858924?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Anouk - met het Metropole Orkest",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -42336,17 +42358,6 @@
     "time": "20:00",
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/anouk-met-het-metropole-orkest-tickets/258230119?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Anouk | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-06-04",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/anouk-%7C-venue-premium-packages-tickets/20099413?language=en-us",
     "firstFound": 1791588107075
   },
   {
@@ -42407,17 +42418,6 @@
     "time": "15:00",
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/anouk-met-het-metropole-orkest-tickets/2070371859?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Anouk | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-06-06",
-    "time": "15:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/anouk-%7C-venue-premium-packages-tickets/1615128218?language=en-us",
     "firstFound": 1791588107075
   },
   {
@@ -42707,6 +42707,30 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/man-in-the-mirror-groningen-martiniplaza-2027-06-16-CesMw5jw5YfKB9vt5QA49"
   },
   {
+    "artist": "Hayley Williams “The Hayley Williams Show”",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-06-17",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/hayley-williams-the-hayley-williams-show-tickets/747798731?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hayley-williams-amsterdam-afas-live-2027-06-17-Cee8iS4P3w6PyeVmkVz4h"
+  },
+  {
+    "artist": "Phil It! A tribute to Phil Collins & Genesis",
+    "venue": "De Basiliek",
+    "city": "Veenendaal",
+    "country": "NL",
+    "date": "2027-06-19",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/phil-it-a-tribute-to-phil-collins--genesis-tickets/615445669?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/phil-it-a-tribute-to-phil-collins-genesis-veenendaal-de-basiliek-2027-06-19-CfXFawLoDDkd5utFVuLfp"
+  },
+  {
     "artist": "Simply Red - Summer Funk '27",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -42715,17 +42739,6 @@
     "time": "20:00",
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/simply-red-summer-funk-27-tickets/1266277965?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Simply Red | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-06-19",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/simply-red-%7C-venue-premium-packages-tickets/253048470?language=en-us",
     "firstFound": 1791588107075
   },
   {
@@ -42749,17 +42762,6 @@
     "time": "20:00",
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/simply-red-summer-funk-27-tickets/1382474657?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
-    "artist": "Simply Red | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-06-20",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/simply-red-%7C-venue-premium-packages-tickets/841654449?language=en-us",
     "firstFound": 1791588107075
   },
   {
@@ -42842,17 +42844,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Don Omar | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-06-30",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/don-omar-%7C-venue-premium-packages-tickets/2059540465?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "The Royal Dutch Scam Do It Again: the Best of Steely Dan",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -42876,6 +42867,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/stef-bos-groningen-spot-de-oosterpoort-2027-07-01-CbDKgthjaqXEvH9KabL2W"
   },
   {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-07-10",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/1724913044?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "KAROL G - VIAJANDO POR EL MUNDO TROPITOUR",
     "venue": "Johan Cruijff ArenA",
     "city": "Amsterdam",
@@ -42886,6 +42888,17 @@
     "url": "https://www.ticketmaster.nl/event/karol-g-viajando-por-el-mundo-tropitour-tickets/1399632739?language=en-us",
     "firstFound": 1791588107075,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/karol-g-viajando-por-el-mundo-tropitour-amsterdam-johan-cruijff-arena-2027-07-10-CaWQRkcKtBseLpSLEFopi"
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-07-11",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/853460398?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Oasis Live '27 | Ticket + Hotel Packages",
@@ -42899,6 +42912,17 @@
     "firstFound": 1791588107075
   },
   {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-07-17",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/1188562926?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Oasis Live '27 | Ticket + Hotel Packages",
     "venue": "Johan Cruijff ArenA",
     "city": "Amsterdam",
@@ -42908,6 +42932,105 @@
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/oasis-live-27-%7C-ticket--hotel-packages-tickets/1344012244?language=en-us",
     "firstFound": 1791588107075
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-07-18",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/1282433497?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-07-24",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/746478770?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-07-25",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/1981093427?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-07-31",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/1370030887?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-01",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/904874221?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-07",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/412278506?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-08",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/1442769935?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-14",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/1779014218?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-15",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/368761350?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Workshops SDF 20 August",
@@ -42932,6 +43055,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-21",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/700764164?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Workshops SDF 22 August",
     "venue": "Skatecafe",
     "city": "Amsterdam",
@@ -42941,6 +43075,17 @@
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/workshops-sdf-22-august/2584688",
     "firstFound": 0
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-22",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/297536831?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Workshops SDF 23 August",
@@ -43009,6 +43154,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-28",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/1481391731?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
     "artist": "Workshops SDF 29 August",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -43018,6 +43174,17 @@
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/workshops-sdf-29-august/2894209",
     "firstFound": 0
+  },
+  {
+    "artist": "Exclusief Tuinconcert Wibi Soerjadi - UITVERKOCHT",
+    "venue": "Villa Peckedam",
+    "city": "Diepenheim",
+    "country": "NL",
+    "date": "2027-08-29",
+    "time": "15:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/exclusief-tuinconcert-wibi-soerjadi-uitverkocht-tickets/218348224?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Workshops SDF 30 August",
@@ -43220,17 +43387,6 @@
     "firstFound": 0
   },
   {
-    "artist": "The Streamers | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-09-23",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/the-streamers-%7C-venue-premium-packages-tickets/1041050323?language=en-us",
-    "firstFound": 1791588107075
-  },
-  {
     "artist": "Douwe Bob + Melle",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -43240,17 +43396,6 @@
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/douwe-bob/2828540",
     "firstFound": 0
-  },
-  {
-    "artist": "The Streamers | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-09-24",
-    "time": "20:01",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/the-streamers-%7C-venue-premium-packages-tickets/1768613430?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Mass Of The Fermenting Dregs",
@@ -43263,17 +43408,6 @@
     "url": "https://www.paradiso.nl/nl/programma/mass-of-the-fermenting-dregs/2909713",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mass-of-the-fermenting-dregs-amsterdam-paradiso-2027-09-24-CdzneySSd89PeGXN8w7sD",
     "firstFound": 0
-  },
-  {
-    "artist": "The Streamers | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-09-25",
-    "time": "13:30",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/the-streamers-%7C-venue-premium-packages-tickets/735255619?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "New Purple Celebration",
@@ -43377,15 +43511,26 @@
     "firstFound": 0
   },
   {
-    "artist": "20 JAAR 3JS",
-    "venue": "AFAS Live Loge",
+    "artist": "BRIT FLOYD - ANIMALS 50 World Tour 2027",
+    "venue": "AFAS Live",
     "city": "Amsterdam",
     "country": "NL",
-    "date": "2027-10-09",
-    "time": "20:00",
+    "date": "2027-10-12",
+    "time": "19:30",
     "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/20-jaar-3js-tickets/1269070752?language=en-us",
-    "firstFound": 1791588107075
+    "url": "https://www.ticketmaster.nl/event/brit-floyd-animals-50-world-tour-2027-tickets/209091797?language=en-us",
+    "firstFound": 1791588580823
+  },
+  {
+    "artist": "BRIT FLOYD - ECHOES: 60 Years of Pink Floyd",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-10-13",
+    "time": "19:30",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/brit-floyd-echoes-60-years-of-pink-floyd-tickets/1636973232?language=en-us",
+    "firstFound": 1791588580823
   },
   {
     "artist": "Masters of Reality",
@@ -43422,6 +43567,18 @@
     "clubCard": false,
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bettie-serveert-rotterdam-lantarenvenster-2027-10-16-CZqUxXag9rKQSdnDR4A6q"
+  },
+  {
+    "artist": "SYNTHONY",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-10-16",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/synthony-tickets/1389654984?language=en-us",
+    "firstFound": 1791588580823,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-synthony-amsterdam-afas-live-2027-10-16-CfkUk9tv4bmLL9PpYeezH"
   },
   {
     "artist": "ANA POPOVIC",
@@ -43548,17 +43705,6 @@
     "url": "https://www.spotgroningen.nl/programma/kayhan-kalhor-ensemble",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kayhan-kalhor-ensemble-groningen-spot-de-oosterpoort-2027-11-17-Caz59YQJqVWeLW3PVTCU4"
-  },
-  {
-    "artist": "Laura Pausini | Venue Premium Packages",
-    "venue": "Ziggo Dome Club",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-11-24",
-    "time": "20:05",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/laura-pausini-%7C-venue-premium-packages-tickets/550722668?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "KOVACS [nieuwe datum]",
