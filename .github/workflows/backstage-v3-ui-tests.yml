@@ -71,6 +71,26 @@ jobs:
             sleep 5
             adb shell screencap -p /sdcard/backstage-discover.png
             adb pull /sdcard/backstage-discover.png backstage-v3-screenshots/discover.png
+            adb shell input tap 458 2200
+            sleep 4
+            adb shell screencap -p /sdcard/backstage-agenda.png
+            adb pull /sdcard/backstage-agenda.png backstage-v3-screenshots/agenda.png
+            adb shell input tap 655 2200
+            sleep 3
+            adb shell screencap -p /sdcard/backstage-tickets.png
+            adb pull /sdcard/backstage-tickets.png backstage-v3-screenshots/tickets.png
+            adb shell input tap 843 2200
+            sleep 3
+            adb shell screencap -p /sdcard/backstage-favorites.png
+            adb pull /sdcard/backstage-favorites.png backstage-v3-screenshots/favorites.png
+            adb shell input tap 1014 2200
+            sleep 3
+            adb shell screencap -p /sdcard/backstage-more.png
+            adb pull /sdcard/backstage-more.png backstage-v3-screenshots/more.png
+            adb shell input tap 465 1080
+            sleep 3
+            adb shell screencap -p /sdcard/backstage-info.png
+            adb pull /sdcard/backstage-info.png backstage-v3-screenshots/info.png
             # Run the full Android device tests after screenshot capture.
             ./gradlew --no-daemon --stacktrace :app:connectedDebugAndroidTest
 
