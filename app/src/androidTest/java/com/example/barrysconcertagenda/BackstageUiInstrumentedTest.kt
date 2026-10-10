@@ -1,10 +1,13 @@
 package com.example.barrysconcertagenda
 
+import android.graphics.Bitmap
 import androidx.activity.ComponentActivity
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.asAndroidBitmap
+import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -19,6 +22,8 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipeLeft
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
+import java.io.File
 import java.time.LocalDate
 import java.time.YearMonth
 import org.junit.Assert.assertEquals
@@ -81,15 +86,37 @@ class BackstageCalendarUiTest {
 class BackstageNavigationUiTest {
     @get:Rule val compose = createAndroidComposeRule<MainActivity>()
 
+    private fun captureAppScreen(name: String) {
+        // Capture actual Compose UI, not the emulator's Pixel Launcher,
+        // which can show unrelated ANR dialogs during adb screencap.
+        compose.waitForIdle()
+        val app = InstrumentationRegistry.getInstrumentation().targetContext
+        val base = app.getExternalFilesDir(null) ?: return
+        val folder = File(base, "v3-screenshots").apply { mkdirs() }
+        File(folder, "$name.png").outputStream().use { stream ->
+            compose.onRoot().captureToImage().asAndroidBitmap()
+                .compress(Bitmap.CompressFormat.PNG, 100, stream)
+        }
+    }
+
     @Test fun welcomeScreenOpensFiveMainIconsAndMore() {
         compose.onNodeWithContentDescription("Barry's concert agenda").performClick()
+        compose.waitUntil(timeoutMillis = 60_000) {
+            compose.onAllNodesWithText("Concerten controleren...")
+                .fetchSemanticsNodes().isEmpty()
+        }
+        captureAppScreen("home")
         for (item in listOf("Home", "Ontdek", "Agenda", "Mijn tickets", "Favorieten", "Meer")) {
             compose.onNodeWithContentDescription(item).assertIsDisplayed()
         }
+        compose.onNodeWithContentDescription("Mijn tickets").performClick()
+        captureAppScreen("tickets")
         compose.onNodeWithContentDescription("Favorieten").performClick()
         compose.onNodeWithContentDescription("Favorieten").assertIsSelected()
+        captureAppScreen("favorites")
         compose.onNodeWithContentDescription("Agenda").performClick()
         compose.onNodeWithContentDescription("Agenda").assertIsSelected()
+        captureAppScreen("agenda")
     }
 
     @Test fun swipingHomeMovesToDiscoverTab() {
@@ -105,6 +132,7 @@ class BackstageNavigationUiTest {
         compose.onNodeWithTag("backstage-fullscreen-start-photo").assertDoesNotExist()
         compose.onNodeWithContentDescription("Ontdek").performClick()
         compose.onNodeWithTag("backstage-fullscreen-start-photo").assertDoesNotExist()
+        captureAppScreen("discover")
         // In V3 the photo is shown only underneath Info, edge-to-edge,
         // with lavender text directly over the picture (without a card).
         compose.onNodeWithContentDescription("Meer").performClick()
@@ -115,7 +143,9 @@ class BackstageNavigationUiTest {
             compose.onAllNodesWithTag("backstage-more-7")
                 .fetchSemanticsNodes().isNotEmpty()
         }
+        captureAppScreen("more")
         compose.onNodeWithTag("backstage-more-7").performClick()
+        captureAppScreen("info")
         val screen = compose.onRoot().getUnclippedBoundsInRoot()
         val photo = compose.onNodeWithTag("backstage-fullscreen-start-photo")
             .assertExists()
