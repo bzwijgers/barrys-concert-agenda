@@ -14214,17 +14214,6 @@
     "firstFound": 0
   },
   {
-    "artist": "VroegZat",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2026-11-14",
-    "time": "19:30",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/vroegzat-14nov",
-    "firstFound": 0
-  },
-  {
     "artist": "80's Verantwoord",
     "venue": "MEZZ",
     "city": "Breda",
@@ -17248,7 +17237,7 @@
     "date": "2026-11-21",
     "time": "21:00",
     "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-20nov",
+    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-21nov",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-bergen-op-zoom-poppodium-gebouw-t-2026-11-21-CXX4jvQx6xTtsyXJCG1cY"
   },
@@ -29779,17 +29768,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-hillbilly-moonshiners-dordrecht-bibelot-poppodium-2027-01-29-CYWwbY4Dc9GHTWRG5tqzA"
   },
   {
-    "artist": "Studio Brandstof: KLINKT GOED",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "22:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/studio-brandstof-klinkt-goed",
-    "firstFound": 0
-  },
-  {
     "artist": "MidWinter Prog Festival",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -37061,17 +37039,6 @@
     "url": "https://www.paradiso.nl/nl/programma/dubioza-kolektiv/2908030",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dubioza-kolektiv-amsterdam-paradiso-2027-03-26-CcPYwD3x7MwZkevFArFZv",
     "firstFound": 0
-  },
-  {
-    "artist": "Ian Paice & Purpendicular",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2027-03-26",
-    "time": "20:30",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/ian-paice-purpendicular",
-    "firstFound": 1791588580823
   },
   {
     "artist": "Luicidal",
