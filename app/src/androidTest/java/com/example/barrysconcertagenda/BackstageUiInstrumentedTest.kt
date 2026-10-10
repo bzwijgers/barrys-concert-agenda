@@ -102,8 +102,9 @@ class BackstageNavigationUiTest {
     @Test fun welcomeScreenOpensFiveMainIconsAndMore() {
         compose.onNodeWithContentDescription("Barry's concert agenda").performClick()
         compose.waitUntil(timeoutMillis = 60_000) {
-            compose.onAllNodesWithText("Concerten controleren...")
-                .fetchSemanticsNodes().isEmpty()
+            compose.onAllNodesWithText("Home").fetchSemanticsNodes().isNotEmpty() &&
+                compose.onAllNodesWithText("Concerten controleren...")
+                    .fetchSemanticsNodes().isEmpty()
         }
         captureAppScreen("home")
         for (item in listOf("Home", "Ontdek", "Agenda", "Mijn tickets", "Favorieten", "Meer")) {
