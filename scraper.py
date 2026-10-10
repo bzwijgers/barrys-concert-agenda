@@ -5,7 +5,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from scrapers.common import normalize_url, scrape_boerderij, scrape_paard, scrape_melkweg, scrape_tivolivredenburg, scrape_mezz, scrape_patronaat
 from scrapers.effenaar import scrape_effenaar
 from scrapers.rotown import scrape_rotown
-from scrapers.source013 import scrape_013
+from scrapers.source013 import scrape_013, Source013Blocked
 from scrapers.paradiso import scrape_paradiso
 from scrapers.baroeg import scrape_baroeg
 from scrapers.tolhuistuin import scrape_tolhuistuin
@@ -79,38 +79,41 @@ except Exception as error:
 
 
 # ============================================================
-# 013
+# 013 TILBURG
 # ============================================================
-#
-# When 013 temporarily returns an empty programme, retain the last
-# published FUTURE concerts for that source. Never publish a zero-013 feed.
-# A temporary source outage must not block updates from other venues.
-# ============================================================
-
+# 013 sometimes sends GitHub's IP a CAPTCHA instead of event details.
+# Do not bypass or solve that challenge. Only for a *confirmed* bot block:
+# keep the previous, already verified FUTURE 013 listings so a temporary
+# block does not stop updates from 28 other sources. No concert is marked
+# new again; cached dates/times and ticket URLs are preserved.
+# Other 013 parse/completeness failures still STOP all publication.
 try:
     source013_concerts = scrape_013()
-except Exception as error:
-    print("013 LIVE SCRAPE MISLUKT:", str(error), flush=True)
+except Source013Blocked as error:
+    print("WAARSCHUWING: 013 CAPTCHA; alleen eerder geverifieerde 013-concerten blijven staan.",
+          str(error), flush=True)
     try:
-        with open("concerts.json", encoding="utf-8") as f:
-            previous_013_feed = json.load(f)
-        if not isinstance(previous_013_feed, list):
-            raise ValueError("Previous feed is not a list")
-        from zoneinfo import ZoneInfo
-        today_013 = datetime.now(ZoneInfo("Europe/Amsterdam")).date().isoformat()
-        source013_concerts = [
-            dict(event) for event in previous_013_feed
-            if isinstance(event, dict) and event.get("source") == "013"
-            and event.get("date", "") >= today_013
-        ]
-        if len(source013_concerts) < 25:
-            raise RuntimeError("Insufficient previously verified 013 events")
-        print("013 FALLBACK: behoud", len(source013_concerts),
-              "bestaande toekomstige concerten; LIVE BRON NIET ACTUEEL", flush=True)
-    except Exception as fallback_error:
+        with open("concerts.json", encoding="utf-8") as current_feed:
+            verified_previous = json.load(current_feed)
+        if not isinstance(verified_previous, list):
+            raise ValueError("previous feed is not a list")
+    except (OSError, ValueError, TypeError) as file_error:
+        raise RuntimeError("013 geblokkeerd en geen verifieerbare oude concertfeed") from file_error
+
+    today_for_fallback = datetime.now().date().isoformat()
+    source013_concerts = [
+        item for item in verified_previous
+        if isinstance(item, dict) and item.get("source") == "013"
+        and item.get("date", "") >= today_for_fallback
+        and item.get("url") and item.get("artist")
+    ]
+    if len(source013_concerts) < 25:
         raise RuntimeError(
-            "013 live en bestaande feed onbruikbaar; publicatie gestopt"
-        ) from fallback_error
+            "013 CAPTCHA en te weinig eerder geverifieerde toekomstige concerten: "
+            + str(len(source013_concerts))
+        ) from error
+    print("013 DEGRADED: kept", len(source013_concerts),
+          "previously verified events; no new 013 discoveries this run", flush=True)
 
 all_concerts.extend(source013_concerts)
 
