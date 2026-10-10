@@ -877,7 +877,7 @@ fun ConcertApp() {
                                     // Ticketmaster is a national source, not a separate concert hall.
                                     val observedSources = concerts
                                         .map { it.source.trim() }
-                                        .filter { it.isNotBlank() && !it.equals("Ticketmaster NL", ignoreCase = true) }
+                                        .filter { it.isNotBlank() && !it.startsWith("Ticketmaster ", ignoreCase = true) }
                                         .distinct()
                                     val listedVenues = (venueCities.keys + observedSources)
                                         .distinct()
@@ -912,7 +912,7 @@ fun ConcertApp() {
                                         }
                                     }
                                     Text("Aanvullende landelijke bron", fontWeight = FontWeight.Bold)
-                                    Text("Ticketmaster Nederland — concerten in Nederlandse zalen en festivals. Dubbele vermeldingen met bestaande concertzalen worden zoveel mogelijk verwijderd; officiële zaalvermeldingen krijgen voorrang.")
+                                    Text("Ticketmaster Nederland en Ticketmaster België — concerten en festivals met ontdubbeling ten opzichte van de afzonderlijke concertzalen. Live Nation België wordt als aanvullende bron onderzocht.")
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
