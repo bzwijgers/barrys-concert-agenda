@@ -507,6 +507,7 @@ fun ConcertApp() {
             4 ->
                 concerts.filter {
                     it.clubCard &&
+                            it.source.equals("Rotown", ignoreCase = true) &&
                             !it.archived
                 }
 
