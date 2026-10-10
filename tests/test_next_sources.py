@@ -4,7 +4,7 @@ from scrapers.next_sources import CANDIDATES, validate_registry
 class PlannedSourceTests(unittest.TestCase):
     def test_registry(self):
         self.assertTrue(validate_registry())
-        self.assertEqual(sum(c.country == "NL" for c in CANDIDATES), 23)
+        self.assertEqual(sum(c.country == "NL" for c in CANDIDATES), 24)
         self.assertEqual(sum(c.country == "BE" and c.kind == "venue" for c in CANDIDATES), 5)
         self.assertEqual(sum(c.kind == "promoter" for c in CANDIDATES), 1)
 
