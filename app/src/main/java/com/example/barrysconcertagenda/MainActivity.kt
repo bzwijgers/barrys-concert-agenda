@@ -537,25 +537,35 @@ fun ConcertApp() {
     val hasSearchCriteria =
         normalizedSearch.isNotBlank() || searchDateFrom != null || searchDateTo != null || searchVenue != null
 
+    // Keep search criteria active when switching tabs. Search has no
+    // criteria initially: show upcoming concerts so it never looks broken.
     val searchedConcerts =
-        if (selectedTab != 6) {
-            tabConcerts
-        } else if (!hasSearchCriteria) {
-            emptyList()
-        } else {
-            tabConcerts.filter { concert ->
-                val textMatches =
-                    normalizedSearch.isBlank() ||
-                        concert.artist.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
-                        concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch)
-                val venueMatches = searchVenue == null || concert.venue.equals(searchVenue, ignoreCase = true)
-                val concertDate = parseConcertDate(concert.date)
-                val dateMatches =
-                    concertDate != null &&
-                        (searchDateFrom == null || !concertDate.isBefore(searchDateFrom)) &&
-                        (searchDateTo == null || !concertDate.isAfter(searchDateTo))
-                textMatches && venueMatches && dateMatches
-            }
+        tabConcerts.filter { concert ->
+            val textMatches =
+                normalizedSearch.isBlank() ||
+                    concert.artist.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
+                    concert.venue.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
+                    concert.city.lowercase(Locale.getDefault()).contains(normalizedSearch) ||
+                    concert.source.lowercase(Locale.getDefault()).contains(normalizedSearch)
+            val venueMatches =
+                searchVenue == null || concert.venue.equals(searchVenue, ignoreCase = true)
+            val concertDate = parseConcertDate(concert.date)
+            val dateMatches =
+                concertDate != null &&
+                    (searchDateFrom == null || !concertDate.isBefore(searchDateFrom)) &&
+                    (searchDateTo == null || !concertDate.isAfter(searchDateTo))
+            textMatches && venueMatches && dateMatches
+        }
+        // Some independent sources publish the same performance with a
+        // different event URL. Keep just one visible card for that show.
+        .distinctBy { concert ->
+            listOf(
+                concert.artist.trim().lowercase(Locale.ROOT),
+                concert.venue.trim().lowercase(Locale.ROOT),
+                concert.city.trim().lowercase(Locale.ROOT),
+                concert.date.trim(),
+                concert.time.trim()
+            ).joinToString("|")
         }
 
     val visibleConcerts =
