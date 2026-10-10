@@ -1194,6 +1194,7 @@ fun ConcertApp() {
                                     modifier = Modifier.fillMaxWidth(),
                                     verticalArrangement = Arrangement.spacedBy(10.dp)
                                 ) {
+                                    Text("V3 ticket-icoon: groen · controleversie 10-10-B", color = infoTextColor, fontSize = 12.sp)
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold,
                                         fontSize = 18.sp, color = infoTextColor)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
