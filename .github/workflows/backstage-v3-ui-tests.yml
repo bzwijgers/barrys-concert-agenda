@@ -63,12 +63,13 @@ jobs:
             mkdir -p backstage-v3-screenshots
             adb pull /sdcard/Pictures/BarryConcertAgendaV3Test/. backstage-v3-screenshots/
             # The workflow must fail if it did not actually capture app pages.
-            for screen in home discover agenda tickets favorites more info; do
-              test -s "backstage-v3-screenshots/${screen}.png" || {
-                echo "Missing real Compose screenshot: ${screen}"
-                exit 1
-              }
-            done
+            test -s backstage-v3-screenshots/home.png
+            test -s backstage-v3-screenshots/discover.png
+            test -s backstage-v3-screenshots/agenda.png
+            test -s backstage-v3-screenshots/tickets.png
+            test -s backstage-v3-screenshots/favorites.png
+            test -s backstage-v3-screenshots/more.png
+            test -s backstage-v3-screenshots/info.png
 
       - name: Upload Android UI-test results
         if: always()
