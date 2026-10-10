@@ -15,7 +15,7 @@ from scrapers.ticketswap import enrich_ticketswap_urls
 from scrapers.new_venues import scrape_new_venues
 from scrapers.bird import scrape_bird
 from scrapers.ticketmaster_nl import scrape_ticketmaster_nl, merge_ticketmaster
-from scrapers.feed_quality import deduplicate_performances, is_known_nonconcert
+from scrapers.feed_quality import deduplicate_performances, is_known_nonconcert, retain_upcoming
 from scrapers.discovery import attach_first_found
 from scrapers.podiuminfo_venues import scrape_podiuminfo_venues
 
@@ -259,6 +259,16 @@ except Exception as error:
     # Never print the exception URL: the Discovery API URL includes the key.
     print("TICKETMASTER NL OVERGESLAGEN:", type(error).__name__,
           "HTTP", getattr(error, "code", ""), flush=True)
+
+# ============================================================
+# VERLOPEN CONCERTEN VERWIJDEREN - NL LOKALE DATUM
+# ============================================================
+# An overnight scrape can finish after local midnight. Earlier shows must
+# never reach feed validation; do not rely on each source's earlier time.
+all_concerts, expired_concerts = retain_upcoming(all_concerts)
+if expired_concerts:
+    print("Concerten van verlopen datum verwijderd:", len(expired_concerts),
+          [(x["artist"], x["date"]) for x in expired_concerts[:6]], flush=True)
 
 # ============================================================
 # DUBBELEN VERWIJDEREN
