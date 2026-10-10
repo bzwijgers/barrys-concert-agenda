@@ -198,7 +198,7 @@ def _music_classification(event):
     return False
 
 
-def event_to_concert(event, today=None):
+def event_to_concert(event, today=None, country_code="NL"):
     """Validate event-level time, country and location; reject ticket products."""
     if event.get("type") not in ("event", None):
         return None
@@ -215,14 +215,15 @@ def event_to_concert(event, today=None):
         return None
     url = (event.get("url") or "").strip()
     domain = (urlsplit(url).hostname or "").lower().removeprefix("www.")
-    if domain != "ticketmaster.nl" or urlsplit(url).scheme != "https":
+    expected_domain = "ticketmaster.be" if country_code == "BE" else "ticketmaster.nl"
+    if domain != expected_domain or urlsplit(url).scheme != "https":
         return None
     venues = ((event.get("_embedded") or {}).get("venues") or [])
     if not venues:
         return None
     v = venues[0]
     country = (v.get("country") or {}).get("countryCode")
-    if country != "NL":
+    if country != country_code:
         return None
     venue = _venue_label(v)
     city = ((v.get("city") or {}).get("name") or "").strip()
@@ -244,8 +245,8 @@ def event_to_concert(event, today=None):
     artist = _concert_title(raw_name)
     if _norm(artist) in GENERIC_NAME:
         return None
-    return dict(artist=artist, venue=venue, city=city, country="NL",
-                date=day, time=start_time, source="Ticketmaster NL", url=url)
+    return dict(artist=artist, venue=venue, city=city, country=country_code,
+                date=day, time=start_time, source="Ticketmaster " + country_code, url=url)
 
 
 def _get_json(params, api_key):
@@ -288,10 +289,10 @@ def _months_from_today(today, months=24):
         yield max(start, today), end
 
 
-def _fetch_range(start, end, api_key, extra=None, depth=0, getter=_get_json):
+def _fetch_range(start, end, api_key, extra=None, depth=0, getter=_get_json, country_code="NL"):
     """Avoid the Discovery API's 1000-result deep-paging limit by splitting dates."""
     params = {
-        "countryCode": "NL",
+        "countryCode": country_code,
         "segmentId": MUSIC_SEGMENT,
         "startDateTime": start.isoformat() + "T00:00:00Z",
         "endDateTime": end.isoformat() + "T00:00:00Z",
@@ -305,8 +306,8 @@ def _fetch_range(start, end, api_key, extra=None, depth=0, getter=_get_json):
     total_pages = int((first.get("page") or {}).get("totalPages", 1))
     if count > 950 and (end - start).days > 1 and depth < 12:
         midpoint = start + (end - start) // 2
-        return (_fetch_range(start, midpoint, api_key, extra, depth + 1, getter)
-                + _fetch_range(midpoint, end, api_key, extra, depth + 1, getter))
+        return (_fetch_range(start, midpoint, api_key, extra, depth + 1, getter, country_code=country_code)
+                + _fetch_range(midpoint, end, api_key, extra, depth + 1, getter, country_code=country_code))
     if count > 1000:
         raise RuntimeError("Ticketmaster results exceed API paging limit in " + start.isoformat())
     out = (first.get("_embedded") or {}).get("events") or []
