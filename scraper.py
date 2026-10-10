@@ -89,8 +89,8 @@ except Exception as error:
 # Other 013 parse/completeness failures still STOP all publication.
 try:
     source013_concerts = scrape_013()
-except Source013Blocked as error:
-    print("WAARSCHUWING: 013 CAPTCHA; alleen eerder geverifieerde 013-concerten blijven staan.",
+except (Source013Blocked, RuntimeError) as error:
+    print("WAARSCHUWING: 013 live-bron niet beschikbaar; bestaande 013-concerten blijven staan.",
           str(error), flush=True)
     try:
         with open("concerts.json", encoding="utf-8") as current_feed:
