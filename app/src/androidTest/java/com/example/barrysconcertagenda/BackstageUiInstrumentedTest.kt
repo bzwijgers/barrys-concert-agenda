@@ -11,6 +11,7 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.getUnclippedBoundsInRoot
 import androidx.compose.ui.test.onRoot
@@ -107,6 +108,13 @@ class BackstageNavigationUiTest {
         // In V3 the photo is shown only underneath Info, edge-to-edge,
         // with lavender text directly over the picture (without a card).
         compose.onNodeWithContentDescription("Meer").performClick()
+        // The remote feed is still loading on a fresh emulator install.
+        // More's menu is rendered only after loading finishes, so wait for it
+        // instead of racing the network and reporting a false UI failure.
+        compose.waitUntil(timeoutMillis = 60_000) {
+            compose.onAllNodesWithTag("backstage-more-7")
+                .fetchSemanticsNodes().isNotEmpty()
+        }
         compose.onNodeWithTag("backstage-more-7").performClick()
         val screen = compose.onRoot().getUnclippedBoundsInRoot()
         val photo = compose.onNodeWithTag("backstage-fullscreen-start-photo")
