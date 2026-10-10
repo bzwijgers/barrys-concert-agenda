@@ -61,7 +61,7 @@ jobs:
             # screenshots from the active app's root semantics.
             ./gradlew --no-daemon --stacktrace :app:connectedDebugAndroidTest
             mkdir -p backstage-v3-screenshots
-            adb pull /sdcard/Android/data/com.example.barrysconcertagenda.backstage/files/v3-screenshots/. backstage-v3-screenshots/
+            adb pull /sdcard/Pictures/BarryConcertAgendaV3Test/. backstage-v3-screenshots/
             # The workflow must fail if it did not actually capture app pages.
             for screen in home discover agenda tickets favorites more info; do
               test -s "backstage-v3-screenshots/${screen}.png" || {
