@@ -15753,17 +15753,6 @@
     "firstFound": 0
   },
   {
-    "artist": "VroegZat",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2026-11-14",
-    "time": "19:30",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/vroegzat-14nov",
-    "firstFound": 1791620558865
-  },
-  {
     "artist": "80's Verantwoord",
     "venue": "MEZZ",
     "city": "Breda",
@@ -15925,6 +15914,17 @@
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/jubileumconcert-wibi-soerjadi-tickets/1963933376?language=en-us",
     "firstFound": 1791588107075
+  },
+  {
+    "artist": "305",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/305-album-release",
+    "firstFound": 1791628871706
   },
   {
     "artist": "Delany",
@@ -42174,6 +42174,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Ian Paice & Purpendicular",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ian-paice-purpendicular",
+    "firstFound": 1791628871706
+  },
+  {
     "artist": "Luicidal",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -49332,18 +49343,6 @@
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/new-purple-celebration/",
     "firstFound": 0
-  },
-  {
-    "artist": "Agnes Obel",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2027-09-29",
-    "time": "19:15",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/66038558/agnes-obel-29-09-2027/",
-    "firstFound": 1791620558865,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/agnes-obel-utrecht-tivolivredenburg-2027-09-29-Cex72ybn8iDSMLqrS5Qu5"
   },
   {
     "artist": "Jain",
