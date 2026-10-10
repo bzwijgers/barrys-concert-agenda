@@ -1409,22 +1409,15 @@ enum class TicketDisplay { DEFAULT, OWNED, VISITED }
 
 @Composable
 fun TicketStatusIcon(display: TicketDisplay) {
-    val ticketColor = when (display) {
-        TicketDisplay.DEFAULT -> Color(0xFFD32F2F)
-        TicketDisplay.OWNED -> Color(0xFF2E7D32)
-        TicketDisplay.VISITED -> Color.White
-    }
-    val borderColor = when (display) {
-        TicketDisplay.VISITED -> MaterialTheme.colorScheme.onSurfaceVariant
-        else -> ticketColor
-    }
+    // One clean green ticket silhouette, without a border or surrounding frame.
+    // Past concerts retain the existing white ticket + green check mark.
+    val ticketColor = if (display == TicketDisplay.VISITED) Color.White else Color(0xFF2EAD59)
 
     Box(
         modifier = Modifier.size(32.dp),
         contentAlignment = Alignment.Center
     ) {
         Canvas(modifier = Modifier.size(width = 29.dp, height = 21.dp)) {
-            val stroke = 1.7.dp.toPx()
             val notch = 3.5.dp.toPx()
             val path = androidx.compose.ui.graphics.Path().apply {
                 moveTo(notch, 0f)
@@ -1442,14 +1435,9 @@ fun TicketStatusIcon(display: TicketDisplay) {
                 close()
             }
             drawPath(path = path, color = ticketColor)
-            drawPath(
-                path = path,
-                color = borderColor,
-                style = androidx.compose.ui.graphics.drawscope.Stroke(width = stroke)
-            )
             val perforationX = size.width * 0.28f
             drawLine(
-                color = if (display == TicketDisplay.VISITED) borderColor else Color.White,
+                color = if (display == TicketDisplay.VISITED) Color(0xFF2E7D32) else Color.White,
                 start = androidx.compose.ui.geometry.Offset(perforationX, 3.dp.toPx()),
                 end = androidx.compose.ui.geometry.Offset(perforationX, size.height - 3.dp.toPx()),
                 strokeWidth = 1.2.dp.toPx()
