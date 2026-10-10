@@ -1,6 +1,9 @@
 package com.example.barrysconcertagenda
 
+import android.content.ContentValues
 import android.graphics.Bitmap
+import android.os.Environment
+import android.provider.MediaStore
 import androidx.activity.ComponentActivity
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.getValue
@@ -24,7 +27,6 @@ import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipeLeft
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import java.io.File
 import java.time.LocalDate
 import java.time.YearMonth
 import org.junit.Assert.assertEquals
@@ -88,16 +90,28 @@ class BackstageNavigationUiTest {
     @get:Rule val compose = createAndroidComposeRule<MainActivity>()
 
     private fun captureAppScreen(name: String) {
-        // Capture actual Compose UI, not the emulator's Pixel Launcher,
-        // which can show unrelated ANR dialogs during adb screencap.
+        // Export a REAL Compose screenshot via MediaStore. Gradle uninstalls
+        // instrumentation apps after tests: app-private external files may
+        // disappear before adb can pull them. Public Pictures persists.
         compose.waitForIdle()
         val app = InstrumentationRegistry.getInstrumentation().targetContext
-        val base = app.getExternalFilesDir(null) ?: return
-        val folder = File(base, "v3-screenshots").apply { mkdirs() }
-        File(folder, "$name.png").outputStream().use { stream ->
+        val resolver = app.contentResolver
+        val values = ContentValues().apply {
+            put(MediaStore.Images.Media.DISPLAY_NAME, "$name.png")
+            put(MediaStore.Images.Media.MIME_TYPE, "image/png")
+            put(MediaStore.Images.Media.RELATIVE_PATH,
+                Environment.DIRECTORY_PICTURES + "/BarryConcertAgendaV3Test")
+            put(MediaStore.Images.Media.IS_PENDING, 1)
+        }
+        val uri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
+            ?: error("Unable to create public screenshot: $name")
+        resolver.openOutputStream(uri)?.use { stream ->
             compose.onRoot().captureToImage().asAndroidBitmap()
                 .compress(Bitmap.CompressFormat.PNG, 100, stream)
-        }
+        } ?: error("Unable to write public screenshot: $name")
+        values.clear()
+        values.put(MediaStore.Images.Media.IS_PENDING, 0)
+        resolver.update(uri, values, null, null)
     }
 
     @Test fun welcomeScreenOpensFiveMainIconsAndMore() {
