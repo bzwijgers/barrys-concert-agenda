@@ -295,7 +295,6 @@
     "time": "20:30",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/hard2get",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hard2get-weert-poppodium-de-bosuil-2026-10-10-CfCHsHDVBrVMWaoXrcWUh"
   },
   {
@@ -307,7 +306,6 @@
     "time": "20:30",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/kitty-daisy-lewis",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kitty-daisy-lewis-at-de-pul-uden-uden-de-pul-2026-10-10-CeSjsTzkeACDVBX1opchV"
   },
   {
@@ -400,8 +398,7 @@
     "date": "2026-10-10",
     "time": "21:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/vividly-frank",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/vividly-frank"
   },
   {
     "artist": "Nobu",
@@ -424,8 +421,7 @@
     "date": "2026-10-10",
     "time": "21:45",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/dordtse-cultuurnacht-2026",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/dordtse-cultuurnacht-2026"
   },
   {
     "artist": "2CHARM",
@@ -1986,8 +1982,7 @@
     "date": "2026-10-15",
     "time": "20:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/yawning-man-us",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/yawning-man-us"
   },
   {
     "artist": "Young The Giant + Ora The Molecule",
@@ -2263,8 +2258,7 @@
     "date": "2026-10-16",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/catch-of-the-day-salmon-on-a-leash-more",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/catch-of-the-day-salmon-on-a-leash-more"
   },
   {
     "artist": "Celine Cairo",
@@ -2459,7 +2453,6 @@
     "time": "20:30",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/rowwen-heze-2026",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rowwen-heze-uden-de-pul-2026-10-16-CcEWoqsXQXKm9zeJMYgqe"
   },
   {
@@ -2495,8 +2488,7 @@
     "date": "2026-10-16",
     "time": "20:45",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/niels-geusebroek-sings-coldplay",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/niels-geusebroek-sings-coldplay"
   },
   {
     "artist": "Beach Boys' Best",
@@ -2917,8 +2909,7 @@
     "date": "2026-10-17",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/popronde-dordrecht-mayte-igor-kram-duygu-alkan-amani",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/popronde-dordrecht-mayte-igor-kram-duygu-alkan-amani"
   },
   {
     "artist": "THE NARRATOR",
@@ -2939,8 +2930,7 @@
     "date": "2026-10-17",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/the-slackers-usa",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/the-slackers-usa"
   },
   {
     "artist": "Thijs Veldhuis",
@@ -3341,7 +3331,6 @@
     "time": "16:00",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/carl-verheyen",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/carl-verheyen-uden-de-pul-2026-10-18-CffD8iMn6yjZijsYbtPSD"
   },
   {
@@ -3353,7 +3342,6 @@
     "time": "16:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/elo-encounter",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/elo-encounter-weert-poppodium-de-bosuil-2026-10-18-Cf7G4HTgRqsd7buu1qXZA"
   },
   {
@@ -4462,8 +4450,7 @@
     "date": "2026-10-21",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/king-king-26",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/king-king-26"
   },
   {
     "artist": "GHØSTKID",
@@ -4596,7 +4583,6 @@
     "time": "15:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/dikkie-dik-dirk-scheele",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dikkie-dik-dirk-scheele-dordrecht-bibelot-poppodium-2026-10-22-CcZDdKi8b5rD4RUXbpDmX"
   },
   {
@@ -4745,8 +4731,7 @@
     "date": "2026-10-22",
     "time": "19:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/wolvennest-be-bedsore-it",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/wolvennest-be-bedsore-it"
   },
   {
     "artist": "Baba Zula",
@@ -4893,8 +4878,7 @@
     "date": "2026-10-22",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/dearomen-silentrunners",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/dearomen-silentrunners"
   },
   {
     "artist": "Flowers for the Dead + The Sewing Club",
@@ -5382,7 +5366,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/pearl-jam-by-rearviewmirror-radiohead-by-lost-child",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/pearl-jam-by-rearviewmirror-radiohead-by-lost-child-dordrecht-bibelot-poppodium-2026-10-23-CXnDB4a1oYSQAJWpFTJws"
   },
   {
@@ -5487,7 +5470,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/mell-vf",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mell-vf-dordrecht-bibelot-poppodium-2026-10-23-Cc8uCGsqUiev7K4CuSfNf"
   },
   {
@@ -5545,7 +5527,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/rowwenheze",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rowwen-heze-weert-poppodium-de-bosuil-2026-10-23-CbQ296JQVHxMKqKrFkuVV"
   },
   {
@@ -5726,7 +5707,6 @@
     "time": "14:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/fd-magical-popquiz",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/fd-magical-popquiz-dordrecht-bibelot-poppodium-2026-10-24-CbU9m3wNEomsRgPu3XUPW"
   },
   {
@@ -5979,8 +5959,7 @@
     "date": "2026-10-24",
     "time": "20:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/ronker",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/ronker"
   },
   {
     "artist": "Snelle",
@@ -6038,7 +6017,6 @@
     "time": "20:15",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/frank-boeijen",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/frank-boeijen-dordrecht-bibelot-poppodium-2026-10-24-CZVHK5e5Jm88NEFfViM8T"
   },
   {
@@ -6417,8 +6395,7 @@
     "date": "2026-10-25",
     "time": "13:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/all-for-one",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/all-for-one"
   },
   {
     "artist": "BEZERKUS BINGO – Halloween Editie",
@@ -6507,7 +6484,6 @@
     "time": "16:30",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/donnas-hotstuff",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/donnas-hot-stuff-donna-summer-tribute-weert-poppodium-de-bosuil-2026-10-25-CfCHsQnQW4bqeGuBWU5XA"
   },
   {
@@ -7678,8 +7654,7 @@
     "date": "2026-10-29",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/bosuilbluesbar",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/bosuilbluesbar"
   },
   {
     "artist": "The Fatal Flowers",
@@ -7816,8 +7791,7 @@
     "date": "2026-10-30",
     "time": "19:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/popronde-uden-2026",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/popronde-uden-2026"
   },
   {
     "artist": "Benjamin Steer",
@@ -8091,7 +8065,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/focus",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/focus-dordrecht-bibelot-poppodium-2026-10-30-CYwK9y6Y4gf9HeWRWmdVk"
   },
   {
@@ -8579,7 +8552,6 @@
     "time": "20:00",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/abba-revival",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/abba-revival-uk-uden-de-pul-2026-10-31-CfQGs5ppTPEZiu7BFCPyg"
   },
   {
@@ -8812,7 +8784,6 @@
     "time": "21:00",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/gewoon-nederpop",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gewoon-nederpop-weert-poppodium-de-bosuil-2026-10-31-CfZTxzmwfKajJr3kaMaXa"
   },
   {
@@ -9030,8 +9001,7 @@
     "date": "2026-11-01",
     "time": "12:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/muzis-joyful",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/muzis-joyful"
   },
   {
     "artist": "Elia Penrose - 'Everyday Sublime'",
@@ -9122,7 +9092,6 @@
     "time": "16:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/circle-of-mud",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/circle-of-mud-out-of-season-weert-poppodium-de-bosuil-2026-11-01-CXqznmR9FeaJsepYeXKNn"
   },
   {
@@ -9978,8 +9947,7 @@
     "date": "2026-11-04",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/kabaka-pyramid-jam",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/kabaka-pyramid-jam"
   },
   {
     "artist": "Monkeyjam",
@@ -10022,8 +9990,7 @@
     "date": "2026-11-04",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/the-obsessed-us",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/the-obsessed-us"
   },
   {
     "artist": "Tokio Hotel - ARENA TOUR 2026",
@@ -10576,8 +10543,7 @@
     "date": "2026-11-05",
     "time": "21:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/reggae-central-mark-wonder-the-rude-cut-band-ja-sista-souljah",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/reggae-central-mark-wonder-the-rude-cut-band-ja-sista-souljah"
   },
   {
     "artist": "MEROL",
@@ -10890,7 +10856,6 @@
     "time": "20:15",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/lois-lane",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/lois-lane-dordrecht-bibelot-poppodium-2026-11-06-CYudh1jVZSDGn7tbSUtVm"
   },
   {
@@ -11006,8 +10971,7 @@
     "date": "2026-11-06",
     "time": "20:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/taxitaxi",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/taxitaxi"
   },
   {
     "artist": "The Fatal Flowers",
@@ -11063,8 +11027,7 @@
     "date": "2026-11-06",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/zuco-103",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/zuco-103"
   },
   {
     "artist": "Fink",
@@ -11511,7 +11474,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/gruppo-sportivo-afscheidsshow",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gruppo-sportivo-dordrecht-bibelot-poppodium-2026-11-07-CcgCFeFPAxrWwnovtkYet"
   },
   {
@@ -11546,8 +11508,7 @@
     "date": "2026-11-07",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/ork",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/ork"
   },
   {
     "artist": "Ploegendienst + C’est Qui, GRGY",
@@ -11673,7 +11634,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/levara",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/levara-weert-poppodium-de-bosuil-2026-11-07-CeHRsrQWCc1fsL2Pzx4ff"
   },
   {
@@ -11864,8 +11824,7 @@
     "date": "2026-11-08",
     "time": "15:00",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/linda-smeets-paterskerk",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/linda-smeets-paterskerk"
   },
   {
     "artist": "Church of Cash",
@@ -11887,7 +11846,6 @@
     "time": "16:00",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/vengeance",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/vengeance-uden-de-pul-2026-11-08-Ce88uSD1izmD2Yqd8jmeh"
   },
   {
@@ -11899,7 +11857,6 @@
     "time": "16:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/danielle-nicole-band",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/danielle-nicole-band-weert-poppodium-de-bosuil-2026-11-08-CfCHy6w38XnBVhvcDv1SN"
   },
   {
@@ -11922,8 +11879,7 @@
     "date": "2026-11-08",
     "time": "18:15",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/helldriver-2026",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/helldriver-2026"
   },
   {
     "artist": "FINK",
@@ -12858,8 +12814,7 @@
     "date": "2026-11-11",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/the-music-of-genesis",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/the-music-of-genesis"
   },
   {
     "artist": "Trio Bier",
@@ -13342,8 +13297,7 @@
     "date": "2026-11-12",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/mothers-finest",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/mothers-finest"
   },
   {
     "artist": "Naruto Shippuden Symphonic Experience",
@@ -13633,8 +13587,7 @@
     "date": "2026-11-13",
     "time": "19:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/wild-ones-2026",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/wild-ones-2026"
   },
   {
     "artist": "Yndling",
@@ -13668,8 +13621,7 @@
     "date": "2026-11-13",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/clobber-uk",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/clobber-uk"
   },
   {
     "artist": "Diggy Dex • Phil",
@@ -13816,8 +13768,7 @@
     "date": "2026-11-13",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/the-hillbilly-moonshiners",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/the-hillbilly-moonshiners"
   },
   {
     "artist": "The Next Movement",
@@ -13921,7 +13872,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/raywilson-26",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ray-wilson-weert-poppodium-de-bosuil-2026-11-13-CfCHyAP9g64LcKYXXT8kY"
   },
   {
@@ -14131,8 +14081,7 @@
     "date": "2026-11-14",
     "time": "19:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/employed-to-serve-uk-cabal-dk-cold-culture-dk",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/employed-to-serve-uk-cabal-dk-cold-culture-dk"
   },
   {
     "artist": "FLEMMING",
@@ -14292,7 +14241,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-elvis-concert-us",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-elvis-concert-us-dordrecht-bibelot-poppodium-2026-11-14-Cd32EQQqJFuRpNwpzZhfQ"
   },
   {
@@ -14314,8 +14262,7 @@
     "date": "2026-11-14",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/305-album-release",
-    "firstFound": 1791586914170
+    "url": "https://www.livepul.com/agenda/305-album-release"
   },
   {
     "artist": "Delany",
@@ -14466,8 +14413,7 @@
     "date": "2026-11-14",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/thornborg-risager-the-black-tornado",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/thornborg-risager-the-black-tornado"
   },
   {
     "artist": "Deppie",
@@ -14684,8 +14630,7 @@
     "date": "2026-11-15",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/ab-bagold",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/ab-bagold"
   },
   {
     "artist": "BIG SLEEP",
@@ -15931,8 +15876,7 @@
     "date": "2026-11-19",
     "time": "20:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/monkeyjam-19nov",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/monkeyjam-19nov"
   },
   {
     "artist": "Pitou + Lifeloan",
@@ -16151,7 +16095,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/erdling",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/erdling-weert-poppodium-de-bosuil-2026-11-19-CXqznCgf2GSk1uwR5ZntL"
   },
   {
@@ -16395,8 +16338,7 @@
     "date": "2026-11-20",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/de-hardheid",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/de-hardheid"
   },
   {
     "artist": "Emmy d’Arc",
@@ -16553,8 +16495,7 @@
     "date": "2026-11-20",
     "time": "20:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/call-it-off-era-tour-goes-poppunk",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/call-it-off-era-tour-goes-poppunk"
   },
   {
     "artist": "King Of The World",
@@ -16564,8 +16505,7 @@
     "date": "2026-11-20",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/king-of-the-world",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/king-of-the-world"
   },
   {
     "artist": "Momoko Gill",
@@ -16670,7 +16610,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/regressivehypnosis",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/regressive-hypnosis-weert-poppodium-de-bosuil-2026-11-20-CfCHyHABr9K8bDWorLL9o"
   },
   {
@@ -16752,7 +16691,6 @@
     "time": "15:00",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/masters-of-metal-2026",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/masters-of-metal-uden-de-pul-2026-11-21-Ce5EJ4tZPYwspf7q1AGGd"
   },
   {
@@ -17261,7 +17199,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/parker-barrow",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/parker-barrow-usa-weert-poppodium-de-bosuil-2026-11-21-CfCHyLSdNsK9xEJVtveMg"
   },
   {
@@ -17491,7 +17428,6 @@
     "time": "16:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/oliver-wakeman",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/oliver-wakeman-weert-poppodium-de-bosuil-2026-11-22-CfCHyPkZngXwGqZV49puR"
   },
   {
@@ -17503,7 +17439,6 @@
     "time": "18:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/morbidfest-i-am-morbid-us-atheist-us-cancer-uk-narcotic-wasteland-us",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/morbidfest-i-am-morbid-us-atheist-us-cancer-uk-narcotic-wasteland-us-dordrecht-bibelot-poppodium-2026-11-22-CfHfeGx61RFY1zxzAaoAd"
   },
   {
@@ -17620,8 +17555,7 @@
     "date": "2026-11-22",
     "time": "20:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/ellen-ten-damme",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/ellen-ten-damme"
   },
   {
     "artist": "LORDS OF ALTAMONT + Sick Shooters",
@@ -18340,8 +18274,7 @@
     "date": "2026-11-25",
     "time": "20:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/liturgy-solo-wilhelminakerk",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/liturgy-solo-wilhelminakerk"
   },
   {
     "artist": "NAFT",
@@ -18581,8 +18514,7 @@
     "date": "2026-11-26",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/sugar-spine-braces-popcentrale",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/sugar-spine-braces-popcentrale"
   },
   {
     "artist": "The Script: Man In The Arena Tour",
@@ -18984,8 +18916,7 @@
     "date": "2026-11-27",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/dordrecht-blues-night-ian-siegal-uk-minko",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/dordrecht-blues-night-ian-siegal-uk-minko"
   },
   {
     "artist": "Flemming",
@@ -19173,7 +19104,6 @@
     "time": "20:30",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/the-smiths-presumably-2026",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-smiths-presumably-uden-de-pul-2026-11-27-CU8uoZdMdW1CMXqfb5v1T"
   },
   {
@@ -19254,7 +19184,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/laura-cox",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/laura-cox-weert-poppodium-de-bosuil-2026-11-27-CXqznLq3eUANh8joMNvUA"
   },
   {
@@ -19289,8 +19218,7 @@
     "date": "2026-11-27",
     "time": "21:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/bonkers-bingo",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/bonkers-bingo"
   },
   {
     "artist": "PANN 25+",
@@ -19601,8 +19529,7 @@
     "date": "2026-11-28",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/kaz-balagane",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/kaz-balagane"
   },
   {
     "artist": "Mietze Conte",
@@ -19635,8 +19562,7 @@
     "date": "2026-11-28",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/shantel-bucovina-club-orkestar-de",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/shantel-bucovina-club-orkestar-de"
   },
   {
     "artist": "stay away from dante!",
@@ -19670,7 +19596,6 @@
     "time": "20:00",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/tawny-for-a-dollar",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tawny-for-a-dollar-uden-de-pul-2026-11-28-CeiyVV8J65U49QJYyFqWG"
   },
   {
@@ -19786,8 +19711,7 @@
     "date": "2026-11-28",
     "time": "20:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/studio-brandstof-lappel-du-vide",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/studio-brandstof-lappel-du-vide"
   },
   {
     "artist": "The Hillbilly Moonshiners",
@@ -19831,8 +19755,7 @@
     "date": "2026-11-28",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/the-fortunate-sons-2026",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/the-fortunate-sons-2026"
   },
   {
     "artist": "MICH",
@@ -19957,8 +19880,7 @@
     "date": "2026-11-29",
     "time": "15:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/mko",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/mko"
   },
   {
     "artist": "Sido Martens",
@@ -19990,8 +19912,7 @@
     "date": "2026-11-29",
     "time": "15:45",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/temple-of-wave",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/temple-of-wave"
   },
   {
     "artist": "Wednesday 13 + The Birthday Massacre + Killus",
@@ -20616,8 +20537,7 @@
     "date": "2026-12-01",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/john-corabi-friends",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/john-corabi-friends"
   },
   {
     "artist": "Julia Wolf + Scro",
@@ -21196,7 +21116,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/treasure-bruno-mars-tribute-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/treasure-bruno-mars-tribute-dordrecht-bibelot-poppodium-2026-12-03-CYntsYzSPhSN9USKDUUP9"
   },
   {
@@ -21256,8 +21175,7 @@
     "date": "2026-12-03",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/bosuil-blues-bar-jones",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/bosuil-blues-bar-jones"
   },
   {
     "artist": "C.O.F.F.I.N",
@@ -21833,8 +21751,7 @@
     "date": "2026-12-04",
     "time": "21:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/lets-go-roak-funky-friday",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/lets-go-roak-funky-friday"
   },
   {
     "artist": "Stahlzeit",
@@ -21845,7 +21762,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/stahlzeit-vr-2026",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/stahlzeit-weert-poppodium-de-bosuil-2026-12-04-CXqznPbyoHMRAcrwpNL1F"
   },
   {
@@ -22192,8 +22108,7 @@
     "date": "2026-12-05",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/china-crisis-1",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/china-crisis-1"
   },
   {
     "artist": "Gotu Jim",
@@ -22288,7 +22203,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-dirty-daddies-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-sinterklaaseditie-dordrecht-bibelot-poppodium-2026-12-05-CXJc7dPw1JTdtBtZvnvDa"
   },
   {
@@ -22300,7 +22214,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/stahlzeit-za-2026",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/stahlzeit-weert-poppodium-de-bosuil-2026-12-05-CXqznSKSnBCNu2ESDksd4"
   },
   {
@@ -22349,7 +22262,6 @@
     "time": "13:00",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/tyr-twilight-force",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tyr-twilight-force-uden-de-pul-2026-12-06-CeyMSa1FdTPSZRFJUyp5v"
   },
   {
@@ -22429,7 +22341,6 @@
     "time": "16:30",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/stahlzeit-zo-2026",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/stahlzeit-weert-poppodium-de-bosuil-2026-12-06-CXqznV6PSV4Nh1Ydu168x"
   },
   {
@@ -23341,8 +23252,7 @@
     "date": "2026-12-10",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/paceshifters-play-nirvana",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/paceshifters-play-nirvana"
   },
   {
     "artist": "Peter & The Test Tube Babies (UK) + Disturbance + De Badslippers",
@@ -23352,8 +23262,7 @@
     "date": "2026-12-10",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/peter-the-test-tube-babies-uk-de-badslippers",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/peter-the-test-tube-babies-uk-de-badslippers"
   },
   {
     "artist": "POLITIEKE JONGEREN – VERZET! PROTEST!",
@@ -23409,8 +23318,7 @@
     "date": "2026-12-10",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/fortune-child-type1",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/fortune-child-type1"
   },
   {
     "artist": "Froukje + Jaïr Faria",
@@ -23653,8 +23561,7 @@
     "date": "2026-12-11",
     "time": "19:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/friday",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/friday"
   },
   {
     "artist": "ISABÈL USHER",
@@ -23723,8 +23630,7 @@
     "date": "2026-12-11",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/frans-huxie-reunieshow",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/frans-huxie-reunieshow"
   },
   {
     "artist": "Gotu Jim",
@@ -23931,8 +23837,7 @@
     "date": "2026-12-11",
     "time": "21:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/fabulous90s",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/fabulous90s"
   },
   {
     "artist": "Lézard",
@@ -23978,7 +23883,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/kingsoffloyd-2026",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kings-of-floyd-weert-poppodium-de-bosuil-2026-12-11-CfCHwTRGtcAERMrA2k23Q"
   },
   {
@@ -24418,7 +24322,6 @@
     "time": "21:00",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/hill-billy-moonshiners",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-hillbilly-moonshiners-bluegrass-band-weert-poppodium-de-bosuil-2026-12-12-CfCHwWpujhFS2QQh8AUAM"
   },
   {
@@ -24600,8 +24503,7 @@
     "date": "2026-12-13",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/lenoise-2026",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/lenoise-2026"
   },
   {
     "artist": "Dominum",
@@ -25211,8 +25113,7 @@
     "date": "2026-12-17",
     "time": "20:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/monkeyjam-17dec",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/monkeyjam-17dec"
   },
   {
     "artist": "My Baby",
@@ -25305,7 +25206,6 @@
     "time": "20:45",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/coldplace-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/coldplace-weert-poppodium-de-bosuil-2026-12-17-CfCHwaBpXvJHVMhfZMwqp"
   },
   {
@@ -25396,8 +25296,7 @@
     "date": "2026-12-18",
     "time": "19:00",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/vette-knepper",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/vette-knepper"
   },
   {
     "artist": "Hidden Xmas Deluxe",
@@ -25595,7 +25494,6 @@
     "time": "20:30",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/progproms-v",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/progproms-v-a-progressive-rock-tribute-to-edward-reekers-uden-de-pul-2026-12-18-CfEcd7ywgR7a3tqVx9L5w"
   },
   {
@@ -25666,7 +25564,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-dirty-daddies-3",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-dordrecht-bibelot-poppodium-2026-12-18-CXJbedQv9iWuPK3CaUi2n"
   },
   {
@@ -25969,7 +25866,6 @@
     "time": "20:30",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/the-doors-alive-2026",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-doors-alive-uden-de-pul-2026-12-19-CfCm3478YYbnjxHU2Pxzv"
   },
   {
@@ -26017,7 +25913,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/finale-grote-prijs-van-dordt-3",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/finale-grote-prijs-van-dordt-dordrecht-bibelot-poppodium-2026-12-19-CcgCG16GXyqNu9rLGi3k1"
   },
   {
@@ -26052,7 +25947,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-dirty-daddies-4",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-dordrecht-bibelot-poppodium-2026-12-19-CXJbDtqAaCsqk2bgLvgEZ"
   },
   {
@@ -26077,7 +25971,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/prog-proms",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/progproms-tribute-to-edward-reekers-weert-poppodium-de-bosuil-2026-12-19-CXqznagEnHFEq7sHwLLNt"
   },
   {
@@ -26226,7 +26119,6 @@
     "time": "16:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/steve-n-seagulls",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/steve-n-seagulls-weert-poppodium-de-bosuil-2026-12-20-CfCHwdV16brmZ5fTbHHiN"
   },
   {
@@ -26261,8 +26153,7 @@
     "date": "2026-12-20",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/blackbird-kerstshow",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/blackbird-kerstshow"
   },
   {
     "artist": "Doodswens",
@@ -26664,7 +26555,6 @@
     "time": "16:00",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/treasure-brunomars",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/treasure-bruno-mars-tribute-band-weert-poppodium-de-bosuil-2026-12-27-Ce1129jJBw1yULDghBdpb"
   },
   {
@@ -26926,8 +26816,7 @@
     "date": "2026-12-31",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/oudnieuw2026",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/oudnieuw2026"
   },
   {
     "artist": "Effenaar Oud & Nieuw 2026",
@@ -27007,7 +26896,6 @@
     "time": "19:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/megamuziekquiz-4",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/megamuziekquiz-dordrecht-bibelot-poppodium-2027-01-02-Cci6coLytRco844wwEc7a"
   },
   {
@@ -27240,8 +27128,7 @@
     "date": "2027-01-08",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/drukwerk",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/drukwerk"
   },
   {
     "artist": "h Natural: Steve Hogarth (Marillion) (UK)",
@@ -27251,8 +27138,7 @@
     "date": "2027-01-08",
     "time": "20:30",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/h-natural-steve-hogarth-marillion-uk",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/h-natural-steve-hogarth-marillion-uk"
   },
   {
     "artist": "New Cool Collective",
@@ -27263,7 +27149,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/new-cool-collective-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/new-cool-collective-dordrecht-bibelot-poppodium-2027-01-08-Cc81RzrksgDmnZmEaaEUL"
   },
   {
@@ -27321,7 +27206,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/classichitsinconcert",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/classic-hits-in-concert-weert-poppodium-de-bosuil-2027-01-08-Cf6cXyG9s96jjtmZkbf4J"
   },
   {
@@ -27486,7 +27370,6 @@
     "time": "20:45",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-dutch-queen-tribute-50-jaar-somebody-to-love",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dutch-queen-tribute-50-jaar-somebody-to-love-dordrecht-bibelot-poppodium-2027-01-09-CWx3zdi2kkbiNBVLyzEgL"
   },
   {
@@ -27509,8 +27392,7 @@
     "date": "2027-01-09",
     "time": "21:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/altoooooh-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/altoooooh-2027"
   },
   {
     "artist": "The Wanderers",
@@ -27521,7 +27403,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-wanderers",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-wanderers-dordrecht-bibelot-poppodium-2027-01-09-Cfn4iQ28efTas3uG4cf7C"
   },
   {
@@ -27533,7 +27414,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/madeinpurple",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/made-in-purple-weert-poppodium-de-bosuil-2027-01-09-Cf6cY2ab92nLbcphnwLGW"
   },
   {
@@ -27775,8 +27655,7 @@
     "date": "2027-01-15",
     "time": "19:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/planet-pul",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/planet-pul"
   },
   {
     "artist": "VroegZat",
@@ -27832,7 +27711,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/acindc-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/acindc-dordrecht-bibelot-poppodium-2027-01-15-CYJVytSMqh2JM6wNjrFsg"
   },
   {
@@ -27972,8 +27850,7 @@
     "date": "2027-01-16",
     "time": "19:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/fatfest-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/fatfest-2027"
   },
   {
     "artist": "Midjonno Prog 2",
@@ -28133,8 +28010,7 @@
     "date": "2027-01-16",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/billy-joel-experience-ft-string-quartet",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/billy-joel-experience-ft-string-quartet"
   },
   {
     "artist": "Fleddy Melculy",
@@ -28191,8 +28067,7 @@
     "date": "2027-01-17",
     "time": "15:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/jan-akkerman-80",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/jan-akkerman-80"
   },
   {
     "artist": "Ten Years after",
@@ -28202,8 +28077,7 @@
     "date": "2027-01-17",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/tenyears-after",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/tenyears-after"
   },
   {
     "artist": "Isaiah Rashad",
@@ -28482,7 +28356,6 @@
     "time": "20:30",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/ontaard",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ontaard-weert-poppodium-de-bosuil-2027-01-21-Cf6cY94GMEb9QcK6ATpiM"
   },
   {
@@ -28735,7 +28608,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-fortunate-sons",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-fortunate-sons-dordrecht-bibelot-poppodium-2027-01-22-CUQEzCG4mKJUYRgi9ys63"
   },
   {
@@ -28978,7 +28850,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/daredevils-zing-nederlands-met-me-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/daredevils-zing-nederlands-met-me-dordrecht-bibelot-poppodium-2027-01-23-CVz5QHm4dZWx5ovK9iNGo"
   },
   {
@@ -29013,7 +28884,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/kofn-tr",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kofn-tr-dordrecht-bibelot-poppodium-2027-01-23-CeF56TZyTHV1ozUehvbXw"
   },
   {
@@ -29071,7 +28941,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/bouke2027",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bouke-the-elvis-matters-band-weert-poppodium-de-bosuil-2027-01-23-CZrcHQTQTGKL2MjnKtNes"
   },
   {
@@ -29175,8 +29044,7 @@
     "date": "2027-01-24",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/richie-malone-leon-cave-feat-belgian-quo-band",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/richie-malone-leon-cave-feat-belgian-quo-band"
   },
   {
     "artist": "Josh Rouse",
@@ -29588,8 +29456,7 @@
     "date": "2027-01-29",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/dordtje-pop-klinkt-goed-mensenkinderen-see-sharp",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/dordtje-pop-klinkt-goed-mensenkinderen-see-sharp"
   },
   {
     "artist": "Epica",
@@ -29764,7 +29631,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-hillbilly-moonshiners",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-hillbilly-moonshiners-dordrecht-bibelot-poppodium-2027-01-29-CYWwbY4Dc9GHTWRG5tqzA"
   },
   {
@@ -29889,8 +29755,7 @@
     "date": "2027-01-30",
     "time": "20:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/rockparty-of-the-year",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/rockparty-of-the-year"
   },
   {
     "artist": "The Mary Wallopers",
@@ -30644,7 +30509,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/leif-de-leeuw-band-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/leif-de-leeuw-band-dordrecht-bibelot-poppodium-2027-02-05-Cefi5HY6wP4g8spDPJNep"
   },
   {
@@ -31364,8 +31228,7 @@
     "date": "2027-02-12",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/magazines",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/magazines"
   },
   {
     "artist": "Pink Floyd Project -  \"The Full Circle\" clubtour",
@@ -31680,7 +31543,6 @@
     "time": "16:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/themetalstuds",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-metal-studs-weert-poppodium-de-bosuil-2027-02-14-Cf6cWeoNs2CqyxLupPgJu"
   },
   {
@@ -31749,8 +31611,7 @@
     "date": "2027-02-14",
     "time": "19:40",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/lost-society-fi-hokka-fi",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/lost-society-fi-hokka-fi"
   },
   {
     "artist": "Charlie Cunningham",
@@ -32221,8 +32082,7 @@
     "date": "2027-02-18",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/johnnydynamitemagazines",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/johnnydynamitemagazines"
   },
   {
     "artist": "Pure Reason Revolution",
@@ -32432,7 +32292,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/ruben-hillen",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ruben-hillen-dordrecht-bibelot-poppodium-2027-02-19-CbD1QQeywwUsNEotvrV1b"
   },
   {
@@ -32814,8 +32673,7 @@
     "date": "2027-02-20",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/the-tool-experience",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/the-tool-experience"
   },
   {
     "artist": "ABBA Fever",
@@ -32848,8 +32706,7 @@
     "date": "2027-02-20",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/gary-moore-tribute-2-2",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/gary-moore-tribute-2-2"
   },
   {
     "artist": "The Reytons",
@@ -32893,8 +32750,7 @@
     "date": "2027-02-21",
     "time": "15:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/connolly-hayes",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/connolly-hayes"
   },
   {
     "artist": "The Womack Sisters",
@@ -33032,7 +32888,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/fuzz-top-zz-top-tribute-fr",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/fuzz-top-zz-top-tribute-fr-dordrecht-bibelot-poppodium-2027-02-21-Ce9PpMuQiJrEcwmNrg92R"
   },
   {
@@ -33427,8 +33282,7 @@
     "date": "2027-02-25",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/mad-caddies-us",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/mad-caddies-us"
   },
   {
     "artist": "Wende",
@@ -33718,7 +33572,6 @@
     "time": "20:30",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/ozric-tentacles",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ozric-tentacles-uden-de-pul-2027-02-26-Cdozboh5WBvigMDAhoyV2"
   },
   {
@@ -33753,7 +33606,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-dirty-daddies-9",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-dordrecht-bibelot-poppodium-2027-02-26-CXKhnE78vz6zpHVpD7kzX"
   },
   {
@@ -33765,7 +33617,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/physical-graffiti-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-ultimate-led-zeppelin-tribute-by-physical-graffiti-weert-poppodium-de-bosuil-2027-02-26-Cf6cWmPkMfnUyF9wvMQZc"
   },
   {
@@ -33833,8 +33684,7 @@
     "date": "2027-02-27",
     "time": "19:00",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/santa-domingo",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/santa-domingo"
   },
   {
     "artist": "Kakkmaddafakka",
@@ -33857,7 +33707,6 @@
     "time": "20:00",
     "source": "De Pul",
     "url": "https://www.livepul.com/agenda/british-invasion-2027",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/british-invasion-musest-reeditors-scummy-men-uden-de-pul-2027-02-27-CdaDiPmZSkBmzN6Qss2zk"
   },
   {
@@ -34018,7 +33867,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-dirty-daddies",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-dordrecht-bibelot-poppodium-2027-02-27-CXKhnGx2zXoWf8AvSYqTD"
   },
   {
@@ -34086,8 +33934,7 @@
     "date": "2027-02-28",
     "time": "16:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/the-clarks-rinus-gerritsen-cesar-zuiderwijk",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/the-clarks-rinus-gerritsen-cesar-zuiderwijk"
   },
   {
     "artist": "Bernard Allison",
@@ -34097,8 +33944,7 @@
     "date": "2027-02-28",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/bernard-allison",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/bernard-allison"
   },
   {
     "artist": "Amble",
@@ -34674,7 +34520,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/the-clarks-feat-rinus-gerritsen-cesar-zuiderwijk",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-clarks-feat-rinus-gerritsen-cesar-zuiderwijk-dordrecht-bibelot-poppodium-2027-03-05-CfKZNa9YprzL3HX4nF4kf"
   },
   {
@@ -34708,7 +34553,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/de-kift-2",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/de-kift-dordrecht-bibelot-poppodium-2027-03-05-CcgCG5F3drL36dNhgDBvY"
   },
   {
@@ -34719,8 +34563,7 @@
     "date": "2027-03-05",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/black-bottle-riot",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/black-bottle-riot"
   },
   {
     "artist": "Hallo Venray",
@@ -34811,8 +34654,7 @@
     "date": "2027-03-06",
     "time": "20:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/80s-verantwoord-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/80s-verantwoord-2027"
   },
   {
     "artist": "One Vision of Queen ft Marc Martel",
@@ -34847,7 +34689,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/ozzyfied",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ozzyfied-dordrecht-bibelot-poppodium-2027-03-06-CcqfpYFpWT5j6CRKbAgbz"
   },
   {
@@ -35675,8 +35516,7 @@
     "date": "2027-03-13",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/cooking-with-knoplfer",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/cooking-with-knoplfer"
   },
   {
     "artist": "Dirty Sound Magnet",
@@ -35721,8 +35561,7 @@
     "date": "2027-03-13",
     "time": "21:00",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/black-bottle-riot-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/black-bottle-riot-2027"
   },
   {
     "artist": "Ozzyfied",
@@ -35767,7 +35606,6 @@
     "time": "16:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/cookingwithknopfler",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/cooking-with-knopfler-weert-poppodium-de-bosuil-2027-03-14-Cf6cWsnEHNurwCGUxqNCX"
   },
   {
@@ -36242,8 +36080,7 @@
     "date": "2027-03-18",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/sonicwhip-badluckbaby",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/sonicwhip-badluckbaby"
   },
   {
     "artist": "Dressed Like Boys",
@@ -36288,7 +36125,6 @@
     "time": "19:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/black-out-wegsfeer-be",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/black-out-wegsfeer-be-dordrecht-bibelot-poppodium-2027-03-19-CbGnhpJW19AcG55h2x6fF"
   },
   {
@@ -36414,8 +36250,7 @@
     "date": "2027-03-19",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/scrum",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/scrum"
   },
   {
     "artist": "Stephanie Struijk",
@@ -36472,7 +36307,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/kai-strauss-the-electric-blues-allstars",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kai-strauss-the-electric-blues-allstars-weert-poppodium-de-bosuil-2027-03-19-Cf6cWzMrWEfD4ogL2ogfi"
   },
   {
@@ -37041,6 +36875,16 @@
     "firstFound": 0
   },
   {
+    "artist": "Ian Paice & Purpendicular",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ian-paice-purpendicular"
+  },
+  {
     "artist": "Luicidal",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -37074,17 +36918,6 @@
     "url": "https://poppodiumboerderij.nl/programma/thedutchqueen/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dutch-queen-zoetermeer-poppodium-boerderij-2027-03-26-CZhusNwmW386W7fA7kFJQ"
-  },
-  {
-    "artist": "Roundabouts",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2027-03-26",
-    "time": "22:15",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/roundabouts",
-    "firstFound": 0
   },
   {
     "artist": "Job Dutchtuber & Billy The Kit",
@@ -37221,8 +37054,7 @@
     "date": "2027-03-27",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/ultimate-eagles-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/ultimate-eagles-2027"
   },
   {
     "artist": "Physical Graffiti performing Led Zeppelin",
@@ -37714,8 +37546,7 @@
     "date": "2027-04-02",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/the-crazy-world-of-arthur-brown",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/the-crazy-world-of-arthur-brown"
   },
   {
     "artist": "Buster Shuffle + Antillectual",
@@ -37936,8 +37767,7 @@
     "date": "2027-04-03",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/kraak-smaak",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/kraak-smaak"
   },
   {
     "artist": "Modder + Lintworm",
@@ -37992,8 +37822,7 @@
     "date": "2027-04-03",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/mostly-autumn-2",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/mostly-autumn-2"
   },
   {
     "artist": "Politie Warnsveld",
@@ -38028,8 +37857,7 @@
     "date": "2027-04-04",
     "time": "15:00",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/forever-nu",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/forever-nu"
   },
   {
     "artist": "The Real McKenzies",
@@ -38269,7 +38097,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/forever-nu-chop-suey-slipnot-blimp-bizkit-lp-tribute-uk",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/forever-nu-chop-suey-slipnot-blimp-bizkit-lp-tribute-uk-dordrecht-bibelot-poppodium-2027-04-08-Ce3iLgFNtytrCWnETYU8U"
   },
   {
@@ -38440,8 +38267,7 @@
     "date": "2027-04-09",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/blackbird",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/blackbird"
   },
   {
     "artist": "Jools Holland and his Rhythm and Blues Orchestra",
@@ -38601,8 +38427,7 @@
     "date": "2027-04-10",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/acindc-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/acindc-2027"
   },
   {
     "artist": "Extince",
@@ -38659,7 +38484,6 @@
     "time": "21:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/voltage",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/voltage-dordrecht-bibelot-poppodium-2027-04-10-CcZE2SCgnN3GQnLhKisbU"
   },
   {
@@ -39001,8 +38825,7 @@
     "date": "2027-04-15",
     "time": "20:30",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/albertacross-thehickeyunderworld",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/albertacross-thehickeyunderworld"
   },
   {
     "artist": "Jim Gardner",
@@ -39208,8 +39031,7 @@
     "date": "2027-04-16",
     "time": "21:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/walkingtheline-defamericans",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/walkingtheline-defamericans"
   },
   {
     "artist": "Roadburn 2027",
@@ -39290,7 +39112,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/plackband-for-absent-friends",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/plackband-for-absent-friends-dordrecht-bibelot-poppodium-2027-04-17-CeWDd5N6p6z1UPEEpwBLz"
   },
   {
@@ -39626,8 +39447,7 @@
     "date": "2027-04-22",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/wishbone-ash",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/wishbone-ash"
   },
   {
     "artist": "Zoë Livay",
@@ -39869,8 +39689,7 @@
     "date": "2027-04-24",
     "time": "19:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/pulverize-metalfest-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/pulverize-metalfest-2027"
   },
   {
     "artist": "An Evening With The Pineapple Thief Far and wide - European tour 2027",
@@ -39971,8 +39790,7 @@
     "date": "2027-04-25",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/status-quotes",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/status-quotes"
   },
   {
     "artist": "New Wave - All Stars",
@@ -40262,7 +40080,6 @@
     "time": "20:15",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/michael-jackson-project-ft-jared-grant",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/michael-jackson-project-ft-jared-grant-dordrecht-bibelot-poppodium-2027-04-30-CZaLdJUNgqG6G1ZfYTcKR"
   },
   {
@@ -40489,8 +40306,7 @@
     "date": "2027-05-06",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/first-time-flyers-uk",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/first-time-flyers-uk"
   },
   {
     "artist": "B-Brave in AFAS Live",
@@ -40535,7 +40351,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/gosse-bosma-release-show-zoekhetuitman-asbest",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gosse-bosma-release-show-zoekhetuitman-asbest-dordrecht-bibelot-poppodium-2027-05-07-CfahEJNYBsZD1fMTMxcPW"
   },
   {
@@ -41027,7 +40842,6 @@
     "time": "21:15",
     "source": "De Bosuil",
     "url": "https://www.debosuil.nl/programma/saga",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/saga-weert-poppodium-de-bosuil-2027-05-14-Cf6cXCYLVHsMtby3xu7rd"
   },
   {
@@ -41340,8 +41154,7 @@
     "date": "2027-05-22",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/julian-sas-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/julian-sas-2027"
   },
   {
     "artist": "StillMarillion",
@@ -41386,8 +41199,7 @@
     "date": "2027-05-23",
     "time": "16:15",
     "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/the-animals-friends",
-    "firstFound": 0
+    "url": "https://www.debosuil.nl/programma/the-animals-friends"
   },
   {
     "artist": "Beste Zangers Live",
@@ -41605,7 +41417,6 @@
     "time": "20:30",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/massada-hans-dulfer",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/massada-hans-dulfer-dordrecht-bibelot-poppodium-2027-05-29-CcrFVjPUjk1hrWjp8pkHk"
   },
   {
@@ -41880,8 +41691,7 @@
     "date": "2027-06-10",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/wende",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/wende"
   },
   {
     "artist": "CineMusic Filmorkest - 20 Films Live in Concert",
@@ -42132,7 +41942,6 @@
     "time": "20:45",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/bob-marley-tribute-by-rootsriders-exodus50",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bob-marley-tribute-by-rootsriders-exodus50-dordrecht-bibelot-poppodium-2027-06-25-CbD1QLvVvoWkKfJH92kdY"
   },
   {
@@ -42155,8 +41964,7 @@
     "date": "2027-06-26",
     "time": "20:30",
     "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/stillmarillion-2027",
-    "firstFound": 0
+    "url": "https://www.livepul.com/agenda/stillmarillion-2027"
   },
   {
     "artist": "The Royal Dutch Scam Do It Again: the Best of Steely Dan",
@@ -42642,8 +42450,7 @@
     "date": "2027-09-11",
     "time": "20:00",
     "source": "Bibelot",
-    "url": "https://bibelot.net/programma/donnas-hot-stuff",
-    "firstFound": 0
+    "url": "https://bibelot.net/programma/donnas-hot-stuff"
   },
   {
     "artist": "Gilbert O’Sullivan",
@@ -42972,7 +42779,6 @@
     "time": "20:00",
     "source": "Bibelot",
     "url": "https://bibelot.net/programma/u2two-3",
-    "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/u2two-dordrecht-bibelot-poppodium-2027-10-22-CdGGqFaupbNC8ZSy4smKg"
   },
   {
