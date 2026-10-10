@@ -29,26 +29,35 @@ internal object TicketSwapSearch {
             .toSet()
 
     internal fun exactMatch(concert: Concert, candidate: String): Boolean {
-        if (!candidate.startsWith("https://www.ticketswap.", ignoreCase = true) &&
-            !candidate.startsWith("https://ticketswap.", ignoreCase = true)) return false
-        if (!candidate.contains("/concert-tickets/")) return false
-        if (!Regex("""20\d\d-\d\d-\d\d""").matches(concert.date)) return false
-        if (!candidate.contains("-" + concert.date + "-", ignoreCase = true)) return false
-        val slug = candidate.substringBefore("?").substringAfterLast("/")
-        val words = tokens(slug)
-        val artist = tokens(concert.artist)
-        if (artist.isEmpty()) return false
-        if (artist.intersect(words).size < maxOf(1, (artist.size + 1) / 2)) return false
+        val uri = try { java.net.URI(candidate.trim()) } catch (_: Exception) { return false }
+        if (uri.scheme != "https" || uri.host?.lowercase(Locale.ROOT) !in setOf(
+                "www.ticketswap.nl", "ticketswap.nl", "www.ticketswap.com", "ticketswap.com"
+            )) return false
+        val path = uri.path ?: return false
+        if (!path.startsWith("/concert-tickets/")) return false
+        val slug = path.removePrefix("/concert-tickets/")
+        if (slug.isBlank() || slug.contains('/')) return false
+        val date = Regex("""-(20\d{2}-\d{2}-\d{2})-[A-Za-z0-9]+$""")
+            .find(slug)?.groupValues?.get(1) ?: return false
+        if (date != concert.date) return false
+
+        val candidateWords = tokens(slug)
+        val artistWords = tokens(concert.artist)
+        if (artistWords.isEmpty()) return false
+        // Avoid a wrong artist at the same venue on the same night:
+        // require all artist terms for short names, nearly all for long names.
+        val required = if (artistWords.size <= 4) artistWords.size else artistWords.size - 1
+        if ((artistWords intersect candidateWords).size < required) return false
         val cityAlternatives = when (concert.city.lowercase(Locale.ROOT)) {
-            "den haag", "'s-gravenhage", "s-gravenhage" -> setOf("the", "hague")
+            "den haag", "'s-gravenhage", "s-gravenhage" -> setOf("hague", "gravenhage")
             "antwerpen" -> setOf("antwerp")
             "brussel", "bruxelles" -> setOf("brussels")
             "gent" -> setOf("ghent")
             else -> emptySet()
         }
-        return tokens(concert.city).intersect(words).isNotEmpty() ||
-            cityAlternatives.intersect(words).isNotEmpty() ||
-            tokens(concert.venue).intersect(words).isNotEmpty()
+        return (tokens(concert.city) intersect candidateWords).isNotEmpty() ||
+            (cityAlternatives intersect candidateWords).isNotEmpty() ||
+            (tokens(concert.venue) intersect candidateWords).isNotEmpty()
     }
 
     suspend fun find(concert: Concert): String? = withContext(Dispatchers.IO) {

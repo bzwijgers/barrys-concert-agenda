@@ -10,7 +10,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.barrysconcertagenda.preview"
+        applicationId = "com.example.barrysconcertagenda.backstage"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -23,7 +23,7 @@ android {
         // Preview has a permanently separate applicationId in defaultConfig,
         // including release builds. Never share V1's package identity.
         debug {
-            versionNameSuffix = "-v2-preview"
+            versionNameSuffix = "-v3-backstage"
         }
         release {
             optimization {

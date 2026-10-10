@@ -1,10 +1,10 @@
-name: Android build (V2 preview)
+name: Android build (Backstage V3)
 
 on:
   push:
     branches:
       - main
-      - preview/agenda-v2
+      - preview/backstage-v3
     paths:
       - "app/**"
       - "build.gradle.kts"
@@ -17,6 +17,12 @@ on:
 
 permissions:
   contents: read
+
+# Debug signing must be stable across runs. Without this, Android refuses
+# upgrades and V3 users risk losing locally saved favorites and tickets.
+concurrency:
+  group: backstage-v3-signing-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -33,6 +39,22 @@ jobs:
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
+
+      - name: Restore V3 debug signing key
+        id: signing-cache
+        if: github.ref == 'refs/heads/preview/backstage-v3'
+        uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: backstage-v3-debug-keystore-v1
+
+      - name: Confirm signing-key cache state
+        if: github.ref == 'refs/heads/preview/backstage-v3'
+        run: |
+          echo "V3 signing cache restored: ${{ steps.signing-cache.outputs.cache-hit }}"
+          if [ "${{ steps.signing-cache.outputs.cache-hit }}" = "true" ]; then
+            test -s "$HOME/.android/debug.keystore"
+          fi
 
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
@@ -51,6 +73,21 @@ jobs:
           set -o pipefail
           ./gradlew --no-daemon --stacktrace :app:testDebugUnitTest :app:assembleDebug 2>&1 | tee android-build.log
 
+      - name: Test and audit TicketSwap links (read-only)
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 -m unittest audit.test_audit_ticketswap_v3
+          python3 audit/audit_ticketswap_v3.py 2>&1 | tee v3-ticketswap-audit.log
+
+      - name: Upload TicketSwap audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v3-ticketswap-audit
+          path: v3-ticketswap-audit.log
+          if-no-files-found: warn
+
       - name: Assert APK cannot replace V1 app
         shell: bash
         run: |
@@ -58,8 +95,24 @@ jobs:
           AAPT=$(find "$ANDROID_HOME/build-tools" -mindepth 2 -maxdepth 2 -name aapt -type f | sort -V | tail -1)
           test -n "$AAPT"
           ACTUAL=$("$AAPT" dump badging app/build/outputs/apk/debug/app-debug.apk | sed -n "s/^package: name='\\([^']*\\)'.*/\\1/p")
-          echo "Built preview package ID: $ACTUAL"
-          test "$ACTUAL" = "com.example.barrysconcertagenda.preview"
+          echo "Built Backstage V3 package ID: $ACTUAL"
+          test "$ACTUAL" = "com.example.barrysconcertagenda.backstage"
+
+      - name: Record APK signing certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          APKSIGNER=$(find "$ANDROID_HOME/build-tools" -mindepth 2 -maxdepth 2 -name apksigner -type f | sort -V | tail -1)
+          test -n "$APKSIGNER"
+          "$APKSIGNER" verify --print-certs app/build/outputs/apk/debug/app-debug.apk | tee backstage-v3-signing.txt
+
+      - name: Upload signing details
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backstage-v3-signing
+          path: backstage-v3-signing.txt
+          if-no-files-found: warn
 
       - name: Upload build diagnostics
         if: always()
@@ -73,6 +126,6 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: barrys-concert-agenda-v2-preview-debug
+          name: barrys-backstage-v3-debug
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
