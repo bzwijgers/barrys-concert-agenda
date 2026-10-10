@@ -15,6 +15,7 @@ from scrapers.ticketswap import enrich_ticketswap_urls
 from scrapers.new_venues import scrape_new_venues
 from scrapers.bird import scrape_bird
 from scrapers.ticketmaster_nl import scrape_ticketmaster_nl, merge_ticketmaster
+from scrapers.ticketmaster_be import scrape_ticketmaster_be
 from scrapers.feed_quality import deduplicate_performances, is_known_nonconcert, retain_upcoming
 from scrapers.discovery import attach_first_found
 from scrapers.podiuminfo_venues import scrape_podiuminfo_venues
@@ -278,6 +279,25 @@ except Exception as error:
     print("TICKETMASTER NL OVERGESLAGEN:", type(error).__name__,
           "HTTP", getattr(error, "code", ""), flush=True)
 
+# ============================================================
+# TICKETMASTER BELGIE - OFFICIELE DISCOVERY API
+# ============================================================
+# The same secret is used for BE, with BE country validation and
+# cross-source deduplication. API failures must not interrupt NL.
+try:
+    belgian_shows = scrape_ticketmaster_be()
+    belgian_unique, belgian_duplicates = merge_ticketmaster(
+        all_concerts, belgian_shows
+    )
+    all_concerts.extend(belgian_unique)
+    print("Ticketmaster BE nieuw:", len(belgian_unique),
+          "dubbelen:", belgian_duplicates, flush=True)
+except Exception as error:
+    # The API request contains the key; never print raw exception URLs.
+    print("TICKETMASTER BE OVERGESLAGEN:", type(error).__name__,
+          "HTTP", getattr(error, "code", ""), flush=True)
+
+# ============================================================
 # ============================================================
 # VERLOPEN CONCERTEN VERWIJDEREN - NL LOKALE DATUM
 # ============================================================
