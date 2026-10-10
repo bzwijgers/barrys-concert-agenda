@@ -5124,6 +5124,17 @@
     "firstFound": 1791588107075
   },
   {
+    "artist": "Flowers for the Dead + The Sewing Club",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-22",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/flowers-dead-sewing-club",
+    "firstFound": 0
+  },
+  {
     "artist": "Arkayla",
     "venue": "Merleyn",
     "city": "Nijmegen",
@@ -5489,17 +5500,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Flowers for the Dead + The Sewing Club",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/flowers-dead-sewing-club",
-    "firstFound": 0
-  },
-  {
     "artist": "Honey I'm Home + RONKER",
     "venue": "Gebouw-T",
     "city": "Bergen op Zoom",
@@ -5636,6 +5636,18 @@
     "url": "https://www.ticketmaster.nl/event/paardenrave-tickets/1641892867?language=en-us",
     "firstFound": 1791588107075,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/paardenrave-amsterdam-ann-club-annie-2026-10-22-CfmSdEKthCU3gLMqc1bxx"
+  },
+  {
+    "artist": "Rolf Sanchez",
+    "venue": "Grote zaal",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2026-10-23",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/rolf-sanchez",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/de-rolf-sanchez-club-eindhoven-effenaar-2026-10-23-CfJocLBCAEXovbhZzweqs"
   },
   {
     "artist": "Kruidkoek & Joost Oomen",
@@ -6068,18 +6080,6 @@
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/voorronde-grote-prijs-breda/",
     "firstFound": 0
-  },
-  {
-    "artist": "Rolf Sanchez",
-    "venue": "Grote zaal",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "20:15",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/rolf-sanchez",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/de-rolf-sanchez-club-eindhoven-effenaar-2026-10-23-CfJocLBCAEXovbhZzweqs"
   },
   {
     "artist": "ACinDC",
@@ -15753,6 +15753,17 @@
     "firstFound": 0
   },
   {
+    "artist": "VroegZat",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-11-14",
+    "time": "19:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/vroegzat-14nov",
+    "firstFound": 1791629370895
+  },
+  {
     "artist": "80's Verantwoord",
     "venue": "MEZZ",
     "city": "Breda",
@@ -22624,6 +22635,18 @@
     "firstFound": 1791628425341
   },
   {
+    "artist": "Nieve Ella",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-30",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/nieve-ella-30-11-2026/",
+    "firstFound": 1791629370895,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/nieve-ella-amsterdam-melkweg-2026-11-30-CdVuQG5r6JXWGTZ2f1Rw7"
+  },
+  {
     "artist": "Paris Paloma",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -26925,6 +26948,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jack-and-the-weatherman-utrecht-tivolivredenburg-2026-12-12-CYLnrs9WA7CUnanneBQz9"
   },
   {
+    "artist": "Music Lab - Meervaart Studio x Melkweg",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-12-12",
+    "time": "19:30",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/music-lab-meervaart-studio-x-melkweg-tickets/318569237?language=en-us",
+    "firstFound": 1791629370895
+  },
+  {
     "artist": "Romy Liz Rose + Levi Boon",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
@@ -27064,17 +27098,6 @@
     "url": "https://www.spotgroningen.nl/programma/hiigo-2",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hiigo-groningen-spot-de-oosterpoort-2026-12-12-CXf2YbLyYZRZsDkjstxn4"
-  },
-  {
-    "artist": "Music Lab - Meervaart Studio x Melkweg",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-12",
-    "time": "20:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/music-lab-meervaart-studio-x-melkweg-12-12-2026/",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Muziekfeest van het Jaar",
@@ -33099,9 +33122,9 @@
     "country": "NL",
     "date": "2027-01-29",
     "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/mico-29-01-2027/",
-    "firstFound": 1791588107075
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/mico-tickets/1002225085?language=en-us",
+    "firstFound": 1791629370895
   },
   {
     "artist": "Orden Ogan + Ensiferum + Angus McSix",
@@ -43780,17 +43803,6 @@
     "source": "Ticketmaster BE",
     "url": "https://www.ticketmaster.be/event/ry-x-dusk-tour-tickets/408717139",
     "firstFound": 1791628425341
-  },
-  {
-    "artist": "Nieve Ella",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-04-09",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/nieve-ella-09-04-2027/",
-    "firstFound": 1791588107075
   },
   {
     "artist": "The Toy Dolls",
