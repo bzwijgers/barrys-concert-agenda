@@ -15,6 +15,7 @@ data class SourceConcert(
     val source: String,
     val url: String,
     val ticketSwapUrl: String = "",
+    val firstFound: Long = 0L,
     val clubCard: Boolean = false
 )
 
@@ -128,6 +129,8 @@ object ConcertRepository {
                             "ticketSwapUrl",
                             ""
                         ),
+                    firstFound =
+                        item.optLong("firstFound", 0L).coerceAtLeast(0L),
                     clubCard =
                         item.optBoolean(
                             "clubCard",
