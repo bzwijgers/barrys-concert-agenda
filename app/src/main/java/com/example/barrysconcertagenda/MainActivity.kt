@@ -680,6 +680,25 @@ fun ConcertApp() {
                 BelgiumFlag()
             }
 
+            if (selectedTab != 6 && hasSearchCriteria) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        "Zoekfilter actief",
+                        modifier = Modifier.weight(1f),
+                        style = MaterialTheme.typography.labelMedium
+                    )
+                    TextButton(onClick = {
+                        searchQuery = ""
+                        searchDateFrom = null
+                        searchDateTo = null
+                        searchVenue = null
+                    }) { Text("Wis filters") }
+                }
+            }
+
             if (selectedTab == 6) {
                 OutlinedTextField(
                     value = searchQuery,
