@@ -873,18 +873,33 @@ fun ConcertApp() {
                                         "Rotown" to "Rotterdam", "SPOT Groningen" to "Groningen",
                                         "TivoliVredenburg" to "Utrecht", "Tolhuistuin" to "Amsterdam"
                                     )
-                                    val pendingVenues = emptySet<String>()
-                                    venueCities.keys.sortedWith(String.CASE_INSENSITIVE_ORDER).forEach { mainVenue ->
-                                        val subVenues = concerts
-                                            .filter { it.source.equals(mainVenue, ignoreCase = true) }
+                                    // Automatically include sources actually present in the feed.
+                                    // Ticketmaster is a national source, not a separate concert hall.
+                                    val observedSources = concerts
+                                        .map { it.source.trim() }
+                                        .filter { it.isNotBlank() && !it.equals("Ticketmaster NL", ignoreCase = true) }
+                                        .distinct()
+                                    val listedVenues = (venueCities.keys + observedSources)
+                                        .distinct()
+                                        .sortedWith(String.CASE_INSENSITIVE_ORDER)
+                                    listedVenues.forEach { mainVenue ->
+                                        val sourceShows = concerts.filter {
+                                            it.source.equals(mainVenue, ignoreCase = true)
+                                        }
+                                        val city = venueCities[mainVenue]
+                                            ?: sourceShows.map { it.city.trim() }
+                                                .filter { it.isNotBlank() }
+                                                .distinct()
+                                                .sortedWith(String.CASE_INSENSITIVE_ORDER)
+                                                .joinToString(" / ")
+                                        val subVenues = sourceShows
                                             .map { it.venue.trim() }
                                             .filter { it.isNotBlank() && !it.equals(mainVenue, ignoreCase = true) }
                                             .distinct()
                                             .sortedWith(String.CASE_INSENSITIVE_ORDER)
                                         Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                                             Text(
-                                                mainVenue + " — " + venueCities.getValue(mainVenue) +
-                                                    if (mainVenue in pendingVenues) " (in voorbereiding)" else "",
+                                                mainVenue + if (city.isNotBlank()) " — " + city else "",
                                                 fontWeight = FontWeight.Bold,
                                                 fontSize = 16.sp
                                             )
@@ -896,6 +911,8 @@ fun ConcertApp() {
                                             }
                                         }
                                     }
+                                    Text("Aanvullende landelijke bron", fontWeight = FontWeight.Bold)
+                                    Text("Ticketmaster Nederland — concerten in Nederlandse zalen en festivals. Dubbele vermeldingen met bestaande concertzalen worden zoveel mogelijk verwijderd; officiële zaalvermeldingen krijgen voorrang.")
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
                                     Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
