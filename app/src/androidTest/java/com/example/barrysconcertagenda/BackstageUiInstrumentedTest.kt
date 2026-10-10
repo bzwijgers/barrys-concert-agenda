@@ -147,6 +147,11 @@ class BackstageNavigationUiTest {
         // Home and Discover are intentionally plain, not photo-backed.
         compose.onNodeWithTag("backstage-fullscreen-start-photo").assertDoesNotExist()
         compose.onNodeWithContentDescription("Ontdek").performClick()
+        compose.waitUntil(timeoutMillis = 60_000) {
+            compose.onAllNodesWithText("Ontdek").fetchSemanticsNodes().isNotEmpty() &&
+                compose.onAllNodesWithText("Concerten controleren...")
+                    .fetchSemanticsNodes().isEmpty()
+        }
         compose.onNodeWithTag("backstage-fullscreen-start-photo").assertDoesNotExist()
         captureAppScreen("discover")
         // In V3 the photo is shown only underneath Info, edge-to-edge,
