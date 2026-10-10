@@ -70,6 +70,33 @@ jobs:
               raise SystemExit(f"Paradiso live parser regression: {actual!r} != {expected!r}")
           PY
 
+      - name: Check Ticketmaster API availability
+        id: ticketmaster_check
+        continue-on-error: true
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import date
+          from scrapers.ticketmaster_nl import _get_json, MUSIC_SEGMENT
+          key = os.getenv("TICKETMASTER_API_KEY", "").strip()
+          if not key:
+              raise SystemExit("TICKETMASTER CHECK FAILED: secret absent or empty")
+          try:
+              payload = _get_json({
+                  "countryCode": "NL", "segmentId": MUSIC_SEGMENT,
+                  "size": 1, "sort": "date,asc",
+                  "startDateTime": date.today().isoformat() + "T00:00:00Z",
+              }, key)
+          except Exception as exc:
+              raise SystemExit("TICKETMASTER CHECK FAILED: " + type(exc).__name__ + " " + str(exc))
+          total = (payload.get("page") or {}).get("totalElements")
+          print("TICKETMASTER CHECK OK: Dutch music events available:", total)
+          if not isinstance(total, int):
+              raise SystemExit("TICKETMASTER CHECK FAILED: no valid page count")
+          PY
+
       - name: Run concert scraper
         id: scrape
         env:
