@@ -682,8 +682,9 @@ fun ConcertApp() {
                     selected = selectedTab == 11 && mySection == 3,
                     onClick = { mySection = 3; selectedTab = 11 },
                     colors = navigationColors,
-                    icon = { Text("🎟", fontSize = 23.sp,
-                        modifier = Modifier.semantics { contentDescription = "Mijn tickets" }) }
+                    icon = { Box(modifier = Modifier.semantics { contentDescription = "Mijn tickets" }) {
+                        TicketStatusIcon(display = TicketDisplay.OWNED)
+                    } }
                 )
                 NavigationBarItem(
                     selected = selectedTab == 11 && mySection == 2,
@@ -972,7 +973,7 @@ fun ConcertApp() {
                                         fontSize = 27.sp)
                                     BackstageChips(
                                         options = listOf(
-                                            "3" to "🎟 Tickets",
+                                            "3" to "Tickets",
                                             "2" to "♥ Favorieten",
                                             "5" to "▤ Archief"
                                         ),
@@ -1257,7 +1258,7 @@ fun ConcertApp() {
                                         }
                                     }
                                     Text("Betekenis iconen", fontWeight = FontWeight.Bold)
-                                    Text("♥ Favoriet   ·   🎟 Tickets   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
+                                    Text("♥ Favoriet   ·   Tickets (groen kaartje)   ·   ♣ Rotown Clubkaart   ·   ⌕ Zoeken")
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
                                     Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via de onderstreepte artiestennaam open je de betreffende evenementpagina.")
                                     Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall,
