@@ -82,11 +82,10 @@ except Exception as error:
 # 013 TILBURG
 # ============================================================
 # 013 sometimes sends GitHub's IP a CAPTCHA instead of event details.
-# Do not bypass or solve that challenge. Only for a *confirmed* bot block:
-# keep the previous, already verified FUTURE 013 listings so a temporary
-# block does not stop updates from 28 other sources. No concert is marked
-# new again; cached dates/times and ticket URLs are preserved.
-# Other 013 parse/completeness failures still STOP all publication.
+# Never bypass a CAPTCHA. For either bot blocking or a too-small
+# programme, preserve verified FUTURE 013 listings from the last feed.
+# If the fallback is too small, stop publication rather than lose 013.
+# Cached timestamps and ticket links are preserved.
 try:
     source013_concerts = scrape_013()
 except (Source013Blocked, RuntimeError) as error:
