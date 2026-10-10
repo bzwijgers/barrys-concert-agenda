@@ -82,24 +82,37 @@ except Exception as error:
 # 013
 # ============================================================
 #
-# LET OP:
-# 013 is bewust NIET omgeven door try/except.
-#
-# scrape_013() bevat een beveiliging:
-# - minder dan 25 programma-links -> STOP
-# - minder dan 25 verwerkte concerten -> STOP
-#
-# Daardoor wordt concerts.json NIET overschreven
-# wanneer de 013-scraper opnieuw stukloopt.
+# When 013 temporarily returns an empty programme, retain the last
+# published FUTURE concerts for that source. Never publish a zero-013 feed.
+# A temporary source outage must not block updates from other venues.
 # ============================================================
 
-source013_concerts = (
-    scrape_013()
-)
+try:
+    source013_concerts = scrape_013()
+except Exception as error:
+    print("013 LIVE SCRAPE MISLUKT:", str(error), flush=True)
+    try:
+        with open("concerts.json", encoding="utf-8") as f:
+            previous_013_feed = json.load(f)
+        if not isinstance(previous_013_feed, list):
+            raise ValueError("Previous feed is not a list")
+        from zoneinfo import ZoneInfo
+        today_013 = datetime.now(ZoneInfo("Europe/Amsterdam")).date().isoformat()
+        source013_concerts = [
+            dict(event) for event in previous_013_feed
+            if isinstance(event, dict) and event.get("source") == "013"
+            and event.get("date", "") >= today_013
+        ]
+        if len(source013_concerts) < 25:
+            raise RuntimeError("Insufficient previously verified 013 events")
+        print("013 FALLBACK: behoud", len(source013_concerts),
+              "bestaande toekomstige concerten; LIVE BRON NIET ACTUEEL", flush=True)
+    except Exception as fallback_error:
+        raise RuntimeError(
+            "013 live en bestaande feed onbruikbaar; publicatie gestopt"
+        ) from fallback_error
 
-all_concerts.extend(
-    source013_concerts
-)
+all_concerts.extend(source013_concerts)
 
 
 # ============================================================
@@ -246,6 +259,8 @@ except Exception as error:
 # The API key is a GitHub secret; no direct website scraping is performed.
 try:
     ticketmaster_shows = scrape_ticketmaster_nl()
+    if not ticketmaster_shows:
+        print("TICKETMASTER WAARSCHUWING: 0 concerten ontvangen; controleer API secret en toegang.", flush=True)
     ticketmaster_unique, ticketmaster_duplicates = merge_ticketmaster(
         all_concerts, ticketmaster_shows
     )
@@ -331,6 +346,10 @@ try:
 except (OSError, ValueError, TypeError):
     previously_seen = []
 attach_first_found(all_concerts, previously_seen, int(datetime.now().timestamp() * 1000))
+# Every published item must carry an integer firstFound. Missing fields
+# would otherwise cause legacy events to be misclassified on Android.
+if any(type(event.get("firstFound")) is not int for event in all_concerts):
+    raise RuntimeError("Missing/invalid firstFound in generated concert feed")
 
 # ============================================================
 # TICKETSWAP - ALLEEN EXACTE EVENTLINKS
