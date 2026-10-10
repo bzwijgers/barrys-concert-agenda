@@ -35358,17 +35358,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Politie Warnsveld",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-03-12",
-    "time": "",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/politie-warnsveld",
-    "firstFound": 0
-  },
-  {
     "artist": "Heideroosjes",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -35517,6 +35506,17 @@
     "url": "https://poppodiumboerderij.nl/programma/forq/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/forq-zoetermeer-poppodium-boerderij-2027-03-12-CfkAqJCmaGfCtvTxhbFvM"
+  },
+  {
+    "artist": "Politie Warnsveld",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "20:30",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/politie-warnsveld",
+    "firstFound": 0
   },
   {
     "artist": "Scrum",
@@ -37053,6 +37053,17 @@
     "url": "https://www.paradiso.nl/nl/programma/dubioza-kolektiv/2908030",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dubioza-kolektiv-amsterdam-paradiso-2027-03-26-CcPYwD3x7MwZkevFArFZv",
     "firstFound": 0
+  },
+  {
+    "artist": "Ian Paice & Purpendicular",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ian-paice-purpendicular",
+    "firstFound": 1791628009733
   },
   {
     "artist": "Luicidal",
