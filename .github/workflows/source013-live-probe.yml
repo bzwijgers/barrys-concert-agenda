@@ -1,0 +1,49 @@
+name: Investigate 013 Tilburg source
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/source013-live-probe.yml"
+      - "scrapers/source013.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe-013:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inspect official 013 programme responses
+        run: |
+          python - <<'PY'
+          from urllib.parse import urlparse
+          import re
+          from scrapers.source013 import source013_find_program_urls
+          from scrapers.common import download_page_retry
+          sites = [
+              "https://www.013.nl/programma",
+              "https://www.013.nl/programma?view=all",
+              "https://www.013.nl/programma?_concert_retry=1",
+              "https://www.013.nl/programma/130852/heres-the-thing",
+          ]
+          for url in sites:
+              try:
+                  page = download_page_retry(url, attempts=2)
+              except Exception as exc:
+                  print("FETCH ERROR", url, type(exc).__name__, str(exc)[:140], flush=True)
+                  continue
+              links = source013_find_program_urls(page)
+              print("013 response", url, "bytes", len(page),
+                    "found event links", len(links),
+                    "direct url path strings", len(re.findall(r"/programma/\d+/", page)),
+                    "blocked markers", [s for s in ("challenge", "captcha", "access denied", "just a moment")
+                                       if s in page[:10000].casefold()],
+                    "sample", links[:3], flush=True)
+              print("HTML SAMPLE", re.sub(r"\s+", " ", page[:550])[:430], flush=True)
+          PY
