@@ -100,7 +100,8 @@ except Source013Blocked as error:
     except (OSError, ValueError, TypeError) as file_error:
         raise RuntimeError("013 geblokkeerd en geen verifieerbare oude concertfeed") from file_error
 
-    today_for_fallback = datetime.now().date().isoformat()
+    from zoneinfo import ZoneInfo
+    today_for_fallback = datetime.now(ZoneInfo("Europe/Amsterdam")).date().isoformat()
     source013_concerts = [
         item for item in verified_previous
         if isinstance(item, dict) and item.get("source") == "013"
