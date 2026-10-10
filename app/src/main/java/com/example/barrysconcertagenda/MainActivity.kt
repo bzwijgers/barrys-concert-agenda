@@ -295,8 +295,14 @@ fun ConcertApp() {
                         old?.ticketSwapUrl?.takeIf { it.isNotBlank() }
                             ?: source.ticketSwapUrl,
                     firstFound =
-                        old?.firstFound
-                            ?: now,
+                        when {
+                            source.firstFound > 0L &&
+                                (old == null || old.firstFound <= 0L) -> source.firstFound
+                            source.firstFound > 0L && old != null ->
+                                minOf(old.firstFound, source.firstFound)
+                            old != null -> old.firstFound
+                            else -> 0L
+                        },
                     isFavorite =
                         old?.isFavorite
                             ?: false,
