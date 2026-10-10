@@ -38,6 +38,8 @@ for item in feed:
     url=item.get("url","")
     day=item.get("date","")
     time=item.get("time","")
+    if type(item.get("firstFound")) is not int or item["firstFound"] < 0:
+        invalid.append(("firstFound", url)); continue
     if not artist or not item.get("city") or not source:
         invalid.append(("missing data",url));continue
     if not re.fullmatch(r"20\d\d-\d\d-\d\d",day) or day<today:
