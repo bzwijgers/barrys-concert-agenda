@@ -1194,7 +1194,6 @@ fun ConcertApp() {
                                     modifier = Modifier.fillMaxWidth(),
                                     verticalArrangement = Arrangement.spacedBy(10.dp)
                                 ) {
-                                    Text("V3 ticket-icoon: groen · controleversie 10-10-B", color = infoTextColor, fontSize = 12.sp)
                                     Text("Over Barry's concert agenda", fontWeight = FontWeight.Bold,
                                         fontSize = 18.sp, color = infoTextColor)
                                     Text("Deze app verzamelt concertagenda's van geselecteerde Nederlandse en Belgische podia in één overzicht.")
@@ -1263,6 +1262,8 @@ fun ConcertApp() {
                                     Text("Bronnen & rechten", fontWeight = FontWeight.Bold)
                                     Text("Concertinformatie blijft eigendom van de betreffende podia, organisatoren en rechthebbenden. Deze app is een persoonlijk hulpmiddel en is niet gelieerd aan of officieel goedgekeurd door de genoemde podia. Via de onderstreepte artiestennaam open je de betreffende evenementpagina.")
                                     Text("Barry's concert agenda", style = MaterialTheme.typography.labelSmall,
+                                        color = infoTextColor)
+                                    Text("Versie V3 · 10-10-2026", style = MaterialTheme.typography.labelSmall,
                                         color = infoTextColor)
                                 }
                                 } // Light-purple Info text directly on photo
