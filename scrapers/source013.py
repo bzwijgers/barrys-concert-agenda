@@ -8,6 +8,20 @@ SOURCE013_URL = "https://www.013.nl/programma"
 SOURCE013_BASE_URL = "https://www.013.nl"
 
 
+class Source013Blocked(RuntimeError):
+    """013 served its bot verification page rather than its programme."""
+
+
+def source013_is_bot_verification(page):
+    # Detection only: never try to solve, bypass or proxy 013's CAPTCHA.
+    prefix = (page or "")[:12000].casefold()
+    return ("bot verification" in prefix
+            or "lsrecaptcha-form" in prefix
+            or ("captcha" in prefix and len(page or "") < 10000
+                and "/programma/" not in prefix))
+
+
+
 def source013_find_program_urls(html):
     cleaned_html = html_module.unescape(
         html
@@ -327,6 +341,9 @@ def scrape_013():
             + str(error)
         )
 
+    if source013_is_bot_verification(program_html):
+        raise Source013Blocked("013 returned its bot-verification page")
+
     program_urls = source013_find_program_urls(program_html)
 
     # 013 levert incidenteel een lege agenda ondanks HTTP 200.
@@ -335,11 +352,15 @@ def scrape_013():
         for suffix in ("?view=all", "?_concert_retry=1", "/?view=all"):
             try:
                 retry_html = download_page_retry(SOURCE013_URL + suffix)
+                if source013_is_bot_verification(retry_html):
+                    raise Source013Blocked("013 returned bot verification on retry")
                 retry_urls = source013_find_program_urls(retry_html)
                 if len(retry_urls) > len(program_urls):
                     program_urls = retry_urls
                 if len(program_urls) >= 25:
                     break
+            except Source013Blocked:
+                raise
             except Exception as error:
                 print("013 agenda retry fout:", str(error))
 
@@ -357,7 +378,15 @@ def scrape_013():
             f"{len(program_urls)} programma-links gevonden."
         )
 
+    # A valid programme landing page can be followed by a CAPTCHA on
+    # detail requests from GitHub runners. Detect this before scheduling
+    # hundreds of detail requests or treating their absence as 0 concerts.
+    probe_page = download_page_retry(program_urls[0], attempts=1)
+    if source013_is_bot_verification(probe_page):
+        raise Source013Blocked("013 served bot verification on event details")
+
     concerts = []
+    blocked_details = 0
     detail_errors = 0
     no_event_data = 0
 
@@ -377,12 +406,16 @@ def scrape_013():
                         event_url
                     )
                 )
+                if source013_is_bot_verification(event_html):
+                    raise Source013Blocked("013 detail shows bot verification")
 
                 return source013_parse_event(
                     event_html,
                     event_url
                 )
 
+            except Source013Blocked:
+                raise
             except Exception as error:
                 last_error = error
 
@@ -430,6 +463,8 @@ def scrape_013():
                 else:
                     no_event_data += 1
 
+            except Source013Blocked:
+                blocked_details += 1
             except Exception as error:
                 detail_errors += 1
 
@@ -484,6 +519,11 @@ def scrape_013():
         "013 detailpagina fouten:",
         detail_errors
     )
+
+    if blocked_details > 0 and (len(concerts) < 25 or blocked_details > total // 3):
+        raise Source013Blocked(
+            f"013 blocked {blocked_details}/{total} detail requests"
+        )
 
     # Tweede beveiliging:
     # ook na het verwerken moet er een realistische
