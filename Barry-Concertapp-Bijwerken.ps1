@@ -19,8 +19,9 @@ if ($branch -ne 'preview/backstage-v3') { Fail "Je zit op branch '$branch', niet
 Write-Host "1/3 Nieuwste V3 ophalen..."
 Run 'git' @('fetch','origin','preview/backstage-v3')
 Run 'git' @('merge','--ff-only','origin/preview/backstage-v3')
+Write-Host ("GitHub V3 revisie: " + ((& git rev-parse --short HEAD).Trim())) -ForegroundColor Cyan
 Write-Host "2/3 Android-app bouwen en installeren..."
-Run '.\gradlew.bat' @('installDebug')
+Run '.\gradlew.bat' @('--no-build-cache','installDebug')
 Write-Host "3/3 App starten..."
 # Prefer the standard Android Studio SDK. A malformed local.properties
 # path must never turn a successful installation into a script failure.
@@ -46,4 +47,4 @@ if ($adbExe) {
 } else {
   Write-Host "Geinstalleerd. ADB niet gevonden; open de app op je telefoon." -ForegroundColor Yellow
 }
-Write-Host "GEREED: de nieuwste Backstage V3 staat op je Samsung." -ForegroundColor Green
+Write-Host ("GEREED: Backstage V3 revisie " + ((& git rev-parse --short HEAD).Trim()) + " is op je Samsung geinstalleerd.") -ForegroundColor Green
