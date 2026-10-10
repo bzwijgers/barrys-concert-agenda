@@ -244,6 +244,7 @@ jobs:
             "run_id": ${{ github.run_id }},
             "source_commit": "${{ github.sha }}",
             "unit_tests": "${{ steps.unit_tests.outcome }}",
+            "ticketmaster_api": "${{ steps.ticketmaster_check.outcome }}",
             "paradiso_live": "${{ steps.live.outcome }}",
             "full_scrape": "${{ steps.scrape.outcome }}",
             "feed_validation": "${{ steps.verify.outcome }}",
