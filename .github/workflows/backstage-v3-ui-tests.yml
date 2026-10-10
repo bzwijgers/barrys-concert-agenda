@@ -56,43 +56,19 @@ jobs:
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
           script: |
             set -e
-            # Capture the app first; instrumentation can temporarily switch to
-            # the Pixel launcher, which may show a launcher-not-responding dialog
-            # during subsequent screenshot capture on a cold emulator.
-            ./gradlew --no-daemon :app:installDebug
-            adb shell am start -W -n com.example.barrysconcertagenda.backstage/com.example.barrysconcertagenda.MainActivity
-            sleep 5
-            adb shell input tap 540 550
-            sleep 24
-            mkdir -p backstage-v3-screenshots
-            adb shell screencap -p /sdcard/backstage-home.png
-            adb pull /sdcard/backstage-home.png backstage-v3-screenshots/home.png
-            adb shell input tap 270 2200
-            sleep 5
-            adb shell screencap -p /sdcard/backstage-discover.png
-            adb pull /sdcard/backstage-discover.png backstage-v3-screenshots/discover.png
-            adb shell input tap 458 2200
-            sleep 4
-            adb shell screencap -p /sdcard/backstage-agenda.png
-            adb pull /sdcard/backstage-agenda.png backstage-v3-screenshots/agenda.png
-            adb shell input tap 655 2200
-            sleep 3
-            adb shell screencap -p /sdcard/backstage-tickets.png
-            adb pull /sdcard/backstage-tickets.png backstage-v3-screenshots/tickets.png
-            adb shell input tap 843 2200
-            sleep 3
-            adb shell screencap -p /sdcard/backstage-favorites.png
-            adb pull /sdcard/backstage-favorites.png backstage-v3-screenshots/favorites.png
-            adb shell input tap 1014 2200
-            sleep 3
-            adb shell screencap -p /sdcard/backstage-more.png
-            adb pull /sdcard/backstage-more.png backstage-v3-screenshots/more.png
-            adb shell input tap 465 1080
-            sleep 3
-            adb shell screencap -p /sdcard/backstage-info.png
-            adb pull /sdcard/backstage-info.png backstage-v3-screenshots/info.png
-            # Run the full Android device tests after screenshot capture.
+            # The previous adb screenshots accidentally captured a hung Pixel
+            # Launcher, not Barry's app. Instrumentation now saves true Compose
+            # screenshots from the active app's root semantics.
             ./gradlew --no-daemon --stacktrace :app:connectedDebugAndroidTest
+            mkdir -p backstage-v3-screenshots
+            adb pull /sdcard/Android/data/com.example.barrysconcertagenda.backstage/files/v3-screenshots/. backstage-v3-screenshots/
+            # The workflow must fail if it did not actually capture app pages.
+            for screen in home discover agenda tickets favorites more info; do
+              test -s "backstage-v3-screenshots/${screen}.png" || {
+                echo "Missing real Compose screenshot: ${screen}"
+                exit 1
+              }
+            done
 
       - name: Upload Android UI-test results
         if: always()
