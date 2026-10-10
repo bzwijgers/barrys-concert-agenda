@@ -14319,17 +14319,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "305",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2026-11-14",
-    "time": "20:30",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/305-album-release",
-    "firstFound": 0
-  },
-  {
     "artist": "Delany",
     "venue": "BIRD",
     "city": "Rotterdam",
@@ -17250,7 +17239,7 @@
     "date": "2026-11-21",
     "time": "21:00",
     "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-21nov",
+    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-20nov",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-bergen-op-zoom-poppodium-gebouw-t-2026-11-21-CXX4jvQx6xTtsyXJCG1cY"
   },
@@ -35369,6 +35358,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Politie Warnsveld",
+    "venue": "Altstadt",
+    "city": "Eindhoven",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "",
+    "source": "Effenaar",
+    "url": "https://www.effenaar.nl/agenda/politie-warnsveld",
+    "firstFound": 0
+  },
+  {
     "artist": "Heideroosjes",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -35517,17 +35517,6 @@
     "url": "https://poppodiumboerderij.nl/programma/forq/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/forq-zoetermeer-poppodium-boerderij-2027-03-12-CfkAqJCmaGfCtvTxhbFvM"
-  },
-  {
-    "artist": "Politie Warnsveld",
-    "venue": "Altstadt",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-03-12",
-    "time": "20:30",
-    "source": "Effenaar",
-    "url": "https://www.effenaar.nl/agenda/politie-warnsveld",
-    "firstFound": 0
   },
   {
     "artist": "Scrum",
