@@ -3,7 +3,24 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from urllib.parse import urlsplit
+
+
+def retain_upcoming(events, today=None):
+    """Exclude expired shows using the Netherlands' civil date, not UTC.
+
+    A scrape can start shortly before midnight, run over that boundary,
+    and still contain 23:00 concerts from yesterday. Removing them here
+    makes the published feed valid at the moment it finishes.
+    """
+    if today is None:
+        today = datetime.now(ZoneInfo("Europe/Amsterdam")).date().isoformat()
+    active, expired = [], []
+    for concert in events:
+        (active if (concert.get("date") or "") >= today else expired).append(concert)
+    return active, expired
 
 
 def _norm(value):
