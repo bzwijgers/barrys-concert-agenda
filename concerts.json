@@ -1,285 +1,5 @@
 [
   {
-    "artist": "MICHA",
-    "venue": "Hedon",
-    "city": "Zwolle",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "",
-    "source": "Hedon",
-    "url": "https://hedon-zwolle.nl/voorstelling/32909/micha",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/micha-zwolle-hedon-2026-10-09-Cakqs2wk1exiP3yEHLGzC"
-  },
-  {
-    "artist": "Future Palace",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/future-palace-09-10-2026/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/future-palace-amsterdam-melkweg-2026-10-09-CWaVwUKM2UJ7jFcSkv5ZC"
-  },
-  {
-    "artist": "Snelle",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/snelle-09-10-2026/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/snelle-amsterdam-melkweg-2026-10-09-CXMwLxnLkN5oRNBX8jWS8"
-  },
-  {
-    "artist": "Chrissy Chlapecka",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "19:30",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/chrissy-chlapecka-09-10-2026/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/chrissy-chlapecka-amsterdam-melkweg-2026-10-09-CcKkB2ZqGjfJSuqSoSaH5"
-  },
-  {
-    "artist": "Declan Welsh and The Decadent West",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "19:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/declan-welsh-and-the-decadent-west/2881661",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/declan-welsh-and-the-decadent-west-amsterdam-paradiso-2026-10-09-CZsme38PH57fkTekR97Rp"
-  },
-  {
-    "artist": "VroegZat",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "19:30",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/vroegzat-8/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/vroegzat-breda-mezz-2026-10-09-CfTxKAEzwjeU9TX1fqVVh"
-  },
-  {
-    "artist": "ZAKMES – ‘We Are SO Back’ EP Release Party!",
-    "venue": "dB's",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "19:30",
-    "source": "dB's",
-    "url": "https://dbstudio.nl/event/zakmes-zakmes-is-so-back-release-party",
-    "firstFound": 0
-  },
-  {
-    "artist": "IOS - ISOOKSCHITTEREND",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/ios-isookschitterend",
-    "firstFound": 0
-  },
-  {
-    "artist": "Kinkajous",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:00",
-    "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/kinkajous/2867121",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kinkajous-amsterdam-tolhuistuin-2026-10-09-CZRGVWJnrKEHuc26Ycjkc"
-  },
-  {
-    "artist": "Legends of Rock Tribute Tour",
-    "venue": "Gebouw-T",
-    "city": "Bergen op Zoom",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:15",
-    "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/legends-of-rock-tribute-tour-9",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/legends-of-rock-tribute-tour-monsters-of-rock-bergen-op-zoom-poppodium-gebouw-t-2026-10-09-CdGpkqct9oU5iL62kHGKh"
-  },
-  {
-    "artist": "Bare Jams",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:30",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/bare-jams/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bare-jams-breda-mezz-2026-10-09-CZqV1AGrGSqdh6KhiTn5F"
-  },
-  {
-    "artist": "Green Bay",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/green-bay",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/green-bay-dordrecht-bibelot-poppodium-2026-10-09-CZUeqF8rkLFUbQRKqV9TC"
-  },
-  {
-    "artist": "RONDÉ + Melle",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/ronde/2852163",
-    "firstFound": 0
-  },
-  {
-    "artist": "Sari Schorr",
-    "venue": "Boerderij",
-    "city": "Zoetermeer",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:30",
-    "source": "Boerderij",
-    "url": "https://poppodiumboerderij.nl/programma/sarischorr/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sari-schorr-zoetermeer-poppodium-boerderij-2026-10-09-CZ9jG5LqbqaKQt7WK5oZJ"
-  },
-  {
-    "artist": "Sixpence None the Richer + Robert Post, 33rd Assassin",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:30",
-    "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/sixpence-none-the-richer/2779816",
-    "firstFound": 0
-  },
-  {
-    "artist": "Studio Brandstof: The Bane Grams",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/studio-brandstof-the-bane-grams",
-    "firstFound": 0
-  },
-  {
-    "artist": "Beach Boys' Best",
-    "venue": "Neushoorn",
-    "city": "Leeuwarden",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:45",
-    "source": "Neushoorn",
-    "url": "https://www.neushoorn.nl/events/beach-boys-best",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/beach-boys-best-leeuwarden-neushoorn-2026-10-09-CXqziPvUHxwUDhgmvnXFb"
-  },
-  {
-    "artist": "Popronde 2026",
-    "venue": "Neushoorn",
-    "city": "Leeuwarden",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:45",
-    "source": "Neushoorn",
-    "url": "https://www.neushoorn.nl/events/popronde",
-    "firstFound": 0
-  },
-  {
-    "artist": "Zuco 103",
-    "venue": "Neushoorn",
-    "city": "Leeuwarden",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "20:45",
-    "source": "Neushoorn",
-    "url": "https://www.neushoorn.nl/events/zuco-103",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/zuco-103-leeuwarden-neushoorn-2026-10-09-Ca4jtVJC589MrJePycixU"
-  },
-  {
-    "artist": "South Summit",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "22:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/south-summit/2887560",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/south-summit-amsterdam-paradiso-2026-10-09-CaZXckzmVcMgBsfJpaCSX"
-  },
-  {
-    "artist": "ANTHEMS",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "23:30",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/40243494/anthems-09-10-2026/",
-    "firstFound": 0
-  },
-  {
-    "artist": "Fiesta Macumba",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "23:30",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/fiesta-macumba-tickets/1905163414?language=en-us",
-    "firstFound": 1791588107075,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/fiesta-macumba-amsterdam-melkweg-2026-10-09-Cf4mocAdkJ2BS4eySPR7n"
-  },
-  {
-    "artist": "Paardcafé: Me Buurmeisje",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "23:30",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/paardcafe-me-buurmeisje-22/",
-    "firstFound": 0
-  },
-  {
-    "artist": "Terug in de tijd",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-09",
-    "time": "23:59",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/terug-in-de-tijd/2905915",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/terug-in-de-tijd-amsterdam-paradiso-2026-10-09-Cc8QS71mjm27bM9tCxsXM"
-  },
-  {
     "artist": "Soulcrusher",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -287,18 +7,7 @@
     "date": "2026-10-10",
     "time": "",
     "source": "Doornroosje",
-    "url": "https://www.doornroosje.nl/event/soulcrusher-2026",
-    "firstFound": 0
-  },
-  {
-    "artist": "Jesse Hoefnagels",
-    "venue": "Merleyn",
-    "city": "Nijmegen",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "00:00",
-    "source": "Doornroosje",
-    "url": "https://www.doornroosje.nl/event/jesse-hoefnagels",
+    "url": "https://www.doornroosje.nl/event/soulcrusher-2026-1",
     "firstFound": 0
   },
   {
@@ -774,17 +483,6 @@
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/metatron",
     "firstFound": 0
-  },
-  {
-    "artist": "90's NOW",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-10",
-    "time": "23:30",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/90s-now-tickets/1988324913?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Paardcafé: Sonny Burnett",
@@ -1363,17 +1061,6 @@
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/fat-freddys-drop/2654360",
     "firstFound": 0
-  },
-  {
-    "artist": "Cheeky Monday: YAMATAI x STUPID x TRANSPARENT",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-12",
-    "time": "23:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/cheeky-monday-yamatai-x-stupid-x-transparent-tickets/434660971?language=en-us",
-    "firstFound": 1791588107075
   },
   {
     "artist": "Gavin DeGraw",
@@ -2473,18 +2160,6 @@
     "time": "19:20",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/changing-tides",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/changing-tides-eindhoven-dynamo-rock-metal-cafe-2026-10-16-CabYE43w5HzaYHJ9BRqGt"
-  },
-  {
-    "artist": "Changing Tides",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-16",
-    "time": "19:20",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/463612/Changing-Tides/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/changing-tides-eindhoven-dynamo-rock-metal-cafe-2026-10-16-CabYE43w5HzaYHJ9BRqGt"
   },
@@ -4228,18 +3903,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/felukah-amsterdam-paradiso-2026-10-19-Ce9nadpQJoQZ482PPwicX"
   },
   {
-    "artist": "Cheeky Monday: TAMZA",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-19",
-    "time": "23:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/cheeky-monday-tamza-tickets/1577290937?language=en-us",
-    "firstFound": 1791588107075,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/cheeky-monday-tamza-amsterdam-melkweg-2026-10-19-CfG8gvvnwByMUggHeHbpD"
-  },
-  {
     "artist": "DDW: IN THE HEAD OF A YOUNG MIND",
     "venue": "Dynamo",
     "city": "Eindhoven",
@@ -5849,17 +5512,6 @@
     "url": "https://www.neushoorn.nl/events/the-zac-schulze-gang",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-zac-schulze-gang-leeuwarden-neushoorn-2026-10-23-CYEiScHQA6mex798iqQ8L"
-  },
-  {
-    "artist": "90's Now",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "21:00",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/90s-now-23/",
-    "firstFound": 0
   },
   {
     "artist": "Helen Jewett",
@@ -7643,17 +7295,6 @@
     "time": "23:00",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/zinloos-geluid-3",
-    "firstFound": 0
-  },
-  {
-    "artist": "Zinloos Geluid",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-10-28",
-    "time": "23:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/497321/Zinloos-Geluid/Dynamo",
     "firstFound": 0
   },
   {
@@ -12081,18 +11722,6 @@
     "firstFound": 0
   },
   {
-    "artist": "FIESTA MACUMBA",
-    "venue": "PAARD",
-    "city": "Den Haag",
-    "country": "NL",
-    "date": "2026-11-07",
-    "time": "23:30",
-    "source": "PAARD",
-    "url": "https://www.paard.nl/event/fiesta-macumba-45/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/fiesta-macumba-paard-the-hague-paard-2026-11-07-Cf8u4BixWDeuvqZE18U2w"
-  },
-  {
     "artist": "Only 10s",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -14666,18 +14295,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/house-mussen-eindhoven-haven-eindhoven-2026-11-14-CfZB5JeAPdbhsDGL6ywq9"
   },
   {
-    "artist": "House Mussen",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-14",
-    "time": "20:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/497262/House-Mussen/Dynamo",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/house-mussen-eindhoven-haven-eindhoven-2026-11-14-CfZB5JeAPdbhsDGL6ywq9"
-  },
-  {
     "artist": "The Elvis Concert (US)",
     "venue": "Bibelot",
     "city": "Dordrecht",
@@ -15001,17 +14618,6 @@
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/high-tea-presents-kanine-tickets/612716102?language=en-us",
     "firstFound": 1791588107075
-  },
-  {
-    "artist": "Fiesta Macumba",
-    "venue": "Doornroosje",
-    "city": "Nijmegen",
-    "country": "NL",
-    "date": "2026-11-15",
-    "time": "00:30",
-    "source": "Doornroosje",
-    "url": "https://www.doornroosje.nl/event/fiesta-macumba-52",
-    "firstFound": 0
   },
   {
     "artist": "Grote Prijs Breda Finale 2026",
@@ -15712,17 +15318,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Zebrahead",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-17",
-    "time": "19:30",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/448937/Zebrahead/Dynamo",
-    "firstFound": 0
-  },
-  {
     "artist": "Blair Davie",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -16314,18 +15909,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/gotu-jim-1/",
     "clubCard": false,
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gotu-jim-rotterdam-maassilo-2026-11-19-CbLaEKC9kUWQiMrGz1Qbw"
-  },
-  {
-    "artist": "Gotu Jim",
-    "venue": "Maassilo",
-    "city": "Rotterdam",
-    "country": "NL",
-    "date": "2026-11-19",
-    "time": "20:00",
-    "source": "BIRD",
-    "url": "https://bird-rotterdam.nl/event/gotu-jim-19-11-26",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gotu-jim-rotterdam-maassilo-2026-11-19-CbLaEKC9kUWQiMrGz1Qbw"
   },
@@ -17670,18 +17253,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-bergen-op-zoom-poppodium-gebouw-t-2026-11-21-CXX4jvQx6xTtsyXJCG1cY"
   },
   {
-    "artist": "The Dirty Daddies",
-    "venue": "Gebouw-T",
-    "city": "Bergen op Zoom",
-    "country": "NL",
-    "date": "2026-11-21",
-    "time": "21:00",
-    "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-21nov",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-bergen-op-zoom-poppodium-gebouw-t-2026-11-21-CXX4jvQx6xTtsyXJCG1cY"
-  },
-  {
     "artist": "We All Love 90's 00's 10's",
     "venue": "Grote zaal",
     "city": "Eindhoven",
@@ -18456,18 +18027,6 @@
     "time": "20:00",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/the-hara",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-hara-eindhoven-dynamo-rock-metal-cafe-2026-11-24-Cbg44hHza3uv1wUUWQzau"
-  },
-  {
-    "artist": "The Hara",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/476389/The-Hara/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-hara-eindhoven-dynamo-rock-metal-cafe-2026-11-24-Cbg44hHza3uv1wUUWQzau"
   },
@@ -19311,18 +18870,6 @@
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/queerhoven-boardgame-night-14",
     "firstFound": 0
-  },
-  {
-    "artist": "Half Me",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-11-27",
-    "time": "19:30",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/480632/Half-Me/Dynamo",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/half-me-support-eindhoven-dynamo-rock-metal-cafe-2026-11-27-CcHrSuWohN1giM4KqLjvu"
   },
   {
     "artist": "LUCA",
@@ -21453,17 +21000,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/froukje-utrecht-tivolivredenburg-2026-12-03-CbWXRpNpi4s3dSwU8XNQu"
   },
   {
-    "artist": "Jimmy Carr • PHIL",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "19:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/jimmy-car-phil-03-12-26/",
-    "firstFound": 0
-  },
-  {
     "artist": "Miss Bashful",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -21663,18 +21199,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/state-power-support-eindhoven-dynamo-rock-metal-cafe-2026-12-03-CcCB5Hw1hJmqi7ny4CpgQ"
   },
   {
-    "artist": "State Power",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/480367/State-Power/Dynamo",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/state-power-support-eindhoven-dynamo-rock-metal-cafe-2026-12-03-CcCB5Hw1hJmqi7ny4CpgQ"
-  },
-  {
     "artist": "Treasure (Bruno Mars Tribute)",
     "venue": "Bibelot",
     "city": "Dordrecht",
@@ -21708,18 +21232,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/zwangere-guy/",
     "clubCard": false,
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/zwangere-guy-rotterdam-maassilo-2026-12-03-Cbtm7Ttz4gWTyM51nefbH"
-  },
-  {
-    "artist": "Zwangere Guy",
-    "venue": "Maassilo",
-    "city": "Rotterdam",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "20:00",
-    "source": "BIRD",
-    "url": "https://bird-rotterdam.nl/event/zwangere-guy-03-12-2026",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/zwangere-guy-rotterdam-maassilo-2026-12-03-Cbtm7Ttz4gWTyM51nefbH"
   },
@@ -21877,17 +21389,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Jimmy Carr • PHIL (21:30)",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2026-12-03",
-    "time": "21:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/jimmy-carr-phil-2100-03-12-26/",
-    "firstFound": 0
-  },
-  {
     "artist": "Kids With Buns",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -21965,18 +21466,6 @@
     "url": "https://www.tivolivredenburg.nl/agenda/80286627/froukje-04-12-2026/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/froukje-kijk-je-naar-mij-albumtour-2026-utrecht-tivolivredenburg-2026-12-04-CbWXZpncPhs9974EPQZzo"
-  },
-  {
-    "artist": "Jimmy Carr",
-    "venue": "Poppodium 013 - Main (seated)",
-    "city": "Tilburg",
-    "country": "NL",
-    "date": "2026-12-04",
-    "time": "19:00",
-    "source": "013",
-    "url": "https://www.013.nl/programma/108488/jimmy-carr",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jimmy-carr-laughs-funny-tilburg-poppodium-013-2026-12-04-7JZAjNxPgkbhDRL3qAKPCW"
   },
   {
     "artist": "Maite Hontelé & La Novia",
@@ -22406,18 +21895,6 @@
     "url": "https://metropool.nl/agenda/roundabouts-ep-release",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/roundabouts-ep-release-hengelo-metropool-hengelo-2026-12-04-CeBfMiSYhQRBU1NZAkGWj"
-  },
-  {
-    "artist": "Jimmy Carr",
-    "venue": "Poppodium 013 - Main",
-    "city": "Tilburg",
-    "country": "NL",
-    "date": "2026-12-04",
-    "time": "22:30",
-    "source": "013",
-    "url": "https://www.013.nl/programma/125609/jimmy-carr",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/jimmy-carr-laughs-funny-tilburg-poppodium-013-2026-12-04-7JZAjNxPgkbhDRL3qAKPCW"
   },
   {
     "artist": "LÉZARD",
@@ -22918,18 +22395,6 @@
     "time": "15:30",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/sacred-reich",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sacred-reich-eindhoven-dynamo-rock-metal-cafe-2026-12-06-CfVPanUfqASBxf1CW3v4k"
-  },
-  {
-    "artist": "Sacred Reich",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-06",
-    "time": "15:30",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/496105/Sacred-Reich/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sacred-reich-eindhoven-dynamo-rock-metal-cafe-2026-12-06-CfVPanUfqASBxf1CW3v4k"
   },
@@ -25048,17 +24513,6 @@
     "firstFound": 0
   },
   {
-    "artist": "zmo shitshow",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-12",
-    "time": "22:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/497322/zmo-shitshow/Dynamo",
-    "firstFound": 0
-  },
-  {
     "artist": "EAST",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -25228,18 +24682,6 @@
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/gallowstreet-1/",
     "clubCard": false,
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gallowstreet-rotterdam-annabel-2026-12-13-CaHzQvZFeCEn1JNJ2Nze9"
-  },
-  {
-    "artist": "Gallowstreet",
-    "venue": "Annabel",
-    "city": "Rotterdam",
-    "country": "NL",
-    "date": "2026-12-13",
-    "time": "20:00",
-    "source": "BIRD",
-    "url": "https://bird-rotterdam.nl/event/gallowstreet-at-annabel-13-12-2026",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gallowstreet-rotterdam-annabel-2026-12-13-CaHzQvZFeCEn1JNJ2Nze9"
   },
@@ -26390,18 +25832,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/la-pegatina-utrecht-tivolivredenburg-2026-12-19-CbWP4sa3T4twPHqBKEPEV"
   },
   {
-    "artist": "Muziek Bingo XXL",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-12-19",
-    "time": "19:00",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/muziek-bingo-xxl-tickets/575006220?language=en-us",
-    "firstFound": 1791588107075,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/muziek-bingo-xxl-amsterdam-melkweg-2026-12-19-CfieFhYXpJNfkxvNph6Kh"
-  },
-  {
     "artist": "Bettie Serveert",
     "venue": "MEZZ",
     "city": "Breda",
@@ -26457,18 +25887,6 @@
     "time": "20:00",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/john-coffey",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/john-coffey-support-eindhoven-dynamo-rock-metal-cafe-2026-12-19-CcAFAaRYS57eiFMiJ1JuQ"
-  },
-  {
-    "artist": "John Coffey",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2026-12-19",
-    "time": "20:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/480239/John-Coffey/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/john-coffey-support-eindhoven-dynamo-rock-metal-cafe-2026-12-19-CcAFAaRYS57eiFMiJ1JuQ"
   },
@@ -29378,18 +28796,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Qmusic the Party - 4 Uur Fout",
-    "venue": "Melkweg",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2027-01-23",
-    "time": "18:30",
-    "source": "Ticketmaster NL",
-    "url": "https://www.ticketmaster.nl/event/qmusic-the-party-4-uur-fout-tickets/463701688?language=en-us",
-    "firstFound": 1791588107075,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/qmusic-the-party-4-uur-fout-amsterdam-melkweg-2027-01-23-CcPVqiD8RMz2RCsSLzZ5R"
-  },
-  {
     "artist": "Sathanas In Gloriam presents: Throne Of Katarsis + Shroud of Satan + Shores of Ladon",
     "venue": "Baroeg",
     "city": "Rotterdam",
@@ -32050,18 +31456,6 @@
     "time": "19:30",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/comastatic",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/comastatic-support-eindhoven-dynamo-rock-metal-cafe-2027-02-13-CfZBLJGWRRDHjYoe8n3UY"
-  },
-  {
-    "artist": "Comastatic",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-02-13",
-    "time": "19:30",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/496693/Comastatic/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/comastatic-support-eindhoven-dynamo-rock-metal-cafe-2027-02-13-CfZBLJGWRRDHjYoe8n3UY"
   },
@@ -34928,17 +34322,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/clouseau-utrecht-tivolivredenburg-2027-03-03-CfXHb8JqoXJTKiuUYTTVJ"
   },
   {
-    "artist": "Jimmy Carr: Laughs Funny",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2027-03-03",
-    "time": "19:00",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/jimmy-carr-2/",
-    "firstFound": 0
-  },
-  {
     "artist": "Moyka",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -34994,17 +34377,6 @@
     "time": "20:45",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/de-staat-16",
-    "firstFound": 0
-  },
-  {
-    "artist": "Jimmy Carr: Laughs Funny",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2027-03-03",
-    "time": "21:30",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/jimmy-carr/",
     "firstFound": 0
   },
   {
@@ -36544,18 +35916,6 @@
     "time": "19:30",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/mallory-knox-2026",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mallory-knox-support-eindhoven-dynamo-rock-metal-cafe-2027-03-16-CfXHdC7LwajFT9f2cvzT2"
-  },
-  {
-    "artist": "Mallory Knox",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-03-16",
-    "time": "19:30",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/496322/Mallory-Knox/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mallory-knox-support-eindhoven-dynamo-rock-metal-cafe-2027-03-16-CfXHdC7LwajFT9f2cvzT2"
   },
@@ -39470,18 +38830,6 @@
     "time": "20:00",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/hot-water-music",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hot-water-music-eindhoven-dynamo-rock-metal-cafe-2027-04-13-CfXFWEAwK6gRYNQro43dg"
-  },
-  {
-    "artist": "Hot Water Music",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2027-04-13",
-    "time": "20:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/496388/Hot-Water-Music/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hot-water-music-eindhoven-dynamo-rock-metal-cafe-2027-04-13-CfXFWEAwK6gRYNQro43dg"
   },
@@ -43410,6 +42758,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Extince - 30 Jaar Spraakwater",
+    "venue": "De Helling",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-09-25",
+    "time": "20:00",
+    "source": "De Helling",
+    "url": "https://dehelling.nl/agenda/extince-30-jaar-spraakwater-25-09-2027",
+    "firstFound": 1791590981211,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/extince-30-jaar-spraakwater-utrecht-de-helling-2027-09-25-CfHevSwS7kZuAQXZsqzV7"
+  },
+  {
     "artist": "New Purple Celebration",
     "venue": "MEZZ",
     "city": "Breda",
@@ -43508,6 +42868,28 @@
     "time": "20:30",
     "source": "Boerderij",
     "url": "https://poppodiumboerderij.nl/programma/pendragon2/",
+    "firstFound": 0
+  },
+  {
+    "artist": "VroegZat",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2027-10-09",
+    "time": "19:30",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/vroegzat-8/",
+    "firstFound": 0
+  },
+  {
+    "artist": "Bare Jams",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2027-10-09",
+    "time": "20:30",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/bare-jams/",
     "firstFound": 0
   },
   {
@@ -43839,30 +43221,6 @@
     "time": "20:00",
     "source": "Dynamo",
     "url": "https://www.dynamo-eindhoven.nl/evenement/atlas-2",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/atlas-eindhoven-dynamo-rock-metal-cafe-2028-02-02-Ce3FNpRB1y4wnYawtLH3b"
-  },
-  {
-    "artist": "Atlas",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2028-02-02",
-    "time": "20:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/462150/Atlas/Dynamo",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/atlas-eindhoven-dynamo-rock-metal-cafe-2028-02-02-Ce3FNpRB1y4wnYawtLH3b"
-  },
-  {
-    "artist": "Atlas",
-    "venue": "Dynamo",
-    "city": "Eindhoven",
-    "country": "NL",
-    "date": "2028-02-02",
-    "time": "20:00",
-    "source": "Dynamo",
-    "url": "https://www.podiuminfo.nl/concert/490249/Atlas/Dynamo",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/atlas-eindhoven-dynamo-rock-metal-cafe-2028-02-02-Ce3FNpRB1y4wnYawtLH3b"
   }
