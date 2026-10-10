@@ -1,5 +1,5 @@
 import unittest
-from scrapers.feed_quality import deduplicate_performances, is_known_nonconcert
+from scrapers.feed_quality import deduplicate_performances, is_known_nonconcert, retain_upcoming
 
 
 def show(artist, date="2026-12-19", time="20:00",
@@ -9,6 +9,14 @@ def show(artist, date="2026-12-19", time="20:00",
 
 
 class FeedQualityTests(unittest.TestCase):
+    def test_local_midnight_rollover_removes_yesterday_only(self):
+        yesterday=show("Yesterday Band",date="2026-10-09")
+        today=show("Today Band",date="2026-10-10")
+        tomorrow=show("Tomorrow Band",date="2026-10-11")
+        kept, removed=retain_upcoming([yesterday,today,tomorrow],today="2026-10-10")
+        self.assertEqual(kept,[today,tomorrow])
+        self.assertEqual(removed,[yesterday])
+
     def test_official_hall_wins_over_podiuminfo_same_show(self):
         official=show("John Coffey")
         index=show("John Coffey", url="https://www.podiuminfo.nl/concert/480239/John-Coffey/Dynamo")
