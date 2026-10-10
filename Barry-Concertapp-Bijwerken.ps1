@@ -22,19 +22,28 @@ Run 'git' @('merge','--ff-only','origin/preview/backstage-v3')
 Write-Host "2/3 Android-app bouwen en installeren..."
 Run '.\gradlew.bat' @('installDebug')
 Write-Host "3/3 App starten..."
-$adb = Get-Command adb -ErrorAction SilentlyContinue
-if (-not $adb) {
-  $sdk = $null
-  if (Test-Path '.\local.properties') {
-    $sdkline = Get-Content '.\local.properties' | Where-Object { $_ -match '^sdk\.dir=' } | Select-Object -First 1
-    if ($sdkline) { $sdk = ($sdkline -replace '^sdk\.dir=','').Replace('\\', '\') }
+# Prefer the standard Android Studio SDK. A malformed local.properties
+# path must never turn a successful installation into a script failure.
+$adbExe = $null
+$adbCommand = Get-Command adb.exe -ErrorAction SilentlyContinue
+if ($adbCommand) { $adbExe = $adbCommand.Source }
+if (-not $adbExe) {
+  $sdkRoots = @(
+    (Join-Path $env:LOCALAPPDATA 'Android\Sdk'),
+    $env:ANDROID_HOME,
+    $env:ANDROID_SDK_ROOT
+  ) | Where-Object { $_ }
+  foreach ($sdkRoot in $sdkRoots) {
+    $candidate = Join-Path $sdkRoot 'platform-tools\adb.exe'
+    if (Test-Path -LiteralPath $candidate) { $adbExe = $candidate; break }
   }
-  if (-not $sdk -and $env:ANDROID_HOME) { $sdk = $env:ANDROID_HOME }
-  if (-not $sdk -and $env:ANDROID_SDK_ROOT) { $sdk = $env:ANDROID_SDK_ROOT }
-  if ($sdk -and (Test-Path (Join-Path $sdk 'platform-tools\adb.exe'))) { $adb = Join-Path $sdk 'platform-tools\adb.exe' }
 }
-if ($adb) {
-  & $adb shell monkey -p com.example.barrysconcertagenda -c android.intent.category.LAUNCHER 1 | Out-Null
-  if ($LASTEXITCODE -ne 0) { Write-Host "Geinstalleerd, maar automatisch openen lukte niet. Open de app op je telefoon." -ForegroundColor Yellow }
-} else { Write-Host "Geinstalleerd. Open de app op je telefoon (adb niet gevonden)." -ForegroundColor Yellow }
+if ($adbExe) {
+  & $adbExe shell monkey -p com.example.barrysconcertagenda -c android.intent.category.LAUNCHER 1 | Out-Null
+  if ($LASTEXITCODE -ne 0) {
+    Write-Host "Geinstalleerd. Automatisch openen lukte niet; open de app op de telefoon." -ForegroundColor Yellow
+  }
+} else {
+  Write-Host "Geinstalleerd. ADB niet gevonden; open de app op je telefoon." -ForegroundColor Yellow
+}
 Write-Host "GEREED: de nieuwste Backstage V3 staat op je Samsung." -ForegroundColor Green
