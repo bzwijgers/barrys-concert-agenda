@@ -21,6 +21,10 @@ CACHE = Path("/tmp/barrys-verified-bibelot-depul.json")
 
 def validate(rows, venue, minimum):
     unique = {normalize_url(r.get("url", "")) for r in rows}
+    if not rows or any(not r.get("url") or not r.get("artist") or not r.get("date") for r in rows):
+        raise RuntimeError(f"{venue}: missing required concert fields")
+    if "" in unique:
+        raise RuntimeError(f"{venue}: blank normalized concert URL")
     if len(rows) < minimum or len(unique) != len(rows):
         raise RuntimeError(f"{venue}: incomplete/duplicate feed: {len(rows)} rows, {len(unique)} unique URLs")
     for item in rows:
@@ -57,7 +61,7 @@ def apply():
     for item in fresh:
         url = normalize_url(item["url"])
         if url in seen:
-            continue
+            raise RuntimeError(f"Publication safety stop: {item['source']} URL collides with another source: {url}")
         item = dict(item)
         # Keep the original discovery date. Otherwise all scraped shows
         # reappear in the New tab after every daily targeted publication.
