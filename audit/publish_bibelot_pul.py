@@ -47,6 +47,7 @@ def apply():
     if len(previous) < 1000:
         raise RuntimeError("Refusing to overwrite unexpectedly small main feed")
 
+    prior_by_url = {normalize_url(x.get("url", "")): x for x in previous if x.get("url")}
     prior_links = {
         (normalize_url(x.get("url", "")), x.get("date", "")): x["ticketSwapUrl"]
         for x in previous if x.get("ticketSwapUrl")
@@ -58,6 +59,14 @@ def apply():
         if url in seen:
             continue
         item = dict(item)
+        # Keep the original discovery date. Otherwise all scraped shows
+        # reappear in the New tab after every daily targeted publication.
+        old = prior_by_url.get(url)
+        if old is not None:
+            item["firstFound"] = old.get("firstFound", 0)
+        else:
+            from datetime import datetime, timezone
+            item["firstFound"] = int(datetime.now(timezone.utc).timestamp() * 1000)
         verified_key = (item["url"].rstrip("/") + "/", item["date"])
         link = VERIFIED_EVENTS.get(verified_key) or prior_links.get((url, item["date"]))
         if link:
@@ -76,8 +85,13 @@ def apply():
     for name, minimum in SOURCES.items():
         if counts[name] < minimum:
             raise RuntimeError(f"Publication safety stop: {name} only {counts[name]}")
-    if len(new) < len(previous):
-        raise RuntimeError(f"Publication safety stop: lost records, {len(previous)} -> {len(new)}")
+    # The number of future concerts naturally shrinks when events expire.
+    # Verify all unrelated records survive instead of requiring monotonically
+    # increasing total counts.
+    kept_unrelated = {normalize_url(x["url"]) for x in new if x.get("source") not in SOURCES}
+    old_unrelated = {normalize_url(x["url"]) for x in previous if x.get("source") not in SOURCES}
+    if not old_unrelated.issubset(kept_unrelated):
+        raise RuntimeError("Publication safety stop: unrelated venue records were lost")
     FEED.write_text(json.dumps(new, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("PUBLISH READY", len(previous), "->", len(new),
           "Bibelot", counts["Bibelot"], "De Pul", counts["De Pul"],
