@@ -37,6 +37,8 @@ CANDIDATES = (
     Candidate("De Meester", "Almere", "NL", "https://poppodiumdemeester.nl"),
     Candidate("Hall of Fame", "Tilburg", "NL", "https://hall-fame.nl/programma"),
     Candidate("Heyhoef-Backstage", "Tilburg", "NL", "https://www.heyhoef-backstage.nl/"),
+    Candidate("Van Polanen Presenteert", "Rotterdam", "NL", "https://www.vanpolanenpresenteert.com/"),
+    Candidate("Theater Walhalla", "Rotterdam", "NL", "https://www.theaterwalhalla.nl/programma/"),
     Candidate("Ancienne Belgique", "Brussel", "BE", "https://www.abconcerts.be/nl/agenda"),
     Candidate("Trix", "Antwerpen", "BE", "https://www.trixonline.be"),
     Candidate("Biebob", "Vosselaar", "BE", "https://www.biebob.be"),
@@ -49,8 +51,8 @@ def validate_registry():
     names = [c.name.casefold() for c in CANDIDATES]
     if len(names) != len(set(names)):
         raise ValueError("Duplicate candidate sources")
-    if sum(c.country == "NL" for c in CANDIDATES) != 24:
-        raise ValueError("Expected 24 Dutch candidate sources")
+    if sum(c.country == "NL" for c in CANDIDATES) != 26:
+        raise ValueError("Expected 26 Dutch candidate sources")
     if sum(c.country == "BE" and c.kind == "venue" for c in CANDIDATES) != 5:
         raise ValueError("Expected 5 Belgian venue sources")
     if sum(c.kind == "promoter" for c in CANDIDATES) != 1:
