@@ -95,6 +95,27 @@ class BackstageSelectorsTest {
         assertEquals(listOf("Ticket concert"),BackstageSelectors.mine(shows,3).map{it.artist})
         assertEquals(listOf("Archived concert"),BackstageSelectors.mine(shows,5).map{it.artist})
     }
+    @Test fun duplicateShowsFromTwoLinksKeepTicketAndFavorite() {
+        val first = Concert(artist = "Soulcrusher", venue = "Doornroosje",
+            city = "Nijmegen", country = "NL", date = "2026-11-22",
+            time = "20:00", url = "https://venue.example/soulcrusher")
+        val second = first.copy(url = "https://tickets.example/soulcrusher",
+            isAttending = true, isFavorite = true)
+        val result = BackstageSelectors.uniqueShows(listOf(first, second))
+        assertEquals(1, result.size)
+        assertTrue(result.single().isAttending)
+        assertTrue(result.single().isFavorite)
+    }
+
+    @Test fun multiplePerformancesAndUnknownTimesAreNeverMerged() {
+        val show = Concert(artist = "Same band", venue = "Walhalla",
+            city = "Rotterdam", country = "NL", date = "2026-11-22",
+            time = "19:00", url = "https://example.org/early")
+        val late = show.copy(time = "21:00", url = "https://example.org/late")
+        val unknown = show.copy(time = "", url = "https://example.org/unknown")
+        assertEquals(3, BackstageSelectors.uniqueShows(listOf(show, late, unknown)).size)
+    }
+
     @Test fun monthViewIsDifferentFromDaySelection() {
         val upcoming=BackstageSelectors.discover(shows,"all")
         assertEquals(2,BackstageSelectors.calendar(upcoming,YearMonth.of(2026,10),null).size)
