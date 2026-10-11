@@ -24,6 +24,19 @@ class BackstageSelectorsTest {
         assertEquals(listOf("Rotown artist"),BackstageSelectors.discover(shows,"club").map{it.artist})
         assertEquals(listOf("Belgian artist"),BackstageSelectors.discover(shows,"belgium").map{it.artist})
     }
+    @Test fun rotownClubCardExcludesOtherPromotersAndArchived() {
+        val shows = listOf(
+            Concert(artist = "Rotown", venue = "Rotown", city = "Rotterdam",
+                country = "NL", date = "2026-11-01", source = "Rotown", clubCard = true),
+            Concert(artist = "Other hall", venue = "Rotown", city = "Rotterdam",
+                country = "NL", date = "2026-11-01", source = "Ticketmaster NL", clubCard = true),
+            Concert(artist = "Past", venue = "Rotown", city = "Rotterdam",
+                country = "NL", date = "2026-01-01", source = "Rotown",
+                clubCard = true, archived = true)
+        )
+        assertEquals(listOf("Rotown"), BackstageSelectors.discover(shows, "club").map { it.artist })
+    }
+
     @Test fun emptyNewTabShowsUpcomingWithoutPretendingTheyAreNew() {
         val baseline = shows.map { it.copy(isNew = false) }
         val upcoming = BackstageSelectors.discoverOrUpcoming(baseline, "new")
