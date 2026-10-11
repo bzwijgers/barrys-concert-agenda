@@ -583,21 +583,23 @@ fun ConcertApp() {
             }
         }
 
+    val displayConcerts = BackstageSelectors.uniqueShows(searchedConcerts)
+
     val visibleConcerts =
         when {
-            selectedTab == 0 -> searchedConcerts.sortedByDescending { it.firstFound }
+            selectedTab == 0 -> displayConcerts.sortedByDescending { it.firstFound }
             selectedTab == 10 -> BackstageSelectors.orderDiscovery(
-                searchedConcerts, discoveryFilter, noRecentlyDiscoveredConcerts
+                displayConcerts, discoveryFilter, noRecentlyDiscoveredConcerts
             )
-            selectedTab == 9 -> searchedConcerts.take(8)
+            selectedTab == 9 -> displayConcerts.take(8)
             selectedTab == 5 || (selectedTab == 11 && mySection == 5) ->
-                searchedConcerts.sortedWith(
+                displayConcerts.sortedWith(
                     compareByDescending<Concert> { concertSortDate(it.date) }
                         .thenBy { it.artist.lowercase(Locale.forLanguageTag("nl-NL")) }
                 )
             selectedTab == 1 && calendarMode ->
-                BackstageSelectors.calendar(searchedConcerts, calendarMonth, calendarDay)
-            else -> searchedConcerts
+                BackstageSelectors.calendar(displayConcerts, calendarMonth, calendarDay)
+            else -> displayConcerts
         }
 
 
