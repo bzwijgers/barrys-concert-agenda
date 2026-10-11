@@ -87,6 +87,34 @@ object BackstageSelectors {
             else concerts
     }
 
+    /**
+     * Hide exact same-show duplicates from different source URLs without
+     * deleting locally saved concerts. Never merge shows with different
+     * start times or ambiguous/missing venues.
+     */
+    fun uniqueShows(concerts: List<Concert>): List<Concert> {
+        val groups = linkedMapOf<String, Concert>()
+        for (concert in concerts) {
+            val key = listOf(concert.artist, concert.date, concert.city,
+                concert.venue, concert.time).joinToString("|") { it.trim().lowercase() }
+            if (concert.artist.isBlank() || concert.date.isBlank() ||
+                concert.city.isBlank() || concert.venue.isBlank() ||
+                concert.time.isBlank()) {
+                groups["url:" + concert.url + ":" + groups.size] = concert
+                continue
+            }
+            val previous = groups[key]
+            groups[key] = if (previous == null) concert else previous.copy(
+                isFavorite = previous.isFavorite || concert.isFavorite,
+                isAttending = previous.isAttending || concert.isAttending,
+                isNew = previous.isNew || concert.isNew,
+                firstFound = listOf(previous.firstFound, concert.firstFound)
+                    .filter { it > 0 }.minOrNull() ?: 0L
+            )
+        }
+        return groups.values.toList()
+    }
+
     fun calendar(
         concerts: List<Concert>,
         month: YearMonth,
