@@ -15,7 +15,10 @@ data class SourceConcert(
     val source: String,
     val url: String,
     val ticketSwapUrl: String = "",
-    val clubCard: Boolean = false
+    val clubCard: Boolean = false,
+    // -1 = server feed has no discovery metadata (legacy feed).
+    //  0 = known before tracking; >0 = Unix epoch millis first discovered.
+    val firstFound: Long = -1L
 )
 
 object ConcertRepository {
@@ -132,7 +135,8 @@ object ConcertRepository {
                         item.optBoolean(
                             "clubCard",
                             false
-                        )
+                        ),
+                    firstFound = item.optLong("firstFound", -1L)
                 )
 
             if (
