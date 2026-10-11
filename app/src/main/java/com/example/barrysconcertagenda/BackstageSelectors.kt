@@ -16,7 +16,7 @@ object BackstageSelectors {
                 "belgium" -> concert.country.equals("BE", ignoreCase = true) ||
                     concert.country.equals("Belgium", ignoreCase = true) ||
                     concert.country.equals("België", ignoreCase = true)
-                "club" -> concert.clubCard
+                "club" -> concert.clubCard && concert.source.equals("Rotown", ignoreCase = true)
                 else -> true
             }
         }
