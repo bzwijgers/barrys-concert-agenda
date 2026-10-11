@@ -29,6 +29,14 @@ def probe(candidate, getter=None):
     except (URLError, HTTPError, TimeoutError, ValueError, OSError) as error:
         return {"name": candidate.name, "status": "unavailable",
                 "count": 0, "reason": type(error).__name__}
+    # Walhalla also publishes cabaret, children's performances and theatre.
+    # A generic MusicEvent tag does not prove its official category is
+    # Theaterconcert. Never stage such events as approved without
+    # event-level genre validation from their detail pages.
+    if candidate.name == "Theater Walhalla":
+        return {"name": candidate.name, "status": "needs-theaterconcert-filter",
+                "count": len(concerts),
+                "reason": "Official Theaterconcert genre must be verified per performance"}
     if not concerts:
         return {"name": candidate.name, "status": "needs-custom-scraper",
                 "count": 0, "reason": "No verified MusicEvent metadata on landing page"}
