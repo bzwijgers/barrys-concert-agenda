@@ -905,7 +905,7 @@ fun ConcertApp() {
                                         onClick = { selectedTab = 4 },
                                         modifier = Modifier.fillMaxWidth()
                                     ) {
-                                        Text("♣ Rotown Clubkaart · ${concerts.count { it.clubCard && !it.archived }} concerten",
+                                        Text("♣ Rotown Clubkaart · ${BackstageSelectors.discover(concerts, "club").size} concerten",
                                              fontWeight = FontWeight.Bold,
                                              color = BackstageColors.pageAccent,
                                              fontSize = 14.sp,
