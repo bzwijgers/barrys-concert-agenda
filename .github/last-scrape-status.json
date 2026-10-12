@@ -1,10 +1,10 @@
 {
-  "run_id": 38177783580,
-  "source_commit": "291c7da7b6b205d6f20b52cb9a2ebed8c5ffe42e",
-  "unit_tests": "success",
-  "ticketmaster_api": "success",
-  "paradiso_live": "success",
-  "full_scrape": "success",
-  "feed_validation": "success",
-  "publish": "success"
+  "run_id": 38207317466,
+  "source_commit": "5c3c5e2b55113db1fd9426527df7a39189acc74d",
+  "unit_tests": "failure",
+  "ticketmaster_api": "skipped",
+  "paradiso_live": "skipped",
+  "full_scrape": "skipped",
+  "feed_validation": "skipped",
+  "publish": "skipped"
 }
