@@ -8,6 +8,16 @@ from scrapers.new_venues import (
 
 
 class AdditionalVenueTests(unittest.TestCase):
+    def setUp(self):
+        # Historical October fixtures must not expire as the calendar advances.
+        class FixtureDate(date):
+            @classmethod
+            def today(cls):
+                return cls(2026, 10, 8)
+        self.date_patch = patch('scrapers.new_venues.date', FixtureDate)
+        self.date_patch.start()
+        self.addCleanup(self.date_patch.stop)
+
     def test_doornroosje_primary_event_and_no_false_cancellation(self):
         html = """<html><head>
         <meta property="og:title" content="Sharp Pins // Doornroosje Nijmegen // dinsdag 10 november 2026">

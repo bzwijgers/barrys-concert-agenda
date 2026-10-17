@@ -216,6 +216,9 @@ jobs:
             # verified links published in the meantime.
             PYTHONPATH=. python -u -m audit.merge_published_ticketswap \
               /tmp/latest-published-concerts.json concerts.json
+            # Recheck against latest main after concurrent-update reset.
+            PYTHONPATH=. python -u -m audit.publication_guard \
+              /tmp/latest-published-concerts.json concerts.json
             git add concerts.json
             if git diff --cached --quiet; then
               echo "Concert feed already up-to-date"

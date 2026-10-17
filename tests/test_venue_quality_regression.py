@@ -1,5 +1,6 @@
 """Focused regressions for the October 2026 five-venue quality audit."""
 import unittest
+from datetime import date
 from unittest.mock import patch
 
 from scrapers.gebouw_t import gebouw_t_parse_event
@@ -13,6 +14,15 @@ from scrapers.new_venues import (
 
 
 class VenueQualityTests(unittest.TestCase):
+    def setUp(self):
+        class FixtureDate(date):
+            @classmethod
+            def today(cls):
+                return cls(2026, 10, 8)
+        self.date_patch = patch('scrapers.new_venues.date', FixtureDate)
+        self.date_patch.start()
+        self.addCleanup(self.date_patch.stop)
+
     def test_spot_rejects_collection_and_subscriptions_not_concerts(self):
         self.assertTrue(is_nonconcert_listing(
             "SPOT Groningen", "https://www.spotgroningen.nl/programma/verzameling/english"))
