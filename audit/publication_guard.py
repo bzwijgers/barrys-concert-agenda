@@ -6,7 +6,8 @@ with the potentially stale feed checked out when the scraper started.
 import json
 import sys
 from collections import Counter
-from datetime import date
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 
 def counts(items, today):
@@ -20,7 +21,7 @@ def counts(items, today):
 
 
 def check(previous, candidate, today=None, minimum_baseline=20, max_drop=0.35):
-    today = today or date.today().isoformat()
+    today = today or datetime.now(ZoneInfo('Europe/Amsterdam')).date().isoformat()
     if not isinstance(previous, list) or not isinstance(candidate, list):
         raise ValueError("Both feeds must contain JSON arrays")
     old, new = counts(previous, today), counts(candidate, today)
