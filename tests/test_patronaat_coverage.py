@@ -1,11 +1,21 @@
 """Coverage regression cases for previously missing music events."""
 import unittest
+from datetime import date
 from unittest.mock import patch
 
 from scrapers.common import scrape_detail_events, scrape_patronaat
 
 
 class PatronaatCoverageTests(unittest.TestCase):
+    def setUp(self):
+        class FixtureDate(date):
+            @classmethod
+            def today(cls):
+                return cls(2026, 10, 8)
+        self.date_patch = patch('scrapers.common.date', FixtureDate)
+        self.date_patch.start()
+        self.addCleanup(self.date_patch.stop)
+
     @patch("scrapers.common.download_page_retry")
     def test_visible_date_missing_uses_matching_slug(self, download):
         html = """<html><head><title>SlodDe &amp; Vos | Patronaat</title>
