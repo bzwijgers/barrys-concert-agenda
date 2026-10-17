@@ -372,17 +372,8 @@ fun ConcertApp() {
             }
         }
 
-        val storedAfter =
-            merged.values.map { concert ->
-                if (
-                    normalizeUrl(concert.url) ==
-                    "https://www.rotown.nl/agenda/republica"
-                ) {
-                    concert.copy(isAttending = true)
-                } else {
-                    concert
-                }
-            }
+        // Attendance is a user decision; never force a specific concert to Tickets.
+        val storedAfter = merged.values.toList()
 
         ConcertStorage.saveConcerts(
             context,
