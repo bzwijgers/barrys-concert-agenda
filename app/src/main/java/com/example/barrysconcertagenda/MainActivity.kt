@@ -348,9 +348,16 @@ fun ConcertApp() {
 
                 merged[key] =
                     concert.copy(
+                        // The central feed can supply the first real discovery
+                        // timestamp for a legacy locally cached event (0L).
+                        // Preserve an earlier positive timestamp when known.
                         firstFound =
-                            old?.firstFound
-                                ?: concert.firstFound,
+                            when {
+                                old == null -> concert.firstFound
+                                old.firstFound <= 0L -> concert.firstFound
+                                concert.firstFound <= 0L -> old.firstFound
+                                else -> minOf(old.firstFound, concert.firstFound)
+                            },
                         isFavorite =
                             old?.isFavorite
                                 ?: concert.isFavorite,
