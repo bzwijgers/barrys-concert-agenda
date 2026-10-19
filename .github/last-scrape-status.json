@@ -1,6 +1,6 @@
 {
-  "run_id": 39123459590,
-  "source_commit": "10d253ea0ebce02181397ae1a4201d912fc4ea61",
+  "run_id": 39204776031,
+  "source_commit": "ccb23248f9d12c6f5735fecb180cce659ca8e398",
   "unit_tests": "success",
   "ticketmaster_api": "success",
   "paradiso_live": "success",
