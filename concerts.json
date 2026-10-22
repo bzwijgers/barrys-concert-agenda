@@ -1552,17 +1552,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Yawning Man (US) + Hell Valley High",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-15",
-    "time": "20:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/yawning-man-us",
-    "firstFound": 0
-  },
-  {
     "artist": "Young The Giant + Ora The Molecule",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -1865,17 +1854,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/axel-bauer-braine-le-comte-salle-communale-baudouin-iv-2026-10-16-Ca6yCbkfeeCNY4n1Sdpjv"
   },
   {
-    "artist": "Catch of the Day: Salmon On A Leash + My Strange Addiction + The Dethleffs",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-16",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/catch-of-the-day-salmon-on-a-leash-more",
-    "firstFound": 0
-  },
-  {
     "artist": "Celine Cairo",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -2094,18 +2072,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Rowwen Hèze",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2026-10-16",
-    "time": "20:30",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/rowwen-heze-2026",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rowwen-heze-uden-de-pul-2026-10-16-CcEWoqsXQXKm9zeJMYgqe"
-  },
-  {
     "artist": "Savine | Extended Little Black Dress Tour 2026",
     "venue": "Het Zonnehuis",
     "city": "Amsterdam",
@@ -2129,17 +2095,6 @@
     "clubCard": false,
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sophie-hutchings-rotterdam-lantarenvenster-2026-10-16-CYLnb4wjR8wT6ces4B1EZ"
-  },
-  {
-    "artist": "Niels Geusebroek sings Coldplay",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-16",
-    "time": "20:45",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/niels-geusebroek-sings-coldplay",
-    "firstFound": 0
   },
   {
     "artist": "Altin Gün",
@@ -2620,17 +2575,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Popronde Dordrecht: MAYTE + Igor + KRAM + Amani + Duygu Alkan + xico",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-17",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/popronde-dordrecht-mayte-igor-kram-duygu-alkan-amani",
-    "firstFound": 0
-  },
-  {
     "artist": "THE NARRATOR",
     "venue": "Little Devil",
     "city": "Tilburg",
@@ -2639,17 +2583,6 @@
     "time": "20:00",
     "source": "013",
     "url": "https://www.013.nl/programma/120305/the-narrator",
-    "firstFound": 0
-  },
-  {
-    "artist": "The Slackers (USA) + Leah Farmer & The Badasonics (US)",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-17",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/the-slackers-usa",
     "firstFound": 0
   },
   {
@@ -3063,30 +2996,6 @@
     "source": "Bolwerk",
     "url": "https://www.podiuminfo.nl/concert/453725/Apennoten/Het-Bolwerk",
     "firstFound": 0
-  },
-  {
-    "artist": "Carl Verheyen",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2026-10-18",
-    "time": "16:00",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/carl-verheyen",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/carl-verheyen-uden-de-pul-2026-10-18-CffD8iMn6yjZijsYbtPSD"
-  },
-  {
-    "artist": "ELO Encounter",
-    "venue": "De Bosuil",
-    "city": "Weert",
-    "country": "NL",
-    "date": "2026-10-18",
-    "time": "16:15",
-    "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/elo-encounter",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/elo-encounter-weert-poppodium-de-bosuil-2026-10-18-Cf7G4HTgRqsd7buu1qXZA"
   },
   {
     "artist": "Amon Amarth | be•at Premium Comfort Experience",
@@ -4263,17 +4172,6 @@
     "time": "21:00",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/s-rene-ade/2919587",
-    "firstFound": 0
-  },
-  {
-    "artist": "King King",
-    "venue": "De Bosuil",
-    "city": "Weert",
-    "country": "NL",
-    "date": "2026-10-21",
-    "time": "21:15",
-    "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/king-king-26",
     "firstFound": 0
   },
   {
@@ -5935,17 +5833,6 @@
     "firstFound": 1791628425341
   },
   {
-    "artist": "Ronker",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2026-10-24",
-    "time": "20:00",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/ronker",
-    "firstFound": 0
-  },
-  {
     "artist": "Snelle",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -6180,6 +6067,17 @@
     "url": "https://gebouw-t.nl/agenda/niels-geusebroek-sings-coldplay-2026",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/niels-geusebroek-sings-coldplay-bergen-op-zoom-poppodium-gebouw-t-2026-10-24-CYLQ3g6s8XqAmRdkQV1dg"
+  },
+  {
+    "artist": "Ronker",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-10-24",
+    "time": "21:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ronker",
+    "firstFound": 0
   },
   {
     "artist": "Turkish Pop Night",
@@ -19895,17 +19793,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sttellla-mons-theatre-royal-de-mons-2026-11-26-CXbCDDDL2gaaVYH3u9qdb"
   },
   {
-    "artist": "Sugar Spine + Braces @ Popcentrale",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-11-26",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/sugar-spine-braces-popcentrale",
-    "firstFound": 0
-  },
-  {
     "artist": "The Script: Man In The Arena Tour",
     "venue": "Ziggo Dome",
     "city": "Amsterdam",
@@ -20029,6 +19916,17 @@
     "time": "20:30",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/snackbar-the-ambassador/",
+    "firstFound": 0
+  },
+  {
+    "artist": "Sugar Spine + Braces @ Popcentrale",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/sugar-spine-braces-popcentrale",
     "firstFound": 0
   },
   {
@@ -20602,6 +20500,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Bonkers Bingo",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-11-27",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/bonkers-bingo",
+    "firstFound": 0
+  },
+  {
     "artist": "ILA",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -20682,17 +20591,6 @@
     "url": "https://www.doornroosje.nl/event/the-veils-4",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-veils-nijmegen-doornroosje-2026-11-27-CYTDRwmp7kw6Q78v1S7pD"
-  },
-  {
-    "artist": "Bonkers Bingo",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-11-27",
-    "time": "21:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/bonkers-bingo",
-    "firstFound": 0
   },
   {
     "artist": "PANN 25+",
@@ -23020,6 +22918,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Studio Brandstof: Ruben Croes",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-03",
+    "time": "22:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/studio-brandstof-ruben-croes",
+    "firstFound": 1792646502938
+  },
+  {
     "artist": "dB’s & TivoliVredenburg present: SPITE HOUSE (CAN) + Prize Horse (US) + Feverchild (BE)",
     "venue": "dB's",
     "city": "Utrecht",
@@ -23270,6 +23179,17 @@
     "time": "20:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/de-baron-support-04-12-26/",
+    "firstFound": 0
+  },
+  {
+    "artist": "Donna's Hot Stuff",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/donnas-hot-stuff",
     "firstFound": 0
   },
   {
@@ -25290,7 +25210,7 @@
     "firstFound": 0
   },
   {
-    "artist": "Peter & The Test Tube Babies (UK) + Disturbance + De Badslippers",
+    "artist": "Peter & The Test Tube Babies (UK) + Cittizins (US) + Disturbance + De Badslippers",
     "venue": "Bibelot",
     "city": "Dordrecht",
     "country": "NL",
@@ -26665,6 +26585,17 @@
     "url": "https://poppodiumboerderij.nl/programma/blues-op-zondag-met-twelve-bar-blues-band/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/blues-op-zondag-met-twelve-bar-blues-band-zoetermeer-poppodium-boerderij-2026-12-13-CdL4hNXHPPRCQfy5mGTmz"
+  },
+  {
+    "artist": "Muziek met de Meester",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2026-12-13",
+    "time": "15:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/muziek-met-de-meester",
+    "firstFound": 1792646502938
   },
   {
     "artist": "Nile + Redsphere + Intrepid + Orecus",
@@ -31832,6 +31763,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Pumpelroze 2027",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-01-24",
+    "time": "12:15",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/pumpelroze-2027",
+    "firstFound": 1792646502938
+  },
+  {
     "artist": "Pro Wrestling Holland® x Patronaat",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -32430,17 +32372,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Dordtje Pop: KLINKT GOED + Mensenkinderen + See Sharp",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/dordtje-pop-klinkt-goed-mensenkinderen-see-sharp",
-    "firstFound": 0
-  },
-  {
     "artist": "Epica",
     "venue": "Koninklijk Theater Carre",
     "city": "Amsterdam",
@@ -32750,6 +32681,17 @@
     "time": "20:00",
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/david-ramirez/",
+    "firstFound": 0
+  },
+  {
+    "artist": "Dordtje Pop: KLINKT GOED + Mensenkinderen + See Sharp",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/dordtje-pop-klinkt-goed-mensenkinderen-see-sharp",
     "firstFound": 0
   },
   {
@@ -37838,6 +37780,17 @@
     "url": "https://www.melkweg.nl/nl/agenda/the-last-internationale-28-02-2027/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-last-internationale-amsterdam-melkweg-2027-02-28-Cc4ZrAM8o2UdoUsJCNEVM"
+  },
+  {
+    "artist": "A Night In Texas (AU) + Angles Morts",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-28",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/kanine-fr-a-night-in-texas-au-angles-morts",
+    "firstFound": 1792646502938
   },
   {
     "artist": "British Invasion",
@@ -43395,6 +43348,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/voltage-dordrecht-bibelot-poppodium-2027-04-10-CcZE2SCgnN3GQnLhKisbU"
   },
   {
+    "artist": "Mr. Punch",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-04-10",
+    "time": "21:15",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/mr-punch",
+    "firstFound": 1792646502938
+  },
+  {
     "artist": "Kunstbende Voorronde Noord-Brabant 2027",
     "venue": "MEZZ",
     "city": "Breda",
@@ -47429,17 +47393,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/slagerij-van-kampen-rhythm-of-freedom-utrecht-tivolivredenburg-2027-06-10-CbwDPTmH39S74QJx5uk8v"
   },
   {
-    "artist": "Wende",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2027-06-10",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/wende",
-    "firstFound": 0
-  },
-  {
     "artist": "CineMusic Filmorkest - 20 Films Live in Concert",
     "venue": "Amare",
     "city": "Den Haag",
@@ -47473,6 +47426,17 @@
     "url": "https://www.ticketmaster.nl/event/-roger-waters-presents-legacy-%7C-a-pink-floyd-show-tickets/449346723?language=en-us",
     "firstFound": 1791588107075,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/roger-waters-presents-legacy-a-pink-floyd-show-rotterdam-de-doelen-2027-06-10-CfnQ1JFokm34BB1qHEqaa"
+  },
+  {
+    "artist": "Wende",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-06-10",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/wende",
+    "firstFound": 0
   },
   {
     "artist": "Steve Vai & Metropole Orkest",
@@ -48440,17 +48404,6 @@
     "url": "https://metropool.nl/agenda/faaschtbankler",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/faaschtbankler-enschede-muziekcentrum-2027-09-10-CeGLrtTfTVkYB1s1iYgC8"
-  },
-  {
-    "artist": "Donna's Hot Stuff",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2027-09-11",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/donnas-hot-stuff",
-    "firstFound": 0
   },
   {
     "artist": "Archive",
