@@ -1,10 +1,10 @@
 {
-  "run_id": 39728231407,
-  "source_commit": "ebd17db6c52f173d78c46040e6bf745f4db6f188",
+  "run_id": 39905830445,
+  "source_commit": "e34e02db17ab77c13b14e3cb4a2590897f7bdb66",
   "unit_tests": "success",
   "ticketmaster_api": "success",
   "paradiso_live": "success",
-  "full_scrape": "success",
+  "full_scrape": "failure",
   "feed_validation": "skipped",
   "publish": "skipped"
 }
