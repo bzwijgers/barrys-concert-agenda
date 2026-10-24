@@ -4297,18 +4297,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Dikkie Dik & Dirk Scheele",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "15:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/dikkie-dik-dirk-scheele",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dikkie-dik-dirk-scheele-dordrecht-bibelot-poppodium-2026-10-22-CcZDdKi8b5rD4RUXbpDmX"
-  },
-  {
     "artist": "STMPD 10 YEARS - ADE",
     "venue": "AFAS Live",
     "city": "Amsterdam",
@@ -4459,17 +4447,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/popronde-gus-walker-kuzko-de-plaag-utrecht-nar-cafe-der-kunsten-2026-10-22-CeSSGGZDS3FyXELncMGhp"
   },
   {
-    "artist": "Wolvennest (BE) + Bedsore (IT) + Vigljos (CH)",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "19:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/wolvennest-be-bedsore-it",
-    "firstFound": 0
-  },
-  {
     "artist": "Baba Zula",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -4604,17 +4581,6 @@
     "time": "20:30",
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/ladybirds-trio",
-    "firstFound": 0
-  },
-  {
-    "artist": "Dear Omen + Silent Runners",
-    "venue": "De Bosuil",
-    "city": "Weert",
-    "country": "NL",
-    "date": "2026-10-22",
-    "time": "20:30",
-    "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/dearomen-silentrunners",
     "firstFound": 0
   },
   {
@@ -5164,18 +5130,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Pearl Jam by Rearviewmirror + Radiohead by Lost Child",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "20:00",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/pearl-jam-by-rearviewmirror-radiohead-by-lost-child",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/pearl-jam-by-rearviewmirror-radiohead-by-lost-child-dordrecht-bibelot-poppodium-2026-10-23-CXnDB4a1oYSQAJWpFTJws"
-  },
-  {
     "artist": "Tribute to MARILLION by Mr PUNCH (It)",
     "venue": "Spirit of 66",
     "city": "Verviers",
@@ -5281,18 +5235,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Mell VF",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "20:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/mell-vf",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mell-vf-dordrecht-bibelot-poppodium-2026-10-23-Cc8uCGsqUiev7K4CuSfNf"
-  },
-  {
     "artist": "Milk Inc. Forever",
     "venue": "AFAS Dome",
     "city": "Merksem (Antwerpen)",
@@ -5349,18 +5291,6 @@
     "url": "https://metropool.nl/agenda/ruben-hillen",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ruben-hillen-hengelo-metropool-hengelo-2026-10-23-CazGqUej3AXuLWujETqZu"
-  },
-  {
-    "artist": "Rowwen Hèze",
-    "venue": "De Bosuil",
-    "city": "Weert",
-    "country": "NL",
-    "date": "2026-10-23",
-    "time": "21:15",
-    "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/rowwenheze",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rowwen-heze-weert-poppodium-de-bosuil-2026-10-23-CbQ296JQVHxMKqKrFkuVV"
   },
   {
     "artist": "Warhaus - Ha Ha Heartbeats - ADE",
@@ -9230,6 +9160,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Circle of Mud + Out of Season",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2026-11-01",
+    "time": "15:30",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/circle-of-mud",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/circle-of-mud-out-of-season-weert-poppodium-de-bosuil-2026-11-01-CXqznmR9FeaJsepYeXKNn"
+  },
+  {
     "artist": "Momentum III - Potochkine + Vioflesh + Silent Runners",
     "venue": "De Helling",
     "city": "Utrecht",
@@ -9252,18 +9194,6 @@
     "url": "https://www.mezz.nl/programma/sam-bettens-2/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sam-bettens-breda-waalse-kerk-2026-11-01-Ce2VV6pT6ZaEAUQRfXmKL"
-  },
-  {
-    "artist": "Circle of Mud + Out of Season",
-    "venue": "De Bosuil",
-    "city": "Weert",
-    "country": "NL",
-    "date": "2026-11-01",
-    "time": "16:15",
-    "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/circle-of-mud",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/circle-of-mud-out-of-season-weert-poppodium-de-bosuil-2026-11-01-CXqznmR9FeaJsepYeXKNn"
   },
   {
     "artist": "PLACEBO | be•at Premium Comfort Experience",
@@ -32156,6 +32086,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Napalm Death",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-28",
+    "time": "18:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/napalm-death",
+    "firstFound": 1792819074033
+  },
+  {
     "artist": "Anne Clark",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -38574,6 +38515,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Let’s Mingle & Dance",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-03-06",
+    "time": "20:00",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/lets-mingle-dance",
+    "firstFound": 1792819074033
+  },
+  {
     "artist": "One Vision of Queen ft Marc Martel",
     "venue": "Poppodium 013 - Main",
     "city": "Tilburg",
@@ -38758,6 +38710,17 @@
     "source": "Bolwerk",
     "url": "https://www.podiuminfo.nl/concert/492140/Dirk-Scheele/Het-Bolwerk",
     "firstFound": 0
+  },
+  {
+    "artist": "Jayler",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-03-07",
+    "time": "16:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/jayler",
+    "firstFound": 1792819074033
   },
   {
     "artist": "Evil Invaders + Heathen + Exhorder",
@@ -40780,6 +40743,17 @@
     "source": "Ticketmaster BE",
     "url": "https://www.ticketmaster.be/event/het-schlagerfestival-2027-tickets/1825067055",
     "firstFound": 1791628425341
+  },
+  {
+    "artist": "Ultimate Eagles",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-03-21",
+    "time": "16:15",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/ultimateeagles-2027",
+    "firstFound": 1792819074033
   },
   {
     "artist": "Bohemian Rhapsody",
@@ -44275,6 +44249,17 @@
     "source": "013",
     "url": "https://www.013.nl/programma/136089/roadburn-2027",
     "firstFound": 0
+  },
+  {
+    "artist": "Tyketto",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-04-18",
+    "time": "15:30",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/tyketto2027",
+    "firstFound": 1792819074033
   },
   {
     "artist": "Bohemian Rhapsody",
@@ -48701,6 +48686,17 @@
     "url": "https://www.ticketmaster.be/event/michel-jonasz-tickets/1103689564",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/michel-jonasz-mons-theatre-royal-de-mons-2027-10-09-Ccrvx62DjWjSyvpU7aaJ1"
+  },
+  {
+    "artist": "Hard2Get",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-10-09",
+    "time": "20:30",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/hard-2-get",
+    "firstFound": 1792819074033
   },
   {
     "artist": "IL VOLO",
