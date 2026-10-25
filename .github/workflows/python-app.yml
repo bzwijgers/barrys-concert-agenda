@@ -105,8 +105,12 @@ jobs:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
         run: python -u scraper.py
 
+      # TicketSwap is optional enrichment, not a prerequisite for publishing concerts.
+      # The collector validates its entire sitemap before changing concerts.json.
+      # If the third-party sitemap changes or fails, preserve the scraped feed.
       - name: Enrich direct TicketSwap links from official public event sitemaps
         id: enrich_ticketswap
+        continue-on-error: true
         run: |
           PYTHONPATH=. python -u -m audit.publish_ticketswap_sitemaps collect
           PYTHONPATH=. python -u -m audit.publish_ticketswap_sitemaps apply
