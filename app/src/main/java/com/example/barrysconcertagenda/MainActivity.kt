@@ -510,9 +510,7 @@ fun ConcertApp() {
                 }
 
             5 ->
-                concerts.filter {
-                    it.archived
-                }
+                archiveConcerts(concerts)
 
             6 ->
                 concerts.filter {
