@@ -511,8 +511,7 @@ fun ConcertApp() {
 
             5 ->
                 concerts.filter {
-                    it.isAttending &&
-                            it.archived
+                    it.archived
                 }
 
             6 ->
