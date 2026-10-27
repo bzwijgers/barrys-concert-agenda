@@ -28,7 +28,7 @@ class ConcertFiltersTest {
 
     private fun stored(name: String, date: String, favorite: Boolean = false, attending: Boolean = false) =
         StoredConcert(artist = name, venue = "Testzaal", city = "Rotterdam",
-            country = "NL", date = date, time = "20:00", source = "Test",
+            country = "NL", date = date, time = "20:00", source = "Test", firstFound = 0L,
             url = "https://example.com/$name", isFavorite = favorite, isAttending = attending)
 
     @Test
