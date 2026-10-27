@@ -25976,6 +25976,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Villa 13: Eden + Fieldtrip + Sietse",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-01-22",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/villa13-22jan",
+    "firstFound": 1793078554654
+  },
+  {
     "artist": "Rob Lamberti presents A Celebration of George Michael",
     "venue": "Muziekgebouw Eindhoven",
     "city": "Eindhoven",
@@ -36021,6 +36032,17 @@
     "url": "https://www.tivolivredenburg.nl/agenda/29663621/sven-figee-18-03-2027/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sven-figee-the-listening-room-utrecht-tivolivredenburg-2027-03-18-CfXjts3qk5yAinTJoMaCt"
+  },
+  {
+    "artist": "The Skatalites (JM) + The Sybians",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-03-18",
+    "time": "19:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/the-skatalites-jm-the-sybians",
+    "firstFound": 1793078554654
   },
   {
     "artist": "Hugo Barriol + support",
