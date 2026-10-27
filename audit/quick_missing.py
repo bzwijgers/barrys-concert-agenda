@@ -2,6 +2,7 @@
 from scrapers.common import download_page_retry,_detail_date_time,_detail_title
 from scrapers.new_venues import parse_event, page_text
 import re
+from datetime import date
 urls=[
  ("De Helling","Utrecht","https://dehelling.nl/agenda/high-fade-23-04-2027/"),
  ("De Helling","Utrecht","https://dehelling.nl/agenda/kruidkoek-joost-oomen-support-tim-koehoorn-23-10-2026/"),
@@ -17,7 +18,7 @@ for name,city,url in urls:
         if name=="De Helling":
             parsed=parse_event(html,url,name,city)
             print("PARSED",parsed,flush=True)
-            if "high-fade-" in url or "kruidkoek-joost" in url:
+            if "high-fade-" in url or ("kruidkoek-joost" in url and date.today() <= date(2026, 10, 23)):
                 assert parsed is not None, "Confirmed Helling concert dropped: " + url
             if "freax-" in url:
                 assert parsed is None, "Club night incorrectly included: " + url
