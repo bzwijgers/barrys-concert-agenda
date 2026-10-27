@@ -819,7 +819,7 @@
     "date": "2026-10-29",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/cat-power/2741096",
+    "url": "https://www.paradiso.nl/nl/programma/cat-power/2741096",
     "firstFound": 0
   },
   {
@@ -892,6 +892,17 @@
     "url": "https://www.effenaar.nl/agenda/noah-guthrie-29okt",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/noah-guthrie-eindhoven-cafe-t-rozenknopje-2026-10-29-CbTKbARvVPpwmsShzzuEV"
+  },
+  {
+    "artist": "Ocie Elliott",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/en/program/ocie-elliott/2947626",
+    "firstFound": 1793099981166
   },
   {
     "artist": "Paardcafé: Singer-Songwriters United",
@@ -1388,7 +1399,7 @@
     "firstFound": 0
   },
   {
-    "artist": "Queen’s Pleasure + jacht",
+    "artist": "Queen’s Pleasure + Jacht",
     "venue": "Patronaat",
     "city": "Haarlem",
     "country": "NL",
@@ -1466,6 +1477,17 @@
     "url": "https://bibelot.net/programma/focus",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/focus-dordrecht-bibelot-poppodium-2026-10-30-CYwK9y6Y4gf9HeWRWmdVk"
+  },
+  {
+    "artist": "Katherine Li",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/katherine-li/2948185",
+    "firstFound": 1793099981166
   },
   {
     "artist": "Mattiel",
@@ -7358,17 +7380,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gavin-james-enschede-metropool-enschede-2026-11-12-CY14sVvNVLbLdtvsDUUMU"
   },
   {
-    "artist": "Guido Spek",
-    "venue": "Gebouw-T",
-    "city": "Bergen op Zoom",
-    "country": "NL",
-    "date": "2026-11-12",
-    "time": "20:30",
-    "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/guido-spek",
-    "firstFound": 0
-  },
-  {
     "artist": "home grown sessions #31",
     "venue": "Dynamo",
     "city": "Eindhoven",
@@ -9447,6 +9458,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Century's Crime - The most authentic tribute to Supertramp",
+    "venue": "Neushoorn",
+    "city": "Leeuwarden",
+    "country": "NL",
+    "date": "2026-11-15",
+    "time": "20:15",
+    "source": "Neushoorn",
+    "url": "https://www.neushoorn.nl/events/centurys-crime",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/centurys-crime-the-most-authentic-tribute-to-supertramp-leeuwarden-neushoorn-2026-11-15-CYvUXs53vSkukpyfEhLom"
+  },
+  {
     "artist": "Adriaan Persons",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -9481,18 +9504,6 @@
     "url": "https://www.paradiso.nl/nl/programma/bokoesam/2908023",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bokoesam-amsterdam-paradiso-2026-11-15-CcKmJPFqJEQM3feNvfVVU"
-  },
-  {
-    "artist": "Century's Crime - The most authentic tribute to Supertramp",
-    "venue": "Neushoorn",
-    "city": "Leeuwarden",
-    "country": "NL",
-    "date": "2026-11-15",
-    "time": "20:30",
-    "source": "Neushoorn",
-    "url": "https://www.neushoorn.nl/events/centurys-crime",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/centurys-crime-the-most-authentic-tribute-to-supertramp-leeuwarden-neushoorn-2026-11-15-CYvUXs53vSkukpyfEhLom"
   },
   {
     "artist": "Feeble Little Horse",
@@ -9813,7 +9824,7 @@
     "city": "Nijmegen",
     "country": "NL",
     "date": "2026-11-16",
-    "time": "21:45",
+    "time": "22:00",
     "source": "Doornroosje",
     "url": "https://www.doornroosje.nl/event/daoud",
     "firstFound": 0,
@@ -10291,7 +10302,7 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/joshua-idehen-utrecht-de-helling-2026-11-18-Cab34geSYs9FhbH7mbkYu"
   },
   {
-    "artist": "Ares",
+    "artist": "Ares + Kruzer",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
@@ -11445,7 +11456,7 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/parker-barrow-zoetermeer-poppodium-boerderij-2026-11-20-CeUL2iwsfHR9sfXumCn6A"
   },
   {
-    "artist": "Rijck",
+    "artist": "Rijck + DIM",
     "venue": "Tolhuistuin",
     "city": "Amsterdam",
     "country": "NL",
@@ -11467,18 +11478,6 @@
     "url": "https://www.neushoorn.nl/events/the-bluesbones",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-bluesbones-leeuwarden-neushoorn-2026-11-20-CYvUY37YMWbC7nm81N98Y"
-  },
-  {
-    "artist": "Trixie Whitley",
-    "venue": "Metropool Hengelo",
-    "city": "Hengelo",
-    "country": "NL",
-    "date": "2026-11-20",
-    "time": "21:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/trixie-whitley",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/trixie-whitley-hengelo-metropool-hengelo-2026-11-20-CZPKnbKyKmF79psByLNAz"
   },
   {
     "artist": "Frank Boeijen",
@@ -11539,6 +11538,18 @@
     "url": "https://www.doornroosje.nl/event/joshua-idehen",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/joshua-idehen-nijmegen-doornroosje-2026-11-20-Cdj6YneRafCNyBEPohJHu"
+  },
+  {
+    "artist": "Trixie Whitley",
+    "venue": "Metropool Hengelo",
+    "city": "Hengelo",
+    "country": "NL",
+    "date": "2026-11-20",
+    "time": "22:00",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/trixie-whitley",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/trixie-whitley-hengelo-metropool-hengelo-2026-11-20-CZPKnbKyKmF79psByLNAz"
   },
   {
     "artist": "Samba Roots  featuring Lucas Santana. · Super-Sonic Jazz Festival ·  Afterparty",
@@ -12206,7 +12217,7 @@
     "date": "2026-11-21",
     "time": "21:00",
     "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-21nov",
+    "url": "https://gebouw-t.nl/agenda/the-dirty-daddies-20nov",
     "firstFound": 0
   },
   {
@@ -13729,6 +13740,17 @@
     "firstFound": 1791588107075
   },
   {
+    "artist": "Noord Nederlands Orkest",
+    "venue": "De Oosterpoort",
+    "city": "Groningen",
+    "country": "NL",
+    "date": "2026-11-26",
+    "time": "20:15",
+    "source": "SPOT Groningen",
+    "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-231",
+    "firstFound": 1793099981166
+  },
+  {
     "artist": "Startblok Finale",
     "venue": "De Helling",
     "city": "Utrecht",
@@ -15012,7 +15034,7 @@
   },
   {
     "artist": "Subterranean Street Society",
-    "venue": "SPOT Groningen",
+    "venue": "De Oosterpoort",
     "city": "Groningen",
     "country": "NL",
     "date": "2026-11-28",
@@ -15361,17 +15383,6 @@
     "time": "14:30",
     "source": "dB's",
     "url": "https://dbstudio.nl/event/cora-kemperman-de-schuurmachines-release-party",
-    "firstFound": 0
-  },
-  {
-    "artist": "Jazz Inside: Ed Verhoeff",
-    "venue": "Gebouw-T",
-    "city": "Bergen op Zoom",
-    "country": "NL",
-    "date": "2026-11-29",
-    "time": "14:55",
-    "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/jazz-inside-ed-verhoeff",
     "firstFound": 0
   },
   {
@@ -18557,7 +18568,7 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/softcult/",
-    "clubCard": false,
+    "clubCard": true,
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/softcult-rotterdam-rotown-2026-12-06-Cetwhr1HjTRBhR4cTxKQB"
   },
@@ -23450,7 +23461,7 @@
     "city": "Haarlem",
     "country": "NL",
     "date": "2026-12-27",
-    "time": "14:30",
+    "time": "14:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/patro-quiz-kersteditie-27-12-26/",
     "firstFound": 0
@@ -23556,7 +23567,7 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/real-farmer-the-klittens/",
-    "clubCard": true,
+    "clubCard": false,
     "firstFound": 0
   },
   {
@@ -23594,6 +23605,17 @@
     "url": "https://www.ticketmaster.be/event/nerdland-voor-kleine-nerds-2026-%7C-beat-premium-comfort-experience-tickets/1697694367",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/nerdland-voor-kleine-nerds-2026-beat-premium-comfort-experience-antwerp-lotto-arena-2026-12-28-CeN1voSxcpAcZKtskzw9D"
+  },
+  {
+    "artist": "SPINVIS Presenteert: We Vieren Het Toch",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-12-28",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/70443984/spinvis-presenteert-we-vieren-het-toch-28-12-2026/",
+    "firstFound": 1793099981166
   },
   {
     "artist": "Tribute to QUEEN by REGINA (Italy)",
@@ -25495,6 +25517,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/alexandr-misko-utrecht-tivolivredenburg-2027-01-17-CYvsM3qaNRhwfTFUT3qh9"
   },
   {
+    "artist": "The James Brown Experience",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-17",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-james-brown-experience-17-01-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-james-brown-experience-haarlem-patronaat-2027-01-17-CXXQW9p2wZdS75JbPRdVA"
+  },
+  {
     "artist": "Mike Massé",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -25516,18 +25550,6 @@
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/programma/sawyer-hill/2897151",
     "firstFound": 0
-  },
-  {
-    "artist": "The James Brown Experience",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-01-17",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/the-james-brown-experience-17-01-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-james-brown-experience-haarlem-patronaat-2027-01-17-CXXQW9p2wZdS75JbPRdVA"
   },
   {
     "artist": "Isaiah Rashad",
@@ -26208,6 +26230,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bywater-call-utrecht-tivolivredenburg-2027-01-23-CbSbXM3eDtyLygbjLbhR3"
   },
   {
+    "artist": "Genesis Project – Philled with Collins",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-23",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/genesis-project-23-01-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/genesis-project-philled-with-collins-haarlem-patronaat-2027-01-23-CdxQn15XuQ44H9FbU1PHM"
+  },
+  {
     "artist": "Janna",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -26381,18 +26415,6 @@
     "url": "https://bibelot.net/programma/daredevils-zing-nederlands-met-me-2",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/daredevils-zing-nederlands-met-me-dordrecht-bibelot-poppodium-2027-01-23-CVz5QHm4dZWx5ovK9iNGo"
-  },
-  {
-    "artist": "Genesis Project – Philled with Collins",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-01-23",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/genesis-project-23-01-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/genesis-project-philled-with-collins-haarlem-patronaat-2027-01-23-CdxQn15XuQ44H9FbU1PHM"
   },
   {
     "artist": "Gilla Band + Makeshift Art Bar",
@@ -27091,6 +27113,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dirty-daddies-zwolle-hedon-2027-01-29-CXbZZV4Ks3XZqcNYERGEC"
   },
   {
+    "artist": "Wilson A – Releaseshow",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-29",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/wilson-a-releaseshow-29-01-27/",
+    "firstFound": 1793001895953
+  },
+  {
     "artist": "Zeno",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -27217,17 +27250,6 @@
     "url": "https://www.spotgroningen.nl/programma/vanderlinde-king-of-the-world-ruben-hoeke",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/vanderlinde-king-of-the-world-ruben-hoeke-groningen-spot-de-oosterpoort-2027-01-29-CZ8BVMRM8LS3Ujv1ZsBzZ"
-  },
-  {
-    "artist": "Wilson A – Releaseshow",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-01-29",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/wilson-a-releaseshow-29-01-27/",
-    "firstFound": 1793001895953
   },
   {
     "artist": "zZz + Stuurbaard Bakkebaard",
@@ -27392,6 +27414,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Extince – 30 Jaar Spraakwater",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-01-30",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/extince-30-jaar-spraakwater-30-01-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/extince-30-jaar-spraakwater-haarlem-patronaat-2027-01-30-CdzJjzBxrVEDHAFFeoPyq"
+  },
+  {
     "artist": "Sabrina Starke",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -27492,18 +27526,6 @@
     "url": "https://www.ticketmaster.nl/event/epica-tickets/1691164177?language=en-us",
     "firstFound": 1791588107075,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/epica-amsterdam-koninklijk-theater-carre-2027-01-30-CaLEKX8LWWBCfFCfrBtjd"
-  },
-  {
-    "artist": "Extince – 30 Jaar Spraakwater",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-01-30",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/extince-30-jaar-spraakwater-30-01-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/extince-30-jaar-spraakwater-haarlem-patronaat-2027-01-30-CdzJjzBxrVEDHAFFeoPyq"
   },
   {
     "artist": "Goldman Confidentiel",
@@ -29175,6 +29197,17 @@
     "firstFound": 1791628425341
   },
   {
+    "artist": "Prince Daddy & the Hyena",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2027-02-11",
+    "time": "20:00",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/princedaddyandthehyena/",
+    "firstFound": 1793099981166
+  },
+  {
     "artist": "The Bootleg Beatles",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -29361,6 +29394,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Prince Daddy & The Hyena",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-12",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/prince-daddy-the-hyena-12-02-27/",
+    "firstFound": 1793099981166
+  },
+  {
     "artist": "Skip The Use",
     "venue": "Cirque Royal - Koninklijk Circus",
     "city": "Brussels",
@@ -29474,6 +29518,18 @@
     "source": "Metropool",
     "url": "https://metropool.nl/agenda/tape-toy",
     "firstFound": 1793001895953
+  },
+  {
+    "artist": "The Wytches",
+    "venue": "Rotown",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-02-12",
+    "time": "21:30",
+    "source": "Rotown",
+    "url": "https://www.rotown.nl/agenda/the-wytches-1/",
+    "clubCard": false,
+    "firstFound": 1793099981166
   },
   {
     "artist": "BINA.",
@@ -30196,15 +30252,26 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/slow-fiction-amsterdam-paradiso-2027-02-15-CfnT4RAU6XYPhqMbvgtDj"
   },
   {
-    "artist": "Jakov Jozinović",
+    "artist": "Jakov Jozinovic",
     "venue": "Melkweg",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2027-02-16",
     "time": "19:00",
-    "source": "Melkweg",
-    "url": "https://www.melkweg.nl/nl/agenda/jakov-jozinovic-16-02-2027/",
-    "firstFound": 1793083478812
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jakov-jozinovic-tickets/681672060?language=en-us",
+    "firstFound": 1793099981166
+  },
+  {
+    "artist": "An Evening with Josh Ritter (Solo) • Doopsgezind Haarlem",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-16",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/an-evening-with-josh-ritter-solo-16-02-27/",
+    "firstFound": 0
   },
   {
     "artist": "Get Well Soon",
@@ -30264,17 +30331,6 @@
     "url": "https://www.ticketmaster.be/event/electric-callboy-tickets/896065041",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/electric-callboy-brussels-forest-national-vorst-nationaal-2027-02-16-Cc6TddEr4tbrhdmmojr9c"
-  },
-  {
-    "artist": "An Evening with Josh Ritter (Solo) • Doopsgezind Haarlem",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-02-16",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/an-evening-with-josh-ritter-solo-16-02-27/",
-    "firstFound": 0
   },
   {
     "artist": "Clap Your Hands Say Yeah",
@@ -31068,6 +31124,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tyler-braden-amsterdam-melkweg-2027-02-20-CbdxPyvh3rexVzJ5Cnmr7"
   },
   {
+    "artist": "YIN YIN + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "19:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/yin-yin-20-02-27/",
+    "firstFound": 0
+  },
+  {
     "artist": "OLIVIA",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -31076,17 +31143,6 @@
     "time": "19:30",
     "source": "TivoliVredenburg",
     "url": "https://www.tivolivredenburg.nl/agenda/99313895/olivia-20-02-2027/",
-    "firstFound": 0
-  },
-  {
-    "artist": "YIN YIN + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-02-20",
-    "time": "19:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/yin-yin-20-02-27/",
     "firstFound": 0
   },
   {
@@ -32298,6 +32354,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dana-winner-utrecht-tivolivredenburg-2027-02-26-Cdozbs4yepLVtSispGaAA"
   },
   {
+    "artist": "Dream State",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/dream-state-26-02-27/",
+    "firstFound": 1793001895953
+  },
+  {
     "artist": "FATOUMATA DIAWARA",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -32377,17 +32444,6 @@
     "url": "https://www.ticketmaster.be/event/benabar-tickets/1579796897",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/benabar-mons-theatre-royal-de-mons-2027-02-26-CZbkr5XuVjScWJjkEKsVf"
-  },
-  {
-    "artist": "Dream State",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-02-26",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/dream-state-26-02-27/",
-    "firstFound": 1793001895953
   },
   {
     "artist": "LIONSTORM",
@@ -32754,6 +32810,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Chef’Special",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/chefspecial-rider-27-02-27/",
+    "firstFound": 0
+  },
+  {
     "artist": "Eosine",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -32799,17 +32866,6 @@
     "url": "https://www.livepul.com/agenda/british-invasion-2027",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/british-invasion-musest-reeditors-scummy-men-uden-de-pul-2027-02-27-CdaDiPmZSkBmzN6Qss2zk"
-  },
-  {
-    "artist": "Chef’Special",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-02-27",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/chefspecial-rider-27-02-27/",
-    "firstFound": 0
   },
   {
     "artist": "French 79",
@@ -33428,6 +33484,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/clouseau-utrecht-tivolivredenburg-2027-03-03-CfXHb8JqoXJTKiuUYTTVJ"
   },
   {
+    "artist": "Mike Lindup Trio",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-03",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/mike-lindup-trio-03-03-27/",
+    "firstFound": 0
+  },
+  {
     "artist": "Moyka",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -33483,17 +33550,6 @@
     "url": "https://www.paradiso.nl/nl/programma/camille/2900348",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/camille-amsterdam-paradiso-2027-03-03-Cbu9o9TtvCrveoXfj1kkU"
-  },
-  {
-    "artist": "Mike Lindup Trio",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-03",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/mike-lindup-trio-03-03-27/",
-    "firstFound": 0
   },
   {
     "artist": "СОЮЗ (SOYUZ)",
@@ -33586,6 +33642,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mtv-unplugged-nirvana-utrecht-tivolivredenburg-2027-03-04-Cex2Y8oeYrScRR4BpuEix"
   },
   {
+    "artist": "REZN + Coltaine",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-04",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rezn-04-03-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rezn-coltaine-haarlem-patronaat-2027-03-04-CdXmAqBraZNvqGYQXzag4"
+  },
+  {
     "artist": "BONOBO // DISTANCE IN STATIC - LIVE // BRUSSELS",
     "venue": "Cirque Royal - Koninklijk Circus",
     "city": "Brussels",
@@ -33608,6 +33676,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Klangphonics",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-04",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/klangphonics-tickets/1242821048?language=en-us",
+    "firstFound": 1793099981166
+  },
+  {
     "artist": "PAULA COLE",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -33617,18 +33696,6 @@
     "source": "PAARD",
     "url": "https://www.paard.nl/event/paula-cole/",
     "firstFound": 0
-  },
-  {
-    "artist": "REZN + Coltaine",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-04",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/rezn-04-03-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rezn-coltaine-haarlem-patronaat-2027-03-04-CdXmAqBraZNvqGYQXzag4"
   },
   {
     "artist": "Roosbeef",
@@ -34113,6 +34180,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/longo-longo-amsterdam-paradiso-2027-03-06-CfkZHMzmCnZgEWSVKHNLf"
   },
   {
+    "artist": "Made in Purple – 55 Years of Made in Japan",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-06",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/made-in-purple-55-years-of-made-in-japan-06-03-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/made-in-purple-55-years-of-made-in-japan-haarlem-patronaat-2027-03-06-Cfcxzn1vdzymSJsnDdXgz"
+  },
+  {
     "artist": "80's Verantwoord",
     "venue": "De Pul",
     "city": "Uden",
@@ -34238,18 +34317,6 @@
     "clubCard": false,
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hallo-venray-rotterdam-rotown-2027-03-06-CetVx3uGHDAiZXST7XTYL"
-  },
-  {
-    "artist": "Made in Purple – 55 Years of Made in Japan",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-06",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/made-in-purple-55-years-of-made-in-japan-06-03-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/made-in-purple-55-years-of-made-in-japan-haarlem-patronaat-2027-03-06-Cfcxzn1vdzymSJsnDdXgz"
   },
   {
     "artist": "Marika Hackman",
@@ -34410,6 +34477,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Shantel",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-07",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/shantel-07-03-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/shantel-haarlem-patronaat-2027-03-07-CeobgS7E8yoWYcqdxQqxy"
+  },
+  {
     "artist": "Angélique Kidjo & Metropole Orkest",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -34513,16 +34592,15 @@
     "firstFound": 0
   },
   {
-    "artist": "Shantel",
-    "venue": "Patronaat",
-    "city": "Haarlem",
+    "artist": "Saint Etienne",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
     "country": "NL",
     "date": "2027-03-07",
     "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/shantel-07-03-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/shantel-haarlem-patronaat-2027-03-07-CeobgS7E8yoWYcqdxQqxy"
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/saint-etienne/2948998",
+    "firstFound": 1793099981166
   },
   {
     "artist": "KALEO - Way Down We Go Tour",
@@ -35026,6 +35104,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Rudeboy x Boskat",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rudeboy-x-boskat-12-03-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rudeboy-x-boskat-haarlem-patronaat-2027-03-12-CfnS3iX6DMX3HuEdtZnmP"
+  },
+  {
     "artist": "Avatar: Legend of Korra (in concert)",
     "venue": "Stadsschouwburg Antwerpen",
     "city": "Antwerp",
@@ -35082,18 +35172,6 @@
     "url": "https://bird-rotterdam.nl/event/kans-12-03-27",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kans-rotterdam-annabel-2027-03-12-CfeUt6WDqWoKHg8ev8Vor"
-  },
-  {
-    "artist": "Rudeboy x Boskat",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-12",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/rudeboy-x-boskat-12-03-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rudeboy-x-boskat-haarlem-patronaat-2027-03-12-CfnS3iX6DMX3HuEdtZnmP"
   },
   {
     "artist": "Scala 30",
@@ -35221,7 +35299,7 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/forq-zoetermeer-poppodium-boerderij-2027-03-12-CfkAqJCmaGfCtvTxhbFvM"
   },
   {
-    "artist": "Hazlett",
+    "artist": "Hazlett + The Man The Myth The Meatslab",
     "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
@@ -35367,6 +35445,18 @@
     "firstFound": 0
   },
   {
+    "artist": "De Kift",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-13",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/de-kift-13-03-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/de-kift-haarlem-patronaat-2027-03-13-CbH8nXjpGS9QdaE6yAvJP"
+  },
+  {
     "artist": "FINAL CHAPTER ALBUMRELEASE",
     "venue": "Hedon",
     "city": "Zwolle",
@@ -35422,18 +35512,6 @@
     "source": "Ticketmaster BE",
     "url": "https://www.ticketmaster.be/event/club-classics-2027-tickets/1011079219",
     "firstFound": 1791628425341
-  },
-  {
-    "artist": "De Kift",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-13",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/de-kift-13-03-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/de-kift-haarlem-patronaat-2027-03-13-CbH8nXjpGS9QdaE6yAvJP"
   },
   {
     "artist": "Krezip",
@@ -35824,6 +35902,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mallory-knox-support-eindhoven-dynamo-rock-metal-cafe-2027-03-16-CfXHdC7LwajFT9f2cvzT2"
   },
   {
+    "artist": "Mamas Gun",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-16",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/mamas-gun-16-03-27/",
+    "firstFound": 1793001895953
+  },
+  {
     "artist": "dB’s & TivoliVredenburg present: RUBY HAUNT (USA)",
     "venue": "dB's",
     "city": "Utrecht",
@@ -35833,17 +35922,6 @@
     "source": "dB's",
     "url": "https://dbstudio.nl/event/dbs-tivolivredenburg-present-ruby-haunt-usa",
     "firstFound": 0
-  },
-  {
-    "artist": "Mamas Gun",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-16",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/mamas-gun-16-03-27/",
-    "firstFound": 1793001895953
   },
   {
     "artist": "Nessa Barrett: The Tough Love Tour",
@@ -35938,6 +36016,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Clouseau • PHIL",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-17",
+    "time": "19:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/clouseau-17-03-27/",
+    "firstFound": 0
+  },
+  {
     "artist": "Eve",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -35946,17 +36035,6 @@
     "time": "19:00",
     "source": "Melkweg",
     "url": "https://www.melkweg.nl/nl/agenda/eve-17-03-2027/",
-    "firstFound": 0
-  },
-  {
-    "artist": "Clouseau • PHIL",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-17",
-    "time": "19:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/clouseau-17-03-27/",
     "firstFound": 0
   },
   {
@@ -36101,6 +36179,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/lorren-utrecht-tivolivredenburg-2027-03-18-Cdj6b65TuYoSnckZemgDK"
   },
   {
+    "artist": "Personal Trainer + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-18",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/personal-trainer-support-18-03-27/",
+    "firstFound": 0
+  },
+  {
     "artist": "Sven Figee",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -36144,17 +36233,6 @@
     "time": "20:00",
     "source": "PAARD",
     "url": "https://www.paard.nl/event/jet-van-der-steen-5/",
-    "firstFound": 0
-  },
-  {
-    "artist": "Personal Trainer + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-18",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/personal-trainer-support-18-03-27/",
     "firstFound": 0
   },
   {
@@ -36319,6 +36397,18 @@
     "firstFound": 1791588107075
   },
   {
+    "artist": "Luicidal + Grindpad",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-19",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/luicidal-19-03-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/luicidal-grindpad-haarlem-patronaat-2027-03-19-CfARadfWAYBgD5xUvYTgT"
+  },
+  {
     "artist": "RUBEN HILLEN",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -36363,18 +36453,6 @@
     "url": "https://www.ticketmaster.be/event/passenger-tickets/1862608831",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/passenger-brussels-cirque-royal-koninklijk-circus-2027-03-19-CeNzC918nC5YkqzPgius5"
-  },
-  {
-    "artist": "Luicidal + Grindpad",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-19",
-    "time": "20:15",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/luicidal-19-03-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/luicidal-grindpad-haarlem-patronaat-2027-03-19-CfARadfWAYBgD5xUvYTgT"
   },
   {
     "artist": "FIEP",
@@ -37106,6 +37184,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-haunted-youth-antwerp-lotto-arena-2027-03-25-CaZV1wHhBdE78YiJ5JNtH"
   },
   {
+    "artist": "Roosbeef + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-25",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/roosbeef-support-25-03-27/",
+    "firstFound": 0
+  },
+  {
     "artist": "The Dutch Queen",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -37162,17 +37251,6 @@
     "url": "https://www.mezz.nl/programma/pokey-lafarge-2/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/pokey-lafarge-breda-mezz-2027-03-25-CdozdT2B4dbk7WPQJiGop"
-  },
-  {
-    "artist": "Roosbeef + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-25",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/roosbeef-support-25-03-27/",
-    "firstFound": 0
   },
   {
     "artist": "RUDEBOY X BOSKAT",
@@ -37290,6 +37368,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/wende-utrecht-tivolivredenburg-2027-03-26-CfG71UPuisgftK25pgENE"
   },
   {
+    "artist": "Honahlei + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/honahlei-support-26-03-27/",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "KAGAMI",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -37334,17 +37423,6 @@
     "url": "https://www.ticketmaster.be/event/goldman-symphonique-tickets/1688567848",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/goldman-symphonique-brussels-cirque-royal-koninklijk-circus-2027-03-26-CZLXxuU3YHAtzp9mGeYRN"
-  },
-  {
-    "artist": "Honahlei + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-26",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/honahlei-support-26-03-27/",
-    "firstFound": 1793083478812
   },
   {
     "artist": "Jet van der Steen",
@@ -37414,6 +37492,17 @@
     "url": "https://poppodiumboerderij.nl/programma/thedutchqueen/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-dutch-queen-zoetermeer-poppodium-boerderij-2027-03-26-CZhusNwmW386W7fA7kFJQ"
+  },
+  {
+    "artist": "Villagers of Ioannina City",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/villagers-of-ioannina-city",
+    "firstFound": 1793099981166
   },
   {
     "artist": "Windrose Giants Antwerp - CityX Mons",
@@ -37563,6 +37652,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Tributeconcert RipLive Remembering 2026",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-27",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/tributeconcert-riplive-remembering-2026-27-03-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tributeconcert-riplive-remembering-2026-haarlem-patronaat-2027-03-27-CZYo26cQV6CiQXTe7cNtd"
+  },
+  {
     "artist": "Cali",
     "venue": "Espace culturel Victor Jara",
     "city": "Soignies",
@@ -37677,18 +37778,6 @@
     "url": "https://www.spotgroningen.nl/programma/miss-montreal-12",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/miss-montreal-groningen-spot-de-oosterpoort-2027-03-27-CcKiGuGU1j8wvdeNGno5K"
-  },
-  {
-    "artist": "Tributeconcert RipLive Remembering 2026",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-03-27",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/tributeconcert-riplive-remembering-2026-27-03-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tributeconcert-riplive-remembering-2026-haarlem-patronaat-2027-03-27-CZYo26cQV6CiQXTe7cNtd"
   },
   {
     "artist": "Ultimate Eagles",
@@ -37883,6 +37972,17 @@
     "url": "https://dehelling.nl/agenda/iluka-28-03-2027",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/iluka-utrecht-de-helling-2027-03-28-CetwNxGnXp5WY4yYejsoE"
+  },
+  {
+    "artist": "Villagers of Ioannina City",
+    "venue": "Neushoorn",
+    "city": "Leeuwarden",
+    "country": "NL",
+    "date": "2027-03-28",
+    "time": "20:45",
+    "source": "Neushoorn",
+    "url": "https://www.neushoorn.nl/events/villagers-of-ioannina-city",
+    "firstFound": 1793099981166
   },
   {
     "artist": "Herman van Veen",
@@ -38226,6 +38326,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Ocie Elliott",
+    "venue": "De Oosterpoort",
+    "city": "Groningen",
+    "country": "NL",
+    "date": "2027-04-02",
+    "time": "20:00",
+    "source": "SPOT Groningen",
+    "url": "https://www.spotgroningen.nl/programma/ocie-elliott",
+    "firstFound": 1793099981166
+  },
+  {
     "artist": "Politie Warnsveld",
     "venue": "De Helling",
     "city": "Utrecht",
@@ -38430,6 +38541,18 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/keo-amsterdam-melkweg-2027-04-03-CfkY9TQNUUd5eWnHbZZ7L"
   },
   {
+    "artist": "Buster Shuffle + Antillectual",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-04-03",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/buster-shuffle-03-04-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/buster-shuffle-antillectual-haarlem-patronaat-2027-04-03-Cf2rNFkBbWYjvjdRgNYD8"
+  },
+  {
     "artist": "jet van der steen",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -38486,18 +38609,6 @@
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/blackbird-4/",
     "firstFound": 0
-  },
-  {
-    "artist": "Buster Shuffle + Antillectual",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-04-03",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/buster-shuffle-03-04-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/buster-shuffle-antillectual-haarlem-patronaat-2027-04-03-Cf2rNFkBbWYjvjdRgNYD8"
   },
   {
     "artist": "Flaire",
@@ -39645,6 +39756,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Eskalatie, ALLUS, Fietsband - SKA's Fest",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-04-11",
+    "time": "18:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/eskalatie-allus-fietsband-skas-fest/2948118",
+    "firstFound": 1793099981166
+  },
+  {
     "artist": "Kim Wilde",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -39667,6 +39789,17 @@
     "url": "https://www.paradiso.nl/nl/programma/fright-years/2940795",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/fright-years-amsterdam-paradiso-2027-04-11-CfnT4ygoMFJU9VNWhVRqt"
+  },
+  {
+    "artist": "Motorpsycho",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-04-11",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/motorpsycho-11-04-27/",
+    "firstFound": 1793001895953
   },
   {
     "artist": "Chef'Special",
@@ -39711,17 +39844,6 @@
     "source": "Effenaar",
     "url": "https://www.effenaar.nl/agenda/elvis-concert2027",
     "firstFound": 0
-  },
-  {
-    "artist": "Motorpsycho",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-04-11",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/motorpsycho-11-04-27/",
-    "firstFound": 1793001895953
   },
   {
     "artist": "Nienke Leone",
@@ -40010,6 +40132,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Current Swell + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-04-15",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/current-swell-support-15-04-27/",
+    "firstFound": 1793001895953
+  },
+  {
     "artist": "Jack Kays And His Band",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -40065,17 +40198,6 @@
     "url": "https://www.ticketmaster.be/event/christophe-willem-tickets/816707780",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/christophe-willem-mons-theatre-royal-de-mons-2027-04-15-Cf4kBkFvqVUHiScHFeRKZ"
-  },
-  {
-    "artist": "Current Swell + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-04-15",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/current-swell-support-15-04-27/",
-    "firstFound": 1793001895953
   },
   {
     "artist": "Gauvain Sers",
@@ -41348,6 +41470,28 @@
     "firstFound": 0
   },
   {
+    "artist": "Kim Churchill + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-04-24",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/kim-churchill-support-24-04-27/",
+    "firstFound": 1793001895953
+  },
+  {
+    "artist": "Michael Jackson Project feat Jared Grant",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-04-24",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/jared-grant-off-the-wall-03-12-26/",
+    "firstFound": 0
+  },
+  {
     "artist": "Pulverize Metalfest",
     "venue": "De Pul",
     "city": "Uden",
@@ -41379,17 +41523,6 @@
     "source": "013",
     "url": "https://www.013.nl/programma/154895/the-pineapple-thief",
     "firstFound": 0
-  },
-  {
-    "artist": "Kim Churchill + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-04-24",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/kim-churchill-support-24-04-27/",
-    "firstFound": 1793001895953
   },
   {
     "artist": "New Wave - All Stars",
@@ -41426,17 +41559,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Michael Jackson Project feat Jared Grant",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-04-24",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/jared-grant-off-the-wall-03-12-26/",
-    "firstFound": 0
-  },
-  {
     "artist": "Marquee Square Heroes & Dry Land play Marillion",
     "venue": "Neushoorn",
     "city": "Leeuwarden",
@@ -41468,7 +41590,7 @@
     "time": "21:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/orgel-vreten-1/",
-    "clubCard": true,
+    "clubCard": false,
     "firstFound": 1793001895953
   },
   {
@@ -41934,6 +42056,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/simple-minds-amsterdam-ziggo-dome-2027-04-30-CehvL3vsBa2MVPTZEqM9j"
   },
   {
+    "artist": "The Legend of Springsteen",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-04-30",
+    "time": "20:00",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/the-legend-of-springsteen",
+    "firstFound": 1793099981166
+  },
+  {
     "artist": "Zoë Livay",
     "venue": "Poppodium 013 - Next",
     "city": "Tilburg",
@@ -42329,6 +42462,17 @@
     "firstFound": 1793001895953
   },
   {
+    "artist": "Felipe Baldomir + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-05-07",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/felipe-baldomir-support-07-05-27/",
+    "firstFound": 1793001895953
+  },
+  {
     "artist": "Johnny Delaware",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -42371,17 +42515,6 @@
     "source": "013",
     "url": "https://www.013.nl/programma/161454/bente",
     "firstFound": 0
-  },
-  {
-    "artist": "Felipe Baldomir + support",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-05-07",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/felipe-baldomir-support-07-05-27/",
-    "firstFound": 1793001895953
   },
   {
     "artist": "Gosse Bosma (release show) + ZOEKHETUITMAN + Asbest",
@@ -42670,6 +42803,18 @@
     "firstFound": 0
   },
   {
+    "artist": "Rumours of Fleetwood Mac",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-05-09",
+    "time": "19:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/rumours-of-fleetwood-mac-09-05-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rumours-of-fleetwood-mac-haarlem-philharmonie-haarlem-2027-05-09-CbdxXizUfsETMRnqQgGmz"
+  },
+  {
     "artist": "Skerryvore",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -42680,18 +42825,6 @@
     "url": "https://www.melkweg.nl/nl/agenda/skerryvore-09-05-2027/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/skerryvore-amsterdam-melkweg-2027-05-09-CfVMieMW4zCziWCcNLBX7"
-  },
-  {
-    "artist": "Rumours of Fleetwood Mac",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-05-09",
-    "time": "20:00",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/rumours-of-fleetwood-mac-09-05-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/rumours-of-fleetwood-mac-haarlem-philharmonie-haarlem-2027-05-09-CbdxXizUfsETMRnqQgGmz"
   },
   {
     "artist": "The Coronas",
@@ -43437,6 +43570,18 @@
     "firstFound": 1793001895953
   },
   {
+    "artist": "The Doors Alive",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-05-22",
+    "time": "19:30",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/the-doors-alive-22-05-27/",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-doors-alive-haarlem-patronaat-2027-05-22-CeAp9a7CLwvrDwm2Cmv9A"
+  },
+  {
     "artist": "Het Dikste Café Aan De Haven",
     "venue": "Rotterdam Ahoy",
     "city": "Rotterdam",
@@ -43483,18 +43628,6 @@
     "firstFound": 0
   },
   {
-    "artist": "The Doors Alive",
-    "venue": "Patronaat",
-    "city": "Haarlem",
-    "country": "NL",
-    "date": "2027-05-22",
-    "time": "20:30",
-    "source": "Patronaat",
-    "url": "https://patronaat.nl/event/the-doors-alive-22-05-27/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-doors-alive-haarlem-patronaat-2027-05-22-CeAp9a7CLwvrDwm2Cmv9A"
-  },
-  {
     "artist": "Mood Bored",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -43503,7 +43636,7 @@
     "time": "21:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/mood-bored-1/",
-    "clubCard": true,
+    "clubCard": false,
     "firstFound": 0
   },
   {
@@ -43663,6 +43796,17 @@
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/loreen-the-wildfire-tour/2929145",
     "firstFound": 0
+  },
+  {
+    "artist": "Bertie Newman",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-05-26",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/41283456/bertie-newman-26-05-2027/",
+    "firstFound": 1793099981166
   },
   {
     "artist": "Harry Sacksioni",
@@ -44477,7 +44621,7 @@
     "city": "Haarlem",
     "country": "NL",
     "date": "2027-06-13",
-    "time": "20:30",
+    "time": "19:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/clinton-fearon-sings-the-gladiators-13-06-27/",
     "firstFound": 1793001895953
@@ -45361,7 +45505,7 @@
     "city": "Haarlem",
     "country": "NL",
     "date": "2027-09-04",
-    "time": "20:00",
+    "time": "19:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/satsang-support-04-09-27/",
     "firstFound": 0
@@ -45406,7 +45550,7 @@
     "city": "Haarlem",
     "country": "NL",
     "date": "2027-09-08",
-    "time": "20:00",
+    "time": "19:00",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/archive-08-09-27/",
     "firstFound": 0
@@ -45667,7 +45811,7 @@
     "city": "Haarlem",
     "country": "NL",
     "date": "2027-09-30",
-    "time": "20:30",
+    "time": "19:30",
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/new-purple-celebration-the-music-of-prince-30-09-27/",
     "firstFound": 0,
@@ -46570,6 +46714,17 @@
     "source": "PAARD",
     "url": "https://www.paard.nl/event/kovacs-8/",
     "firstFound": 0
+  },
+  {
+    "artist": "Bruce Dickinson - Psychogod Tour 2027",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-11-25",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/bruce-dickinson-psychogod-tour-2027-tickets/916952505?language=en-us",
+    "firstFound": 1793099981166
   },
   {
     "artist": "Carmina Burana",
