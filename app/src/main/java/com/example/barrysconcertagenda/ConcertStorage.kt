@@ -52,9 +52,10 @@ object ConcertStorage {
 
             concerts
 
-        } catch (_: Exception) {
-
-            emptyList()
+        } catch (e: Exception) {
+            // Never silently treat corrupted storage as an empty library:
+            // a subsequent refresh could overwrite saved tickets/favourites.
+            throw IllegalStateException("Stored concerts could not be read safely", e)
         }
     }
 
