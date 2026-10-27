@@ -316,21 +316,14 @@ fun ConcertApp() {
         val merged =
             linkedMapOf<String, StoredConcert>()
 
-        storedBefore.forEach { concert ->
-
-            val key =
-                normalizeUrl(
-                    concert.url
-                )
-
-            if (
-                key.isNotBlank()
-            ) {
-
-                merged[key] =
-                    concert
+        // Keep past history and personal selections, but do not keep
+        // unmarked future events removed from a successful central feed.
+        val incomingUrls = downloadedStored.map { normalizeUrl(it.url) }.toSet()
+        retainedStoredConcerts(storedBefore, incomingUrls, sourceConcerts.isNotEmpty())
+            .forEach { concert ->
+                val key = normalizeUrl(concert.url)
+                if (key.isNotBlank()) merged[key] = concert
             }
-        }
 
         downloadedStored.forEach { concert ->
 
