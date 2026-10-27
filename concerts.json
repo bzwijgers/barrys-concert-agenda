@@ -1,120 +1,5 @@
 [
   {
-    "artist": "Backstage & Blik Vooruit",
-    "venue": "Paradiso",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "17:00",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/backstage-blik-vooruit/2935212",
-    "firstFound": 0
-  },
-  {
-    "artist": "Paul Carrack",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "19:00",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/29212732/paul-carrack-26-10-2026/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/paul-carrack-utrecht-tivolivredenburg-2026-10-26-CWMevihFWxXGXfLZMYFRC"
-  },
-  {
-    "artist": "Son Lux",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "19:00",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/48173061/son-lux-26-10-2026/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/son-lux-utrecht-tivolivredenburg-2026-10-26-CbDKZ7rHN8HKnYgHXofuy"
-  },
-  {
-    "artist": "CeeLo Green",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "19:30",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/69214441/ceelo-green-26-10-2026/",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ceelo-green-utrecht-tivolivredenburg-2026-10-26-CbhuiL73rzLZcYKQeZxGV"
-  },
-  {
-    "artist": "Duran Duran",
-    "venue": "ING ARENA",
-    "city": "Brussels",
-    "country": "BE",
-    "date": "2026-10-26",
-    "time": "20:00",
-    "source": "Ticketmaster BE",
-    "url": "https://www.ticketmaster.be/event/duran-duran-tickets/582140838",
-    "firstFound": 1791628425341,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/duran-duran-brussels-ing-arena-2026-10-26-Cbe72nP7uZBVZXtYwvEMr"
-  },
-  {
-    "artist": "Max Fry",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "20:00",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/max-fry/",
-    "firstFound": 0
-  },
-  {
-    "artist": "Nena",
-    "venue": "De Oosterpoort",
-    "city": "Groningen",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "20:00",
-    "source": "SPOT Groningen",
-    "url": "https://www.spotgroningen.nl/programma/nena-2-26",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/nena-groningen-spot-de-oosterpoort-2026-10-26-CZRDMxtdDtunFMiQyVRzA"
-  },
-  {
-    "artist": "Robert Jon & The Wreck (USA)",
-    "venue": "Spirit of 66",
-    "city": "Verviers",
-    "country": "BE",
-    "date": "2026-10-26",
-    "time": "20:00",
-    "source": "Ticketmaster BE",
-    "url": "https://www.ticketmaster.be/event/robert-jon--the-wreck-usa--tickets/669060607",
-    "firstFound": 1791628425341
-  },
-  {
-    "artist": "Chanel Beads + urika's bedroom",
-    "venue": "Tolhuistuin",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "20:30",
-    "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/programma/chanel-beads/2907645",
-    "firstFound": 0
-  },
-  {
-    "artist": "Natanya - THE ATTITUDE TOUR",
-    "venue": "Bitterzoet",
-    "city": "Amsterdam",
-    "country": "NL",
-    "date": "2026-10-26",
-    "time": "20:30",
-    "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/natanya-the-attitude-tour/2902260",
-    "firstFound": 0
-  },
-  {
     "artist": "Clawfinger",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -927,18 +812,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Voorspel: Nederlandstalig",
-    "venue": "Metropool Enschede",
-    "city": "Enschede",
-    "country": "NL",
-    "date": "2026-10-29",
-    "time": "20:00",
-    "source": "Metropool",
-    "url": "https://metropool.nl/agenda/voorspel-nederlandstalig",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/voorspel-nederlandstalig-enschede-metropool-enschede-2026-10-29-CcegK8pwY5o4G7fYvRBha"
-  },
-  {
     "artist": "Cat Power",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -958,7 +831,7 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/cola-1/",
-    "clubCard": true,
+    "clubCard": false,
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/cola-rotterdam-rotown-2026-10-29-CZWZARMcANfQHMmjSD7nT"
   },
@@ -1065,6 +938,18 @@
     "source": "Bolwerk",
     "url": "https://www.podiuminfo.nl/concert/449993/Thorbjorn-Risager-The-Black-Tornado/Het-Bolwerk",
     "firstFound": 0
+  },
+  {
+    "artist": "Voorspel: Nederlandstalig",
+    "venue": "Metropool Enschede",
+    "city": "Enschede",
+    "country": "NL",
+    "date": "2026-10-29",
+    "time": "20:30",
+    "source": "Metropool",
+    "url": "https://metropool.nl/agenda/voorspel-nederlandstalig",
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/voorspel-nederlandstalig-enschede-metropool-enschede-2026-10-29-CcegK8pwY5o4G7fYvRBha"
   },
   {
     "artist": "Westside Cowboy + Wyatt",
@@ -1537,6 +1422,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/axel-flovent-groningen-spot-lutherse-kerk-2026-10-30-CXpShHKLi5JzEVb1ntADJ"
   },
   {
+    "artist": "Booshle G.",
+    "venue": "Tolhuistuin",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:30",
+    "source": "Tolhuistuin",
+    "url": "https://www.paradiso.nl/nl/programma/booshle-g/2939428",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Bökkers",
     "venue": "Metropool Hengelo",
     "city": "Hengelo",
@@ -1615,6 +1511,28 @@
     "source": "Gebouw-T",
     "url": "https://gebouw-t.nl/agenda/scheldefestival",
     "firstFound": 0
+  },
+  {
+    "artist": "sophia stel: the greatest tour of all time",
+    "venue": "Bitterzoet",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/sophia-stel-the-greatest-tour-of-all-time/2944761",
+    "firstFound": 1793083478812
+  },
+  {
+    "artist": "The Cinematic Orchestra + Elliot Skinner",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-10-30",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/the-cinematic-orchestra/2945509",
+    "firstFound": 1793083478812
   },
   {
     "artist": "The Clarks ft. Rinus Gerritsen & Cesar Zuiderwijk",
@@ -2699,7 +2617,7 @@
     "city": "Utrecht",
     "country": "NL",
     "date": "2026-11-01",
-    "time": "15:45",
+    "time": "15:30",
     "source": "De Helling",
     "url": "https://dehelling.nl/agenda/momentum-iii-potochkine-vioflesh-silent-runners-01-11-2026",
     "firstFound": 0,
@@ -3007,15 +2925,15 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/breabach-groningen-spot-de-oosterpoort-2026-11-01-Cb5kQe1sbistnYN2PSUVj"
   },
   {
-    "artist": "Floor Jansen",
+    "artist": "Floor Jansen + ISE",
     "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-01",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/floor-jansen/2729670",
-    "firstFound": 0
+    "url": "https://www.paradiso.nl/nl/programma/floor-jansen/2729670",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Gruppo Sportivo – Stop Motion: 50th Anniversary Tour",
@@ -3805,6 +3723,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Oskar Med K",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2026-11-04",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/oskar-med-k/2947245",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "World News",
     "venue": "Rotown",
     "city": "Rotterdam",
@@ -4381,17 +4310,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Le Guess Who? 2026",
-    "venue": "De Helling",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-11-06",
-    "time": "10:00",
-    "source": "De Helling",
-    "url": "https://dehelling.nl/agenda/le-guess-who-2026-06-11-2026",
-    "firstFound": 0
-  },
-  {
     "artist": "Le Guess Who? – Friday",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -4424,6 +4342,17 @@
     "url": "https://www.ticketmaster.be/event/a-tribute-to-whitney-houston-%7C-beat-premium-comfort-experience-tickets/2078853299",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/a-tribute-to-whitney-houston-beat-premium-comfort-experience-antwerp-lotto-arena-2026-11-06-Ca7tq1fWgRQ3ZqnMvHaz9"
+  },
+  {
+    "artist": "Le Guess Who? 2026",
+    "venue": "De Helling",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-06",
+    "time": "18:00",
+    "source": "De Helling",
+    "url": "https://dehelling.nl/agenda/le-guess-who-2026-06-11-2026",
+    "firstFound": 0
   },
   {
     "artist": "DCN Presents: Halloween Anime Karaoke",
@@ -5036,17 +4965,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Le Guess Who? 2026",
-    "venue": "De Helling",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2026-11-07",
-    "time": "10:00",
-    "source": "De Helling",
-    "url": "https://dehelling.nl/agenda/le-guess-who-2026-07-11-2026",
-    "firstFound": 0
-  },
-  {
     "artist": "Job & Friends | be•at Premium Comfort Experience",
     "venue": "Lotto Arena - Lotto Lounge",
     "city": "Merksem (Antwerpen)",
@@ -5081,6 +4999,17 @@
     "url": "https://baroeg.nl/productie/ddd-xxiv-day-1-pagan-altar/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ddd-xxiv-day-1-pagan-altar-godthrymm-wolves-in-winter-facade-sordid-empire-afgrond-rotterdam-baroeg-2026-11-07-CdUTce9Sn5QHNq8Y983zE"
+  },
+  {
+    "artist": "Le Guess Who? 2026",
+    "venue": "De Helling",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "15:30",
+    "source": "De Helling",
+    "url": "https://dehelling.nl/agenda/le-guess-who-2026-07-11-2026",
+    "firstFound": 0
   },
   {
     "artist": "Le Guess Who? – Saturday",
@@ -5290,6 +5219,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Pier15 x MEZZ: Tusky",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/tusky-2/",
+    "firstFound": 0
+  },
+  {
     "artist": "Sonische Reis – Een avond van Dans, Adem & Gong",
     "venue": "Patronaat",
     "city": "Haarlem",
@@ -5322,17 +5262,6 @@
     "url": "https://www.ticketmaster.be/event/the-big-wheels-b--born-to-run-b--tickets/1632574757",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/the-big-wheels-b-born-to-run-b-verviers-spirit-of-66-2026-11-07-CZYneYy3zawHFHUciqUfD"
-  },
-  {
-    "artist": "Tusky",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2026-11-07",
-    "time": "20:00",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/tusky-2/",
-    "firstFound": 0
   },
   {
     "artist": "Yazz Ahmed - A Paradise in the Hold",
@@ -5691,17 +5620,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/garage-nation-amsterdam-paradiso-2026-11-07-CbhnyrqqwTLpRFHNQP7xP"
   },
   {
-    "artist": "T-Sessie",
-    "venue": "Gebouw-T",
-    "city": "Bergen op Zoom",
-    "country": "NL",
-    "date": "2026-11-08",
-    "time": "",
-    "source": "Gebouw-T",
-    "url": "https://gebouw-t.nl/agenda/t-sessie-37",
-    "firstFound": 0
-  },
-  {
     "artist": "Poederdoos",
     "venue": "Merleyn",
     "city": "Nijmegen",
@@ -5816,6 +5734,17 @@
     "firstFound": 0
   },
   {
+    "artist": "T-Sessie",
+    "venue": "Gebouw-T",
+    "city": "Bergen op Zoom",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "14:30",
+    "source": "Gebouw-T",
+    "url": "https://gebouw-t.nl/agenda/t-sessie-37",
+    "firstFound": 0
+  },
+  {
     "artist": "Christoff Zingt Tura XXL, De hits",
     "venue": "Lotto Arena Antwerpen",
     "city": "Merksem (Antwerpen)",
@@ -5847,6 +5776,17 @@
     "source": "Bolwerk",
     "url": "https://www.podiuminfo.nl/concert/449994/Church-of-Cash/Het-Bolwerk",
     "firstFound": 0
+  },
+  {
+    "artist": "STONEWALL x MOVIES THAT MATTER",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2026-11-08",
+    "time": "16:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/stonewall-movies-that-matter-2/",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Vengeance",
@@ -6097,7 +6037,7 @@
     "date": "2026-11-08",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/programma/noha-sare/2907767",
+    "url": "https://www.paradiso.nl/nl/programma/noha-sare/2907767",
     "firstFound": 0
   },
   {
@@ -6304,9 +6244,8 @@
     "date": "2026-11-09",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/lido-pimienta/2906300",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/lido-pimienta-amsterdam-bitterzoet-2026-11-09-Cc8QSiB7dqxoHnYEKdyBy"
+    "url": "https://www.paradiso.nl/programma/lido-pimienta/2906300",
+    "firstFound": 0
   },
   {
     "artist": "Nick Hakim",
@@ -6553,15 +6492,15 @@
     "firstFound": 0
   },
   {
-    "artist": "Macy Gray - The Trouble With The Truth Tour",
+    "artist": "Macy Gray - The Trouble With The Truth Tour + K.ZIA",
     "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
     "date": "2026-11-10",
     "time": "20:30",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/programma/macy-gray-the-trouble-with-the-truth-tour/2915810",
-    "firstFound": 0
+    "url": "https://www.paradiso.nl/nl/programma/macy-gray-the-trouble-with-the-truth-tour/2915810",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Radio Free Alice",
@@ -10359,7 +10298,7 @@
     "date": "2026-11-18",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/programma/ares/2898554",
+    "url": "https://www.paradiso.nl/nl/programma/ares/2898554",
     "firstFound": 0
   },
   {
@@ -10488,9 +10427,8 @@
     "date": "2026-11-18",
     "time": "22:00",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/pan/2908663",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/pan-amsterdam-amsterdam-paradiso-2026-11-18-CcRSjJgGBHZXwL3L5FAKk"
+    "url": "https://www.paradiso.nl/nl/programma/pan-amsterdam/2908663",
+    "firstFound": 0
   },
   {
     "artist": "Baby Lasagna",
@@ -12580,15 +12518,15 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ranestrane-zoetermeer-poppodium-boerderij-2026-11-22-CbmBpaMLfY8yzWvas1R1k"
   },
   {
-    "artist": "Martha High & The Funky Divas",
+    "artist": "Martha High & The Funky Divas + Toscans Brew",
     "venue": "Het Bolwerk",
     "city": "Sneek",
     "country": "NL",
     "date": "2026-11-22",
     "time": "15:30",
     "source": "Bolwerk",
-    "url": "https://www.podiuminfo.nl/concert/481826/Martha-High-The-Funky-Divas/Het-Bolwerk",
-    "firstFound": 0
+    "url": "https://www.podiuminfo.nl/concert/481826/Martha-High-The-Funky-Divas-Toscans-Brew/Het-Bolwerk",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Oliver Wakeman",
@@ -13138,17 +13076,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "GIMS - Carpe Diem Tour",
-    "venue": "ING ARENA",
-    "city": "Brussels",
-    "country": "BE",
-    "date": "2026-11-24",
-    "time": "20:00",
-    "source": "Ticketmaster BE",
-    "url": "https://www.ticketmaster.be/event/gims-carpe-diem-tour-tickets/1115594934",
-    "firstFound": 1791628425341
-  },
-  {
     "artist": "K-OTIC",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -13242,6 +13169,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/tom-mcrae-breda-waalse-kerk-2026-11-24-CZBd4upMSUY64oEjksqyM"
   },
   {
+    "artist": "Actie Aletta",
+    "venue": "Doornroosje",
+    "city": "Nijmegen",
+    "country": "NL",
+    "date": "2026-11-24",
+    "time": "20:45",
+    "source": "Doornroosje",
+    "url": "https://www.doornroosje.nl/event/actie-aletta",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Yaeger",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -13249,9 +13187,8 @@
     "date": "2026-11-24",
     "time": "21:00",
     "source": "Paradiso",
-    "url": "https://www.paradiso.nl/nl/programma/yaeger/2938680",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/yaeger-amsterdam-paradiso-2026-11-24-CfPjL2ShTJuMAiy1w8RQd"
+    "url": "https://www.paradiso.nl/programma/yaeger/2938680",
+    "firstFound": 0
   },
   {
     "artist": "Imperial Triumphant",
@@ -13286,6 +13223,17 @@
     "source": "013",
     "url": "https://www.013.nl/programma/159487/ernst-bobbie-de-rest",
     "firstFound": 0
+  },
+  {
+    "artist": "Level Up",
+    "venue": "Neushoorn",
+    "city": "Leeuwarden",
+    "country": "NL",
+    "date": "2026-11-25",
+    "time": "17:30",
+    "source": "Neushoorn",
+    "url": "https://www.neushoorn.nl/events/level-up",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Kid Kapichi",
@@ -13434,17 +13382,6 @@
     "source": "Patronaat",
     "url": "https://patronaat.nl/event/diana-arbenina-25-11-26/",
     "firstFound": 0
-  },
-  {
-    "artist": "GIMS - Carpe Diem Tour",
-    "venue": "ING ARENA",
-    "city": "Brussels",
-    "country": "BE",
-    "date": "2026-11-25",
-    "time": "20:00",
-    "source": "Ticketmaster BE",
-    "url": "https://www.ticketmaster.be/event/gims-carpe-diem-tour-tickets/367817000",
-    "firstFound": 1791628425341
   },
   {
     "artist": "John Hackett Band (uk) + special guest : Heather Findlay (uk)",
@@ -15036,8 +14973,8 @@
     "time": "20:00",
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/mietze-conte/2903037",
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mietze-conte-amsterdam-bitterzoet-2026-11-28-CbhnzMbyGnY2xojibbKcR",
-    "firstFound": 0
+    "firstFound": 0,
+    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/mietze-conte-amsterdam-bitterzoet-2026-11-28-CbhnzMbyGnY2xojibbKcR"
   },
   {
     "artist": "PRINS S. EN DE GEIT X RESIDENTIE ORKEST",
@@ -15075,7 +15012,7 @@
   },
   {
     "artist": "Subterranean Street Society",
-    "venue": "De Oosterpoort",
+    "venue": "SPOT Groningen",
     "city": "Groningen",
     "country": "NL",
     "date": "2026-11-28",
@@ -15381,6 +15318,17 @@
     "url": "https://www.paradiso.nl/nl/programma/druk-2026/2843536",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/druk-2026-amsterdam-paradiso-2026-11-29-CYfir155vjGFBJ1jFU6Ax"
+  },
+  {
+    "artist": "Metal Sunday",
+    "venue": "De Helling",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2026-11-29",
+    "time": "13:30",
+    "source": "De Helling",
+    "url": "https://dehelling.nl/agenda/metal-sunday-29-11-2026",
+    "firstFound": 1793083478812
   },
   {
     "artist": "DDW: IN THE HEAD OF A YOUNG MIND",
@@ -16254,7 +16202,7 @@
     "firstFound": 0
   },
   {
-    "artist": "Paris Paloma + Pixie McCann",
+    "artist": "Paris Paloma",
     "venue": "Paradiso",
     "city": "Amsterdam",
     "country": "NL",
@@ -16969,7 +16917,7 @@
     "date": "2026-12-03",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/hiigo/2817397",
+    "url": "https://www.paradiso.nl/programma/hiigo/2817397",
     "firstFound": 0
   },
   {
@@ -21122,9 +21070,8 @@
     "date": "2026-12-13",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/multibeat/2888719",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/multibeat-amsterdam-tolhuistuin-2026-12-13-CabRSpWdy7DM1XRbJ58VR"
+    "url": "https://www.paradiso.nl/programma/multibeat/2888719",
+    "firstFound": 0
   },
   {
     "artist": "De Niemanders",
@@ -23420,6 +23367,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Brasero (B) Hommage à Pierre Rapsat",
+    "venue": "Spirit of 66",
+    "city": "Verviers",
+    "country": "BE",
+    "date": "2026-12-26",
+    "time": "20:00",
+    "source": "Ticketmaster BE",
+    "url": "https://www.ticketmaster.be/event/brasero-b-hommage-a-pierre-rapsat-tickets/1098588842",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Dana Winner \"Kerstconcert\"",
     "venue": "Trixxo Theater Hasselt",
     "city": "Hasselt",
@@ -23598,7 +23556,7 @@
     "time": "20:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/real-farmer-the-klittens/",
-    "clubCard": false,
+    "clubCard": true,
     "firstFound": 0
   },
   {
@@ -24115,6 +24073,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/raymond-van-het-groenewoud-amsterdam-paradiso-2027-01-03-Cbu9o1i5P7aUfb1UYQYTi"
   },
   {
+    "artist": "Holly Humberstone",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-01-04",
+    "time": "20:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/holly-humberstone/2948173",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Heavy Boardgame Night",
     "venue": "Dynamo",
     "city": "Eindhoven",
@@ -24389,6 +24358,17 @@
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/allnightlong-erick-e/",
     "firstFound": 0
+  },
+  {
+    "artist": "VRLCHT + Blossom & Wither + Ioana Iorgu",
+    "venue": "Neushoorn",
+    "city": "Leeuwarden",
+    "country": "NL",
+    "date": "2027-01-08",
+    "time": "21:00",
+    "source": "Neushoorn",
+    "url": "https://www.neushoorn.nl/events/vrlcht-blossom-wither-ioana-iorgu",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Classic Hits in Concert",
@@ -29069,6 +29049,17 @@
     "firstFound": 1791628425341
   },
   {
+    "artist": "JOSHUA RADIN",
+    "venue": "PAARD",
+    "city": "Den Haag",
+    "country": "NL",
+    "date": "2027-02-10",
+    "time": "20:00",
+    "source": "PAARD",
+    "url": "https://www.paard.nl/event/joshua-radin/",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Michel Fugain | C’est l’histoire d’Une Belle Histoire",
     "venue": "Théâtre Royal",
     "city": "Mons",
@@ -30124,6 +30115,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/knox-amsterdam-melkweg-2027-02-15-Cd1UE4TJUWgt2EU7iFUHU"
   },
   {
+    "artist": "Seafret",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-02-15",
+    "time": "19:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/95349787/seafret-15-02-2027/",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Cage The Elephant - Dying In Reverse Tour",
     "venue": "AFAS Live",
     "city": "Amsterdam",
@@ -30192,6 +30194,17 @@
     "url": "https://www.paradiso.nl/nl/programma/slow-fiction/2940840",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/slow-fiction-amsterdam-paradiso-2027-02-15-CfnT4RAU6XYPhqMbvgtDj"
+  },
+  {
+    "artist": "Jakov Jozinović",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-02-16",
+    "time": "19:00",
+    "source": "Melkweg",
+    "url": "https://www.melkweg.nl/nl/agenda/jakov-jozinovic-16-02-2027/",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Get Well Soon",
@@ -31236,6 +31249,17 @@
     "source": "Tolhuistuin",
     "url": "https://www.paradiso.nl/nl/programma/master-peace/2944393",
     "firstFound": 1793001895953
+  },
+  {
+    "artist": "Mooi Wark",
+    "venue": "Gebouw-T",
+    "city": "Bergen op Zoom",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "20:30",
+    "source": "Gebouw-T",
+    "url": "https://gebouw-t.nl/agenda/mooi-wark",
+    "firstFound": 1793083478812
   },
   {
     "artist": "New Cool Collective",
@@ -32571,6 +32595,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/ozric-tentacles-uden-de-pul-2027-02-26-Cdozboh5WBvigMDAhoyV2"
   },
   {
+    "artist": "Pier15 x MEZZ: Aili & Orson",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2027-02-26",
+    "time": "20:30",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/aili-orson/",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Wegsfeer + Swart - De Ultieme New Wave Tribute Band",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -33279,6 +33314,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/amble-amsterdam-melkweg-2027-03-01-CbqKM9TaX93PSPuYiN4wD"
   },
   {
+    "artist": "Aili & Orson",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-01",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/aili-orson/2939185",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Loreena McKennitt - The Mask and Mirror",
     "venue": "Nieuwe Luxor Theater",
     "city": "Rotterdam",
@@ -33893,6 +33939,17 @@
     "url": "https://www.paradiso.nl/nl/programma/kaya-imani/2884450",
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kaya-imani-amsterdam-paradiso-2027-03-05-CaJPAiKpe6EFjZrPBZ1qr",
     "firstFound": 0
+  },
+  {
+    "artist": "Pier15 x MEZZ: TAXITAXI",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2027-03-05",
+    "time": "20:30",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/taxitaxi/",
+    "firstFound": 1793083478812
   },
   {
     "artist": "The Clarks feat. Rinus Gerritsen & Cesar Zuiderwijk",
@@ -34695,6 +34752,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/sam-quealy-amsterdam-ann-club-annie-2027-03-10-CfnS3Yf1kajqpuV9AaUCC"
   },
   {
+    "artist": "Steinza",
+    "venue": "Paradiso",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-10",
+    "time": "19:30",
+    "source": "Paradiso",
+    "url": "https://www.paradiso.nl/nl/programma/steinza/2945279",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Manowar, Kings of Metal Fighting The World Tour 2027",
     "venue": "AFAS Dome",
     "city": "Merksem (Antwerpen)",
@@ -34981,17 +35049,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/britpop-a-flashback-to-the-nineties-hengelo-metropool-hengelo-2027-03-12-CeuH7PPXqMR2XkKbKAUQ2"
   },
   {
-    "artist": "FISH NARC (UK) + TAPE TOY",
-    "venue": "dB's",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2027-03-12",
-    "time": "20:00",
-    "source": "dB's",
-    "url": "https://dbstudio.nl/event/tape-toy",
-    "firstFound": 1793001895953
-  },
-  {
     "artist": "Goldman Symphonique",
     "venue": "Dôme",
     "city": "Charleroi",
@@ -35048,6 +35105,17 @@
     "source": "Ticketmaster BE",
     "url": "https://www.ticketmaster.be/event/scala-30-tickets/668636973",
     "firstFound": 1791628425341
+  },
+  {
+    "artist": "TAPE TOY + FISH NARC (UK)",
+    "venue": "dB's",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-03-12",
+    "time": "20:00",
+    "source": "dB's",
+    "url": "https://dbstudio.nl/event/tape-toy",
+    "firstFound": 1793001895953
   },
   {
     "artist": "Trixie Whitley",
@@ -35854,7 +35922,7 @@
     "date": "2027-03-16",
     "time": "20:30",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/bella-poarch-picnic-at-the-cemetery-tour/2941197",
+    "url": "https://www.paradiso.nl/programma/bella-poarch-picnic-at-the-cemetery-tour/2941197",
     "firstFound": 0
   },
   {
@@ -35936,6 +36004,17 @@
     "source": "MEZZ",
     "url": "https://www.mezz.nl/programma/dressed-like-boys-2/",
     "firstFound": 0
+  },
+  {
+    "artist": "JACOB BANKS",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-17",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jacob-banks-tickets/866162398?language=en-us",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Teddy Swims",
@@ -36480,6 +36559,17 @@
     "firstFound": 0
   },
   {
+    "artist": "TEAM RUSH HOUR XL",
+    "venue": "Melkweg",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-03-20",
+    "time": "19:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/team-rush-hour-xl-tickets/1913054856?language=en-us",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Fimiguerrero",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -36948,6 +37038,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/morgan-wallen-tribute-hengelo-metropool-hengelo-2027-03-24-Cf2rMbouVdMwQbff7V6DR"
   },
   {
+    "artist": "Saxon",
+    "venue": "Poppodium 013 - Main",
+    "city": "Tilburg",
+    "country": "NL",
+    "date": "2027-03-24",
+    "time": "20:00",
+    "source": "013",
+    "url": "https://www.013.nl/programma/161931/saxon",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Getdown Services",
     "venue": "Paradiso",
     "city": "Amsterdam",
@@ -37235,6 +37336,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/goldman-symphonique-brussels-cirque-royal-koninklijk-circus-2027-03-26-CZLXxuU3YHAtzp9mGeYRN"
   },
   {
+    "artist": "Honahlei + support",
+    "venue": "Patronaat",
+    "city": "Haarlem",
+    "country": "NL",
+    "date": "2027-03-26",
+    "time": "20:00",
+    "source": "Patronaat",
+    "url": "https://patronaat.nl/event/honahlei-support-26-03-27/",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Jet van der Steen",
     "venue": "De Oosterpoort",
     "city": "Groningen",
@@ -37484,6 +37596,17 @@
     "url": "https://www.ticketmaster.be/event/dunia-batma-tickets/416152537",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/dunia-batma-brussels-cirque-royal-koninklijk-circus-2027-03-27-CdfLRV2BrDLYE7ch6iDXE"
+  },
+  {
+    "artist": "EASY LOVER Tribute to PHIL COLLINS & GENESIS",
+    "venue": "Spirit of 66",
+    "city": "Verviers",
+    "country": "BE",
+    "date": "2027-03-27",
+    "time": "20:00",
+    "source": "Ticketmaster BE",
+    "url": "https://www.ticketmaster.be/event/easy-lover-tribute-to-phil-collins--genesis-tickets/1438135583",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Kalandra + Finnegan Tui",
@@ -40478,6 +40601,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/blackbird-bergen-op-zoom-poppodium-gebouw-t-2027-04-17-Cd4vFAHNFpRTydEeg4cAh"
   },
   {
+    "artist": "Daniel Norgren",
+    "venue": "De Oosterpoort",
+    "city": "Groningen",
+    "country": "NL",
+    "date": "2027-04-17",
+    "time": "20:30",
+    "source": "SPOT Groningen",
+    "url": "https://www.spotgroningen.nl/programma/daniel-norgren-2027",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Magenta",
     "venue": "Boerderij",
     "city": "Zoetermeer",
@@ -40612,6 +40746,17 @@
     "url": "https://www.paradiso.nl/nl/programma/joy-oladokun/2938675",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/joy-oladokun-amsterdam-paradiso-2027-04-18-CfZCQ5JPLBLW1TrEwcjG5"
+  },
+  {
+    "artist": "Daniel Norgren",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-04-20",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/29334929/daniel-norgren-20-04-2027/",
+    "firstFound": 1793083478812
   },
   {
     "artist": "HIGH FADE",
@@ -40865,9 +41010,8 @@
     "date": "2027-04-22",
     "time": "20:00",
     "source": "Tolhuistuin",
-    "url": "https://www.paradiso.nl/nl/programma/zoe-livay/2931186",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/zoe-livay-amsterdam-tolhuistuin-2027-04-22-CfJ3vVCndyA61Xrk9Ur58"
+    "url": "https://www.paradiso.nl/programma/zoe-livay/2931186",
+    "firstFound": 0
   },
   {
     "artist": "Joris Teepe presents: NYCTG",
@@ -41324,7 +41468,7 @@
     "time": "21:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/orgel-vreten-1/",
-    "clubCard": false,
+    "clubCard": true,
     "firstFound": 1793001895953
   },
   {
@@ -42263,17 +42407,6 @@
     "firstFound": 1791588107075
   },
   {
-    "artist": "Mood Bored",
-    "venue": "MEZZ",
-    "city": "Breda",
-    "country": "NL",
-    "date": "2027-05-07",
-    "time": "20:00",
-    "source": "MEZZ",
-    "url": "https://www.mezz.nl/programma/mood-bored-2/",
-    "firstFound": 0
-  },
-  {
     "artist": "NEUK!",
     "venue": "dB's",
     "city": "Utrecht",
@@ -42282,6 +42415,17 @@
     "time": "20:00",
     "source": "dB's",
     "url": "https://dbstudio.nl/event/neuk-2",
+    "firstFound": 0
+  },
+  {
+    "artist": "Pier15 x MEZZ: Mood Bored",
+    "venue": "MEZZ",
+    "city": "Breda",
+    "country": "NL",
+    "date": "2027-05-07",
+    "time": "20:00",
+    "source": "MEZZ",
+    "url": "https://www.mezz.nl/programma/mood-bored-2/",
     "firstFound": 0
   },
   {
@@ -42488,7 +42632,7 @@
     "time": "21:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/josua-peter/",
-    "clubCard": true,
+    "clubCard": false,
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/josua-peter-rotterdam-rotown-2027-05-08-CfHfV8iynjD4FjZC74CLx"
   },
@@ -43359,7 +43503,7 @@
     "time": "21:30",
     "source": "Rotown",
     "url": "https://www.rotown.nl/agenda/mood-bored-1/",
-    "clubCard": false,
+    "clubCard": true,
     "firstFound": 0
   },
   {
@@ -45494,17 +45638,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Agnes Obel",
-    "venue": "TivoliVredenburg",
-    "city": "Utrecht",
-    "country": "NL",
-    "date": "2027-09-29",
-    "time": "19:15",
-    "source": "TivoliVredenburg",
-    "url": "https://www.tivolivredenburg.nl/agenda/66038558/agnes-obel-29-09-2027/",
-    "firstFound": 1793001895953
-  },
-  {
     "artist": "Jain",
     "venue": "Melkweg",
     "city": "Amsterdam",
@@ -45685,6 +45818,28 @@
     "firstFound": 0
   },
   {
+    "artist": "Jean-Michel Jarre - OXYGENE & BEYOND A celebration of 50 years of Oxyg",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-10-06",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jean-michel-jarre-oxygene--beyond-a-celebration-of-50-years-of-oxyg-tickets/751920429?language=en-us",
+    "firstFound": 1793083478812
+  },
+  {
+    "artist": "Jean-Michel Jarre - OXYGENE & BEYOND A celebration of 50 years of Oxyg",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-10-07",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jean-michel-jarre-oxygene--beyond-a-celebration-of-50-years-of-oxyg-tickets/1339020789?language=en-us",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Intouchables in Concert",
     "venue": "Trixxo Theater Hasselt",
     "city": "Hasselt",
@@ -45694,6 +45849,17 @@
     "source": "Ticketmaster BE",
     "url": "https://www.ticketmaster.be/event/intouchables-in-concert-tickets/1558727394",
     "firstFound": 1793001895953
+  },
+  {
+    "artist": "Jean-Michel Jarre - OXYGENE & BEYOND A celebration of 50 years of Oxyg",
+    "venue": "Gashouder",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-10-08",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/jean-michel-jarre-oxygene--beyond-a-celebration-of-50-years-of-oxyg-tickets/886782957?language=en-us",
+    "firstFound": 1793083478812
   },
   {
     "artist": "The Beatles Revival - Live in Concert",
@@ -45910,6 +46076,17 @@
     "firstFound": 0
   },
   {
+    "artist": "Ramblin Roots 2027",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-10-16",
+    "time": "14:30",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/37687943/ramblin-roots-2027-16-10-2027/",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "SUPAFLY 2027",
     "venue": "PAARD",
     "city": "Den Haag",
@@ -46034,6 +46211,17 @@
     "firstFound": 0
   },
   {
+    "artist": "TILL LINDEMANN",
+    "venue": "AFAS Live",
+    "city": "Amsterdam",
+    "country": "NL",
+    "date": "2027-10-17",
+    "time": "20:00",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/till-lindemann-world-tour-2027-tickets/761831482?language=en-us",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "The Devout - Depeche Mode tribute",
     "venue": "Kleine Zaal",
     "city": "Eindhoven",
@@ -46078,6 +46266,17 @@
     "url": "https://bibelot.net/programma/u2two-3",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/u2two-dordrecht-bibelot-poppodium-2027-10-22-CdGGqFaupbNC8ZSy4smKg"
+  },
+  {
+    "artist": "Till Lindemann: World Tour 2027",
+    "venue": "Lotto Arena Antwerpen",
+    "city": "Merksem (Antwerpen)",
+    "country": "BE",
+    "date": "2027-10-23",
+    "time": "18:30",
+    "source": "Ticketmaster BE",
+    "url": "https://www.ticketmaster.be/event/till-lindemann-world-tour-2027-tickets/1371202887",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Bettie Serveert",
@@ -46227,6 +46426,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/bejart-ballet-lausanne-the-100th-anniversary-of-maurice-bejart-brussels-forest-national-vorst-nationaal-2027-11-11-CapvUmUKFaRDsU6ob7j3b"
   },
   {
+    "artist": "10cc",
+    "venue": "Doornroosje",
+    "city": "Nijmegen",
+    "country": "NL",
+    "date": "2027-11-11",
+    "time": "21:15",
+    "source": "Doornroosje",
+    "url": "https://www.doornroosje.nl/event/10cc-2",
+    "firstFound": 1793083478812
+  },
+  {
     "artist": "Béjart Ballet Lausanne: The 100th Anniversary of Maurice Béjart",
     "venue": "Vorst Nationaal/Forest National",
     "city": "Forest (Brussels)",
@@ -46236,6 +46446,17 @@
     "source": "Ticketmaster BE",
     "url": "https://www.ticketmaster.be/event/bejart-ballet-lausanne-the-100th-anniversary-of-maurice-bejart-tickets/777510002",
     "firstFound": 1791628425341
+  },
+  {
+    "artist": "10cc",
+    "venue": "de Doelen",
+    "city": "Rotterdam",
+    "country": "NL",
+    "date": "2027-11-12",
+    "time": "20:15",
+    "source": "Ticketmaster NL",
+    "url": "https://www.ticketmaster.nl/event/10cc-tickets/227062143?language=en-us",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Béjart Ballet Lausanne: The 100th Anniversary of Maurice Béjart",
@@ -46282,6 +46503,39 @@
     "source": "Ticketmaster BE",
     "url": "https://www.ticketmaster.be/event/bejart-ballet-lausanne-the-100th-anniversary-of-maurice-bejart-tickets/85675405",
     "firstFound": 1791628425341
+  },
+  {
+    "artist": "10CC",
+    "venue": "De Oosterpoort",
+    "city": "Groningen",
+    "country": "NL",
+    "date": "2027-11-14",
+    "time": "20:30",
+    "source": "SPOT Groningen",
+    "url": "https://www.spotgroningen.nl/programma/10cc-5",
+    "firstFound": 1793083478812
+  },
+  {
+    "artist": "10cc",
+    "venue": "TivoliVredenburg",
+    "city": "Utrecht",
+    "country": "NL",
+    "date": "2027-11-16",
+    "time": "19:00",
+    "source": "TivoliVredenburg",
+    "url": "https://www.tivolivredenburg.nl/agenda/60805493/10cc-16-11-2027/",
+    "firstFound": 1793083478812
+  },
+  {
+    "artist": "10cc",
+    "venue": "Cirque Royal - Koninklijk Circus",
+    "city": "Brussels",
+    "country": "BE",
+    "date": "2027-11-17",
+    "time": "20:00",
+    "source": "Ticketmaster BE",
+    "url": "https://www.ticketmaster.be/event/10cc-tickets/194092807",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Kayhan Kalhor Ensemble",
@@ -46546,6 +46800,17 @@
     "url": "https://www.spotgroningen.nl/programma/kovacs-4",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/kovacs-groningen-spot-de-oosterpoort-2027-12-11-CbSaNdpaHqtYDGjA9wiMQ"
+  },
+  {
+    "artist": "Ycare",
+    "venue": "Le Forum",
+    "city": "Liège",
+    "country": "BE",
+    "date": "2027-12-11",
+    "time": "20:00",
+    "source": "Ticketmaster BE",
+    "url": "https://www.ticketmaster.be/event/ycare-tickets/838372257",
+    "firstFound": 1793083478812
   },
   {
     "artist": "Chimène Badi Origine(s) Tour",
