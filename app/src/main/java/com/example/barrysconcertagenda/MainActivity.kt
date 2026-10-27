@@ -440,10 +440,9 @@ fun ConcertApp() {
                     }
                 )
 
-        ConcertStorage.setLastCheck(
-            context,
-            now
-        )
+        if (sourceConcerts.isNotEmpty()) {
+            ConcertStorage.setLastCheck(context, now)
+        }
 
         statusText =
             if (
