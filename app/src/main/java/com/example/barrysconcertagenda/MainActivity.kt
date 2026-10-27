@@ -1283,7 +1283,7 @@ private fun countryFlag(
     }
 }
 
-private fun isPastConcert(
+internal fun isPastConcert(
     date: String
 ): Boolean {
 
