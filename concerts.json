@@ -19850,7 +19850,7 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/fally-ipupa-brussels-ing-arena-2026-12-11-Ccsw7W4M1gxEPdZ4y6g53"
   },
   {
-    "artist": "Frans Huxie (reünieshow)",
+    "artist": "Frans Huxie (reünieshow) + Gelukzoekers + De Bovendanen",
     "venue": "Bibelot",
     "city": "Dordrecht",
     "country": "NL",
@@ -31178,6 +31178,17 @@
     "source": "Dynamo",
     "url": "https://www.podiuminfo.nl/concert/457423/De-Hardheid-Support/Dynamo",
     "firstFound": 0
+  },
+  {
+    "artist": "Dordrecht Metal Fest",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/dordrecht-metal-fest",
+    "firstFound": 1793165369327
   },
   {
     "artist": "ENVOLE MOI (B) - Tribute JEAN JACQUES GOLDMAN",
