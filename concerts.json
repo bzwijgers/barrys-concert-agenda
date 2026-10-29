@@ -38417,6 +38417,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/hindley-street-country-club-amersfoort-flint-amersfoort-2027-04-02-CceeNPuecMCdX6AirUHQA"
   },
   {
+    "artist": "Edwin Evers Band Classics Tour - Part II",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-04-02",
+    "time": "20:30",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/edwin-evers-band-classics-tour-part-ii",
+    "firstFound": 1793251933228
+  },
+  {
     "artist": "Guus Meeuwis in Ahoy",
     "venue": "Rotterdam Ahoy",
     "city": "Rotterdam",
@@ -41580,6 +41591,17 @@
     "source": "Neushoorn",
     "url": "https://www.neushoorn.nl/events/marquee-square-heroes-dry-land-play-marillion",
     "firstFound": 0
+  },
+  {
+    "artist": "De Herfshane Band",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-04-24",
+    "time": "21:15",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/de-herfshane-band",
+    "firstFound": 1793251933229
   },
   {
     "artist": "Bettie Serveert",
