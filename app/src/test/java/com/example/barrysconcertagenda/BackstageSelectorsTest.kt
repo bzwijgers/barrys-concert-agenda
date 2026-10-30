@@ -9,7 +9,7 @@ import java.time.YearMonth
 class BackstageSelectorsTest {
     private val shows = listOf(
         Concert(artist="Rotown artist",venue="Rotown",city="Rotterdam",country="NL",
-            date="2026-10-22",isNew=false,clubCard=true),
+            date="2026-10-22",source="Rotown",isNew=false,clubCard=true),
         Concert(artist="Belgian artist",venue="Trix",city="Antwerpen",country="BE",
             date="2026-10-25",isNew=true,isFavorite=true),
         Concert(artist="Ticket concert",venue="013",city="Tilburg",country="NL",
