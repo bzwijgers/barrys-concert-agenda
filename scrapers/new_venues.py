@@ -10,6 +10,8 @@ from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 import json
 import re
+import time
+from urllib.error import HTTPError
 
 from .common import download_page_retry, normalize_url
 
@@ -645,6 +647,17 @@ def scrape_venue(name, maximum=500):
     # Recovery is URL-exact and only allowed for still-future concerts.
     previous = previous_published_venue_events(name) if name in ("Metropool", "Bibelot") else {}
     def read(url):
+        if name == "Bibelot":
+            # Avoid a burst of requests that triggers the venue HTTP 429 limit.
+            for attempt in range(4):
+                time.sleep(1.5 if attempt == 0 else min(15, 4 * attempt))
+                try:
+                    event_html = download_page_retry(url, attempts=1)
+                    return parse_event(event_html, url, name, city)
+                except HTTPError as error:
+                    if error.code != 429 or attempt == 3:
+                        raise
+            raise RuntimeError("Bibelot rate limit retries exhausted")
         event_html=download_page_retry(url,attempts=3 if name=="Metropool" else 2)
         return parse_event(event_html,url,name,city)
     # Fewer parallel requests reduce HTTP 500s from Metropool's backend.
