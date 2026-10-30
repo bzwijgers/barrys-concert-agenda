@@ -643,12 +643,12 @@ def scrape_venue(name, maximum=500):
     # If Metropool intermittently returns 500 for particular detail pages,
     # the most recent *verified* published record is the only safe fallback.
     # Recovery is URL-exact and only allowed for still-future concerts.
-    previous = previous_published_venue_events(name) if name=="Metropool" else {}
+    previous = previous_published_venue_events(name) if name in ("Metropool", "Bibelot") else {}
     def read(url):
         event_html=download_page_retry(url,attempts=3 if name=="Metropool" else 2)
         return parse_event(event_html,url,name,city)
     # Fewer parallel requests reduce HTTP 500s from Metropool's backend.
-    workers = 3 if name=="Metropool" else 7
+    workers = 1 if name=="Bibelot" else (3 if name=="Metropool" else 7)
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futures={ex.submit(read,url):url for url in found}
         for future in as_completed(futures):
