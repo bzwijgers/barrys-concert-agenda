@@ -803,17 +803,6 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/gokhan-cinar-utrecht-tivolivredenburg-2026-10-29-Ccp9LgwwMnTfDDSnubAL5"
   },
   {
-    "artist": "Bosuil Blues Bar",
-    "venue": "De Bosuil",
-    "city": "Weert",
-    "country": "NL",
-    "date": "2026-10-29",
-    "time": "21:15",
-    "source": "De Bosuil",
-    "url": "https://www.debosuil.nl/programma/bosuilbluesbar",
-    "firstFound": 0
-  },
-  {
     "artist": "The Fatal Flowers",
     "venue": "Doornroosje",
     "city": "Nijmegen",
@@ -961,17 +950,6 @@
     "url": "https://www.ticketmaster.be/event/petero-nzukira--utabusya-abwita-ubumera-tickets/652793307",
     "firstFound": 1791628425341,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/petero-nzukira-utabusya-abwita-ubumera-brussels-cirque-royal-koninklijk-circus-2026-10-30-CbqVHhzirqrr7y4TTMZz3"
-  },
-  {
-    "artist": "Popronde Uden",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "19:00",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/popronde-uden-2026",
-    "firstFound": 0
   },
   {
     "artist": "Benjamin Steer",
@@ -1281,18 +1259,6 @@
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/programma/dan-whitlam/2885391",
     "firstFound": 0
-  },
-  {
-    "artist": "Focus",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2026-10-30",
-    "time": "20:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/focus",
-    "firstFound": 0,
-    "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/focus-dordrecht-bibelot-poppodium-2026-10-30-CYwK9y6Y4gf9HeWRWmdVk"
   },
   {
     "artist": "Katherine Li",
@@ -33020,6 +32986,17 @@
     "firstFound": 1793001895953
   },
   {
+    "artist": "Oh Voyage",
+    "venue": "Bibelot",
+    "city": "Dordrecht",
+    "country": "NL",
+    "date": "2027-02-27",
+    "time": "21:00",
+    "source": "Bibelot",
+    "url": "https://bibelot.net/programma/oh-voyage",
+    "firstFound": 1793443521269
+  },
+  {
     "artist": "The Dirty Daddies",
     "venue": "Bibelot",
     "city": "Dordrecht",
@@ -37439,17 +37416,6 @@
     "firstFound": 0
   },
   {
-    "artist": "Ian Paice & Purpendicular",
-    "venue": "De Pul",
-    "city": "Uden",
-    "country": "NL",
-    "date": "2027-03-26",
-    "time": "20:30",
-    "source": "De Pul",
-    "url": "https://www.livepul.com/agenda/ian-paice-purpendicular",
-    "firstFound": 1791628871706
-  },
-  {
     "artist": "Luicidal",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -41652,6 +41618,17 @@
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/vrienden-voor-het-leven-hasselt-trixxo-arena-theater-2027-04-25-CZnxg66JXQgEKzNekXscK"
   },
   {
+    "artist": "King King",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-04-25",
+    "time": "15:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/king-king-2027",
+    "firstFound": 1793443521269
+  },
+  {
     "artist": "Wishbone Ash",
     "venue": "Het Bolwerk",
     "city": "Sneek",
@@ -42721,6 +42698,17 @@
     "url": "https://www.melkweg.nl/nl/agenda/valley-08-05-2027/",
     "firstFound": 0,
     "ticketSwapUrl": "https://www.ticketswap.nl/concert-tickets/valley-amsterdam-melkweg-2027-05-08-CfG73VArCyAgv8C64cwNU"
+  },
+  {
+    "artist": "DUUNES",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-05-08",
+    "time": "20:00",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/duunes",
+    "firstFound": 1793443521269
   },
   {
     "artist": "Gracie Abrams: The Look at My Life Tour",
@@ -44172,6 +44160,17 @@
     "firstFound": 1791588107075
   },
   {
+    "artist": "Goodbye June",
+    "venue": "De Bosuil",
+    "city": "Weert",
+    "country": "NL",
+    "date": "2027-06-03",
+    "time": "20:15",
+    "source": "De Bosuil",
+    "url": "https://www.debosuil.nl/programma/goodbye-june",
+    "firstFound": 1793443521269
+  },
+  {
     "artist": "Joy Division Undercover",
     "venue": "TivoliVredenburg",
     "city": "Utrecht",
@@ -44502,17 +44501,6 @@
     "source": "Ticketmaster NL",
     "url": "https://www.ticketmaster.nl/event/-roger-waters-presents-legacy-%7C-a-pink-floyd-tribute-show-tickets/449346723?language=en-us",
     "firstFound": 1793001895953
-  },
-  {
-    "artist": "Wende",
-    "venue": "Bibelot",
-    "city": "Dordrecht",
-    "country": "NL",
-    "date": "2027-06-10",
-    "time": "20:30",
-    "source": "Bibelot",
-    "url": "https://bibelot.net/programma/wende",
-    "firstFound": 0
   },
   {
     "artist": "Steve Vai & Metropole Orkest",
@@ -45510,6 +45498,17 @@
     "source": "Paradiso",
     "url": "https://www.paradiso.nl/nl/programma/workshops-sdf-31-august/2894217",
     "firstFound": 0
+  },
+  {
+    "artist": "Ian Paice & Purpendicular",
+    "venue": "De Pul",
+    "city": "Uden",
+    "country": "NL",
+    "date": "2027-09-03",
+    "time": "20:30",
+    "source": "De Pul",
+    "url": "https://www.livepul.com/agenda/ian-paice-purpendicular",
+    "firstFound": 1791628871706
   },
   {
     "artist": "Het Grootste Zomerfeest van Nederland | LIVE on the BEACH",
